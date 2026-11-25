@@ -1,5 +1,9 @@
 # Status
 
+## 25 November 2026
+
+The [297-page manuscript](../manuscript/main.pdf) follows the original K1 argument in §17.4.3 and records the remaining comparisons in §18.7. The [review guide](../review/README.md) links passages to the pinned release and identifies open questions for independent checking.
+
 ## 24 November 2026
 
 The [manuscript](../manuscript/main.pdf) now treats the volume, decay and near-orbit estimates in Section 14 and the base change, classical points and uniform cohomological bound in Section 17. The alternative argument for the last bound awaits independent human verification. Section 18.7 records the hypotheses still needed for the deduction of RH. See the [current status](../README.md#current-status).

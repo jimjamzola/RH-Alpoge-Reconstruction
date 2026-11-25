@@ -1,0 +1,10 @@
+'Faithful.K1.equivariantCount' depends on axioms: [propext]
+'Faithful.K1.cancelLayerFactor' depends on axioms: [propext]
+'Faithful.K1.orderFromLength' does not depend on any axioms
+'Faithful.K1.assemble' does not depend on any axioms
+'Faithful.Passages.prismCancellation' depends on axioms: [propext, Quot.sound]
+'Faithful.Passages.periodOnImage' does not depend on any axioms
+'Faithful.Passages.imageScalar' does not depend on any axioms
+'Faithful.Passages.oneFamily' depends on axioms: [propext, Quot.sound]
+'Faithful.Passages.originalExponents' does not depend on any axioms
+'Faithful.Passages.heightShift' depends on axioms: [propext, Classical.choice, Quot.sound]

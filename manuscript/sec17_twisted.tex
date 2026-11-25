@@ -388,50 +388,7 @@ $\pi$ in this normalization, the representation for $\pi$ is
 $r_{\pi\otimes\eta}\otimes r_\eta^{-1}$. These assertions concern the
 rank-two Hilbert modular input.
 
-\subsubsection{The effective cohomology bound}\label{tw:effectiveK}
-
-Let $L$ be totally imaginary, $d=[L:\mathbb Q]$, $D=|\Delta_L|$, and $S$ the places above $p$. Assume $\mu_p\subset L$ for odd $p$ and $\mu_4\subset L$ for $p=2$. The required bound is
-\[
- \log\#H^2(G_{L,S},\mathbb Z_p(e+1))
-       \le \exp\big((2ed)^{C_K}\log(2D)\big)
- \qquad(e\ge1)
-\]
-with $C_K$ absolute. The following alternative proof awaits independent human verification and has not been formalized in Lean.
-
-Put $i=2e$, $u=id$, $Y=\log(2D)$ and
-\[ A=H^2(G_{L,S},\mathbb Z_p(e+1)). \]
-Here $u\ge4$ and $p\le d+1$.
-
-The even-degree comparison identifies $A$ with $K_i(\mathcal O_L)\{p\}$, a finite group. Weibel~\cite[Thm.~73]{weibelK} gives this formula for totally imaginary fields, including $p=2$. Here the étale cohomology is that of $\mathcal O_L[1/p]$. The comparison in Schmidt~\cite[Prop.~2.3 and its proof]{badSchmidt} identifies the finite-coefficient étale and restricted-ramification Galois cohomology here. All places above $p$ have been removed. The cyclotomic action on the finite coefficient groups factors through a $p$-group under the roots-of-unity hypothesis. For compact coefficients take inverse limits of the finite coefficient groups. The finite degree-one groups satisfy Mittag–Leffler, so no derived-limit term occurs.
-
-Let $r=\dim_{\mathbb F_p} A/pA$. Reduction embeds $A/pA$ in $H^2(G_{L,S},\mathbb F_p(e+1))$. The mod-$p$ cyclotomic character is trivial here, so this coefficient module is isomorphic to $\mu_p$. Kummer theory gives an extension of $\mathrm{Br}(\mathcal O_L[1/p])[p]$ by $\mathrm{Pic}(\mathcal O_L[1/p])/p$ for this $H^2$. The local invariant map embeds the Brauer term in a product of at most $d$ groups of order $p$ because $L$ has no real places. The Picard group is a quotient of the ordinary class group. Thus
-\[r\log p\le\log h_L+d\log p.\]
-For an explicit crude bound, Minkowski gives an integral ideal of norm at most $2^d\sqrt D$ in each ideal class. The number of ideals of norm at most $B$ is at most $B^2\zeta_L(2)\le B^2\zeta(2)^d$. Hence $h_L\le 2^{3d}D$. In particular $r\le u^4Y$. It remains to bound the exponent of $A$, since an abelian $p$-group on $r$ generators of exponent $E$ has order at most $E^r$.
-
-\paragraph{Integral homology at the small primes.}
-
-Put $N=2i+1\ge5$, $\Gamma=\mathrm{GL}_N(\mathcal O_L)$ and let $H$ be the kernel of reduction modulo $3\mathcal O_L$. Its index $I$ is at most $3^{dN^2}$. Restriction of scalars embeds $H$ in the principal level-three subgroup of $\mathrm{GL}_{dN}(\mathbb Z)$, which is torsion-free. Indeed, for an element of prime order $q$ write it as $1+3^aB$ with $a\ge1$ maximal. For $q\ne3$ its $q$th power differs from 1 modulo $3^{a+1}$. For $q=3$ its cube differs from 1 modulo $3^{a+2}$. Both contradict the order. A nontrivial finite-order element would have a power of prime order.
-
-We give a bound on $T=|H_i(H,\mathbb Z)_{\rm tors}|$. Use Ash's contractible well-rounded retract for the free lattice $\mathcal O_L^N$. Its cells have finite stabilizers. On the barycentric subdivision $H$ acts freely. Bayer-Fluckiger, Emery and Houriet~\cite[\S2.3, Cor.~5.2]{badCells} give a finite set $\Phi\subset\mathcal O_L^N$ such that the minimal vectors of any normalized well-rounded form can simultaneously be moved into $\Phi$ by one element of $\Gamma$. Writing $M=|\Phi|$, their bound is
-\[ M\le N^{3N^2d^2}d^{5N^3d^4}D^{9N^3d^3}. \]
-Only this geometric estimate is used from their torsion argument.
-
-The real space of Hermitian forms has dimension $s=(d/2)N^2$. Each equality $q_h(v)=1$ is affine linear in $h$. For a cell with set of minimal vectors $U$, choose at most $s+1$ vectors whose augmented equations span those indexed by $U$. Within the normalized forms with $q_h(x)\ge1$ for every nonzero lattice vector $x$, the chosen equalities determine the closed face cut out by $U$. Its relative interior determines the cell. Indeed any point satisfying these equalities can be joined to an interior point by a segment; on the open segment all inequalities outside $U$ are strict. Positive definiteness is preserved there and $U$ spans $L^N$.
-
-For a flag of cells choose its lowest-dimensional member. The other minimal sets are subsets of its minimal set by the face relation. A single translate puts them all in $\Phi$. Choose an ordered list of at most $s+1$ equations for each member and pad with an empty symbol. For flags of any *fixed* length there are at most $(1+M)^{(s+1)^2}$ codes since flags have at most $s+1$ members. Each code determines at most one flag in the retract. Passing from $\Gamma$ to $H$ multiplies the orbit count by at most $I$. Thus there are at most
-\[B=I(1+M)^{(s+1)^2}\]
-simplices in each degree of the quotient subdivision. Its chain complex computes the integral homology of $H$. A boundary column from degree $i+1$ has Euclidean norm at most $i+2$ even if some quotient faces coincide. A maximal rank minor and Hadamard's inequality bound the torsion of the cokernel, and hence that of its subgroup $H_i$, by $(i+2)^B$. Thus $\log T\le B\log(i+2)$.
-
-Transfer to $H$ takes a torsion homology class to torsion, and the transfer followed by projection acts as $I$. Consequently $IT$ annihilates the torsion of $H_i(\Gamma,\mathbb Z)$. This step includes primes dividing $I$.
-
-\paragraph{The uniform constant.}
-
-Homological stability identifies $H_i(\Gamma,\mathbb Z)$ with $H_i(\mathrm{GL}(\mathcal O_L),\mathbb Z)$ at $N=2i+1$. See Weibel~\cite[IV.1.14.1]{weibelBook}, using Bass stable rank at most two, or \cite[\S3.1]{badCells} for this precise choice of $N$. Give $X=B\mathrm{GL}(\mathcal O_L)^+$ its connected infinite-loop-space structure (the identity component of the algebraic K-theory space). Its integral homology is stable group homology, and $\pi_iX=K_i(\mathcal O_L)$. Apply Mathew~\cite[Thm.~6.3]{badMathew} with connectivity parameter $m=1$. The $p$-part of the kernel of the unstable Hurewicz map is killed by $p^{i+4}$: this majorizes both $\lceil(i-1)/2\rceil+3$ for $p=2$ and $\lceil(i+2)/(2p-2)\rceil+1$ for odd $p$. The image of $A$ is torsion. Therefore $p^{i+4}IT$ kills $A$, and
-\[\log |A|\le r\big((i+4)\log p+\log I+B\log(i+2)\big).\]
-
-Finally, $dN\le3u\le u^2$, $s+1\le u^4$, and $\log I\le u^5$. From the displayed bound on $M$, $\log(1+M)\le u^{13}Y$: use $d,N\le u^2$, $N^3d^4\le(dN)^4\le u^8$, and $\log d,\log N\le2\log u$. Consequently $\log B\le u^{23}Y$. As $Y\ge\log2$, $B\ge I$, $i+4\le 2u$, and $p\le u$, the parenthesis is at most $B u^3$. Inserting $r\le u^4Y$ gives
-\[\log |A|\le u^7Y\exp(u^{23}Y)\le\exp(u^{24}Y)\le\exp(u^{150}Y).\]
-For the middle inequality take logarithms and use $7\log u+\log Y\le 7u+Y\le (u^{24}-u^{23})Y$. In particular one may take $C_K=150$.
+\input{sec17_effectiveK}
 
 
 \subsection{The congruence bound}\label{tw:sec:linkn}

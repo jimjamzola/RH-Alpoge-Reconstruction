@@ -1,16 +1,42 @@
-# Human-readable reconstruction of the Alpöge/Claude RH argument
+# A human-readable reconstruction of Alpöge’s RH argument
 
-The purpose of this repository is to provide a human-readable proof of the Riemann hypothesis. Given how quickly this has all developed, I cannot guarantee that everything in this repository is correct. All priority of the results belongs to Levent and Claude. Mathematicians can now read the manuscript from beginning to end and review it as they would any other paper, without consulting Lean. My next goal is to shorten the proof and make it easier to follow.
+**Can a reader recover the argument in Levent Alpöge and Claude’s original Lean archive, step by step, in conventional mathematics?** This manuscript is my reconstruction, from the reduction to a prime-sum estimate through the final deduction of the Riemann hypothesis. The scientific question is one of fidelity. Where the paper invokes a bound, constructs a lattice, or identifies two periods, can a reader find the same objects, hypotheses and inference in the original proof?
 
-**[Read the manuscript](manuscript/main.pdf)** · 287 pages · revised 24 November 2026.
+**[Read the manuscript](manuscript/main.pdf)** · 297 pages · 25 November 2026
+
+[Review a passage against Lean](review/README.md) · [Interested in proof optimization?][optimization-project]
 
 ## Current status
 
-Section 14 gives the volume and flag estimates, the decay away from the identity and the count of near orbits. Section 17 constructs the classical automorphic points from base change and gives a proposed uniform bound for the order of the second Galois cohomology group.
+The manuscript is ready for independent review from beginning to end. Section 17.4.3 now follows the original cohomological argument for K1. Section 18.7 traces one family through the estimates to the final deduction and identifies the comparisons and inputs that still need mathematical verification. The correspondence between the manuscript and the archive is partial.
 
-I would especially welcome a check of §17.4.3. Here we depart from the formal proof and propose a shorter argument for the same cohomological bound (K1). The archive takes 21 steps. We bound the number of generators and their orders separately. The question for a reader is whether these estimates give the required uniform bound even at the small primes. This argument has no Lean certification. If it holds up, I would like to know how much more of the proof we can simplify.
+The reference is the original release, pinned at `40e56bab026552e089d7afcfeff08d2defb9c005`. Its terminal declaration is `riemannHypothesis : RiemannHypothesis`. The passage ledger currently links 60 passages to Lean. The companion checks ten deductions locally. Its two archive-dependent files still await a build against the full original environment. [Original theorem](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Main.lean#L4) · [Source manifest](docs/SOURCE_MANIFEST.md) · [Lean companion and replay instructions](review/REPLAY.md)
 
-Mathematicians can now read the argument from beginning to end and review it as they would any other paper, without consulting Lean. In [Section 18.7](manuscript/main.pdf#page=281) I list the steps that still need proofs and the places where I still need to check that a published theorem applies.
+## How to help verify the reconstruction
+
+Choose one passage. Identify the exact claim in the paper and the declaration used on the original route to RH. Check whether the hypotheses are available at that point and whether the objects on both sides agree. A report that locates a mismatch, missing hypothesis or missing proof is as welcome as a confirmed correspondence. Please include the manuscript section or equation, a pinned Lean link or literature reference, and what you checked. [Open an issue](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/new)
+
+| Start here | Question for a reviewer |
+| --- | --- |
+| [§17.4.3, K1](manuscript/main.pdf#page=262) | Do the lattice, homology and arithmetic inputs give the stated uniform bound, including at the small primes? |
+| [§14, rationality of the periods](manuscript/main.pdf#page=169) | At the chosen embedding, do the analytic and rational periods agree on the same basis pairs with the stated normalization? |
+| [§15, frame normalization](manuscript/main.pdf#page=231) | Do the forms and scalars in the row inclusion match those of the individual lifts on their reduced spaces? |
+| [§18.7, final deduction](manuscript/main.pdf#page=288) | Do the lattices, local lengths and height estimates used in the final inequalities belong to the same chosen family? |
+
+Readers building a paper-to-Lean interface can start with the [passage ledger](review/passage-ledger.tsv), [statement index](review/statement-index.tsv) and [paths from the terminal theorem](review/evidence/passage-RH-paths.tsv). The index lists 453 numbered or labeled mathematical statements and related environments. Twelve overlap a mapped passage. Each proposed link still needs a reader to check what it establishes.
+
+## Proof optimization
+
+A separate project will explore shorter arguments and sharper bounds. I’ll link its repository here when it opens. In the meantime, readers interested in that work can start with the proposed integrated deficit bound in issue 2 or the earlier alternative K1 argument. [Issue 2](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/2) · [Preserved alternatives](review/optimization_preservation/README.md)
+
+<!-- Replace the destination below with the optimization repository URL when it opens. -->
+[optimization-project]: #proof-optimization
+
+## Acknowledgments
+
+- I thank Timothy Wesley Stone for raising the rationality question for the period maps and pointing me to the relevant Lean declarations. [Issue 1](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/1)
+- I thank **erythrofr** for proposing a sharper bound for the integrated deficit. [Issue 2](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/2)
+- I thank **a-ratz** for identifying the original commit to cite, questioning my attribution of V17, and pointing out discrepancies between the declaration names I cited and those in the later community repository. [Issue 3](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/3)
 
 ## The argument and its reconstruction
 
@@ -20,19 +46,9 @@ I began at the Lean declaration `riemannHypothesis` and worked backwards through
 
 **Manuscript by Jimmie Adriazola, Arizona State University.** I used Claude, GPT and Kimi in the reconstruction. Claude also drafted proofs, ran computations and prepared audit reports under my direction.
 
-## Files
+## Further reading
 
-| Material | Where to find it |
-| --- | --- |
-| Manuscript and LaTeX source | [PDF](manuscript/main.pdf) and [source](manuscript/) · [Earlier 66-page manuscript](archive/route-notes/RH_Route_Notes.pdf) and [source](archive/route-notes/RH_Route_Notes.tex) |
-| Structure of the argument | [Proof dependency map](docs/PROOF_DEPENDENCY_MAP.md) · [Published theorems](docs/EXTERNAL_THEOREMS.md) |
-| Reconstruction history | [Dated status reports](docs/STATUS.md) · [21 November reconstruction](docs/RECONSTRUCTION_STATUS.md) |
-| Verification | [Archive version and instructions for checking the Lean proof](docs/SOURCE_MANIFEST.md) · [Audit reports](audit/README.md) |
-| Citation and reuse | [Citation](CITATION.cff) · [License](LICENSE) |
-
-## How to help
-
-Corrections and specialist scrutiny are extremely welcome. One useful place to start is the automorphy argument for residually reducible representations in Section 17. A check of a single hypothesis against the theorem in print is valuable. Please open a GitHub issue with the section, the statement you checked and the source you used.
+[LaTeX source](manuscript/) · [Proof dependency map](docs/PROOF_DEPENDENCY_MAP.md) · [Published theorems](docs/EXTERNAL_THEOREMS.md) · [Audit reports](audit/README.md) · [Dated status reports](docs/STATUS.md) · [Earlier 66-page manuscript](archive/route-notes/RH_Route_Notes.pdf) · [Citation](CITATION.cff) · [License](LICENSE)
 
 <details>
 <summary>Building the manuscripts</summary>

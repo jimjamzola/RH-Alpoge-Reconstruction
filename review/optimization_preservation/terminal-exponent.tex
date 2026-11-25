@@ -1,0 +1,37 @@
+% Historical estimate from the previous private checkpoint.
+\begin{proposition}\label{r6:R6:prop:errors}
+Let $\kappa=\max(2,e_D,e_L+1)$. Let $0<\varepsilon<\frac1{52}$, $J\ge2$, $C_\ast\ge1$ and $C_H\ge0$. There is $x_0$ such that for every $x\ge x_0$, all admissible data at the scale $x$ with this $J$, all weights and every chain record with constants $C_\ast$, $C_H$ and exponents $e_D$, $e_L$, the numbers $e_1,\dots,e_7$ of Section~\ref{r6:R6:sec:A1A7} satisfy
+\[
+e_1+e_2+e_3+e_4+e_5+Ae_6+e_7\le x^{(\kappa+1)\varepsilon}\,\mathcal B .
+\]
+\end{proposition}
+
+\begin{proof}
+Let $x_0$ be as in Lemma~\ref{r6:R6:lem:sizes}, enlarged so that $y=x^\varepsilon\ge260(1+C_H)C_\ast^2$ for $x\ge x_0$. We bound each term by a multiple of $\mathcal B$, using Lemma~\ref{r6:R6:lem:sizes}, $y\ge1$, $C_\ast\ge1$ and $y^\alpha\le y^\kappa$ for $0\le\alpha\le\kappa$.
+
+Since $mb\le a$, $e_1\le C_\ast y^{e_L}N_Ta\le C_\ast y^{e_L}\mathcal B$. In $e_2$, the first term is at most $C_\ast^2y^{e_L}\mathcal B$. Since $b'\le a/k$, the second term is at most $2C_\ast^2y\,N_Ta\,m^2/k\le2C_\ast^2y\,\mathcal B$. The third term is at most $C_\ast a\le C_\ast\mathcal B$, and $1\le\mathcal B$. Hence
+\[
+e_2\le5C_\ast^2y^{\max(1,e_L)}\mathcal B .
+\]
+Since $\Lambda_a\le2y$, $A\le2N_Ta$ and $m\le k$,
+\[
+e_4\le2C_\ast y\,N_Ta+C_\ast y^{e_D}m(B_0+N_c)\le3C_\ast y^{\max(1,e_D)}\mathcal B,\qquad e_5\le C_\ast\mathcal B,
+\]
+\[
+Ae_6\le2N_Ta\cdot C_\ast\cdot2y\Big(1+\frac{m^2}k\Big)\le4C_\ast y\,\mathcal B,\qquad e_7\le C_\ast N_Ta\cdot2y\cdot2\le4C_\ast y\,\mathcal B .
+\]
+For $e_3$, $\log k\le5y$ and $A\le2N_Ta$ give
+\[
+K_F\le8C_\ast y\,N_Ta+4C_\ast\mathcal B+10C_\ast y\,N_Ta\le22C_\ast y\,\mathcal B,
+\]
+so $U+b\le22C_\ast y\,\mathcal B+5C_\ast^2y^{\max(1,e_L)}\mathcal B+\mathcal B\le28C_\ast^2y^{\max(1,e_L)}\mathcal B$. With $\log(1+x^{C_H})\le(1+C_H)y$, $\log\lvert\mathcal W\rvert\le\mathcal B$ and $b\le\mathcal B$,
+\[
+e_3\le\mathcal B+8(1+C_H)y\cdot28C_\ast^2y^{\max(1,e_L)}\mathcal B+12\mathcal B\le237(1+C_H)C_\ast^2y^{\kappa}\mathcal B,
+\]
+because $1+\max(1,e_L)\le\kappa$. Adding the seven bounds,
+\[
+e_1+e_2+e_3+e_4+e_5+Ae_6+e_7\le\big(18C_\ast^2+237(1+C_H)C_\ast^2\big)y^\kappa\mathcal B\le260(1+C_H)C_\ast^2y^\kappa\mathcal B\le y^{\kappa+1}\mathcal B .\qedhere
+\]
+\end{proof}
+
+With the exponents $e_D=2$ and $e_L=0$ of Hypothesis~\ref{r6:R6:thm:records}, $\kappa=2$ and the bound is $x^{3\varepsilon}\mathcal B$.

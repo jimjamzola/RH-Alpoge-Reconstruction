@@ -1,0 +1,68 @@
+\paragraph{The height at one index.}\label{assembly:wordheight}
+Fix an index of the selected family. Its height identity states, for
+each word $u$ and for the same constant $C=C_{\rm sz}$, that its
+stored height is
+\[
+ h^{\rm rec}_u=P_u+\sum_{j=1}^m K_{j,u}
+             -\sum_{j=1}^m L_{6,j}
+             -[K:\mathbb Q]^{-1}\sum_{\sigma:K\hookrightarrow\mathbb C}
+                  \log\kappa_\sigma .
+\]
+Here $P_u=-A\log T_u+e_P^{\max}$ with the record's $C$ in
+$e_P^{\max}$. Write $N_j=k+j(t_r+1)$, $N=N_m$, and denote the
+record's row weights by $\nu_{j\rho i}(u)$. Then
+\begin{align*}
+ K_{j,u}
+   &=\sum_\rho\sum_{0\le i<N_{j-1}}
+       \bigl(\ph(\nu_{j\rho i}(u))-\nu_{j\rho i}(u)\log\Omega\bigr)
+       +CfN^2\Lambda_a+Cfm^3N^2L_\varepsilon,\\
+ L_{6,j}
+   &=\sum_\rho\log H^+_{j\rho}-Cfn_V^2 L_p(b).
+\end{align*}
+The last expression uses the hook-length product for the positive
+partition of Paragraph~\ref{frame:forms}. In factorial coordinates its
+logarithm for rows $a_0,\ldots,a_{n-1}$ is
+$\sum_{i<n}\log\Gamma(a_i+n-i)-
+\sum_{i<l<n}\log(a_i-a_l+l-i)$. The two expressions agree by the
+hook-length formula. The mean over the embeddings agrees with the
+degree-weighted mean over infinite places when
+$\kappa_\sigma=\kappa_{v(\sigma)}$. Substitution proves the height
+identity with these inputs at this index.
+
+In $(h^{\rm rec}_u+A\log T_u)-(h^{\rm rec}_{u'}+A\log T_{u'})$
+the pairing error, the two uniform kernel errors, the hook terms and
+the mean of $\log\kappa$ cancel. In the remaining double sum only
+the rows $1\le i<k-1$ can depend on the word. At these rows the two
+weights are at least one, differ by at most the small-weight bound
+$S$, and are at most $M=6x^6b$ on the selected scale. On $[1,M]$ the
+derivative of $\ph$ is $\log y$, bounded by $\log M$. The mean-value
+inequality therefore bounds the difference of one summand by
+$S(\log M+|\log\Omega|)$. Summing gives
+$mfkS(\log M+|\log\Omega|)$. The size estimates on this family give
+$kS\le b$ and
+$\log M+|\log\Omega|\le(14+6/\varepsilon)L_\varepsilon$.
+Consequently the variation is at most
+$(20+6/\varepsilon)(N_Ta\Lambda_a+mB_0)$, since
+$B_0=fmbL_\varepsilon$ and $m\ge1$. The constant is independent of
+the word and scale. This proves (K6) for the selected height and
+explains the word index suppressed in $s_j$ when only one word is fixed.
+
+For Definition~\ref{r4:R4:hu} the corresponding term-by-term test is
+now explicit. Evaluate its row sums on this realization, padding the
+$N_{j-1}$ rows with zeros if needed, use its positive hook factors,
+and match its mean of $\log\kappa$. Replacing the sharp errors by
+larger errors independent of $u$ adds the same constant to every
+$h_u$. It cancels from (K6). In (K4) it adds exactly that constant
+to the left-hand side, so its bound must also be included in the
+right-hand error. For the frame term this absorption can be made
+explicit. Keep the other inputs fixed and replace the per-lift
+$Cfn_V^2L_p(b)$ by $C_\lambda fN^2\Lambda_a$ with
+$C_\lambda\ge20C$. Paragraph~\ref{frame:forms} makes this a
+majorant. Its total increment is at most
+$C_\lambda mfN^2\Lambda_a\le 2C_\lambda mfbL_\varepsilon
+=2C_\lambda B_0$, using $N^2\le b$ and
+Lemma~\ref{r6:R6:lem:sizes}(iii). This is absorbed in the
+$m(B_0+N_c)x^{e_D\varepsilon}$ error of (K4) by increasing its
+constant by $2C_\lambda$. The height of the independently defined period map
+still requires the metric and pairing identifications of
+Paragraph~\ref{fr:sec:heights}.

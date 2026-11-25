@@ -1,0 +1,97 @@
+\paragraph{How the hypotheses are made simultaneous.}\label{assembly:selection}
+The quantifier on the nodes matters here. Theorem~A chooses the weights
+at scale $x$ before $u_0$ and requires a family of nodes, one for each
+$u_0$. A bound for independently prescribed nodes would be stronger.
+The original assembly constructs the nodes and their arithmetic
+identifications together.
+
+Fix the primitive character. A family $\mathcal F$ has a window and,
+for each $x$, an index set of records. The construction uses finite
+collections of lower bounds on parameters, some depending on earlier
+parameters. Call such a collection $K$. Two collections have a
+joint bound $K\vee K'$ by taking maxima at each prescribed argument.
+A family satisfying the joint bound satisfies each separately, with
+the same height parameter $C_H$. A family assertion $P$ used in the
+construction has the following quantifiers. There is an $\epsilon_P>0$ such that for each $0<\varepsilon\le\epsilon_P$
+there is $K_P$ for which every family in the specified class, large for
+$(K_P,C_H)$, satisfies $P(\mathcal F,C_H)$.
+Two assertions of this form hold jointly by taking the smaller
+$\epsilon_P$ and the joint parameter bound. Repeat for the following
+nine assertions: the local comparison, the conditional division
+estimate, the $\eta$ estimate, irreducibility, equality of ranks at
+small level, fullness and the slope-rank identity, the gain estimate,
+the slope estimate, and the global accounting implication.
+The design-existence theorem, for each sufficiently small
+$\varepsilon$ and \emph{every} joint bound, supplies one family and
+one $C_H$ meeting that bound, the selection condition and the two size
+conditions on the auxiliary primes and the determinant. Apply it
+after forming the joint bound. All nine implications can now be
+evaluated at precisely this family and $C_H$.
+
+On this family the window estimate, local comparison and small-level
+rank equality give divisibility at the twisted places. Insert this and
+the $\eta$ estimate into the conditional division estimate. The
+resulting division data together with fullness, the rank identity
+and the two size conditions give the required slope comparison.
+The global implication consumes the gain, slope, irreducibility,
+division and slope-comparison conclusions. In the original application
+the parameters for this join are $C_{\rm abs}=2$, $C_0=3$, $e_D=2$
+and $e_L=0$. The family and its bounds are fixed before the remaining
+quantifiers over $x$. The record exists at every sufficiently large
+$x$ in that family's window.
+
+At such an $x$, one index $i_0$ fixes the frame, $m,f$, and the host
+primes. One function $u_0\mapsto i(u_0)$ selects the other indices.
+At $i(u_0)$ the frame, ranks and two host primes agree with those at
+$i_0$, the marked element is $u_0$, and two integer functions supply
+the top weights at every index. The global identities fix, among
+other entries, $v$, the logarithmic derivative, and
+$g=\log(g_0g_1)$; this is the one $g$ in (A5) and (A6).
+The local identities read off the ranks, primes, lattice slopes,
+heights and ramification-weighted index losses at $i(u_0)$.
+The arithmetic identities identify the top and thick index sets and say
+that whenever an embedding has the code of a node, that node equals
+the archimedean parameter of this very index and lift. The package
+also includes the size bounds, error estimates, and identifications
+of the finite indexing sets for the sums. Consequently the data in
+the estimates and in the final excess sum agree at every occurrence.
+
+The source stores eleven conditions in the size record at this point:
+the Hida setting, division bound, summed local error, height comparison,
+word count, slopes, quotient-slope bounds, losses, slope inequality,
+height bound and parameter bounds. The slope inequality is evaluated at
+the one height stored on the record; its upper bound is a separate field.
+The local-error entry bounds $|E_u-mAg|$. This suffices both when
+comparing two words and when using (A5).
+
+For the last comparison, use the chosen bijections from the top labels
+to $T$ and from the archimedean indices to $\Phi$. Reindexing both
+finite sums makes the arithmetic excess exactly the accounted sum
+minus its main term. The size and error bounds on this record give
+$x^{(e_D+e_L+3)\varepsilon}\mathcal B$. The window prime-sum estimate
+costs $3\varepsilon$ more in the exponent and absorbing the fixed
+coefficients costs a further $\varepsilon$. Thus the one-sided bound
+has exponent $1/2+(e_D+e_L+7)\varepsilon=1/2+9\varepsilon$
+on the selected windows. For each $s$ with $\operatorname{Re}s>1/2$,
+choose $\varepsilon$ small enough that this exponent is below
+$\operatorname{Re}s$. Corollary~\ref{corA} then gives nonvanishing.
+This order of choices requires arbitrarily large windows of the selected
+family and uniformity in $x$ throughout each such window.
+
+For the manuscript formulation it remains to verify that the lattices,
+period maps, metrics, nodes and local lengths constructed in the
+preceding sections satisfy these identifications together. For example,
+Paragraph~\ref{assembly:wordheight} computes $h_u$ on the selected record. Its comparison with the independently defined periods must give the
+needed inequalities for the quantity
+in Definition~\ref{r4:R4:hu}; that comparison enters both (K4) and
+(K6). Proposition~\ref{a8:prop:record} then supplies the fixed-record
+inequalities, and Subsection~\ref{r6:R6:sec:thmA} and
+Theorem~\ref{mainthm} give the stated implication to nonvanishing.
+For an imprimitive character the missing Euler factors are nonzero
+when $\operatorname{Re}s>0$. Thus the primitive result gives the
+all-character nonvanishing input, away from the pole for the principal
+character. For zeta, a nontrivial zero to the left of $1/2$ would give
+one to its right by the functional equation. This gives the terminal
+Riemann hypothesis assertion.
+
+\input{sec18_wordheight}

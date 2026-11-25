@@ -1,0 +1,47 @@
+\paragraph{Transfer over residue-field lines.}\label{kone:lines}
+Here is the transfer used in the cycle calculation of
+Paragraph~\ref{kone:cycle}. Let $V$ be a vector space over the finite
+residue field $k_0$, let $\rho:G\to\mathrm{GL}(V)$, and let $t$ be the
+functional on bars of $k_0^\times$ which vanishes on boundaries.
+Choose a representative on each line. This gives a function
+$\lambda:V\setminus\{0\}\to k_0^\times$ with
+$\lambda(sv)=s\lambda(v)$, by writing $v$ as a multiple of its
+representative. Give the lines the right action
+$L\cdot g=\rho(g)^{-1}L$. For $0\ne v\in L$, put
+\[
+ c(g,L)=\lambda(v)/\lambda(\rho(g)^{-1}v).
+\]
+The ratio is independent of $v$. It satisfies
+$c(gh,L)=c(g,L)c(h,L\cdot g)$ by cancellation at the intermediate
+line. For a bar $[g_1|\cdots|g_n]$ sum, over initial lines $L_0$,
+the bars $[c(g_1,L_0)|\cdots|c(g_n,L_{n-1})]$, where
+$L_i=L_{i-1}\cdot g_i$. This sum commutes with the bar boundary.
+For the first face reindex by $L_1$; for an interior face use the
+cocycle identity; the last face just forgets the last arrow.
+Composition with $t$ therefore kills boundaries.
+
+If $\lambda$ is multiplied by a scalar $b(L)$ on line $L$, each
+edge label is multiplied by $b(L_{i-1})/b(L_i)$. The two labelled
+paths are related by the vertical edges $b(L_i)$: the products along
+the two sides of each square agree. Triangulate the prism on each
+path by inserting the vertical edge successively at the $n+1$
+vertices, with alternating signs. Its interior faces cancel in pairs;
+the two ends give the difference of the old and new bars, and the
+side faces are the corresponding prisms on the boundary. Thus the
+two sums agree under $t$ on cycles. In particular a linear change
+of coordinates, which transports both lines and representatives,
+preserves the resulting functional.
+
+On $V\oplus W$, send a line to its projection in $V$ when that
+projection is nonzero, and otherwise to its line in $W$. Use the
+normalizing function of the indicated projection. Each line above
+a fixed line in $V$ is the graph of a linear map from that line to
+$W$, so its fiber has $|k_0|^{\dim W}$ elements. A line in $W$ has
+one preimage. For block diagonal actions the edge labels in a fiber
+are exactly those of its projected path. Both fiber sizes equal one
+as coefficients in $\mathbb Z/q$, since $q\mid |k_0|-1$. The
+functional on a direct sum is consequently the sum of the two
+functionals on cycles. On the one-dimensional scalar representation
+there is a single line and $c(g,L)=g$, so the construction recovers
+$t$. These two facts justify passage from the scalar computation to
+the sum over the residue-field blocks.

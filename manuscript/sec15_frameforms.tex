@@ -1,0 +1,84 @@
+\paragraph{The forms in the selected realization.}\label{frame:forms}
+At the distinguished embedding take the reduced source to be the
+rational preimage of the range of the adjoint of the analytic lift.
+In finite dimension that range is the orthogonal complement of its
+kernel. In reduced coordinates the complex lift sends a basis vector
+to the analytic lift of the corresponding rational form. Its matrix
+$T_j$ is the matrix of these images in the chosen target basis.
+Rationality of its entries and the common image condition give
+$w_{j,0}(T_j z)=\theta'_j(j_L z)$ in these coordinates, with
+$j_L$ including the reduced source. If $T_j z=0$, the included vector
+lies in the kernel and its orthogonal complement, so it vanishes;
+the target basis spans the prescribed image. This gives the
+bijection on the reduced spaces.
+
+Three normalizations enter here. The Petersson pairing on multiplicity
+maps is the integral of their matrix coefficients at unit representation
+vectors over the chosen fundamental domain. The archimedean frame
+multiplies this pairing by $\prod_\rho\dim K_\rho$, where $K_\rho$
+is the lowest $K$-type at $\rho$. For a finite level representation
+with group $H$ the adelic adjoint is $|H|^{-1}T^*$; at the trivial
+level this agrees with the ordinary adjoint. In the scalar formula
+the local index $I$ satisfies $\operatorname{vol}([V])=I\,\mathrm{Mass}(V)$
+and $I\|f\|^2=\prod_{v\in S}d_v^{-1}$ with the specified test vector
+and measures. Substitution cancels $I$ from this product, giving
+$\operatorname{vol}([V])\|f\|^2/(\prod_{v\notin S}d_v)
+=\mathrm{Mass}(V)/(\prod_v d_v)$.
+
+At another embedding $\sigma$ representing $v$, the source uses a
+lower bound on the reduced quadratic form. Write $s>0$ for the size of
+the finite quotient of the chosen level, $C_\sigma$ for the sum of
+the conjugate source pairings, and $J_{W,\sigma}$ for the realization
+of the target coordinates. For a rational reduced vector $z$, the two
+forms in that estimate are
+\begin{align*}
+ h_{T,j,v}(z,z)
+   &=s^{-1}\operatorname{Re} C_\sigma(\mathrm{toF}\,z,\mathrm{toF}\,z),\\
+ h_{W,j,v}(T_jz,T_jz)
+   &=s^{-1}\|J_{W,\sigma}(\operatorname{coord}(T_jz))\|^2 .
+\end{align*}
+In the second line the realization scales the basis vectors by
+$s^{-1/2}$. In the first line the majorant on the rational reduced
+space is expressed in that same quotient normalization. The conjugate
+lift estimate therefore gives $h_{W,j,v}(T_jz,T_jz)\ge
+\exp(b_j)h_{T,j,v}(z,z)$, where
+\[
+ b_j=\mathrm{hookPlus}_j-8fn_V^2 L_p(B),\qquad
+ L_p(B)=\log\!\bigl(B\,\operatorname{rd}_E\,g_0g_1 n_V\bigr).
+\]
+Explicitly, if $\lambda^+_{j\rho}$ is the Young diagram obtained by
+sorting the $p_{j\rho}$ positive-side row lengths of the record, put
+$H^+_{j\rho}=\prod_{\square\in\lambda^+_{j\rho}}h(\square)$, where
+$h(\square)$ is one plus the number of boxes to its right in the same row
+and below it in the same column.
+Then $\mathrm{hookPlus}_j=\sum_\rho\log H^+_{j\rho}$.
+At the base embedding the analytic main term contains the product
+$H^+_{j\rho}H^-_{j\rho}$ for the two signature parts. The negative-side
+hook product is a positive integer. Dropping its logarithm gives the
+one-sided bound used here, including for an empty diagram.
+For an active rational part, insert one nonzero vector into the scalar
+identity in these forms and divide by its positive source norm.
+This gives $\log\lambda_j(p,v)\ge b_j$. The selected realization uses
+the lower bound at every off-base place and the positive eigenvalue
+estimate at the base. The row scalar for the same $p$ uses precisely
+this $\lambda_j$ in its product; both scalar identities belong to
+one record. Thus transferring the scalar between the two spaces in
+that record only requires the shared label and the rank equality.
+
+For the rows (P1)--(P4) and the grid of Proposition~\ref{r6:R6:prop:nodes}, take $B=b$. The nodes $e_j=w_{j\rho}$ are positive and at most $2b$ for large $x$. The small rows satisfy $0\le v_l\le4k\Delta\le b_0/x\le2b/x\le b$. Within one embedding the grid gives $|b_l-e_j|\le mh_0\le b$, and (D5) gives $(kb)^8\le g_i$. These verify the size conditions for the indicated row parameters. The ranks give
+$n_V=k+m-1+t_r\le N$, since $N-n_V=(m-1)t_r+1$.
+Lemma~\ref{r5:lem:primesizes}(i),(iv) gives $N^2\le b$ and
+$\log(g_0g_1)\le18L_\varepsilon$ at sufficiently large scale. Then
+$\log n_V\le L_\varepsilon/2$ and
+\[
+ L_p(b)\le\tfrac{39}{2}L_\varepsilon+\log\operatorname{rd}_E
+     \le20\Lambda_a .
+\]
+Here $L_\varepsilon=\log b$ and $\Lambda_a=\log(xb\operatorname{rd}_E)$.
+Consequently the error summed over the lifts is bounded by
+$160mfN^2\Lambda_a$. To apply this estimate to the earlier period
+chain one must identify its row inclusion, type decomposition and
+level forms with the selected record, and compare $\mathrm{hookPlus}_j$ with $\sum_\rho h_{j\rho}$.
+For example, if the height uses another source frame, equality of its
+Gram matrix in the specified rational basis with $X_{T,j}$ is needed
+before applying the displayed quadratic inequality to that frame.

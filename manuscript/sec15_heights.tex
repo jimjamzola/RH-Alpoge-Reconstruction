@@ -164,7 +164,7 @@ Suppose that $B_u\ne0$, that for every archimedean place $v$ of $F$
 \[
 \log\lVert P_u\rVert_v^2\le h_P,\qquad \log\lVert K_j\rVert_v^2\le h_{K,j}(v)\quad(1\le j\le m),
 \]
-and that $\sum_j\log\lambda_j(p,v)\ge\ell_\lambda$ for all $p$ and $v$, where the operator norm of $P_u$ is taken with respect to the frame $X_m$ and the dual of the form $h'$ that equals $(\kappa_v\prod_j\lambda_j(p,v))^{-1}$ times the form of $X_R$ on the base-type subspace $p$, and the operator norm of $K_j$ with respect to $X_{j-1}$ and $X_j$. Then
+and that $\sum_j\log\lambda_j(p,v)\ge\ell_\lambda$ for every nonzero base-type summand $p$ and every $v$, where the operator norm of $P_u$ is taken with respect to the frame $X_m$ and the dual of the form $h'$ that equals $(\kappa_v\prod_j\lambda_j(p,v))^{-1}$ times the form of $X_R$ on the base-type subspace $p$, and the operator norm of $K_j$ with respect to $X_{j-1}$ and $X_j$. Then
 \[
 \mathrm{ht}(B_u)\le h_P+\sum_{j=1}^m\frac1{n_F}\sum_vh_{K,j}(v)-\ell_\lambda-\langle\log\kappa\rangle,
 \]
@@ -177,12 +177,15 @@ At a place $v$, Lemma~\ref{r4:R4:composite} applied to \eqref{r4:R4:chain}, with
 \log\lVert B_u\rVert_v^2\le h_P+\sum_jh_{K,j}(v)-\log\kappa_v-\min_p\sum_j\log\lambda_j(p,v)\le h_P+\sum_jh_{K,j}(v)-\log\kappa_v-\ell_\lambda .
 \]
 Taking the mean over the $n_F$ places gives the statement.
+The minimum is over the nonzero summands. Zero summands have zero
+projection in the dual-norm calculation. Since $B_u\ne0$, at least
+one summand is nonzero.
 \end{proof}
 
 The three hypotheses of Proposition~\ref{r4:R4:ht} are the archimedean content of the period maps, and we now state them in the form in which they enter \eqref{A4}. For a lift $j$ and an embedding $\rho\in\Phi$ the kernel of $K_j$ at $\rho$ is a polynomial in the matrix coordinates, and its row weights form a vector $\nu_{j\rho}=(\nu_{j\rho1},\dots,\nu_{j\rho N})$ of nonnegative reals with $N=k+m(t_r+1)$. Let $h_{j\rho}$ be the logarithm of the normalizing constant of the frame on the $\rho$-component of $V_j$, so that $\sum_\rho h_{j\rho}$ is the quantity $\ell_\lambda$ contributed by the lift $j$ (the hook constants of the base side). Let $C_0\ge1$ be a constant.
 
 \begin{hypothesis}[kernel norms]\label{r4:R4:HK}
-For every lift $j$, $\frac1{n_F}\sum_vh_{K,j}(v)\le s_j$ with
+For a fixed word $u$, write $s_j=s_j(u)$ for the following bound. For every lift $j$, $\frac1{n_F}\sum_vh_{K,j}(v)\le s_j$ with
 \[
 s_j=\sum_{\rho\in\Phi}\Big(\sum_{i=1}^N\ph(\nu_{j\rho i})-\Big(\sum_{i=1}^N\nu_{j\rho i}\Big)\log\Omega\Big)+C_0\big(fN^2\Lambda_a+fm^3N^2L_\varepsilon\big).
 \]
@@ -803,20 +806,45 @@ The assumption that $P_u$ factors through $\mathrm{br}_t$ is part of the constru
 
 \subsection{The frame constants}\label{w3:sec:HL}
 
-The scalars $\lambda_j(p,v)$ are defined by the frame condition of the record. The map $\theta_j\colon R_F\to W_j$ multiplies the hermitian form on the base-type subspace $p$ by $\lambda_j(p,v)$ at $v$. Equivalently $\lambda_j(p,v)$ is the eigenvalue of $\theta_j^*\theta_j$ on $p$, where the adjoint is taken for the Petersson forms. Hypothesis~\ref{r4:R4:HL} asks for $\sum_j\log\lambda_j(p,v)\ge\sum_{j,\rho}h_{j\rho}-C_0mfN^2\Lambda_a$, where $h_{j\rho}$ is the logarithm of the hook constant of the frame on the $\rho$-component.
+The frame record uses two spaces at the base tuple. The inclusion
+$\iota$ maps the row space to $R_F$, and the $j$th lift $\theta_j$
+maps its reduced source to $W_j$. The inclusion has scalar
+$\kappa_v\prod_j\lambda_j(p,v)$ on the row part of type $p$.
+The lift has scalar $\lambda_j(p,v)$ on the corresponding reduced
+source part, for the source form $X_{T,j}$ and target form $X_{W_j}$.
+In the selected record the two parts have the same dimension.
+Indeed their defining preimages under $\iota$ and $\theta_j$
+have the dimensions of the target parts because both coordinate
+maps are bijections, and the record identifies these two dimensions
+for each label. Thus an active row label has an active lift part
+for every $j$. The height estimate uses the common scalar attached
+to this label. Hypothesis~\ref{r4:R4:HL} asks for
+$\sum_j\log\lambda_j(p,v)\ge\sum_{j,\rho}h_{j\rho}-C_0mfN^2\Lambda_a$.
 
 \begin{proposition}[structure of Hypothesis~\ref{r4:R4:HL}]\label{w3:W3:HLprop}
-Suppose that for each $j$, each base-type $p$ with $W_{j,p}\ne0$ and each $v$,
+Assume the preceding rank and scalar identities, with $\theta_j$
+mapping the reduced source part of type $p$ into $W_{j,p}$. Suppose
+that for each $j$, each active type $p$ and each $v$, for the adjoint
+in these same forms,
 \begin{enumerate}
 \item[(i)] $\theta_j\theta_j^*$ acts on $W_{j,p}$ by a scalar $a_j\,z_j$ with $z_j=L^S(\frac{1+t_0}2,c\,\chi\mu_{t,j+1}^{-1})$ a partial $L$-value and $a_j$ a product of local zeta integrals (the Rallis inner product formula);
 \item[(ii)] $\log(a_jz_j)\ge\sum_\rho\log\mathrm{hook}_{j\rho}-C_{\mathrm{sz}}fN^2L_p$, where $\log\mathrm{hook}_{j\rho}$ is the archimedean formal degree term written as a hook product, and $L_p$ is the size of the local and $L$-value corrections.
 \end{enumerate}
-Then Hypothesis~\ref{r4:R4:HL} holds with $e_\lambda\le C_{\mathrm{sz}}mfN^2\Lambda_a$ once $L_p\le\Lambda_a$.
+If $L_p\le C_L\Lambda_a$ for an absolute $C_L>0$ and $\sum_\rho h_{j\rho}\le\sum_\rho\log\mathrm{hook}_{j\rho}$ for each $j$, the frame bound
+in Hypothesis~\ref{r4:R4:HL} holds on the active parts with
+$e_\lambda\le C_L C_{\mathrm{sz}}mfN^2\Lambda_a$.
 \end{proposition}
 
 \begin{proof}
-If $W_{j,p}=0$ the scalar is $1$ by convention and the inequality is trivial. Otherwise pick $x\ne0$ in $W_{j,p}$. Then $\lambda_j(p,v)\lVert x\rVert^2=\langle\theta_j^*\theta_jx',x'\rangle$ for the preimage $x'$, and (i) identifies this eigenvalue with $a_jz_j$. Summing (ii) over $j$ gives the statement with $h_{j\rho}=\log\mathrm{hook}_{j\rho}$.
+Fix a nonzero $z$ in the reduced source part and put $y=\theta_jz$.
+Then $\|y\|^2=\lambda_j(p,v)\|z\|^2>0$. The scalar identity on the
+source gives $\theta_j\theta_j^* y=\theta_j(\theta_j^*\theta_jz)
+=\lambda_j(p,v)y$. By (i) the same vector is $a_jz_j y$.
+Thus $\lambda_j(p,v)=a_jz_j$. Sum (ii) over $j$ and apply the
+bound for $L_p$. The height minimum only uses these active parts.
 \end{proof}
+
+\input{sec15_frameforms}
 
 Item (i) is the Rallis inner product formula in the convergent range, which follows from the Siegel--Weil formula and the doubling method. Item (ii) combines Harish-Chandra's formula for the formal degree of a holomorphic discrete series, written as a hook product, with lower bounds for the partial $L$-value at $s=\frac{1+t_0}2$ in the range of absolute convergence ($\log z_j\ge-\sum_{\mathfrak p}\log(1-N\mathfrak p^{-\sigma})^{-1}$). \notgiven{Items (i) and (ii) for the theta lifts of the chain, and the identification of $\theta_j$ with the period map of Theorem~\ref{w2:B}, are not proved here.}
 

@@ -1,0 +1,1145 @@
+from_statement	context	tex_file	reference_line	command	target	target_number	target_page
+corA	statement	sec2_criterion.tex	138	eqref	G	2.1	8
+corA	statement	sec2_criterion.tex	138	eqref	Gchi	2.2	8
+corA	adjacent proof	sec2_criterion.tex	142	eqref	F	2.3	8
+corA	adjacent proof	sec2_criterion.tex	142	eqref	Fchi	2.4	8
+corA	adjacent proof	sec2_criterion.tex	142	eqref	triv	2.6	8
+corA	adjacent proof	sec2_criterion.tex	142	eqref	res	2.5	8
+corA	adjacent proof	sec2_criterion.tex	146	ref	engine	2.4	9
+acct	adjacent proof	sec3_accounting.tex	27	eqref	A2	3.2	12
+acct	adjacent proof	sec3_accounting.tex	27	eqref	A7	3.7	12
+acct	adjacent proof	sec3_accounting.tex	27	eqref	A3	3.3	12
+acct	adjacent proof	sec3_accounting.tex	31	eqref	A4	3.4	12
+acct	adjacent proof	sec3_accounting.tex	31	eqref	A4	3.4	12
+acct	adjacent proof	sec3_accounting.tex	35	eqref	A5	3.5	12
+acct	adjacent proof	sec3_accounting.tex	35	eqref	A6	3.6	12
+acct	adjacent proof	sec3_accounting.tex	40	eqref	acctconc	3.8	12
+acct	adjacent proof	sec3_accounting.tex	40	eqref	A1	3.1	12
+rem:stepanov	statement	sec3_accounting.tex	46	ref	acct	3.1	12
+rem:stepanov	statement	sec3_accounting.tex	46	cite	stepanov		
+rem:stepanov	statement	sec3_accounting.tex	46	cite	bombieri		
+rem:stepanov	statement	sec3_accounting.tex	46	cite	bost		
+rem:stepanov	statement	sec3_accounting.tex	46	eqref	A3	3.3	12
+rem:stepanov	statement	sec3_accounting.tex	46	eqref	A4	3.4	12
+rem:stepanov	statement	sec3_accounting.tex	46	eqref	A3	3.3	12
+rem:stepanov	statement	sec3_accounting.tex	46	ref	r3:frame	13.8	151
+rem:stepanov	statement	sec3_accounting.tex	46	ref	sec:point	4	15
+excess	statement	sec3_accounting.tex	66	eqref	G	2.1	8
+excess	adjacent proof	sec3_accounting.tex	78	eqref	excessid	3.10	14
+excess	adjacent proof	sec3_accounting.tex	84	eqref	G	2.1	8
+acctexcess	statement	sec3_accounting.tex	94	ref	excess	3.3	13
+acctexcess	statement	sec3_accounting.tex	94	eqref	excessid	3.10	14
+acctexcess	statement	sec3_accounting.tex	94	eqref	acctconc	3.8	12
+acctexcess	statement	sec3_accounting.tex	94	ref	acct	3.1	12
+acctexcess	adjacent proof	sec3_accounting.tex	101	eqref	excessid	3.10	14
+acctexcess	adjacent proof	sec3_accounting.tex	101	eqref	excessid	3.10	14
+acctexcess	adjacent proof	sec3_accounting.tex	101	eqref	acctconc	3.8	12
+reg	statement	sec4_point.tex	8	ref	excess	3.3	13
+reg	adjacent proof	sec4_point.tex	18	eqref	G	2.1	8
+step5	adjacent proof	sec4_point.tex	56	eqref	L3	4.4	16
+step5	adjacent proof	sec4_point.tex	58	eqref	L1	4.2	16
+step5	adjacent proof	sec4_point.tex	74	eqref	L2	4.3	16
+step5	adjacent proof	sec4_point.tex	74	eqref	equi	4.1	16
+step5	adjacent proof	sec4_point.tex	84	eqref	step5conc	4.5	16
+sizes	adjacent proof	sec4_point.tex	110	eqref	sz1	4.6	17
+sizes	adjacent proof	sec4_point.tex	110	eqref	sz2	4.7	17
+asm	statement	sec4_point.tex	135	ref	step5	4.2	16
+asm	statement	sec4_point.tex	135	ref	sizes	4.3	17
+asm	adjacent proof	sec4_point.tex	147	eqref	step5conc	4.5	16
+asm	adjacent proof	sec4_point.tex	147	ref	sizes	4.3	17
+asm	adjacent proof	sec4_point.tex	147	eqref	step5conc	4.5	16
+asm	adjacent proof	sec4_point.tex	147	eqref	step5conc	4.5	16
+gchisplit	statement	sec5_auxiliary.tex	188	eqref	id3	5.12	25
+gchisplit	statement	sec5_auxiliary.tex	188	eqref	G	2.1	8
+gchisplit	adjacent proof	sec5_auxiliary.tex	196	eqref	id1	5.10	25
+gchisplit	adjacent proof	sec5_auxiliary.tex	200	eqref	id1	5.10	25
+gchisplit	adjacent proof	sec5_auxiliary.tex	200	eqref	id2	5.11	25
+gchisplit	adjacent proof	sec5_auxiliary.tex	200	eqref	parts	5.13	25
+gchisplit	adjacent proof	sec5_auxiliary.tex	204	eqref	id3	5.12	25
+gchisplit	adjacent proof	sec5_auxiliary.tex	208	eqref	G	2.1	8
+thinprop	adjacent proof	sec5_auxiliary.tex	223	eqref	id1	5.10	25
+window	adjacent proof	sec5_auxiliary.tex	299	ref	meansq	5.4	26
+window	adjacent proof	sec5_auxiliary.tex	299	ref	coef	5.5	26
+window	adjacent proof	sec5_auxiliary.tex	307	eqref	id3	5.12	25
+window	adjacent proof	sec5_auxiliary.tex	314	eqref	block	5.14	28
+tailprop	adjacent proof	sec5_auxiliary.tex	364	ref	gchisplit	5.2	25
+tailprop	adjacent proof	sec5_auxiliary.tex	364	ref	boxpsi	5.1	24
+stage1	adjacent proof	sec5_auxiliary.tex	406	ref	legendre	5.7	29
+stage1	adjacent proof	sec5_auxiliary.tex	406	ref	window	5.6	28
+stage1	adjacent proof	sec5_auxiliary.tex	408	ref	gchisplit	5.2	25
+stage1	adjacent proof	sec5_auxiliary.tex	408	ref	window	5.6	28
+stage1	adjacent proof	sec5_auxiliary.tex	408	ref	window	5.6	28
+stage1	adjacent proof	sec5_auxiliary.tex	414	ref	boxes	5.9	30
+stage1	adjacent proof	sec5_auxiliary.tex	416	ref	tailprop	5.8	29
+stage1	adjacent proof	sec5_auxiliary.tex	420	eqref	id2	5.11	25
+stage1	adjacent proof	sec5_auxiliary.tex	420	ref	tailprop	5.8	29
+legendre2	adjacent proof	sec5_auxiliary.tex	474	eqref	st2a	5.15	32
+legendre2	adjacent proof	sec5_auxiliary.tex	476	eqref	st2b	5.16	32
+legendre2	adjacent proof	sec5_auxiliary.tex	482	eqref	st2a	5.15	32
+stage2	adjacent proof	sec5_auxiliary.tex	498	ref	legendre2	5.11	32
+stage2	adjacent proof	sec5_auxiliary.tex	498	ref	stage1	5.10	30
+stage2	adjacent proof	sec5_auxiliary.tex	504	ref	legendre2	5.11	32
+stage2	adjacent proof	sec5_auxiliary.tex	504	ref	window	5.6	28
+stage2	adjacent proof	sec5_auxiliary.tex	504	ref	window	5.6	28
+stage2	adjacent proof	sec5_auxiliary.tex	506	ref	window	5.6	28
+stage2	adjacent proof	sec5_auxiliary.tex	512	ref	boxes	5.9	30
+stage2	adjacent proof	sec5_auxiliary.tex	514	ref	tailprop	5.8	29
+stage2	adjacent proof	sec5_auxiliary.tex	518	eqref	id2	5.11	25
+stage2	adjacent proof	sec5_auxiliary.tex	518	ref	tailprop	5.8	29
+ranks	statement	sec5_auxiliary.tex	580	eqref	sz1	4.6	17
+ranks	statement	sec5_auxiliary.tex	580	eqref	sz2	4.7	17
+ranks	statement	sec5_auxiliary.tex	580	ref	sizes	4.3	17
+nodes	statement	sec5_auxiliary.tex	598	eqref	scale	5.17	35
+tops	statement	sec5_auxiliary.tex	675	ref	field	5.14	34
+tops	statement	sec5_auxiliary.tex	675	ref	shares	5.18	38
+tops	adjacent proof	sec5_auxiliary.tex	692	ref	shares	5.18	38
+def:admissible	statement	sec6_reduction.tex	12	ref	stage1	5.10	30
+def:admissible	statement	sec6_reduction.tex	12	ref	stage2	5.12	33
+def:admissible	statement	sec6_reduction.tex	12	ref	field	5.14	34
+def:admissible	statement	sec6_reduction.tex	12	ref	field	5.14	34
+def:admissible	statement	sec6_reduction.tex	12	ref	sec:field	5.7	34
+def:admissible	statement	sec6_reduction.tex	13	ref	ranks	5.15	36
+def:admissible	statement	sec6_reduction.tex	14	ref	tops	5.20	39
+def:admissible	statement	sec6_reduction.tex	14	ref	sec:gain	9	69
+def:admissible	statement	sec6_reduction.tex	15	ref	behrend	5.17	37
+def:admissible	statement	sec6_reduction.tex	16	ref	disjoint	5.22	41
+dataexist	adjacent proof	sec6_reduction.tex	26	ref	stage1	5.10	30
+dataexist	adjacent proof	sec6_reduction.tex	26	ref	stage2	5.12	33
+dataexist	adjacent proof	sec6_reduction.tex	26	ref	field	5.14	34
+dataexist	adjacent proof	sec6_reduction.tex	26	ref	field	5.14	34
+dataexist	adjacent proof	sec6_reduction.tex	26	ref	ranks	5.15	36
+dataexist	adjacent proof	sec6_reduction.tex	26	ref	tops	5.20	39
+dataexist	adjacent proof	sec6_reduction.tex	26	ref	behrend	5.17	37
+dataexist	adjacent proof	sec6_reduction.tex	26	ref	behrend	5.17	37
+dataexist	adjacent proof	sec6_reduction.tex	26	ref	disjoint	5.22	41
+dataexist	adjacent proof	sec6_reduction.tex	26	ref	three	5.21	40
+Theorem-A	statement	sec6_reduction.tex	38	ref	nodes	5.16	36
+Theorem-A	statement	sec6_reduction.tex	38	ref	nodes	5.16	36
+mainthm	adjacent proof	sec6_reduction.tex	62	ref	field	5.14	34
+mainthm	adjacent proof	sec6_reduction.tex	62	ref	sec:field	5.7	34
+mainthm	adjacent proof	sec6_reduction.tex	64	ref	excess	3.3	13
+mainthm	adjacent proof	sec6_reduction.tex	64	ref	excess	3.3	13
+mainthm	adjacent proof	sec6_reduction.tex	66	ref	step5	4.2	16
+mainthm	adjacent proof	sec6_reduction.tex	66	eqref	equi	4.1	16
+mainthm	adjacent proof	sec6_reduction.tex	66	ref	shares	5.18	38
+mainthm	adjacent proof	sec6_reduction.tex	66	ref	nodes	5.16	36
+mainthm	adjacent proof	sec6_reduction.tex	66	ref	nodes	5.16	36
+mainthm	adjacent proof	sec6_reduction.tex	66	ref	reg	4.1	15
+mainthm	adjacent proof	sec6_reduction.tex	66	eqref	L1	4.2	16
+mainthm	adjacent proof	sec6_reduction.tex	66	ref	reg	4.1	15
+mainthm	adjacent proof	sec6_reduction.tex	66	eqref	L2	4.3	16
+mainthm	adjacent proof	sec6_reduction.tex	66	ref	stage1	5.10	30
+mainthm	adjacent proof	sec6_reduction.tex	66	ref	stage2	5.12	33
+mainthm	adjacent proof	sec6_reduction.tex	68	eqref	L3	4.4	16
+mainthm	adjacent proof	sec6_reduction.tex	68	ref	realbox	5.13	34
+mainthm	adjacent proof	sec6_reduction.tex	68	ref	thinprop	5.3	25
+mainthm	adjacent proof	sec6_reduction.tex	72	eqref	L3	4.4	16
+mainthm	adjacent proof	sec6_reduction.tex	72	ref	nodes	5.16	36
+mainthm	adjacent proof	sec6_reduction.tex	74	ref	step5	4.2	16
+mainthm	adjacent proof	sec6_reduction.tex	74	ref	ranks	5.15	36
+mainthm	adjacent proof	sec6_reduction.tex	74	ref	sizes	4.3	17
+mainthm	adjacent proof	sec6_reduction.tex	74	ref	asm	4.4	18
+mainthm	adjacent proof	sec6_reduction.tex	74	ref	asm	4.4	18
+mainthm	adjacent proof	sec6_reduction.tex	78	ref	stage1	5.10	30
+mainthm	adjacent proof	sec6_reduction.tex	78	ref	stage2	5.12	33
+mainthm	adjacent proof	sec6_reduction.tex	83	eqref	finalbound	6.1	44
+mainthm	adjacent proof	sec6_reduction.tex	83	ref	corA	2.5	11
+hypidem	adjacent proof	sec7_chain.tex	116	ref	hostideal	7.1	45
+pathind	adjacent proof	sec7_chain.tex	136	ref	tripleformula	7.3	47
+pathind	adjacent proof	sec7_chain.tex	138	ref	latticeF1	7.2	46
+pathind	adjacent proof	sec7_chain.tex	138	ref	tripleformula	7.3	47
+pathind	adjacent proof	sec7_chain.tex	140	ref	hypidem	7.4	48
+pathind	adjacent proof	sec7_chain.tex	144	ref	hypidem	7.4	48
+weilconst	adjacent proof	sec7_chain.tex	220	ref	transport	7.6	51
+weilconst	adjacent proof	sec7_chain.tex	224	ref	pathind	7.5	49
+weilconst	adjacent proof	sec7_chain.tex	230	ref	normcong	7.7	52
+weilconst	adjacent proof	sec7_chain.tex	230	ref	field	5.14	34
+covariance	adjacent proof	sec7_chain.tex	248	ref	transport	7.6	51
+covariance	adjacent proof	sec7_chain.tex	248	ref	weilconst	7.8	52
+covariance	adjacent proof	sec7_chain.tex	252	ref	pathind	7.5	49
+covariance	adjacent proof	sec7_chain.tex	256	ref	pathind	7.5	49
+covariance	adjacent proof	sec7_chain.tex	263	ref	transport	7.6	51
+covariance	adjacent proof	sec7_chain.tex	263	ref	transport	7.6	51
+covariance	adjacent proof	sec7_chain.tex	263	eqref	kernelcx	7.2	50
+covariance	adjacent proof	sec7_chain.tex	263	ref	transport	7.6	51
+covariance	adjacent proof	sec7_chain.tex	263	eqref	datumkernel	7.3	51
+covariance	adjacent proof	sec7_chain.tex	265	ref	transport	7.6	51
+thetaqp	adjacent proof	sec8_kernel.tex	46	eqref	sigmaqp	8.1	54
+thetaqp	adjacent proof	sec8_kernel.tex	46	ref	s2	8.1	55
+thetaquot	adjacent proof	sec8_kernel.tex	82	ref	thetaqp	8.2	55
+thetaquot	adjacent proof	sec8_kernel.tex	84	ref	thetaqp	8.2	55
+thetaquot	adjacent proof	sec8_kernel.tex	86	ref	thetaqp	8.2	55
+thetaquot	adjacent proof	sec8_kernel.tex	98	ref	thetaqp	8.2	55
+thetaquot	adjacent proof	sec8_kernel.tex	98	eqref	logtheta	8.2	55
+normalize	statement	sec8_kernel.tex	170	ref	divunit	8.6	59
+transl	adjacent proof	sec8_kernel.tex	184	ref	thetaquot	8.3	55
+transl	adjacent proof	sec8_kernel.tex	184	ref	torsint	8.5	58
+transl	adjacent proof	sec8_kernel.tex	184	ref	divunit	8.6	59
+transl	adjacent proof	sec8_kernel.tex	184	ref	normalize	8.7	60
+normrel	adjacent proof	sec8_kernel.tex	192	eqref	Upsdef	8.5	59
+normrel	adjacent proof	sec8_kernel.tex	192	ref	thetaquot	8.3	55
+normrel	adjacent proof	sec8_kernel.tex	196	eqref	xexp	8.4	58
+normrel	adjacent proof	sec8_kernel.tex	200	ref	torsint	8.5	58
+cubeadj	adjacent proof	sec8_kernel.tex	221	eqref	Upsdef	8.5	59
+cubeadj	adjacent proof	sec8_kernel.tex	225	ref	thetaquot	8.3	55
+cubeadj	adjacent proof	sec8_kernel.tex	225	ref	divunit	8.6	59
+cubeadj	adjacent proof	sec8_kernel.tex	225	ref	normalize	8.7	60
+cubeadj	adjacent proof	sec8_kernel.tex	231	eqref	Upsdef	8.5	59
+cubeadj	adjacent proof	sec8_kernel.tex	235	ref	thetaquot	8.3	55
+cubeadj	adjacent proof	sec8_kernel.tex	235	ref	torsint	8.5	58
+cubeadj	adjacent proof	sec8_kernel.tex	235	ref	divunit	8.6	59
+cubeadj	adjacent proof	sec8_kernel.tex	239	ref	normalize	8.7	60
+ltiso	adjacent proof	sec8_kernel.tex	253	cite	lubintate		
+betaprops	statement	sec8_kernel.tex	274	ref	thm:betaisg	9.3	71
+betaprops	adjacent proof	sec8_kernel.tex	280	ref	cubeadj	8.10	60
+betaprops	adjacent proof	sec8_kernel.tex	282	eqref	conjfrob	8.3	57
+betaprops	adjacent proof	sec8_kernel.tex	282	ref	cubeadj	8.10	60
+betaprops	adjacent proof	sec8_kernel.tex	282	ref	normrel	8.9	60
+betaprops	adjacent proof	sec8_kernel.tex	288	ref	thm:betaisg	9.3	71
+allalpha	adjacent proof	sec8_kernel.tex	311	eqref	unitrels	8.7	63
+allalpha	adjacent proof	sec8_kernel.tex	317	eqref	unitrels	8.7	63
+allalpha	adjacent proof	sec8_kernel.tex	328	eqref	unitrels	8.7	63
+unitaryinv	adjacent proof	sec8_kernel.tex	350	ref	upssum	8.14	63
+unitaryinv	adjacent proof	sec8_kernel.tex	350	ref	allalpha	8.13	63
+unitaryinv	adjacent proof	sec8_kernel.tex	350	ref	allalpha	8.13	63
+hypshape	adjacent proof	sec8_kernel.tex	375	ref	upssum	8.14	63
+hypshape	adjacent proof	sec8_kernel.tex	375	ref	allalpha	8.13	63
+hypshape	adjacent proof	sec8_kernel.tex	379	eqref	hyppair	8.8	64
+thetaspan	adjacent proof	sec8_kernel.tex	403	eqref	transchar	8.9	65
+thetaspan	adjacent proof	sec8_kernel.tex	405	eqref	transchar	8.9	65
+kernellaw	statement	sec8_kernel.tex	478	ref	ltiso	8.11	61
+kernellaw	statement	sec8_kernel.tex	478	eqref	betadef	8.6	62
+kernellaw	adjacent proof	sec8_kernel.tex	485	ref	hypplane	8.20	67
+kernellaw	adjacent proof	sec8_kernel.tex	487	ref	ltiso	8.11	61
+kernellaw	adjacent proof	sec8_kernel.tex	487	ref	hypshape	8.16	64
+kernellaw	adjacent proof	sec8_kernel.tex	491	ref	orthint	8.19	66
+kernellaw	adjacent proof	sec8_kernel.tex	491	ref	hypshape	8.16	64
+kernelclass	statement	sec8_kernel.tex	499	ref	kernellaw	8.21	67
+kernelclass	statement	sec8_kernel.tex	499	ref	thm:twosums	9.4	72
+kernelclass	adjacent proof	sec8_kernel.tex	507	ref	kernellaw	8.21	67
+kernelclass	adjacent proof	sec8_kernel.tex	507	ref	betaprops	8.12	62
+kernelclass	adjacent proof	sec8_kernel.tex	507	ref	thm:betaisg	9.3	71
+kernelclass	adjacent proof	sec8_kernel.tex	507	ref	prop:inclass	9.5	73
+cob	adjacent proof	sec8_gain.tex	56	ref	dwork	9.1	69
+thm:betaisg	adjacent proof	sec8_gain.tex	76	ref	dwork	9.1	69
+thm:betaisg	adjacent proof	sec8_gain.tex	78	ref	dwork	9.1	69
+thm:betaisg	adjacent proof	sec8_gain.tex	78	ref	dwork	9.1	69
+thm:betaisg	adjacent proof	sec8_gain.tex	78	ref	cob	9.2	70
+thm:betaisg	adjacent proof	sec8_gain.tex	78	eqref	supp	9.1	71
+thm:betaisg	adjacent proof	sec8_gain.tex	82	eqref	supp	9.1	71
+thm:betaisg	adjacent proof	sec8_gain.tex	82	eqref	deriv	9.2	71
+thm:betaisg	adjacent proof	sec8_gain.tex	84	ref	dwork	9.1	69
+thm:betaisg	adjacent proof	sec8_gain.tex	84	eqref	deriv	9.2	71
+thm:betaisg	adjacent proof	sec8_gain.tex	84	ref	dwork	9.1	69
+thm:betaisg	adjacent proof	sec8_gain.tex	86	ref	cob	9.2	70
+thm:betaisg	adjacent proof	sec8_gain.tex	86	eqref	supp	9.1	71
+thm:betaisg	adjacent proof	sec8_gain.tex	88	eqref	deriv	9.2	71
+thm:betaisg	adjacent proof	sec8_gain.tex	98	ref	dwork	9.1	69
+prop:inclass	statement	sec8_gain.tex	140	ref	thm:twosums	9.4	72
+prop:inclass	statement	sec8_gain.tex	140	ref	thm:betaisg	9.3	71
+prop:inclass	adjacent proof	sec8_gain.tex	148	ref	thm:betaisg	9.3	71
+prop:inclass	adjacent proof	sec8_gain.tex	159	ref	thm:twosums	9.4	72
+formB	adjacent proof	sec10_chaindiv.tex	56	eqref	Ti0	10.1	79
+ZLbound	adjacent proof	sec10_chaindiv.tex	97	ref	orbitbounds	10.5	80
+ZLbound	adjacent proof	sec10_chaindiv.tex	97	ref	formB	10.3	80
+lowterm	adjacent proof	sec10_chaindiv.tex	121	ref	ZLbound	10.6	81
+lowterm	adjacent proof	sec10_chaindiv.tex	123	eqref	Sdef	10.2	81
+inversion	adjacent proof	sec10_chaindiv.tex	144	eqref	onelift	10.3	82
+hkpoint	statement	sec10_chaindiv.tex	223	eqref	onelift	10.3	82
+hkpoint	adjacent proof	sec10_chaindiv.tex	239	ref	countloc	10.9	83
+hkpoint	adjacent proof	sec10_chaindiv.tex	239	ref	edgecount	10.11	84
+hkpoint	adjacent proof	sec10_chaindiv.tex	247	ref	qbinom	10.10	84
+hkpoint	adjacent proof	sec10_chaindiv.tex	255	eqref	onelift	10.3	82
+r1:lem:edge	statement	sec11_lifts.tex	74	ref	sec:onelift	10.4	83
+r1:def:chain	statement	sec11_lifts.tex	95	ref	sec:fock	7.1	45
+r1:def:chain	statement	sec11_lifts.tex	101	ref	chaindatum	10.1	79
+r1:lem:heckeint	statement	sec11_lifts.tex	137	ref	heckecomm	10.4	80
+r1:lem:heckeint	adjacent proof	sec11_lifts.tex	141	ref	chaindatum	10.1	79
+r1:lem:heckeint	adjacent proof	sec11_lifts.tex	141	ref	r1:lem:edge	11.4	88
+r1:lem:heckeint	adjacent proof	sec11_lifts.tex	141	eqref	r1:eq:Nprimeineq	11.4	90
+r1:def:kseries	statement	sec11_lifts.tex	167	eqref	r1:eq:coords	11.5	90
+r1:def:kseries	statement	sec11_lifts.tex	167	ref	sec:kernels	7.3	50
+r1:def:kseries	statement	sec11_lifts.tex	167	eqref	stepkernel	7.4	51
+r1:def:kseries	statement	sec11_lifts.tex	167	ref	sec:onelift	10.4	83
+r1:def:kseries	statement	sec11_lifts.tex	171	eqref	stepkernel	7.4	51
+r1:def:kseries	statement	sec11_lifts.tex	171	ref	sec:valuation	9.3	74
+r1:def:kseries	statement	sec11_lifts.tex	171	ref	r1:sec:R1ent	11.6	100
+r1:lem:S2	adjacent proof	sec11_lifts.tex	196	ref	r1:def:kseries	11.9	90
+r1:lem:S2	adjacent proof	sec11_lifts.tex	196	eqref	stepkernel	7.4	51
+r1:lem:S2	adjacent proof	sec11_lifts.tex	196	eqref	r1:eq:coords	11.5	90
+r1:lem:S2	adjacent proof	sec11_lifts.tex	196	ref	covariance	7.9	53
+r1:lem:S2	adjacent proof	sec11_lifts.tex	196	eqref	r1:eq:coords	11.5	90
+r1:lem:S2	adjacent proof	sec11_lifts.tex	196	ref	covariance	7.9	53
+r1:lem:S2	adjacent proof	sec11_lifts.tex	196	ref	r1:def:chain	11.5	88
+r1:prop:D1	statement	sec11_lifts.tex	216	ref	chaindatum	10.1	79
+r1:prop:D1	statement	sec11_lifts.tex	216	ref	r1:def:kseries	11.9	90
+r1:prop:D1	adjacent proof	sec11_lifts.tex	224	ref	r1:def:lift	11.10	91
+r1:prop:D1	adjacent proof	sec11_lifts.tex	224	ref	r1:lem:finite	11.6	89
+r1:prop:D1	adjacent proof	sec11_lifts.tex	224	ref	r1:thm:mink	11.13	92
+remark-5f09667f5935ac	statement	sec11_lifts.tex	228	ref	r1:def:lift	11.10	91
+r1:prop:fourier	statement	sec11_lifts.tex	254	ref	r1:def:fourier	11.17	92
+r1:prop:fourier	statement	sec11_lifts.tex	259	eqref	datumkernel	7.3	51
+r1:prop:fourier	adjacent proof	sec11_lifts.tex	269	ref	sec:kernels	7.3	50
+r1:prop:fourier	adjacent proof	sec11_lifts.tex	269	eqref	kernelcx	7.2	50
+r1:prop:fourier	adjacent proof	sec11_lifts.tex	275	ref	r1:lem:ABinLambda	11.16	92
+r1:prop:fourier	adjacent proof	sec11_lifts.tex	275	eqref	datumkernel	7.3	51
+r1:prop:fourier	adjacent proof	sec11_lifts.tex	275	eqref	kernelcx	7.2	50
+r1:lem:pathsplit	adjacent proof	sec11_lifts.tex	290	ref	tripleformula	7.3	47
+r1:lem:pathsplit	adjacent proof	sec11_lifts.tex	290	ref	pathind	7.5	49
+r1:lem:pathsplit	adjacent proof	sec11_lifts.tex	290	ref	pathind	7.5	49
+r1:lem:pathsplit	adjacent proof	sec11_lifts.tex	290	ref	pathind	7.5	49
+r1:lem:pathsplit	adjacent proof	sec11_lifts.tex	290	ref	hypidem	7.4	48
+r1:lem:pathsplit	adjacent proof	sec11_lifts.tex	290	ref	pathind	7.5	49
+r1:prop:schr	adjacent proof	sec11_lifts.tex	306	ref	r1:lem:pathsplit	11.19	93
+r1:prop:schr	adjacent proof	sec11_lifts.tex	308	ref	latticeF1	7.2	46
+r1:prop:schr	adjacent proof	sec11_lifts.tex	312	ref	sec:kernels	7.3	50
+r1:prop:schr	adjacent proof	sec11_lifts.tex	312	eqref	kernelcx	7.2	50
+r1:prop:schr	adjacent proof	sec11_lifts.tex	312	ref	tripleformula	7.3	47
+r1:prop:schr	adjacent proof	sec11_lifts.tex	312	ref	r1:prop:fourier	11.18	92
+r1:prop:schr	adjacent proof	sec11_lifts.tex	324	ref	r1:lem:pathsplit	11.19	93
+r1:prop:schr	adjacent proof	sec11_lifts.tex	326	ref	r1:prop:fourier	11.18	92
+r1:hyp:H1	statement	sec11_lifts.tex	346	eqref	stepkernel	7.4	51
+r1:hyp:H1	statement	sec11_lifts.tex	346	ref	r1:lem:chiunit	11.30	98
+r1:hyp:H1	statement	sec11_lifts.tex	346	ref	r1:def:kseries	11.9	90
+a8:def:frame	statement	sec11_lifts.tex	363	ref	r1:def:chain	11.5	88
+a8:def:frame	statement	sec11_lifts.tex	368	eqref	stepkernel	7.4	51
+a8:def:frame	statement	sec11_lifts.tex	372	eqref	stepkernel	7.4	51
+a8:lem:valmu	adjacent proof	sec11_lifts.tex	391	ref	a8:lem:unif	11.24	96
+a8:lem:valmu	adjacent proof	sec11_lifts.tex	395	eqref	a8:eq:inftype	11.6	96
+a8:lem:valmu	adjacent proof	sec11_lifts.tex	395	eqref	r1:eq:pos	11.1	86
+a8:lem:valmu	adjacent proof	sec11_lifts.tex	395	eqref	a8:eq:inftype	11.6	96
+a8:lem:det	adjacent proof	sec11_lifts.tex	411	ref	a8:def:frame	11.23	96
+a8:prop:N1	statement	sec11_lifts.tex	415	ref	a8:def:frame	11.23	96
+a8:prop:N1	adjacent proof	sec11_lifts.tex	426	ref	a8:lem:valmu	11.25	96
+a8:prop:N1	adjacent proof	sec11_lifts.tex	426	ref	r1:lem:chiunit	11.30	98
+a8:prop:N1	adjacent proof	sec11_lifts.tex	428	ref	a8:lem:det	11.26	97
+a8:prop:N1	adjacent proof	sec11_lifts.tex	432	ref	a8:def:frame	11.23	96
+r1:prop:S3	statement	sec11_lifts.tex	447	ref	splitkernel	10.12	84
+r1:prop:S3	adjacent proof	sec11_lifts.tex	455	ref	r1:lem:vol	11.21	95
+r1:prop:S3	adjacent proof	sec11_lifts.tex	455	eqref	r1:eq:coords	11.5	90
+r1:prop:S3	adjacent proof	sec11_lifts.tex	455	ref	r1:prop:schr	11.20	94
+remark-c6bbe7086fe533	statement	sec11_lifts.tex	459	ref	sec:kernels	7.3	50
+remark-c6bbe7086fe533	statement	sec11_lifts.tex	459	ref	r1:lem:chiunit	11.30	98
+remark-c6bbe7086fe533	statement	sec11_lifts.tex	459	eqref	stepkernel	7.4	51
+remark-c6bbe7086fe533	statement	sec11_lifts.tex	459	ref	sec:kernels	7.3	50
+r1:lem:chiunit	adjacent proof	sec11_lifts.tex	467	eqref	r1:eq:pos	11.1	86
+r1:prop:S1S2	statement	sec11_lifts.tex	471	ref	r1:def:chain	11.5	88
+r1:prop:S1S2	statement	sec11_lifts.tex	471	ref	r1:def:lift	11.10	91
+r1:prop:S1S2	statement	sec11_lifts.tex	471	ref	splitkernel	10.12	84
+r1:prop:S1S2	statement	sec11_lifts.tex	471	ref	r1:def:hecke	11.7	89
+r1:prop:S1S2	adjacent proof	sec11_lifts.tex	475	ref	r1:def:hecke	11.7	89
+r1:prop:S1S2	adjacent proof	sec11_lifts.tex	475	ref	r1:lem:finite	11.6	89
+r1:prop:S1S2	adjacent proof	sec11_lifts.tex	475	ref	r1:def:lift	11.10	91
+r1:prop:S1S2	adjacent proof	sec11_lifts.tex	475	ref	r1:lem:S2	11.11	91
+r1:prop:D3	statement	sec11_lifts.tex	497	ref	heckecomm	10.4	80
+r1:prop:D3	adjacent proof	sec11_lifts.tex	504	eqref	r1:eq:rawrel	11.7	99
+r1:thm:Cii	statement	sec11_lifts.tex	518	ref	r1:prop:D3	11.32	99
+r1:thm:Cii	adjacent proof	sec11_lifts.tex	532	eqref	r1:eq:Nprime	11.3	89
+r1:thm:ent-even	statement	sec11_lifts.tex	576	eqref	r1:eq:coords	11.5	90
+r1:thm:ent-even	adjacent proof	sec11_lifts.tex	584	ref	r1:lem:CB	11.34	101
+r1:thm:ent-even	adjacent proof	sec11_lifts.tex	588	ref	r1:lem:edge	11.4	88
+r1:thm:ent-even	adjacent proof	sec11_lifts.tex	588	eqref	r1:eq:entcond	11.9	101
+r1:lem:shape	statement	sec11_lifts.tex	592	ref	sec:valuation	9.3	74
+r1:lem:shape	statement	sec11_lifts.tex	592	ref	sec:valuation	9.3	74
+r1:lem:shape	statement	sec11_lifts.tex	594	eqref	r1:eq:numbers	11.2	87
+r1:lem:shape	statement	sec11_lifts.tex	596	ref	thm:valuation	9.6	75
+r1:hyp:H2	statement	sec11_lifts.tex	624	ref	r1:thm:ent-even	11.35	101
+r1:hyp:H2	statement	sec11_lifts.tex	624	eqref	r1:eq:entcond	11.9	101
+r1:hyp:H2	statement	sec11_lifts.tex	624	ref	r1:lem:frame-even	11.37	102
+r1:cor:ent	statement	sec11_lifts.tex	632	ref	sec:valuation	9.3	74
+r1:cor:ent	statement	sec11_lifts.tex	632	ref	r1:lem:shape	11.36	102
+r1:cor:ent	adjacent proof	sec11_lifts.tex	639	ref	r1:lem:frame-even	11.37	102
+r1:cor:ent	adjacent proof	sec11_lifts.tex	639	eqref	r1:eq:coords	11.5	90
+r1:cor:ent	adjacent proof	sec11_lifts.tex	639	ref	r1:thm:ent-even	11.35	101
+r1:cor:ent	adjacent proof	sec11_lifts.tex	639	eqref	r1:eq:Nprimeineq	11.4	90
+r1:hyp:H3	statement	sec11_lifts.tex	661	ref	kernelclass	8.22	68
+r1:hyp:H3	statement	sec11_lifts.tex	665	ref	kernellaw	8.21	67
+r1:lem:hyp	statement	sec11_lifts.tex	669	ref	kernelclass	8.22	68
+r1:lem:hyp	statement	sec11_lifts.tex	669	eqref	r1:eq:coords	11.5	90
+r1:lem:hyp	statement	sec11_lifts.tex	669	ref	thm:twosums	9.4	72
+r1:lem:hyp	adjacent proof	sec11_lifts.tex	673	ref	r1:lem:pathsplit	11.19	93
+r1:lem:hyp	adjacent proof	sec11_lifts.tex	673	eqref	r1:eq:pos	11.1	86
+r1:lem:hyp	adjacent proof	sec11_lifts.tex	673	ref	thm:twosums	9.4	72
+r1:thm:orbit	statement	sec11_lifts.tex	679	ref	r1:def:chain	11.5	88
+r1:thm:orbit	statement	sec11_lifts.tex	679	ref	r1:def:lift	11.10	91
+r1:thm:orbit	statement	sec11_lifts.tex	683	eqref	gAdef	9.6	74
+r1:thm:orbit	statement	sec11_lifts.tex	683	eqref	gBdef	9.7	74
+r1:thm:orbit	statement	sec11_lifts.tex	683	ref	r1:lem:shape	11.36	102
+r1:thm:orbit	statement	sec11_lifts.tex	683	ref	orbitbounds	10.5	80
+r1:thm:orbit	adjacent proof	sec11_lifts.tex	687	ref	r1:lem:hyp	11.43	104
+r1:thm:orbit	adjacent proof	sec11_lifts.tex	687	ref	prop:inclass	9.5	73
+r1:thm:orbit	adjacent proof	sec11_lifts.tex	687	ref	betaprops	8.12	62
+r1:thm:orbit	adjacent proof	sec11_lifts.tex	687	ref	r1:lem:hyp	11.43	104
+r1:thm:orbit	adjacent proof	sec11_lifts.tex	687	ref	thm:valuation	9.6	75
+r1:thm:orbit	adjacent proof	sec11_lifts.tex	687	ref	r1:lem:shape	11.36	102
+r1:thm:orbit	adjacent proof	sec11_lifts.tex	690	ref	r1:lem:shape	11.36	102
+r1:thm:orbit	adjacent proof	sec11_lifts.tex	692	ref	r1:lem:add	11.41	103
+r1:thm:orbit	adjacent proof	sec11_lifts.tex	692	ref	r1:cor:ent	11.40	103
+r1:thm:orbit	adjacent proof	sec11_lifts.tex	696	ref	r1:prop:S1S2	11.31	99
+r1:thm:orbit	adjacent proof	sec11_lifts.tex	696	ref	entrybound	10.2	79
+r1:thm:R1main	statement	sec11_lifts.tex	702	ref	r1:def:chain	11.5	88
+r1:thm:R1main	statement	sec11_lifts.tex	702	ref	r1:def:hecke	11.7	89
+r1:thm:R1main	statement	sec11_lifts.tex	702	ref	r1:def:lift	11.10	91
+r1:thm:R1main	statement	sec11_lifts.tex	702	ref	r1:sec:R1data	11.1	86
+r1:thm:R1main	statement	sec11_lifts.tex	702	ref	chaindatum	10.1	79
+r1:thm:R1main	statement	sec11_lifts.tex	704	ref	r1:def:H	11.3	88
+r1:thm:R1main	statement	sec11_lifts.tex	704	ref	r1:def:hecke	11.7	89
+r1:thm:R1main	statement	sec11_lifts.tex	705	ref	r1:prop:D1	11.14	92
+r1:thm:R1main	statement	sec11_lifts.tex	706	ref	r1:prop:D3	11.32	99
+r1:thm:R1main	statement	sec11_lifts.tex	706	ref	r1:lem:heckeint	11.8	90
+r1:thm:R1main	statement	sec11_lifts.tex	706	ref	r1:thm:Cii	11.33	100
+r1:thm:R1main	statement	sec11_lifts.tex	707	ref	r1:thm:orbit	11.44	104
+r1:thm:R1main	statement	sec11_lifts.tex	709	ref	lowterm	10.7	81
+r1:thm:R1main	statement	sec11_lifts.tex	709	ref	r1:prop:D3	11.32	99
+r1:thm:R1main	adjacent proof	sec11_lifts.tex	713	ref	sec:chaindiv	10	78
+r1:thm:R1main	adjacent proof	sec11_lifts.tex	713	ref	hkpoint	10.13	85
+r1:thm:R1main	adjacent proof	sec11_lifts.tex	713	ref	inversion	10.8	82
+r1:thm:R1main	adjacent proof	sec11_lifts.tex	713	ref	r1:prop:D3	11.32	99
+r2:evenorder	adjacent proof	sec12_loss.tex	49	ref	field	5.14	34
+r2:orbitsize	statement	sec12_loss.tex	55	ref	def:goodorbit	5.19	38
+r2:orbitsize	adjacent proof	sec12_loss.tex	63	ref	def:goodorbit	5.19	38
+r2:localq	statement	sec12_loss.tex	99	ref	r2:sec:lossinputs	12.6	125
+r2:placeform	statement	sec12_loss.tex	111	ref	acct	3.1	12
+r2:placeform	statement	sec12_loss.tex	111	ref	r2:sec:Nu	12.4	118
+r2:smithlocal	adjacent proof	sec12_loss.tex	163	ref	r2:LP	12.6	110
+r2:smithlocal	adjacent proof	sec12_loss.tex	163	ref	r2:perfect	12.5	110
+r2:onelattice	statement	sec12_loss.tex	171	ref	r2:LP	12.6	110
+r2:assembly	statement	sec12_loss.tex	189	ref	r2:LP	12.6	110
+r2:assembly	adjacent proof	sec12_loss.tex	193	ref	r2:LP	12.6	110
+r2:assembly	adjacent proof	sec12_loss.tex	193	ref	r2:perfect	12.5	110
+r2:assembly	adjacent proof	sec12_loss.tex	193	ref	r2:smith	12.9	111
+r2:assembly	adjacent proof	sec12_loss.tex	195	ref	r2:onelattice	12.8	111
+r2:LPthm	statement	sec12_loss.tex	209	ref	r2:engines	12.12	113
+r2:LPthm	statement	sec12_loss.tex	211	ref	r2:sec:lossinputs	12.6	125
+r2:LPthm	adjacent proof	sec12_loss.tex	217	ref	r2:engines	12.12	113
+r2:LPthm	adjacent proof	sec12_loss.tex	217	ref	w1:sec:Crest	12.8.5	132
+r2:LPthm	adjacent proof	sec12_loss.tex	218	ref	r2:assembly	12.10	112
+r2:LPthm	adjacent proof	sec12_loss.tex	218	ref	r2:engines	12.12	113
+r2:LPthm	adjacent proof	sec12_loss.tex	218	ref	r2:engines	12.12	113
+r2:LPthm	adjacent proof	sec12_loss.tex	218	ref	r2:engines	12.12	113
+r2:LPthm	adjacent proof	sec12_loss.tex	218	ref	r2:engines	12.12	113
+r2:LPthm	adjacent proof	sec12_loss.tex	218	ref	w1:sec:C	12.8	128
+r2:LPthm	adjacent proof	sec12_loss.tex	218	ref	w1:sec:A	12.10	141
+r2:engines	statement	sec12_loss.tex	222	ref	r2:LPthm	12.11	112
+r2:engines	statement	sec12_loss.tex	224	ref	def:goodorbit	5.19	38
+r2:meankappa	adjacent proof	sec12_loss.tex	237	ref	r2:LPthm	12.11	112
+r2:slots	adjacent proof	sec12_loss.tex	269	ref	r2:perfect	12.5	110
+r2:slots	adjacent proof	sec12_loss.tex	269	ref	r2:smithlocal	12.7	111
+r2:lemmaJ	adjacent proof	sec12_loss.tex	285	ref	r2:slots	12.14	115
+r2:lemmaJ	adjacent proof	sec12_loss.tex	285	ref	r2:smithlocal	12.7	111
+r2:lemmaJ	adjacent proof	sec12_loss.tex	287	ref	r2:smithlocal	12.7	111
+r2:lemmaJ	adjacent proof	sec12_loss.tex	291	ref	r2:smithlocal	12.7	111
+r2:colength	statement	sec12_loss.tex	358	ref	r2:meankappa	12.13	114
+r2:colength	adjacent proof	sec12_loss.tex	368	ref	r2:walk	12.16	116
+r2:colength	adjacent proof	sec12_loss.tex	368	ref	r2:slots	12.14	115
+r2:colength	adjacent proof	sec12_loss.tex	368	ref	r2:lemmaJ	12.15	115
+r2:colength	adjacent proof	sec12_loss.tex	376	ref	r2:layers	12.17	117
+r2:colength	adjacent proof	sec12_loss.tex	382	ref	r2:localq	12.3	109
+r2:Nu	statement	sec12_loss.tex	416	ref	r2:colength	12.18	117
+r2:A2	statement	sec12_loss.tex	426	ref	r2:sec:lossinputs	12.6	125
+r2:A2	adjacent proof	sec12_loss.tex	439	ref	r2:degree	12.19	119
+r2:A2	adjacent proof	sec12_loss.tex	443	ref	r2:colength	12.18	117
+r2:A2	adjacent proof	sec12_loss.tex	447	ref	r2:placeform	12.4	109
+r2:A2	adjacent proof	sec12_loss.tex	451	ref	r2:placeform	12.4	109
+r2:A2	adjacent proof	sec12_loss.tex	459	ref	r2:tau	12.22	121
+r2:A2	adjacent proof	sec12_loss.tex	461	ref	r2:colength	12.18	117
+r2:A2	adjacent proof	sec12_loss.tex	461	ref	r2:degree	12.19	119
+r2:tau	adjacent proof	sec12_loss.tex	469	ref	r2:sec:lp	12.2	109
+r2:tau	adjacent proof	sec12_loss.tex	469	ref	r2:orbitsize	12.2	108
+r2:star	statement	sec12_loss.tex	505	ref	r2:LPthm	12.11	112
+r2:star	adjacent proof	sec12_loss.tex	512	eqref	r2:g1	12.5	108
+r2:star	adjacent proof	sec12_loss.tex	516	ref	r2:shift	12.23	121
+r2:star	adjacent proof	sec12_loss.tex	524	eqref	r2:kink	12.8	122
+r2:star	adjacent proof	sec12_loss.tex	524	ref	r2:orbitsize	12.2	108
+r2:star	adjacent proof	sec12_loss.tex	526	eqref	r2:price	12.6	108
+r2:star	adjacent proof	sec12_loss.tex	534	eqref	r2:price	12.6	108
+r2:noop	adjacent proof	sec12_loss.tex	542	eqref	scale	5.17	35
+r2:noop	adjacent proof	sec12_loss.tex	542	ref	r2:shift	12.23	121
+r2:perprime	adjacent proof	sec12_loss.tex	556	ref	r2:star	12.24	122
+r2:perprime	adjacent proof	sec12_loss.tex	556	ref	r2:noop	12.25	123
+r2:perprime	adjacent proof	sec12_loss.tex	556	ref	r2:noop	12.25	123
+r2:A1	statement	sec12_loss.tex	569	ref	r2:sec:lossinputs	12.6	125
+r2:A1	adjacent proof	sec12_loss.tex	579	ref	r2:perprime	12.26	123
+r2:A1	adjacent proof	sec12_loss.tex	579	eqref	r2:askbound	12.9	123
+r2:A1	adjacent proof	sec12_loss.tex	581	ref	r2:perprime	12.26	123
+r2:A1	adjacent proof	sec12_loss.tex	585	eqref	r2:askbound	12.9	123
+r2:A1	adjacent proof	sec12_loss.tex	607	ref	r2:firstcount	12.28	124
+r2:A1	adjacent proof	sec12_loss.tex	615	eqref	r2:askbound	12.9	123
+r2:firstcount	statement	sec12_loss.tex	619	ref	field	5.14	34
+r2:firstcount	adjacent proof	sec12_loss.tex	627	ref	field	5.14	34
+r2:weights	statement	sec12_loss.tex	635	ref	r2:meankappa	12.13	114
+r2:weights	adjacent proof	sec12_loss.tex	639	ref	r2:meankappa	12.13	114
+w1:thm:window	adjacent proof	sec12_loss.tex	780	ref	w1:lem:binshift	12.32	129
+w1:thm:window	adjacent proof	sec12_loss.tex	780	ref	w1:lem:trunc	12.31	128
+w1:thm:window	adjacent proof	sec12_loss.tex	785	ref	w1:lem:closest	12.33	129
+w1:thm:window	adjacent proof	sec12_loss.tex	789	eqref	w1:eq:leadhyp	12.12	129
+remark-935edf5a27bb70	statement	sec12_loss.tex	793	ref	w1:lem:closest	12.33	129
+remark-935edf5a27bb70	statement	sec12_loss.tex	793	ref	w1:lem:binshift	12.32	129
+w1:lem:adj	adjacent proof	sec12_loss.tex	812	ref	w1:sec:scope	12.7	127
+w1:prop:tie	adjacent proof	sec12_loss.tex	831	ref	w1:lem:adj	12.36	131
+w1:thm:level	adjacent proof	sec12_loss.tex	856	ref	w1:prop:tie	12.37	131
+w1:thm:level	adjacent proof	sec12_loss.tex	856	ref	w1:prop:tie	12.37	131
+w1:thm:level	adjacent proof	sec12_loss.tex	860	ref	w1:lem:smithbad	12.30	128
+w1:thm:level	adjacent proof	sec12_loss.tex	866	ref	w1:thm:window	12.34	129
+w1:prop:digitsplit	adjacent proof	sec12_loss.tex	957	eqref	w1:eq:cd	12.16	134
+w1:prop:decay	adjacent proof	sec12_loss.tex	1001	ref	w1:lem:Dring	12.43	134
+w1:prop:decay	adjacent proof	sec12_loss.tex	1003	ref	w1:lem:Dring	12.43	134
+w1:prop:decay	adjacent proof	sec12_loss.tex	1003	ref	w1:lem:Dring	12.43	134
+w1:prop:extremal	adjacent proof	sec12_loss.tex	1099	ref	w1:lem:divpow	12.48	137
+w1:lem:invproj	adjacent proof	sec12_loss.tex	1142	ref	w1:prop:extremal	12.49	137
+w1:lem:invproj	adjacent proof	sec12_loss.tex	1144	ref	w1:prop:extremal	12.49	137
+w1:lem:Badm	adjacent proof	sec12_loss.tex	1169	ref	w1:lem:divpow	12.48	137
+w1:thm:B7	statement	sec12_loss.tex	1173	ref	w1:prop:projexists	12.50	138
+w1:thm:B7	adjacent proof	sec12_loss.tex	1184	ref	w1:prop:projexists	12.50	138
+w1:thm:B7	adjacent proof	sec12_loss.tex	1198	ref	w1:lem:Badm	12.53	140
+w1:thm:B7	adjacent proof	sec12_loss.tex	1200	ref	w1:lem:Badm	12.53	140
+w1:thm:B7	adjacent proof	sec12_loss.tex	1200	ref	w1:lem:invproj	12.51	139
+w1:thm:B7	adjacent proof	sec12_loss.tex	1202	ref	w1:lem:traceformula	12.52	139
+w1:lem:deficit	adjacent proof	sec12_loss.tex	1311	ref	w1:lem:fT	12.61	143
+w1:lem:deficit	adjacent proof	sec12_loss.tex	1315	ref	w1:lem:fT	12.61	143
+r2:prop:nabladelta	adjacent proof	sec12_loss.tex	1365	ref	w1:lem:invproj	12.51	139
+r2:cor:L2	adjacent proof	sec12_loss.tex	1375	ref	r2:prop:nabladelta	12.64	145
+r2:lem:W123	statement	sec12_loss.tex	1385	ref	r6:R6:prop:nodes	18.7	280
+r2:prop:Z1	adjacent proof	sec12_loss.tex	1397	ref	r6:R6:lem:tr	18.2	277
+r2:prop:Z1	adjacent proof	sec12_loss.tex	1397	ref	ranks	5.15	36
+r2:prop:Z1	adjacent proof	sec12_loss.tex	1397	ref	nodes	5.16	36
+r3:SI	adjacent proof	sec13_frame.tex	74	ref	r3:covol	13.2	148
+r3:LA	adjacent proof	sec13_frame.tex	98	eqref	r3:basic	13.3	149
+r3:LA	adjacent proof	sec13_frame.tex	108	eqref	r3:basic	13.3	149
+r3:LA	adjacent proof	sec13_frame.tex	116	eqref	r3:basic	13.3	149
+r3:place	adjacent proof	sec13_frame.tex	134	ref	r3:LA	13.4	148
+r3:frame	adjacent proof	sec13_frame.tex	177	ref	r3:HN	13.1	147
+r3:frame	adjacent proof	sec13_frame.tex	177	ref	r3:markov	13.6	150
+r3:frame	adjacent proof	sec13_frame.tex	182	ref	r3:SI	13.3	148
+r3:frame	adjacent proof	sec13_frame.tex	188	ref	r3:place	13.5	150
+r3:frame	adjacent proof	sec13_frame.tex	193	ref	r3:cake	13.7	150
+r3:rem:frame	statement	sec13_frame.tex	200	ref	r3:SI	13.3	148
+r3:rem:frame	statement	sec13_frame.tex	200	ref	r3:place	13.5	150
+r3:rem:frame	statement	sec13_frame.tex	200	ref	r3:SI	13.3	148
+r3:rem:frame	statement	sec13_frame.tex	200	ref	r3:markov	13.6	150
+r3:gram	adjacent proof	sec13_frame.tex	245	ref	r3:compress	13.10	152
+r3:gram	adjacent proof	sec13_frame.tex	251	eqref	r3:basic	13.3	149
+r3:gram	adjacent proof	sec13_frame.tex	257	ref	r3:compress	13.10	152
+r3:gram	adjacent proof	sec13_frame.tex	257	ref	r3:compress	13.10	152
+r3:bessel	statement	sec13_frame.tex	309	eqref	r3:besselid	13.4	154
+r3:block	adjacent proof	sec13_frame.tex	325	eqref	r3:besselid	13.4	154
+r3:A3	statement	sec13_frame.tex	334	eqref	A3	3.3	12
+r3:A3	adjacent proof	sec13_frame.tex	363	ref	r3:block	13.14	155
+r3:A3	adjacent proof	sec13_frame.tex	363	ref	r3:gram	13.11	152
+r3:A3	adjacent proof	sec13_frame.tex	363	ref	r3:frame	13.8	151
+r3:A3	adjacent proof	sec13_frame.tex	365	ref	r3:frame	13.8	151
+r3:A3	adjacent proof	sec13_frame.tex	365	ref	r3:HN	13.1	147
+r3:A3	adjacent proof	sec13_frame.tex	365	ref	r3:frame	13.8	151
+r3:rem:log	statement	sec13_frame.tex	369	ref	sec:proofA	18	276
+r3:rem:log	statement	sec13_frame.tex	369	ref	r3:A3	13.15	155
+r3:rem:log	statement	sec13_frame.tex	369	eqref	A3	3.3	12
+r3:rem:log	statement	sec13_frame.tex	369	eqref	r3:e3	13.5	156
+r3:sizecond	statement	sec13_frame.tex	405	ref	r3:A3	13.15	155
+r3:sizecond	adjacent proof	sec13_frame.tex	418	ref	r3:ramshare	13.12	154
+w2:B	statement	sec14_bessel.tex	43	ref	r3:bessel	13.13	154
+w2:unimod	statement	sec14_bessel.tex	79	ref	w2:P1		
+w2:unimod	adjacent proof	sec14_bessel.tex	83	cite	w2borel		
+w2:unimod	adjacent proof	sec14_bessel.tex	83	cite	w2bhc		
+w2:unfold	statement	sec14_bessel.tex	87	ref	w2:P1		
+w2:unfold	statement	sec14_bessel.tex	87	ref	w2:P5		
+w2:unfold	adjacent proof	sec14_bessel.tex	99	ref	w2:unimod	14.4	160
+w2:unfold	adjacent proof	sec14_bessel.tex	104	eqref	w2:stage2	14.8	161
+w2:unfold	adjacent proof	sec14_bessel.tex	112	eqref	w2:seed	14.4	160
+w2:unfold	adjacent proof	sec14_bessel.tex	112	ref	w2:P4		
+w2:unfold	adjacent proof	sec14_bessel.tex	112	eqref	w2:stage1	14.7	161
+w2:unfold	adjacent proof	sec14_bessel.tex	112	eqref	w2:finite	14.9	161
+w2:unfold	adjacent proof	sec14_bessel.tex	112	eqref	w2:seed	14.4	160
+w2:unfold	adjacent proof	sec14_bessel.tex	118	ref	w2:unimod	14.4	160
+w2:unfold	adjacent proof	sec14_bessel.tex	118	eqref	w2:Wint	14.3	160
+w2:unfold	adjacent proof	sec14_bessel.tex	118	eqref	w2:stage2	14.8	161
+w2:unfold	adjacent proof	sec14_bessel.tex	120	eqref	w2:stage2	14.8	161
+w2:unfold	adjacent proof	sec14_bessel.tex	120	eqref	w2:stage1	14.7	161
+w2:unfold	adjacent proof	sec14_bessel.tex	120	eqref	w2:finite	14.9	161
+w2:unfold	adjacent proof	sec14_bessel.tex	120	eqref	w2:stage2	14.8	161
+w2:unfold	adjacent proof	sec14_bessel.tex	120	eqref	w2:seed	14.4	160
+w2:unfold	adjacent proof	sec14_bessel.tex	127	eqref	w2:perlaw	14.6	161
+w2:rem:perlaw	statement	sec14_bessel.tex	131	eqref	w2:perlaw	14.6	161
+w2:rem:perlaw	statement	sec14_bessel.tex	131	ref	w2:anchor	14.13	163
+w2:bottom	statement	sec14_bessel.tex	135	ref	w2:P1		
+w2:bottom	statement	sec14_bessel.tex	135	ref	w2:P5		
+w2:bottom	statement	sec14_bessel.tex	139	eqref	w2:bothyp	14.10	162
+w2:bottom	adjacent proof	sec14_bessel.tex	143	eqref	w2:per	14.5	160
+w2:bottom	adjacent proof	sec14_bessel.tex	143	eqref	w2:bothyp	14.10	162
+w2:bottom	adjacent proof	sec14_bessel.tex	143	ref	w2:unfold	14.5	161
+w2:bottom	adjacent proof	sec14_bessel.tex	143	eqref	w2:bothyp	14.10	162
+w2:bottom	adjacent proof	sec14_bessel.tex	143	eqref	w2:perlaw	14.6	161
+w2:H-dict	statement	sec14_bessel.tex	177	ref	r3:bessel	13.13	154
+w2:H-dict	statement	sec14_bessel.tex	177	ref	w2:P4		
+w2:H-dict	statement	sec14_bessel.tex	177	ref	w2:unfold	14.5	161
+w2:anchor	statement	sec14_bessel.tex	186	ref	w2:H-see	14.10	163
+w2:Bproof	statement	sec14_bessel.tex	201	ref	w2:P1		
+w2:Bproof	statement	sec14_bessel.tex	201	ref	w2:P5		
+w2:Bproof	statement	sec14_bessel.tex	201	ref	w2:H-see	14.10	163
+w2:Bproof	statement	sec14_bessel.tex	201	ref	w2:H-dict	14.11	163
+w2:Bproof	statement	sec14_bessel.tex	201	ref	w2:H-rat	14.12	163
+w2:Bproof	statement	sec14_bessel.tex	201	eqref	w2:besselid	14.2	159
+w2:Bproof	statement	sec14_bessel.tex	201	ref	w2:B	14.3	159
+w2:Bproof	adjacent proof	sec14_bessel.tex	205	ref	w2:central	14.9	162
+w2:Bproof	adjacent proof	sec14_bessel.tex	205	ref	w2:H-dict	14.11	163
+w2:Bproof	adjacent proof	sec14_bessel.tex	207	ref	w2:anchor	14.13	163
+w2:Bproof	adjacent proof	sec14_bessel.tex	207	ref	w2:central	14.9	162
+w2:Bproof	adjacent proof	sec14_bessel.tex	207	ref	w2:H-see	14.10	163
+w2:Bproof	adjacent proof	sec14_bessel.tex	207	ref	w2:bottom	14.7	162
+w2:Bproof	adjacent proof	sec14_bessel.tex	207	ref	w2:H-see	14.10	163
+w2:Bproof	adjacent proof	sec14_bessel.tex	207	ref	w2:prop	14.8	162
+w2:Bproof	adjacent proof	sec14_bessel.tex	211	eqref	w2:besselid	14.2	159
+w2:Bproof	adjacent proof	sec14_bessel.tex	211	ref	w2:H-rat	14.12	163
+w2:rem:Bopen	statement	sec14_bessel.tex	214	ref	w2:Bproof	14.15	163
+w2:rem:Bopen	statement	sec14_bessel.tex	215	ref	w2:H-see	14.10	163
+w2:rem:Bopen	statement	sec14_bessel.tex	215	ref	w3s:thm:T2	14.29	174
+w2:rem:Bopen	statement	sec14_bessel.tex	215	ref	w2:see:H-links	14.21	167
+w2:see:H-laws	statement	sec14_bessel.tex	259	ref	w2:see:T2		
+w2:see:step	statement	sec14_bessel.tex	266	ref	w2:see:H-laws	14.17	165
+w2:see:step	adjacent proof	sec14_bessel.tex	277	ref	w2:see:T7		
+w2:see:step	adjacent proof	sec14_bessel.tex	277	ref	w2:see:T1		
+w2:see:step	adjacent proof	sec14_bessel.tex	281	ref	w2:see:T6		
+w2:see:step	adjacent proof	sec14_bessel.tex	281	ref	w2:see:T2		
+w2:see:step	adjacent proof	sec14_bessel.tex	281	ref	w2:see:T2		
+w2:see:step	adjacent proof	sec14_bessel.tex	281	ref	w2:see:T3		
+w2:see:step	adjacent proof	sec14_bessel.tex	281	ref	w2:see:T8		
+w2:see:last	statement	sec14_bessel.tex	289	ref	w2:see:H-laws	14.17	165
+w2:see:last	adjacent proof	sec14_bessel.tex	297	ref	w2:see:T7		
+w2:see:last	adjacent proof	sec14_bessel.tex	297	ref	w2:see:T1		
+w2:see:last	adjacent proof	sec14_bessel.tex	301	ref	w2:see:T4		
+w2:see:last	adjacent proof	sec14_bessel.tex	301	ref	w2:see:T3		
+w2:see:last	adjacent proof	sec14_bessel.tex	301	ref	w2:see:T5		
+w2:see:main	statement	sec14_bessel.tex	309	ref	w2:see:H-laws	14.17	165
+w2:see:main	adjacent proof	sec14_bessel.tex	320	ref	w2:see:last	14.19	166
+w2:see:main	adjacent proof	sec14_bessel.tex	324	ref	w2:see:step	14.18	166
+w2:see:main	adjacent proof	sec14_bessel.tex	324	eqref	w2:see:start	14.13	167
+w2:see:cor	statement	sec14_bessel.tex	346	ref	w2:see:H-laws	14.17	165
+w2:see:cor	statement	sec14_bessel.tex	346	ref	w2:see:H-links	14.21	167
+w2:see:cor	statement	sec14_bessel.tex	350	ref	w2:see:D4		
+w2:see:cor	adjacent proof	sec14_bessel.tex	361	ref	w2:see:D6		
+w2:see:cor	adjacent proof	sec14_bessel.tex	361	ref	w2:see:T1		
+w2:see:cor	adjacent proof	sec14_bessel.tex	361	ref	w2:see:D3		
+w2:see:cor	adjacent proof	sec14_bessel.tex	361	ref	w2:see:main	14.20	166
+w2:see:cor	adjacent proof	sec14_bessel.tex	361	ref	w2:see:D5		
+w2:see:cor	adjacent proof	sec14_bessel.tex	361	ref	w2:see:D2		
+w2:see:cor	adjacent proof	sec14_bessel.tex	365	ref	w2:see:D3		
+w2:see:cor	adjacent proof	sec14_bessel.tex	365	ref	w2:see:D4		
+w2:see:cor	adjacent proof	sec14_bessel.tex	365	ref	w2:see:D1		
+w2:see:rem	statement	sec14_bessel.tex	368	ref	w2:H-see	14.10	163
+w2:see:rem	statement	sec14_bessel.tex	369	ref	w2:see:cor	14.22	167
+w2:see:rem	statement	sec14_bessel.tex	369	ref	w2:H-see	14.10	163
+w2:see:rem	statement	sec14_bessel.tex	369	ref	w2:H-dict	14.11	163
+w2:see:rem	statement	sec14_bessel.tex	369	ref	w2:prop	14.8	162
+w2:see:rem	statement	sec14_bessel.tex	369	ref	w2:H-see	14.10	163
+w2:see:rem	statement	sec14_bessel.tex	369	ref	w2:Bproof	14.15	163
+w2:see:rem	statement	sec14_bessel.tex	369	ref	w2:anchor	14.13	163
+w2:see:rem	statement	sec14_bessel.tex	369	ref	w2:B	14.3	159
+w2:see:rat	statement	sec14_bessel.tex	373	ref	w2:H-rat	14.12	163
+w3s:thm:T2	statement	sec14_bessel.tex	561	ref	w3s:hyp:gen	14.27	172
+w3s:thm:T2	statement	sec14_bessel.tex	561	ref	w3s:hyp:loc	14.28	173
+w3s:thm:T2	statement	sec14_bessel.tex	561	eqref	w3s:integrand	14.16	172
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	569	ref	w3s:W2		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	569	ref	w3s:L5		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	571	ref	w3s:L1		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	571	ref	w3s:L1		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	571	ref	w3s:W1		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	571	ref	w3s:L2		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	571	ref	w3s:L3		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	571	ref	w3s:L2		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	571	ref	w3s:L3		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	573	ref	w3s:lem:collapse	14.26	170
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	573	ref	w2:unimod	14.4	160
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	573	ref	w3s:L2		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	573	ref	w3s:L2		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	573	ref	w3s:L2		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	573	ref	w3s:lem:uniq	14.25	170
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	575	ref	w3s:lem:collapse	14.26	170
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	577	ref	w3s:W3		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	577	ref	w3s:L1		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	582	ref	w3s:W7		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	582	ref	w3s:lem:uniq	14.25	170
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	584	ref	w3s:L4		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	584	ref	w3s:W1		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	584	ref	w3s:W4		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	589	ref	w3s:L5		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	589	ref	w3s:L1		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	593	ref	w3s:W7		
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	593	eqref	w3s:value	14.17	174
+w3s:thm:T2	adjacent proof	sec14_bessel.tex	593	ref	w3s:L6		
+w3s:prop:cV	statement	sec14_bessel.tex	597	ref	w3s:L6		
+w3s:prop:cV	adjacent proof	sec14_bessel.tex	601	ref	w3s:thm:T2	14.29	174
+w3s:prop:cV	adjacent proof	sec14_bessel.tex	601	ref	w3s:L6		
+w3s:rem:corr	statement	sec14_bessel.tex	605	ref	w2:see:step	14.18	166
+w3s:rem:corr	statement	sec14_bessel.tex	605	ref	w2:see:step	14.18	166
+w3s:rem:corr	statement	sec14_bessel.tex	605	ref	w2:see:main	14.20	166
+w3s:rem:corr	statement	sec14_bessel.tex	605	ref	w3s:prop:cV	14.30	175
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:thm:T2	14.29	174
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:hyp:gen	14.27	172
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:hyp:loc	14.28	173
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:W1		
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:W7		
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:W6		
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:W1		
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:W4		
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:W7		
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:W5		
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:W6		
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:L2		
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:L3		
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:L1		
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:L6		
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w3s:L3		
+w3s:rem:open	statement	sec14_bessel.tex	609	ref	w2:see:H-links	14.21	167
+w2:GG	adjacent proof	sec14_bessel.tex	637	cite	w2green		
+w2:types	adjacent proof	sec14_bessel.tex	675	ref	w2:counts	14.35	177
+w2:mult	adjacent proof	sec14_bessel.tex	683	ref	w2:types	14.36	177
+w2:badweight	statement	sec14_bessel.tex	713	ref	w2:share	14.40	178
+w2:badweight	adjacent proof	sec14_bessel.tex	723	ref	w2:G2		
+w2:badweight	adjacent proof	sec14_bessel.tex	723	ref	w2:G3		
+w2:badweight	adjacent proof	sec14_bessel.tex	723	ref	w2:G4		
+w2:badweight	adjacent proof	sec14_bessel.tex	723	ref	w2:G5		
+w2:badweight	adjacent proof	sec14_bessel.tex	725	ref	w2:counts	14.35	177
+w2:badweight	adjacent proof	sec14_bessel.tex	727	ref	w2:G2		
+w2:badweight	adjacent proof	sec14_bessel.tex	727	ref	w2:mult	14.37	177
+w2:badweight	adjacent proof	sec14_bessel.tex	739	ref	w2:share	14.40	178
+w2:badweight	adjacent proof	sec14_bessel.tex	739	ref	w2:mult	14.37	177
+w2:badweight	adjacent proof	sec14_bessel.tex	745	ref	w2:types	14.36	177
+w2:badweight	adjacent proof	sec14_bessel.tex	745	ref	w2:78	14.38	178
+w2:badweight	adjacent proof	sec14_bessel.tex	747	ref	w2:types	14.36	177
+w2:badweight	adjacent proof	sec14_bessel.tex	747	ref	w2:primecycles	14.39	178
+w2:Iproof	statement	sec14_bessel.tex	781	ref	w2:H-wt	14.42	180
+w2:Iproof	statement	sec14_bessel.tex	781	ref	w2:H-cnt	14.43	180
+w2:Iproof	statement	sec14_bessel.tex	781	ref	w2:H-rows	14.44	180
+w2:Iproof	statement	sec14_bessel.tex	785	ref	w2:I	14.2	159
+w2:Iproof	adjacent proof	sec14_bessel.tex	789	ref	w2:H-rows	14.44	180
+w2:Iproof	adjacent proof	sec14_bessel.tex	789	ref	w2:H-cnt	14.43	180
+w2:Iproof	adjacent proof	sec14_bessel.tex	793	ref	w2:wtprob	14.33	176
+w2:Iproof	adjacent proof	sec14_bessel.tex	793	ref	w2:H-wt	14.42	180
+w2:Iproof	adjacent proof	sec14_bessel.tex	793	ref	w2:transfer	14.45	180
+w2:Iproof	adjacent proof	sec14_bessel.tex	793	ref	w2:GG	14.34	176
+w2:Iproof	adjacent proof	sec14_bessel.tex	793	ref	w2:badweight	14.41	178
+w2:Iproof	adjacent proof	sec14_bessel.tex	795	eqref	w2:sizes	14.18	180
+w2:rem:irr	statement	sec14_bessel.tex	799	ref	w2:G2		
+w2:rem:irr	statement	sec14_bessel.tex	799	ref	w2:G5		
+w2:rem:irr	statement	sec14_bessel.tex	799	ref	w2:I	14.2	159
+w39:mackey	adjacent proof	sec14_bessel.tex	839	eqref	w39:trmult	14.19	181
+w39:exchange	adjacent proof	sec14_bessel.tex	855	ref	w39:pattern	14.48	181
+w39:exchange	adjacent proof	sec14_bessel.tex	855	ref	w39:X5		
+w39:exchange	adjacent proof	sec14_bessel.tex	855	ref	w39:mackey	14.49	182
+w39:exchange	adjacent proof	sec14_bessel.tex	857	ref	w39:X1		
+w39:exchange	adjacent proof	sec14_bessel.tex	857	ref	w39:X3		
+w39:exchange	adjacent proof	sec14_bessel.tex	857	ref	w39:X3		
+w39:exchange	adjacent proof	sec14_bessel.tex	857	ref	w39:X3		
+w39:exchange	adjacent proof	sec14_bessel.tex	859	ref	w39:X1		
+w39:exchange	adjacent proof	sec14_bessel.tex	859	ref	w39:X4		
+w39:thmA	adjacent proof	sec14_bessel.tex	882	ref	w39:pattern	14.48	181
+w39:thmA	adjacent proof	sec14_bessel.tex	886	ref	w39:exchange	14.50	182
+w39:thmA	adjacent proof	sec14_bessel.tex	886	ref	w39:X1		
+w39:thmA	adjacent proof	sec14_bessel.tex	886	ref	w39:X2		
+w39:thmA	adjacent proof	sec14_bessel.tex	886	ref	w39:X3		
+w39:thmA	adjacent proof	sec14_bessel.tex	886	ref	w39:X4		
+w39:thmA	adjacent proof	sec14_bessel.tex	886	ref	w39:X5		
+w39:thmA	adjacent proof	sec14_bessel.tex	886	ref	w39:exchange	14.50	182
+w39:indP	adjacent proof	sec14_bessel.tex	930	ref	w39:orbits	14.52	184
+w39:DX	statement	sec14_bessel.tex	934	ref	w39:orbits	14.52	184
+w39:DX	statement	sec14_bessel.tex	934	ref	w39:indP	14.53	185
+w39:DX	adjacent proof	sec14_bessel.tex	938	ref	w39:exchange	14.50	182
+w39:DX	adjacent proof	sec14_bessel.tex	938	ref	w39:X1		
+w39:DX	adjacent proof	sec14_bessel.tex	938	ref	w39:X3		
+w39:DX	adjacent proof	sec14_bessel.tex	938	ref	w39:X4		
+w39:DX	adjacent proof	sec14_bessel.tex	938	ref	w39:X5		
+w39:DX	adjacent proof	sec14_bessel.tex	938	ref	w39:exchange	14.50	182
+w39:propM	adjacent proof	sec14_bessel.tex	949	ref	w39:orbits	14.52	184
+w39:propM	adjacent proof	sec14_bessel.tex	951	ref	w39:indP	14.53	185
+w39:propM	adjacent proof	sec14_bessel.tex	951	ref	w39:DX	14.54	185
+w39:propM	adjacent proof	sec14_bessel.tex	951	ref	w39:orbits	14.52	184
+w39:thmB	adjacent proof	sec14_bessel.tex	968	ref	w39:propM	14.55	186
+w39:Hwt	statement	sec14_bessel.tex	971	ref	w2:H-wt	14.42	180
+w39:Hwt	statement	sec14_bessel.tex	972	ref	w2:sec:irr	14.3	176
+w39:Hwt	adjacent proof	sec14_bessel.tex	979	ref	w39:pattern	14.48	181
+w39:Hwt	adjacent proof	sec14_bessel.tex	979	ref	w39:thmA	14.51	183
+w39:Hwt	adjacent proof	sec14_bessel.tex	979	ref	w39:thmB	14.56	186
+w2x:trace	statement	sec14_bessel.tex	987	ref	w2:wtprob	14.33	176
+w2x:H-lab	statement	sec14_bessel.tex	999	ref	w2:sec:statements	14.1	158
+w2x:DS	adjacent proof	sec14_bessel.tex	1013	ref	w2x:trace	14.58	187
+w2x:DS	adjacent proof	sec14_bessel.tex	1013	ref	w39:Hwt	14.57	186
+w2x:count	statement	sec14_bessel.tex	1040	ref	w2x:H-pre	14.61	188
+w2x:count	statement	sec14_bessel.tex	1040	ref	w2x:H-pre	14.61	188
+w2x:cnt	statement	sec14_bessel.tex	1052	ref	w2x:H-lab	14.59	187
+w2x:cnt	statement	sec14_bessel.tex	1052	ref	w2x:H-pre	14.61	188
+w2x:cnt	statement	sec14_bessel.tex	1052	eqref	w2x:gap	14.20	188
+w2x:cnt	statement	sec14_bessel.tex	1052	ref	w2:H-cnt	14.43	180
+w2x:cnt	statement	sec14_bessel.tex	1052	ref	w2:H-DIM	14.76	191
+w2x:cnt	adjacent proof	sec14_bessel.tex	1056	ref	w2x:count	14.62	188
+w2x:cnt	adjacent proof	sec14_bessel.tex	1056	ref	w2:H-DIM	14.76	191
+w2x:cnt	adjacent proof	sec14_bessel.tex	1056	ref	w2:H-cnt	14.43	180
+w2x:cnt	adjacent proof	sec14_bessel.tex	1056	ref	w2x:DS	14.60	187
+w2x:cnt	adjacent proof	sec14_bessel.tex	1056	ref	w2x:H-lab	14.59	187
+w2x:cnt	adjacent proof	sec14_bessel.tex	1056	ref	w2x:count	14.62	188
+w2x:sizes	statement	sec14_bessel.tex	1062	eqref	w2:sizes	14.18	180
+w2:assembly	statement	sec14_bessel.tex	1076	eqref	w2:window	14.1	159
+w2:assembly	statement	sec14_bessel.tex	1084	ref	w2:S	14.1	159
+w2:assembly	adjacent proof	sec14_bessel.tex	1088	eqref	w2:window	14.1	159
+w2:offdiag	statement	sec14_bessel.tex	1135	ref	w2:pair	14.67	190
+w2:offdiag	statement	sec14_bessel.tex	1139	ref	w2:assembly	14.65	189
+w2:offdiag	adjacent proof	sec14_bessel.tex	1143	ref	w2:pair	14.67	190
+w2:offdiag	adjacent proof	sec14_bessel.tex	1143	ref	w2:close	14.69	190
+w2:offdiag	adjacent proof	sec14_bessel.tex	1143	ref	w2:pair	14.67	190
+w2:H-KE	statement	sec14_bessel.tex	1151	ref	w2:pair	14.67	190
+w39:sizes	statement	sec14_bessel.tex	1180	ref	ranks	5.15	36
+w39:sizes	adjacent proof	sec14_bessel.tex	1187	ref	ranks	5.15	36
+w2:Sproof	statement	sec14_bessel.tex	1191	ref	w2:H-KE	14.71	191
+w2:Sproof	statement	sec14_bessel.tex	1191	ref	w2:H-SZ	14.77	191
+w2:Sproof	statement	sec14_bessel.tex	1191	ref	w2:S	14.1	159
+w2:Sproof	adjacent proof	sec14_bessel.tex	1195	ref	w2:H-SZ	14.77	191
+w2:Sproof	adjacent proof	sec14_bessel.tex	1195	ref	w2:H-NG	14.74	191
+w2:Sproof	adjacent proof	sec14_bessel.tex	1195	ref	w2:offdiag	14.70	191
+w2:Sproof	adjacent proof	sec14_bessel.tex	1195	ref	w2:assembly	14.65	189
+w2:Sproof	adjacent proof	sec14_bessel.tex	1195	ref	w2:H-KE	14.71	191
+w2:Sproof	adjacent proof	sec14_bessel.tex	1195	ref	w2:H-DG	14.75	191
+w2:Sproof	adjacent proof	sec14_bessel.tex	1195	ref	w2:H-DIM	14.76	191
+w2:Sproof	adjacent proof	sec14_bessel.tex	1195	ref	w2:assembly	14.65	189
+w2:Sproof	adjacent proof	sec14_bessel.tex	1195	ref	w2:H-SZ	14.77	191
+w2:rem:window	statement	sec14_bessel.tex	1199	ref	w2:S	14.1	159
+w2:rem:window	statement	sec14_bessel.tex	1199	eqref	w2:window	14.1	159
+w2:rem:window	statement	sec14_bessel.tex	1199	ref	r3:A3	13.15	155
+w2:rem:window	statement	sec14_bessel.tex	1199	eqref	w2:window	14.1	159
+w2:rem:window	statement	sec14_bessel.tex	1199	eqref	w2:window	14.1	159
+w2:rem:window	statement	sec14_bessel.tex	1199	ref	r3:sizecond	13.19	157
+w2:rem:circ	statement	sec14_bessel.tex	1203	ref	w2:punz	14.14	163
+w2:rem:circ	statement	sec14_bessel.tex	1203	ref	w2:B	14.3	159
+w2:rem:circ	statement	sec14_bessel.tex	1203	ref	w2:S	14.1	159
+w2:rem:circ	statement	sec14_bessel.tex	1203	ref	w2:S	14.1	159
+w2:rem:circ	statement	sec14_bessel.tex	1203	ref	w2:H-KE	14.71	191
+w2:rem:circ	statement	sec14_bessel.tex	1203	ref	w2:H-SZ	14.77	191
+w2:rem:circ	statement	sec14_bessel.tex	1203	ref	r3:A3	13.15	155
+theorem-d21cc54ca7063c	adjacent proof	sec14_bessel.tex	1569	eqref	eq:iwasawa-product	14.23	197
+theorem-d21cc54ca7063c	adjacent proof	sec14_bessel.tex	1573	eqref	eq:radical-covolume	14.24	198
+theorem-d21cc54ca7063c	adjacent proof	sec14_bessel.tex	1574	eqref	eq:adapted-class-bound	14.22	197
+lem:short-all	adjacent proof	sec14_bessel.tex	1668	ref	lem:gram-index	14.85	199
+lem:real-lines	adjacent proof	sec14_bessel.tex	1764	ref	lem:hyperbola-ideals	14.84	199
+thm:rank-two-class-bound	adjacent proof	sec14_bessel.tex	1825	ref	lem:real-lines	14.87	201
+thm:rank-two-class-bound	adjacent proof	sec14_bessel.tex	1827	ref	lem:glue-count	14.88	201
+fr:prop:near-unipotent	adjacent proof	sec14_bessel.tex	1980	eqref	fr:eq:archtrace	14.26	204
+fr:prop:near-count	adjacent proof	sec14_bessel.tex	2040	eqref	fr:eq:size-inequality	14.27	206
+fr:prop:near-count	adjacent proof	sec14_bessel.tex	2064	eqref	fr:eq:size-inequality	14.27	206
+fr:prop:near-count	adjacent proof	sec14_bessel.tex	2064	ref	fr:lem:gm-packing	14.91	205
+fr:prop:near-count	adjacent proof	sec14_bessel.tex	2079	eqref	fr:eq:raw-block-product	14.28	207
+fr:prop:near-moderate	adjacent proof	sec14_bessel.tex	2105	ref	fr:prop:near-count	14.92	206
+fr:prop:near-moderate	adjacent proof	sec14_bessel.tex	2151	eqref	fr:eq:one-type	14.29	208
+fr:prop:near-moderate	adjacent proof	sec14_bessel.tex	2155	eqref	fr:eq:final-absorption	14.30	209
+r4:R4:normrem	statement	sec15_heights.tex	34	cite	bost		
+r4:R4:normrem	statement	sec15_heights.tex	34	eqref	r3:mu	13.1	147
+r4:R4:normrem	statement	sec15_heights.tex	34	eqref	r3:ht	13.2	147
+r4:R4:normrem	statement	sec15_heights.tex	34	ref	r3:sec	13	146
+r4:R4:normrem	statement	sec15_heights.tex	34	ref	r2:sec:loss	12	106
+r4:R4:normrem	statement	sec15_heights.tex	34	ref	acct	3.1	12
+r4:R4:normrem	statement	sec15_heights.tex	34	eqref	excessid	3.10	14
+r4:R4:normrem	statement	sec15_heights.tex	34	eqref	A1	3.1	12
+r4:R4:normrem	statement	sec15_heights.tex	34	eqref	A7	3.7	12
+r4:R4:kronecker	adjacent proof	sec15_heights.tex	83	ref	r4:R4:areaeta	15.2	211
+r4:R4:period	adjacent proof	sec15_heights.tex	119	ref	r4:R4:coord	15.4	212
+r4:R4:period	adjacent proof	sec15_heights.tex	127	ref	r4:R4:kronecker	15.3	211
+r4:R4:Omegasize	statement	sec15_heights.tex	137	ref	r4:R4:period	15.6	213
+r4:R4:ht	adjacent proof	sec15_heights.tex	175	ref	r4:R4:composite	15.8	214
+r4:R4:ht	adjacent proof	sec15_heights.tex	175	eqref	r4:R4:chain	15.5	214
+r4:R4:HP	statement	sec15_heights.tex	195	ref	sec:auxiliary	5	19
+r4:R4:HKmech	statement	sec15_heights.tex	203	ref	r4:R4:HK	15.10	215
+r4:R4:HKmech	statement	sec15_heights.tex	203	eqref	A4	3.4	12
+r4:R4:HKmech	statement	sec15_heights.tex	203	ref	sec:inert	8	54
+r4:R4:HKmech	statement	sec15_heights.tex	203	ref	r4:R4:period	15.6	213
+r4:R4:HKmech	statement	sec15_heights.tex	203	ref	r4:R4:HP	15.11	215
+r4:R4:HKmech	statement	sec15_heights.tex	203	ref	r4:sec:R4open	15.9	224
+r4:R4:htcor	statement	sec15_heights.tex	214	ref	r4:R4:HK	15.10	215
+r4:R4:htcor	statement	sec15_heights.tex	214	ref	r4:R4:HP	15.11	215
+r4:R4:htcor	statement	sec15_heights.tex	214	ref	r4:R4:HL	15.12	215
+r4:R4:htcor	adjacent proof	sec15_heights.tex	218	ref	r4:R4:ht	15.9	214
+r4:R4:HT	statement	sec15_heights.tex	243	eqref	calB	4.8	18
+r4:R4:HTmech	statement	sec15_heights.tex	247	ref	r4:R4:HT	15.16	216
+r4:R4:HTmech	statement	sec15_heights.tex	247	ref	r4:R4:period	15.6	213
+r4:R4:HTmech	statement	sec15_heights.tex	247	ref	r4:sec:R4open	15.9	224
+r4:R4:A4	statement	sec15_heights.tex	271	ref	r4:R4:HK	15.10	215
+r4:R4:A4	statement	sec15_heights.tex	271	ref	r4:R4:HP	15.11	215
+r4:R4:A4	statement	sec15_heights.tex	271	ref	r4:R4:HL	15.12	215
+r4:R4:A4	statement	sec15_heights.tex	271	ref	r4:R4:HT	15.16	216
+r4:R4:A4	statement	sec15_heights.tex	271	ref	r4:R4:HW	15.18	216
+r4:R4:A4	statement	sec15_heights.tex	271	ref	r4:R4:hu	15.14	215
+r4:R4:A4	adjacent proof	sec15_heights.tex	278	ref	r4:R4:HT	15.16	216
+r4:R4:A4	adjacent proof	sec15_heights.tex	278	ref	r4:R4:hu	15.14	215
+r4:R4:A4	adjacent proof	sec15_heights.tex	281	ref	r4:R4:HW	15.18	216
+r4:R4:A4cor	statement	sec15_heights.tex	305	ref	r4:R4:A4	15.19	217
+r4:R4:A4cor	statement	sec15_heights.tex	305	eqref	A4	3.4	12
+r4:R4:A4cor	statement	sec15_heights.tex	305	ref	acct	3.1	12
+r4:R4:A4cor	statement	sec15_heights.tex	305	ref	r4:R4:hu	15.14	215
+r4:R4:A4cor	statement	sec15_heights.tex	305	eqref	r4:R4:calL	15.6	216
+r4:R4:A4cor	adjacent proof	sec15_heights.tex	312	eqref	A4	3.4	12
+r4:R4:A4cor	adjacent proof	sec15_heights.tex	312	ref	r4:R4:A4	15.19	217
+r4:R4:A4cor	adjacent proof	sec15_heights.tex	312	ref	r4:R4:period	15.6	213
+r4:R4:weyl	statement	sec15_heights.tex	389	ref	r4:R4:HD	15.23	219
+r4:R4:weyl	adjacent proof	sec15_heights.tex	396	ref	r4:R4:HD	15.23	219
+r4:R4:weyl	adjacent proof	sec15_heights.tex	404	ref	r4:R4:index	15.21	218
+r4:R4:weyl	adjacent proof	sec15_heights.tex	404	ref	r4:R4:vand	15.24	219
+r4:R4:A6	statement	sec15_heights.tex	420	ref	r4:R4:weyl	15.25	220
+r4:R4:A6	statement	sec15_heights.tex	420	eqref	A6	3.6	12
+r4:R4:A6	adjacent proof	sec15_heights.tex	427	ref	r4:R4:weyl	15.25	220
+r4:R4:A6	adjacent proof	sec15_heights.tex	427	eqref	A6	3.6	12
+r4:R4:Tu	statement	sec15_heights.tex	431	eqref	A3	3.3	12
+r4:R4:Tu	statement	sec15_heights.tex	431	ref	r4:sec:R4A7	15.7	221
+r4:R4:hook	adjacent proof	sec15_heights.tex	453	ref	r4:sec:R4open	15.9	224
+r4:R4:stdslope	adjacent proof	sec15_heights.tex	461	ref	r4:sec:R4open	15.9	224
+r4:R4:Mslope	adjacent proof	sec15_heights.tex	495	ref	r4:R4:schur	15.31	222
+r4:R4:Mslope	adjacent proof	sec15_heights.tex	495	ref	r4:R4:stdslope	15.30	222
+r4:R4:Mslope	adjacent proof	sec15_heights.tex	495	ref	r4:R4:hook	15.29	221
+r4:R4:A7	statement	sec15_heights.tex	504	eqref	A7	3.7	12
+r4:R4:A7	adjacent proof	sec15_heights.tex	512	ref	r4:R4:Mslope	15.32	223
+r4:R4:Mmax	statement	sec15_heights.tex	521	ref	r4:R4:stdslope	15.30	222
+r4:R4:Mmax	statement	sec15_heights.tex	521	eqref	A2	3.2	12
+r4:R4:Mmax	statement	sec15_heights.tex	521	eqref	A7	3.7	12
+r4:R4:sizes	statement	sec15_heights.tex	527	eqref	sz1	4.6	17
+r4:R4:sizes	statement	sec15_heights.tex	527	eqref	sz2	4.7	17
+r4:R4:sizes	statement	sec15_heights.tex	527	ref	sizes	4.3	17
+r4:R4:sizes	statement	sec15_heights.tex	531	eqref	calB	4.8	18
+w3:W3:gauss	adjacent proof	sec15_heights.tex	570	ref	w3:W3:shift	15.36	225
+w3:W3:gauss	adjacent proof	sec15_heights.tex	570	ref	w3:W3:shift	15.36	225
+w3:W3:block	adjacent proof	sec15_heights.tex	600	ref	w3:W3:jet	15.38	225
+w3:W3:block	adjacent proof	sec15_heights.tex	604	ref	w3:W3:gauss	15.37	225
+w3:W3:K3	statement	sec15_heights.tex	646	ref	w3:W3:schur	15.40	226
+w3:W3:K3	statement	sec15_heights.tex	646	ref	w3:W3:block	15.39	225
+w3:W3:K3	statement	sec15_heights.tex	646	ref	w3:W3:supL2	15.41	226
+w3:W3:K3	statement	sec15_heights.tex	646	ref	r4:R4:period	15.6	213
+w3:W3:onesigma	statement	sec15_heights.tex	726	ref	w3:W3:K3	15.42	227
+w3:W3:onesigma	statement	sec15_heights.tex	726	ref	w3:W3:K5	15.44	228
+w3:W3:onesigma	adjacent proof	sec15_heights.tex	733	ref	w3:W3:supL2	15.41	226
+w3:W3:onesigma	adjacent proof	sec15_heights.tex	733	ref	w3:W3:block	15.39	225
+w3:W3:onesigma	adjacent proof	sec15_heights.tex	733	ref	w3:W3:schur	15.40	226
+w3:W3:onesigma	adjacent proof	sec15_heights.tex	733	ref	w3:W3:K5	15.44	228
+w3:W3:HK	statement	sec15_heights.tex	737	ref	w3:W3:K3	15.42	227
+w3:W3:HK	statement	sec15_heights.tex	737	ref	w3:W3:K4	15.43	227
+w3:W3:HK	statement	sec15_heights.tex	737	ref	w3:W3:K5	15.44	228
+w3:W3:HK	statement	sec15_heights.tex	737	ref	r4:R4:period	15.6	213
+w3:W3:HK	statement	sec15_heights.tex	737	ref	r4:R4:HK	15.10	215
+w3:W3:HK	adjacent proof	sec15_heights.tex	745	ref	w3:W3:onesigma	15.45	228
+w3:W3:HK	adjacent proof	sec15_heights.tex	745	ref	r4:R4:period	15.6	213
+w3:W3:HK	adjacent proof	sec15_heights.tex	745	ref	w3:W3:K4	15.43	227
+remark-d8b0a248a91a8c	statement	sec15_heights.tex	749	ref	w3:W3:HK	15.46	229
+remark-d8b0a248a91a8c	statement	sec15_heights.tex	749	ref	r4:R4:HK	15.10	215
+remark-d8b0a248a91a8c	statement	sec15_heights.tex	749	eqref	A4	3.4	12
+remark-d8b0a248a91a8c	statement	sec15_heights.tex	749	ref	r4:R4:HW	15.18	216
+w3:W3:HP	statement	sec15_heights.tex	787	ref	w3:W3:xi	15.50	230
+w3:W3:HP	adjacent proof	sec15_heights.tex	798	ref	w3:W3:br	15.48	229
+w3:W3:HP	adjacent proof	sec15_heights.tex	798	ref	w3:W3:cbr	15.49	230
+w3:W3:HP	adjacent proof	sec15_heights.tex	798	ref	w3:W3:xi	15.50	230
+w3:W3:HLprop	statement	sec15_heights.tex	824	ref	r4:R4:HL	15.12	215
+w3:W3:HLprop	statement	sec15_heights.tex	834	ref	r4:R4:HL	15.12	215
+w3:W3:passage	statement	sec15_heights.tex	906	ref	w3:W3:mult	15.56	234
+w3:W3:passage	adjacent proof	sec15_heights.tex	913	ref	w3:W3:proj	15.55	234
+w3:W3:passage	adjacent proof	sec15_heights.tex	913	ref	w3:W3:avg	15.54	234
+w3:W3:L3	statement	sec15_heights.tex	925	ref	r4:R4:HT	15.16	216
+cov:factor2	statement	sec15_heights.tex	1039	ref	cov:twist	15.63	237
+cov:factor2	statement	sec15_heights.tex	1039	eqref	r4:R4:slope	15.2	210
+cov:factor2	statement	sec15_heights.tex	1039	ref	r4:R4:Omega	15.5	212
+cov:factor2	statement	sec15_heights.tex	1039	ref	w3:W3:unif	15.69	241
+cov:factor2	statement	sec15_heights.tex	1039	ref	cov:mean	15.62	236
+cov:size	statement	sec15_heights.tex	1042	ref	w3:W3:unif	15.69	241
+cov:main	statement	sec15_heights.tex	1077	ref	w3:W3:unif	15.69	241
+cov:main	statement	sec15_heights.tex	1077	ref	cov:H58	15.59	235
+cov:main	adjacent proof	sec15_heights.tex	1081	ref	w3:W3:unif	15.69	241
+cov:main	adjacent proof	sec15_heights.tex	1081	ref	cov:mean	15.62	236
+cov:main	adjacent proof	sec15_heights.tex	1081	ref	cov:size	15.65	238
+cov:main	adjacent proof	sec15_heights.tex	1081	ref	cov:mean	15.62	236
+cov:main	adjacent proof	sec15_heights.tex	1081	ref	cov:mean	15.62	236
+cov:main	adjacent proof	sec15_heights.tex	1083	ref	cov:twist	15.63	237
+cov:main	adjacent proof	sec15_heights.tex	1085	ref	cov:descent	15.61	236
+cov:main	adjacent proof	sec15_heights.tex	1087	ref	cov:trunc	15.60	236
+cov:sign	statement	sec15_heights.tex	1097	ref	cov:H58	15.59	235
+cov:sign	statement	sec15_heights.tex	1097	ref	cov:twist	15.63	237
+cov:sign	statement	sec15_heights.tex	1097	ref	covariance	7.9	53
+cov:sign	statement	sec15_heights.tex	1097	ref	sec:chain	7	45
+w3:W3:HT	statement	sec15_heights.tex	1179	ref	w3:W3:passage	15.57	234
+w3:W3:HT	statement	sec15_heights.tex	1179	ref	w3:W3:base	15.53	233
+w3:W3:HT	statement	sec15_heights.tex	1179	ref	w3:W3:L3	15.58	234
+w3:W3:HT	statement	sec15_heights.tex	1179	ref	r5:thm:Ebound	16.6	245
+w3:W3:HT	statement	sec15_heights.tex	1179	ref	r5:thm:DIVinN	17.37	276
+w3:W3:HT	statement	sec15_heights.tex	1179	ref	r4:R4:HT	15.16	216
+w3:W3:HT	adjacent proof	sec15_heights.tex	1183	ref	w3:W3:passage	15.57	234
+w3:W3:HT	adjacent proof	sec15_heights.tex	1183	ref	w3:W3:base	15.53	233
+w3:W3:HT	adjacent proof	sec15_heights.tex	1183	ref	r5:thm:DIVinN	17.37	276
+w3:W3:HT	adjacent proof	sec15_heights.tex	1183	ref	r5:thm:Ebound	16.6	245
+w3:W3:HT	adjacent proof	sec15_heights.tex	1183	ref	w3:W3:L3	15.58	234
+r5:lem:halfnorm	adjacent proof	sec16_local.tex	42	ref	r5:lem:prodformula	16.1	243
+r5:thm:Ebound	adjacent proof	sec16_local.tex	124	ref	r5:lem:prodformula	16.1	243
+r5:thm:Ebound	adjacent proof	sec16_local.tex	124	ref	r5:lem:halfnorm	16.2	243
+r5:thm:Ebound	adjacent proof	sec16_local.tex	134	ref	r5:lem:prodformula	16.1	243
+r5:thm:Ebound	adjacent proof	sec16_local.tex	139	ref	r5:lem:prodformula	16.1	243
+r5:thm:Ebound	adjacent proof	sec16_local.tex	144	ref	r5:lem:vallog	16.3	243
+r5:cor:A5	statement	sec16_local.tex	153	ref	r5:thm:Ebound	16.6	245
+r5:cor:A5	statement	sec16_local.tex	157	eqref	A5	3.5	12
+r5:cor:A5	statement	sec16_local.tex	157	ref	acct	3.1	12
+r5:cor:A5	statement	sec16_local.tex	157	eqref	calB	4.8	18
+r5:cor:A5	adjacent proof	sec16_local.tex	161	ref	r5:thm:Ebound	16.6	245
+r5:cor:A5	adjacent proof	sec16_local.tex	161	eqref	calB	4.8	18
+r5:cor:A5	adjacent proof	sec16_local.tex	161	eqref	calB	4.8	18
+r5:rem:gcancel	statement	sec16_local.tex	165	ref	acct	3.1	12
+r5:rem:gcancel	statement	sec16_local.tex	165	eqref	A5	3.5	12
+r5:rem:gcancel	statement	sec16_local.tex	165	eqref	A6	3.6	12
+r5:rem:gcancel	statement	sec16_local.tex	165	ref	acct	3.1	12
+r5:rem:gcancel	statement	sec16_local.tex	165	ref	r5:cor:A5	16.7	246
+r5:rem:gcancel	statement	sec16_local.tex	165	eqref	A6	3.6	12
+r5:rem:gcancel	statement	sec16_local.tex	169	ref	sec:proofA	18	276
+r5:rem:Cuniform	statement	sec16_local.tex	173	ref	r5:sec:Hsizes	16.4	247
+r5:rem:Cuniform	statement	sec16_local.tex	173	ref	r5:cor:A5	16.7	246
+r5:lem:primesizes	adjacent proof	sec16_local.tex	195	ref	ranks	5.15	36
+r5:lem:primesizes	adjacent proof	sec16_local.tex	197	ref	stage2	5.12	33
+r5:lem:primesizes	adjacent proof	sec16_local.tex	199	ref	ranks	5.15	36
+r5:lem:primesizes	adjacent proof	sec16_local.tex	199	ref	sec:data	5.8	35
+r5:lem:H2toH5	statement	sec16_local.tex	213	ref	r5:lem:primesizes	16.10	247
+r5:lem:H2toH5	adjacent proof	sec16_local.tex	225	ref	r5:lem:primesizes	16.10	247
+r5:lem:H2toH5	adjacent proof	sec16_local.tex	229	ref	r5:lem:primesizes	16.10	247
+r5:lem:H2toH5	adjacent proof	sec16_local.tex	231	ref	r5:lem:primesizes	16.10	247
+r5:lem:H6C	statement	sec16_local.tex	241	ref	r5:lem:primesizes	16.10	247
+r5:lem:H6C	statement	sec16_local.tex	241	eqref	r5:eq:EatC	16.4	248
+r5:lem:H6C	adjacent proof	sec16_local.tex	248	eqref	r5:eq:EatC	16.4	248
+r5:lem:H6C	adjacent proof	sec16_local.tex	248	ref	r5:lem:primesizes	16.10	247
+r5:lem:H6C	adjacent proof	sec16_local.tex	248	ref	r5:lem:logsum	16.4	244
+r5:prop:H1	statement	sec16_local.tex	260	eqref	r5:Z1	16.1	247
+r5:prop:H1	statement	sec16_local.tex	260	eqref	r5:Z3	16.3	247
+w4:lem:indepS	adjacent proof	sec17_twisted.tex	48	ref	w4:lem:unram	17.3	250
+w4:lem:indepS	adjacent proof	sec17_twisted.tex	48	ref	w4:lem:unram	17.3	250
+w4:prop:classgroup	adjacent proof	sec17_twisted.tex	87	ref	w4:prop:res	17.7	251
+w4:thm:decomp	statement	sec17_twisted.tex	130	ref	w4:thm:vwin	17.11	252
+w4:thm:decomp	statement	sec17_twisted.tex	130	ref	w4:thm:vwin	17.11	252
+w4:thm:decomp	adjacent proof	sec17_twisted.tex	138	ref	w4:thm:vwin	17.11	252
+w4:thm:decomp	adjacent proof	sec17_twisted.tex	146	ref	w4:lem:pm	17.6	251
+w4:prop:pluschar	adjacent proof	sec17_twisted.tex	167	ref	w4:lem:pm	17.6	251
+w4:prop:pluschar	adjacent proof	sec17_twisted.tex	167	ref	w4:lem:coef	17.5	251
+w4:prop:genericplus	statement	sec17_twisted.tex	171	ref	w4:prop:corToBound	17.19	257
+w4:prop:genericplus	statement	sec17_twisted.tex	171	ref	w4:def:generic	17.17	256
+w4:cor:large	adjacent proof	sec17_twisted.tex	200	ref	w4:prop:classgroup	17.8	251
+w4:rem:odd	statement	sec17_twisted.tex	208	ref	tw:sec:sha	17.2	250
+w4:prop:corToBound	statement	sec17_twisted.tex	237	ref	w4:def:generic	17.17	256
+w4:prop:corToBound	statement	sec17_twisted.tex	241	ref	w4:def:sha	17.2	250
+w4:prop:corToBound	adjacent proof	sec17_twisted.tex	245	ref	w4:lem:coef	17.5	251
+w4:prop:need	statement	sec17_twisted.tex	279	ref	w4:thm:vwin	17.11	252
+w4:prop:need	statement	sec17_twisted.tex	279	ref	w4:def:winpair	17.9	252
+w4:prop:need	adjacent proof	sec17_twisted.tex	287	ref	w4:thm:vwin	17.11	252
+w4:prop:need	adjacent proof	sec17_twisted.tex	287	ref	w4:thm:vwin	17.11	252
+w4:prop:need	adjacent proof	sec17_twisted.tex	287	ref	w4:def:chifield	17.10	252
+w4:prop:need	adjacent proof	sec17_twisted.tex	287	ref	w4:thm:vwin	17.11	252
+w4:prop:need	adjacent proof	sec17_twisted.tex	287	ref	w4:prop:res	17.7	251
+w4:rem:normalization	statement	sec17_twisted.tex	312	ref	tw:sec:vwin	17.3	252
+w4:rem:normalization	statement	sec17_twisted.tex	312	ref	w4:prop:genericplus	17.14	255
+w4:prop:fitting	adjacent proof	sec17_twisted.tex	459	ref	w4:lem:det	17.26	270
+lk:lem:proj	statement	sec17_twisted.tex	492	ref	w4:prop:cong	17.25	269
+lk:lem:proj	statement	sec17_twisted.tex	492	ref	lk:lem:split	17.28	272
+lk:prop:ident	statement	sec17_twisted.tex	509	ref	w4:prop:cong	17.25	269
+lk:prop:ident	adjacent proof	sec17_twisted.tex	513	ref	r5:def:eta	17.1	249
+lk:prop:ident	adjacent proof	sec17_twisted.tex	513	ref	lk:lem:proj	17.29	272
+lk:prop:hlb	adjacent proof	sec17_twisted.tex	524	ref	lk:prop:ident	17.30	272
+lk:prop:hlb	adjacent proof	sec17_twisted.tex	528	ref	lk:lem:split	17.28	272
+lk:prop:hlb	adjacent proof	sec17_twisted.tex	528	ref	lk:lem:proj	17.29	272
+lk:prop:hlb	adjacent proof	sec17_twisted.tex	532	ref	w4:lem:det	17.26	270
+lk:prop:gd	statement	sec17_twisted.tex	564	ref	w4:thm:linkn	17.24	269
+lk:prop:gd	statement	sec17_twisted.tex	565	ref	lk:prop:ident	17.30	272
+lk:prop:gd	statement	sec17_twisted.tex	565	ref	lk:prop:cut	17.32	273
+lk:prop:gd	statement	sec17_twisted.tex	571	ref	w4:thm:linkn	17.24	269
+lk:prop:gd	adjacent proof	sec17_twisted.tex	575	ref	lk:prop:ident	17.30	272
+lk:prop:gd	adjacent proof	sec17_twisted.tex	575	ref	lk:prop:cut	17.32	273
+lk:hyp:block	statement	sec17_twisted.tex	616	ref	lk:prop:gd	17.34	274
+r5:thm:DIVinN	statement	sec17_twisted.tex	633	ref	r6:R6:def:adm	18.1	277
+r5:thm:DIVinN	statement	sec17_twisted.tex	633	ref	w4:thm:linkn	17.24	269
+r5:thm:DIVinN	adjacent proof	sec17_twisted.tex	640	ref	w4:thm:linkn	17.24	269
+r6:R6:def:adm	statement	sec18_assembly.tex	25	ref	stage1	5.10	30
+r6:R6:def:adm	statement	sec18_assembly.tex	25	ref	stage2	5.12	33
+r6:R6:def:adm	statement	sec18_assembly.tex	25	ref	field	5.14	34
+r6:R6:def:adm	statement	sec18_assembly.tex	25	ref	field	5.14	34
+r6:R6:def:adm	statement	sec18_assembly.tex	25	ref	sec:field	5.7	34
+r6:R6:def:adm	statement	sec18_assembly.tex	26	ref	def:admissible	6.1	42
+r6:R6:lem:tr	statement	sec18_assembly.tex	36	ref	ranks	5.15	36
+r6:R6:lem:tr	adjacent proof	sec18_assembly.tex	40	ref	ranks	5.15	36
+r6:R6:thm:selmer	statement	sec18_assembly.tex	52	ref	w4:thm:vwin	17.11	252
+r6:R6:thm:selmer	statement	sec18_assembly.tex	52	ref	field	5.14	34
+r6:R6:thm:selmer	statement	sec18_assembly.tex	52	ref	field	5.14	34
+r6:R6:thm:selmer	adjacent proof	sec18_assembly.tex	60	ref	w4:thm:vwin	17.11	252
+r6:R6:thm:selmer	adjacent proof	sec18_assembly.tex	62	ref	w4:def:winpair	17.9	252
+r6:R6:thm:selmer	adjacent proof	sec18_assembly.tex	62	ref	w4:thm:vwin	17.11	252
+r6:R6:thm:selmer	adjacent proof	sec18_assembly.tex	66	ref	w4:def:chifield	17.10	252
+r6:R6:thm:selmer	adjacent proof	sec18_assembly.tex	66	ref	field	5.14	34
+r6:R6:thm:selmer	adjacent proof	sec18_assembly.tex	66	ref	w4:lem:indepS	17.4	250
+r6:R6:thm:selmer	adjacent proof	sec18_assembly.tex	66	ref	w4:def:sha	17.2	250
+r6:R6:thm:selmer	adjacent proof	sec18_assembly.tex	66	ref	r6:R6:sec:adm	18.1	276
+r6:R6:prop:dataexist	statement	sec18_assembly.tex	74	ref	w4:thm:vwin	17.11	252
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	78	ref	field	5.14	34
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	78	ref	dataexist	6.2	42
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	78	ref	r6:R6:thm:selmer	18.3	278
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	78	ref	r6:R6:thm:selmer	18.3	278
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	78	ref	stage1	5.10	30
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	78	ref	stage2	5.12	33
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	78	ref	dataexist	6.2	42
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	78	ref	stage1	5.10	30
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	78	ref	stage2	5.12	33
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	78	ref	r6:R6:thm:selmer	18.3	278
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	80	ref	field	5.14	34
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	80	ref	r6:R6:thm:selmer	18.3	278
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	80	ref	dataexist	6.2	42
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	80	ref	ranks	5.15	36
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	80	ref	tops	5.20	39
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	80	ref	behrend	5.17	37
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	80	ref	disjoint	5.22	41
+r6:R6:prop:dataexist	adjacent proof	sec18_assembly.tex	80	ref	three	5.21	40
+r6:R6:lem:cmroot	adjacent proof	sec18_assembly.tex	107	ref	sec:field	5.7	34
+r6:R6:prop:nodes	adjacent proof	sec18_assembly.tex	129	ref	r6:R6:lem:cmroot	18.6	279
+r6:R6:cor:nodes	statement	sec18_assembly.tex	139	ref	r6:R6:def:weights	18.5	279
+r6:R6:cor:nodes	statement	sec18_assembly.tex	139	ref	r6:R6:prop:nodes	18.7	280
+r6:R6:cor:nodes	statement	sec18_assembly.tex	139	ref	nodes	5.16	36
+r6:R6:cor:nodes	statement	sec18_assembly.tex	139	ref	nodes	5.16	36
+r6:R6:cor:nodes	adjacent proof	sec18_assembly.tex	143	ref	ranks	5.15	36
+r6:R6:cor:nodes	adjacent proof	sec18_assembly.tex	143	ref	nodes	5.16	36
+r6:R6:cor:nodes	adjacent proof	sec18_assembly.tex	143	ref	r6:R6:prop:nodes	18.7	280
+r6:R6:cor:nodes	adjacent proof	sec18_assembly.tex	143	ref	nodes	5.16	36
+r6:R6:cor:nodes	adjacent proof	sec18_assembly.tex	143	ref	nodes	5.16	36
+r6:R6:cor:nodes	adjacent proof	sec18_assembly.tex	143	ref	nodes	5.16	36
+r6:R6:thm:records	statement	sec18_assembly.tex	208	ref	r6:R6:prop:nodes	18.7	280
+a8:prop:record	statement	sec18_assembly.tex	214	ref	r6:R6:lem:sizes	18.15	286
+a8:prop:record	statement	sec18_assembly.tex	216	ref	r2:A1	12.27	124
+a8:prop:record	statement	sec18_assembly.tex	216	ref	r2:A2	12.21	120
+a8:prop:record	statement	sec18_assembly.tex	217	ref	r3:A3	13.15	155
+a8:prop:record	statement	sec18_assembly.tex	217	ref	r3:sizecond	13.19	157
+a8:prop:record	statement	sec18_assembly.tex	219	ref	r4:R4:A4	15.19	217
+a8:prop:record	statement	sec18_assembly.tex	220	ref	r5:thm:Ebound	16.6	245
+a8:prop:record	statement	sec18_assembly.tex	221	ref	assembly:wordheight	18.7	289
+a8:prop:record	statement	sec18_assembly.tex	222	ref	r4:R4:A6	15.26	221
+a8:prop:record	statement	sec18_assembly.tex	223	ref	r4:R4:A7	15.33	223
+a8:prop:record	adjacent proof	sec18_assembly.tex	234	ref	r6:R6:lem:sizes	18.15	286
+a8:prop:record	adjacent proof	sec18_assembly.tex	238	ref	r2:A1	12.27	124
+a8:prop:record	adjacent proof	sec18_assembly.tex	240	ref	r2:A2	12.21	120
+a8:prop:record	adjacent proof	sec18_assembly.tex	240	ref	r2:A2	12.21	120
+a8:prop:record	adjacent proof	sec18_assembly.tex	245	ref	r3:sizecond	13.19	157
+a8:prop:record	adjacent proof	sec18_assembly.tex	249	ref	r3:A3	13.15	155
+a8:prop:record	adjacent proof	sec18_assembly.tex	249	ref	r3:A3	13.15	155
+a8:prop:record	adjacent proof	sec18_assembly.tex	249	ref	r3:sec	13	146
+a8:prop:record	adjacent proof	sec18_assembly.tex	251	ref	r4:R4:A4	15.19	217
+a8:prop:record	adjacent proof	sec18_assembly.tex	258	ref	assembly:wordheight	18.7	289
+a8:prop:record	adjacent proof	sec18_assembly.tex	260	ref	r4:R4:A6	15.26	221
+a8:prop:record	adjacent proof	sec18_assembly.tex	262	ref	r4:R4:A7	15.33	223
+r6:R6:prop:A1A7	statement	sec18_assembly.tex	342	eqref	A1	3.1	12
+r6:R6:prop:A1A7	statement	sec18_assembly.tex	342	eqref	A7	3.7	12
+r6:R6:prop:A1A7	statement	sec18_assembly.tex	342	ref	acct	3.1	12
+r6:R6:prop:A1A7	adjacent proof	sec18_assembly.tex	346	ref	r6:R6:cor:nodes	18.8	280
+r6:R6:prop:A1A7	adjacent proof	sec18_assembly.tex	346	ref	acct	3.1	12
+r6:R6:prop:A1A7	adjacent proof	sec18_assembly.tex	348	eqref	A1	3.1	12
+r6:R6:prop:A1A7	adjacent proof	sec18_assembly.tex	348	eqref	A2	3.2	12
+r6:R6:prop:A1A7	adjacent proof	sec18_assembly.tex	348	ref	r6:R6:lem:uF	18.13	285
+r6:R6:prop:A1A7	adjacent proof	sec18_assembly.tex	350	eqref	A3	3.3	12
+r6:R6:prop:A1A7	adjacent proof	sec18_assembly.tex	350	ref	r6:R6:lem:phi	18.12	284
+r6:R6:prop:A1A7	adjacent proof	sec18_assembly.tex	350	ref	r6:R6:lem:uF	18.13	285
+r6:R6:prop:A1A7	adjacent proof	sec18_assembly.tex	354	eqref	A3	3.3	12
+r6:R6:prop:A1A7	adjacent proof	sec18_assembly.tex	356	eqref	A4	3.4	12
+r6:R6:prop:A1A7	adjacent proof	sec18_assembly.tex	356	eqref	A5	3.5	12
+r6:R6:prop:A1A7	adjacent proof	sec18_assembly.tex	356	eqref	A6	3.6	12
+r6:R6:prop:A1A7	adjacent proof	sec18_assembly.tex	356	eqref	A7	3.7	12
+r6:R6:lem:sizes	adjacent proof	sec18_assembly.tex	374	ref	ranks	5.15	36
+r6:R6:lem:sizes	adjacent proof	sec18_assembly.tex	386	ref	tops	5.20	39
+r6:R6:lem:sizes	adjacent proof	sec18_assembly.tex	388	eqref	r6:R6:calB	18.1	281
+r6:R6:lem:sizes	adjacent proof	sec18_assembly.tex	388	eqref	r6:R6:calB	18.1	281
+r6:R6:prop:errors	statement	sec18_assembly.tex	392	ref	r6:R6:sec:A1A7	18.4	284
+r6:R6:prop:errors	adjacent proof	sec18_assembly.tex	399	ref	r6:R6:lem:sizes	18.15	286
+r6:R6:prop:errors	adjacent proof	sec18_assembly.tex	399	ref	r6:R6:lem:sizes	18.15	286

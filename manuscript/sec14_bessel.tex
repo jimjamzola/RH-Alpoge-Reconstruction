@@ -377,6 +377,77 @@ Assume that $B_u(\varphi)(y)=\mathrm{Pt}_{\mu_0}(\varphi,q_y)$ for $\varphi\in V
 For $\varphi\in V_u$ and $y\in Y$, $(B_{u,v}(\varphi\otimes1))(y\otimes1)=\mathrm{perCol}_{\mu_0}(\varphi\otimes1,q_y\otimes1)=\sigma_v(\mathrm{Pt}_{\mu_0}(\varphi,q_y))=\sigma_v(B_u(\varphi)(y))$, which lies in $\sigma_v(K)$.
 \end{proof}
 
+\paragraph{Rationality on the selected record.}\label{rat:selected}
+We give the descent producing this identity in the original argument.
+Fix one selected record, its coefficient field $K$, its embedding
+$\sigma:K\hookrightarrow\mathbb C$, its base tuple $\mu_0$ and a word $u$.
+Write $N_{u,K}$ and $R_K$ for its rational column and row spaces and
+$j_N,j_R$ for their $\sigma$-semilinear maps to the complex spaces.
+The images of the chosen bases are complex bases. Let $B^K_u$
+be its rational bilinear pairing and $\mathcal B_u$ its complex pairing.
+For these data the assertion is
+\begin{equation}\label{rat:base}
+ \mathcal B_u(j_N\varphi,j_R y)=\sigma\big(B^K_u(\varphi,y)\big)
+ \qquad(\varphi\in N_{u,K},\ y\in R_K).
+\end{equation}
+
+Choose the rational column coordinates of $\varphi$. On the row side
+let $e_R:K^d\longrightarrow R_K$ be the coordinate isomorphism and let
+$p:K^n\to K^d$ be the composite of the good-part projection and the
+row-coordinate map. It is onto by surjectivity of the first projection
+and bijectivity on the good part. Let $A(F)$ be the corresponding
+complex level row. Its values span the degree-zero space $V^0$,
+since the level operator has precisely this image and fixes its image.
+Put $\beta(y')=B^K_u(\varphi,e_Ry')$. The row comparison on this
+realization gives
+\[
+ \iota A(F)=j_R e_R(pF),\qquad
+ \mathrm{perCol}_{\mu_0}(j_N\varphi,A(F))=\sigma(\beta(pF)).
+\]
+For the second equality, the comparison of a rational definite period
+with the complex column gives $\sigma(\mathrm{Pt}_{\mu_0})$ on the left.
+The definite period factors as $\zeta(u,\mu_0)$ times the pairing on the
+projected row, and $\zeta(u,\mu_0)=1$. Transport by the rational column
+and row isomorphisms gives $\beta(pF)$. At other tuples the source
+specifies $\zeta(u,t)\ne0$ and valuation zero at the designated places.
+Identifying this scalar with $c(t)/c(\mu_0)$ requires a separate
+comparison of period normalizations.
+
+Extend $\beta e_R^{-1}$ to the complex linear functional $\Lambda$
+by prescribing its $\sigma$-embedded values on the chosen row basis.
+The last two identities show that $\mathrm{perCol}_{\mu_0}(j_N\varphi,-)$
+and $\Lambda\iota$ agree on every $A(F)$, hence on $V^0$. Put
+$U=V^0\cap\ker\iota$ and $Q=V^0\cap U^\perp$. On $Q$, $\iota$ is
+injective. The section at $\mu_0$ first projects onto $\iota(Q)$ and
+then inverts $\iota|_Q$. Given $y=e_R y'$, take $F$ with $pF=y'$.
+Now $q=A(F)-\operatorname{proj}_U A(F)$ belongs to $Q$ and
+$\iota q=j_R y$. Thus the section takes $j_Ry$ to $q$.
+The defining tie for $\mathcal B_u$ evaluates the period on this
+section. Its value is $\Lambda(j_R y)=\sigma(B^K_u(\varphi,y))$.
+This proves \eqref{rat:base}. It also proves vanishing on $U$ for the
+columns just treated. For a general column, extending the good-part
+identity to all of $V^0$ requires vanishing on $U$, by the same
+orthogonal decomposition.
+
+In a selected family this argument holds at every index $i$ once $x$
+exceeds a common threshold. Take the maximum of the threshold for
+the row facts, the selection threshold, and the initial scale plus one.
+The realization supplies the assertion that all tuples are used, which
+allows the definite-period comparison to be applied to these rows.
+For condition (d) of Theorem~\ref{r3:A3} one place suffices for the
+whole family. Take the place of $\sigma$ and the same chosen record for
+all words. Use its rational pairing for $B_u$. For bases $(b_i)$ of
+$N_{u,K}$ and $(c_l)$ of $R_K$, equation~\eqref{rat:base} gives the
+matrix of the analytic pairing as
+$(\sigma(B_u(b_i)(c_l)))_{il}$. Bilinearity now identifies the two
+maps on the full complex spaces and gives Hypothesis~\ref{w2:H-rat}
+for this realization at the place required by (d). If the seesaw
+calculation uses different coordinates, transport its columns and rows
+by their respective basis isomorphisms. In common coordinates the
+remaining comparison is equality of the two resulting matrices, or
+equivalently equality on every pair $(b_i,c_l)$. The height comparison
+in Section~\ref{r4:sec:R4} still uses the metrics at all infinite places.
+
 
 
 \subsubsection{The double-step seesaw identity}\label{w3s:sec}

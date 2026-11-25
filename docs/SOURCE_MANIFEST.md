@@ -7,19 +7,19 @@ This file identifies the formal object that the manuscript describes, and the ve
 | Item | Value |
 |---|---|
 | Archive | The Lean 4 proof archive released by Levent Alpöge on 20 November 2026 with the note [*Remark*](https://alpo.ge/remark.pdf) |
-| Canonical public URL of the archive | **exact source revision to be inserted before release** (the download location of the tarball is not recorded in the project files) |
+| Published archive | Fourteen files at https://alpo.ge/lean.tar.gz.part01 through `.part14`, joined in numerical order |
 | Form in which it was obtained | One gzipped tarball `lean.tar.gz`, also split into fourteen parts `lean.tar.gz.part01` to `part14` |
 | Date obtained | 20 November 2026 |
 | `lean.tar.gz` SHA-256 | `9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc` |
 | Concatenation of `part01` to `part14` | same SHA-256 as `lean.tar.gz` |
-| Git commit or tag | none. The archive was released as a tarball and is not a Git repository |
+| Git mirror revision | [Original commit 40e56bab026552e089d7afcfeff08d2defb9c005](https://github.com/leanprover-community/riemann-hypothesis/tree/40e56bab026552e089d7afcfeff08d2defb9c005). The archive's `lean/` maps to the repository root. Root tree `e517b335d21898fd2506ad538a1e1775c0aaa4e4`, source subtree `b41b516b1f7baee4d83ced235ecc71fd43c97695`. The [archive comparison](../review/evidence/archive-verification.txt) covered all regular files and independently recomputed the Git tree. |
 | Contents | 175,190 regular files, namely 175,187 `.lean` files plus `lean-toolchain`, `lakefile.toml` and `lake-manifest.json` |
 | Size | 17,374,215 lines, 1,030,531,854 bytes of Lean source |
 | Compiled artifacts shipped | none (no `.olean`, `.ilean`, `.lake/` or `build/`) |
 | Per-file hash list | 175,190 lines, SHA-256 of the list `380706b2ca07209ec036033503a2cfb11ce3d5a7dc002d172174f4b41d65d0a6`. Not included here because of its size (about 30 MB). It can be regenerated from the tarball |
 | Integrity of the working copy | every file in the tarball was hashed and compared with the extracted tree used for the reconstruction. Mismatches 0, missing 0, extra 0 |
 
-The archive itself is not redistributed in this repository.
+The [companion instructions](../review/REPLAY.md) describe the checks run on the reconstruction and the checks that require a full archive build.
 
 ### Build configuration of the archive
 
@@ -77,15 +77,15 @@ The formal check of the archive is the one made by the Lean and Mathlib communit
 
 | Document | Version | SHA-256 |
 |---|---|---|
-| `manuscript/main.tex` | 23 November 2026 (current working manuscript, multi-file source in `manuscript/`), 225 pages | `16ff5f3431987c5051866ba4f3810a8d9f9d597e0a1460fe8556cc468dea271f` |
-| `manuscript/main.pdf` | compiled from the source above on 23 November 2026 | `bb72ebe9022280c397277d103cbde8eb3da85ab5d8aed50df3192250f7b30933` |
+| `manuscript/main.tex` | 25 November 2026, community review edition (multi-file source) | `92042b1410b70ddb41eb8c08e43203567eb66d01d4a0ce36a4f827a6ed678dab` |
+| `manuscript/main.pdf` | 297 pages, compiled from the 25 November 2026 source | `8361fb258bd06713645b56eecc8a194791a9c6499cc14d5ef596824e8197e5f1` |
 | `RH_Route_Notes.tex` | 21 November 2026 (end-to-end reconciliation pass), 66 pages | `9613835dadf51040b800aed1db5119f59b19ffe6b2b491ffe4345238f546506a` |
 | `RH_Route_Notes.pdf` | compiled from the source above on 21 November 2026 | `7a403dc745cad5d665bf78dddb1cacf2936d3b94e8434eab051506cad6e397cd` |
 | `audit/Post_Closure_Synthesis.pdf` | post-closure-wave synthesis, 21 November 2026 | `0c7972aa3b155af86255865830b6dda90cce3e498c0cfaaa3610ab27ab56a4fc` |
 | `audit/Post_Closure_Internal_Residuals.md` | 21 November 2026 | `7fdc8a6f58111cb168e67630921dd659e36896c56d357e120555c8478e588e4a` |
 | `audit/Post_Closure_Verification_Boundary.md` | 21 November 2026 | `fbeec4c303342fc03fb7264b5feb2f5100cbdb31c3210c81f9c22ac048652e44` |
 
-Reconstruction snapshot dates: **21 November 2026** for `RH_Route_Notes` and the audit synthesis, **23 November 2026** for the current manuscript. All of them describe the archive identified in Section 1.
+Reconstruction snapshot dates: **21 November 2026** for `RH_Route_Notes` and the audit synthesis, **25 November 2026** for the current manuscript. All of them describe the archive identified in Section 1.
 
 ## 4. Reproducing the formal check
 

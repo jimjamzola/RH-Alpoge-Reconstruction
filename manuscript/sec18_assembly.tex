@@ -182,7 +182,7 @@ E_u=\sum_{j=1}^mE_{u,j},\qquad s=\frac{\sum_ud_u\big(\mu(N_u)-h_u\big)}{\sum_ud_
 \[
 0\le\delta\le\tfrac12,\qquad\eta\ge0,\qquad0\le\epsilon\le\tfrac14,\qquad(\eta+4\sqrt\epsilon)\,x^{C_H}\le6,
 \]
-and for every $H>0$ with $H\ge s-\mu_{\min}(R^\vee)$
+and there is a height $0<H\le x^{C_H}b$ with $s-\mu_{\min}(R^\vee)\le H$ for which
 \[
 s-\log\lvert\mathcal W\rvert-\frac1{1-\delta}\Big(4u_F\log\Big(1+\frac H{u_F}\Big)+(\eta+4\sqrt\epsilon)H\Big)\le\mu(R^\vee).
 \]
@@ -191,7 +191,7 @@ s-\log\lvert\mathcal W\rvert-\frac1{1-\delta}\Big(4u_F\log\Big(1+\frac H{u_F}\Bi
 \mu(R^\vee)+h_u-\mathcal L\le\sum_{t\in T}\big(m\ph(a_t)-ma_t\log\Omega-a_t\log T_u\big)\\
 +C_\ast N_T\,a\,\Lambda_a+C_\ast m\,(B_0+N_c)\,x^{e_D\varepsilon}.
 \end{multline*}
-\item[(K5)] $\lvert E_{u,j}-A\,g\rvert\le C_\ast B_0$.
+\item[(K5)] $\lvert E_u-mA\,g\rvert\le C_\ast m B_0$ for every $u$.
 \item[(K6)] $\big\lvert(h_u+A\log T_u)-(h_{u'}+A\log T_{u'})\big\rvert\le C_\ast\big(N_T\,a\,\Lambda_a+mB_0\big)$.
 \item[(K7)] The auxiliary primes satisfy
 \begin{gather*}
@@ -205,7 +205,7 @@ s-\log\lvert\mathcal W\rvert-\frac1{1-\delta}\Big(4u_F\log\Big(1+\frac H{u_F}\Bi
 In the application, $\mathcal W$ is a set of words that index the auxiliary primes $T_u$, $N_u$ is the rescaled lattice of images of the Hecke operators at $T_u$, $M_u$ is the corresponding base lattice, $R$ is the lattice of automorphic forms at the top of the chain, and $h_u$ bounds the height of the period map $B_u\colon N_u\to R^\vee$. The number $\Gamma$ is the total gain of the $m$ lifts at the inert primes, $\mathcal L$ is the sum of the local terms of the lifts, $E_{u,j}$ is the local term of the $j$-th lift at the twisted places, and $\mathcal I$ is the index loss at the inert primes.
 
 \begin{hypothesis}[chain records]\label{r6:R6:thm:records}
-There are absolute constants $e_D,e_L\ge0$ with the following property. For every primitive Dirichlet character $\psi_0$ there is $0<\varepsilon_1\le\frac1{52}$, and for every $0<\varepsilon<\varepsilon_1$ and every $J\ge2$ there are $C_\ast\ge1$, $C_H\ge0$ and $x_1$ such that the following holds. Let $x\ge x_1$, and let $Y_0\le Y$ be such that admissible data at the scale $x$ for the window $[Y,Y^{3/2}]$ with base $Y_0$ exist, for this $J$. Then there are admissible data at the scale $x$ for this window with this base, and weights for them, such that for every $u_0\in A_0$ and every choice of the nodes $w_{u_0,j}$ of Proposition~\ref{r6:R6:prop:nodes} there is a chain record with constants $C_\ast$, $C_H$ and exponents $e_D$, $e_L$. One can take $e_D=2$ and $e_L=0$.
+There are absolute constants $e_D,e_L\ge0$ with the following property. For every primitive Dirichlet character $\psi_0$ there is $0<\varepsilon_1\le\frac1{52}$, and for every $0<\varepsilon<\varepsilon_1$ there are $J\ge2$, $C_\ast\ge1$, $C_H\ge0$, and a threshold $x_1$ with the following property. For every $y$ there are $Y_0\le Y$ with $Y\ge\max(y,x_1)$ such that, for every $x\in[Y,Y^{3/2}]$, there are admissible data at scale $x$ with this base $Y_0$, window and $J$, and weights for them, and for every $u_0\in A_0$ a choice of the nodes $w_{u_0,j}$ satisfying Proposition~\ref{r6:R6:prop:nodes}, together with a chain record for those nodes with constants $C_\ast$, $C_H$ and exponents $e_D$, $e_L$. One can take $e_D=2$ and $e_L=0$.
 \end{hypothesis}
 
 Fix admissible data at the scale $x$, weights, $u_0\in A_0$ and the nodes $w_{u_0,j}$. Let $\mathcal W$, $T_u$, $N_u$, $M_u$, $h_u$, $R$, $E_{u,j}$, $\mathcal L$, $\Gamma$ and $\mathcal I$ be the objects of the construction, as described after Definition~\ref{r6:R6:def:record}, with $\mathcal I=\mathrm{IO}$ the index loss of Section~\ref{r2:sec:loss}.
@@ -218,14 +218,14 @@ Let $C_H\ge0$. Suppose that $x$ is so large that Lemma~\ref{r6:R6:lem:sizes} app
 \item[(iii)] $\mu_{\min}(R^\vee)=-\mu_{\max}(R)$ and $s+\mu_{\max}(R)\le x^{C_H}b$.
 \item[(iv)] The conclusion of Theorem~\ref{r4:R4:A4} with a constant $C_0\ge1$.
 \item[(v)] The conclusion of Theorem~\ref{r5:thm:Ebound} with the constant $C_E$, for every $1\le j\le m$.
-\item[(vi)] $h_u$ is the number of Definition~\ref{r4:R4:hu}, and the numbers $e^{\max}_P$, $s_j$, $h_{j\rho}$, $e^{\max}_{\lambda,j}$ and $\langle\log\kappa\rangle$ in that definition do not depend on $u$.
+\item[(vi)] The corrected heights $h_u+A\log T_u$ vary by at most $C_{\rm var}(N_Ta\Lambda_a+m B_0)$ between any two words. Paragraph~\ref{assembly:wordheight} derives this comparison for the selected record with $C_{\rm var}=20+6/\varepsilon$.
 \item[(vii)] The conclusion of Theorem~\ref{r4:R4:A6} with the constant $C_6$, and $\log T_u\le C_1mL_\varepsilon$ and $\lvert\log T_u-\log T_{u'}\rvert\le C_2\log k$ for $u'\in\mathcal W$.
 \item[(viii)] The conclusion of Theorem~\ref{r4:R4:A7} with the constant $C_7$, and $\mu_{\max}(M_u)\le C_3N_Ta\Lambda_a$.
 \item[(ix)] $1\le\lvert\mathcal W\rvert\le2^{k-3}$.
 \end{enumerate}
 Then the objects form a chain record with the constants $C_H$ and
 \[
-C_\ast=\max\big(6,\ C_T+2,\ 50C_0+10,\ C_E,\ C_6+2,\ C_1,\ C_2,\ C_3,\ C_7\big),
+C_\ast=\max\big(6,\ C_T+2,\ 50C_0+10,\ C_E,\ C_{\rm var},\ C_6+2,\ C_1,\ C_2,\ C_3,\ C_7\big),
 \]
 and the exponents $e_D=1$ and $e_L=0$. Since $x^{\varepsilon}\le x^{2\varepsilon}$, they also form a chain record with $e_D=2$ and $e_L=0$.
 \end{proposition}
@@ -246,30 +246,35 @@ e_2\le4\,\mathrm{IO}+(C_T+2)N_Tm\Big(\frac ak+b'\Big)\log T_u+6X''+1\le\mathrm{L
 \[
 (\eta+4\sqrt\epsilon)\,x^{C_H}=5\sigma x^{C_H}+\big(3\sqrt{\delta'}+4\sqrt{2e_0}\big)x^{C_H}\le5+1=6 .
 \]
-Let $H>0$ with $H\ge s-\mu_{\min}(R^\vee)$. By (iii), $s+\mu_{\max}(R)\le H$, which is hypothesis (c) of Theorem~\ref{r3:A3}, and the other hypotheses do not involve $H$. Theorem~\ref{r3:A3} gives $s-e_3\le\mu(R^\vee)$ with $e_3=(1-\delta)^{-1}\big(4u_F\log(1+H/u_F)+(\eta+4\sqrt\epsilon)H\big)$, where $\Lambda(u,H)=u\log(1+H/u)$ as in Section~\ref{r3:sec}. Since $\log\lvert\mathcal W\rvert\ge0$, this gives (K3).
+Take $H=x^{C_H}b>0$. By (iii), $s-\mu_{\min}(R^\vee)=s+\mu_{\max}(R)\le H$, which is hypothesis (c) of Theorem~\ref{r3:A3}, and the other hypotheses do not involve $H$. Theorem~\ref{r3:A3} gives $s-e_3\le\mu(R^\vee)$ with $e_3=(1-\delta)^{-1}\big(4u_F\log(1+H/u_F)+(\eta+4\sqrt\epsilon)H\big)$, where $\Lambda(u,H)=u\log(1+H/u)$ as in Section~\ref{r3:sec}. Since $\log\lvert\mathcal W\rvert\ge0$, this gives (K3).
 
 (K4) The first two statements are (iii). Theorem~\ref{r4:R4:A4} gives the inequality with $e_4=(50C_0+10)\big(N_Ta\Lambda_a+m\,x^\varepsilon(B_0+N_c)\big)$, which is at most $C_\ast N_Ta\Lambda_a+C_\ast m(B_0+N_c)x^{e_D\varepsilon}$ for $e_D=1$.
 
-(K5) is (v), since $C_E\le C_\ast$.
+(K5) follows by summing the bounds in (v) and using the triangle inequality and $C_E\le C_\ast$.
 
-(K6) By (vi),
-\[
-h_u+A\log T_u=e^{\max}_P+\sum_{j=1}^m\Big(s_j-\sum_\rho h_{j\rho}+e^{\max}_{\lambda,j}\Big)-\langle\log\kappa\rangle,
-\]
-with $A=\sum_{t\in T}a_t$, and the right side does not depend on $u$. So the left side of (K6) is $0$.
+(K6) By (vi) the difference between two corrected heights
+is bounded by $C_{\rm var}(N_Ta\Lambda_a+mB_0)$.
+Since $C_{\rm var}\le C_\ast$, this gives (K6).
+The word-dependent kernel rows are compared in Paragraph~\ref{assembly:wordheight}.
 
 (K7) Theorem~\ref{r4:R4:A6} gives the first inequality with $e_6=C_6(L_\varepsilon+m^2L_\varepsilon/k)+2\le(C_6+2)(\Lambda_a+m^2\Lambda_a/k)$, because $L_\varepsilon\le\Lambda_a$ and $\Lambda_a\ge1$. The other two inequalities are (vii).
 
 (K8) The first inequality is Theorem~\ref{r4:R4:A7}, with $C_7\le C_\ast$. The second is (viii). The third holds because $N_u$ is one of the sublattices over which $\mu_{\max}(N_u)$ is the maximum.
 \end{proof}
 
-The exponents $e_D=1$ and $e_L=0$ do not depend on $\psi_0$, $\varepsilon$ or $J$, so they are absolute, and Proposition~\ref{r6:R6:prop:errors} gives $\kappa=\max(2,e_D,e_L+1)=2$ and the constant $C=3$ of Theorem~A, whether one takes $e_D=1$ or $e_D=2$. The constant $C_\ast$ depends on $\varepsilon$ through $C_E$, which Hypothesis~\ref{r6:R6:thm:records} allows.
+The weaker exponent pair $(e_D,e_L)=(2,0)$ is absolute. With this pair the accounting used in the original terminal proof takes $C=e_D+e_L+3=5$. The constant $C_\ast$ depends on $\varepsilon$ through $C_E$, which Hypothesis~\ref{r6:R6:thm:records} allows.
 
 Condition (ix) is compatible with the lower bound $\lvert\mathcal W\rvert\ge C_0\Gamma_0^2x^{C_H}$ of Lemma~\ref{r3:sizecond}, with $\Gamma_0=\exp(C_\Gamma m^5fL_\varepsilon)$. Indeed $m\le2x^{1/2-\varepsilon/16}$ and $f\le4x^{2+8\varepsilon}$ give $\log\big(C_0\Gamma_0^2x^{C_H}\big)\le\log C_0+256\,C_\Gamma\,x^{9/2+139\varepsilon/16}+C_H\log x$, while $(k-3)\log2\ge\frac12x^{9/2+10\varepsilon}$ for large $x$, and $\frac{139}{16}<10$.
 
 
 
-Hypothesis~\ref{r6:R6:thm:records} collects in one statement the inequalities proved in Sections~\ref{sec:lifts} to~\ref{sec:twisted}. Condition (a) is the choice of the words in Lemma~\ref{r3:sizecond}. Conditions (K1) and (K2) are Theorems~\ref{r2:A1} and~\ref{r2:A2} with the divisibility of Theorem~\ref{r1:thm:R1main}. Condition (K3) is Theorem~\ref{r3:A3} with Theorems~\ref{w2:S}, \ref{w2:I} and~\ref{w2:B}. Condition (K4) is Theorem~\ref{r4:R4:A4} with Theorem~\ref{r5:thm:DIVinN}. Condition (K5) is Theorem~\ref{r5:thm:Ebound}. Conditions (K6) and (K7) are proved in Section~\ref{r4:sec:R4}, and (K8) is Theorem~\ref{r4:R4:A7} with $\mu(N_u)\le\mu_{\max}(N_u)$. Each of these results is proved here from hypotheses stated in its section. The conditions (K1) to (K8) are stated with the exponents and constants of the formal proof, and some of the cited results give an inequality of a slightly different shape. Theorem~\ref{r3:A3} gives (K3) without the term $\log\lvert\mathcal W\rvert$, which only strengthens it, and Theorem~\ref{r2:A2} gives the two halves of (K2), the upper half without the term $C_\ast mB_0$. \notgiven{We have not checked line by line that the constants and exponents of Sections~\ref{sec:lifts} to~\ref{sec:twisted} give (K1) to (K8) with absolute $e_D$ and $e_L$, so Hypothesis~\ref{r6:R6:thm:records} is not proved here even modulo the hypotheses of those sections.}
+Proposition~\ref{a8:prop:record} gives (K1)--(K8) for one set of
+objects satisfying (i)--(ix), with the displayed common constant and
+with $e_D=2$, $e_L=0$. The existence assertion requires these premises
+on the same selected objects. In particular the weights are chosen once
+for the scale, and the nodes and the record may depend on $u_0$.
+Theorem~A asks for one such family of nodes; its proof uses precisely
+those nodes in both the excess sum and the accounting inequality.
 
 The proof of Theorem~A below uses Hypothesis~\ref{r6:R6:thm:records} for one admissible datum at each scale. The conditions (K1) to (K8) depend on the window and the base through the field $E$, the ranks and the sets $T$ and $T_2$.
 
@@ -314,7 +319,7 @@ Let $u,u'\in\mathcal W$. The first inequality of (K2) for $u$ and the second for
 \big(\mu_{\max}(N_u)-h_u\big)-\big(\mu(N_{u'})-h_{u'}\big)\\
 \le\mu_{\max}(M_u)-\mu(M_{u'})+C_\ast mB_0+\mathrm{Lo}_{u'}+(E_{u'}-E_u)+(h_{u'}-h_u).
 \end{multline*}
-By (K8), $\mu_{\max}(M_u)-\mu(M_{u'})\le C_\ast N_T\,a\,\Lambda_a(2+m/k)$. By (K5), each $E_{u,j}$ lies within $C_\ast B_0$ of $Ag$, so $E_{u'}-E_u\le2C_\ast mB_0$. By (K6) and the third inequality of (K7),
+By (K8), $\mu_{\max}(M_u)-\mu(M_{u'})\le C_\ast N_T\,a\,\Lambda_a(2+m/k)$. By (K5), both $E_{u'}$ and $E_u$ lie within $C_\ast mB_0$ of $mAg$, so $E_{u'}-E_u\le2C_\ast mB_0$. By (K6) and the third inequality of (K7),
 \[
 h_{u'}-h_u\le C_\ast\big(N_T\,a\,\Lambda_a+mB_0\big)+A\big(\log T_u-\log T_{u'}\big)\le C_\ast\big(N_T\,a\,\Lambda_a+mB_0\big)+C_\ast A\log k ,
 \]
@@ -342,13 +347,13 @@ The weights $a_t\ge a>0$, the nodes are positive by Corollary~\ref{r6:R6:cor:nod
 
 \eqref{A1} is the first inequality of (K1). \eqref{A2} is the second inequality of (K2) with $\mathrm{Lo}_u\le e_2$ from Lemma~\ref{r6:R6:lem:uF}.
 
-For \eqref{A3}, put $H=x^{C_H}b$. By (K4), $s-\mu_{\min}(R^\vee)=s+\mu_{\max}(R)\le H$, and $H>0$, so (K3) applies with this $H$. Lemma~\ref{r6:R6:lem:phi} with $u=u_F$, $U$ from Lemma~\ref{r6:R6:lem:uF} and $X=x^{C_H}$ gives $4u_F\log(1+H/u_F)\le4\log(1+x^{C_H})(U+b)$. By (K3), $(\eta+4\sqrt\epsilon)H\le6b$ and $(1-\delta)^{-1}\le2$. Both terms in the bracket of (K3) are nonnegative, so (K3) gives
+For \eqref{A3}, use the height $H$ supplied by (K3). Its upper bound is $x^{C_H}b$. Lemma~\ref{r6:R6:lem:phi} with $u=u_F$, $U$ from Lemma~\ref{r6:R6:lem:uF} and $X=x^{C_H}$ gives $4u_F\log(1+H/u_F)\le4\log(1+x^{C_H})(U+b)$. By (K3), $(\eta+4\sqrt\epsilon)H\le6b$ and $(1-\delta)^{-1}\le2$. Both terms in the bracket of (K3) are nonnegative, so (K3) gives
 \[
 s-\log\lvert\mathcal W\rvert-8\log\big(1+x^{C_H}\big)(U+b)-12b\le\mu(R^\vee),
 \]
 which is \eqref{A3} with $e_3$, because $s$ is the weighted mean of $\mu^N_u-h_u$.
 
-\eqref{A4} is the inequality of (K4) with $e_4$. For \eqref{A5}, summing (K5) over $j$ gives $E_u\le mAg+C_\ast mB_0=mAg+e_5$. \eqref{A6} is the first inequality of (K7) with $e_6$, and \eqref{A7} is the first inequality of (K8) with $e_7$.
+\eqref{A4} is the inequality of (K4) with $e_4$. For \eqref{A5}, (K5) gives $E_u\le mAg+C_\ast mB_0=mAg+e_5$. \eqref{A6} is the first inequality of (K7) with $e_6$, and \eqref{A7} is the first inequality of (K8) with $e_7$.
 \end{proof}
 
 \subsection{The size of the errors}\label{r6:R6:sec:errors}
@@ -384,7 +389,7 @@ by (D1$'$) and $2^e\le n$. Since $Y_0\le x$ and $n\le2x^{2+8\varepsilon}$, the r
 \end{proof}
 
 \begin{proposition}\label{r6:R6:prop:errors}
-Let $\kappa=\max(2,e_D,e_L+1)$. Let $0<\varepsilon<\frac1{52}$, $J\ge2$, $C_\ast\ge1$ and $C_H\ge0$. There is $x_0$ such that for every $x\ge x_0$, all admissible data at the scale $x$ with this $J$, all weights and every chain record with constants $C_\ast$, $C_H$ and exponents $e_D$, $e_L$, the numbers $e_1,\dots,e_7$ of Section~\ref{r6:R6:sec:A1A7} satisfy
+Put $\kappa=e_D+e_L+2$. Since $e_D,e_L\ge0$, this dominates $2,e_D,e_L+1$. Let $0<\varepsilon<\frac1{52}$, $J\ge2$, $C_\ast\ge1$ and $C_H\ge0$. There is $x_0$ such that for every $x\ge x_0$, all admissible data at the scale $x$ with this $J$, all weights and every chain record with constants $C_\ast$, $C_H$ and exponents $e_D$, $e_L$, the numbers $e_1,\dots,e_7$ of Section~\ref{r6:R6:sec:A1A7} satisfy
 \[
 e_1+e_2+e_3+e_4+e_5+Ae_6+e_7\le x^{(\kappa+1)\varepsilon}\,\mathcal B .
 \]
@@ -418,16 +423,16 @@ e_1+e_2+e_3+e_4+e_5+Ae_6+e_7\le\big(18C_\ast^2+237(1+C_H)C_\ast^2\big)y^\kappa\m
 \]
 \end{proof}
 
-With the exponents $e_D=2$ and $e_L=0$ of Hypothesis~\ref{r6:R6:thm:records}, $\kappa=2$ and the bound is $x^{3\varepsilon}\mathcal B$.
+With the exponents $e_D=2$ and $e_L=0$ of Hypothesis~\ref{r6:R6:thm:records}, $\kappa=4$ and the bound is $x^{5\varepsilon}\mathcal B$.
 
 \subsection{Proof of Theorem A}\label{r6:R6:sec:thmA}
 
 Assume Hypotheses~\ref{w4:thm:vwin} and~\ref{r6:R6:thm:records}. We prove Theorem~A in the form stated in Section~\ref{sec:reduction}, which asks for one choice of admissible data at each scale of a window, for windows $[Y,Y^{3/2}]$ with $Y$ arbitrarily large.
 
 \begin{proof}
-Let $e_D$ and $e_L$ be the absolute constants of Hypothesis~\ref{r6:R6:thm:records}, and put $C=\max(2,e_D,e_L+1)+1$, which is $3$ for $e_D=2$ and $e_L=0$. Fix $\psi_0$, let $\varepsilon_1$ be as in Hypothesis~\ref{r6:R6:thm:records}, and fix $0<\varepsilon<\varepsilon_1$. Let $J\ge2$ be the number of Proposition~\ref{r6:R6:prop:dataexist}, and let $C_\ast$, $C_H$ and $x_1$ be the numbers of Hypothesis~\ref{r6:R6:thm:records} for $\varepsilon$ and this $J$. Let $x_0$ be the maximum of $x_1$ and of the numbers $x_0$ of Lemma~\ref{r6:R6:lem:tr}, Corollary~\ref{r6:R6:cor:nodes}, Lemma~\ref{r6:R6:lem:sizes} and Proposition~\ref{r6:R6:prop:errors} for these constants.
+Let $e_D$ and $e_L$ be the absolute constants of Hypothesis~\ref{r6:R6:thm:records}, and put $C=e_D+e_L+3$, which is $5$ for $e_D=2$ and $e_L=0$. Fix $\psi_0$, let $\varepsilon_1$ be as in Hypothesis~\ref{r6:R6:thm:records}, and fix $0<\varepsilon<\varepsilon_1$. Take the constants $J,C_\ast,C_H,x_1$ from Hypothesis~\ref{r6:R6:thm:records} at this $\varepsilon$. Increase the scale threshold to $x_0$ so that Lemma~\ref{r6:R6:lem:tr}, Corollary~\ref{r6:R6:cor:nodes}, Lemma~\ref{r6:R6:lem:sizes} and Proposition~\ref{r6:R6:prop:errors} all apply with these constants.
 
-Let $y$ be given. Proposition~\ref{r6:R6:prop:dataexist} gives $Y_0\le Y$ with $Y\ge\max(y,x_0)$ such that admissible data with base $Y_0$ exist for every $x\in[Y,Y^{3/2}]$. Fix such an $x$. Then $x\ge x_1$, and Hypothesis~\ref{r6:R6:thm:records} gives admissible data at the scale $x$, for the window $[Y,Y^{3/2}]$ with base $Y_0$, and weights $a_t,b_t$, such that for every $u_0\in A_0$ the nodes $w_{u_0,j}$ of Proposition~\ref{r6:R6:prop:nodes} admit a chain record with constants $C_\ast$, $C_H$ and exponents $e_D$, $e_L$.
+Given $y$, take the window supplied by the same hypothesis at $\max(y,x_0)$. For each $x$ in that window take its data, weights and node family, together with the record for each $u_0$. Proposition~\ref{r6:R6:prop:dataexist} gives the arithmetic supply of admissible windows; the joint selection in Subsection~\ref{sec:frontier} is what places the chain records on a common window.
 
 The weights satisfy $a\le a_t\le a+a/(kx^{13})$ by Definition~\ref{r6:R6:def:weights}, and Corollary~\ref{r6:R6:cor:nodes} gives (i).
 
@@ -438,11 +443,13 @@ Fix $u_0\in A_0$ and a chain record for it. Proposition~\ref{r6:R6:prop:A1A7} sh
 Proposition~\ref{r6:R6:prop:errors} bounds the right side by $x^{C\varepsilon}\mathcal B$, which is (ii).
 \end{proof}
 
-The constant $C$ does not depend on $\varepsilon$ or on $\psi_0$, which is the uniformity that the last step of the proof of Theorem~\ref{mainthm} uses. With $C=3$ that proof gives $\zeta(s)\ne0$ and $L(s,\chi^{(i)})\ne0$ for $\operatorname{Re}s>\frac12+7\varepsilon$, for every $0<\varepsilon<\varepsilon_1$, and so for $\operatorname{Re}s>\frac12$.
+The constant $C$ does not depend on $\varepsilon$ or on $\psi_0$, which is the uniformity that the last step of the proof of Theorem~\ref{mainthm} uses. With $C=5$ that proof gives $\zeta(s)\ne0$ and $L(s,\chi^{(i)})\ne0$ for $\operatorname{Re}s>\frac12+9\varepsilon$, for every $0<\varepsilon<\varepsilon_1$, and so for $\operatorname{Re}s>\frac12$.
 
 The three primes of (D5) are congruent to $1$ modulo $15\,Q_Sqd$. The construction of the level structure of the lifts uses two primes congruent to $1$ modulo $\operatorname{lcm}(15,Q_Sqd)$ and a third prime, different from them, congruent to $1$ modulo $Q_Sqd$, all at most $(Q_Sqd)^{C_8}$ for a constant $C_8$. Since $\operatorname{lcm}(15,Q_Sqd)$ divides $15\,Q_Sqd$, the primes of (D5) have these properties with $C_8=2A_L(1+A_L)^2$, because $15\le Q_Sqd$ gives $(15\,Q_Sqd)^{A_L(1+A_L)^2}\le(Q_Sqd)^{2A_L(1+A_L)^2}$.
 
 \subsection{Hypotheses in the final deduction}\label{sec:frontier}
+
+\input{sec18_selection}
 
 \paragraph{The chain and the Hecke bounds.}\label{fr:sec:chain}\label{fr:sec:loss}
 Proposition~\ref{a8:prop:N1} gives the frame valuation under the step-character
@@ -455,14 +462,15 @@ Hypothesis~\ref{r2:engines} still requires the individual share estimates,
 the comparisons between levels and the construction of the test systems.
 Corollary~\ref{r2:cor:L2} uses the Weyl lattice model. Proposition~\ref{r2:prop:Z1}
 requires a polynomial bound for the constant of the base weights.
-The colength at the auxiliary prime in (L7) is a further input.
+Paragraph~\ref{assembly:auxlength} derives (L7) for the selected local lattices and specifies the comparison required for another construction.
 
 \paragraph{Periods and multiplicities.}\label{fr:sec:frame}
 Theorem~\ref{w2:Bproof} uses the seesaw relation, its nonzero pairing
 and the period identifications. Theorem~\ref{w3s:thm:T2} proves the
 double-step identity from the general and local Weil representation
-laws. Lemma~\ref{w2:see:rat} specifies the three period identities
-needed for rationality. The multiplicity calculation requires the
+laws. Equation~\eqref{rat:base} proves rationality on the chosen record.
+Using the concrete periods in the seesaw requires their comparison
+on the rational column and row bases. The multiplicity calculation requires the
 label identifications and the pre-trace hypotheses of
 Subsections~\ref{w2x:sec:rows} and~\ref{w2x:sec:count}.
 The estimates on individual rows in Theorem~\ref{w2:Sproof} also
@@ -508,8 +516,11 @@ $-n_\tau$ in the local Artin convention. In the CM functional equation
 the archimedean phase at infinity type $2m$ is
 $\mathrm{i}^{\,\sum_i|2m_i|}$: substituting $2m$ in the local phase gives
 this equality since the exponent is even.
-The Rallis inner product identity still requires the comparison of the
-Petersson norm with the operators of Proposition~\ref{w3:W3:HLprop}.
+Paragraph~\ref{frame:forms} compares the level and Petersson factors
+on the selected record. Its application to the period chain still
+requires the same row map, level forms and hook weights.
 The mass and formal-degree formulas must use the measures of the
 dimension estimate. The final implication to Theorem~\ref{thm:intro}
 remains conditional on the hypotheses above.
+
+\input{sec18_auxlength}

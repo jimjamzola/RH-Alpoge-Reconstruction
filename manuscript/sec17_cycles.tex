@@ -1,0 +1,171 @@
+\paragraph{The cycle and its determinant.}\label{kone:cycle}
+Write $A_q=\mathbb Z/q$, $C=\mathbb Z/q$ as an additive group,
+$M=2k+3$, $\kappa=1+p^c$ and $a=\kappa^e$, so $e=k+1$.
+In the bar complex of $C$ with coefficients in $A_q$ use
+\[
+ z=\sum_{j_1,\ldots,j_e\in C}[j_1|1|\cdots|j_e|1].
+\]
+This has degree $2e$. In its boundary the first face sums to zero
+because its multiplicity is $q$. The remaining faces cancel in pairs
+after shifting a summation variable by one. Put $d_t(x)=(x,tx)$,
+$0\le t\le M$. The product-group homology in degree $2e$ with these
+coefficients has a generating set of size at most $2e+1=M$ (use the
+first projection onto $C$). More explicitly, constants, cyclic
+shift minus identity and summation give an exact sequence
+from the trivial module through two copies of the cyclic permutation
+module to the trivial module. The two connecting sequences and
+induction from the kernel bound the generator number in degree $d+2$
+by that in degree $d$ plus the kernel-group bounds in degrees $d+1,d+2$.
+For a cyclic kernel both bounds are one; degree zero needs one
+generator. Hence degree $2e$ needs at most $2e+1$ generators.
+The $M+1$ classes $(d_t)_*z$
+therefore satisfy a relation $\sum_t n_t(d_t)_*z=\partial B$ with
+some $n_{t_0}$ a unit. Indeed their subgroup is a finite abelian
+$p$-group with at most $M$ cyclic factors. A redundant generator
+modulo $p$ is redundant in the subgroup, by successive lifting
+through the powers of $p$. This gives the unit coefficient.
+
+Index the coordinates of $F^{C^2}$ by $j=(j_1,j_2)$.
+On coordinate $j$ the diagonal representation $\rho$ of $C^2$
+has character $(x,y)\mapsto\zeta^{j_1x+j_2y}$. For $t$ let
+$s_t(j)=j_1+tj_2$. The lattice construction uses a finitely supported
+integer function $\eta$ on $C^2$. Its sums on the fibers of $s_t$
+vanish for $t\ne t_0$. At $t_0$ its pushforward is
+\[
+ \sum_{i=0}^{M}[X^i]P(X)\,[\kappa^i],\qquad
+ P(X)=\prod_{j=0}^{M-1}(X-\kappa^j).
+\]
+Here $[x]$ denotes a basis vector in $\mathbb Z[C]$. To see the
+interpolation, use the product of $[(0,1)]-[(t,0)]$ over $t\ne t_0$
+in $\mathbb Z[C^2]$. Each unwanted pushforward kills a factor. At
+$t_0$ the product equals a translation times
+$\prod_{t\ne t_0}([t_0-t]-1)$. Every $t_0-t$ generates a subgroup
+containing $p^c$ in $C$, since $0<|t_0-t|\le M<p^c$. Thus each factor
+divides $[p^c]-1$. The desired pushforward is divisible by
+$([p^c]-1)^M$: in polynomial coordinates apply
+$\prod_{j<M}(U-\kappa^j)$ to $X$, where $Uf(X)=f(X^\kappa)$.
+The operator $U-\kappa^j$ carries $(X^{p^c}-1)^j$ times any polynomial
+into $(X^{p^c}-1)^{j+1}$ times a polynomial, by factoring
+$X^{\kappa p^c}-1$ and reducing the quotient modulo $X^{p^c}-1$.
+Lift the quotient in the group ring by $x\mapsto(x,0)$ and undo the
+translation. This constructs $\eta$ with both specified properties.
+
+Modify the standard lattice coordinate $j$ by the fractional ideal
+with divisor $\eta(j)\mathfrak d$. For each $t$ construct an
+$L'$-linear $g_t$ taking the standard lattice to this modified lattice
+and commuting with $\rho d_t$. The determinant-one identifications on
+blocks use the Steinitz relation for a direct sum of fractional ideals:
+one can move the sum of two divisors to one coordinate, and iterate.
+Scaling one distinguished coordinate realizes a prescribed determinant
+when its divisor is the difference of the two total divisors.
+For $t\ne t_0$ all block determinants can be taken as one. At $t_0$
+the construction groups coordinates in Galois orbits and leaves the
+determinant
+\[
+ \beta=\prod_i\gamma^{-i}(\alpha)^{[X^i]P_e(X)},\qquad
+ P_e(X)=\prod_{0\le j<M,\ j\ne e}(X-\kappa^j)
+\]
+at character $1$. Indeed the divisor of $\gamma^{-i}\alpha$ at $P'$
+is $\mathfrak d(\gamma^{i+1}P')-a\mathfrak d(\gamma^iP')$.
+Multiplying this difference by the coefficients of $P_e$ gives
+precisely the divisor prescribed by $P=(X-a)P_e$. This explains
+both the inverse action in $\beta$ and the missing factor in $P_e$.
+
+Let $H$ be the stabilizer of the standard lattice inside the localized
+group containing all $g_t$ and $\rho(C^2)$. One base-field denominator
+excludes the support of the divisors and the bad primes of the splitting
+map. Set $\rho'=g_{t_0}^{-1}\rho g_{t_0}$ and $h_t=g_{t_0}^{-1}g_t$.
+Both representations take values in $H$, and $h_t\in H$ since both
+maps $g_t,g_{t_0}$ take the standard lattice to the same lattice.
+For the bar prism $P_h$ one has
+$\partial P_h+P_h\partial=(\mathrm{conj}_{h^{-1}})_*-1$.
+Consequently the chain
+\[
+ Y=\rho'_*B-\rho_*B+\sum_t n_t P_{h_t}((\rho'd_t)_*z)
+\]
+is closed in $H$. In fact $h_t^{-1}\rho'd_th_t=\rho d_t$, so the
+boundary of the sum is $\rho_*\partial B-\rho'_*\partial B$.
+In the localized group $Y$ is homologous to
+$\sum_t n_t P_{g_t}((\rho d_t)_*z)$. This follows by applying the
+prism identity to $\rho_*B$ and the prism product identity to
+$g_t=g_{t_0}h_t$ on each cycle. Multiply $Y$ by $n_{t_0}^{-1}$.
+The standard lattice is finite projective over $\mathcal O_{L'}$.
+Adding a projective complement with trivial action realizes this cycle
+in some $\mathrm{GL}_N(\mathcal O_{L'})$.
+
+At an allowed residue field $k_0$, restriction of scalars splits into
+the conjugate blocks indexed by $\sigma\in\mathrm{Gal}(F/L')$.
+For a character $v:k_0^\times\to A_q$, the finite-field functional
+on a scalar-character block of weight $x$ evaluates a prism for $g$
+as $x^e v(\det g)$. On the scalar line this is the product of $e$
+cyclic carry cocycles with $v$: each consecutive pair in $z$ sums to
+$x$, and insertion in the prism leaves $v(g)$. Transfer over projective
+lines gives the additive functional on vector spaces. The line count
+for direct sums uses $|k_0|=1$ in $A_q$, since the reduced $\zeta$ has
+order $q$. Additivity kills the trivial complement. Blocks of determinant
+one give zero. In the surviving block let $\sigma\zeta=\zeta^{\chi(\sigma)}$.
+Summing the conjugate blocks gives
+\[
+ \sum_\sigma \chi(\sigma)^e v(\overline{\sigma\beta})
+   =P_e(a)\,v\big(\overline{\operatorname{nrm}(\alpha)}\big).
+\]
+Indeed replacing $\alpha$ by $\gamma^{-i}\alpha$ multiplies the
+weighted sum by $a^i$ after reindexing, and the sum for $\alpha$ is
+the evaluation of its twisted norm. The unit coefficient cancels the
+normalization of $Y$. For a cyclic residue unit group take $v$ with
+kernel the $q$th powers. Each factor $\kappa^e-\kappa^j$ of $P_e(a)$
+has valuation $c+v_p(|e-j|)\le c+M$, by lifting the exponent
+(with $c\ge2$ at $p=2$). In $A_q$, $P_e(a)$ therefore divides
+$p^{M(c+M)}$. Equality of two evaluations scaled by $p^{2e}$
+implies that the ratio of their twisted norms raised to
+$p^{2e+M(c+M)}=p^b$ is a $q$th power at this prime.
+
+\paragraph{Detecting powers and bounding the image.}\label{kone:rank}
+If $\xi\in F^\times$ passes all these residue tests, choose
+$x$ with $x^q=\xi$ in an algebraic closure. For each automorphism
+$g$ over $F$, the condition $\sigma x=gx$ describes an open coset.
+Degree-one Chebotarev gives a Frobenius in this coset outside the finite
+exclusion set and the primes dividing $q$. Its residue field has prime
+order, so reduction from $\mathcal O_{L'}$ is surjective. In the residue
+field $\xi$ has a $q$th root and all the $q$th roots of unity are
+present. Hence the residue of $x$ is fixed by Frobenius. The quotient
+$\sigma x/x$ is a $q$th root of unity congruent to one. If it were
+different from one, its geometric sum of length $q$ would be zero,
+giving $q=0$ in the residue field. Thus $gx=x$ for every $g$ and
+$x\in F$. Applying this argument to the ratio proves injectivity
+for the simultaneous evaluations of the finite set.
+
+For the image bound put $m_1=2e$, and stabilize the finitely many
+cycles to rank $n\ge2(m_1+1)+4$. An integral lift $Z$ of a
+mod-$q$ cycle has $\partial Z=qV$. The homology class of $V$ is
+$q$-torsion in degree $m_1$, independent of the lift. When this class
+vanishes one can subtract $q$ times an integral chain from $Z$ to
+make it a cycle. There are at most $T_{m_1}$ fibers of this obstruction
+by homological stability. Differences in a fiber therefore reduce the
+count to evaluations on integral cycles.
+
+Write $\psi_p$ for the $p$-fold block sum on integral homology and
+$i$ for stabilization to the same rank. Starting with $z_0=x$ put
+$z_{t+1}=(\psi_p)_*z_t-p^{t+2}i_*z_t$. A primitive evaluation
+$\phi$ is stable and additive on block sums. Hence
+$\phi(z_{t+1})=p(1-p^{t+1})\phi(z_t)$. The factors $1-p^{t+1}$
+are units modulo $q$. The scaled evaluations $p^{m_1}\phi(x)$ thus
+factor through the integral span of the $z_{m_1}$. Its rank is at
+most $r_2(L')$. To obtain this last inequality the source passes to
+real cycles and pairs with one odd-degree functional at each infinite
+place. A class in the common kernel, if nonzero, survives stabilization
+and is separated by a closed cochain. The surjectivity theorem represents
+that cochain on cycles by an invariant form. Its weight decomposition
+consists of the place functionals and terms of weights $j=2,\ldots,m_1+1$.
+The latter vanish on the displayed span: the factor at $t=j-2$ is
+$p^j-p^j=0$. The former vanish by the kernel condition. This contradicts
+separation. The real image thus has dimension at most the number of
+complex places, giving the integral rank bound.
+
+For any finite set of evaluations use the finitely generated subgroup
+spanned by lifts of its elements. Its free part contributes at most
+$q^{r_2(L')}$ values. Its torsion contributes at most $T_{m_1+1}$
+by stability, also at the enlarged rank for $z_{m_1}$. Multiplication
+by the number of obstruction fibers gives the claimed bound.
+
+\input{sec17_line_transfer}

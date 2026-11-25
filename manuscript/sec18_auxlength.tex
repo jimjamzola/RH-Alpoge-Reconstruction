@@ -1,0 +1,74 @@
+\paragraph{The local lattice and its length at the auxiliary prime.}\label{assembly:auxlength}
+Fix an index of the selected family, a word $u$, and a finite place $w$
+of the coefficient field. Write $A_u$ for the integral lattice before
+the fractional-ideal rescaling and $M^{\rm ram}_u$ for the preimage of
+the level-zero lattice under the rational ramified inclusion. In the
+local ring $\mathcal O_w$, a vector belongs to the localization of
+$A_u$ precisely when multiplication by some denominator outside $w$
+puts it in $A_u$. Thus at $w\mid T_u$ the selected membership condition
+identifies the image of this localization with the prescribed local
+lattice $N^T_w$ inside $S^{\rm ram}_w$. The inclusion is injective and
+identifies the localized ambient lattice with $S^{\rm ram}_w$.
+It therefore induces an isomorphism on the quotients. In particular
+their composition lengths agree. In the original definition the
+global quotient is taken by $A_u\cap M^{\rm ram}_u$, so forming it
+also makes sense before the local inclusion has been proved.
+
+Here is the bound on the local quotient. Put $d_M=\dim_{\mathbb C}M^0_u$,
+the dimension of the full level-zero space on this record, and
+$e=e_w$. Write $V_w$ for the selected set of labels above $T_u$.
+At a place where the construction has no active branch, the product
+defining $N^T_w$ is the identity and the quotient has length zero.
+At an active place the rescaled Hecke operator $g_v$ for each $v\in V_w$
+preserves $S^{\rm ram}_w$. The second-branch lattice inclusion gives
+an index of length $n_v$ with
+\[
+ n_v=e\,d_M\bigl(\textstyle\sum_i\lambda_{v,i}/k+b_{\rm top,v}\bigr).
+\]
+The level-zero integral operators $U_v,D_v$ preserve the indicated
+lattices and $U_vD_v=T_u^{k-1}$ on the ramified space. The single-operator
+index comparison therefore bounds the colength of $g_v S^{\rm ram}_w$
+in $S^{\rm ram}_w$ by $n_v+e(k-1)d_M$.
+For endomorphisms $g,h$ preserving a lattice $S$, the quotient
+$gS/ghS$ is an image of $S/hS$; the exact sequence through $gS$
+then bounds the colength of $ghS$ by the sum of the two colengths.
+Apply this to the product over $V_w$ and its $m$th power, whose image
+is $N^T_w$. The level weight bounds, with $W_v$ denoting the source
+weight at $v$, give
+\[
+ \frac{\operatorname{length}(S^{\rm ram}_w/N^T_w)}{e}
+ \le m d_M \sum_{v\in V_w}
+ \bigl(a_{\max}/k+2W_v+k+b_{\rm top,v}\bigr)
+ \le 9m d_M N_T(a/k+b').
+\]
+The final inequality uses the weight estimate on the selected family
+at sufficiently large scale. This gives (L7) with $C_T=36$ in that
+bound, or any larger common constant when other estimates require it.
+
+The recorded length $\mathrm{len}(w)$ is the ordinary local length
+divided by $e_w$. Consequently its contribution before dividing by the
+ramified rank is $2\ell_we_w\mathrm{len}(w)$. Summing over $w\mid T_u$
+uses $\sum_{w\mid T_u}\ell_we_w=\log T_u$. The rank identity on the
+same record gives $d_u/d_M=(1-1/(T_u-1))^f\ge 1/2$ at the selected
+large scales, by Bernoulli's inequality. This gives the term
+$4\lambda_T\log T_u$ in the proof of Theorem~\ref{r2:A2}
+with $\lambda_T=9mN_T(a/k+b')$.
+The coefficient $2$ is from the doubled slope convention in
+Section~\ref{r2:sec:Nu}. It is already present when summing over
+all places. For $\mathrm{IO}$ the coefficient is $\ell_we_w$; hence
+the same sum with coefficient $2\ell_we_w$ contributes $2\mathrm{IO}$.
+
+At an ordinary served place away from $T_u$, the local image lattice
+is the span of the images of $A_u\cap M^{\rm ram}_u$. One inclusion
+uses descent of the local generators to the ramified rational space.
+For the reverse inclusion the served-place membership test applies
+after clearing denominators outside $w$, which are units in the local
+ring. Passing to a local model with $v(p)$ in place of $e_w$ preserves
+the length divided by $v(p)$: each elementary divisor is multiplied
+by the relative ramification index. At an unserved good place the
+two localized lattices agree, so the length is zero. Finally the
+fractional ideal multiplying $A_u$ has exponent
+$-\lfloor e_ws_u(w)\rfloor$ at $w$, as in Definition~\ref{r2:Nu}.
+Applying these conclusions to an independently constructed lattice
+requires its rational inclusion, its local Hecke operators and its
+local membership tests to give the identifications just used.

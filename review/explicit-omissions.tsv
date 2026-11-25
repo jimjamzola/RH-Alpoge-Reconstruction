@@ -1,0 +1,30 @@
+tex_file	line	author_marked_passage_TeX
+sec11_lifts.tex	723	Hypotheses (N1), (N2) and (N3) are not proved here.
+sec12_loss.tex	217	This proof is an outline. It uses Hypothesis~\ref{r2:engines}, and the Pieri splitting at the tops and the passage from segment shares to the share of $\mathrm{LP}$, statement (C11) of Subsection~\ref{w1:sec:Crest}, are not written out here.
+sec12_loss.tex	218	The three engines of Hypothesis~\ref{r2:engines} are not proved here; Subsections~\ref{w1:sec:C} to~\ref{w1:sec:A} prove parts of them.
+sec12_loss.tex	230	The remaining steps, and hence Hypothesis~\ref{r2:engines}, are not proved here.
+sec12_loss.tex	894	Statements (C6) and (C8) to (C11) are not proved here.
+sec12_loss.tex	1126	Statements (B8) and (B9) are not proved here, apart from the published surjectivity theorem named in (B9).
+sec12_loss.tex	1245	Statement (A2) is not proved here.
+sec12_loss.tex	1284	Statement (A5) is not proved here.
+sec12_loss.tex	1329	The construction in (A6), (A7) and the individual share bounds in (A9) remain open.
+sec15_heights.tex	542	Hypotheses~\ref{r4:R4:HK}, \ref{r4:R4:HP}, \ref{r4:R4:HL}, \ref{r4:R4:HT}, \ref{r4:R4:HW} and~\ref{r4:R4:HD} are not proved here.
+sec15_heights.tex	649	Hypothesis~\ref{w3:W3:K3} is not proved here.
+sec15_heights.tex	706	The transformation/integrality inputs and the compatible period normalizations used above are not reproved in this subsection.
+sec15_heights.tex	713	The count is not written out here, so Hypothesis~\ref{w3:W3:K5} is not proved here.
+sec15_heights.tex	756	its explicit form is not written out here
+sec15_heights.tex	782	Hypothesis~\ref{w3:W3:xi} is not proved here.
+sec15_heights.tex	849	Items (i) and (ii) for the theta lifts of the chain, and the identification of $\theta_j$ with the period map of Theorem~\ref{w2:B}, are not proved here.
+sec15_heights.tex	903	Two of the counts behind Hypothesis~\ref{w3:W3:mult}, the formula for the multiplicity of $\psi_1$ in a parabolically induced constituent and the goodness of the cuspidal products that occur, are not proved here.
+sec15_heights.tex	913	The constant in the $O(\lambda_0)$ terms is not computed here.
+sec15_heights.tex	1074	Inputs (I1)--(I17) are not proved here.
+sec15_heights.tex	1121	Statements (G1)--(G4), the passage from test points to charts, and the refinement of the models in which they are computed are not proved here.
+sec15_heights.tex	1174	The construction of the tower, the exact identity at the good primes, and the limit $B\to\infty$ are not written out here, and Hypothesis~\ref{w3:W3:unif} is not proved here.
+sec16_local.tex	255	Hypothesis~\ref{r5:prop:H6I} is not proved here.
+sec16_local.tex	263	Hypothesis~\ref{r5:prop:H1} is not proved here.
+sec17_twisted.tex	153	Neither of the statements (I) and (II) is proved here.
+sec17_twisted.tex	185	The verification that the characters of the host attached to a twist $e$ and a prime $l$ outside the finite set of bad primes with $(l-1)\nmid2e$ are in generic position for $K=\Q(\sqrt{-p_K})$, and that the host level $N$ is polynomial in the conductor of $E$, are not written out here.
+sec17_twisted.tex	276	Statement (Count) is not proved here.
+sec17_twisted.tex	299	None of (G1) to (G4) is proved here, and (OneChar) is not proved here.
+sec17_twisted.tex	462	The descent, the verification of (F2) and of (F3) for the blocks that occur, and step three are not proved here.
+sec17_twisted.tex	619	Hypothesis~\ref{lk:hyp:block}, the verification of (F2) and (F3), and the summation are not proved here.

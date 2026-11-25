@@ -1,0 +1,284 @@
+\subsubsection{The effective cohomology bound}\label{tw:effectiveK}
+
+Let $p$ be a prime, $L$ a totally imaginary number field of degree $d$ and
+absolute discriminant $D$, and $S$ the set of places above $p$.
+Suppose $L$ contains a primitive $p$th root of unity if $p$ is odd
+and a primitive fourth root if $p=2$. Write
+\[
+ B_C(e,d,D)=\exp((2ed)^C\log(2D)).
+\]
+The bound required by the arithmetic window argument is uniform: for one
+real $C_K$, all such $p,L$ and all integers $e\ge1$, the group
+$A=H^2(G_{L,S},\mathbb Z_p(e+1))$ is finite and
+$\log |A|\le B_{C_K}(e,d,D)$. In forming the cochains, fix an algebraic
+closure, a prolongation of each $v\in S$ to it, and the cyclotomic
+character on the quotient unramified outside $S$. The estimate holds for
+each such datum.
+
+\paragraph{The localization kernel.}
+For the discrete module $M=(\mathbb Q_p/\mathbb Z_p)(-e)$ let
+$s_L$ denote the length over $\mathbb Z_p$ of the kernel of
+\[
+ H^1(G_{L,S},M)\longrightarrow \prod_{v\in S} H^1(G_{L_v},M).
+\]
+Lengths can initially be infinite. The source identifies this length with
+the invariant defined using an absolute Galois group and a fixed algebraic
+closure. At the end of the argument one returns from this invariant to
+the same local conditions. The two twists involved here are $-e$ in degree
+one and $e+1$ in degree two.
+
+\paragraph{Counting in cyclotomic layers.}
+Put $k=e-1$. The auxiliary field construction supplies a totally imaginary
+field $L'$ with $d'=[L':\mathbb Q]=m d$, maximal cyclotomic depth $c$
+($\mu_{p^c}\subset L'$, $\mu_{p^{c+1}}\not\subset L'$), and
+\[
+ 2e+1<\min(p^c,r_2(L')), \quad
+ m\le(d+1)(4e+4), \quad p^c\le 2d',\quad
+ D'\le D^m(p^c)^{d'},\quad s_L\le s_{L'}.
+\]
+Here $D'=|\Delta_{L'}|$, $r_2$ counts pairs of complex embeddings, and
+$c\ge1$, with $c\ge2$ at $p=2$. The strict inequalities are used before
+applying the odd-degree homology estimate.
+
+Indeed, if $c_0$ is the cyclotomic depth of $L$, take the layer
+$L'=L(\mu_{p^{c_0+h}})$ with $h$ the least integer for which
+$p^h\ge4e+4$. The cyclotomic layer theorem gives $m=p^h$.
+Thus $m\le p(4e+4)$, $c\ge c_0+h$, and $r_2(L')=md/2>2e+1$.
+The cyclotomic degree over $\mathbb Q$ gives
+$p\le d+1$ and $p^c\le 2d'$. To bound the different, let $z$ generate
+the layer as a primitive $N$th root, $N=p^{c_0+h}$, and let $P$ be
+its relative minimal polynomial. Writing $X^N-1=PQ$ and differentiating
+at $z$ gives $N=zP'(z)Q(z)$. The different contains $P'(z)$ and hence
+$N$. Its norm divides $N^{d'}$, giving the displayed discriminant bound.
+For the length comparison use the tower descent description at levels
+$0$ and $h$. These lengths are those of the cokernels of $T-1$ and
+$T^{p^h}-1$ for the same twisted operator $T$. The second image lies in
+the first by the geometric-sum identity, giving a surjection of
+cokernels in the required direction.
+
+In a cyclic Galois layer $F/L'$ let $\zeta$ have order $q=p^\nu$,
+$\nu\ge c$, and fix a generator $\gamma$ of order $p^{\nu-c}$
+with $\gamma\zeta=\zeta^{1+p^c}$. Set $a=(1+p^c)^e$. Count the
+functions $\varphi$ from nonzero prime ideals of $\mathcal O_F$ to
+$\mathbb Z/q$ satisfying
+\[
+ \sum_P\operatorname{ord}_P(\alpha)\varphi(P)=0\quad(\alpha\in F^\times),
+ \qquad \varphi(\gamma^{-1}P)=a\varphi(P).
+\]
+The first condition makes these characters of the ideal class group.
+Write $h_\nu$ for their number, $T_j$ for the order of the torsion
+subgroup of $H_j(\mathrm{GL}_{4k+10}(\mathcal O_{L'}),\mathbb Z)$, and
+\begin{align*}
+ b&=2k+2+(2k+3)(c+2k+3), & f&=v_p(e),\\
+ g&=2d'+\lfloor\log_2 h_{L'}\rfloor+2, & X&=(b+f)g+c+f .
+\end{align*}
+
+Two counts enter. For the first count, consider a finite subset of
+$F^\times$ whose elements have
+$\operatorname{ord}_P(\alpha)=\mathfrak d(\gamma P)-a\mathfrak d(P)$
+for a divisor $\mathfrak d$ depending on $\alpha$. The chosen elements
+are distinguished modulo $q$th powers by the $p^b$th powers of their
+twisted norms. In the archive convention the norm is
+$\prod_{j=0}^{|\gamma|-1}\gamma^j(\alpha)^{a^j}$, with the field
+automorphism acting on $\alpha$. Each element gives a cycle
+in degree $2k+3$. One chooses the residue tests simultaneously away
+from $p$ and the finitely many denominators of these cycles, at primes
+where $\mathcal O_{L'}$ surjects onto the residue field. If two cycles
+have the same scaled evaluations at every such prime, the ratio of their
+powered twisted norms is a $q$th power in every tested residue field.
+The power-detection lemma gives a $q$th power in $F^\times$.
+The separation condition then identifies the two elements. The image
+bound for the resulting primitive family of evaluations bounds the first
+count by $q^{r_2(L')}T_{2k+3}T_{2k+2}$.
+
+\input{sec17_cycles}
+
+For the second count write $Y_F=F^\times$ additively, let $I_F$ be the
+divisor group, and let $\partial:Y_F\to I_F$ be the divisor map.
+On elements put $\delta=\gamma^{-1}-a$; on divisors the corresponding
+operator is $(\delta_I d)(P)=d(\gamma P)-a d(P)$. Put
+\[
+ U=\partial^{-1}(\delta_I I_F),\quad
+ W=U/(\delta Y_F+Y_{F,\mathrm{tors}}),\quad
+ C'=I_F/(\partial Y_F+\delta_I I_F).
+\]
+Let $E'$ be $\ker\partial$ modulo $\delta(\ker\partial)$ and torsion.
+The divisor and unit counts give finite groups with $|W|=|E'||C'|$,
+$h_\nu\le p^{v_p(|C'|)}$, and
+\[
+ v_p(|E'|)+c+f=r_2(L')(\nu+f).
+\]
+The last equality uses $v_p(a-1)=c+f$ and
+$v_p(a^{p^{\nu-c}}-1)=\nu+f$.
+
+Here are the two order computations. On $I_F$ the operator $\delta_I$
+is injective, since an element in its kernel satisfies
+$(a^{|\gamma|}-1)d=0$ and the divisor group is torsion free.
+For $y\in U$ the equation $\partial y=\delta_I d$ now determines $d$.
+Sending $y$ to the ideal class of $d$ maps $W$ onto the kernel of
+$\delta_I$ on the class group. Indeed a class in that kernel has
+$\delta_I d$ principal, and altering $y$ by $\delta z$ alters $d$ by
+$\partial z$. If $d$ is principal one can therefore take $y$ to be
+a unit. Two such units agree in $W$ precisely modulo the twisted
+differences of units and torsion, again by injectivity on divisors.
+Thus the kernel is $E'$. The kernel and cokernel of an endomorphism
+of a finite group have the same cardinality, and here the cokernel
+is $C'$. Equivariant class characters factor through $C'$; on each
+cyclic $p$-summand of order $p^i$ there are at most $p^i$ choices.
+
+The logarithmic unit lattice spans the real hyperplane of coordinates
+at infinite places with sum zero. On all coordinates $\gamma^{-1}$
+permutes $r_2(L')$ cycles of length $n=p^{\nu-c}$, since each complex
+place downstairs has $n$ lifts. The absolute determinant of
+$\gamma^{-1}-a$ on the permutation space is $(a^n-1)^{r_2(L')}$.
+Its absolute determinant on the one-dimensional quotient is $a-1$.
+The determinant on the lattice modulo roots of unity therefore gives
+$|E'|(a-1)=(a^n-1)^{r_2(L')}$, as required.
+
+The powered twisted norm induces a map
+$W\to Y_F/(qY_F+Y_{F,\mathrm{tors}})$. Its image has size at most
+$B=q^{r_2(L')}T_{2k+3}T_{2k+2}$ by choosing one representative for
+each image element and applying the first count. Write
+$a^{p^{\nu-c}}-1=p^{\nu+f}m_0$ with $p\nmid m_0$.
+The norm identity kills the kernel by $p^{b+f}m_0$.
+Indeed, write $g=\gamma^{-1}$, $n=|\gamma|$, $N_a=\sum_{j<n}a^jg^{n-j}$.
+Then $(g-a)N_a=N_a(g-a)=(1-a^n)g$. If $p^bN_a y=qz+t$
+with $t$ torsion, applying $g-a$ and dividing by $q$ modulo torsion
+shows that $p^{b+f}m_0g y$ lies in $(g-a)Y_F+Y_{F,\mathrm{tors}}$.
+This subgroup is invariant under $g$ and $g^{-1}$, proving the assertion.
+On its $p$-primary subgroup this gives an exponent bound $p^{b+f}$.
+The Selmer injection and the base-field Selmer count bound $|W[p]|$
+by $p^g$. A finite abelian $p$-group killed by $p^{b+f}$, with
+at most $p^g$ elements killed by $p$, has order at most $p^{(b+f)g}$.
+Indeed multiplication by $p$ takes the subgroup killed by $p^{j+1}$
+into the subgroup killed by $p^j$ with kernel of order at most $p^g$.
+Induction from $j=0$ gives the bound. Applying it to the kernel gives
+$p^{v_p(|W|)}\le Bp^{(b+f)g}$. In particular
+\[
+ h_\nu q^{r_2(L')}\le
+ p^{v_p(|C'|)+v_p(|E'|)+c+f}
+ =p^{v_p(|W|)+c+f}\le Bp^X.
+\]
+For the Selmer bound just used, lift $w\in W[p]$ to $u\in U$ and write
+$pu=\delta y+t$ with $t$ torsion. If $\partial u=\delta_I d$, then
+$\partial y=pd$ by injectivity of $\delta_I$. Also $gy-y$ vanishes
+modulo $pY_F+$ torsion, since $p\mid a-1$. The class of the chosen
+$y$ in that quotient distinguishes the $w$: equality of two such
+classes gives $y-y'=pz+t'$, whence
+$p(u-u'-\delta z)$ is torsion, as is $u-u'-\delta z$ itself.
+To descend these classes, fix a generator $\rho$ of the roots of unity
+of $F$. In multiplicative notation a representative $\alpha$ has
+$\gamma\alpha/\alpha=v^p\rho^r$ for $0\le r<p$ after absorbing a
+$p$th power. The pair $(r,N_{F/L'}v)$ takes at most $p^2$ values
+because $(N_{F/L'}v)^p=(N_{F/L'}\rho)^{-r}$. Within a fiber the ratio
+of two such $v$ has norm one. Hilbert 90 supplies a coboundary, so
+after removal of a $p$th power the ratio of the two $\alpha$ descends
+to $L'$. Outside $p$ the cyclotomic extension is unramified, so the
+valuations of the descended element are divisible by $p$ there.
+The resulting base-field classes modulo powers have size at most
+$p^{2d'+\lfloor\log_2 h_{L'}\rfloor}$. Indeed valuations modulo $p$
+at places over $p$ cost at most $p^{d'}$. With these fixed, taking
+the $p$th root of the principal divisor costs at most
+$|\mathrm{Cl}(L')[p]|\le p^{\lfloor\log_2 h_{L'}\rfloor}$.
+The remaining units modulo $p$th powers cost at most $p^{d'}$
+by the unit theorem. This gives the stated $p^g$.
+
+Substituting the value of $B$ gives
+\[
+ h_\nu q^{r_2(L')}
+ \ \le\ q^{r_2(L')}T_{2k+3}T_{2k+2}\,p^X.
+\]
+Cancel the positive common factor. All quantities on the right of
+$h_\nu\le T_{2k+3}T_{2k+2}p^X$ are independent of $\nu$.
+This uniformity allows passage back to the localization kernel:
+restriction to the infinite cyclotomic tower is injective on that kernel,
+and each finite set in its image is detected at a common finite level.
+At that level the corresponding torsion class characters inject into
+the functions counted above. Thus every such finite set has size at most
+$T_{2k+3}T_{2k+2}p^X$. It follows that the kernel is finite and
+\[
+ s_L\log p\le s_{L'}\log p
+ \le\log T_{2k+3}+\log T_{2k+2}+X\log p.
+\]
+
+For clarity on the constants, write $u=2ed'$ and $Y=\log(2D')$.
+For the torsion estimate set $N=4e+6$ and $d_* = d'N$.
+The integral face complex for $\mathrm{GL}_N(\mathcal O_{L'})$ is
+exact in the range used to compute $H_j$. In dimensions up to $j$
+its number of orbits is bounded by
+$A_*=(2D'd_*)^{12(j+1)d_*^3N}$ and the orders of the stabilizers by
+$s_*=3^{d_*N}$. The boundary from dimension $j+1$ is the alternating
+sum of $j+2$ faces, hence has column $\ell^1$-norm at most $j+2$.
+The equivariant chain estimate with these bounds gives
+\[
+ T_j\le (j+2)^{A_*}\,s_*^{\,jA_*s_*^j}.
+\]
+This estimate uses exactness of the augmented complex, orbit counting
+for integral lattices, and the bounds for homology of finite stabilizers.
+Taking logarithms gives
+$A_*\log(j+2)+jA_*s_*^j\log s_*$. The numerical estimate for this
+expression at $j\le2e+1$ gives
+$\log T_j\le \exp(u^{C_0}Y)$ with $C_0=24$ in the two degrees above. The numerical
+comparison for the layer gives $X\log p\le u^9Y$. Absorbing the three
+terms and descending using the degree and discriminant bounds gives
+$s_L\log p\le B_C(e,d,D)$ with $C=5(\max(C_0,9)+2)+11$.
+
+\paragraph{From the localization kernel to the required order.}
+Poitou--Tate duality and the local finiteness and duality inputs give
+\[
+ \operatorname{length}_{\mathbb Z_p} A
+ \le s_L+\sum_{v\in S}\operatorname{length}_{\mathbb Z_p}H^0(G_{L_v},M).
+\]
+For each $v$ the cyclotomic image $U_v\subset\mathbb Z_p^\times$ has
+index $I_v\le d$: it contains the inertia image, whose index is at most
+$d$. The element $(1+p^2)^{I_v}$ lies in $U_v$.
+An invariant of order $p^t$ forces
+$p^t\mid (1+p^2)^{I_v e}-1$. The valuation of the latter is
+$2+v_p(I_v)+v_p(e)$, also for $p=2$ since the base is $1\bmod 4$.
+Consequently the invariants form a subgroup of a cyclic group of order
+at most $p^{2+\lfloor\log_p d\rfloor+e}$. There are at most $d$ places
+above $p$, so
+\[
+ \operatorname{length}_{\mathbb Z_p} A
+ \le s_L+d(2+\lfloor\log_p d\rfloor+e).
+\]
+A finite-length $\mathbb Z_p$-module of length $t$ has order $p^t$,
+by a composition series with successive quotients $\mathbb F_p$.
+This proves finiteness. The root-of-unity hypothesis gives $p\le d+1$,
+and $\lfloor\log_p d\rfloor\log p\le\log(d+1)$. Hence the extra term
+in $\log|A|$ is at most $d(3+e)\log(d+1)$. For $e,d,D\ge1$ this is
+at most $4d\log(2D)(2e)(2e+3)\log(d+1)$, which the final numerical
+comparison absorbs into $B_{\max(C,0)+9}(e,d,D)$ together with $B_C$.
+Following the exhibited witnesses gives $5(24+2)+11=141$ at the
+localization-kernel step and $141+9=150$ here. The interface used for
+the window only asks for the existence of one absolute exponent.
+
+\paragraph{Scope of this reconstruction.}
+This deduction uses the arithmetic and analytic inputs to the odd-degree
+rank bound, the integral torsion estimate, the Selmer and class-group
+comparisons, and the tower and duality theorems in their indicated
+normalizations. Paragraph~\ref{kone:lines} gives the line transfer used in the cycle
+argument. A standalone derivation still requires the integral lattice
+and splitting results and the arithmetic and analytic inputs above. In the window argument
+the same uniform bound is supplied to the case estimates together with the
+separate rank-two Selmer input.
+
+\paragraph{Use of the bound on the selected family.}\label{kone:consumer}
+The window argument takes the existential pair $(C_K,\text{cohomology
+bound at }C_K)$ once. It uses that same pair in the count of type I,
+in the joint count of types II and III, and in the count of type V.
+Type I also uses the rank-two Selmer estimate and the unramified
+automorphy input. Types II and III use the symplectic input, while
+type V uses the reduced unitary lifting input. The four counts and
+the common pair yield the window estimate of
+Hypothesis~\ref{w4:thm:vwin} in the source normalization.
+At each selected index the window supplies finiteness of the odd
+localization kernels and bounds the sum of their lengths, weighted by
+$\log p$, by $\sqrt b$. Indeed the record identifies its finite
+lengths with the cohomological ones at every $1\le e<t$; nonprime
+indices contribute zero, and summation gives the required inequality.
+With the local lattice comparison and equality of the small-level
+ranks at that index this gives the twisted-place divisibility used
+in the division estimate of Subsection~\ref{sec:frontier}.
+These rank and automorphy hypotheses enter independently of the
+cohomological order bound.

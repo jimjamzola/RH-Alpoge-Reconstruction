@@ -11,12 +11,10 @@ abstract: >-
   A reconstruction in conventional mathematics of the proof of the Riemann
   hypothesis that Levent Alpöge announced on November 20, 2026, found in
   collaboration with Claude and released as a Lean development, which the
-  Lean and Mathlib communities certified on November 21, 2026. The
-  reconstruction is not yet complete. The current manuscript of November 23,
-  2026 states precisely the internal statements whose conventional proofs
-  still have to be written and the published inputs whose exact forms still
-  require verification.
-version: "2026-11-23"
+  Lean and Mathlib communities certified on November 21, 2026. The manuscript
+  follows the original argument through the final deduction and records the
+  mathematical comparisons and input proofs still under review.
+version: "2026-11-25"
 authors:
   - family-names: Adriazola
     given-names: Jimmie
