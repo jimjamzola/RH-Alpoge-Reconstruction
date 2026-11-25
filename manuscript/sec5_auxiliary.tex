@@ -35,126 +35,39 @@ where the inner sum runs over the primitive characters modulo $N$.
 where $\mathfrak m(X;M,b)=\big(\operatorname{li}(X)-\chi_1(b)\operatorname{li}(X^{\beta_1})\big)/\varphi(M)$ for the chosen pair, and $\mathfrak m(X;M,b)=\operatorname{li}(X)/\varphi(M)$ when no such pair exists.
 \item[(C8)] The distance of a real zero from $1$~\cite[Ch.~14]{davenport}. There is $0<c_7\le1$ such that every real zero $\beta$ of $L(s,\chi)$, for a real nonprincipal character $\chi$ modulo $M\ge3$, satisfies $\beta\le1-c_7/(M^{1/2}\log^2M)$.
 \end{enumerate}
-Statement (C7) is the prime number theorem in arithmetic progressions in the range of Linnik, with the exceptional zero kept in the main term. We derive it from Gallagher's theorem on primes in short intervals~\cite[Theorem~7]{gallagher}, together with the uniqueness of the exceptional zero recorded in~\cite[Section~4, display~(26)]{gallagher} and the bound (C8). In Gallagher's notation the starred sum $\sideset{}{^\ast}\sum_\chi$ runs over the primitive characters $\chi$ modulo $q$, and for $q=1$ it consists of the trivial character. We state the two inputs with Gallagher's constants renamed, so that they do not clash with the letters of this section.
-\begin{enumerate}
-\item[(G1)] Gallagher~\cite[Section~4, display~(26)]{gallagher}, \cite[Ch.~14]{davenport}. There is $c_\ast>0$ such that for every $T\ge3$ at most one $L$-function of a primitive character of modulus at most $T$ has a zero $s$ with $\operatorname{Re}s>1-c_\ast/\log T$ and $\lvert\operatorname{Im}s\rvert\le T$. If such a zero exists, it is real and simple, and no other zero of that $L$-function lies in this region. It is called the exceptional zero.
-\item[(G2)] Gallagher~\cite[Theorem~7]{gallagher}. There are $a_\ast>0$, $0<b_\ast\le1$, $d_\ast>0$ and $C_\ast$ with the following property. Let $x\ge2$, $R$ and $h$ be real numbers with $\exp(\sqrt{\log x})\le R\le x^{b_\ast}$ and $x/R\le h\le x$. For a primitive character $\chi$ modulo $q>1$ put $\Delta(\chi)=\sum_{x<p\le x+h}\chi(p)\log p$, and for the trivial character put $\Delta(\chi)=\sum_{x<p\le x+h}\log p-h$. Then
-\[
-\sum_{q\le R}\ \sideset{}{^\ast}\sum_{\chi}\ \lvert\Delta(\chi)\rvert\le C_\ast\,h\,\exp\Big(-a_\ast\frac{\log x}{\log R}\Big),
-\]
-with the following modification. If for a primitive character $\chi'$ of modulus $q'\le R$ the function $L(s,\chi')$ has an exceptional zero $1-\delta$ with $\delta\log R\le d_\ast$, then there is $\xi\in[x,x+h]$ such that the estimate holds after $\Delta(\chi')$ is replaced by $\Delta(\chi')+h\xi^{-\delta}$, and in this case its right side may be multiplied by $(\delta\log R)^2$.
-\end{enumerate}
-Gallagher's proof of (G2) takes $T=R^5$ in (G1), and the factor $(\delta\log R)^2$ comes from the Deuring--Heilbronn widening of the zero-free region together with Siegel's bound $\delta\gg_\varepsilon T^{-\varepsilon}$, so the constant $C_\ast$ is not effective. The derivation below uses the exceptional zero of (G2) for zeros with $\delta\log R\le c_\ast/10$. Such a zero lies in the region of (G1) both for $T=R$ and for $T=R^5$, so the reading of (G2) does not depend on the value of $T$ that Gallagher's statement leaves implicit.
 
 \begin{proof}[Proof of (C7)]
-Put $d_\circ=\min(d_\ast,c_\ast/10,1/16)$ and $a_\circ=\min(a_\ast,d_\circ)$. We show that (C7) holds with
-\[
-c_6=\min\Big(\frac{a_\circ}2,\frac14\Big)^2,\qquad A_0'=112\,(C_\ast+5)+12+\frac{64}{c_7},\qquad C_0=\max\Big(16,\frac4{b_\ast^2},\frac1{d_\circ^2}\Big),
-\]
-where $c_7$ is the constant of (C8).
+Apply the Chebotarev theorem of Thorner and Zaman~\cite[Theorem~1.4]{thornerzaman19}
+to $L=\mathbb Q(\zeta_M)$ over $\mathbb Q$. Take the abelian subgroup to be the
+whole Galois group $G=(\mathbb Z/M\mathbb Z)^\times$ and the conjugacy class
+to be $\{b\}$. The fixed field is $\mathbb Q$. At $p\nmid M$ the arithmetic
+Frobenius sends $\zeta_M$ to $\zeta_M^p$, so the theorem counts precisely
+$\pi(X;M,b)$, with density $1/\varphi(M)$.
 
-\emph{Step 1. A form of (G2) with the smaller constant $d_\circ$.} Let $x$, $R$ and $h$ be as in (G2). Suppose first that for a primitive character $\chi'$ of modulus $q'\le R$ the function $L(s,\chi')$ has a real zero $1-\delta$ with $\delta\log R\le d_\circ$. Then $\delta<c_\ast/\log R$ and $\delta<c_\ast/\log R^5$, so by (G1) this zero is the exceptional zero, $\chi'$ is the unique primitive character of modulus at most $R$ whose $L$-function has a zero $1-\delta'$ with $\delta'\log R\le d_\circ$, and $1-\delta$ is the unique such zero of $L(s,\chi')$. The character $\chi'$ is real, because otherwise $L(s,\bar\chi')$ would have the same real zero and $\bar\chi'\ne\chi'$ would contradict (G1). Since $d_\circ\le d_\ast$, (G2) gives $\xi\in[x,x+h]$ with
-\begin{equation}\label{G2a}
-\sum_{q\le R}\ \sideset{}{^\ast}\sum_{\chi}\ \lvert\Delta^\circ(\chi)\rvert\le C_\ast\,(\delta\log R)^2\,h\,\exp\Big(-a_\circ\frac{\log x}{\log R}\Big),
-\end{equation}
-where $\Delta^\circ(\chi)=\Delta(\chi)$ for $\chi\ne\chi'$ and $\Delta^\circ(\chi')=\Delta(\chi')+h\xi^{-\delta}$. Suppose next that no such $\chi'$ exists, and put $\Delta^\circ=\Delta$. If (G2) has no modified term, it gives the bound $C_\ast h\exp(-a_\ast\log x/\log R)$ for $\sum_{q\le R}\sum^\ast_\chi\lvert\Delta^\circ(\chi)\rvert$. If (G2) modifies the term of a character $\chi'$, then $\delta\log R>d_\circ$, so $\lvert\Delta(\chi')\rvert\le\lvert\Delta(\chi')+h\xi^{-\delta}\rvert+hx^{-\delta}$ and $x^{-\delta}\le\exp(-d_\circ\log x/\log R)$. In both cases
-\begin{equation}\label{G2b}
-\sum_{q\le R}\ \sideset{}{^\ast}\sum_{\chi}\ \lvert\Delta^\circ(\chi)\rvert\le(C_\ast+1)\,h\,\exp\Big(-a_\circ\frac{\log x}{\log R}\Big).
-\end{equation}
+The conductor parameter in their formula~(1-11) is the largest conductor
+of a primitive character inducing a character modulo $M$. This maximum
+equals $M$. Indeed, for each $p^a\parallel M$ the reduction from units
+modulo $p^a$ to units modulo $p^{a-1}$ has nontrivial kernel
+(for $p=2$ we have $a\ge3$). Characters of a finite abelian group separate
+points, so we can choose a character nontrivial on this kernel. Its conductor
+is $p^a$, and the product of the local characters has conductor $M$.
 
-\emph{Step 2. The choice of the pair.} Let $M$ be divisible by $8$. For a real nonprincipal character $\chi_1$ modulo $M$ the function $L(s,\chi_1)$ is entire and $L(1,\chi_1)\ne0$, so it has finitely many zeros in the interval $1-1/(8\log M)\le s\le1$. Hence the pairs $(\chi_1,\beta_1)$ of (C7) form a finite set. If it is nonempty, we choose a pair with the largest $\beta_1$ and put $\delta_1=1-\beta_1$. This choice is made once for the modulus $M$, before $X$ and $b$ are given. Note that $\log M\ge\log8>2$, that $\log(\log M+2)>1$, and that $\beta_1>1-1/(8\log8)>\frac12$.
+Thus $D_K\mathcal Q n_K^{n_K}=M$ in the theorem. Its exceptional-zero
+interval is exactly $(1-1/(8\log M),1)$. Passing from a primitive character
+to the character it induces modulo $M$ removes Euler factors which are
+nonzero on this interval. The principal character has no zero there, since
+$\zeta$ has none. Hence the exceptional pair, if present, gives the pair
+in (C7) for all $X$ and $b$, with coefficient $\chi_1(b)$. In its absence
+the correction term vanishes.
 
-\emph{Step 3. The three cases.} Let $X\ge2$ satisfy $C_0\log M\log(\log M+2)\le\log X$, let $b$ be coprime to $M$, and put $R=\max(M,e^{\sqrt{\log X}})$. Then $\log X\ge C_0\log M\ge2C_0\ge32$, and
-\begin{equation}\label{C7ranges}
-\log R\le\frac{b_\ast}2\log X,\qquad M\le X^{1/16},\qquad \frac{\log X}{\log R}=\min\Big(\frac{\log X}{\log M},\sqrt{\log X}\Big)\ge\frac1{d_\circ}.
-\end{equation}
-The first inequality follows from $\log M\le\log X/C_0$ and $\sqrt{\log X}\le\frac{b_\ast}2\log X$, which holds because $\log X\ge8/b_\ast^2$. The second follows from $C_0\ge16$, and the third from $C_0\ge1/d_\circ^2$. We apply Step 1 with this $R$ and distinguish three cases.
-
-In case (A), Step 1 finds a character $\chi'$, and its modulus $q'$ divides $M$. Let $\chi_M$ be the principal character modulo $M$. The character $\chi'\chi_M$ is real and nonprincipal modulo $M$, and $L(s,\chi'\chi_M)=L(s,\chi')\prod_{p\mid M}(1-\chi'(p)p^{-s})$, where no factor vanishes for real $s>0$. Since $\delta\le d_\circ/\log R\le1/(16\log M)$, the pair $(\chi'\chi_M,1-\delta)$ is a pair of (C7). The chosen pair therefore exists and has $\beta_1\ge1-\delta$. Its character $\chi_1$ is induced by a primitive real character $\chi_1^\ast$ of conductor at most $M\le R$, the same factorization gives $L(\beta_1,\chi_1^\ast)=0$, and $(1-\beta_1)\log R\le d_\circ$. The uniqueness in Step 1 gives $\chi_1^\ast=\chi'$ and $\beta_1=1-\delta$. Hence $\chi_1=\chi'\chi_M$, $\delta_1=\delta$, and we put $\varepsilon_b=\chi'(b)\in\{1,-1\}$.
-
-In case (B), Step 1 finds no character $\chi'$ with $q'$ dividing $M$, and (C7) has no pair. We put $\varepsilon_b=0$.
-
-In case (C), Step 1 finds no character $\chi'$ with $q'$ dividing $M$, and the chosen pair exists. We put $\varepsilon_b=\chi_1(b)\in\{1,-1\}$. In this case $\delta_1\log R>d_\circ$, because otherwise the primitive character $\chi_1^\ast$ would be a character $\chi'$ of Step 1 with $q'$ dividing $M$.
-
-In all three cases put $w(t)=1-\varepsilon_bt^{-\delta_1}$ for $t\ge1$, so that $0\le w(t)\le2$.
-
-\emph{Step 4. Orthogonality on a short interval.} Let $X^{1/2}\le x\le X$ and $x/R\le h\le x$. By \eqref{C7ranges}, $\exp(\sqrt{\log x})\le R\le X^{b_\ast/2}\le x^{b_\ast}$, so Step 1 applies to $x$, $R$ and $h$. Put $\vartheta_b(y)=\sum_{p\le y,\,p\equiv b\ (M)}\log p$. Every character $\chi$ modulo $M$ is induced by a unique primitive character $\chi^\ast$ of conductor dividing $M$, the map $\chi\mapsto\chi^\ast$ is a bijection onto these primitive characters (the trivial character modulo $1$ included), and $\chi(n)=\chi^\ast(n)$ for $n$ coprime to $M$~\cite[Ch.~5]{davenport}. Since $x\ge X^{1/2}\ge M$, no prime in $(x,x+h]$ divides $M$, and the orthogonality relations give
-\[
-\varphi(M)\big(\vartheta_b(x+h)-\vartheta_b(x)\big)=\sum_{\chi\bmod M}\bar\chi(b)\sum_{x<p\le x+h}\chi(p)\log p=h+\sum_{q\mid M}\ \sideset{}{^\ast}\sum_{\chi}\ \bar\chi(b)\,\Delta(\chi).
-\]
-In case (A) we write $\Delta(\chi')=\Delta^\circ(\chi')-h\xi^{-\delta_1}$ and use $\bar\chi'(b)=\varepsilon_b$. In cases (B) and (C) every primitive character of conductor dividing $M$ has $\Delta^\circ(\chi)=\Delta(\chi)$, because a character $\chi'$ found in Step 1 has a modulus that does not divide $M$. Bounding the sum over $q\mid M$ by the sum over $q\le R$, we get from \eqref{G2a} and \eqref{G2b}
-\[
-\Big\lvert\varphi(M)\big(\vartheta_b(x+h)-\vartheta_b(x)\big)-h+\varepsilon_b'\,h\xi^{-\delta_1}\Big\rvert\le(C_\ast+1)\,h\,\Gamma(x),
-\]
-where $\varepsilon_b'=\varepsilon_b$ in case (A) and $\varepsilon_b'=0$ in cases (B) and (C), and where
-\[
-\Gamma(x)=\begin{cases}(\delta_1\log R)^2\exp(-a_\circ\log x/\log R)&\text{in case (A)},\\ \exp(-a_\circ\log x/\log R)&\text{in cases (B) and (C)}.\end{cases}
-\]
-In case (A) the numbers $\xi^{-\delta_1}$ and $h^{-1}\int_x^{x+h}t^{-\delta_1}\,dt$ both lie between $(x+h)^{-\delta_1}$ and $x^{-\delta_1}$, and $1-(1+u)^{-\delta_1}\le\delta_1u$ for $u\ge0$, so
-\[
-\Big\lvert h\xi^{-\delta_1}-\int_x^{x+h}t^{-\delta_1}\,dt\Big\rvert\le h\,x^{-\delta_1}\Big(1-\Big(1+\frac hx\Big)^{-\delta_1}\Big)\le\frac{\delta_1h^2}x .
-\]
-In case (C) we use $\int_x^{x+h}t^{-\delta_1}\,dt\le hx^{-\delta_1}\le h\exp(-d_\circ\log x/\log R)\le h\,\Gamma(x)$. In all three cases
-\begin{equation}\label{C7block}
-\Big\lvert\varphi(M)\big(\vartheta_b(x+h)-\vartheta_b(x)\big)-\int_x^{x+h}w(t)\,dt\Big\rvert\le(C_\ast+2)\,h\,\Gamma(x)+\eta\,\frac{h^2}x,
-\end{equation}
-with $\eta=\delta_1$ in case (A) and $\eta=0$ in cases (B) and (C).
-
-\emph{Step 5. A tiling of $(X^{1/2},X\,]$.} Put $X_0=X^{1/2}$, $L=\log(X/X_0)=\frac12\log X$, $\ell=\log(1+1/R)$ and $J=\lfloor L/\ell\rfloor$. Since $L\ge16>2\ell$, we have $J\ge L/\ell-1\ge L/(2\ell)$, so $r=e^{L/J}$ satisfies $1+1/R\le r\le(1+1/R)^2\le1+3/R$. Put $x_j=X_0r^j$ for $0\le j\le J$, so that $x_J=X$, and $h_j=x_{j+1}-x_j=(r-1)x_j$. Then $x_j/R\le h_j\le3x_j/R\le x_j$, and \eqref{C7block} applies to $x=x_j$ and $h=h_j$. Put
-\[
-D(y)=\varphi(M)\big(\vartheta_b(y)-\vartheta_b(X_0)\big)-\int_{X_0}^yw(t)\,dt .
-\]
-The function $\Gamma$ is decreasing, $\sum_jh_j\le X$ and $h_j/x_j\le3/R$, so summing \eqref{C7block} gives
-\begin{equation}\label{C7E}
-\lvert D(x_k)\rvert\le\mathcal E,\qquad \mathcal E=(C_\ast+2)\,X\,\Gamma(X^{1/2})+\frac{3\eta X}R,\qquad 0\le k\le J .
-\end{equation}
-
-\emph{Step 6. Partial summation.} Let $x_j\le t\le x_{j+1}$ and $W_j=\int_{x_j}^{x_{j+1}}w(u)\,du$. Both $\varphi(M)(\vartheta_b(t)-\vartheta_b(x_j))$ and $\int_{x_j}^tw(u)\,du$ are nondecreasing in $t$ and vanish at $t=x_j$. Hence $-W_j\le D(t)-D(x_j)\le D(x_{j+1})-D(x_j)+W_j$, and \eqref{C7E} gives $\lvert D(t)\rvert\le3\mathcal E+W_j$. Stieltjes integration by parts and $D(X_0)=0$ give
-\[
-\varphi(M)\big(\pi(X;M,b)-\pi(X_0;M,b)\big)=\int_{X_0}^X\frac{w(t)}{\log t}\,dt+\frac{D(X)}{\log X}+\int_{X_0}^X\frac{D(t)}{t\log^2t}\,dt .
-\]
-Since $\int_{X_0}^Xdt/(t\log^2t)\le2/\log X$, $\int_{x_j}^{x_{j+1}}dt/(t\log^2t)\le\log r/\log^2x_j\le12/(R\log^2X)$ and $\sum_jW_j\le\log X\int_{X_0}^Xw(t)\,dt/\log t$, the last two terms are at most
-\begin{equation}\label{C7ps}
-\frac{7\,\mathcal E}{\log X}+\frac{12}R\int_{X_0}^X\frac{w(t)}{\log t}\,dt .
-\end{equation}
-
-\emph{Step 7. The main term.} In cases (A) and (C) the substitution $u=t^{\beta_1}$ gives $\operatorname{li}(X^{\beta_1})=\int_{2^{1/\beta_1}}^Xt^{-\delta_1}\,dt/\log t$. Hence
-\[
-\varphi(M)\,\mathfrak m(X;M,b)=\int_2^X\frac{w(t)}{\log t}\,dt+\varepsilon_b\,k_1,\qquad k_1=\int_2^{2^{1/\beta_1}}\frac{t^{-\delta_1}}{\log t}\,dt ,
-\]
-with $0\le k_1\le2/\log2<3$ because $2^{1/\beta_1}\le4$, and the same identity holds in case (B) with $k_1=0$. With $\pi(X_0;M,b)\le X^{1/2}$, $\int_2^{X_0}w(t)\,dt/\log t\le3X^{1/2}$, $\int_{X_0}^Xw(t)\,dt/\log t\le\varphi(M)\mathfrak m(X;M,b)+3$, $\varphi(M)\ge4$ and \eqref{C7ps}, we obtain
-\begin{equation}\label{C7abs}
-\lvert\pi(X;M,b)-\mathfrak m(X;M,b)\rvert\le\frac{7\,\mathcal E}{\varphi(M)\log X}+\frac{12}R\,\mathfrak m(X;M,b)+2X^{1/2}.
-\end{equation}
-
-\emph{Step 8. A lower bound for the main term.} Put $\mu=\min(1,\delta_1\log X)$ in case (A) with $\varepsilon_b=1$, and $\mu=1$ otherwise. If $\varepsilon_b\in\{0,-1\}$, then $\varphi(M)\mathfrak m(X;M,b)\ge\operatorname{li}(X)\ge X/(2\log X)$. If $\varepsilon_b=1$, then $2^{1/\beta_1}\le X^{1/2}$ and $1-e^{-u}\ge\frac12\min(1,u)$ for $u\ge0$ give
-\[
-\varphi(M)\,\mathfrak m(X;M,b)\ge\int_{X^{1/2}}^X\frac{1-t^{-\delta_1}}{\log t}\,dt\ge\big(1-X^{-\delta_1/2}\big)\frac{X-X^{1/2}}{\log X}\ge\frac{\min(1,\delta_1\log X)\,X}{8\log X}.
-\]
-In case (C) the third inequality of \eqref{C7ranges} gives $\delta_1\log X>d_\circ\log X/\log R\ge1$. In every case
-\begin{equation}\label{C7low}
-\varphi(M)\,\mathfrak m(X;M,b)\ge\frac{\mu\,X}{8\log X}.
-\end{equation}
-In case (A) with $\varepsilon_b=1$, (C8) applied to $\chi_1$ gives $\delta_1\ge c_7/(M^{1/2}\log^2M)$. With $\log^2M\le3M^{1/2}$ and $c_7\le1$ this gives $1/\mu\le1+1/(\delta_1\log X)\le4M/c_7$, and the same bound holds when $\mu=1$.
-
-\emph{Step 9. The relative error.} We divide \eqref{C7abs} by $\mathfrak m(X;M,b)$ and use \eqref{C7low}. In case (A), $(\delta_1\log R)^2\le1$ and $(\delta_1\log R)^2/(\delta_1\log X)\le1$ give $\Gamma(X^{1/2})/\mu\le\exp(-a_\circ\log X/(2\log R))$, and $\delta_1\le1$ gives $\eta/\mu\le1$. The same two bounds hold in cases (B) and (C). Therefore
-\[
-\frac{7\,\mathcal E}{\varphi(M)\log X\,\mathfrak m(X;M,b)}\le\frac{56\,\mathcal E}{\mu X}\le56\,(C_\ast+5)\Big(\exp\Big(-\frac{a_\circ\log X}{2\log R}\Big)+\frac1R\Big).
-\]
-By the bound for $1/\mu$, $\varphi(M)\le M\le X^{1/16}$ and $\log X\le X^{1/8}$,
-\[
-\frac{2X^{1/2}}{\mathfrak m(X;M,b)}\le\frac{16\,\varphi(M)\log X}{\mu\,X^{1/2}}\le\frac{64}{c_7}\,M^2X^{-1/2}\log X\le\frac{64}{c_7}\,X^{-1/4}.
-\]
-By the identity in \eqref{C7ranges}, $\exp(-a_\circ\log X/(2\log R))\le e^{-(a_\circ/2)\log X/\log M}+e^{-(a_\circ/2)\sqrt{\log X}}$. Moreover $1/R\le e^{-\sqrt{\log X}}$ and $X^{-1/4}\le e^{-\sqrt{\log X}/4}$. Since $c_6\le a_\circ/2$, $\sqrt{c_6}\le a_\circ/2$ and $\sqrt{c_6}\le\frac14$, each of the three quantities $\exp(-a_\circ\log X/(2\log R))$, $1/R$ and $X^{-1/4}$ is at most $e^{-c_6\log X/\log M}+e^{-\sqrt{c_6\log X}}$. Adding the bounds gives
-\[
-\big\lvert\pi(X;M,b)-\mathfrak m(X;M,b)\big\rvert\le\Big(112\,(C_\ast+5)+12+\frac{64}{c_7}\Big)\Big(e^{-c_6\log X/\log M}+e^{-\sqrt{c_6\log X}}\Big)\,\mathfrak m(X;M,b),
-\]
-which is (C7) with the pair chosen in Step 2.
+Theorem~1.4 now gives the stated relative error with $c_6=c_3$ of that
+theorem and an absolute implied constant, for $X\ge M^{c_2}$.
+The normalization of $\operatorname{li}$ at $2$ gives the same difference
+when $\chi_1(b)=1$. In the other cases an additive constant in the
+logarithmic integral costs $O(\log X/X)$ relative to the main term,
+which the displayed error absorbs. Taking $C_0\ge\max(1,c_2)$ suffices
+since $M\ge8$ and $\log(\log M+2)>1$.
 \end{proof}
-
-The constants $c_6$, $A_0'$ and $C_0$ are absolute, and $A_0'$ is not effective because Gallagher's factor $(\delta\log R)^2$ rests on Siegel's theorem. The argument uses the factor $(\delta\log R)^2$ of (G2) in an essential way. Without it the first bound of Step 9 would contain $\exp(-a_\circ\log X/(2\log R))/\mu$, and with $\delta_1$ as small as (C8) allows, this quantity is small when $\log X\ge C\log^2M$ for a large constant $C$, a range that the hypothesis $C_0\log M\log(\log M+2)\le\log X$ of (C7) does not give. The short tiles of Step 5 are used for a similar reason, because (G2) does not specify the point $\xi$. On a dyadic interval with $\delta_1\log x$ of size $1$, the uncertainty in $h\xi^{-\delta_1}$ has relative size $1/\log x$ compared with the main term of that interval, and this exceeds the error allowed in (C7).
-
-
 
 \begin{lemma}\label{boxpsi}
 Let $\chi$ be a primitive character modulo $N\ge3$ and let $Q\ge2$. Suppose that $L(s,\chi)\ne0$ for every $s$ with $\operatorname{Re}s>1-\frac1{400}$ and $\lvert\operatorname{Im}s\rvert\le Q$. Then for every $u\ge2$ and every $T$ with $2\le T\le\min(u,Q)$
@@ -667,7 +580,7 @@ Let $h\in H$ have order $n_h$, let $t\in H$, and let $P_t\subset\mathbb Z/n_h\ma
 \begin{enumerate}
 \item[(i)] Every window of $L_2$ consecutive residues contains at most $K_\varepsilon$ elements of $P_t$.
 \item[(ii)] Every window of $G'$ consecutive residues contains at most $\lceil\max(6e\,G'\delta_1,(5+8\varepsilon)\log_2x)\rceil+1$ elements of $P_t$.
-\item[(iii)] Cut the integers from $0$ to $n_h$ into consecutive tiles of length $(6r_0+1)u$, and each tile into $6r_0+1$ cells of length $u$. Among every $M_0+1$ cyclically consecutive tiles there is one in which the cells in odd position are disjoint from $P_t$ and each cell in even position contains exactly one element of $P_t$, and that element is an even integer.
+\item[(iii)] Starting at $0$, take the $\lfloor n_h/((6r_0+1)u)\rfloor$ full tiles of length $(6r_0+1)u$ in $[0,n_h)$. Divide each into $6r_0+1$ cells of length $u$. Among every $M_0+1$ cyclically consecutive tiles there is one in which the cells in odd position are disjoint from $P_t$ and each cell in even position contains exactly one element of $P_t$, and that element is an even integer.
 \end{enumerate}
 \end{definition}
 
@@ -679,40 +592,71 @@ Let $0<\varepsilon<\frac1{52}$. There are an absolute constant $C_b$ and, for ev
 \end{proposition}
 
 \begin{proof}
-Throughout, $x$ is large in terms of $\varepsilon$ and $o$. Put $a_\gamma=o\lambda_\gamma\delta_1$. Since $o\lambda_\gamma$ is $1$ for $o=1$ and lies between $\frac67$ and $\frac87$ for $o\ge2$, we have $\frac67\delta_1\le a_\gamma\le\frac87\delta_1$. Choose $T$ at random, each $t\in H$ belonging to $T$ independently with probability $a_t$, where $a_t=a_\gamma$ for $t\in\gamma+A_0$. Let $\gamma_1,\dots,\gamma_o$ represent the cosets of $A_0$ and let $X_i$ be the number of elements of $T$ in $\gamma_i+A_0$, a sum of $n/o$ independent Bernoulli variables with mean $\mu_i=\lambda_{\gamma_i}\delta_1n$ and variance at most $\mu_i\le\delta_1n$.
-
-\emph{Size and shares.} Put $\eta=\delta\,\delta_1n/(2(o+1))$ with $\delta=x^{-1+\varepsilon}$. Chebyshev's inequality gives
+Choose each element of $H$ independently, with probability $\delta_1$
+on $A_0$ and $3\delta_1/4$ on its other cosets. For the count $X_i$ in
+coset $i$, write $\mu_i=\mathbb E X_i$ and $\mu=\mathbb E|T|$.
+The cosets all have size $n/o$, so
 \[
-\mathbb P\big(\lvert X_i-\mu_i\rvert>\eta\ \text{for some }i\big)\le\frac{o\,\delta_1n}{\eta^2}=\frac{4o(o+1)^2}{\delta^2\delta_1n}\le4o(o+1)^2\,x^{-10\varepsilon+\varepsilon/8},
+ \mu=\frac{3o+1}{4o}\,\delta_1 n,\qquad
+ \mu_i=\lambda_i\mu,\qquad \operatorname{Var}(X_i)\le\mu_i,
 \]
-because $n\ge x^{2+8\varepsilon}$ and $\delta_1=x^{-\varepsilon/8}$. Suppose that $\lvert X_i-\mu_i\rvert\le\eta$ for every $i$. Since $\sum_i\lambda_{\gamma_i}=1$, the number $N_T=\sum_iX_i$ satisfies $\lvert N_T-\delta_1n\rvert\le o\eta\le\frac12\delta_1n$, and
+where $\lambda_i$ is the weight of that coset in Lemma~\ref{shares}.
+
+\emph{Size and shares.} Put $\delta=x^{-1+\varepsilon}$ and
+$\eta=\delta\delta_1 n/(2(o+1))$. By Chebyshev's inequality the probability
+that any $|X_i-\mu_i|>\eta$ is at most $\mu/\eta^2$, which tends to zero
+because $\delta^2\delta_1 n\ge x^{(10-1/8)\varepsilon}$ and $o$ is fixed.
+Otherwise $|N_T-\mu|\le o\eta$. Since
+$3\delta_1 n/4\le\mu\le\delta_1 n$ and $o\eta/(\delta_1 n)\to0$ as
+$x\to\infty$, we have $\delta_1 n/2\le N_T\le2\delta_1 n$. Also
+$|X_i-\lambda_iN_T|\le(1+o)\eta\le\delta N_T$ in every coset.
+
+\emph{One orbit.} Fix $p,t$ and condition on $t\in T$. On its orbit the
+residue $i_t$ of $t$ is now selected. All other residues are still chosen
+independently with probabilities between $3\delta_1/4$ and $\delta_1$.
+Write $K=K_\varepsilon$ and $L_2=L_{2,p}$. For large $x$ both $L_2$
+and $G'$ are smaller than $n_h$, since $G'=O_\varepsilon(x^{\varepsilon/8}\log x)$
+and $n_h\ge x^{\varepsilon/4}$. Thus no window repeats a residue.
+
+For (i), a failing window needs $K+1$ successes, or $K$ further successes
+if it contains $i_t$. There are at most $n_h$ windows of the first kind
+and $L_2$ of the second. The union bound over choices of residues gives
 \[
-\lvert X_i-\lambda_{\gamma_i}N_T\rvert\le\lvert X_i-\mu_i\rvert+\lambda_{\gamma_i}\lvert\delta_1n-N_T\rvert\le(1+o)\eta=\tfrac12\delta\,\delta_1n\le\delta N_T .
+ \Pr(\text{(i) fails}\mid t\in T)
+ \le n_h(L_2\delta_1)^{K+1}+L_2(L_2\delta_1)^K\le x^{-2}
 \]
-So with probability at least $\frac23$ the set $T$ has the required size and satisfies the hypothesis of Lemma~\ref{shares}.
+for large $x$, using $\delta_1^K\le x^{-4-8\varepsilon}$,
+$n_h\le2x^{2+8\varepsilon}$ and $L_2\le400\log x$.
 
-\emph{One orbit.} Fix $p\in\mathcal P$ and $t\in H$, write $h=h_p$, $n_h$ for its order and $i_t$ for the residue of $t$ on its orbit. The points $t_0+ih$ with $i\in\mathbb Z/n_h$ are distinct, so the events $i\in P_t$ are independent, each of probability at most $\delta'=\frac87\delta_1$ and at least $\frac67\delta_1$. We bound the conditional probability, given $t\in T$, that the orbit is not good. The numbers $L_{2,p}\le400\log x$ and $G'$ are smaller than $x^{\varepsilon/4}\le n_h$, so a window is a set of distinct residues, and there are $n_h\le n\le2x^{2+8\varepsilon}$ windows of each length. The number of tiles is at least $M_0+1$, because a tile has length $(6r_0+1)u\le(6r_0+1)(x^{\varepsilon/8}+1)$ and $M_0$ has the order of $\log x$.
+For (ii), put $N=1+\lceil\max(6eG'\delta_1,(5+8\varepsilon)\log_2x)\rceil$.
+A failing window contains at least $N$ successes other than $i_t$.
+Their probability in a given window is at most
+$\binom{G'}{N}\delta_1^N\le(eG'\delta_1/N)^N\le2^{-N}$.
+Summing over the $n_h$ windows gives at most $x^{-3}$.
 
-Condition (i) fails when some window of $L_2$ residues contains at least $K_\varepsilon+1$ elements of $P_t$. A window that does not contain $i_t$ has this property with probability at most $\binom{L_2}{K_\varepsilon+1}\delta'^{K_\varepsilon+1}\le(L_2\delta')^{K_\varepsilon+1}$, independently of the event $t\in T$. A window that contains $i_t$ must contain $K_\varepsilon$ further elements, which has probability at most $(L_2\delta')^{K_\varepsilon}$, and there are $L_2$ such windows. Since $\delta_1^{K_\varepsilon}=x^{-\varepsilon K_\varepsilon/8}\le x^{-4-8\varepsilon}$, the conditional probability that (i) fails is at most
+For (iii), consider a tile avoiding $i_t$. A cell of length
+$u=\lceil1/\delta_1\rceil$ is empty with probability at least
+$(1-\delta_1)^u$. The probability that its only selected residue is
+even is at least
 \[
-2x^{2+8\varepsilon}\,(458\log x)^{K_\varepsilon+1}x^{-4-8\varepsilon-\varepsilon/8}+400\log x\,(458\log x)^{K_\varepsilon}x^{-4-8\varepsilon}\le x^{-2}.
+ \lfloor u/2\rfloor(3\delta_1/4)(1-\delta_1)^{u-1}.
 \]
+These lower bounds tend to $1/e$ and $3/(8e)$, respectively, both
+greater than $1/10$. The cells are disjoint, so the prescribed tile
+pattern has probability at least $\rho=10^{-(6r_0+1)}$. For large $x$ the
+orbit contains at least $M_0+1$ full tiles, since $n_h\ge x^{\varepsilon/4}$
+and $(M_0+1)(6r_0+1)u=O_\varepsilon(x^{\varepsilon/8}\log x)$.
+Any run in (iii) therefore contains at least $M_0$ distinct tiles
+avoiding $i_t$. By independence the run fails with probability at most
+$e^{-\rho M_0}\le x^{-5-8\varepsilon}$. There are at most $n_h$ runs.
 
-Put $N_0=\lceil\max(6eG'\delta_1,(5+8\varepsilon)\log_2x)\rceil$. Condition (ii) fails when some window of $G'$ residues contains at least $N_0+2$ elements. Given $t\in T$, a window then contains at least $N_0+1$ elements other than $i_t$. For $N\ge N_0+1$ the probability that $N$ of at most $G'$ independent events of probability at most $\delta'$ occur is at most $\binom{G'}N\delta'^N\le(eG'\delta'/N)^N$, by $\binom{G'}N\le G'^N/N!$ and $N!\ge(N/e)^N$, and $eG'\delta'/N\le\frac87eG'\delta_1/(6eG'\delta_1)\le\frac12$. So each window fails with conditional probability at most $2^{-N_0-1}\le\frac12x^{-5-8\varepsilon}$, and (ii) fails with conditional probability at most $x^{-3}$.
-
-For condition (iii), consider one cell, a set of $u=\lceil1/\delta_1\rceil$ consecutive integers. It is disjoint from $P_t$ with probability at least $(1-\frac87\delta_1)^u$, which tends to $e^{-8/7}>0.31$ as $x\to\infty$. It contains exactly one element of $P_t$, an even integer, with probability at least
-\[
-\frac{u-1}2\cdot\frac67\delta_1\cdot\big(1-\tfrac87\delta_1\big)^{u-1},
-\]
-since the cell contains at least $(u-1)/2$ even integers, and this lower bound tends to $\frac37e^{-8/7}>0.13$. So for large $x$ each cell has its required property with probability at least $\frac1{10}$, and a tile, which consists of $6r_0+1$ disjoint cells, has the pattern of (iii) with probability at least $\rho=10^{-(6r_0+1)}$. Among $M_0+1$ cyclically consecutive tiles at most one contains $i_t$, and the others are independent of the event $t\in T$ and of each other. Hence, given $t\in T$, the probability that none of them has the pattern is at most $(1-\rho)^{M_0}\le e^{-\rho M_0}\le x^{-5-8\varepsilon}$. There are at most $n_h\le2x^{2+8\varepsilon}$ runs of $M_0+1$ cyclically consecutive tiles, so (iii) fails with conditional probability at most $2x^{-3}$.
-
-Altogether $\mathbb P(\text{the orbit of }t\text{ under }h_p\text{ is not good}\mid t\in T)\le C_bx^{-2}$ with $C_b=2$.
-
-\emph{Conclusion.} By the last bound and $\mathbb P(t\in T)\le\frac87\delta_1$,
-\[
-\mathbb E\Big[\sum_{p\in\mathcal P}\frac{\log p}p\,\beta_p(T)\Big]=\sum_{p\in\mathcal P}\frac{\log p}p\sum_{t\in H}\mathbb P\big(t\in T,\ \text{orbit not good}\big)\le\frac87\,C_b\,x^{-2}\,\delta_1n\sum_{p\in\mathcal P}\frac{\log p}p .
-\]
-The number $4C_bx^{-2}\delta_1n\sum_p\frac{\log p}p$ is $\frac72$ times this bound, so by Markov's inequality the sum on the left exceeds it with probability at most $\frac27$. Since $\frac27<\frac23$, some set $T$ has all the required properties.
+The three failure probabilities sum to at most $C_b x^{-2}$ with
+$C_b=2$ for large $x$, uniformly in $p,t$. Multiplying by $\Pr(t\in T)$
+and summing over $t$ gives $\mathbb E\beta_p(T)\le C_b x^{-2}\mu$.
+Since $\mu\le\delta_1 n$, Markov's inequality gives the claimed weighted
+bound with probability at least $3/4$ (also when all weights vanish).
+The size and share conditions hold with probability tending to one, so
+some $T$ satisfies both requirements.
 \end{proof}
 
 \paragraph{Two families of auxiliary primes.} Part~II uses three primes congruent to $1$ modulo $Q_Sqd$ and two primes $g_0\ne g_1$ that split in $\mathbb Q(\sqrt{-d})$ into principal primes with a generator congruent to $1$ modulo $Q_Sqd$, where $Q_S$ is the part of the conductor of $E$ prime to $qd$. Linnik's theorem~\cite{linnik} gives a constant $A_L\ge1$ such that for every integer $M\ge2$ there is a prime $p\equiv1\pmod M$ with $p\le M^{A_L}$.

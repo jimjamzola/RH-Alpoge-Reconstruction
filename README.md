@@ -2,7 +2,7 @@
 
 The purpose of this repository is to provide a human-readable proof of the Riemann hypothesis. Given how quickly this has all developed, I cannot guarantee that everything in this repository is correct. All priority of the results belongs to Levent and Claude. Mathematicians can now read the manuscript from beginning to end and review it as they would any other paper, without consulting Lean. My next goal is to shorten the proof and make it easier to follow.
 
-**[Read the manuscript](manuscript/main.pdf)** · 287 pages · revised 24 November 2026.
+**[Read the manuscript](manuscript/main.pdf)** · 281 pages · revised 25 November 2026.
 
 ## Current status
 
@@ -10,7 +10,7 @@ Section 14 gives the volume and flag estimates, the decay away from the identity
 
 I would especially welcome a check of §17.4.3. Here we depart from the formal proof and propose a shorter argument for the same cohomological bound (K1). The archive takes 21 steps. We bound the number of generators and their orders separately. The question for a reader is whether these estimates give the required uniform bound even at the small primes. This argument has no Lean certification. If it holds up, I would like to know how much more of the proof we can simplify.
 
-Mathematicians can now read the argument from beginning to end and review it as they would any other paper, without consulting Lean. In [Section 18.7](manuscript/main.pdf#page=281) I list the steps that still need proofs and the places where I still need to check that a published theorem applies.
+Mathematicians can now read the argument from beginning to end and review it as they would any other paper, without consulting Lean. In [Section 18.7](manuscript/main.pdf#page=275) I list the steps that still need proofs and the places where I still need to check that a published theorem applies.
 
 ## The argument and its reconstruction
 
