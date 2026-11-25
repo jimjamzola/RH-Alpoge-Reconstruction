@@ -1540,208 +1540,108 @@ Consequently $h_K\leq\sqrt{|\Delta_K|}(1+\log\sqrt{|\Delta_K|})^d$; in
 particular $h_E\leq YL^{2f}$.
 \end{lemma}
 \begin{proof}
-Unique factorization of ideals and $\sum_{\mathfrak p\mid p}e_{\mathfrak p}
-f_{\mathfrak p}=d$ are Marcus, Chapter~3, Theorems~16 and~21. Colour the primes
-over each rational prime $p$ by $d$ colours, injectively for fixed $p$. If
-$\mathfrak a=\prod_{\mathfrak p}\mathfrak p^{e_{\mathfrak p}}$, form
-$A_i=\prod_{\operatorname{colour}(\mathfrak p)=i}(N\mathfrak p)^{e_{\mathfrak p}}$.
-The tuple $(A_1,\ldots,A_d)$ determines $\mathfrak a$. Hence at most $d_d(m)$
-ideals have norm $m$, where $d_d(m)$ counts ordered $d$-tuples of product $m$.
-
-Set $D_1(N)=N$ and
-$D_{r+1}(N)=\sum_{m=1}^{N}D_r(\lfloor N/m\rfloor)$. Induction on $r$, using
-$\sum_{m\leq N}m^{-1}\leq1+\log N$, gives
-$D_r(N)\leq N(1+\log X)^{r-1}$ for $N\leq X$. Since
-$D_d(N)=\sum_{m\leq N}d_d(m)$, this proves the first bound. Every ideal class
-has an integral ideal of norm at most
-$(4/\pi)^{r_2}(d!/d^d)\sqrt{|\Delta_K|}\leq\sqrt{|\Delta_K|}$ by the
-Minkowski bound, so selecting one such ideal for each class proves the second
-bound. Finally $\sqrt D=Y$ and $[E:\mathbb Q]=2f$.
+Give the primes of $K$ above each $p$ distinct labels in $\{1,\ldots,d\}$.
+Grouping the prime-power factors of an ideal by label and taking their
+norms gives a $d$-tuple of integers whose product is the norm of the ideal.
+The tuple determines the ideal by unique factorization. For fixed first
+$d-1$ entries $m_i$, the last has at most $X/\prod m_i$ choices. Summing
+gives at most $X(\sum_{m\le X}1/m)^{d-1}$. Minkowski's ideal bound gives
+each class a representative of norm at most
+$(4/\pi)^{r_2}(d!/d^d)\sqrt{|\Delta_K|}\le\sqrt{|\Delta_K|}$.
 \end{proof}
 
 \begin{lemma}[Gram determinant and index]\label{lem:gram-index}
 Let $X\subseteq E^r$ be an integral self-dual Hermitian lattice containing
-$\mathcal O^r$. If $a$ is the determinant of its standard-basis Gram matrix
-and $n=[X:\mathcal O^r]$, then $|N_{E/\mathbb Q}(a)|=n^2$.
+$B=\mathcal O^r$. If $G$ is the Gram matrix in the standard basis and
+$n=[X:B]$, then $|N_{E/\mathbb Q}(\det G)|=n^2$.
 \end{lemma}
 \begin{proof}
-Successive coordinate projections and splitting by invertible fractional ideals
-give a pseudobasis $X=\bigoplus_iC_i z_i$, where $\mathcal O\subseteq C_i$
-and the rows $z_i$ are unipotent triangular in the standard coordinates. Thus
-$n=\prod_i[C_i:\mathcal O]$. Let $C=\prod_iC_i$ and
-$\mathfrak J=\bar C(a)C$. If $\bar s_i\in C_i$ and $t_i\in C_i$, the matrix
-$(H(\bar s_i z_i,t_jz_j))_{ij}$ is integral; its determinant is
-$(\prod_i s_i)a(\prod_it_i)$. Hence $\mathfrak J\subseteq\mathcal O$.
-Conversely, for $u_i\in\bar C_i^{-1}$, form the standard dual vectors with
-coordinates $Q^{-1}(u_ie_i)$, where $Q$ is the conjugate triangular matrix
-times the Gram matrix. Self-duality puts these vectors in $X$. Comparing their
-pseudobasis coefficient determinants gives $\prod_i u_i\in(a)C$. Therefore
-$\bar C^{-1}\subseteq(a)C$, so $\mathfrak J=\mathcal O$. The identities
-$N(C_i)[C_i:\mathcal O]=N(\bar C_i)[C_i:\mathcal O]=1$ now give
-$N(\mathfrak J)n^2=|N_{E/\mathbb Q}(a)|$.
+Dualizing $B\subseteq X$ gives $X=X^\vee\subseteq B^\vee$ of the same
+index $n$. Indeed, over each local discrete valuation ring duality
+transposes the inclusion matrix in dual bases and conjugation exchanges
+primes of equal norm. Thus the product of the local indices is unchanged.
+Now $B^\vee=G^{-1}B$, so $n^2=[B^\vee:B]=[B:GB]=|N_{E/\mathbb Q}(\det G)|$.
 \end{proof}
 
-\begin{lemma}[A shortest vector at every embedding]\label{lem:short-all}
+\begin{lemma}[A short vector at every embedding]\label{lem:short-all}
 Every definite unimodular plane contains a nonzero $u\in\Lambda$ such that
 $h_\varphi(u,u)\leq\rho$ for every $\varphi:E\hookrightarrow\mathbb C$.
 \end{lemma}
 \begin{proof}
-Choose an $E$-basis $v_1,v_2$ lying in $\Lambda$ and set
-$\Gamma=\mathcal O v_1\oplus\mathcal O v_2$ and $n=[\Lambda:\Gamma]$.
-For each complex place $w$, let $G_w$ be the Gram matrix in this basis and
-$\delta_w=\det G_w$. Positive definiteness on $E$-rational vectors, density of
-$E$ in $\mathbb C$, and nonvanishing of the algebraic Gram determinant show
-that $G_w$ is positive definite over $\mathbb C$.
-
-Let $a$ be the algebraic Gram determinant and $P=\prod_w\delta_w$.
-Lemma~\ref{lem:gram-index} and the principal-ideal norm formula give
-$P^2=|N_{E/\mathbb Q}(a)|=n^2$, hence $P\leq n$. The mixed embedding of
-$\Gamma$ has covolume $(2^{-f}\sqrt D)^2=D/4^f$, so the image of $\Lambda$
-in $\prod_w\mathbb C^2$ has covolume $D/(4^fn)$. For $R^2=\rho$, define
-\[
-\mathcal E_R=\{(z_w)_w:z_w^*G_wz_w\leq R^2\quad(w)\}.
-\]
-The volume of a complex Hermitian ellipsoid follows from its Cholesky
-factorization:
-$\operatorname{vol}\{z:z^*G_wz\leq R^2\}=\pi^2R^4/(2\delta_w)$.
-Since $R^{4f}=\rho^{2f}=D$,
-\[
-\operatorname{vol}(\mathcal E_R)=\frac{(\pi^2/2)^fD}{P},
-\qquad 2^{4f}\operatorname{covol}(\Lambda)=\frac{4^fD}{n}.
-\]
-Minkowski's theorem therefore gives
-\[
-\#(\mathcal E_R\cap\Lambda)\geq
-\frac{\operatorname{vol}(\mathcal E_R)}{2^{4f}\operatorname{covol}(\Lambda)}
-=\frac nP\Bigl(\frac{\pi^2}{8}\Bigr)^f>1.
-\]
-This supplies the required nonzero vector at the place representatives.
-Conjugate embeddings have the same real Hermitian value, proving the bound
-at every embedding.
+Use an $E$-basis in $\Lambda$ to identify a sublattice of index $n$ with
+$\mathcal O^2$. In the product of one copy of $\mathbb C^2$ per complex
+place $w$, the covolume of $\Lambda$ is $(2^{-f}\sqrt D)^2/n$.
+Write $G_w$ for the positive definite Gram matrices.
+Lemma~\ref{lem:gram-index} gives $\prod_w\det G_w=n$.
+The ellipsoid $z^*G_wz\le\rho$ has volume $\pi^2\rho^2/(2\det G_w)$
+by change of variables from the ball in $\mathbb C^2$. Since $\rho^{2f}=D$,
+the product of these ellipsoids has volume
+$(\pi^2/8)^f\,2^{4f}\operatorname{covol}(\Lambda)$.
+Minkowski's convex-body theorem supplies a nonzero lattice vector in the
+product. The values of its norm at conjugate embeddings agree.
 \end{proof}
 
-\paragraph{Diagonal splitting.} Choose $u$ as in
-Lemma~\ref{lem:short-all}, and complete it to an orthogonal basis $(u,w)$.
-Writing $\gamma=(u,w)$ gives
-$\gamma^*J\gamma=\operatorname{diag}(\beta_1,\beta_2)$, where
-$\beta_1=h(u,u)$, $\beta_2=h(w,w)$ are totally positive. Put
-$L=\gamma^{-1}\Lambda$,
-\[
-A=\{a:(a,0)\in L\},\qquad B=\{b:(0,b)\in L\},
-\]
-and let $P,Q$ be the two coordinate projections of $L$. Then $1\in A$ and
-\[
-t\in A\iff\bar p\beta_1t\in\mathcal O\quad(p\in P),\qquad
-t\in B\iff\bar q\beta_2t\in\mathcal O\quad(q\in Q).
-\tag{1}
-\]
-Both projections are nonzero because $L$ is full. Using inverse fractional
-ideals in (1) shows that $A$ and $B$ are nonzero full rank-one lattices, just
-as in the dual-colon calculation below. Define
-\[
-\mathfrak a_1=\operatorname{span}_{\mathcal O}
-\{\bar x\beta_1y:x,y\in A\},\qquad
-\mathfrak a_2=\operatorname{span}_{\mathcal O}
-\{\bar x\beta_2y:x,y\in B\}.
-\]
-For $c\in E$, the identity
-\[
-\bar b\beta_1((\bar x\beta_1y)a)
-=(\bar b\beta_1y)\overline{(\bar a\beta_1x)}
-\]
-and inversion of the fractional ideal $P$ give
-$c\in\mathfrak a_1\iff cP\subseteq A$. Similarly
-$c\in\mathfrak a_2\iff cQ\subseteq B$. If $cP\subseteq A$ and $(p,q)\in L$,
-subtracting $(cp,0)$ from $c(p,q)$ proves $(0,cq)\in L$. Hence
-$\mathfrak n:=\mathfrak a_1=\mathfrak a_2$.
+\paragraph{Diagonal splitting.}
+Use $u$ as the first vector of an orthogonal $E$-basis. In these coordinates
+the form is $\operatorname{diag}(\beta_1,\beta_2)$ with both $\beta_i$
+totally positive. Let $N_i$ be the intersection of $\Lambda$ with axis $i$
+and $P_i$ its projection onto that axis, viewed as fractional ideals.
+For the form on the line write $I^\vee=(\beta_i\bar I)^{-1}$.
+A vector on axis $i$ pairs integrally with $\Lambda$ exactly when it
+pairs integrally with $P_i$. Thus $N_i=P_i^\vee$ by self-duality, and
+$P_i=N_i^\vee$ by invertibility of fractional ideals.
 
-The ideal $\mathfrak n$ is generated by its conjugation-fixed elements. Indeed,
-let $\mathfrak b$ be the ideal generated by those elements. If
-$(\mathfrak b:\mathfrak n)\neq\mathcal O$, choose a maximal $\mathfrak p$
-containing it. By (1) and $P^{-1}P=\mathcal O$, there are $x,y\in A$ and
-$a,b\in P$ with $\bar x\beta_1a$ and $\bar b\beta_1y$ outside $\mathfrak p$.
-Examining the other two cross products shows that one of $x$, $y$, or $x+y$
-can be used so that both
-$s=\bar x\beta_1a$ and $t=\bar b\beta_1x$ are outside $\mathfrak p$. For every
-generator $\bar y\beta_1z$ of $\mathfrak n$,
+Projection on either coordinate identifies
+$\Lambda/(N_1\oplus N_2)$ with $P_i/N_i$. Indeed, if the first
+coordinate lies in $N_1$, subtract its axis vector and the second
+coordinate lies in $N_2$ as well. The same reasoning applies on the
+other axis. In particular the two quotients have the same annihilator
 \[
-st(\bar y\beta_1z)=(\bar y\beta_1a)(\bar b\beta_1z)(\bar x\beta_1x)
+ \mathfrak n=N_iP_i^{-1}=\beta_i N_i\bar N_i.
 \]
-belongs to $\mathfrak b$. Thus $st\in\mathfrak p$, a contradiction.
-Consequently $\mathfrak n=(\mathfrak n\cap\mathcal O_F)\mathcal O$.
-Finally $1\in A$ gives $\beta_1\in\mathfrak n$, and the shortest-vector
-estimate at all $2f$ embeddings gives
-\[
-N\mathfrak n\leq|N_{E/\mathbb Q}(\beta_1)|
-=\prod_\varphi|h_\varphi(u,u)|\leq\rho^{2f}=Y^2.
-\tag{2}
-\]
+This ideal comes from $F$. Indeed, for each prime $P$ of $E$ over
+$\mathfrak p$ of $F$, the extension of its relative norm is
+$P\bar P$: in the split case it is $\mathfrak p\mathcal O=P\bar P$,
+in the inert case $\mathfrak p^2\mathcal O=P^2$, and in the ramified
+case $\mathfrak p\mathcal O=P^2$. Multiplicativity gives the identity
+for $N_i$, and $\beta_i$ belongs to $F$.
+The first axis contains $u$, so $1\in N_1$ and $\beta_1\in\mathfrak n$.
+Lemma~\ref{lem:short-all} therefore gives
+$N\mathfrak n\le |N_{E/\mathbb Q}(\beta_1)|\le\rho^{2f}=Y^2$.
 
 \begin{lemma}[Real ideals and lines]\label{lem:real-lines}
-For $Y\geq1$, there are at most $YL^f$ nonzero fixed-generated ideals with
-$N\mathfrak n\leq Y^2$. For each such $\mathfrak n$, there are at most
-$h_E2^f$ equivalence classes of pairs $X=(\beta,N)$ with $\beta$ totally
-positive, $N$ a full $\mathcal O$-lattice in $E$, and
-$\operatorname{span}_{\mathcal O}\{\bar x\beta y:x,y\in N\}
-=\mathfrak n$. Here $(\beta,N)\sim(\beta',N')$ if
-$\bar c\beta'c=\beta$ and $cN=N'$ for some $c\in E^\times$.
+There are at most $YL^f$ nonzero integral ideals $\mathfrak n$ extended
+from $F$ with norm at most $Y^2$. For each, there are at most $h_E2^f$
+isometry classes of Hermitian lines $(\beta,N)$ with
+$\beta$ totally positive and $\beta N\bar N=\mathfrak n$.
 \end{lemma}
 \begin{proof}
-Contraction $\mathfrak n\mapsto\mathfrak a=\mathfrak n\cap\mathcal O_F$ is
-injective by fixed-generation, and
-$N_{E/\mathbb Q}(\mathfrak a\mathcal O)=(N_{F/\mathbb Q}\mathfrak a)^2$.
-The first claim follows from Lemma~\ref{lem:hyperbola-ideals} applied to $F$.
-
-For lines, choose a reference $(\beta^0,N^0)$ in each occurring fractional
-ideal class. For $X$ in that class choose $aN=N^0$. Equality of norm ideals
-gives $u_X\in\mathcal O^\times$ with $\bar a\beta^0a\,u_X=\beta$: the multiplier
-$t=\bar a\beta^0a/\beta$ and its inverse stabilize the nonzero finitely
-generated ideal $\mathfrak n$, hence are integral. Record the parity of the
-exponents of $u_X$ in a fundamental unit basis. Dirichlet's theorem gives
-$f-1$ free generators, hence at most $2^{f-1}$ parity vectors.
-
-If $X,Y$ have the same ideal class and parity, then $u_X=u_Y\zeta v^2$ with
-$\zeta$ torsion and $v$ a unit. Put $c=a_Xv/a_Y$. This gives $cN_X=N_Y$ and
-\[
-\bar c\beta_Yc=\bar a_X\beta^0a_Xu_Y\bar v v.
-\]
-At any embedding, $|\zeta|=1$ and $|v^2|=|\bar v v|$, so this positive fixed
-value equals $\beta_X=\bar a_X\beta^0a_Xu_X$. Thus $X\sim Y$. There are at
-most $h_E2^{f-1}\leq h_E2^f$ line classes.
+The extended ideal $\mathfrak a\mathcal O$ has norm $(N\mathfrak a)^2$,
+so Lemma~\ref{lem:hyperbola-ideals} over $F$ gives the ideal count.
+For the lines, rescale $N$ to a fixed fractional ideal in its ideal
+class, transporting the form with it. For this $N$, any two possible
+coefficients $\beta$ differ by a unit of $F$, since they generate the same
+ideal of $E$. If their ratio is the square of a unit of $F$, multiplication
+by that unit gives an isometry. Dirichlet's unit theorem for the totally
+real field $F$ gives
+$|\mathcal O_F^\times/(\mathcal O_F^\times)^2|=2^f$, including the sign.
 \end{proof}
 
 \begin{lemma}[Unimodular gluings]\label{lem:glue-count}
-Fix line representatives $(\beta_1,N_1)$ and $(\beta_2,N_2)$, with the norm
-ideal of the first equal to $\mathfrak n$. The lattices $M\subseteq E^2$ which
-are self-dual for $\operatorname{diag}(\beta_1,\beta_2)$ and have prescribed
-axis intersections $N_1,N_2$ number at most $N\mathfrak n$.
+Fix two Hermitian lines $(\beta_i,N_i)$, the first with norm ideal
+$\mathfrak n$. At most $N\mathfrak n$ self-dual lattices for the diagonal
+form have these axis intersections.
 \end{lemma}
 \begin{proof}
-Write $N^{\vee_i}=\{a:\bar s\beta_i a\in\mathcal O\ (s\in N)\}$. Choose
-$0\neq s\in N_1$ and $d=\bar s\beta_1$. For the integral ideals
-$I=\{c:d^{-1}c\in N_1\}$ and $J=\{c:d^{-1}c\in N_1^{\vee_1}\}$,
-prime factorization gives $y$ with $J=I+(y)$. Taking $u=d^{-1}y$ gives
-$N_1^{\vee_1}=N_1+\mathcal O u$. Also
-$\mathfrak nN_1^{\vee_1}\subseteq N_1$, since
-$(\bar x\beta_1y)u'=(\bar x\beta_1u')y$.
-
-If $P$ is the first projection of an admissible $M$ and
-$a\in N_1^{\vee_1}$, then $a\in P$. Indeed, for $q\in P^{-1}$,
-$\bar q\beta_1^{-1}\in N_1$; hence $qa$ is integral and
-$a(pq)=(qa)p\in P$. Summing over $PP^{-1}=\mathcal O$ proves $a\in P$.
-Thus there is $b$ with $(a,b)\in M$, and similarly in the second coordinate.
-
-Fix $M_0$ if the family is nonempty, and choose $(u,v_M)\in M$ for every $M$.
-For each $M$, lift $v_M$ to $(a,v_M)\in M_0$ and choose $c_M\in\mathcal O$
-with $a-c_Mu\in N_1$. Then $v_M-c_Mv_0\in N_2$. If
-$c_M-c_{M'}\in\mathfrak n$, it follows that $v_M-v_{M'}\in N_2$. For any
-$(a,b)\in M$, choose $d$ with $a-du\in N_1$; then $b-dv_M\in N_2$ and
-\[
-(a,b)=(a-du,0)+d(u,v_{M'})
- +(0,b-dv_M+d(v_M-v_{M'}))\in M'.
-\]
-Symmetry gives $M=M'$. Therefore $M\mapsto c_M\bmod\mathfrak n$ is an
-injection into $\mathcal O/\mathfrak n$.
+By the two projection isomorphisms above, each such lattice is the
+inverse image of the graph of an isomorphism
+$N_1^\vee/N_1\to N_2^\vee/N_2$. The source is
+$N_1^\vee/\mathfrak n N_1^\vee\simeq\mathcal O/\mathfrak n$, since
+the fractional ideal is principal locally at each prime dividing
+$\mathfrak n$, and the Chinese remainder theorem combines the local
+generators. If a gluing exists, the target also has $N\mathfrak n$
+elements. The image of one generator determines the graph, giving the bound
+(including the unique zero graph for $\mathfrak n=\mathcal O$).
 \end{proof}
 
 \begin{theorem}\label{thm:rank-two-class-bound}
@@ -1751,25 +1651,16 @@ With the notation above,
 \]
 \end{theorem}
 \begin{proof}
-By Lemma~\ref{lem:real-lines} and $h_E\leq YL^{2f}$, there are at most $YL^f$
-ideals and at most $2^fYL^{2f}$ classes for each line. By
-Lemma~\ref{lem:glue-count} and (2), each pair of line representatives has at
-most $\lfloor Y^2\rfloor$ gluings. Thus the number of tuples
-$(\mathfrak n,[X_1],[X_2],M)$ is at most
+Every plane admits the splitting above. Transporting its two lines
+to fixed representatives realizes it as a gluing of those lines.
+Counting the common ideal, the two line classes, and the gluings in that
+order gives, by Lemmas~\ref{lem:real-lines} and~\ref{lem:glue-count},
 \[
-(YL^f)(h_E2^f)^2\lfloor Y^2\rfloor
-\leq4^fY^5L^{5f}.
+ \operatorname{defClassNum}(E,2)
+ \le (YL^f)(2^fh_E)^2Y^2
+ \le 4^fY^5L^{5f},
 \]
-Every class has such a tuple. Namely, after splitting, choose for each
-resulting line $X_i=(\beta_i,N_i)$ its reference representative
-$X_i^0=(\beta_i^0,N_i^0)$, and scalars with
-$\bar c_i\beta_i c_i=\beta_i^0$ and $c_iN_i^0=N_i$.
-With $\delta=\gamma\operatorname{diag}(c_1,c_2)$ and $M=\delta^{-1}\Lambda$,
-the diagonal form is $\operatorname{diag}(\beta_1^0,\beta_2^0)$ and $M$ has
-exactly the required axis intersections. Fixed tuple data determine this
-diagonal pair, and the original plane is isometric to it; hence the map from
-classes to tuples is injective. Since $Y=\rho^f$ and $L=1+f\log\rho$, this is
-the claimed bound.
+where the last inequality uses $h_E\le YL^{2f}$.
 \end{proof}
 
 \paragraph{Absolute-volume substitution.} Let $\ell_E(M)$ denote the local
@@ -1781,7 +1672,6 @@ $\prod_{M=3}^{n}\zeta(M)<1.4$ give
 \prod_{2<M\leq n}\operatorname{rankFac}(E,M)
 \leq\rho^{f(n^2-4)/2}1.4^f,
 \qquad\sum_{2<M\leq n}(M-\tfrac12)=\frac{n^2-4}{2}.
-\tag{3}
 \]
 For the zeta product, truncate the $\zeta(3)$ and $\zeta(5)$ series and use
 $\zeta(4)=\pi^4/90$, $\zeta(6)=\pi^6/945$; for $M\geq6$, comparison term by
@@ -1793,7 +1683,7 @@ product bound $1.3991<1.4$.
 Assume now that the rank recurrence has reduced the volume $V_{p,q}$ to the
 definite signature $(2,0)$ and that $n=p+q\geq8$, $q^2\leq n$, $X\geq2$,
 $\rho\leq X$, and $2f\rho\leq X^2$. (The first two imply $p\geq2$.) Since $\operatorname{volU}(2)=8\pi^3$,
-Theorem~\ref{thm:rank-two-class-bound} and (3) yield
+Theorem~\ref{thm:rank-two-class-bound} and the product bound yield
 \[
 V_{p,q}\leq(8\pi^3)^f\operatorname{defClassNum}(E,2)
 \prod_{2<M\leq n}\operatorname{rankFac}(E,M)
