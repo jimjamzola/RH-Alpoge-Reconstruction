@@ -32,7 +32,7 @@ I began at the Lean declaration `riemannHypothesis` and worked backwards through
 
 ## How to help
 
-Corrections and specialist scrutiny are extremely welcome. A useful review checks one manuscript passage against the original Lean route or against a cited theorem in print. Please include the manuscript section or equation, the pinned Lean declaration or literature reference, and what was checked. The [review materials](review/README.md) include the passage ledger and statement index. Reports can be submitted through the [issue tracker](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/new).
+Corrections and comments from specialists are very welcome. I would especially appreciate help comparing the manuscript with the original Lean development and checking the hypotheses and normalizations of results cited from the literature. The [review materials](review/README.md) collect the current manuscript-to-Lean correspondences and unresolved questions. Please use the [issue tracker](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/new) to report corrections or raise questions.
 
 ## Proof optimization
 
