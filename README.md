@@ -4,9 +4,9 @@ The purpose of this repository is to provide a human-readable reconstruction of 
 
 ## Current status
 
-**[Read the canonical working manuscript](canonical/main.pdf)** · *The Alpöge–Claude Argument for the Riemann Hypothesis* · Jimmie Adriazola · 117 pages · 26 November 2026. [LaTeX source](canonical/main.tex) · [Bibliography](canonical/references.bib)
+**[Read the current working manuscript](canonical/main.pdf)** · *The Alpöge–Claude Argument for the Riemann Hypothesis* · Jimmie Adriazola · 117 pages · 26 November 2026. [LaTeX source](canonical/main.tex) · [Bibliography](canonical/references.bib)
 
-The project began with Levent Alpöge and Claude’s original Lean archive. The [297-page reconstruction of that archive](manuscript/main.pdf) remains available. The canonical manuscript follows the [readable Lean 4 refactor by Luke Sernau, colleagues at Anthropic, and Claude](https://github.com/lsernau/grh-lean/tree/72fead102f663d5c7a407964a13dc0cf9d977207/grh).
+The project began with Levent Alpöge and Claude’s original Lean archive. The [297-page reconstruction of that archive](manuscript/main.pdf) remains available. I maintain the current working manuscript in this repository’s `canonical/` directory. It follows the [readable Lean 4 refactor by Luke Sernau, colleagues at Anthropic, and Claude](https://github.com/lsernau/grh-lean/tree/72fead102f663d5c7a407964a13dc0cf9d977207/grh).
 
 This edition is open for community review. Theorem 1.1 deduces Dirichlet GRH from the signed determinant criterion, and Corollary 7.2 proves the converse. The remaining arithmetic task is to establish all the construction estimates on one datum at each sufficiently large cutoff. Appendix E records those inputs. Proposition 12.3 gives a sufficient precision for the two moment estimates when both hold for the same normalized map. The written reconstruction remains conditional.
 
@@ -28,7 +28,7 @@ I began at the Lean declaration `riemannHypothesis` and worked backwards through
 
 | Material | Where to find it |
 | --- | --- |
-| Canonical manuscript from the refactor | [PDF](canonical/main.pdf) · [LaTeX](canonical/main.tex) · [BibTeX](canonical/references.bib) |
+| Current working manuscript from the refactor | [PDF](canonical/main.pdf) · [LaTeX](canonical/main.tex) · [BibTeX](canonical/references.bib) |
 | Manuscripts from the original archive | [297-page PDF](manuscript/main.pdf) and [source](manuscript/) · [Earlier 66-page manuscript](archive/route-notes/RH_Route_Notes.pdf) and [source](archive/route-notes/RH_Route_Notes.tex) |
 | Structure of the argument | [Proof dependency map](docs/PROOF_DEPENDENCY_MAP.md) · [Published theorems](docs/EXTERNAL_THEOREMS.md) |
 | Reconstruction history | [Dated status reports](docs/STATUS.md) · [21 November reconstruction](docs/RECONSTRUCTION_STATUS.md) |
@@ -37,7 +37,7 @@ I began at the Lean declaration `riemannHypothesis` and worked backwards through
 
 ## How to help
 
-Corrections and comments from specialists are very welcome. For the canonical edition, please identify the section, the first inference in question, and any relevant result in the literature or declaration in the readable refactor. I would especially appreciate checks of the hypotheses and normalizations in Appendix E. The [review materials](review/README.md) collect the November 25 manuscript-to-Lean correspondences and unresolved questions. Please use the [issue tracker](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/new) to report corrections or raise questions.
+Corrections and comments from specialists are very welcome. For the current working manuscript, please identify the section, the first inference in question, and any relevant result in the literature or declaration in the readable refactor. I would especially appreciate checks of the hypotheses and normalizations in Appendix E. The [review materials](review/README.md) collect the November 25 manuscript-to-Lean correspondences and unresolved questions. Please use the [issue tracker](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/new) to report corrections or raise questions.
 
 ## Acknowledgments
 
@@ -48,7 +48,7 @@ Corrections and comments from specialists are very welcome. For the canonical ed
 <details>
 <summary>Building the manuscripts</summary>
 
-Build the canonical manuscript with TeX Live, Biber, and latexmk.
+Build the current working manuscript with TeX Live, Biber, and latexmk.
 
 ```sh
 cd canonical
