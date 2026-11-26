@@ -1,0 +1,80 @@
+\section{Construction hypotheses for the arithmetic comparison}\label{sz:register}
+At a fixed admissible datum, Theorem~\ref{sz:conclusion} deduces the signed
+inequality from A, B and C. The sharpenings below apply on the constructed
+family as $x$ grows with the permissible parameters and scale exponent fixed.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.19\linewidth}@{\hspace{.025\linewidth}}p{.755\linewidth}@{}}
+\toprule Step & Deductions and remaining requirements\\\midrule\endhead
+Local Taylor bound &
+Sections~\ref{sec:unitrow-frame}--\ref{sec:other-witnesses} construct the frame and coefficients at split, inert and ramified primes. The local CM identities, the period normalization and the realization by integral test forms enter separately.\\[4pt]
+Spreading &
+Section~\ref{app:local-frame-recovery} gives a compact-position frame bound. Section~\ref{spread:normalization} computes the scalar in F6. Sections~\ref{moment:rigidity}--\ref{moment:sieve} derive frame separation, a weighted pair count, the primary character formula and the transfer of local errors into both moments. The actual filling still requires the one-term multiplicity, local kernel bounds, orbital integral comparison and compatible measures. Proposition~\ref{prop:weakerprecision} gives an alternative sufficient accuracy.\\[4pt]
+Inner forms &
+Section~\ref{tr:parabolic-descent} proves local vanishing on a coprime factorization. The global pretrace expansion and the matching of elliptic terms in \S\ref{tr:geometry} remain inputs.\\[4pt]
+Twisted lengths &
+Sections~\ref{sec:selmer-polynomial-descent}--\ref{sec:terminal-selmer} construct polynomials for the indicated data. Section~\ref{sec:odd-cocycles-reduction} treats the common cohomological integer. Section~\ref{moment:line} verifies the rank-one Selmer conditions for the explicit main line and computes its split vacuum factor. Attaching the actual representations, identifying the local conditions and proving the first-order congruences remain necessary in R.\\[4pt]
+Auxiliary forms &
+Section~\ref{pathmath:dual} computes the integral pairing correction. The denominator calculation in \S\ref{pathmath:denom} requires the stated kernel and period identities. The required spanning and size of the auxiliary forms remain part of Aux.\\\bottomrule
+\end{longtable}
+\paragraph{Hypothesis groups on the constructed scales.}
+The original register has four groups in $\mathsf A_{\rm loc}$, eight in
+F0--F7, and six in I, R, G, F, K, Aux. For the construction at a sufficiently
+large cutoff, \S\ref{moment:rigidity} derives F4 from the fitted model and
+free principal level. This leaves seventeen other groups to verify on the
+selected datum. The groups share inputs, as described below. Several contain substantial written deductions. In
+particular the finite character identification in F7 is now
+Lemma~\ref{lem:fitted-primary-character}; its inner-form comparison and
+formal-degree identification are still required. The simultaneous choice
+of datum in Corollary~\ref{cor:construction-grh} applies to all branches.
+
+\subsection*{Where the written proof still depends on construction estimates}
+\paragraph{Shortness and integrality.}
+The archimedean chain requires the normalized vacuum and period identities,
+their growth and expansion bounds, and the integral branching data. At
+small nonsplit primes Appendix~\ref{sec:jets} derives a divisibility
+estimate from the stated CM and vacuum identities. The marked places and
+the level prime also require the transfer, edge and paired-lift inputs
+specified in $\mathsf A_{\rm loc}$. These inputs supply both the gain
+removed by $c_B$ and the colength of the submodule where the gain holds.
+
+\paragraph{Spreading.}
+The restriction to ramified forms uses the loss of at most
+$f d_X/(N-1)$ established at the source. The full-source moment still
+requires the fitted filling and Bessel block normalizations, the same-link
+and unequal-link pair estimates and the remaining
+primitive frame estimates of Appendix~\ref{sz:shells}, and the Siegel and
+sieve estimates for the open cell. The near-optimal coefficient in F6 is
+used in the dimension bound. On the constructed scales the box, separation and orbit statements in F4 follow in the fitted free-level model by \S\ref{moment:rigidity}. The transfer to the good target uses the
+degree matching in F7 and the finite character formula of Lemma~\ref{lem:fitted-primary-character} together with Appendix~\ref{sec:trace}.
+
+\paragraph{Determinant height.}
+The regular twist uses Galois, Selmer and first-order congruence statements
+in R. Appendix~\ref{sec:finite} supplies simultaneous specialization,
+the explicit prime sum for the allowance and the passage to test forms
+under its stated arithmetic inputs. The compression of the one-lift
+operator still requires the normalized period gluing and exchanges in G.
+The term $-A_0$ uses the flat value formula, the local curve hypotheses for the sharp witness and
+its realization by test forms in F. K supplies the analytic norm formula
+and triangular exchanges. Aux supplies the normalized path period, its
+surjectivity, and the denominator and size of the grid forms. These are
+the inputs to the one-lift height, its telescoping through $m$ lifts and
+the extension of the given family at controlled cost.
+
+\paragraph{Three dependencies shared between the branches.}
+The short-basis argument is used at two different levels. The source
+construction in A and the grid in Aux have different box counts and
+require their own conductor and norm estimates. The inner-form comparison
+in B at the identity transfers a dimension. In C a determinant transfer
+requires the traces of the Hecke operators as well. The common geometric
+hypotheses and the extra step for the determinant are in
+Appendix~\ref{sec:trace}. Finally, a universal lower bound on the
+valuation of a short-form jet in A does not exhibit any coefficient
+attaining a small valuation in C. Appendix~\ref{sec:jets} specifies the
+additional witness and the arithmetic cases it requires.
+
+The remaining
+mathematical work for this exposition lies upstream of \eqref{sz:signed}.
+Theorem~\ref{sz:conclusion} applies datum by datum.
+For the consequence about Dirichlet zeros, Corollary~\ref{cor:construction-grh}
+requires the listed inputs on one constructed datum at each sufficiently
+large integer length, for each fixed $(q_0,d,\eta)$.

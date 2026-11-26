@@ -1,0 +1,168 @@
+\subsection{The numerical coefficient in the open-cell estimate}
+\label{spread:normalization}
+We compute the scalar comparison following the Siegel and sieve estimates of
+\S\ref{B:openenergy}.  Write \(F=E^+\), \(f=[F:\mathbb Q]\),
+\(u=\varrho\), \(n=u+1\), \(r=k+2u+1\), and \(D_E=|\operatorname{disc}E|\).
+Let \(m_j\) be the mass of the genus of the standard definite
+Hermitian lattice \(\mathcal O_E^j\), with each class weighted by the
+reciprocal of the order of its unitary automorphism group.
+
+\paragraph{The consecutive masses.}
+The quadratic extension \(E/F\) is unramified at every finite place.
+Indeed, complex conjugation acts nontrivially on both
+\(\mathbb Q(\zeta_{q_1})\) and \(\mathbb Q(\sqrt{-d})\). Their
+conductors are coprime. At any rational prime at least one of the two
+fields is unramified, and inertia fixes that field pointwise. Thus the
+inertia subgroup in \(E/\mathbb Q\) has trivial intersection with
+\(\operatorname{Gal}(E/F)\). In particular
+\(a_0:=D_E^{1/(2f)}=|\operatorname{disc}F|^{1/f}\).
+Let \(\chi\) be the quadratic Hecke character of \(E/F\).
+For \(j\ge1\) one has
+\[
+ \frac{m_{j+1}}{m_j}
+ =\left(a_0^{j+1/2}\frac{j!}{(2\pi)^{j+1}}\right)^f
+   L_F(j+1,\chi^{j+1}).
+\]
+Indeed the standard lattice is self-dual at every finite place, hence
+maximal integral there. At a nonsplit finite place the extension is
+unramified, and every unit is a norm, including the signed determinant
+of the standard form. Thus all local correction factors in the mass
+formula are one. Propositions 4.4 and 4.5 and (4.2)--(4.3) of
+W.~T. Gan, J.~P. Hanke and J.-K. Yu, \emph{On an exact mass formula of
+Shimura}, Duke Math. J. \textbf{107} (2001), 103--133~\cite{ghy}, give
+\(m_l=2^{1-fl}\prod_{h=1}^{l}|L_F(1-h,\chi^h)|\).
+Taking the ratio leaves only \(2^{-f}|L_F(-j,\chi^{j+1})|\).
+The completed Hecke functional equation~\cite{tate} has finite conductor one and
+at each real place the gamma factor
+\(\Gamma_{\mathbb R}(s+e)=\pi^{-(s+e)/2}\Gamma((s+e)/2)\),
+where \(e\equiv j+1\pmod 2\), \(e\in\{0,1\}\).
+The quotient of the absolute gamma factors at \(j+1\) and \(-j\)
+is \(2j!/(2\pi)^{j+1}\) by the reflection and duplication
+formulas. This proves the asserted ratio.
+
+Choose a generator \(\omega\) of the different as in the fitted
+measures, and put \(w_v=|\omega|_v\) at each complex place
+(one ordinary modulus for each conjugate pair). Then
+\(\prod_v w_v=a_0^f\). The mass assigned to the unit sphere in
+rank \(i+1\) is
+\(s_{i+1,v}=(2\pi)^{i+1}/(w_v^{i+1/2}i!)\).
+Put \(P=N^{kf}\prod_{i=k}^{r-1}\prod_v s_{i+1,v}\).
+The mass ratio just proved yields the exact identity
+\[
+ \frac{P m_r}{N^{kf}m_k}
+   =\prod_{i=k}^{r-1} L_F(i+1,\chi^{i+1}).
+\]
+For real \(s\ge3\), the Euler products give
+\( |\log L_F(s,\chi^l)|\le f\log\zeta(s)\le 2f\,2^{-s}\).
+The last inequality follows by bounding the terms after \(2^{-s}\)
+by \(\int_2^\infty t^{-s}dt\). Hence the logarithm of the displayed
+product is at most \(2f\,2^{-k}\) in absolute value.
+At the constructed scales, \(2f\,2^{-k}+2f/N\le \log(1+b^{-9})\)
+eventually: \(f\) is polynomial in \(x\), \(k\asymp x^5\),
+\(\log b\le x^\eta+1\), and \(\log N\ge m\log b\) with
+\(m\ge\sqrt{x}\).
+Using \(-\log(1-N^{-k})\le 2/N\), we obtain
+\begin{equation}\label{spread:frame}
+ Pm_r\le (1+b^{-9})(N^k-1)^f m_k .
+\end{equation}
+
+\paragraph{The factors in the comparison.}
+Here are the normalizations required of the filling. Write \(h\) for
+its number of level classes, \(e\) for the number of tensor-product
+Bessel coordinates, \(H\) for the order of the reduction of the
+unitary subgroup on the rank-\(k\) part, and \(J=u(k+u)\).
+The reduced unipotent has order \(U=M^{f(2J+u)}\), the reduced
+Bessel group has order \(HU\), and \(d_X=he\). The level class
+formula is \(h=H(N^k-1)^f m_k\). To obtain it from the fitted
+level, the row congruence at each of the \(f\) split level places
+has index \(N^k-1\), since \(\mathrm{GL}_k(\mathbb F_N)\) acts
+transitively on nonzero rows. The remaining principal level
+has index \(H\) by reduction. The mass multiplies by the level
+index by orbit--stabilizer; at the fine level the stabilizers
+are trivial. This uses the stated identification of the level
+and surjectivity onto the respective reduction groups.
+
+Write \(V=(2/a_0)^f\), \(c_j=2\pi^j/(j-1)!\),
+\(v_j=\prod_{l=1}^j c_l\), \(c=c_k v_k/v_r\) and
+\(\Theta=\pi^{(2u+1)k}v_k/v_r\). Put
+\[
+ g_v=Mw_v/(2\pi),\quad t_{vi}=g_v^{2(u-i)}/N,\quad
+ \Lambda=\prod_{v,i} t_{vi}^{k+2(u-i)},\qquad 0\le i\le u.
+\]
+In the measures of the filling the scalar quantities take the values
+\[
+\begin{aligned}
+ C_{{\rm Pois},i}&= V/\prod_v t_{vi}^2,&
+ R_{k-1}&=c^{f/2}e^{-1}\prod_{v,i}t_{vi}^{k-1+2(u-i)},\\
+ c_S&=\left(\frac{\pi^k}{(k-1)!N^k}\right)^f D_E^{1/4}V^k,&
+ C_{\rm S}&=(HU)Uh\,c_S,\\
+ \nu&=U N^{-kf} V^{-J} D_E^{u/4}/\Lambda,&
+ C_{\rm dec}&=\prod_v\Theta
+  \left(\frac{g_v^{2u+1}}{MN}\right)^{k-n^7}.
+\end{aligned}
+\]
+In this display \(e^{-1}=1/e\) denotes the reciprocal coordinate
+count.  Set \(W=V^n(e/\Lambda)^2/c^f\). Cancellation of one
+factor \(t_{vi}\) gives \(\prod_i C_{{\rm Pois},i}=R_{k-1}^2 W\).
+The relation between the rank-\(k\) sphere and the frame is
+\[
+ P c^f D_E^{u/2}=c_S N^{2kf}V^{n+2J}.
+\]
+Indeed, \(s_{i+1,v}=c_{i+1}2^i/w_v^{i+1/2}\). Multiplication over
+\(i=k,\ldots,r-1\) cancels \(v_k/v_r\), with
+\(\sum_{i=k}^{r-1}i=(2u+1)(k+u)\). Substituting
+\(\prod_v w_v=a_0^f\) proves the relation. It follows that
+\[
+ \frac{C_{\rm S}W}{\delta I_*\nu^2}
+ = \frac{H P m_r}{h}\le 1+b^{-9},
+\]
+where \(I_*=(he)^2/(\delta m_r)\) and the inequality is
+\eqref{spread:frame}. In particular the leading constant survives
+the cancellation of all frame scales.
+
+\paragraph{The additive sieve error.}
+Write \(s=\sqrt{a_0}\), \(Q=Ms^2/(2\pi)\), and
+\(X=Q^{2u+1}/(MN)\). Dividing by \(I_0=HUhe\) and inserting the
+constants above gives
+\[
+ \frac{C_{\rm S}W C_{\rm dec}}{e I_0\nu^2}
+ =\left[
+  (2/s^2)^{n+2u^2}
+  \frac{s^{1-2u}}{2 M^{u(2u+1)}} X^{-n^7}
+ \right]^f .
+\]
+For verification, the quotient before simplification is
+\(c_S V^{n+2J} N^{2kf} C_{\rm dec}/(U c^f D_E^{u/2})\).
+Use \(\Theta/c=\pi^{(2u+1)k}/c_k\) and
+\(C_{\rm dec}=\Theta^f X^{f(k-n^7)}\). The factor \(X^{fk}\)
+cancels the remaining factorial and powers involving \(k\).
+Here \(Q\ge1\), since each fitted \(g_v\ge1\), and
+\(X^{-1}\le MN\le b^{23+60n}\). Since \(s\ge1\), \(u\ge1\),
+and \(n+2u^2+(23+60n)n^7\le n^9\) for \(n\ge10^5\), the
+quotient is at most \(b^{n^9 f}\). The scale bounds
+\(e\le b^{2kf}\), \(b^{11kf}I_0\le I_*\) and \(512000n^9\le k\)
+therefore give, for \(t=|T|\le f\),
+\[
+ C_{\rm S}W b^{2403n^9 f} C_{\rm dec}
+    \le b^{2404n^9 f+2kf-11kf}I_*\nu^2
+    \le b^{-10-6kt}I_*\nu^2 .
+\]
+These size bounds are among the fitting estimates. In particular the
+last inequality uses \(2404n^9f+10\le 3kf\).
+
+Finally \(f\le b/1000\) eventually, so
+\((1+b^{-10})^f\le\exp(b^{-9}/1000)\le 1+b^{-9}\).
+After division by \(R_{k-1}^2 b^{-6kt} I_*\nu^2\), the two block
+bounds of \S\ref{B:openenergy} now give at most
+\[
+ (1+z^6)\{(1+z^9)^2(1+z^6)+z^{10}\}\le 1+z^4,
+ \qquad z=b^{-1}\le10^{-3}.
+\]
+To see the last inequality, put \(y=z^4/100\), replace each of
+\(z^6,z^9,z^{10}\) by \(y\), and use
+\((1+y)^4+y(1+y)\le1+17y\) for \(0\le y\le1\).
+The same comparison is valid for the empty fixer. This proves the
+scalar estimate from the displayed filling normalizations. After the parametrization in \S\ref{moment:open}, the Siegel estimate for the block sum,
+the finite-place and archimedean kernel estimates giving the sieve
+bound, and the identification of the fitted measures and level
+with those used above remain hypotheses of the application.

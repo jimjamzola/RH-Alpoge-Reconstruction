@@ -1,0 +1,23 @@
+\subsection*{Oscillation at one complex floor}
+In the floor basis, the Hermitian matrix $J$ has an orthonormal summand. Choose disjoint pairs $B_1,B_2$ of axes in it, leaving $d$ orthonormal axes $I$ for Fourier transformation. The remaining axes, including the hyperbolic ones, may have an indefinite form. Write $m$ for the total complex coordinate dimension in this chart. Use ordinary area measure on $\mathbb C$, and write $\psi(z)=\exp(z-\bar z)$.
+The quadric measure below uses the level coordinate $\operatorname{Im}\beta$ in the convention $|z_1|^2+|z_2|^2=2\operatorname{Im}\beta$ for a positive two-coordinate block, with the contribution of the other coordinates subtracted from the level.
+
+\begin{lemma}
+Let $\mu$ and $\mu'$ be the measures on two fixed levels of the Hermitian form in these coordinates, obtained by integrating Lebesgue measure in the coordinates outside $B_1$, respectively $B_2$, and the level measure on the sphere specified below in the remaining pair. For $R,R'>0$ write $Q_R=\{y:\max_j|y_j|\le R\}$. For $\xi\ne0$ and $h\in L^2(\mu)$ supported in $Q_R$, one has
+\[
+ \int_{Q_{R'}}\!\left|\int \psi(\xi v^*Jy) h(y)\,d\mu(y)\right|^2\!d\mu'(v)
+ \ \le\ C(R)C(R')\left(\frac{\pi^2}{|\xi|^2}\right)^d\!\int |h|^2\,d\mu.
+\]
+Here $C(R)=4\pi^2 R^2(\pi R^2)^{m-d-2}$.
+\end{lemma}
+\begin{proof}
+For squared radius $s>0$ in $\mathbb C^2$, the ball volume is $\pi^2s^2/2$. Differentiating against the level variable $s/2$ gives fibre mass $2\pi^2s$. Give it the uniform probability distribution on that sphere times this mass, and give the zero and negative radii mass zero. A sphere meeting a two-coordinate box of radius $R$ has $s\le 2R^2$, so each restricted fibre has mass at most $4\pi^2R^2$, independently of all outside coordinates and the level.
+
+Write $y=(a,u,z)$ in the source chart, with $u=y_I$, $z=y_{B_1}$ and $a$ the remaining coordinates. Write $v=(a',u',z')$ with $u'=v_I$ and $z'=v_{B_2}$. Since the rows and columns on $I$ and $B_2$ agree with those of the identity and the two solved blocks are disjoint, the phase decomposes into
+\[
+ v^*Jy=(u')^*u+(z')^*a_{B_2}+L_{a'}(y).
+\]
+Here $a_{B_2}$ denotes the indicated coordinates of $a$. With $a'$ fixed, absorb $\psi(\xi L_{a'}(y))$ into $h$. Integrate over $z$ first against its fibre measure to obtain $H_{a'}(a,u)$. Cauchy--Schwarz in $z$ bounds $\int |H_{a'}|^2\,da\,du$ by $4\pi^2R^2\int |h|^2d\mu$, uniformly in $a'$. The transform in $u$ with phase $\psi(\xi (u')^*u)$ has squared $L^2$ norm multiplier $(\pi^2/|\xi|^2)^d$. Indeed its real frequency map is a scaled orthogonal map with absolute determinant $(|\xi|/\pi)^{2d}$ in the $2\pi$ Fourier convention. Cauchy--Schwarz in $a$ costs $(\pi R^2)^{m-d-2}$ and removes the phase depending on $z'$. The resulting bound for the squared output, before integration in $u'$, is uniform in $z'$. The output fibre and the integral in $a'$ cost the two factors in $C(R')$. Plancherel in $u$ now gives the inequality.
+\end{proof}
+
+For the common-entry Fourier term of the cut Bessel kernel, the phase at floor $j$ is $\psi(\xi\langle v,y\rangle)$ with $y=\sigma^{-1}f_j$ the orbit point of the frame vector. The partial correlation on the next floor descends to $y$ when it is invariant under the stabilizer of $f_j$, and the floor quotient measure must push forward to the quadric measure just used. Under those identifications and a bound $R$ for the support in this basis, it can be taken as $h$ in the lemma. A fixed translation in $v$ multiplies $h$ by a unit phase and preserves the estimate. Thus the factor $|\xi|^{-d}$ in operator norm comes directly from $d$ free complex coordinates, with two disjoint pairs used to handle the two quadric equations. To obtain the full fitted floor estimate one still needs the actual support radii in each position, the bounds for the remaining correlation norms, and their integrated shell estimates. The other local phase arising from unequal last entries additionally requires the Heisenberg equivariance identity.

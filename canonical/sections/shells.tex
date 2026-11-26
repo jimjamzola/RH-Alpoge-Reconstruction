@@ -1,0 +1,86 @@
+\section{The factor two in the finite character moment}\label{sz:shells}
+The projection to good types in Section~\ref{B:arithmetic} uses the
+unnormalized sum $\sum_{g\in G}|\psi_U^\natural(g)|^2\le2$. The small
+constant survives integration over the product of the chosen places and
+their conjugates. We give the passage from the estimates for the frame
+kernel to this finite sum, with the assumptions on that kernel made explicit.
+
+Let $G_{\rm loc}$ be the unitary group over the semilocal algebra and $K$ its integral subgroup, $K_M$ its
+principal congruence subgroup, and $\mu$ the Haar measure of the filling
+datum. The character $\chi_M$ is extended by zero off $U K_M$, where
+$U$ is the full Bessel unipotent subgroup of $G_{\rm loc}$. On $K$ the support restricts to $(U\cap K)K_M$. It is constant on
+right $K_M$-cosets, has modulus at most one, and equals one on $K_M$.
+For $K_M\subset Z\subset K$ a compact open intermediate group, set
+\[
+ a_Z(x)=\int_Z\chi_M(yxy^{-1})\,d\mu(y),\quad
+ R_Z=\frac{\mu(Z)\mu(K_M)}{u_F^2},\quad h_F=\varrho+1,
+\]
+where $u_F>0$ is the unipotent mass of the filling and $h_F$ is its frame
+parameter. On $K_M$ the integral equals $\mu(Z)$ by normality.
+
+Here are the precise kernel estimates used on the complement.
+In the gauge of scale one, let $P_Z(x)$ be the nonnegative majorant
+of the zero-floor frame correlation with empty heads, and let $W_Z(x)$
+be its weighted square product. These are the functions
+\texttt{formMajorant} and \texttt{weightedSquareProduct} of the filling.
+The following four geometric inputs specify the remaining part of F5.
+\begin{enumerate}
+\item The pairing-kernel estimate gives $|a_Z(x)|^2\le u_F^2 P_Z(x)$.
+\item At an active point $y$ and each frame index $i$, the set of stable
+products has volume at most the modulus of some element $c$ in it with
+$c$ integral and invertible in the semilocal algebra. If every such set
+contains a $c$ with integral inverse, the frame reconstruction makes
+$(x-1)/M$ an integral matrix. Here the comparison uses the scale-one gauge,
+where every bound on matrix size is integrality.
+\item If every active point at $x$ has some index with stable-product
+volume at most $e<1$, the zero-floor majorant satisfies
+$P_Z(x)^2\le e^{2s_F}W_Z(x)$, where $s_F$ is the volume exponent of
+the filling.
+\item For a measurable $0\le F\le P_Z$ obeying
+$F(x)^2\le e^{2s_F}W_Z(x)$ on the positions supporting the majorant,
+the dyadic denominator-shell estimate is
+\[
+ \int F\,d\mu\le e^v R_Z\,2^{10^9h_F^4}
+       \qquad(v+10^8h_F^4\le k,\;v\in\mathbb N).
+\]
+Here the shells group the denominator ideals of the entries of $(x-1)/M$
+by the ceiling of the base-two logarithm of their index. The rank $k$
+in this assertion is the rank in the filling shape.
+\end{enumerate}
+These inputs are required for the specific large lattice and its normalized
+measure. The following calculation derives the complementary integral from
+them and shows which rank margin is spent absorbing its loss.
+
+Suppose $Q\ge2$ and each integral $c$ invertible in the algebra
+whose inverse is nonintegral has modulus at most $Q^{-1}$. One can
+always take $Q=2$ here. Indeed multiplication by $c$ takes the
+integer ring $R$ to the proper finite-index ideal $cR$, and
+its modulus equals $[R:cR]^{-1}$. If $x\notin K_M$ and every stable
+product set at some active point had volume greater than $Q^{-1}$,
+the witnesses $c$ in the second input would all have integral inverse.
+Then $(x-1)/M$ would be integral, which in the unimodular integral
+model puts $x$ in $K_M$. Thus the third input applies on the complement.
+Put $F=\mathbf1_{K_M^c}P_Z$, $B=10^9h_F^4$ and $v=t+B$.
+Under $t+2B\le k$ the last input gives
+\[
+ \int_{K_M^c}P_Z\,d\mu\le Q^{-t}(2/Q)^B R_Z\le Q^{-t}R_Z .
+\]
+Using the first input there and the exact integrand on $K_M$ yields
+\[
+ \int |a_Z(x)|^2\,d\mu(x)
+ \le\mu(Z)^2\mu(K_M)+Q^{-t}R_Zu_F^2
+ =\mu(Z)\mu(K_M)(\mu(Z)+Q^{-t}).
+\]
+
+Take $Z=K$, $Q=2$ and $t=h_F$. The filling rank condition is
+$h_F+2\cdot10^9 h_F^4\le k$, and the local volume estimate for the
+chosen places is $\mu(K)\ge2^{-h_F}$. Hence the parenthesis is at most
+$2\mu(K)$. Choose lifts $s_g$ of the finite reduction elements. The
+cosets $s_gK_M$ are disjoint. On each, $a_K$ is constant and equals
+$\mu(K)\psi_U^\natural(g)$: integration of the conjugated character
+is the uniform conjugacy average on the finite quotient. Each coset
+has the same positive volume. Summing their integrals and dividing by
+$\mu(K)^2\mu(K_M)$ proves \eqref{B:charmean}. Using the whole
+product at once gives a single factor two.
+
+\input{sections/localmath}

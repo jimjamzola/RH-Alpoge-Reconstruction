@@ -1,0 +1,24 @@
+\subsection*{The one-sided Poisson step}
+Let $X_\Sigma=\prod_{v\mid\infty}\mathbb C\times\prod_{w\in \Sigma}E_w$, with ordinary area in each complex coordinate and finite Haar measures giving $\mathcal O_w$ volume one. Let $\iota_r(y)=((r_v v(y))_v,(y)_w)$ with $r_v>0$. Put $\mathcal O_{E,\Sigma}=\{y\in E:v_w(y)\ge0\ (w\notin \Sigma)\}$. Fix a generator $\omega$ of the different, as in the fitted data. Use the complex character $z\mapsto\exp(z-\bar z)$ and at $w\in \Sigma$ the finite components of the global trace character with infinite component $u\mapsto\exp(-2\pi i\operatorname{Tr}_{E_\infty/\mathbb R}u)$ evaluated on $-x_w/\omega$, with the signs chosen so the resulting dual characters on $X_\Sigma$ annihilate $\iota_r(\mathcal O_{E,\Sigma})$ at frequencies
+\[
+ \xi(y)=\big((2\pi i\,v(y)/(r_v v(\omega)))_v,(y)_w\big),\qquad y\in\mathcal O_{E,\Sigma}.
+\]
+Here the archimedean factor of this dual character is $\exp(2\pi i\sum_v2\operatorname{Re}(v(y)z_v/(r_vv(\omega))))$. Denote integration against the character by $\widehat F(\xi(y))$.
+\begin{lemma}
+Suppose $F\ge0$ is integrable on $X_\Sigma$ and lower semicontinuous at the points $\iota_r(t)$ of a finite set $V\subset\mathcal O_{E,\Sigma}$. If $\sum_{y\ne0}|\widehat F(\xi(y))|\le L$, where $y$ runs over $\mathcal O_{E,\Sigma}$, then
+\[
+ \sum_{t\in V}F(\iota_r(t))
+ \le \frac{(2/a_0)^f}{\prod_v r_v^2}
+ \left(\int_{X_\Sigma}F+L\right).
+\]
+\end{lemma}
+\begin{proof}
+The diagonal $\Sigma$-integers form a lattice before scaling. Indeed $\mathcal O_{E,\Sigma}$ represents every coset in $\prod_{w\in \Sigma} E_w/\mathcal O_w$ by the Chinese remainder theorem for fractional ideals, and the residual lattice in the archimedean coordinates is $\mathcal O_E$. Thus its covolume after scaling is $v_L=2^{-f}\sqrt{|\operatorname{disc}E|}\prod_vr_v^2$. The displayed characters give its full dual: in the standard adelic pairing the annihilator of diagonal $E$ is $E$. A character surviving averaging on integral components outside $\Sigma$ is indexed by $y/\omega$ for $y$ integral off $\Sigma$, because the trace dual of $\mathcal O_w$ is the inverse different. The archimedean dilation divides its frequency by $r_v$.
+On the quotient by the scaled lattice, periodize $F$ by its nonnegative translates. Tonelli gives an integrable periodic function with Fourier coefficients $v_L^{-1}\widehat F(\xi(y))$ when normalized quotient probability measure is used (up to reversing the character index). Absolute summability gives a continuous Fourier series $S$ equal almost everywhere to that periodization, with $S(0)\le v_L^{-1}(\int F+L)$. For every $\varepsilon>0$, lower semicontinuity at the finitely many points provides a neighborhood of zero on which $\sum_{t\in V} F(x+\iota_r(t))\ge\sum_{t\in V} F(\iota_r(t))-\varepsilon$. This finite sum is bounded by the periodization there. Arbitrarily small neighborhoods contain points of almost-everywhere equality with $S$; continuity at zero now gives the stated inequality.
+\end{proof}
+Taking $r_v=t_{va}$ gives the precise factor $P_a$. The scale parameter of the preceding frequency estimate is $\lambda_v=2\pi i/v(\omega)$, whose inverse modulus equals $g_v/M$ in the fitted normalization. Thus local absolute Fourier domination by the preceding majorant times $(\sum_p w_i(p))^2$ implies item 1 of the sieve for an integrable nonnegative density lower semicontinuous at the sampled points.
+
+For the application, the density representative must have the stated
+lower semicontinuity at the particular lattice samples. Measurability
+of the cutoff in \S\ref{moment:rigidity} alone permits changing a value
+at a sample without changing any Fourier coefficient.

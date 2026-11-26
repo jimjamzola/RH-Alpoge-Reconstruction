@@ -1,0 +1,1069 @@
+\section{The lower determinant estimate}\label{c3:section}
+
+Let $W$ be the good subspace on $Y_0$ introduced in
+\S\ref{sz:setup}. The archimedean factor at $Y_0$
+is the prescribed discrete-series type. The algebraic Weyl-valued
+model used to measure a lifted vector is on the definite space $Y_m$.
+We use the common $H,U,V,L$ and write
+\[
+ B_0=U/(mk),\qquad
+ A_0=\sum_{\tau\in\Phi}
+   \bigl(j(\kappa_\tau)-
+          S(\kappa_\tau,\tau)\bigr),\qquad H=mk A_0.
+\]
+With $j$ and $S$ as in \eqref{sz:height},
+$k=r+1-m$, and the difference of ranks in a single lift is
+$\delta=5r$. The lift of the ordered family will always be the full
+chain $\Theta_\eta$. For an $m$-fold twist $\eta$, set
+$N_\eta=\prod_{w\in Q(\eta)}q_w$, so $N_1=1$. At a prime $\ell$
+the allowed twists satisfy $(\ell,N_\eta)=1$.
+Theorem C, below, uses the construction hypotheses in
+\S\ref{c3:frontier}.
+
+\paragraph{Local and archimedean structures.}
+Use the identifications, integral modules, coordinate vector $v_1(w)$ of $\Theta_1w$, and rational metric $G_{\rm cl}$ of \S\ref{sz:setup}. Write
+$\bar\iota=\iota\circ\mathrm{conj}$. The chosen
+level makes the stabilizers of the final class representatives trivial.
+Indeed, if a rational unitary element $u$ belongs to a conjugate of
+the level, then its characteristic polynomial has integral
+coefficients (conjugate it into the integral adelic matrices).
+For rank $h$, the algebraic integer $h-\operatorname{tr}u$ is
+zero only if $u=1$: at a complex place the definite unitary matrix
+is diagonalizable with eigenvalues on the unit circle, whose sum
+can be $h$ only if they are all one. At all embeddings its modulus
+is at most $2h$. The algebraic integer is divisible by every chosen place
+above $p_0$, because the conjugated matrix reduces to the identity
+there. The admissible congruence $p_0\equiv1$ modulo the cyclotomic conductor
+makes $p_0$ completely split in $E$: its Frobenius fixes the roots
+of unity generating the ambient cyclotomic field. The $2f$ primes
+come in conjugate pairs. Since
+$\pi_M\overline{\pi_M}=p_0p_1$ with $p_1\ne p_0$, precisely
+one prime of each pair divides $\pi_M$, with multiplicity one.
+Thus there are $f$ chosen primes of norm $p_0$. If the trace
+difference were nonzero,
+its absolute norm would be at least $p_0^f$, but at most
+$(2h)^{2f}$. The rank bound $h\le2n_m$, with $n_m=k+m(5r+1)$, and
+the level bound $p_0>(8n_m)^2$ make this impossible. The lifted inner product is the finite class sum of Weyl pairings.
+Here is the local calculation for one term of this sum.
+Let $F$ be the integral embedding of the Weyl module into its
+column tensors with orthonormal filling basis. A row of $F$ is the
+expansion of the product of minors for that filling in the standard
+tableau basis. Standard fillings give linearly independent columns.
+Cauchy--Binet gives $F S(a)=M(a)F$, where $S$ is the Schur action
+and $M$ the tensor of the exterior-power matrices. Thus the positive
+integral Gram matrix $G_W=F^tF$ satisfies
+$G_WS(a)=S(a^t)^tG_W$, since $M(a^t)=M(a)^t$. Each determinant
+character in the actual weight has the same value on $a^t$ and $a$,
+so the relation holds for the full weight action $\pi$.
+
+At a representative $g$, let $a$ be the tuple of its matrices for
+$\iota$. The component of $g^{-1}$ for $\bar\iota$ is $a^t$, by
+unitarity. For vectors integral at the opposed identifications,
+$x=\pi(a^t)\bar\iota(u(g))$ and
+$y=\pi(a^{-1})\iota(v(g))$ have integral coordinates by the gauge
+definition. Their pairing $x^tG_W y$ equals
+$\bar\iota(u(g))^tG_W\iota(v(g))$ by the transpose relation.
+It is integral. The class weights are one, so summation gives
+\begin{equation}\label{c3:local-pair}
+ u\in\mathcal L_{\eta,\bar\iota},\ v\in\mathcal L_{\eta,\iota}
+ \quad\Longrightarrow\quad
+ |\langle u,v\rangle|_\iota\le1.
+\end{equation}
+The same class sum at the trivial twist has metric
+$G_{\rm cl}=I_{\rm classes}\otimes G_W$, giving the squared conjugate norm
+in \eqref{sz:covol}. We use the single matrix from \eqref{sz:index}
+at each identification. For injectivity of $\Theta_\eta$ one applies
+the sharp-datum injectivity assertion of input K to the elementary
+arrows in the lower triangle. The positive level index and Weyl
+dimension in the algebraic-to-Petersson norm conversion imply that
+a zero algebraic lift has zero weighted chain. Its weights are
+nonzero finite group orders, so reversing the injective arrows gives
+zero in $W$.
+
+\subsection{A signed height calculus}\label{c3:height}
+
+For a family $u=(u_\iota)$ of complex scalars, write
+$\operatorname{ht}(u)\le C$ if there are a multiplier $q\ne0$,
+a real $\alpha$ and numbers $h_\ell\ge0$ such that
+\begin{equation}\label{c3:heightdef}
+ |\sigma q|\le e^\alpha,\qquad |qu_\iota|_\iota\le
+ \ell^{h_\ell},\qquad
+ \alpha+\sum_{\ell\in F}h_\ell\log\ell\le C.
+\end{equation}
+All automorphisms, identifications and finite prime sets are included.
+This is a predicate, not a conventional nonnegative height function.
+In particular $\alpha$ and $C$ may be negative. For products multiply
+the multipliers and add both kinds of exponents. This proves the
+additivity of the upper bounds, including powers with nonnegative
+integer exponent. Multiplication by a family of powers
+$N_{\eta_\iota}^{s_\iota}$ with rational exponents changes no finite
+bound when the twist is allowed: the positive real root is an
+$\iota$-adic unit because some integer power is a power of the
+prime-to-$\ell$ integer $N_{\eta_\iota}$.
+
+If $\operatorname{ht}(1)\le C$ then $C\ge0$. Indeed the multiplier
+$q$ is algebraic: if it were transcendental, a field isomorphism
+$\mathbb C\simeq\overline{\mathbb Q}_2$ could send it to a
+transcendental element with arbitrarily large $2$-adic norm, contrary
+to the uniform bound. To see the extension assertion, both fields
+are algebraically closed of cardinality continuum and transcendence
+degree continuum over $\mathbb Q$; extend the isomorphism of rational
+function fields using transcendence bases and algebraic closures.
+The set of elements algebraic over $\mathbb Q$ is countable, whereas
+any nonempty $2$-adic ball contains uncountably many elements (already
+in a translate of a ball in $\mathbb Q_2$). Thus the prescribed
+transcendental elements exist. Set $K=\mathbb Q(q)$, $d_K=[K:\mathbb
+Q]$, and $R=N_{K/\mathbb Q}(q)\ne0$. All embeddings of $K$ at a
+finite or infinite place extend to identifications or automorphisms.
+Consequently
+\[
+ \log|R|\le d_K\alpha,\qquad
+ \log|R|_\ell\le d_K h_\ell\log\ell.
+\]
+The ordinary rational product formula, summed over the finite prime
+set supporting the numerator and denominator of $R$, yields
+$0\le d_K C$. In particular if a nonzero constant $z$ satisfies
+$\operatorname{ht}(z)\le C$ and $|\sigma z|\le e^{C'}$
+for every $\sigma$, then use multiplier $z$ to bound the height of
+$z^{-1}$ by $C'$ and multiply to obtain
+\begin{equation}\label{c3:product}
+ 0\le C+C'.
+\end{equation}
+
+\subsection{A regular family of finite-place twists}\label{c3:twists}
+
+We need a single $m$-fold twist $\eta_\iota$ for each local
+identification, simultaneously good for all $m$ single lifts, not
+one twist for each member of $y$ or one for each $j$. No relation
+between $\eta_\iota$ and $\eta_{\bar\iota}$ is required.
+A critical pair $p=(\nu,z)$ is a unitary character with its negative
+archimedean weight and tame part, and an integer $z$ in the critical
+range specified by $D$; write
+\[
+ R_p(\vartheta,s)=
+ \frac{|L^{S}(z,(\nu\vartheta^s)^{-1})|}
+ {|L^{S}(z,\nu^{-1})|},\qquad s=\pm1,
+\]
+where in the denominator $S$ comprises the chosen places and their
+conjugates, and in the numerator it additionally comprises $Q(\vartheta)$
+and its conjugates. The change of omitted factors is included in the
+explicit modulus powers below. For $s=1$ omit $s$.
+The positive ratios are viewed as complex scalars, so their
+conjugates need not have the same size. A ramified pair has tame part
+nontrivial exactly at the chosen places. Let $J_j(\eta)=\eta^j$,
+and use the superscript $j$ only for the power of the twist.
+
+The required regularity is as follows:
+\begin{enumerate}
+\item $(N_{\eta_\iota},\ell)=1$;
+\item for each ramified $p$, each $j$ and sign $s$,
+$\operatorname{ht}(R_p(\eta_\iota^j,s)^{-1})\le x_1$;
+\item for each $j$ there is a nonnegative logarithmic local budget
+$\beta_{j,\ell}$ with $\sum_{\ell\in F}\beta_{j,\ell}\le B_0$.
+Write $E_{j,\vartheta}$ for the image of the single lift on good
+forms on $W_j$ and $P_{j,\vartheta}$ for its orthogonal projection.
+There is an operator $\Lambda_\iota$ on $E_{j,\eta_\iota^j}$
+with $|\det\Lambda_\iota|_\iota\ge
+\exp(-d_T r\beta_{j,\ell})$ such that
+$\Lambda_\iota P_{j,\eta_\iota^j}$ takes integral forms
+orthogonal to false lifts to integral forms there. Also, for each
+main critical pair $p$ of lift $j$, if $\Xi,\Xi'$ are test forms
+for its character lift $\phi_\iota$ (integral for every embedding into $\mathbb C_\ell$ and
+orthogonal to false lifts in the kernel of the adjoint), then
+\[
+ |\langle P_{\phi_\iota}\Xi,P_{\phi_\iota}\Xi'\rangle|_\iota
+       \le e^{\beta_{j,\ell}}.
+\]
+Here $P_\phi$ is projection onto $\mathbb C\phi$.
+\end{enumerate}
+
+Here is the reduction of regularity to the local arithmetic input.
+At fixed $\ell,\iota$, the good Hecke eigensystems on $W_m$ form a
+finite set: their commuting normal Hecke operators simultaneously
+diagonalize a finite dimensional space. For every $j$ and every such
+system one takes the rank-$r$ main summand of its Galois representation;
+for each main critical pair take the rank-one summand for the trivial
+system. Join both finite collections. The simultaneous twisting
+theorem for these collections and the ramified pairs produces $\eta$
+whose first $m$ powers have auxiliary modulus away from $\ell$,
+short divisible Selmer groups and inverse-ratio norms at most
+$\ell^{u_\ell}$, where $G_0$ is the product of the orders of $\mathrm{GL}_{rt}(k_w)$ over the chosen places above $p_0,p_1$, with $t=5r$, and
+\[
+ u_\ell=(4f+3)r v_\ell(G_0)+2^{-\ell}.
+\]
+In the source the construction starts at a chosen place away from $\ell$
+using its tame inertia generator, constructing lattices in the main
+summands and Stickelberger systems for the ramified ratios, and
+applying the simultaneous anticyclotomic twisting theorem to all
+powers with error $2^{-\ell}$. Identification of the resulting avatar
+with an automorphic tame character gives the same modulus for every
+power: the avatar is nontrivial at each auxiliary place for each
+power. Appendix~\ref{sec:finite} passes from the simultaneous polynomial
+datum to a single twist using one root-of-unity tuple for all powers.
+The Selmer and Stickelberger construction of the datum remains in R.
+
+The first-order congruence denominator argument on the span of
+lift generators applies these Selmer lengths to both the rank-$r$
+space and the rank-one line. In more detail, choose a basis $v_i$ from the lift generators.
+The first-order congruence calculation gives one operator $G_i$ for
+each generator, diagonal on this basis with its $i$-th diagonal
+entry of valuation at most the lift-valuation bound. Each $G_i$
+after projection preserves the integral module on forms orthogonal
+to false lifts. As the residue field of $\overline{\mathbb Q}_\ell$
+is infinite, a combination with integral scalar coefficients
+can avoid cancellation in every diagonal position: normalize the
+entries in each row by one of largest norm, and avoid the finitely
+many proper linear hyperplanes defined by their reductions. The
+resulting diagonal operator has every entry of valuation at most
+the stated bound, and retains integrality by linearity. Multiplying
+by $G_0$ clears all stabilizer denominators for pairings. Taking
+the product of the eigenvalues gives determinant bound
+$\ell^{-\dim(E)r\,\mathrm{clearingBound}(D,\ell)}$ (rank one for
+the line). In the rank-one case the denominator bound and the
+pairing bound therefore control the line projection itself, with
+the class-number factor in the local budget accounting for the
+normalization of test forms. Appendix~\ref{c4:central-average} shows that the rank-one
+central average changes the pairing by exactly the class factor
+$N_0$. Existence of the generator-wise operators remains in R.
+Thus one may take
+\[
+ \beta_{j,\ell}=\bigl(\mathrm{clearingBound}(D,\ell)
+                     +v_\ell(N_0)\bigr)\log\ell ,
+\]
+where $N_0$ is the number of $U(1)$ classes at chosen level. This
+choice is actually independent of $j$.
+
+Since $\sum_{\ell\in F}v_\ell(G_0)\log\ell
+\le\log G_0$ and
+$\sum_{n\ge2}2^{-n}\log n\le\sum_{n\ge2}n2^{-n}<2$,
+\[
+ \sum_{\ell\in F}u_\ell\log\ell
+ \le (4f+3)r\log G_0+2\le x^{999}\le x_1 .
+\]
+The clearing bound is the sum of the local defect, $(1+2\delta)u_\ell$,
+the denominator error, and $v_\ell(G_0)$. Applying the defect envelope and the numerical estimates
+in Appendix~\ref{sec:finite} gives
+\begin{align*}
+ \sum_{\ell\in F}\beta_{j,\ell}
+ &\le 4\cdot10^6e^{180} f(m/k)bL
+ +(1+2\delta)x^{999}+x^{4000}+\log G_0+x^{30}\\
+ &\le B_0.
+\end{align*}
+The denominator error is a linear combination of prime valuations of
+the fixed odd class bound and $G_0$; the source bounds its sum by
+$x^{4000}$ and the $N_0$ term by $x^{30}$. Select one such twist for
+each identification. With multiplier $1$ the local inverse-ratio
+norms imply item 2 by (\ref{c3:heightdef}). The remaining local arithmetic hypotheses in this reduction are
+specified under R in \S\ref{c3:frontier}.
+
+\subsection{The height gain in a single lift}\label{c3:single}
+
+Fix $j\in[1,m]$. Let $T_\vartheta$ denote the stage-$j$ theta lift with twist $\vartheta$ restricted to the good forms of the rank-$r$ hermitian space $W_j$ of signature $(k+j-1,m-j)$. All these
+sources have dimension $d_T$ by the identity-operator case of the
+trace comparison in Appendix~\ref{sec:trace}. Define $Z_j(\eta)=\det(T_{\eta^j}^*T_{\eta^j})$.
+The comparison operator is
+\[
+ U_\vartheta=G_0 h_j^2 g_\vartheta g_\vartheta^* ,
+\]
+where $g_\vartheta$ is the gluing map from tuples of forms on the
+smaller definite space $V^\circ$ and $h_j$ is the hook number of its
+negative Weyl shape. Set $A_{\rm gl}=fmbL^2$. Input G gives the seesaw pairing with a tuple $\zeta$ as the sum
+over kernel choices $i$ of fixed nonzero $c_i$ times the integral
+of $y(g)\,F_i(g)\,\theta^\circ(g,\zeta_i)$, where $F_i$ is the
+carrier factor and $\theta^\circ$ the complementary block kernel.
+This formula is independent of the twist after multiplication
+by $c'_\vartheta$. Testing against tuples supported in one block
+shows that a vector killed by the resulting map has zero pairing
+with each of these products. The products-spanning input says
+precisely that such a good vector is zero. In particular the map
+$c_\vartheta' g_\vartheta^*T_\vartheta=\Pi_j$
+is independent of $\vartheta$, with $\Pi_j$ injective, and
+the quotient $\rho_\vartheta$ of the twisted to untwisted product of
+Hecke values satisfies
+$\rho_\vartheta=|c_1'|^2/|c_\vartheta'|^2\ne0$.
+Hence, for the source inner product,
+\[
+ T_\vartheta^*U_\vartheta T_\vartheta
+ =\rho_\vartheta U^\circ,
+ \qquad U^\circ=G_0h_j^2|c_1'|^{-2}\Pi_j^*\Pi_j>0.
+\]
+Writing $C_\vartheta$ for the compression
+$P_{j,\vartheta}U_\vartheta|_{E_{j,\vartheta}}$ and
+$F_\vartheta=\det C_\vartheta$, we have
+\[
+ Z_j(\eta) F_{\eta^j}=\det(U^\circ)\rho_{\eta^j}^{d_T}.
+\]
+Indeed relative to an orthonormal basis of the image,
+$T^*UT=T^*C T$, so determinants multiply, and $\det T^*T=|\det T|^2$.
+All factors are nonzero by positivity of $U^\circ$ and injectivity.
+Division by the untwisted identity gives
+\begin{equation}\label{c3:compression}
+ \frac{Z_j(1)}{Z_j(\eta)}
+ =\frac{F_{\eta^j}}{F_1}\rho_{\eta^j}^{-d_T}.
+\end{equation}
+
+\paragraph{Integral comparison and conjugate norms.}
+In the tuple space take the integral tight frame $(f_a)$, at rational
+translates of the class representatives integral above $\ell$.
+Its frame operator is $h_j^2 I$; conjugated coordinates in the
+translated Weyl lattice are integers. The gluing integrality hypothesis takes this
+frame to forms integral at both $\iota$ and $\bar\iota$ away from
+the modulus. The frame identity gives
+\[
+ U_\vartheta v=\sum_a G_0
+       \langle g_\vartheta f_a,v\rangle\,g_\vartheta f_a .
+\]
+The factors $G_0$ clear the orders of the class stabilizers, so the
+coefficients are integral for integral $v$ by the same local Weyl
+pairing as (\ref{c3:local-pair}). The output is integral.
+The gluing-period identity also implies that $U_\vartheta$ takes
+lifts to forms orthogonal to false lifts.
+
+To construct the frame, let $h=h_j$ and use the filling matrix $F$
+just described for the negative shape. Write $G_W=F^tF$.
+Let $B_{ij}=b_i(\partial)b_j(0)$ be the integral Fock pairing of
+the standard minor polynomials. Its normalization gives
+$G_WB=h I$. Indeed substitution by $a$ and coefficient differentiation
+are adjoint under transposition of $a$, so $B^tG_W$ commutes with
+the Schur representation at every place. The tensor of its
+irreducible highest weight modules is irreducible for the product
+of the general linear groups. Schur's lemma therefore makes the
+operator scalar. Evaluation at the highest polynomial, whose
+differentiation pairing with itself is $h$ and whose kernel value
+on the standard flag is $1$, fixes that scalar. The last
+normalization is the definition of the hook number in the Fock
+model. For a tensor basis vector $e_T$ take $a_T=BF^te_T$.
+Then $a_T$ is integral and $G_Wa_T=hF^te_T$. Hence
+$Fa_T=h\,\operatorname{pr}_{\operatorname{im}F}e_T$.
+The projections of an orthonormal basis are a Parseval frame for
+the image. Multiplication by $h$ gives frame constant $h^2$ and
+$\|a_T\|^2\le h^2$.
+
+If $a_T$ is a frame vector
+and $u$ is a rational unitary translate with representation
+$\pi(u)$, replace $a_T$ by
+$\overline{\pi(u)^{-1}\overline{a_T}}$.
+This is a unitary change of frame: the frame operator remains
+$h_j^2 I$. Moving the conjugate coordinates back gives the
+original integer vector. The Gram identity for the unitary
+representation is rational in the coordinates and their
+conjugates over the CM field, and remains valid at each
+archimedean embedding. Since the original vector is integral,
+the moved conjugate norms retain the bound $h_j^2$.
+Independently place these vectors in each block of the finite
+tuple space, with zero other blocks; summing the frame identity
+blockwise gives the tuple tight frame.
+
+At the trivial twist use the tight frame at the unshifted
+representatives. Its conjugate squared tuple norms are at most
+$h_j^2$. Let $B$ be the set of tuple-coordinate blocks, $I$ the
+frame indices; the gluing and counting estimates are
+\[
+ \|g_1 v\|_\sigma^2\le e^{2A_{\rm gl}}\|v\|_{\sigma,\mathrm{tuple}}^2,\qquad
+ |B|(|I|G_0 h_j^2)^2\le e^{2A_{\rm gl}}.
+\]
+For the cardinality estimate put $N=|B|$ and let $C_f$ be the
+number of column fillings for the negative shape. The frame has
+$|I|=NC_f$. The class and hook estimates of input G give
+$(NG_0)^2\le e^{A_{\rm gl}}$, $C_f,h_j\le e^{x^{999}}$. Since
+$N\le e^{A_{\rm gl}/2}$ and $6x^{999}\le A_{\rm gl}/2$,
+\[
+ N(NC_fG_0h_j^2)^2\le
+    \exp(A_{\rm gl}/2+A_{\rm gl}+6x^{999})\le e^{2A_{\rm gl}}.
+\]
+For $S=e^{2A_{\rm gl}}\|v\|_\sigma^2$, the conjugate coefficient of the
+$a$-th frame member is at most $G_0h_j\sqrt S$ by Cauchy--Schwarz.
+(The general automorphism changes conjugation to its conjugated
+automorphism; the frame bound holds for both.) By triangle inequality
+each block of the resulting tuple has norm at most
+$|I|G_0 h_j^2\sqrt S$. Summing the squares over $B$ and gluing once
+more bounds $\|U_1 v\|_\sigma^2$ by $e^{6A_{\rm gl}}\|v\|_\sigma^2$.
+The projection on lifts, applied to a vector orthogonal to the false
+lifts, is contractive for every conjugate norm; this uses the
+algebraic characterization by the central idempotent and the
+Hecke polynomial kernel, not continuity of $\sigma$.
+Consequently, for an eigenvector $v\ne0$ of $C_1$ with eigenvalue
+$\lambda$, $|\sigma\lambda|^2\|v\|_\sigma^2\le
+e^{6A_{\rm gl}}\|v\|_\sigma^2$. The determinant is the product of roots
+of the characteristic polynomial with multiplicities, yielding
+\[
+ |\sigma F_1|\le e^{3d_T A_{\rm gl}}.
+\]
+
+At a local identification use $\vartheta=\eta_\iota^j$ and
+the clearing operator from regularity. Then $\Lambda_\iota
+C_\vartheta$ preserves the integral module of its image. An
+eigenvector can be scaled into that module with at least one
+transported coordinate of norm one: take the finitely many class
+values at representatives integral above $\ell$, take the maximum
+of the coordinate norms in the local Weyl model and scale by the
+inverse of a coordinate attaining it. Every eigenvalue is therefore
+integral. By the product of eigenvalues and the bound on
+$\det\Lambda_\iota$,
+\[
+ |F_{\eta_\iota^j}|_\iota\le e^{d_T r\beta_{j,\ell}}.
+\]
+In (\ref{c3:heightdef}) take multiplier $F_1$, archimedean budget
+$3d_T A_{\rm gl}$, and finite budgets $d_T r\beta_{j,\ell}/\log\ell$.
+This proves
+\begin{equation}\label{c3:compressionheight}
+ \operatorname{ht}(F_{\eta_\iota^j}/F_1)
+ \le d_T(3A_{\rm gl}+rB_0).
+\end{equation}
+
+\paragraph{The main rank-one ratios.}
+The $-A_0$ gain comes from the following two different sides
+of a rank-one computation. Put
+$J_0=\sum_\tau j(\kappa_\tau)$,
+$S_{\Sigma}=\sum_\tau S(\kappa_\tau,\tau)$ so that
+$A_0=J_0-S_{\Sigma}$. For a main pair $p$ of lift $j$, let
+$\phi_\vartheta$ be its normalized rank-one lift to $U(2z)$
+and $\phi_1$ the untwisted lift.
+
+To bound the constant $\|\phi_1\|^2$, compare it to the lift of a
+flat pair $q$ of the same rank and empty row. The integral algebraic
+part $I_q$ of the flat value at trivial twist is integral everywhere
+and equals $G_0\mathrm{denomBound}(q)^2\|\phi_{q,1}\|^2$.
+For automorphisms fixing the base field, the single-lift norm formula
+gives
+\[
+ \log|\sigma\|\phi_{p,1}\|^2|
+ =C_\sigma+\epsilon_{p,\sigma}
+    +\sum_\tau j(l_\tau),\qquad
+ l_\tau=p.\mathrm{negWeight}(\tau)-z\ge\kappa_\tau .
+\]
+Here the constant is common to the two pairs,
+$\epsilon_{p,\sigma}\ge-4f$ and
+$\epsilon_{q,\sigma}\le4f$ with empty row $l_\tau=0$.
+The same moduli of conjugates are realized by automorphisms fixing
+the base field. Thus for the multiplier $I_q/\|\phi_1\|^2$
+the common constant cancels, the finite budgets are zero and the
+archimedean budget is at most
+$x^{33}+8f-J_0\le B_0-J_0$. Therefore
+\begin{equation}\label{c3:main-arch}
+ \operatorname{ht}(\|\phi_1\|^2)\le B_0-J_0 .
+\end{equation}
+Here one uses monotonicity of $j$ on the
+range in question, and bounds the fixed class and denominator
+factors by $e^{x^{33}}$. These and the common-constant norm formula
+are the numerical hypotheses in input F.
+
+For the finite side let $s_\ell$ be the sum of the local gains at $\ell$ over $\tau\in\Phi$, computed below.
+The crucial sharpness estimate is existence of a common nonzero scalar
+$c_0$ with $|\sigma c_0|\le e^{B_0}$ and, for every allowed twist and
+identification, a test form $\Xi$ satisfying
+\begin{equation}\label{c3:test}
+ |\langle\Xi,\phi_\vartheta\rangle|_\iota
+ \ge |c_0 R_{q_2}(\vartheta)|_\iota \ell^{-s_\ell},
+ \qquad 2\sum_{\ell\in F}s_\ell\log\ell\le S_{\Sigma} .
+\end{equation}
+The prime-sum inequality is just regrouping by prime powers.
+In fact put
+\[
+ g_\tau(v)=(1-\chi_K(v))
+       (\kappa_\tau/v-\kappa_{-v\tau})_+ .
+\]
+The notation $-v\tau$ uses the place of the class of $-v$ if
+prime to the cyclotomic conductor and the identity place otherwise.
+The weight is at least $a/x_1$, so $g_\tau(v)$ vanishes for
+$v\ge x_1$; all terms are nonnegative. To get the local formula, compare the coefficient of each positive
+exponent $e$ with the defining sum for the local gain.
+At a split prime $1-\chi_K(\ell)^e=0$. At an inert prime this
+coefficient is $2$ for odd $e$ and zero for even $e$, and the
+local uniformizer weight is $1$. At the ramified prime the
+coefficient is $1$ for every $e$, and the local uniformizer
+weight is $1/2$. Thus
+$2s_\ell=\sum_\tau\sum_{e\ge1}g_\tau(\ell^e)$.
+Since $\Lambda(\ell^e)=\log\ell$ and the von Mangoldt
+function vanishes at non-prime-powers, summing this equality over
+the primes gives exactly $S_{\Sigma}$, and restriction to a finite set
+only decreases it. Thus the prime-sum regrouping consumes no error.
+
+Here $q_2$ is an empty-row ramified pair of rank four with the fixed
+chosen-level tame character. To specify the origin of the sharper
+Taylor input:
+the rank $2z$ indices split into blocks of sizes $12,4,4,2z-20$.
+The first block gives a Taylor coefficient of weight
+$l_\tau\in[\kappa_\tau,\kappa_\tau+x^{42}]$ at a finite indicator
+datum; the next carries $q_2$, and the last two carry empty rows
+with tame characters whose product is the character selected by
+class averaging. The sharp Taylor coefficient is scaled by
+$T=M^{12f}c_{\rm vac}\prod_\tau
+\mathrm{lossProduct}(l_\tau)^2$ with
+$|\sigma T|\le e^{fmb/k}$. Its local valuation upper bound before
+scaling is $s_\ell+2\sum_\tau v_\ell(\mathrm{lossProduct}(l_\tau))
+-\sum_\tau v_\ell(l_\tau!)$ relative to the integral vacuum.
+Multiplication by the factorials and division by $T$ removes both
+loss terms, leaving $s_\ell$. The scaled coefficient is $C s(1)$
+for a one-variable kernel $s$ on $U(1)$.
+
+Appendix~\ref{jets:sharp} separates the valuation lower bounds
+for all coefficients from the upper valuation bound supplied by
+one coefficient. The latter direction is needed here.
+
+Class averaging can be made explicit. The rank-one definite
+class space is a finite abelian quotient $C$ of the group of finite adelic
+points modulo rational points and the chosen level. There
+are no stabilizers. Translate the chosen representatives by the
+inverse of the representative of the identity class, so that
+this representative becomes $1$. The map taking the finite component of a norm-one adele to its
+rank-one matrix sends rational points into the rational subgroup,
+and integral ideles reducing to $1$ at the chosen places into the
+level. Pulling a character of $C$ back along this map therefore
+gives a weight-zero tame character with possible conductor only at
+the chosen places. At a finite rank-one group element its value is
+the original character, since this map composed with the rank-one
+adelic determinant is the identity. For a character $\chi$ form the
+normalized mean $A_\chi=|C|^{-1}\sum_{g\in C}
+\chi(g)s(g_{\rm rep})$. Character orthogonality gives
+$\sum_\chi A_\chi=s(1)$; the ultrametric inequality therefore
+gives a character with $|A_\chi|_\iota\ge|s(1)|_\iota$.
+Call this mean $A_s$.
+For the other blocks let $W_\psi$ be the product of the two flat
+integral algebraic parts with characters multiplying to the selected
+character. The geometric mean $I$ of all such products can be
+taken independent of the selected character because each
+factorization runs over the entire finite character group. By
+multiplicativity some factorization has $|W_\psi|_\iota\ge|I|_\iota$.
+All conjugates of $I$ have norm at most $e^{2x^{34}}$ by the
+corresponding flat bounds. The kernel pairing identity is
+\[
+  T I_{q_2} W_\psi(C A_s)
+    = N_0^2\langle\Xi,\phi_\vartheta\rangle/R_{q_2}(\vartheta).
+\]
+Taking norms, using $|N_0|_\iota\le1$, proves~(\ref{c3:test})
+with $c_0=T I_{q_2} I$; its archimedean bound is
+$e^{fmb/k+3x^{34}}\le e^{B_0}$.
+The Taylor sharpness bound, existence of the block test form with
+the displayed identity, and the flat integral algebraic estimates
+are the substantive inputs of this argument (input F below).
+
+The precise external result here is the
+\srcline{New/OneLift/HeckeValues/TwistedValueHeights}{700}{sharp test-form theorem}.
+For fixed main pair and rank-four companion, it chooses one nonzero \(c_0\)
+before the prime, the identification and the allowed twist. In its proof
+the degrees are prescribed by the negative weights and the fixed shift.
+The \srcline{New/Derivatives/Sharpness/BoundAttained}{381}{attainment theorem}
+supplies the coefficient data; the geometric mean \(I\) used for \(c_0\)
+is also fixed before local specialization. The indicator, averaging
+character and factorization yielding \(W_\psi\) may depend on the
+specialization. The
+\srcline{New/OneLift/HeckeValues/TwistedValueHeights}{571}{integral kernel-pairing theorem}
+realizes these choices on the required test form. This order of choice
+permits the same \(c_0\) and twist at two identifications.
+
+Now take $\vartheta=\eta_\iota^j$, $\phi=\phi_\vartheta$,
+$\rho=R_{q_2}(\vartheta)$ and choose another test form
+$\Xi'$ at $\bar\iota$ for the \emph{same} $\vartheta$.
+Since $\rho$ is real, multiplying the two inequalities gives
+\[
+ |\langle\Xi,\phi\rangle\langle\phi,\Xi'\rangle|_\iota
+ \ge |c_0\bar c_0\rho^2|_\iota\ell^{-2s_\ell}.
+\]
+Denote the nonzero pairing product by $I_\iota$. Direct projection
+onto the line gives
+$\langle P_\phi\Xi,P_\phi\Xi'\rangle=I_\iota/\|\phi\|^2$.
+By the rank-one norm formula for the Hecke ratio,
+\begin{align}
+ R_p(\vartheta)^{-1}
+ &=N_\eta^{2z-1}\frac{\|\phi_1\|^2}{\|\phi\|^2}\notag\\
+ &=N_\eta^{2z-1}\|\phi_1\|^2
+ \langle P_\phi\Xi,P_\phi\Xi'\rangle\rho^{-2}
+ \frac{\rho^2}{I_\iota}.\label{c3:four-factors}
+\end{align}
+The first factor after the modulus power costs $B_0-J_0$ by
+(\ref{c3:main-arch}); the projection costs $B_0$ by regularity;
+the ramified ratio costs $2x_1$. For the last factor use multiplier
+$c_0\bar c_0$, archimedean budget $2B_0$ and finite budgets
+$2s_\ell$; equivalently the local norm bound is
+$\ell^{2s_\ell}$. It costs at most $2B_0+S_{\Sigma}$.
+Since $x_1\le B_0$ and the modulus power costs nothing,
+\begin{equation}\label{c3:main-height}
+ \operatorname{ht}(R_p(\eta_\iota^j)^{-1})
+ \le 6B_0-A_0 .
+\end{equation}
+
+
+\paragraph{Counting and combining the three exchanges.}
+The three exchange products for the comparison operator are
+products of squared critical values with modulus powers.
+The unsigned exchange character contributes points $1\le z\le7(m/2)+k/2$,
+the two signed flat characters points $1\le z\le m$ and
+$1\le z\le m/2$. Reserve for the main-pair estimate the points
+$7(m/2)<z\le7(m/2)+k/2$. Since $m$ and $k$ are even, there
+are $k/2$ of these, and $7(m/2)+m+m/2=5m$ remaining
+ramified points. The ratio of exchange products is therefore
+$N_\eta^e(\prod_{a=1}^{k/2}R_{p_a}\prod_{b=1}^{5m}
+R_{q_b})^2$, with the prescribed signs on the second product.
+This is the partial $L$-value factorization of input G; taking
+inverse heights, the squared product doubles the counts, giving
+\[
+ \operatorname{ht}(\rho_{\eta_\iota^j}^{-1})
+ \le k(6B_0-A_0)+10mx_1.
+\]
+The scale inequality
+$3A_{\rm gl}+rB_0+10mx_1+6kB_0\le kLB_0$
+and (\ref{c3:compression}), (\ref{c3:compressionheight}) now prove
+\begin{equation}\label{c3:single-height}
+ \operatorname{ht}\left(\frac{Z_j(1)}{Z_j(\eta_\iota)}\right)
+ \le d_T\,k(LB_0-A_0)=d_T\left(\frac{V}{m}-kA_0\right).
+\end{equation}
+
+
+\subsection{From single lifts to the chain}\label{c3:chain}
+
+Put $Z(\eta)=\det(\Theta_\eta^*\Theta_\eta)>0$.
+One cannot simply multiply the norms of the single lifts, since
+they have different sources; the triangle-of-lifts norm identity
+and the equality of Hecke multiplicities are needed. In the source
+the $j$-th single-lift Gram operator is a constant $a_j\ne0$
+times the common local twist factor $c_Q$ times the Rallis operator
+$\mathcal R_j(\eta)$ on its good space. For the unnormalized coset sum write $R$ for the operator with
+matrix coefficients $\sum_\gamma K_\eta(\gamma)
+\langle x,\gamma y\rangle$; $K_\eta$ is the unramified vacuum
+coefficient. For the sharp finite block datum of mass $M_{\rm blk}$
+the asserted Petersson Rallis formula of input K (cf.~\cite{gqt} for the general inner product formula) gives the
+same sum times $C_jM_{\rm blk}$ with $C_j$ depending only on
+the archimedean datum. The latter is fixed under tame weight-zero
+twists. Converting to algebraic forms multiplies by the index
+of the level and the Weyl dimension. The finite mass relation is
+$[K_0:J]M_{\rm blk}=\operatorname{gramFactor}/M_Q$;
+the quotient is the chosen-place factor times $c_Q$.
+Thus the scalar multiplying $R$ is $a_j c_Q$, where $a_j$
+is nonzero and independent of the twist. The paired-series
+argument of Appendix~\ref{sec:trace} realizes the two $R$'s
+on $W_j$ and $Y_0$ by one Hecke operator and identifies its
+two determinants.
+For specificity, write $w_n$ for the order of the general linear
+group in the $n$-th step of the lower triangle and $M_Q$ for the
+number of $Y_1\times\mathrm{RowIndex}$ matrices over the residue
+ring of the chosen and twist modulus. The first-arrow Gram formula
+in row $i$ is $w_0^{-1}C_i M_Q^{-1}\mathcal R_{i+1}$, transported
+to the common starting space, with $C_i$ independent of twist.
+Here the Gram pairings are sesquilinear.
+The weighted triangular computation works by induction on the row
+length $n=m-i$. In the zero row the weighted chain is the identity.
+Moving the adjoint of the first step past the $n-1$ subsequent
+steps multiplies its scalar by the product of the commutation
+constants in those squares. Their moduli, up to a fixed norm
+power, are $Q_{i+1,j}$, $i+1<j\le m$; the adjoint law contributes
+only scalar factors of modulus one in this sense. Replacing the
+paired first-step ascent and descent by its first-arrow Gram
+formula inserts $C_i M_Q^{-1}\mathcal R_{i+1}$.
+The weights telescope from $w_0w_1^{n-1}/w_{n-1}$
+to $w_0w_1^n/w_n$. More explicitly the weighted row transfer
+gives the factor $w_0 w_1 w_{n-1}/w_n$ and the first-arrow
+pairing contributes $1/w_0$.
+Thus at row zero the weighted chain $u_\eta$ has Gram pairing
+\[
+ \langle u_\eta v,u_\eta v'\rangle
+ =\kappa_\eta\frac{w_0w_1^m}{w_m M_Q^m}
+    \langle v,\prod_{j=1}^m\mathcal R_j(\eta)v'\rangle,
+\]
+where the modulus of $\kappa_\eta$ contains exactly one factor
+$Q_{ij}$ for each $1\le i<j\le m$. The induction uses the square
+commutation and adjoint identities; their arithmetic derivation
+is part of input K, not an identity of arbitrary theta lifts.
+
+Conversion from the weighted Petersson model to the final
+algebraic model multiplies this Gram form by the Weyl dimension
+$h_Y$ and the index of the final level. The precise index
+computation is
+\[
+ \mathrm{ind}(J_\eta)=C_1 N_\eta^u
+     \mathrm{gramFactor}(\eta)^m\frac{w_m}{w_0w_1^m}.
+\]
+The integer $u$ and constant $C_1$ are independent of $\eta$:
+at the chosen places all group orders are fixed, and at twist
+places the block upper-triangular parabolic has order equal to the
+product of the general linear orders of diagonal blocks times
+$q_w^{\sum_{a<b}h_a h_b}$ for block sizes $h_a$.
+This is obtained by independently choosing each upper off-diagonal
+matrix block. Also
+\[
+ \frac{\mathrm{gramFactor}(\eta)}{M_Q}
+ = \mathrm{chosenFactor}\,c_Q,\qquad
+ c_Q=N_\eta^{r\delta}\prod_{w\in Q(\eta)}
+                      \prod_{s=\delta+1}^{\delta+r}(1-q_w^{-s}).
+\]
+The product of $1-q_w^{-s}$ is the proportion of rank-$r$
+matrices among $(r+\delta)\times r$ matrices: choose successive
+independent columns in $q_w^{r+\delta}-q_w^i$ ways for $0\le i<r$.
+The precise matching of the parabolic levels and of these factors
+is input K. Multiplying the displayed formulas cancels every
+$w_n$ and $M_Q^m$, leaving $h_Y C_1 N_\eta^u
+\kappa_\eta\mathrm{chosenFactor}^m$ as the scalar multiplying
+$c_Q^m$. The resulting operator identity is
+\[
+ \Theta_\eta^*\Theta_\eta
+ =c_\eta c_Q^m\prod_{j=1}^m\mathcal R_j(\eta),\qquad
+ |c_\eta|=C N_\eta^{e/2}\prod_{1\le i<j\le m}Q_{ij}(\eta),
+\]
+where $C>0,e\in\mathbb Z$ are independent of $\eta$. Here
+$Q_{ij}$ is the product at $1\le s\le\delta$ of critical ratios
+for the character $\nu_j/\nu_i$ at twist $\eta^{j-i}$,
+where $\nu_j$ denotes the untwisted character at stage $j$.
+This character is a power of the common ratio between consecutive
+lift characters and is ramified at the chosen places.
+The local triangle identities and the analytic Rallis formula
+enter through K. The trace transfer uses the separate hypotheses
+of Appendix~\ref{sec:trace}. Once they hold, take
+determinants on $W$:
+\[
+ Z(\eta)=
+ \left(c_\eta/\prod_j a_j\right)^{d_T}\prod_j Z_j(\eta).
+\]
+The common $c_Q^m$ and all Rallis determinants cancel. Since the
+Gram determinants are positive, take absolute values, and divide by
+the trivial-twist identity (all $Q_{ij}(1)=1$):
+\begin{equation}\label{c3:chainfactor}
+ \frac{Z(1)}{Z(\eta)}=
+ \left(N_\eta^{e/2}\prod_{i<j}Q_{ij}(\eta)\right)^{-d_T}
+ \prod_{j=1}^{m}\frac{Z_j(1)}{Z_j(\eta)} .
+\end{equation}
+Each $Q_{ij}$ contains $\delta$ ramified ratios, and $1\le j-i\le m$,
+so their inverse heights cost at most $m^2\delta x_1\le b$ before
+raising to the power $d_T$. Summing (\ref{c3:single-height}) over
+the same $m$ twists $\eta_\iota^j$, using $mkA_0=H$, gives
+\begin{equation}\label{c3:chainheight}
+ \operatorname{ht}\left(\frac{Z(1)}{Z(\eta_\iota)}\right)
+ \le d_T(b+V-H).
+\end{equation}
+
+\subsection{Short auxiliary completion}\label{c3:auxiliary}
+
+We require an auxiliary spanning set in $W$, independent of $y$.
+The construction produces a scalar $\gamma(\eta)\ne0$,
+$\gamma(1)=1$, with
+\begin{equation}\label{c3:gamma}
+ |\gamma(\eta)|=N_\eta^{e'/2}
+       \prod_{i,j=0}^{m-1}T_{ij}(\eta),
+\end{equation}
+where $e'\in\mathbb Z$ is fixed, and $T_{ij}(\eta)$ is the
+product of the $\delta$ ratios for the character $\nu_{i+1}\nu_{j+1}$
+at $\eta^{j+1}$. Its tame character is nontrivial at the chosen
+places, so each is a ramified-ratio product. The powers now use
+$j+1$, not $j-i$. The spanning vectors $z$ have
+\begin{equation}\label{c3:auxbounds}
+ \gamma(\eta)\Theta_\eta z\in\mathcal L_{\eta,\iota}
+ \ ((N_\eta,\ell)=1),\qquad
+ \|\Theta_1z\|_\sigma^2\le\exp(2x_1^2b^2).
+\end{equation}
+
+Here is the auxiliary construction reduced to its path-period
+identities. For the final grid-level space apply the short-basis estimate
+of \S\ref{A:source} with the conductor integer in the different.
+The grid's principal level is contained in the chosen level and its
+rank $h_0$ is at most $2n_m$, giving trivial stabilizers by the
+argument above. The weight has at most $b r^4$ boxes. With
+$D_0$ the conductor integer, the numerical specialization is
+$6(h_0 f+b r^4)\log(6D_0(fh_0)^2)\le x^{99}b^2$.
+Transport through the algebraic realization at the last grid vertex
+gives spanning forms all of whose conjugate values have squared
+Weyl norm at most $e^{x^{99}b^2}$. There is a fixed onto map $R$
+from this space to principal forms on $Y_0$. Pairings at the end
+of the chain against a dual Weyl vector $v$ have the expression
+\[
+  v^t M_{\rm dual}
+    \frac{c_\eta}{c_1}\Theta_\eta R\varphi(g)
+    =\beta\,\mathcal P_\eta(\varphi,g,v).
+\]
+Here $\Theta$ in this identity denotes the chain on all principal
+forms, $\mathcal P_\eta$ the last-path period (with one factor
+a Weyl-valued delta form), and $|c_\eta/c_1|$ is the right side
+of (\ref{c3:gamma}). The path data arise by carrying the first
+path through all $m^2$ turns; their scalar moduli multiply. The
+fixed dual hook number $h>0$ controls recovery from pairings.
+There is a single integer $N\ne0$, of size at most
+$e^{x^{99}b^2}$, clearing the period denominators for all allowed
+twists on integral inputs. The period bound at trivial twist is
+\[
+ |\sigma\mathcal P_1(\varphi,g,v)|
+ \le e^{x^{200}b^2}\|\sigma v\|_{\rm Weyl}
+                  \sqrt{B}
+\]
+when every conjugate value of $\varphi$ has squared norm at most
+$B$. These are the path-period and dual-model inputs Aux in
+\S\ref{c3:frontier}. Rescale all inputs by a fixed $s\ne0$:
+if $\beta\ne0$, take $s=hN/\beta$, else $s=1$.
+The rescaled pairings are $hN\mathcal P_\eta$ or zero. The normalized dual model in input Aux has the following two properties. The integral dual-pairing matrix $M_{\rm dual}$ admits an integer
+matrix $C$ with $CM_{\rm dual}=hI$ in the normalized dual model.
+Testing the pairing against the $i$th row of $C$ gives
+$h\zeta_i\in h\mathcal O_\iota$ for the lifted value $\zeta$.
+Since $h\ne0$, every coordinate is integral, even at primes
+dividing $h$. At infinity the dual model represents
+$v\mapsto v^tM_{\rm dual}\sigma\zeta$ by a vector $w$ with
+$\|w\|=\|\sigma\zeta\|$. Evaluate the bound at
+$v=\sigma^{-1}w$ before conjugation. The resulting inequality is
+$\|w\|^2\le hN e^{x^{200}b^2}\sqrt B\,\|w\|$.
+The hook estimate $hN e^{x^{200}b^2}\le e^{x^{201}b^2}$ gives
+squared Weyl norm at most $e^{2x^{201}b^2}B$. With
+$B=e^{x^{99}b^2}$ this is at most $e^{x^{202}b^2}$.
+The images $sR\varphi$ span all principal forms since $R$ is onto.
+Apply the good projection multiplied by its fixed integral scalar
+at the identity translate; it preserves integrality on the lifts,
+is surjective onto $W$ and increases the logarithm of the conjugate
+squared norm to at most $x^{99}+x^{202}b^2\le2x_1^2b^2$.
+This yields (\ref{c3:auxbounds}) with $\gamma=c_\eta/c_1$.
+
+By (\ref{c3:gamma}) and regularity we have, for the same
+$\eta_\iota$ as in (\ref{c3:chainheight}),
+\begin{equation}\label{c3:gammaheight}
+ \operatorname{ht}(|\gamma(\eta_\iota)|^{-2})
+ \le 2m^2\delta x_1\le b .
+\end{equation}
+The nonzero modulus power has zero finite cost; the coefficient 2
+here comes from squaring the inverse absolute value, independently
+of the index correction.
+
+\subsection{The determinant comparison}\label{c3:compare}
+
+\noindent\textbf{Theorem C (conditional on the geometric and arithmetic inputs
+in \S\ref{c3:frontier}).}
+Let $y_1,\ldots,y_n$ be independent in $W$,
+$n\ge(1-4/b^2)d_T$, with $\operatorname{IndexLe}(y,\Delta)$
+and $\operatorname{CovolumeLe}(y,c)$. Then
+\begin{equation}\label{c3:theorem}
+ d_T(H-3V)\le c+2\Delta.
+\end{equation}
+
+\begin{proof}
+The case $d_T=0$ follows from $n=0$, the empty Gram determinant
+($c\ge0$) and the empty prime-set index bound ($\Delta\ge0$).
+Suppose $d_T>0$. Extend the given ordered family to a basis
+$w=(y_1,\ldots,y_n,z_1,\ldots,z_{n'})$ by choosing from the
+auxiliary spanning set, with $n'=d_T-n$. Such an extension is
+obtained by passing to the quotient $W/\operatorname{span}(y)$
+and choosing a basis from the images of the spanning set.
+The original family is unchanged. Let
+\[
+ \mathcal G(\eta)=\det(\langle\Theta_\eta w_i,
+                            \Theta_\eta w_j\rangle)_{ij}.
+\]
+A basis change from an orthonormal basis of $W$ shows
+$\mathcal G(\eta)=Z(\eta)\det(\langle w_i,w_j\rangle)$: the Gram
+matrix is congruent by its change-of-basis matrix.
+In particular $\mathcal G(1)\ne0$ and
+$\mathcal G(1)/\mathcal G(\eta)=Z(1)/Z(\eta)$.
+
+For fixed $\iota$ at $\ell$, use matrices $U_\iota$ and
+$U_{\bar\iota}$ from the index assumption, applying both at the
+\emph{same} twist $\eta=\eta_\iota$, allowed at both
+identifications. Form the row transformations on the concatenated
+family with blocks
+$A_\iota=\operatorname{diag}(U_\iota,\gamma(\eta)I_{n'})$
+and $A_{\bar\iota}=\operatorname{diag}(U_{\bar\iota},
+\gamma(\eta)I_{n'})$. The auxiliary block need not be a matrix
+over $\mathcal O_\iota$: it is its lifted vectors that are integral.
+Both transformed lifted families are integral, for their
+respective identification. By (\ref{c3:local-pair}) all entries
+of their mixed pairing matrix have $\iota$-norm at most one.
+Its determinant is
+\[
+ \overline{\det U_{\bar\iota}}\,\det U_\iota\,
+ |\gamma(\eta)|^{2n'}\mathcal G(\eta).
+\]
+The two index determinants have norms each at least
+$\ell^{-e_\ell}$ because conjugation carries $\bar\iota$ back
+to $\iota$. Using the ultrametric determinant bound gives
+\[
+ \big|\,|\gamma(\eta)|^{2n'}\mathcal G(\eta)\,\big|_\iota
+       \le\ell^{2e_\ell}.
+\]
+Hence
+\begin{equation}\label{c3:local-height}
+ \operatorname{ht}(|\gamma(\eta_\iota)|^{2n'}
+                    \mathcal G(\eta_\iota))\le2\Delta .
+\end{equation}
+The two determinant corrections account for the coefficient $2$ on the index.
+
+At infinity, for each $\sigma$ the Gram determinant of the
+concatenated conjugate frame is bounded by the product of the
+Gram determinants of its two blocks, by Fischer's inequality
+(or by taking the exterior product and projecting the added
+vectors to the orthogonal complement of the first span).
+Hadamard on the second block gives
+\[
+ \det\operatorname{Gram}(v_\sigma(w))\le
+ e^{c+2n'x_1^2b^2}.
+\]
+To pass to the conjugate of the scalar $\mathcal G(1)$ we must not
+assume that $\sigma$ commutes with conjugation. Put
+$\sigma'=\mathrm{conj}\circ\sigma\circ\mathrm{conj}$.
+Rationality of $G_{\rm cl}$ gives
+$\sigma\mathcal G(1)=\det(v_{\sigma'}(w_i)^*G_{\rm cl} v_\sigma(w_j))$.
+The determinant Cauchy--Schwarz inequality on the exterior power,
+applied to the two wedge products, bounds its absolute value by
+the geometric mean of the corresponding two Gram determinants.
+Thus
+\begin{equation}\label{c3:arch-final}
+ |\sigma\mathcal G(1)|\le e^{c+2n'x_1^2b^2}.
+\end{equation}
+
+Factor the same nonzero constant, at each $\iota$, as
+\[
+ \mathcal G(1)=
+ (|\gamma(\eta_\iota)|^{2n'}\mathcal G(\eta_\iota))
+ (|\gamma(\eta_\iota)|^{-2})^{n'}
+ \frac{Z(1)}{Z(\eta_\iota)} .
+\]
+Apply the height bounds (\ref{c3:local-height}),
+(\ref{c3:gammaheight}), (\ref{c3:chainheight}) and then
+(\ref{c3:product}) with (\ref{c3:arch-final}):
+\[
+ 0\le c+2\Delta+n'(2x_1^2b^2+b)+d_T(b+V-H).
+\]
+There are at most $4d_T/b^2$ auxiliary vectors. Since
+$4(2x_1^2+b^{-1})\le b$ by the admissible scales,
+\[
+ n'(2x_1^2b^2+b)\le d_T\,4(2x_1^2+b^{-1})\le d_T b .
+\]
+The inequality $b\le V$ then absorbs both terms $d_T b$, proving
+\eqref{c3:theorem}.
+\end{proof}
+
+The family selected in Theorem B enters this comparison through
+its original $n$ ordered columns. Its witnesses provide both the
+untwisted norm and the uniform local correction in the final
+comparison.
+
+\subsection{Elementary scale checks}\label{c3:scales}
+
+The raw scales give
+$L^{100}\le x$, $x^{10^6}\le x_1$, $x_1^{10^6}\le b$,
+$\log L\ge10^{12}C_P$ and
+$C_P\ge64$. In particular $L>e^{200}$,
+$x\ge100$, $b\ge x^{10^{12}}$. The source data give
+$\sqrt{x}\le m\le2\sqrt{x}$, $x^5\le r\le3x^5$,
+$r/2\le k\le r$, $\delta=5r$, $1\le f\le x^{12}$.
+Consequently
+\[
+ B_0=\frac{f x b L^3}{mk}\ge\frac{f bL^3}{6x^{9/2}}
+ \ge100f x^{5000},\qquad
+ B_0\ge100x_1.
+\]
+The last inequality follows directly from
+$b/x_1\ge x_1^{10^6-1}\ge x^{10^6(10^6-1)}$.
+For the leading local defect term, its ratio to $B_0$ is at most
+$4(4\cdot10^6e^{180})/L^2<1/2$; the remaining terms of
+the regular-family budget satisfy
+$(1+2\delta)x^{999}+x^{4000}+\log G_0+x^{30}\le x^{4001}$
+using $\log G_0\le x^{32}$ and $x\ge100$.
+The same bound on $\log G_0$ gives the twist-error inequality
+$(4f+3)r\log G_0+2\le x^{999}$.
+For the archimedean multiplier,
+$(fmb/k)/B_0=m^2/(xL^3)\le4/L^3$,
+hence $fmb/k+3x^{34}\le B_0$, and
+$x^{33}+8f\le B_0$ as well. For the one-lift comparison,
+divide its required absorption by $kB_0$:
+\[
+ \frac{3fmbL^2+rB_0+10mx_1+6kB_0}{kB_0}
+ \le\frac{12}{L}+2+\frac{40}{L^3}+6<L .
+\]
+Also $2m^2\delta x_1\le120x^6x_1\le b$,
+$4(2x_1^2+b^{-1})\le12x_1^2\le b$ and
+$b\le fxbL^4=V$. Finally
+$2x^{201}+x^{99}\le x^{202}$ and
+$x^{99}+x^{202}b^2\le2x_1^2b^2$.
+These estimates use no dimension lower bound and no sign assumption
+on the main amount. The group-order and class-number bounds used in these
+inequalities are detailed in Appendix~\ref{sec:finite}.
+The auxiliary hook and box estimates enter through Aux.
+
+\subsection{Construction hypotheses for Theorem C}\label{c3:frontier}
+
+Theorem C uses the following assertions for the admissible datum.
+They identify where its proof uses a construction beyond the
+height and determinant arguments.
+
+\begin{description}
+\item[I (target and multiplicity).]
+The discrete-series spaces on $W_j$ and $Y_0$ satisfy the
+cuspidal trace comparison under the hypotheses of
+Appendix~\ref{sec:trace}. That appendix deduces both the common
+dimension $d_T$ and equality of the determinants of the common
+Hecke operator. The integral pairing, coordinate metric and
+triviality of the stabilizers used in the determinant calculation
+are derived in \S\ref{c3:section}. Injectivity of the chain uses K.
+
+\item[R (arithmetic at the chosen twists).]
+For the rank-$r$ main summands of every relevant eigensystem and
+the accompanying rank-one lines, assume the Galois representations,
+the simultaneous Selmer and Stickelberger polynomial data, and
+the tame realization used in \S\ref{c3:twists}. Assume the
+crystalline defect is bounded by the stated envelope and the
+first-order congruences yield a clearing operator on each generator
+with the indicated valuation, including the rank-one pairing
+for all test forms. Appendix~\ref{sec:finite} derives the
+root-of-unity specialization, explicit defect-envelope sum, geometric
+class bounds and resulting $B_0$ budget from its stated arithmetic
+inputs. These conclusions supply items 1--3 of \S\ref{c3:twists}.
+
+\item[G (gluing and exchange).]
+For each $j$ the period formula with the nonzero $c_i$ and the
+products-spanning assertion in \S\ref{c3:single} hold. Its normalized
+scalar quotient is the exchange-value ratio
+$\rho_\vartheta=|c'_1|^2/|c'_\vartheta|^2$.
+Gluing takes the translated integral frame to integral forms at
+every place above $\ell$ coprime to the twist. The glued period
+is orthogonal to false lifts, and on that subspace the projection
+onto lifts is contractive for every conjugate norm. At trivial
+twist the gluing inequality has squared constant $e^{2A_{\rm gl}}$ with
+$A_{\rm gl}=fmbL^2$; its class, filling and hook estimates are
+$(|B|G_0)^2\le e^{A_{\rm gl}}$ and $C_f,h_j\le e^{x^{999}}$.
+The three exchange factors are the critical-value products on the
+specified integer intervals, with the indicated character, sign and
+main-pair weight conditions. These inputs give
+\eqref{c3:compression} and \eqref{c3:compressionheight}, and account
+for the $k/2$ selected main points and $5m$ remaining points.
+
+\item[F (rank-one values).]
+Assume the common-constant logarithmic norm formula, its flat
+integral algebraic parts and conjugate denominator bounds in
+\S\ref{c3:single}, and the stated rank-one formula for the
+Hecke ratio. Use the valuation-attainment estimate of
+Appendix~\ref{sec:jets} for the twelve-dimensional block in
+the full degree range. Assume the uniform Taylor scaling
+$|\sigma T|\le e^{fmb/k}$ and the four-block identity realizes
+the specified pairing on a form integral above $\ell$ and
+orthogonal to false lifts. The proof of \eqref{c3:test} details the
+Fourier averaging, the prime-power formula and the multiplication
+of factors at opposed identifications. Together these assumptions
+supply the term $-A_0$ in \eqref{c3:main-height}.
+
+\item[K (Rallis and elementary exchanges).]
+For the finite sharp data and archimedean edge types of the
+single lifts and of the triangle assume the injectivity and
+Petersson coset-sum formula in the range
+$2\,\mathrm{rank}(\text{source})<\mathrm{rank}(\text{target})$
+where it is used. Assume the algebraic realization of each
+Gram pairing, including its index and dimension, the local block
+mass formula, and the square commutation and adjoint laws for the
+triangle, with the $Q_{ij}$ moduli of \S\ref{c3:chain}. The
+parabolic index and twist-factor formulas there fix the residual
+norm power independently of $\eta$. The determinant calculation
+then gives \eqref{c3:chainfactor} for the entire chain.
+
+\item[Aux (auxiliary path).]
+Use the shared short-basis bound of \S\ref{A:source} at the grid
+level with the box and conductor bounds in \S\ref{c3:auxiliary}.
+Assume the onto map $R$ and normalized first-to-last path-period
+identity there, with the product modulus \eqref{c3:gamma};
+the shifted delta forms test the indicated dual weight.
+The common denominator satisfies $1\le N\le e^{x^{99}b^2}$ and
+the conjugate period bound is $e^{x^{200}b^2}\|\sigma v\|\sqrt B$.
+Assume the normalized dual Weyl pairing has the integral hook
+inverse and isometric archimedean duality stated there, with
+$hN e^{x^{200}b^2}\le e^{x^{201}b^2}$; the integral good
+projection has the squared-norm cost specified there. The
+fixed rescaling, local and archimedean dual recovery, and
+completion of the original family then give
+\eqref{c3:auxbounds}--\eqref{c3:gammaheight}.
+\end{description}
+
+On the constructed family, the local Taylor estimate in F follows from the
+curve and frame normalizations in \S\ref{sec:unitrow-frame}--\ref{sec:other-witnesses}.
+Section~\ref{rankone:main} treats the rank-one character in R.
+Section~\ref{pathmath:dual} derives the dual pairing in Aux, and
+\S\ref{pathmath:denom} bounds the common denominator under its one-edge and
+period inputs. Each statement is for the normalizations specified there.

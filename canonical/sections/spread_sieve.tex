@@ -1,0 +1,57 @@
+\paragraph{Removing the common entries in the sieve.}
+There is a separate deduction behind the exponent \(2403n^9f\) in
+the bound for \(Z\). Let \(A\) be the finite set of possible
+nonzero entries, integral units outside the finite places used in
+the sieve. Write \(A^i\) for the possible first \(i\) entries of
+a head. Let \(J_i(p,q)\) be its level-\(i\) kernel, with all
+unwritten entries padded by one and all entries taken with their
+prescribed local scales. For an entry \(y\) of the local product,
+put
+\[
+ F_i(y)=\sum_{p,q\in A^i} J_{i+1}((p,y),(q,y)),\qquad
+ D_{i+1}=\sum_{t\in A} F_i(t),\quad D_0=\Re J_0((),()) .
+\]
+The diagonal kernel on a common entry is positive semidefinite,
+so \(F_i\) is real and nonnegative. Assume the local integration
+identity \(\int F_i=\Re\sum_{p,q}J_i(p,q)\) and let \(w_i(p)\ge0\)
+be weights. More precisely, suppose the following estimates hold
+in the measures giving Poisson constant \(P_i=C_{{\rm Pois},i}\):
+\begin{enumerate}
+\item One-sided Poisson summation applies to \(F_i\), with total
+absolute value of its nonzero Fourier coefficients at most
+\(\epsilon(\sum_{p\in A^i}w_i(p))^2\) in the dual sum.
+\item For heads \(p,q\in A^i\) with distinct last entries,
+\( |J_i(p,q)|\le\epsilon w_i(p)w_i(q)\).
+\item \((\sum_{p\in A^i}w_i(p))^2\le
+  \Gamma\prod_{j<i}P_j\) for \(0\le i<n\).
+\end{enumerate}
+The first estimate, with the zero frequency evaluated by the
+integration identity, bounds \(D_{i+1}\) by
+\(P_i(\Re\sum_{p,q}J_i(p,q)+\epsilon(\sum_p w_i(p))^2)\).
+In this unrestricted head sum, the equal-last-entry contribution is
+\(D_i\); the remaining pairs contribute at most
+\(\epsilon(\sum_p w_i(p))^2\) by the second estimate.
+At \(i=0\) there are no remaining pairs. Thus
+\[
+ \frac{D_{i+1}}{\prod_{j\le i}P_j}
+ \le \frac{D_i}{\prod_{j<i}P_j}+2\epsilon\Gamma .
+\]
+The top sum restricted to allowable last entries satisfies \(Z\le D_n\)
+by nonnegativity. Iteration gives
+\(Z\le(\prod_{j<n}P_j)(D_0+2n\epsilon\Gamma)\).
+The fitted kernel bounds needed here are
+\[
+ D_0\le \frac{(1+b^{-10})^f}{\delta}
+           \frac{1+b^{-6}}{b^{6k|T|}},\qquad
+ \epsilon=C_{\rm dec}\,b^{2002n^9f},\qquad
+ \Gamma=b^{400n^9f}.
+\]
+Since \(2n\le b^{n^9 f}\), these bounds prove the stated sieve
+inequality. They isolate the mass at level zero and the two
+different uses of decay. For unequal last entries \(t,s\), the
+finite frequency is \((t^{-1}-s^{-1})/M\), a nonzero element
+integral outside the chosen places when \(1/M\) is integral there.
+A pointwise decay bound at those frequencies supplies item 2.
+Section~\ref{moment:sieve} proves the weight bound and sums an explicit
+majorant over the full dual lattice. The actual kernels must satisfy
+the local domination, integration, support and positivity hypotheses there.

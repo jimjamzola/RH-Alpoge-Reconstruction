@@ -1,0 +1,29 @@
+\section{Introduction}\label{sec:p1intro}
+Alp\"oge traces the construction to Stepanov's method~\cite{stepanov} and credits Claude with the choice of a chain of length about \(\sqrt{x}\) for a von Mangoldt sum of length \(x\) \cite{alpo}. Zhang describes the accumulation of divisibility along the chain \cite{zhang}. Slijep\v{c}evi\'c discusses the slope inequality in relation to Stepanov's auxiliary function \cite{slijepcevic}, and Rubinstein gives the reduction to a weighted prime-power estimate for the zeta function \cite{rubinstein}.
+
+Fix a Dirichlet character \(\chi\) and suppose that \(L(\rho,\chi)=0\) with \(1/2<\Re\rho<1\).
+The logarithmic derivative has a pole at \(\rho\), but the coefficients of its prime sum have no fixed sign.
+The determinant counts prime powers \(n\equiv1\pmod{q_0}\) with nonnegative weight \(1-(n/d)\), where \(d\) is an auxiliary prime and \((n/d)\) is the Legendre symbol.
+By character orthogonality the corresponding Dirichlet series is a sum of differences of logarithmic derivatives.
+A zero of a quadratic twist can cancel the contribution at \(\rho\). We choose \(d\) after fixing \(\rho\) to exclude this cancellation.
+
+Let \(q_0\) be a positive multiple of \(18480\) and \(d\) a prime congruent to \(q_0/2-1\pmod{q_0}\). Call \((q_0,d)\) permissible.
+For an admissible datum \(D\) of primary cutoff \(x\) (\S\ref{sz:setup}), let \(m\) be the length of its chain of lifts, \(b\) its integral weight, and \(f\) the number of infinite places of its CM field. Put \(a=xb\) and let \(\Tot_D\) be the signed excess defined in \eqref{eq:total}. The determinant bound is
+\begin{equation}
+                m\Tot_D\le fa(\log b)^5. \tag{D}\label{eq:det}
+\end{equation}
+
+\begin{scalehypothesis}[Determinant bound at each primary cutoff]\label{hyp:scale}
+For every permissible pair \((q_0,d)\) and every \(0<\eta<1/100\), there exists \(X_0=X_0(q_0,d,\eta)\) such that for every integer \(x\ge X_0\), at least one datum in the family constructed in Theorem~\ref{thm:p1-data} at that \(x\) and \(\eta\) satisfies \eqref{eq:det}.
+\end{scalehypothesis}
+
+\begin{theorem}[Analytic implication]\label{thm:main}
+Assume Hypothesis~\ref{hyp:scale}. For each positive modulus \(q\) and each Dirichlet character \(\chi\bmod q\), \(L(s,\chi)\) is nonzero for \(\Re s>1/2\), with the principal pole at \(1\) excepted. Every zero in \(0<\Re s<1\) has real part \(1/2\). Every zero of \(\zeta(s)\) outside the negative even integers has real part \(1/2\).
+\end{theorem}
+
+By Proposition~\ref{prop:count}, the signed excess contains one smoothed remainder at the primary cutoff \(x\) and two at the secondary cutoff \(x_1\), of moduli \(q_0\) and \(1\). The prime number theorem in progressions controls the secondary cutoff. At the primary cutoff, division by \(m\ge\sqrt{x}\) gives the one-sided bound. The prime \(d\) chosen for \(\rho\) also gives the sign of the real residues required by Landau's theorem \cite{MV,widder}. The threshold \(X_0\) may depend on this \(d\), so the argument requires no uniform estimate in the height of \(\rho\). Conversely, under GRH every admissible datum at the constructed scales satisfies \(m|\Tot_D|\le fa(\log b)^5\) for all sufficiently large cutoffs at fixed \((q_0,d,\eta)\) (Corollary~\ref{cor:scale-equivalence}).
+
+To obtain \eqref{eq:det} arithmetically, select an independent family from translates of short integral forms. The upper and lower determinant bounds for this family contain the same main height. Theorem~\ref{sz:conclusion} cancels it under the hypotheses of Sections~\ref{A:section}, \ref{B:frontier}, and~\ref{c3:frontier}. If a single datum satisfies all these hypotheses at each required cutoff, Corollary~\ref{cor:construction-grh} gives Hypothesis~\ref{hyp:scale}. Appendix~\ref{sz:register} records the estimates still assumed.
+
+The cost of completing the family determines the precision needed in its two moment estimates. Under the auxiliary-column bound and the other hypotheses of Proposition~\ref{prop:weakerprecision}, normalized errors of order \(b^{-1}(\log b)^{-A}\) for the same map suffice when \(A>202/\eta\).
+Sections~\ref{sec:unitrow-frame}--\ref{sec:other-witnesses} construct the frame and derive the local Taylor witnesses from normalized curve identities in each of the three splitting cases. Section~\ref{sec:odd-cocycles-reduction} gives a single integer bounding the odd Tate-twist cocycles uniformly in the torsion level. For the simultaneous construction of the twisted Selmer polynomials, the representation, its scalar inertia, and its local conditions are fixed before the auxiliary primes are chosen (\S\ref{sec:selmer-polynomial-descent} and \S\ref{sec:terminal-selmer}). Verifying these properties for the Hecke constituents of the theta lifts remains part of hypothesis R in \S\ref{c3:frontier}.

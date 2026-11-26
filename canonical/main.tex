@@ -1,0 +1,94 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=.96in,top=.87in,bottom=.95in,headheight=15pt,headsep=17pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathpazo,microtype}
+\usepackage{array,booktabs,tabularx,longtable,fancyhdr,needspace,xcolor}
+\usepackage[backend=biber,style=numeric,sorting=nyt,sortcites=true,giveninits=true,maxbibnames=99]{biblatex}
+\addbibresource{references.bib}
+\definecolor{inklink}{RGB}{20,78,89}
+\usepackage[bookmarksnumbered,hypertexnames=false,colorlinks,linkcolor=black,urlcolor=inklink,citecolor=inklink,pdfencoding=auto,psdextra]{hyperref}
+\usepackage{bookmark}
+\hypersetup{pdftitle={The Alpöge–Claude Argument for the Riemann Hypothesis},pdfauthor={Jimmie Adriazola},pdfsubject={Conditional reconstruction of the argument of Levent Alpöge with Claude}}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape The Alp\"oge--Claude Argument for the Riemann Hypothesis}
+\fancyhead[R]{\small\thepage}\renewcommand{\headrulewidth}{.2pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{chatAtheorem}[theorem]{Theorem}
+\newtheorem{chatAlemma}[theorem]{Lemma}
+\newtheorem{chatAproposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{scalehypothesis}{Hypothesis}
+\renewcommand{\thescalehypothesis}{S}
+\numberwithin{equation}{section}
+\newcommand{\Tot}{\mathcal T}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\src}[2]{\href{https://github.com/lsernau/grh-lean/blob/72fead102f663d5c7a407964a13dc0cf9d977207/grh/src/#1.lean}{#2}}
+\newcommand{\lineSrc}[3]{\href{https://github.com/lsernau/grh-lean/blob/72fead102f663d5c7a407964a13dc0cf9d977207/grh/src/#1.lean\#L#2}{#3}}
+\let\ChatAFile\src
+\let\srcline\lineSrc
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{2}
+\allowdisplaybreaks[1]
+\raggedbottom
+
+\title{\bfseries The Alp\"oge--Claude Argument for the Riemann Hypothesis}
+\author{Jimmie Adriazola$^{1,2}$\thanks{\texttt{jimmie.adriazola@asu.edu}}\\[6pt]
+\small $^1$School of Mathematical and Statistical Sciences, Arizona State University,\\[-2pt]
+\small Tempe, AZ 85287, USA\\[3pt]
+\small $^2$Simon A. Levin Mathematical, Computational and Modeling Sciences Center,\\[-2pt]
+\small Arizona State University, Tempe, AZ 85287, USA}
+\date{November 26, 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+This manuscript reconstructs the determinant argument of Levent Alp\"oge and Claude
+from the Lean~4 refactor by Luke Sernau, his colleagues at Anthropic, and Claude.
+Alp\"oge takes his starting point from Stepanov, who bounded the number of rational points on a curve over a finite
+field by constructing an auxiliary function with a zero of high multiplicity at each point.
+Alp\"oge sought an arithmetic analogue of that multiplicity over the integers.
+Successive theta lifts provide that analogue through increasing divisibility at inert primes.
+For a sum of length \(x\), Claude proposed a chain of about \(\sqrt{x}\) lifts.
+An upper bound for the Gram determinant of translates of short integral forms
+and a lower bound from completing them to a lattice basis give a one-sided
+square-root bound for the smoothed prime sum.
+For each putative zero to the right of the critical line, Alp\"oge chooses a
+prime \(d\) so that twisting the Dirichlet characters by the Legendre symbol
+\((\cdot/d)\) preserves a pole at that zero in the transform of the sum,
+which Landau's theorem rules out. The functional equation for primitive Dirichlet \(L\)-functions reflects any zero left of the critical line in the critical strip to a zero on the right for the conjugate character, so the zero-free half-plane gives the generalized Riemann hypothesis (GRH). This working manuscript gives a written proof of the conditional reduction to the determinant criterion, and work continues on translating the remaining Lean arguments into a proof that the required arithmetic hypotheses hold simultaneously for the theta lifts at each sufficiently large cutoff.
+\end{abstract}
+
+\noindent\textbf{2020 Mathematics Subject Classification.} 11M26, 11M06, 11G05, 11F27, 11F70, 11F80, 14G40.
+
+\input{sections/introduction}
+\clearpage
+\tableofcontents
+\clearpage
+\part{From the determinant estimate to Dirichlet zeros}\label{part:analytic}
+\input{sections/analytic}
+\clearpage
+\part{The determinant comparison}\label{part:determinant}
+\input{sections/setup}
+\input{sections/a}
+\input{sections/b}
+\input{sections/c}
+\input{sections/comparison}
+\clearpage
+\appendix
+\part*{Appendices}
+\addcontentsline{toc}{part}{Appendices}
+\input{sections/jets}
+\input{sections/shells}
+\input{sections/trace}
+\input{sections/finite}
+\input{sections/register}
+\input{sections/extensions}
+\input{references}
+\end{document}

@@ -1,5 +1,11 @@
 # Status
 
+## 26 November 2026
+
+The [canonical working manuscript](../canonical/main.pdf), *The Alpöge–Claude Argument for the Riemann Hypothesis*, follows the readable refactor at revision `72fead1`. Its [source](../canonical/main.tex) and [29-entry bibliography](../canonical/references.bib) accompany the PDF. Appendix E records the arithmetic inputs still required on one datum at each sufficiently large cutoff. Proposition 12.3 gives a sufficient error tolerance for two moments of the same normalized map. The [November 25 manuscript](../manuscript/main.pdf) reconstructs the original archive.
+
+In the earlier manuscript, the abstract term-family definition in §14 permits a term to count in both the identity and nongeneric subclasses. The three-term example breaks the deduction from the two subtotals as written. The suggested disjointness condition also needs to be checked for the intended operator family. The canonical manuscript assumes classification inputs for its own moment argument. Two other corrections concern the earlier manuscript. At subgroup index three, the favored weight in the sampling argument of §5 exceeds its printed upper bound. In §17, evaluation on a single Frobenius can identify distinct characters. The linked discussions give the examples and proposed repairs. [Issue 8](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/8) · [Top-set probabilities in the earlier §5](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/pull/4) · [Character multiplicities in the earlier §17](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/5)
+
 ## 25 November 2026
 
 The [297-page manuscript](../manuscript/main.pdf) follows the original K1 argument in §17.4.3 and records the remaining comparisons in §18.7. The [review guide](../review/README.md) links passages to the pinned release and identifies open questions for independent checking.

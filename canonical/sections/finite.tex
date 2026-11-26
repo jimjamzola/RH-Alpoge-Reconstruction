@@ -1,0 +1,336 @@
+\section{Simultaneous finite-place specialization and the denominator budget}
+\label{sec:finite}\label{c4:finite-repairs}
+
+The regular twist in Section~\ref{c3:twists} must work for every power from
+\(1\) to \(m\) at a given identification \(\iota\).
+We prove the specialization result with the order of the roots bounded
+\emph{before} the auxiliary primes and their polynomials are chosen.
+We also evaluate the sum over primes of the explicit crystalline-loss
+allowance. Its application to crystalline classes is a separate arithmetic
+hypothesis, specified below.
+
+\subsection{A common point for all the polynomials}
+\label{c4:root-spec}
+Fix a prime \(\ell\). Let \(v\) be the ordinary additive valuation on
+\(\overline{\mathbb Q}_\ell\), with \(v(\ell)=1\), \(v(0)=+\infty\);
+write \(\mathcal O\) for its valuation ring. Fix a bound \(s_0\) on the
+number of variables, a positive rational \(u\), a nonnegative real
+\(\beta\), and \(\epsilon>0\). There exists an integer \(h_0\) such
+that the following holds. Let \(P_i\) be any finite collection of
+polynomials over \(\mathcal O\) in \(s\le s_0\) variables and let
+\(x_i\in\mathcal O^s\) satisfy
+\[
+ v(x_{ij})\ge u,\qquad \sum_i v(P_i(x_i))\le\beta.
+\]
+There exist \(\ell^{h_0}\)-th roots of unity \(\zeta_j\), common to all
+\(i\), such that \(v(\zeta_j-1)\le u\) and
+\[
+ v\bigl(P_i((\zeta_j-1)_j)\bigr)\le v(P_i(x_i))+\epsilon
+ \quad\text{for every }i .
+\]
+There is no degree restriction on \(P_i\).
+
+For nonzero \(g=\sum a_k Y^k\in\mathcal O[Y]\), put
+\(v_w(g)=\min_k(v(a_k)+kw)\). This is additive on products for
+\(w\ge0\): in the product take the sum of the smallest indices
+attaining the minima in each factor. Only their product attains the
+minimum at that index. Factoring \(g\) into linear factors over
+\(\overline{\mathbb Q}_\ell\) now gives
+\[
+ v_w(g)=v_0(g)+\sum_{v(\alpha)\ge0}\min(w,v(\alpha)),
+\]
+with roots counted with multiplicity. Indeed each nonintegral root
+already contributes \(v(\alpha)\) at \(w=0\) and at \(w\ge0\).
+For \(v(y)=w\), all factors except those with \(v(\alpha)=w\)
+have \(v(y-\alpha)=\min(w,v(\alpha))\).
+
+Write \(\rho_h=1/\varphi(\ell^h)\), \(h\ge1\). Every primitive
+\(\ell^h\)-th root has \(v(\zeta-1)=\rho_h\): its conjugates have
+the same valuation and their product, up to sign, is
+\(\Phi_{\ell^h}(1)=\ell\). Fix \(0<\delta<1\), \(B\ge0\).
+Choose \(h_0\) so large that
+\[
+ B<\delta\sum_{h\in\mathcal H}\frac1{h+1},\qquad
+ \mathcal H=\{1\le h\le h_0:\rho_h\le u\}.
+\]
+This is possible by divergence of the harmonic series. If
+\(v_u(g)\le B\), and \(R_h\) is the multiset of roots with valuation
+\(\rho_h\), the distinctness of the \(\rho_h\) and the factor formula
+give \(\sum_{h\in\mathcal H}|R_h|\rho_h\le v_u(g)\).
+Some \(h\) therefore satisfies \(|R_h|\rho_h(h+1)\le\delta\).
+
+For \(\alpha\in R_h\), apply the same factor formula to
+\(F(Y)=(Y+1+\alpha)^{\ell^h}-1\). Its roots include
+\(\zeta-1-\alpha\) for every primitive \(\ell^h\)-th root \(\zeta\).
+The coefficient of \(Y\) has valuation \(h\) because \(1+\alpha\) is
+a unit. Hence
+\[
+ \sum_{\zeta\ \mathrm{primitive}}\min\{1,v(\zeta-1-\alpha)\}
+ \le v_1(F)\le h+1.
+\]
+Averaging over the \(1/\rho_h\) primitive roots yields one \(\zeta\)
+for which the sum over \(\alpha\in R_h\) is at most
+\(|R_h|\rho_h(h+1)\le\delta<1\). Every truncated valuation in this
+last sum equals the untruncated valuation. Returning to the factors
+of \(g\), we obtain
+\[
+ v(g(\zeta-1))\le v_{\rho_h}(g)+\delta.
+\]
+
+Take \(\delta=\min(1,\epsilon)/(s_0+2)\) and use \(B=\beta+1\)
+in choosing \(h_0\). Move one coordinate at a time. At a coordinate
+still to be moved let \(g_i(Y)\) denote \(P_i\) evaluated at its
+current coordinates except for this one. Its old coordinate has
+valuation at least \(u\). Apply the one-variable result to
+\(g=\prod_i g_i\), whose \(v_u\) is at most the sum of the old
+valuations. The excesses
+\(v(g_i(\zeta-1))-v_{\rho_h}(g_i)\) are nonnegative and sum to at
+most \(\delta\). Since each \(v_{\rho_h}(g_i)\) is at most the
+old evaluation, each valuation and their sum increase by at most
+\(\delta\) at this step. In particular the sum stays below
+\(\beta+1\) at all steps. After at most \(s_0\) steps the total
+increase for each evaluation is at most \(\epsilon\). The chosen
+\(h_0\) depends only on the prescribed initial bounds.
+
+\paragraph{Powers of one character.}
+Suppose instead that \(v(P_i(x_i))\le\beta_i<\infty\), and fix
+\(m\ge1\). Apply the preceding argument to the polynomials
+\[
+ P_{i,j}(Y)=P_i\bigl(((1+Y_a)^j-1)_a\bigr),\qquad 1\le j\le m .
+\]
+For each original coordinate \(x\), the monic polynomial
+\((1+Y)^j-(1+x)\) has \(j\) integral roots whose product is
+\(\pm x\). At least one has valuation \(\ge u/j\ge u/m\).
+Use this preimage for the starting point of \(P_{i,j}\), the radius
+\(u/m\), and the bound \(m\sum_i\beta_i\).
+The same tuple of roots now satisfies, for every \(1\le j\le m\),
+\[
+ v(\zeta_a-1)\le u/m,\qquad
+ v\bigl(P_i((\zeta_a^j-1)_a)\bigr)\le v(P_i(x_i))+\epsilon .
+\]
+If \(u<1\), a root of order \(\ell^h\) so chosen cannot have order
+dividing \(j\), since otherwise
+\(v(\zeta_a-1)=1/\varphi(\ell^h)\ge1/j>u/m\).
+Consequently
+\(v(\zeta_a^j-1)=\ell^{v(j)}v(\zeta_a-1)\le j\,u/m\le u\),
+where \(v(j)=v_\ell(j)\). This gives nontrivial inertia for every
+one of the required powers.
+
+\subsection{The arithmetic assertion needed before specialization}
+\label{c4:twist-polynomials}
+Here is the exact point at which the Selmer construction enters.
+Start with a CM field \(E\), a finite set \(S_0\) containing the places
+above \(\ell\), an inertial element \(g_0\) above \(S_0\) away from
+\(\ell\), and finite collections of Selmer data and Stickelberger
+systems as in Section~\ref{c3:twists}. Normalize module length by
+\(\operatorname{length}(\mathcal O'/\ell)=1\) for the coefficient
+DVR \(\mathcal O'\). The numerical allowances of the data and systems
+are denoted by \(\beta_i\). Assume the coefficient DVR and a torsion level \(M_0\) have been chosen together with
+\(M_0>\beta_i+1\) for every Selmer datum and residue field size
+exceeding \(2\operatorname{rank}(T_i)
+\operatorname{length}_{\rm unscaled}(\mathcal O'/\ell^{M_0})+1\).
+The following polynomial existence statement is required.
+There is \(s_0\ge1\) such that for every rational \(u>0\) with
+\(s_0u<1\), and all sufficiently large \(N\), there are
+\begin{itemize}
+\item an auxiliary set \(Q\) of at most \(s_0/2\) degree-one primes, with
+\(Q,\bar Q,S_0\) disjoint in the sense that \(Q\cup\bar Q\) avoids
+\(S_0\) and \(Q\cap\bar Q=\varnothing\);
+\item characters \(\lambda_a\) of \(\operatorname{Gal}(\bar E/E)\)
+with values in \(\mathbb Z/\ell^N\), induced by
+\(z\mapsto z/\bar z\) from tame characters of level \(a\), trivial
+above \(\ell\), and surjective on inertia at \(a\);
+\item integral polynomials \(P_i\) and points \(x_i\) on these
+variables with coordinates of valuation at least \(u\) and
+\(v(P_i(x_i))\le\beta_i+s_0u\).
+\end{itemize}
+For \(\zeta_a^{\ell^N}=1\), put
+\(\psi=\prod_{a\in Q}\zeta_a^{\lambda_a}\).
+For each system, \(P_i((\zeta_a-1)_a)\) is its twisted
+group-ring evaluation at \(\psi\). For each datum with this evaluation
+of valuation \(<\beta_i+1\), that valuation bounds the normalized
+length of its divisible-coefficient Selmer group twisted by \(\psi\).
+Sections~\ref{sec:selmer-polynomial-descent} and~\ref{sec:terminal-selmer} give a polynomial construction for abstract Selmer and Stickelberger data, with precise hypotheses on the local conditions, scalar inertia and Euler factors. Application to the critical pairs requires those hypotheses for their actual representations and values.
+
+To deduce the general twisting assertion, it suffices to take
+\(0<\epsilon<1\), decreasing the prescribed tolerance if necessary.
+Choose \(s_0u\le\epsilon/2\), then \(h_0\) for precision
+\(\epsilon/2\), powers \(1,\ldots,m\) and bounds \(\beta_i+1\).
+Only now choose \(N\ge h_0\) and the corresponding \(Q\) and
+polynomials. Every specialized evaluation at \(\psi^j\) has valuation
+\(\le\beta_i+\epsilon<\beta_i+1\). At \(a\), all characters but
+\(\lambda_a\) are unramified and a generator of tame inertia has
+\(\lambda_a\)-value prime to \(\ell\), so its image under \(\psi^j\)
+has the order of \(\zeta_a^j\). The conjugate prime has the same
+order by anticyclotomicity. Thus the sum of the valuations of these
+inertial values minus one is at most \(2|Q|u\le\epsilon/2\).
+This proves the required simultaneous specialization, conditional on
+the polynomial existence statement. The application to lifts further
+requires the asserted Galois representations, local conditions and
+identification of the critical ratios with the Stickelberger systems.
+
+\subsection{The central average for the rank-one line}
+\label{c4:central-average}
+Fix one rank-one lift datum and let \(\phi\) be the lift of the
+constant source form. Put \(P=P_{\mathbb C\phi}\); the case
+\(\phi=0\) is immediate. The test-form condition says that a form is
+integral at every place above \(\ell\) and orthogonal to the false
+lifts lying in the kernel of the normalized descent. The clearing
+operator on \(\mathbb C\phi\) applies to forms orthogonal to false
+lifts lying in \((\mathbb C\phi)^\perp\). These conditions are
+connected by a class sum.
+
+Let \(s_c\) run over representatives of the \(N_0\) chosen-level
+classes on \(U(1)\), integral above \(\ell\). To arrange integrality,
+write a representative as \(a/\bar a\) as below and use weak
+approximation in \(E\) to make \(a\) a unit at all places above
+\(\ell\) by multiplication by a rational idele from \(E^\times\).
+Let \(T(z)\) be central translation on the target multiplied by
+the unitary descent character at \(z\); \(T(z)^*=T(z^{-1})\).
+For the lift kernel \(K(g)\) the central action is
+\(T(z^{-1})K(g)=K(gz)\). This uses the diagonal scalar action in the
+Weil representation (see~\cite{weil} for the representation): its character on the defining block is the
+inverse of the factor multiplying the translation. We use here the
+specified Weil model and its scalar action. Since the stabilizers
+are trivial, \(\phi=\sum_c K(s_c)\), and translating all representatives
+permutes the classes. Thus \(T(z)\phi=\phi\) and, for every \(g\),
+\(\sum_c T(s_c^{-1})K(g)=\phi\).
+
+Write \(S=\sum_c T(s_c)\). If \(z\perp\phi\), the descent of
+\(Sz\) vanishes: its value at \(g\) is
+\(\langle K(g),Sz\rangle=\langle\phi,z\rangle=0\), with the
+usual kernel realization of the normalized descent. Central
+translations commute with each finite Hecke operator and with the
+residue-type idempotent because both are sums of translations.
+Thus \(S\) carries a false lift in \((\mathbb C\phi)^\perp\)
+at a fixed place into a false lift in the descent kernel at the same
+place. If \(\Xi'\) is a test form, \(S^*\Xi'\) is therefore
+orthogonal to the former false lifts. It is also integral at
+\(\iota\): the representatives and their inverses are integral
+above \(\ell\), so scalar translation preserves the local Weyl
+lattice, and the normalizing character is an \(\ell\)-adic
+unit there (the finite-order part is a root of unity and the
+algebraic-weight factors are local units).
+Finally \(PS^*\Xi'=N_0P\Xi'\), since \(S\phi=N_0\phi\).
+
+Suppose the rank-one clearing estimate with exponent \(\gamma\)
+has been established. Its operator on the line is a scalar \(\mu\)
+with \(|\iota\mu|\ge e^{-\gamma}\); its pairing clause gives
+\(|\iota\langle \Xi,\mu P S^*\Xi'\rangle|\le1\) for any form
+\(\Xi\) integral at all places above \(\ell\).
+Since \(\langle P\Xi,P\Xi'\rangle=\langle\Xi,P\Xi'\rangle\),
+\[
+ |\iota\langle P\Xi,P\Xi'\rangle|
+ \le e^\gamma\,|\iota N_0|^{-1}
+ =\exp\bigl(\gamma+v_\ell(N_0)\log\ell\bigr).
+\]
+Only one clearing scalar occurs. Applying the two projections
+separately would lose this coefficient.
+
+\subsection{Summing the explicit loss}
+\label{c4:defect-sum}
+Write \(h=r^8\), \(M=p_0p_1\), and let \(\Pi\) be the product of the
+positive integers in \((b-30h^3,b+30h^3]\), with \(b\) identified
+with its integer value. The local allowance for crystalline defects is
+\[
+ \lambda_\ell=4\cdot10^6 f(m/k)
+     \left[bv_\ell(M)+v_\ell\bigl((2b)!\,\Pi^{h^3}\bigr)\right].
+\]
+For every positive integer \(A\) and finite prime set \(F\) unique
+factorization gives \(\sum_{\ell\in F}v_\ell(A)\log\ell\le\log A\).
+The interval has at most \(60h^3\) members. Therefore
+\begin{align*}
+ \sum_{\ell\in F}\lambda_\ell\log\ell
+ &\le 4\cdot10^6 f(m/k)
+   \bigl[b\log M+2b\log(2b)+60h^6\log(b+30h^3)\bigr]\\
+ &\le 4\cdot10^6 e^{180} f(m/k)bL .
+\end{align*}
+Indeed \(p_i\le b^{11}\), \(r\le3x^5\le x^6\), and
+\(b\ge x^{10^{12}}\), so \(60h^6\le b\), \(30h^3\le b\) and
+\(\log(2b)\le2L\). The bracket is already at most \(28bL\).
+This computes the sum of the proposed local allowances. The
+comparison of crystalline cocycles with these allowances for the
+main summands enters the generator-wise congruence estimate.
+
+\paragraph{Field and class counts.}
+The elementary field-size bounds can be taken directly from the
+parameterization. With tower exponent \(s\ge1\), the root order is
+\(q_1=q_0\,3^{\lfloor\log_3s\rfloor+5}2^s\), where \(2^s=m^{22}\),
+\(s\le32\log x\), \(m\le2\sqrt{x}\), and \(q_0,d\le\log x\).
+Thus \(q_1\le 2^{36}x^{11}(\log x)^2\le x^{23/2}\); the latter
+inequality follows from \(\log x\ge100\log L\) and
+\(\log L\ge64\cdot10^{12}\).
+The field \(E=\mathbb Q(\sqrt{-d},\zeta_{q_1})\) has
+degree \(n_E=2f\le2q_1\) and embeds in the cyclotomic field of
+conductor \(C=q_1d\le x^{13}\). Here the quadratic field is contained
+in the \(d\)-th cyclotomic field by the quadratic Gauss sum
+(\(d\equiv3\bmod4\)). The discriminant formula for cyclotomic fields
+gives root discriminant at most \(C\); the relative discriminant
+formula gives the same upper bound for the subfield \(E\).
+
+Minkowski's ideal-class bound gives an integral ideal of norm
+\(k_0\le B=2^{n_E}|\operatorname{disc}E|\) in every class.
+An ideal \(I\) of norm \(k_0\) contains \((k_0)\); the ideal
+\(I/(k_0)\) in \(\mathcal O_E/(k_0)\) is principal, since this
+ring is a product of quotients of DVRs. Hence \(I=(k_0,a)\) and
+there are at most \(k_0^{n_E}\) choices of \(a\bmod k_0\). We obtain
+\[
+ \log h_E\le(n_E+1)n_E\log(2C)\le x^{28}.
+\]
+Let \(N_0\) be the number of chosen-level classes of the rank-one
+unitary group of \(E/E^+\). The map from finite ideles of \(E\)
+to the norm-one finite ideles given by \(z\mapsto z/\bar z\) is
+onto. Locally this is Hilbert's Theorem~90~\cite[II, Corollary~1.23]{milneCFT} (at a split pair, take
+\((z,1)\)). At an unramified nonsplit place one can make an antecedent
+a unit by multiplying by a power of a base-field uniformizer,
+so one obtains a finite idele. For the quadratic local assertion
+one may explicitly take the antecedent \(1+y\) for a norm-one
+\(y\ne-1\), and a nonzero element of trace zero for \(y=-1\).
+The image of \(E^\times\) is rational and an integral unit idele
+congruent to \(1\) modulo \(M\mathcal O_E\) maps into the chosen
+level: it reduces to \(1\) at each chosen place above \(p_0,p_1\).
+Thus the ray class group modulo \(M\mathcal O_E\) surjects onto
+the indicated unitary class quotient. Its order is at most
+\(h_E|(\mathcal O_E/M)^\times|\le h_E M^{n_E}\). In particular
+\[
+ \log N_0\le x^{28}+22 n_E L\le x^{30}.
+\]
+Finally, at the chosen places the group defining \(G_0\) is a
+product of \(\operatorname{GL}_{rt}\) over residue fields,
+\(t=5r\). At all chosen places over \(p_i\) the sum of residue
+degrees is at most \(n_E\). Counting all matrices gives
+\(\log G_0\le (rt)^2 n_E\log M\le x^{32}\), since
+\(rt\le45x^{10}\), \(n_E\le2x^{23/2}\), and \(L\le x^{1/100}\).
+These estimates also apply to every finite sum of prime valuations
+of the three integers with logarithmic weights.
+
+\paragraph{A uniform cohomological integer.}
+The first-order estimate uses one positive integer \(O_*\) whose
+normalized prime valuations control odd Tate-twist classes at all
+torsion levels for \(0\le e<t\), for coefficient DVRs containing the roots of unity of order \(\exp((\mathbb Z/C\mathbb Z)^\times)\), with the unramified classes when
+\(e=0\). The required bound is
+\(O_*\le 2^{4(C+t+3)^{27}}h_E\); Section~\ref{sec:odd-cocycles-reduction} gives a classical derivation for the specified cocycle groups. With this bound, \(\log O_*\le x^{2000}\)
+follows from \(C\le x^{13}\), \(t\le15x^5\), and the preceding
+class-number estimate. The denominator-error valuation is exactly
+\[
+ t v_\ell(O_*)+
+ \{8ft+2+(4t+1)h^{22}+h\}v_\ell(G_0).
+\]
+As \(h\le x^{48}\), the coefficient in braces is at most \(x^{1100}\);
+the sum of this error with logarithmic prime weights is therefore
+at most \(x^{4000}\). The twist error
+\(u_\ell=(4f+3)r v_\ell(G_0)+2^{-\ell}\) has weighted sum
+at most \(x^{999}\) by the group-order estimate and
+\(\sum_{n\ge1} n2^{-n}=2\).
+
+Adding the defect allowance, \((1+2t)u_\ell\), the denominator
+error, \(v_\ell(G_0)\) and \(v_\ell(N_0)\) gives a sum with
+logarithmic weights at most \(B_0=fxbL^3/(mk)\).
+Indeed the defect term divided by \(B_0\) is at most
+\(16\cdot10^6e^{180}/L^2\le 1/2\), by \(m^2\le4x\).
+All other terms sum to at most \(x^{4002}\le B_0/2\), since
+\(1\le f\), \(k\le r+1\le4x^5\), \(m\le2\sqrt{x}\), and
+\(b\ge x^{10^{12}}\). This closes the numerical estimate for
+the local denominators with the asserted arithmetic inputs.
+
+\input{sections/cohomath}

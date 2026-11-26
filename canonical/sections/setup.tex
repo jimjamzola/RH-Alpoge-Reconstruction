@@ -1,0 +1,141 @@
+\section{The datum, the signed sum and the two lattice bounds}\label{sz:setup}
+For a positive multiple $q_0$ of $18480$ and a prime $d\equiv q_0/2-1\pmod{q_0}$,
+write $P=(q_0,d)$. The following conditions specify an admissible datum
+$D$ for $P$. Theorem~\ref{thm:p1-data} constructs such data at every
+sufficiently large integer length. The construction hypotheses on forms
+and lifts will be imposed separately for each datum.
+
+\paragraph{Scales and places.}
+The positive integers $x,x_1,b$ have logarithms satisfying
+\[
+ 10^{12}C_P\le\log L,\quad L^{100}\le x,\quad x^{10^6}\le x_1,
+ \quad x_1^{10^6}\le b,\quad (\log x_1)^6\le L,\qquad L=\log b .
+\]
+The parameter constant $C_P$ is the fixed constant in
+\srcline{New/Reduction/Data/AdmissibleData}{50}{the definition of admissibility}.
+In particular $C_P\ge64$ and it bounds
+$|c_K|$, where $c_K=\gamma-\Re(L'/L)(1,\chi_d)$ and $\chi_d(n)=(n/d)$.
+The length $m$ is a positive power of two in $[\sqrt x,2\sqrt x]$ and the
+unitary rank $r$ a positive power of three in $[x^5,3x^5]$.
+Take $s=22\log_2 m\le32\log x$,
+$\ell_0=3^{\lfloor\log_3s\rfloor+4}$,
+$A=3\ell_0 2^s$, $q_1=q_0A$ and $q_2=(q_0d)^{s+6}$, with $q_1x_1\mid b$.
+Put $a=xb$, $K=\mathbb Q(\sqrt{-d})$ and $E=K(\zeta_{q_1})$.
+Represent its infinite places by the embeddings extending a fixed embedding of
+$K$. They form the group $\Phi\simeq(\mathbb Z/q_1)^\times$ and $f=|\Phi|$.
+The fibre $\Phi_a$ over $1\bmod q_0$ has size $A$. In the fibre over
+$-1$ choose $\Phi_b$ with $|\Phi_b|L\ge A$. Put $k=r+1-m$.
+For every prime $p\le k(5r)$ and $0<i<j<\ell_0$, there are no
+$\sigma,\tau,\rho\in\Phi_b$ with
+$\tau/\sigma\equiv\pm p^i$, $\rho/\sigma\equiv\pm p^j$
+modulo the prime-to-$p$ part of $q_1$, with the signs chosen independently.
+The place weight $\kappa(\tau)$ equals $b$ on $\Phi_b$ and $a/x_1$ elsewhere.
+
+The distinct level primes $p_0,p_1$ lie in $[b^{10},b^{11}]$ and the
+auxiliary prime $N$ has the logarithmic window below. All three are
+$1\bmod q_2^2$. Write $M=p_0p_1$, $\log\bar\kappa=f^{-1}\sum_\tau\log\kappa(\tau)$,
+and $\mathrm{rd}_E=|\mathrm{disc}(E)|^{1/(2f)}$. There is an integer of $K$
+whose product with its conjugate is $M$ and an integer of $E$ with corresponding
+product $N$; these choices are part of $D$. The required window is
+\[
+ \log N_-\le\log N\le\log N_-+\sqrt L,\quad
+ \log N_-=m\log\bar\kappa+(m-1)\log(M\mathrm{rd}_E/(2\pi))-15L/2 .
+\]
+
+\paragraph{The two scalar quantities.}
+For $h\in\mathbb N$ put $j(h)=\log(h!)+h\log(M/\Omega)$,
+where $\Omega=2\pi e^{c_K}/\mathrm{rd}_E$. Set $u(t)=t\bmod q_1$ if $t$ is a
+unit modulo $q_1$, and $u(t)=1$ otherwise. With $v_+=\max(v,0)$ set
+\[
+ S(y,\tau)=\sum_{1\le\nu\le a}\Lambda(\nu)(1-\chi_d(\nu))
+       (y/\nu-\kappa(u(-\nu)\tau))_+,
+ \qquad S_0=a(\log a-\log\bar\kappa+c_1).
+\]
+Here $c_1=c_{d,1}$ is the modulus-one centering constant in \eqref{eq:R}. Explicitly
+$c_1=\Re[(L'/L)(1,\chi_d)-((s-1)\zeta(s))'/((s-1)\zeta(s))|_{s=1}-1]$,
+where $(s-1)\zeta(s)$ has its regular value at $1$. Thus $c_1=-c_K-1$.
+With the normalization of \eqref{eq:total}, the signed excess
+and the common main height are
+\begin{equation}\label{sz:height}
+ \Tot_D=\sum_{\tau\in\Phi_a}(S(a,\tau)-S_0),\qquad
+ H=mk\sum_{\tau\in\Phi}\bigl(j(\kappa(\tau))-S(\kappa(\tau),\tau)\bigr).
+\end{equation}
+Write $U=faL^3$ and $V=faL^4$. The arguments of $S$ and the sets of places
+in these two sums differ. Both determinant estimates use exactly this $H$.
+
+\paragraph{The spaces and maps.}
+Let $X$ be the space of algebraic forms on the definite rank-$k$ space
+$X_0$ at its prescribed level and Weyl weight. At each of the $f$ chosen places
+$w\mid N$ there is a central scaling translation $T_w$ of order dividing
+$N-1$. The ramified source is $S=\bigcap_w\ker(\sum_{i=0}^{N-2}T_w^i)$.
+The argument of $S(y,\tau)$ distinguishes the prime sum from this space.
+Write $Y$ for the principal-level automorphic forms of the prescribed type
+on the rank-$r$ space $Y_0$, with the Petersson inner product. The finite
+residue group $G$ at the chosen places of $p_0,p_1$ acts through $\rho$.
+The central good-type projector $e_0$ has image $Y_T=e_0Y$.
+The domain dimension of the normalized maps is $d_S=\dim_\mathbb C S$,
+their target dimension is $d_T=\dim_\mathbb C Y_T$, and $d_X=\dim_\mathbb C X$.
+For the Poincar\'e map $\Pi:X\longrightarrow Y$ defined by the chosen Bessel
+functional and point, the normalization used throughout is
+\[
+ P_g=c_B c_{\rm ss}^{-1}|G|\,e_0\rho(g)\Pi|_S,\qquad g\in G .
+\]
+The seesaw gives the common unit $c_{\rm ss}$, and the local divisibility
+bounds determine the positive rational $c_B$ in Section~\ref{A:section}.
+Centrality implies $P_g=\rho(g)P_1$. At each infinite place $Y_0$ has signature $(r-m/2,m/2)$: the initial
+string of length $m-1$ contributes $m/2-1$ hyperbolic pairs and one
+negative central line, in addition to $k$ positive directions. The chain $\Theta_\xi$ takes its good forms through $m$ lifts
+to algebraic forms on the definite terminal space $Y_m$.
+
+An $m$-fold twist $\xi$ is a weight-zero tame automorphic character of
+$U(1)$ with the admissible finite support disjoint from its conjugate
+and of norm prime to $MN$. Every power $\xi^j$, $1\le j\le m$, has
+nontrivial tame character at every place of that support. Let $N_\xi$ be
+the product of the residue norms on the support. It is allowed at $p$ if
+$p\nmid N_\xi$. The empty-support trivial twist is denoted by $1$.
+For an identification $\iota:\mathbb C\simeq\overline{\mathbb Q}_p$ write
+$|z|_\iota=|\iota z|_p$ with $|p|_p=p^{-1}$ and $O_\iota=\{z:|z|_\iota\le1\}$.
+Integrality of an algebraic form means that each adelic value, transported
+back by the inverse finite local action, lies in the integral Weyl module.
+Write $\mathcal I\subset S$ for source forms integral for every $p,\iota$
+and $\mathcal L_{\xi,\iota}$ for the corresponding module at the end of the chain.
+
+\paragraph{Index and squared covolume.}
+For a finite indexed family $y=(y_i)$ in $Y_T$, the assertion
+$\operatorname{IndexLe}(y,\Delta)$ has the following order of quantifiers.
+There exist numbers $e_p\ge0$ with $\sum_{p\in F}e_p\log p\le\Delta$ for
+every finite set of primes $F$. For every prime $p$ and every $\iota$ above it
+there exists one square matrix $u_\iota$ over $O_\iota$ on the index set of
+$y$, satisfying
+\begin{equation}\label{sz:index}
+ |\det u_\iota|_\iota\ge p^{-e_p},\qquad
+ \Theta_\xi\!\left(\sum_j (u_\iota)_{ij}y_j\right)\in\mathcal L_{\xi,\iota}
+ \quad\text{for all }i\text{ and all }\xi\text{ allowed at }p.
+\end{equation}
+At a fixed identification the same rows must work for every allowed twist.
+
+Let $v_\sigma(z)$ be the vector obtained by applying
+$\sigma\in\operatorname{Aut}(\mathbb C)$ to each of the prescribed
+coordinates of $\Theta_1z$ at the terminal class representatives.
+The class pairing has a rational positive definite matrix $G_{\rm cl}$
+in these coordinates. Set $N_\sigma(z)=v_\sigma(z)^*G_{\rm cl}v_\sigma(z)$.
+Then
+\begin{equation}\label{sz:covol}
+ \operatorname{CovolumeLe}(y,c)\quad\Longleftrightarrow\quad
+ \left|\det\bigl(v_\sigma(y_i)^*G_{\rm cl}v_\sigma(y_j)\bigr)_{ij}\right|
+       \le e^c\qquad(\sigma\in\operatorname{Aut}(\mathbb C)).
+\end{equation}
+The Gram matrix is formed \emph{after} acting on coordinates, so it is positive
+semidefinite for every field automorphism. This order matters even with rational
+$G_{\rm cl}$, since an arbitrary $\sigma$ can fail to commute with complex conjugation.
+
+\paragraph{Statement and dependencies.}
+For a fixed admissible $D$, the hypotheses of
+Sections~\ref{A:section}, \ref{B:frontier} and \ref{c3:frontier}
+imply the pointwise determinant estimate \eqref{eq:det}.
+Theorems A and B produce an independent family with small squared
+covolume and controlled index. Theorem C applies to that same family.
+Section~\ref{sz:comparison} deduces the estimate and gives the
+quantifiers required for Hypothesis~\ref{hyp:scale}.
+Appendix~\ref{sz:register} records the construction steps that
+remain hypotheses.

@@ -1,0 +1,203 @@
+\subsection{Integral coordinates and separation of rational frames}
+\label{moment:rigidity}
+Let $u=\varrho$, $n=u+1$, and write the ordered frame as
+$F=(e_0,\ldots,e_{u-1},z)$, with $f_u=z$. In rational coordinates the Hermitian
+space is the orthogonal sum of $u$ hyperbolic planes and $X_0\perp Ez$,
+where $X_0$ has identity Gram matrix and $\langle z,z\rangle=-N$.
+The $e_i$ pair with their duals $e_i^*$. At a complex place $v$, let
+$\Phi_v$ be the chosen embedding and put $s_{va}=g_v^{u-a}/\sqrt N$ for
+$0\le a\le u$, where $1\le |g_v|\le b^{23}$ is the local scale.
+Changing to the normalized real-place basis multiplies the matrix entry
+in row $i$, column $j$ by $s_{vj}/s_{vi}$ on frame rows and columns.
+On $X_0$ use scale one and on $e_a^*$ the inverse scale of $e_a$.
+The normalized Gram operator $J$ exchanges each hyperbolic pair, is the
+identity on $X_0$ and acts by $-1$ on $z$. In particular $\|J\|=1$.
+
+\paragraph{Two families of algebraic integers.}
+Let $B_c$ be the finite adelic class basis. In the standard lattice basis
+one middle column $x$ of $X_0$ is replaced by $x/\bar\pi+z/N$,
+where $\pi\bar\pi=N$; the basis is then moved by the class representative
+acting isometrically on $X_0$. Each $B_c$ fixes the frame columns and
+leaves the rows along $e_i$ unchanged. Its integral Gram matrix
+$J_{\rm lat}=B_c^*J_{\rm rat}B_c$ is independent of the class:
+the altered column has squared Hermitian length $1/N-1/N=0$
+and pairing $-1$ with $z$. For every rational term $g$ with
+$K=B_c^{-1}gB_{c'}$ integral at the finite places, the two families
+\[
+ Z_{ja}(g)=\langle f_j,g f_a\rangle,\qquad
+ A_{ia}(g)=(g f_a)_{e_i}\quad(0\le i<u)
+\]
+belong to $\mathcal O_E$. Indeed $Z_{ja}(g)$ is the $(f_j,f_a)$ entry
+of $J_{\rm lat}K$ and $A_{ia}(g)$ is the corresponding row and
+column of $K$. These equalities also hold at places dividing $N$.
+
+\begin{lemma}\label{moment:fixed-frame}
+Put $\rho=b^{37n}R$, $R\ge1$. In the normalized bases let $y_v$ be
+points with $\|y_v^{-1}f_j\|\le\rho$ and Bessel length at most
+$b^{6n+2}R$. Suppose that for a rational term $g$ as above, writing
+$g_v$ for its normalized matrix,
+\[
+ \delta_{va}:=\|y_v^{-1}(g_v-1)f_a\|<(N\rho)^{-1}
+ \qquad\text{for all }v,a.
+\]
+Then $gF=F$.
+\end{lemma}
+\begin{proof}
+With the displayed change of basis,
+\[
+ |\Phi_v(Z_{ja}(g)-Z_{ja}(1))|
+ \le |s_{vj}s_{va}|^{-1}\,\|y_v^{-1}f_j\|\,\delta_{va}
+ \le N\rho\,\delta_{va}.
+\]
+This is Cauchy--Schwarz applied to the normalized Gram operator after
+using invariance of the form under $y_v$. An algebraic integer of
+modulus strictly below one at each chosen embedding is zero, by its
+absolute norm. Hence every pairing agrees with its value for the identity.
+Pairing with the $e_i$ and $z$ gives the expected dual and $z$
+coordinates of $g f_a$. Unitarity gives the same length as $f_a$.
+After those coordinates have been fixed, the difference can have no
+$X_0$ component: the remaining contribution to the length is the sum
+of its squared absolute coordinates at a complex embedding. Consequently
+$(g-1)f_a=\sum_{i<u}d_i e_i$ with $d_i=A_{ia}(g)-A_{ia}(1)\in\mathcal O_E$.
+
+Fix $a$ and descend on $i$. After $d_j=0$ for $j>i$, the $i$th row of
+any Bessel unipotent $w$ applied to $(g_v-1)f_a$ equals
+$\Phi_v(d_i)s_{va}/s_{vi}$, by unitriangularity on the isotropic flag.
+The Bessel subgroup splits as a unipotent times a compact middle
+isometry acting isometrically in the normalized Euclidean metric.
+Thus the infimum defining the length permits a unipotent $w$ with
+$\|w y_v\|\le b^{6n+2}R$ (the additive one in the length absorbs
+the approximation to its infimum). It follows that
+\[
+ |\Phi_v(d_i)|\le b^{23u}\|w y_v\|\delta_{va}
+ \le b^{23u+6n+2}R\,\delta_{va}\le\rho\,\delta_{va}<1 .
+\]
+The norm argument gives $d_i=0$ and closes the induction.
+\end{proof}
+
+\paragraph{Support and orbit weights.}
+In rational frame coordinates take a reduced cutoff, supported where
+the entries above the diagonal in the Gram--Schmidt coefficient matrix,
+before archimedean rescaling, belong to a residue domain for
+$M\mathcal O_E$ of sup radius $b^{26}$. At indices $a<j$ rescaling
+multiplies the entry by $s_{vj}/s_{va}$ of modulus at most one.
+The successive orthogonal residuals of $y_v^{-1}F$ have length at
+most the Bessel length: the residual norms are unchanged by the
+unitriangular action on the flag, and each is bounded by the norm of
+the corresponding column after such a move. In normalized coordinates
+$\|(wy_v)^{-1}\|=\|wy_v\|$ by $J$-unitarity. Thus each frame vector
+has norm at most $n b^{26}\ell(y_v)\le b^{27}\ell(y_v)$.
+On the length sublevel in \S\ref{B:cutoff} this is at most $\rho$.
+For two contributing terms $p,q$ with the same starting class,
+apply Lemma~\ref{moment:fixed-frame} to $p^{-1}q$ at $p^{-1}y$.
+The relative term is integral between the two ending class bases since
+the original finite matrices are invertible integral. Distinct rational
+frames therefore have distance at least $(N\rho)^{-1}$ in the maximum
+of the column norms over the embeddings.
+
+If the frames and reductions agree, $p^{-1}q$ fixes $F$ and has
+trivial finite reduction in the moved bases. Its component on
+$X^\perp/X$ for $X=\langle e_i\rangle$ fixes $z$, hence acts on
+$X_0$ by an isometry. The fitted level restricts on this definite
+factor to the source level: the middle component on the quotient of
+a principal congruence element lies in this level. It follows that
+the ending representatives define the same source double coset.
+Freeness at that level now makes the rational definite component
+the identity. Thus the relative term belongs to the congruence
+unipotents fixing the frame. Fixing one term in a fibre, every other
+term gives a distinct such unipotent by taking the relative element.
+For a cutoff whose translates by the class unipotent group sum to one,
+nonnegativity bounds the weight of this fibre by one.
+
+\paragraph{Construction of the cutoff on the required scales.}
+We now construct the reduced cutoff just used, for the free level and
+class bases of the fitted model. Write $\Gamma_c$ for the rational
+Bessel unipotents in the principal congruence subgroup at $c$, and
+$\Gamma_c^0$ for those fixing the frame pointwise. We compute the
+image of $\Gamma_c$ on $F$. It consists of all upper unitriangular
+$n$-by-$n$ matrices with entries in $M\mathcal O_E$ above the diagonal.
+In fact $(g-1)/M$ is integral in the moved basis for $g\in\Gamma_c$.
+At the split level primes it suffices to impose the congruence on the
+chosen member of each pair: unitarity recovers the inverse adjoint
+congruence on the conjugate member, as the lattice Gram matrix is
+unimodular. At every other place $M$ is a unit. The top-row coordinates
+computed above therefore give the inclusion in this unitriangular group.
+
+For surjectivity fix $i<j$ and $a\in\mathcal O_E$. There is a rational
+functional $\lambda$ integral on the class lattice, with
+$\lambda(f_l)=a\,\mathbf1_{l=j}$ and zero on the other standard
+basis vectors outside $X_0$. Indeed the corresponding adelic row of
+$aB_c^{-1}$ has the prescribed entries there. Integrality on the
+lattice is an open condition on the remaining finite-adelic entries,
+so additive strong approximation supplies rational entries on $X_0$.
+Write $\lambda=\langle v,\cdot\rangle$. The class lattice is self-dual
+(the changed two-column Gram block has determinant $-1$), hence $v$
+belongs to it. Put $x=e_i$, so that $\langle x,v\rangle=0$.
+Choose $\tau=-M\zeta_3\in\mathcal O_E$, so $\tau+\bar\tau=M$.
+Writing $v^\flat=\langle v,\cdot\rangle$, the map
+\[
+  g=1+M\bigl(xv^\flat-vx^\flat-\tau\langle v,v\rangle x x^\flat\bigr)
+\]
+preserves the form. In expanding $g^*J_{\rm rat}g$ the squared
+term is $M^2\langle v,v\rangle (x^\flat)^*x^\flat$ and the linear
+terms cancel it. The formula is integral and congruent to one at the
+moved level. It fixes $e_l$ for $l\le i$, adds only multiples of $e_i$
+to later isotropic frame vectors, and acts trivially on the middle
+quotient; the adjoint action on the dual flag is then forced. Hence
+it belongs to $\Gamma_c$. On the frame its matrix is $1+aM E_{ij}$
+because $x^\flat$ vanishes on the frame. These elementary matrices
+generate the indicated group by successive elimination of the upper
+diagonals. The kernel is $\Gamma_c^0$.
+
+The additive lattice $M\mathcal O_E$ in $\mathbb C^f$ has a Borel
+domain of representatives of sup radius at most $b^{26}$.
+For the fields of Theorem~\ref{thm:p1-data}, the $2f$ elements
+$\zeta_{q_1}^a,\sqrt{-d}\,\zeta_{q_1}^a$, $0\le a<f$, are a
+rational basis of algebraic integers by coprimality of the two
+conductors. Their Minkowski images are a real basis. Rounding the
+coordinates in this basis gives, for the sublattice generated by
+their $M$-multiples, covering radius at most
+$Mf(1+\sqrt d)/2$. The larger lattice has no greater covering
+radius. Since $M\le b^{22}$, $f\le q_1\le b$ and $d$ is fixed,
+the claim holds eventually. Choose a nearest representative in
+the sup norm, breaking ties lexicographically among the finitely
+many minimizing representatives. The resulting domain is Borel
+by discreteness and countability.
+
+Let $T(y)$ be the upper unitriangular matrix expressing the frame in
+its Gram--Schmidt residuals, conjugated back by the diagonal scales.
+When $y$ is replaced by $\gamma y$, $\gamma\in\Gamma_c$, this matrix
+is right multiplied by the inverse frame matrix of $\gamma$. This
+follows since adding earlier columns to a column preserves its
+orthogonal residual; diagonal conjugation restores the original
+rational coefficients. Reduce the entries of $T(y)$ into the chosen
+additive domain in order of increasing superdiagonal. Right
+multiplying by $1+M a E_{ij}$ changes entry $(i,j)$ by $Ma$,
+affecting only more distant superdiagonals in that column. Existence
+and uniqueness of each additive representative now give precisely one
+coset of $\Gamma_c^0$ that takes $y$ into the reduced set.
+
+Finally $\Gamma_c^0$ is discrete at infinity. A compact archimedean
+set allows only finitely many rational matrices satisfying the fixed
+finite-place lattice conditions, since their entries have bounded
+denominators and bounded conjugates. There is a Borel fundamental
+set for its free action by left translations: cover the ambient Lie
+group by countably many open sets each disjoint from its distinct
+translates and discard the orbits covered by earlier sets. Multiply
+the indicator of this fundamental set by the reduced-set indicator.
+Its sum over $\Gamma_c$ is exactly one, since reduction selected
+one coset and the first indicator selects one element in that coset.
+The same conclusion holds with any nonnegative measurable
+$\Gamma_c^0$ cutoff whose translates sum to one. Thus the support
+and weight properties hold for the class cutoffs used in the
+amplitudes, regardless of that last choice.
+
+On the constructed scales, F4 therefore follows for the fitted free
+level, integral class bases, archimedean scales and reduced-cutoff
+definition above. The existence of the actual filling with these
+data (F0) and its identification with the period map (F1) are
+separate requirements. The finite and archimedean basis computations
+and the reduced-cutoff construction correspond to
+\lineSrc{New/Spanning/Unfolding/Terms}{618}{frame integrality},
+\lineSrc{New/Spanning/Unfolding/Packing}{286}{frame separation}, and
+\lineSrc{New/Spanning/Unfolding/ReducedPoints}{637}{the box partition}.

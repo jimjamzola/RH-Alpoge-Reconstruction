@@ -1,0 +1,413 @@
+\section{Short forms and the index of their translates}\label{A:section}
+With the conventions of Section~\ref{sz:setup}, let $X_j,Y_j$ be the two towers of hermitian spaces over $E$, $0\le j\le m$. The upper chain acts on the definite groups $U(X_j)$ and restricts at the top to $U(Y_m)$. The lower chain begins on $U(Y_0)$.
+\begin{chatAtheorem}[Short forms and index]\label{A:main}
+Assume the estimates $\mathsf A_{\rm loc}$ specified below.
+The set
+\[
+ \mathcal S=\{\phi\in\mathcal I:\ N_\sigma(P_g\phi)
+       \le \exp(H-m\Tot_D+V)\text{ for every }g,\sigma\}
+\]
+spans $S$ over $\mathbb C$. For any finite $t\subseteq G$ and any finite indexed family with $y_i=P_{g_i}\phi_i$, $g_i\in t$, $\phi_i\in\mathcal I$, the target lattice satisfies
+\begin{equation}\label{eq:short-index}
+ \operatorname{IndexLe}(y,2|t|d_SU).
+\end{equation}
+\end{chatAtheorem}
+\noindent\textit{Hypotheses $\mathsf A_{\rm loc}$.}\label{A:inputs}
+For use independently of the formal development, the following statements about the prescribed data suffice.
+\begin{enumerate}
+\item For free-level evaluation use the integral Weyl polynomial model at each place and its unitary Gram norm as specified in Section~\ref{A:source}. The required short independent columns follow from Euclidean transference.
+\item For the chosen Bessel functional and point, the orbit expansion, absolute convergence, finite vacuum decomposition and terminal definite pairing in Section~\ref{A:unfold} hold with the coefficient bounds stated there. For the trivial twist the corresponding one-stage kernels satisfy \eqref{A:onelift}, with the row majorants, CM period identity, class counts and integral branching estimates used in deriving \eqref{A:chain}.
+\item At small nonsplit primes assume the vacuum product and one-curve inputs in Appendix~\ref{sec:jets}. At ordinary primes assume the standard-datum integral gauge, and at marked primes the spherical transfer identity, diagonal-neighbour gauge and edge estimates applied in Section~\ref{A:local}. The precise averaging and residue estimates at a marked prime are detailed in Section~\ref{A:edgecalc}.
+\item At $N$ assume the shifted-lattice elementary divisor bound, the direct-datum gauge $N^{fb}$ and the one-pair gluing and commutation identities for ramified source forms in Section~\ref{A:local}.
+\end{enumerate}
+Sections~\ref{A:source}--\ref{A:indexsec} derive the two assertions under these hypotheses. The first assertion retains every translate of each short generator. The second permits every integral preimage, with any finite family size. The source concordance identifies the inputs within the four statements that still require separate mathematical proofs.
+
+\subsection{Short vectors at the source}\label{A:source}
+For a source form $v$ write $|v(u)|_{\sigma,\mathrm w}^2$ for the squared Weyl norm of the value at a finite adelic point $u$, with $\sigma$ applied to its coordinates. We use this Weyl norm on the coefficient representation at each level. Say $v$ is $B_0$-short if its values are integral in the local Weyl lattices at every finite place and
+\[
+ |v(u)|_{\sigma,\mathrm w}^2\le B_0\qquad (\sigma\in\operatorname{Aut}(\mathbb C),\ u\in U(X_0)(\mathbb A_f)).
+\]
+The target norm uses a sum over classes. We take that sum only after projection.
+
+\paragraph{Short bases at a free level.}\label{A:shortbase}
+We use the short-basis theorem for forms at a free level, that is, a level with trivial stabilizer at every double coset. In rank $k$ over the CM field $E$, let $D_0$ be a positive integer in the different, and let $J$ be at least $kf$ plus the number of boxes in columns of height below $k$. Then integral forms with pointwise squared norm bounded by $[6D_0(fk)^2]^{6J}$ at all conjugates span the level space. At the initial level $D_0=q_1d$ is admissible, the columns of height below $k$ have at most $fa$ boxes, and the scale estimate reads
+\begin{equation}
+ 4^f[6q_1d(fk)^2]^{6(kf+fa)}\le e^U.
+ \label{A:base}
+\end{equation}
+Consequently there is a spanning set $\mathcal V_0\subset X$ of $(e^U/4^f)$-short forms.
+
+Here is the lattice argument underlying this input. Choose representatives $c$ for the double cosets. At a free level, evaluating a form at the $c$ identifies the space with a direct sum of copies of the coefficient representation. A vector at $c$ extends to a form supported on its coset. Its integral gauge is bounded by the seed gauge, and its squared norm by the seed norm times the square of the stabilizer order, which here equals one.
+
+At $c$ one needs $k$ independent columns in the moved lattice
+\[
+ L_c=\{y\in E^k:(c^{-1}y)_f\in\widehat{\mathcal O}_E^{\,k}\}.
+\]
+The short-basis estimate gives a matrix $Y_c\in\mathrm{GL}_k(E)$ with columns in $L_c$ and every conjugate of every entry bounded by $6D_0(fk)^2$. For the transference argument, use $\frac12\operatorname{Tr}_{E/\mathbb Q}\langle\ ,\ \rangle_E$ in the Minkowski space of real dimension $h=2fk$. Locally $c$ is unitary and the standard integral lattice is hermitian self-dual, with conjugate places paired. Thus $L_c$ is hermitian self-dual globally. If $\mathfrak D$ is the different, the Euclidean dual lattice of $L_c$ is $2\mathfrak D^{-1} L_c$: the trace condition for all integral multiples of a vector in $L_c$ is precisely membership of its hermitian pairings in $2\mathfrak D^{-1}$. It follows that the dual of $(2/D_0)L_c$ is $D_0\mathfrak D^{-1} L_c\subset L_c$. The squared Euclidean length of a nonzero $y\in L_c$ is the trace to $\mathbb Q$ from the totally real field of the totally positive algebraic integer $\langle y,y\rangle_E$. It is a positive integer. Thus the dual minimum is at least one.
+
+For a full Euclidean lattice $\Lambda$ of dimension $h$, Banaszczyk's transference theorem~\cite[Theorem~2.2]{banaszczyk} bounds $\mu(\Lambda)\lambda_1(\Lambda^*)$ by $h$, which in particular gives the coarse $h^2$ used here. Apply it to $(2/D_0)L_c$. When a lattice has covering radius at most $r$, its vectors of length at most $3r$ span the real space. Otherwise a point of length $2r$ perpendicular to their span would have a lattice point within $r$, necessarily short and outside the span. Rescaling gives real-spanning vectors in $L_c$ of length at most $3D_0 h^2/2=6D_0(fk)^2$. Their $E$-span has full rank, since an $E$-subspace of smaller rank has real Minkowski dimension less than $2fk$. Select $k$ independent columns and use the same argument for each determinant shift $c^{e_\tau}$.
+
+
+Weyl evaluation vectors on arrays of roots of unity span the coefficient space by polynomial identity. Acting by $Y_c$ and the determinant factors at the shifted weights preserves their span. The integrality of the translated matrices and the integral coefficients of the Weyl polynomials give local gauge at most one. Put $R_0=6D_0(fk)^2\ge k$. Each entry after moving a root-of-unity array is at most $kR_0$ in modulus and its squared Hilbert--Schmidt norm is at most $k^4R_0^2\le R_0^6$. Thus the polynomial part costs at most $R_0^6$ per box in the squared norm. With the short representatives for the determinant ideals, the determinant factors cost at most $R_0^{6k}$ per place. This gives the squared bound $[6D_0(fk)^2]^{6J}$. Extension by the coset forms and \eqref{A:base} then give $\mathcal V_0$. For the polynomial norm estimate, the Schur operator in singular-value coordinates multiplies the squared norm by at most the product of squared singular values raised to the row lengths. This follows by realizing the polynomial representation inside tensor products of exterior powers. Equivalently one may bound by the squared operator norm to the power of the number of boxes; this also gives $R_0^{6J}$ here.
+
+At the $f$ chosen places $w$ over the level prime $N$, let $T_w$ be the commuting central translations. Put $r_0=N-1$. The level gives $T_w^{r_0}=1$, and
+\[
+ S_w=\sum_{i=0}^{r_0-1}T_w^i,\qquad
+ S=\bigcap_w\ker S_w,\qquad R=\prod_w(1-T_w).
+\]
+
+\begin{chatAlemma}\label{A:ram}
+The forms $R\psi$ for $\psi\in\mathcal V_0$ span $S$. Each belongs to $\mathcal I$ and satisfies $|R\psi(u)|_{\sigma,\mathrm w}^2\le e^U$ for every $u,\sigma$.
+\end{chatAlemma}
+\begin{proof}
+$S_w(1-T_w)=0$ gives $R(X)\subset S$. Conversely $r_0-S_w=\sum_i(1-T_w^i)$ is divisible by $1-T_w$ in the commutative algebra of translations. On $S$ it acts by $r_0$. Hence $r_0^f S\subset R(X)$ and $R(X)=S$. Applying $R$ to the spanning set gives the assertion about its image.
+
+Each $T_w$ acts by an integral adelic translation and preserves the integral gauge. Thus $(1-T_w)\psi$ is integral. If both terms have pointwise norm at most $\sqrt{B_0}$ after conjugation, their difference has squared norm at most $4B_0$. Iterating over $f$ places multiplies the bound $e^U/4^f$ by $4^f$. For a form in $S$ the resulting finite-place integrality is precisely membership of $\mathcal I$.
+\end{proof}
+
+The same operators control the change of dimension. A vector fixed by $T_w$ descends to the level enlarged by that translation. The relative index is at least $N-1$, since its first $N-1$ powers have distinct cosets. At the enlarged free level every class has as many lifts as the relative index. Evaluation on classes therefore gives $\dim\ker(1-T_w)\le d_X/(N-1)$. For two endomorphisms, $B$ maps $\ker(AB)$ to $\ker A$ with kernel contained in $\ker B$. Iteration and rank-nullity now give
+\begin{equation}
+ d_S\ge\left(1-\frac f{N-1}\right)d_X\ge d_X/2.\label{A:dimension}
+\end{equation}
+Here $f/(N-1)\le b^{-8}\le1/2$. This factor of two will enter only at the end of the index calculation.
+
+\subsection{The seesaw and the two scalars}\label{A:unfold}
+Fix one generator $\phi=R\psi$ from Lemma~\ref{A:ram}. Write $I_\vartheta$ for the lower chain on principal forms and $B_{\vartheta,\Psi}$ for the composite upper lift with chain datum $\Psi$. A twist $\vartheta$ is a weight-zero automorphic character of $U(1)$ with tame part nontrivial precisely on a finite set of places disjoint from its conjugate and of product norm prime to $MN$. In an $m$-fold twist each of its first $m$ positive powers is nontrivial at every place of that set. The lower chain uses the stage characters $\mu_j^0\vartheta^j$. On good target forms and for an $m$-fold twist we write $\Theta_\vartheta$ for this chain at its prescribed terminal level. We use the seesaw identity with the following quantifiers.
+\[
+ \exists c_{\rm ss}\in\mathbb C^\times\quad\forall\vartheta\quad\exists\Psi_\vartheta
+ \quad\forall v\in S,\qquad I_\vartheta(\Pi v)=c_{\rm ss} B_{\vartheta,\Psi_\vartheta}(v).
+\]
+The datum consists of finitely many translated vacuum tensors with coefficients and level invariance prescribed by the twist. The seesaw theorem unfolds the lower chain against the Poincar\'e series and realizes the resulting tensor as such a combination. We use its identity for the entire source at a fixed twist. Linearity gives, for $z_v=c_{\rm ss}^{-1}\Pi v$,
+\begin{equation}
+ I_1(z_v)=B_{1,\Psi_1}(v)\qquad(v\in S).\label{A:seesaw}
+\end{equation}
+Pair the lower chain with any terminal test form. Transposition moves the last lift onto that form. Unfolding the Bessel period then replaces one level integral by a sum over its finite quotient, weighted by the factors from the quotient measures, and an archimedean integral. Repeating this operation leaves a definite pairing at the top. The archimedean integral contributes a common scalar $c_0$ independent of the tame twist. The finite sum gives a tensor $K_\vartheta$ of evaluated upper-chain data. Linearity of both the pairing and the upper lift pulls this sum inside the lift. Equality against every test form identifies the lower chain with $c_0$ times the upper chain for $K_\vartheta$.
+
+For the one-stage integral one can isolate the analytic assumption. Let $R_j$ be the Bessel group of the current grading and let $W_j$ be the equivariant function produced by the preceding stage. If $K_j(r,h)$ denotes the translated theta kernel, the orbit expansion of its Bessel period reads
+\[
+ \int_{[R_j]}W_j(r)K_j(r,h)\,dr
+ =\sum_{\gamma\in R_{j+1}(F)\backslash U(Y_{j+1})(F)}
+          W_{j+1}(\gamma h).
+\]
+Here $W_{j+1}$ is the period of the kernel's constant term on the specified string orbit. The orbit identity and its absolute majorant are inputs for the prescribed grading. To apply it to a rapidly decreasing automorphic test form $z$, reduce $h$ by a rational element. The sum of the absolute kernel terms is bounded by a constant times the norm of its Weil operator at that reduced point. This norm is $O(\operatorname{ht}(h)^{B_*})$ for some fixed exponent $B_*$, while $|z(h)|\operatorname{ht}(h)^{B_*}$ is bounded. The Bessel quotient and the automorphic quotient have finite mass. The product is integrable, so Fubini permits passage through the two integrals and the series. Rational automorphy of $z$ turns the sum over cosets into one integral of $W_{j+1}z$ over $R_{j+1}(F)\backslash U(Y_{j+1})(\mathbb A)$. The transpose of the level-normalized lift contributes the index of its level in the standard level on both sides. This proves the one-stage passage used in the iteration; its growth and orbit assumptions are part of $\mathsf A_{\rm loc}$.
+
+More precisely, put $B=M^{fn_m^2}$. The finite coset expansion writes $K_\vartheta=\sum_x r_x C_0 V_x$ for glued translated vacua $V_x$, with a common scalar $C_0$. The coefficients $B^{2m}r_x$ are integral away from the twist level, and $\sum_x|\sigma r_x|\le B^m$ at the trivial twist. When $c_0 C_0\ne0$ set $u=B^{2m}/(c_0C_0)$. Otherwise take $u=1$ and the zero tensor. In either case $u c_0K_\vartheta$ has integral-away-from-level coefficients, trivial-twist coefficient sum at most $B^{3m}$, and the level invariance inherited from the coset sum. Replace each translate by a supported representative with the same vacuum. This produces the required datum and the common unit $c_{\rm ss}=u^{-1}$. The expansion into ordinary single lifts below is a second expansion, applied to this already normalized glued tensor.
+
+The scalar cancels before we take a norm.\footnote{\ChatAFile{New/UpperBound/Seesaw/SeesawIdentity}{Seesaw identity}.} Expansion of the composite tensor supplies a weak datum $\Psi'$ such that the right side is the restriction to $Y_m$ of a sum of chains of $m$ single lifts from $X_0$ to $X_m$. The expansion is uniform in $v$. At the trivial twist its conjugated coefficients have $\ell^1$ norm at most $e^{x^{60}}$.
+
+For $s\in G$ let $Q_s z=|G|e_0(sz)$, where $e_0$ is the chosen central idempotent. The normalized map of this section is
+\[
+ P_s v=c_BQ_s z_v,\qquad c_B\in\mathbb Q_{>0}.
+\]
+Here $c_B$ depends on the finite-place divisibility. The factor $c_{\rm ss}$ has already disappeared in \eqref{A:seesaw}.
+
+\subsection{The finite gains and the height of the chain}
+Let $\mathcal P$ be the primes $p<x_1$ nonsplit in $\mathbb Q(\sqrt{-d})$. For an inert $p$ take $I_p$ to be the positive odd exponents and $v_p=1$. For the ramified prime take all positive exponents and $v_d=1/2$. At a split prime set $s_p=0$. Put
+\begin{align*}
+ s_p(y,\tau)&=v_p\sum_{e\in I_p}(y/p^e-\kappa(u(-p^e)\tau))_+,\\
+ \gamma_p&=m\left[\sum_{\tau\in\Phi_a}s_p(a,\tau)
+                    +k\sum_{\tau\in\Phi}s_p(\kappa(\tau),\tau)\right],
+ & \mathfrak g&=\sum_{p\in\mathcal P}\gamma_p\log p .
+\end{align*}
+Only finitely many summands are positive. For an inert prime $1-\chi_d(p^e)$ equals two at odd exponents and zero at even ones. For $p=d$ it equals one. Thus regrouping $\Lambda(n)(1-\chi_d(n))$ by prime powers gives
+\[
+ 2\mathfrak g=m\sum_{\tau\in\Phi_a} S(a,\tau)+mk\sum_{\tau\in\Phi}S(\kappa(\tau),\tau).
+\]
+Here $\gamma_p$ vanishes for $p\ge x_1$, since $y\le a$ and $\kappa\ge a/x_1$. Substituting \eqref{sz:height} yields the identity
+\begin{equation}
+ H-m\Tot_D+2\mathfrak g=mA S_0+mk\sum_{\tau\in\Phi}j(\kappa(\tau)).\label{A:gain}
+\end{equation}
+The coefficient of the signed excess is $-m$ after solving for the size.\footnote{\ChatAFile{New/UpperBound/Size/ShortColumns}{Local gains and short generators}.} It is already present in the finite gain of each prime.
+
+We give the deduction of the restricted-chain estimate from the row, kernel, branch and level estimates. Let $J_i$ be the sum of $j$ over the row lengths of the weight diagrams for lift $i$, let $h_0$ be the half-gap in the branch weights, and put
+\[
+ C_m=m\biggl[A j(a)+k\sum_{\tau\in\Phi}j(\kappa(\tau))\biggr].
+\]
+\paragraph{A single kernel.}\label{A:kernel}
+Let $n=n_i$, $n'=n_{i+1}$, $q_1=q_0\,\mathrm{towerDeg}$ be the cyclotomic modulus, and write $C$ for the fixed parameter bound. If $\ell_{\tau h}$ are the row lengths and $\lambda=a+1$, the logarithm of the Weyl operator norm for one translated vacuum is at most
+\begin{equation}
+ C(q_1nn'+1)^2+fnn'\log(2\lambda+2)
+ +\tfrac12\sum_{\tau,h}\ell_{\tau h}/\lambda+\tfrac12 J_i.\label{A:onelift}
+\end{equation}
+To see the origin of the factorials, test the Schur jet against a unit vector in the dual Gram norm. A matrix argument with squared singular values $\rho_{\tau h}$ contributes at most the square root of $\prod\rho_{\tau h}^{\ell_{\tau h}}$, times the input and test norms. Put $u=\log(M/\Omega)$. Applying $t^j\le j!e^t$ with $t=\rho_{\tau h}e^{-u-1/\lambda}$ bounds this square root by
+\[
+ \exp\left(\tfrac12\sum_{\tau,h}
+ [\log(\ell_{\tau h}!)+\ell_{\tau h}u+\ell_{\tau h}/\lambda]
+ +\tfrac12 e^{-u-1/\lambda}\sum_{\tau,h}\rho_{\tau h}\right).
+\]
+The trace bound $\sum\rho\le e^u(2\lambda+2)R$ and $e^{1/\lambda}\ge1+1/\lambda$ make the last term at most $\lambda R$ at the Gaussian radius $R$ of the jet estimate. In the Gaussian integral representation for the jet, the residual Gaussian of exponent $-\|y\|^2/(2\lambda+2)$ has normalized mass $(2\lambda+2)^{fnn'}$. The translated theta vacuum contributes the first term of \eqref{A:onelift} by its uniform growth bound. The jet scale has squared modulus $M$ at every conjugate, which gives $u$ in the formula. These vacuum and Schur estimates hold for every conjugate. For one translated vacuum the conjugate coefficient sum is at most one.
+
+The uniform estimate on a moved vacuum in \eqref{A:onelift} can be reduced further. In rank $n_*=nn'$ let $h=2fn_*$ be the real dimension of its archimedean coordinate space and put $D_*=h+1$. The theta matrix-coefficient identity bounds the square of the absolute vacuum value by a sum of $\exp(-\pi|x|^2/\sqrt d)$ over the support lattice in the moved definite space. The Heisenberg translation contributes a phase. For two lattice points the squared distance is the trace to the imaginary quadratic base of the hermitian norm of their difference. The factors of the inverse different in the finite lattice make this trace integral. A real algebraic integer of the imaginary quadratic field is a rational integer, so distinct points are at distance at least one. Disjoint balls of radius $1/2$ then bound the number at distance at most $R$ by $(1+2R)^h$. Completing the square gives
+\[
+ e^{-\pi R^2/\sqrt d}\le e^{\sqrt d D_*^2}e^{-D_* R},\quad
+ \sum_x e^{-D_*|x|}
+ \le D_*\int_0^\infty(1+2R)^h e^{-D_* R}\,dR
+ \le D_*3^h\le e^{3h}.
+\]
+Here $1+2R\le3e^R$ and $D_*=h+1$. Thus the logarithm of the vacuum norm is at most $(\sqrt d\,D_*^2+3h)/2\le(2d+6)(q_1n_*+1)^2$. To pass to the conjugate integral vacuum, use the semilinear conjugation of the vacuum to a scalar $a_*$ times a unitary central translate. Evaluating at finite points bounds its squared invariant inner product by $\exp(2C_{\rm vac}n_*q_1^2)$, using the finite-point conjugate theta bound. With the vacuum normalized to squared norm one this gives $|a_*|\le\exp(C_{\rm vac}n_*q_1^2)$. The sum of the two exponents is at most $C(q_1n_*+1)^2$ by the definition of $C$. The matrix-coefficient identity, semilinear conjugation, finite-point theta bound and the Gaussian representation of the Schur jet are the analytic inputs in this deduction.
+
+For an explicit comparison put $X_*=\log x$, $Z=\log L$. The size conditions give $C\le X_*/10^{14}$, $100Z\le X_*$, $q_1\le C e^{11X_*+Z/5}$, $f\le e^{C+11X_*+Z/5}$ and $n,n'\le e^{11X_*/2+12}$. The first term is bounded by $4C^3e^{48+44X_*+2Z/5}\le x^{45}$. The second is bounded by $2e^{C+24+22X_*+6Z/5}\le x^{23}$ using $\log(2a+4)\le2L$. Since $\ell\le2a$, the third is at most $fn\le x^{17}$. Their sum is at most $x^{50}$.
+
+\paragraph{Row lengths.}
+Write $n_i$ for the rank of $X_i$. In the diagram at place $\tau$ the comparison row lengths $r_{\tau,l}$ are $a\mathbf1_{\Phi_a}(\tau)$ for $l=0$, $\kappa(\tau)$ for $0<l<k$, and zero thereafter. The diagram estimate bounds the actual length by $r_{\tau,l}+e_l\le2a$, with
+\[
+ e_l=h_0^2+\mathbf1_{l=0}(b+a/x_1).
+\]
+Each extra box increases the logarithmic factorial by at most $\log(2a+1)$. Since $2a+1\le b^2$ and $0\le\log(M/\Omega)\le23L$, it adds at most $25L$ to the jet size. Summing over rows and places gives
+\[
+ J_i\le A j(a)+(k-1)\sum_\tau j(\kappa(\tau))
+             +25fL(b+a/x_1+n_i h_0^2).
+\]
+Put $X_*=\log x$. The admissible bounds $n_i\le n_m\le e^{11X_*/2+12}$, $h_0\le e^{40X_*+25}$ and $L\ge10^{12}X_*$ give $n_i h_0^2\le e^{171X_*/2+62}\le b$. Also $a/x_1\le b$. The total row error is thus at most $75mfLb$. Since $m\le2\sqrt{x}$, $a=xb$, and $L\ge128$, this is at most $faL^3/2=U/2$. Using $j(\kappa(\tau))\ge0$ to replace $k-1$ by $k$ proves
+\begin{equation}
+ \sum_{i<m}J_i\le C_m+U/2.\label{A:row}
+\end{equation}
+
+\paragraph{Choice of the level.}
+Let $w=f^{-1}\sum_\tau\log\kappa(\tau)$ and $\Gamma=\log(M\,\mathrm{rd}_E/(2\pi))$, where $\mathrm{rd}_E$ is the root discriminant. The CM period formula with the normalization of $c_1$ gives $\log(M/\Omega)=1+c_1+\Gamma$. The Stirling bound $\log(a!)\le a\log a-a+1+\tfrac12\log a$ and \eqref{sz:height} therefore give
+\[
+ j(a)-S_0\le a(w+\Gamma)+1+\tfrac12\log a.
+\]
+The lower endpoint of the admissible window for the level prime is $\log N\ge mw+(m-1)\Gamma-15L/2$. Subtract $a\log N$ after multiplying the preceding inequality by $m$. The terms $ma(w+\Gamma)$ cancel. As $m(1+\tfrac12\log a)\le aL$ and $\Gamma\le23L$, we obtain
+\[
+ m[j(a)-S_0]-a\log N
+ \le m(1+\tfrac12\log a)+a\Gamma+\tfrac{15}2aL\le32aL.
+\]
+Multiplication by $A\le f$ yields
+\begin{equation}
+ A\{m[j(a)-S_0]-a\log N\}\le32faL.\label{A:level}
+\end{equation}
+In particular, by \eqref{A:gain},
+\[
+ C_m-Aa\log N\le H-m\Tot_D+2\mathfrak g+32faL.
+\]
+Write $e_\tau$ for the difference of the total weights at $X_m$ and $Y_m$. Summing the branch weights gives $\sum_\tau e_\tau=Aa-fmh_0$. The branch map at the block embedding is an integral matrix times $\prod_\tau\tau(\bar\pi_N)^{-e_\tau}$. The squared modulus of this scalar is $N^{-\sum e_\tau}$ since $\pi_N\bar\pi_N=N$. The squared operator norm of the integral branching matrix is at most $e^{x^{70}}$ by the branch estimate. Restricting the last form at the block embedding $Y_m\hookrightarrow X_m$ therefore multiplies the squared norm bound by at most $\exp(x^{70}-(Aa-fmh_0)\log N)$.
+
+The special feature of the branching matrix is the size of its denominator. Separate the columns at each place into those which keep their height and those which lose their bottom box. If their counts are $u_h,v_h$, the output has $u_h+v_{h+1}$ columns of height $h$, up to the determinant powers at full height. The prescribed interlacing has $u_h=0$ for $h<k$. In the extremal filling of the output diagram the top $k-1$ rows can therefore be wedged on unchanged (with the usual cap at the rank). The signed product of its minors after a row permutation is the product of the two Weyl kernels for the kept and shortened columns. The integral Weyl straightening identity clears this polynomial by the hook number $c$ of the diagram below those rows. If $l$ bounds the number of output boxes in columns of height at least $k$ and below the rank, the hook estimate gives $1\le c\le l^{3l}$. Large strings of low columns contribute no boxes to this estimate. Coefficient extraction in the integral polynomial identity supplies the intertwiner $B$ with highest coefficient $c$ times that product of kernels.
+
+For the norm estimate the two minor identities associated with this construction realize the Gram matrix of the output evaluation vectors as that of ordinary tensor vectors $m(y)$, and give
+$\langle v(y),B\xi\rangle=\langle m(y),c E\xi\rangle$, where $E$ embeds the input isometrically in that tensor space. Evaluation vectors at nonsingular arrays span by polynomial identity. Writing $B\xi=\sum_y a_yv(y)$ gives $\|B\xi\|^2=\|\sum a_y m(y)\|^2=\langle\sum a_y m(y),cE\xi\rangle$, hence $\|B\xi\|\le c\|\xi\|$. For these diagrams take $l=fn_m^2\,\mathrm{gap}$: there are at most $n_m$ contributing heights, at most $\mathrm{gap}$ columns at each such height and place, and at most $n_m$ boxes per column. The data scales give $6l\log l\le x^{70}$. This proves the asserted numerical bound from the integral straightening, hook and tensor identities. Those identities are the representation-theoretic input to this use of $\mathsf A_{\rm loc}$.
+
+\begin{chatAproposition}\label{A:chainprop}
+Suppose $|v(u)|_{\sigma,\mathrm w}^2\le e^{B_0}$ at every source point for fixed $\sigma$. Under the preceding estimates, the single-kernel and class bounds below give
+\begin{equation}
+ |B_{1,\Psi_1}(v)(y)|_{\sigma,\mathrm w}^2\le
+ \exp(B_0+H-m\Tot_D+2\mathfrak g+U)\qquad(y\in U(Y_m)(\mathbb A_f)).\label{A:chain}
+\end{equation}
+\end{chatAproposition}
+\begin{proof}
+At a fixed translation and tuple of classes the $i$th kernel multiplies the norm by at most $\exp(x^{50}+J_i/2)$, uniformly in all points. At each intermediate rank, bounding the maximal-level class number and then multiplying by the congruence index gives at most $\exp(x^{29}(1+\log q))$ classes for a level containing principal level $q$. Indeed, each maximal-level class splits into at most $q^{2f(2n_m)^2}$ classes, by reduction of its matrices modulo $G$. For the prescribed levels this bounds the number by $\exp(x^{30})$. There are therefore at most $\exp(mx^{30})$ tuples and the coefficient sum costs at most $\exp(x^{60})$. The triangle inequality and the uniform input bound give an upper bound for the norm before restriction of
+\[
+ \exp\!\left(B_0/2+mx^{30}+x^{60}+mx^{50}
+                     +\tfrac12\sum_{i<m}J_i\right).
+\]
+Square this expression, apply the branch estimate, and then use \eqref{A:row}. The logarithm of the bound becomes at most
+\[
+ B_0+H-m\Tot_D+2\mathfrak g+U/2+
+ \bigl[x^{70}+fmh_0\log N+2(mx^{30}+x^{60}+mx^{50})+32faL\bigr].
+\]
+To bound the bracket, $32faL\le U/4$ since $L^2\ge128$. For the other terms the admissible size bounds, with $\lambda=\log L$, give
+\[
+ f\le e^{11X_*+\lambda/5+C_P},\quad
+ m\le e^{X_*/2+2},\quad h_0\le e^{40X_*+25},\quad
+ \log N\le e^{X_*/2+\lambda+32}.
+\]
+Here $C_P$ bounds the constants of the fixed parameters $(q_0,d)$, $C_P\le\lambda$, $\lambda\le X_*/100$, and $X_*\ge59$. Thus $fmh_0\log N\le e^{52X_*+6\lambda/5+C_P+59}\le x^{54}$. Also $2(mx^{30}+x^{60}+mx^{50})\le6x^{60}\le x^{61}$. Including restriction, their sum is at most $x^{70}+x^{54}+x^{61}\le x^{71}$. Finally $a=xe^L$ and $L\ge10^{12}X_*$ give $x^{71}\le U/4$. The bracket uses at most $U/2$, which together with the row error in \eqref{A:row} accounts for the full $U$.\footnote{\ChatAFile{New/UpperBound/Size/ArchimedeanSize}{Single-kernel, branch and composite estimates}.} This proves \eqref{A:chain}.
+\end{proof}
+Applying \eqref{A:chain} and \eqref{A:seesaw} to the generator of Lemma~\ref{A:ram} gives the pointwise squared bound $e^{B_1}$ for $I_1(z_\phi)$, where
+\[
+ B_1=H-m\Tot_D+2\mathfrak g+2U.
+\]
+One $U$ comes from the generator and one from the chain.
+\subsection{Projection, rounding, and the final norm}
+The squared norm of a target level form $F$ at $\sigma$ is
+\[
+ \|F\|_\sigma^2=\sum_{[y]}\frac{|F(y)|_{\sigma,\mathrm w}^2}{|\operatorname{Aut}([y])|},
+\]
+with the sum over double cosets. The target lattice of Section~\ref{sz:setup} uses this norm on $F=\Theta_1 z$. Compatibility of the lift with good projection and translation expresses the lifted value of $Q_s z$ at $y$ as
+\[
+ I_1(Q_s z)(y)=\sum_{t\in G}|G|e_0(t)\,I_1(z)(y\,\widetilde{ts}),
+\]
+where the tilde denotes the lift of the translate in the first block. The central idempotent is a sum of isotypic projectors. The character formula bounds $|G|\,|\sigma(e_0(t))|$ by the sum of the squares of their dimensions: every character value is a sum of roots of unity and the sum of dimension squares over the full regular representation is $|G|$. Thus $|\sigma(e_0(t))|\le1$. For $z=z_\phi$, taking the triangle inequality, squaring and summing over classes therefore gives
+\begin{equation}
+ N_\sigma(Q_s z_\phi)\le \#\{[y]\}\,|G|^4 e^{B_1}\le e^{x^{99}+B_1}.
+ \label{A:proj}
+\end{equation}
+Here the inverse stabilizer weights are at most one, the class count is at most $e^{x^{30}}$, and the group order bound gives $x^{30}+4\log|G|\le x^{99}$. This is the first passage from a pointwise bound to a class norm.
+
+The local divisibility theorem supplies errors $e_p\ge0$ with $\sum_{p\in F}e_p\log p\le U$ for every finite $F$. Let $\mathcal P'=\mathcal P\cup\{N\}$, and set
+\[
+ q_p=\lfloor\gamma_p-e_p\rfloor,\qquad c_B=\prod_{p\in\mathcal P'}p^{-q_p}.
+\]
+Since $N\ge x_1$, $\gamma_N=0$. Rounding costs at most one copy of $\log p$ for each $p\in\mathcal P'$. Consequently
+\begin{align}
+ \log c_B&\le-\mathfrak g+\sum_{p\in\mathcal P'}e_p\log p+\sum_{p\in\mathcal P'}\log p
+          \le-\mathfrak g+U+b,\label{A:floor}
+\end{align}
+where $\sum_{p\in\mathcal P'}\log p\le\lceil x_1\rceil x_1+\log N\le b$ by admissibility.\footnote{\ChatAFile{New/Reduction/ShortAndEnough}{Projection, rounding and normalization}.}
+
+\begin{chatAproposition}[Theorem A(a)]\label{A:short}
+Under $\mathsf A_{\rm loc}$, the following holds.
+The forms $\phi\in\mathcal I$ satisfying
+\[
+ N_\sigma(P_s\phi)\le\exp(H-m\Tot_D+V)\qquad(s\in G,\ \sigma\in\operatorname{Aut}(\mathbb C))
+\]
+span the ramified source $S$.
+\end{chatAproposition}
+\begin{proof}
+For the fixed generator $\phi=R\psi$, every $\sigma$ fixes $c_B\in\mathbb Q_{>0}$. Linearity of the lift and homogeneity of the squared class norm give $N_\sigma(P_s\phi)=c_B^2 N_\sigma(Q_s z_\phi)$. By \eqref{A:proj} and \eqref{A:floor} the exponent is bounded by
+\begin{align}
+ x^{99}+B_1+2\log c_B
+ &\le x^{99}+H-m\Tot_D+2\mathfrak g+2U+2(-\mathfrak g+U+b)\notag\\
+ &=H-m\Tot_D+x^{99}+4U+2b.\label{A:normalize}
+\end{align}
+For the last size comparison, the admissible inequalities $10^6\log x\le\log x_1$ and $10^6\log x_1\le L$ give $x^{99}\le b$. Also $b\le fa$ and $L\ge128$, so $x^{99}+4U+2b\le fa(3+4L^3)\le faL^4=V$. This bound holds for every translate and conjugate of the chosen generator. Lemma~\ref{A:ram} gives its integrality and gives spanning as $\psi$ ranges over $\mathcal V_0$.
+\end{proof}
+\subsection{A module on which every prime-to-level twist gains}\label{A:local}
+Fix $p$ and $\iota$ over $p$. Write $M_\iota$ for the module of integral forms in $X$. In this subsection $v_\iota(F)\ge t$ means that the moved Weyl gauge of $F$ is at most $p^{-t}$ at every finite adelic argument. The level of a twist $\vartheta$ has norm $Q_\vartheta$. Write
+\[
+ h_p=\frac{faL^2}{p}
+ \begin{cases}m,&p\equiv\pm1\pmod m,\\1,&\text{otherwise},\end{cases}
+ \qquad
+ \epsilon_p=\begin{cases}2h_p,&p\in\mathcal P,\\2mfb,&p=N,\\0,&\text{otherwise}.\end{cases}
+\]
+We take these explicit errors as witnesses for the existential divisibility estimate. The published normalization uses a chosen witness. All the deductions about $c_B$ use only its witness properties, so they apply to the published choice as well.
+
+For modules $M',S'$ in the same ambient space, write $[M':S']\mid p^j$ to mean that for every finite family in $M'$ some integral square matrix with determinant dividing $p^j$ has all row combinations in $S'$. This notation makes sense even when $S'$ extends beyond $M'$. Pulling back along a linear map, restricting the starting module, and composing two such clearings preserve this property with the evident additive determinant costs. For restriction to $S$ the row combinations automatically stay in $S$.
+
+\begin{chatAlemma}[Simultaneous local clearing]\label{A:clear}
+Under the finite-place inputs of $\mathsf A_{\rm loc}$, the following holds.
+There exist $j\in\mathbb N$ and a module $S_\iota$ with
+\[
+ [M_\iota:S_\iota]\mid p^j,\qquad j\le d_X \epsilon_p.
+\]
+For every $v\in S_\iota\cap S$, every twist with $p\nmid Q_\vartheta$, and every chain datum $\Psi$ for that twist,
+\[
+ v_\iota(B_{\vartheta,\Psi}v)\ge\gamma_p-\epsilon_p.
+\]
+\end{chatAlemma}
+
+\paragraph{The cost of a collision.}\label{A:jets}
+Here is the local jet calculation used in the proof. Let $p\in\mathcal P$, fix a stage $i<m$, put $n'=n_{i+1}$, and erase the height-one columns at a set $E_0\subseteq\Phi$. Put $l_\tau=a\mathbf1_{\Phi_a\setminus E_0}(\tau)$. Denote by $c_\tau,b_\tau$ the number of columns and boxes of heights $2$ through $n'-1$ at $\tau$. On writing $\tau'=u(-p^e)\tau$, the contribution compared to the prime sum is
+\[
+ (l_\tau/p^e-l_{\tau'}-c_{\tau'})_+
+ +(b_\tau/p^e-b_{\tau'})_+ -c_\tau/p^e
+ \qquad(e\in I_p).
+\]
+Set $C_p(E_0)=\sum a/p^e$, over $e\in I_p$ and $\tau,\tau'\in\Phi_a\setminus E_0$. The predicted stage valuation $D_{p,i}(E_0)$ includes the gain on the erased boxes. The jet estimate is
+\begin{equation}
+ D_{p,i}(E_0)\ge \gamma_p/m-C_p(E_0)
+ +v_p|\Phi_a\cap E_0|a/x_1-faL^2/(mp).\label{A:collision}
+\end{equation}
+Here $v_p$ is the uniformizer valuation defined above. The two positive parts record respectively the unpaired long columns and the unpaired boxes of the other columns. The second one is compared with $k(\kappa(\tau)/p^e-\kappa(\tau'))_+$ using
+\[
+ k\kappa(\tau)\le b_\tau\le k\kappa(\tau)+x^{60},\qquad
+ c_\tau\le\kappa(\tau)+x^{60}.
+\]
+The positive part is 1-Lipschitz. Only exponents below $\lceil\log_p\lceil x_1\rceil\rceil$ can make a positive contribution to the desired weight sum. The comparison costs at most $2u$ per place for $u=a/(mp)$, after allowing the long-long collisions at face value $a/p^e$. When the partner is also long, subtracting its length can indeed exhaust the positive part. Erasing a long column instead leaves a surplus $v_p a/x_1$ per erased long place. Comparing the resulting partner sum to the predicted divisibility costs at most another $2fu$. The factorial digit loss is at most $fn'^3(1+\log_p\max(B,1))\le fu$, where $B$ counts the boxes below height $n'$. Thus the total error is at most $5fu\le faL^2/(mp)$.
+
+For clarity, the analytic input to this count is the normal form for the local vacuum series after rescaling its variables by a scalar $\varpi$ of valuation $1/(p^2-1)$ at an inert prime and $1/(2p-2)$ at $p=d$. Its integral factor multiplies an exponential of Frobenius powers of pairings between partner variables. Explicitly, with $\Gamma_e=\sum_{\tau,h}z_{\tau h}^{p^e}z_{u(-p^e)\tau,h}$, it takes the form
+\[
+ F(\varpi z)=W(z)\exp\left(\frac{\varpi^{p+1}}{p}
+          \sum_{e,j} a_{ej}\Gamma_e^{p^j}\right),
+\]
+where $W$ and $a_{ej}$ are integral. The exponents are odd in the inert case and include zero in the ramified case. Resolution of the vacuum series gives a product of CM theta factors times an integral series. The normal form for these factors persists under the integral rescaling by the period factor. For a derivative of degree $B$, perform the charged change of directions in each matrix column: on any partner pair touching an erased height-one column, at least one of its two row charges must be positive. This makes the relevant couplings divisible by the local prime in degrees through $B$. The rescaled series then has integral coefficients in degree $B$. Undoing the chain rule costs the sum of the charges of the entries in the filling. In the derivative expansion, coupling one variable at $\tau'$ consumes $p^e$ powers at $\tau$. The minor products enforce the row and column constraints above. The charged-monomial estimate subtracts the allowable paired powers and uses $\operatorname{ord}_p(t!)=(t-s_p(t))/(p-1)$ for the remaining factorials, with $s_p(t)$ the base-$p$ digit sum. This is where the logarithmic term enters. Appendix~\ref{sec:jets} proves the charged-frame and coefficient deductions, starting with the one-curve Frobenius series, its integral period rescaling and the moved-vacuum factorization. At $p=d$ the zero-step partner term subtracts a correction; its contribution at each place is at most $\tfrac12(3a/(dm))\le2a/(dm)$ and is included in the second $2fu$ allowance above. Equation~\eqref{A:collision} uses their version for the moved vacuum with the specified columns erased.
+
+\begin{proof}[Proof of Lemma~\ref{A:clear}]
+There are four cases. Away from $N$, expand the glued datum into weak chain data. Coefficients are integral at $p\nmid Q_\vartheta$. One may bound each translated chain and then take the maximum of the gauges. A stage bound propagates by multiplication, and restriction to $Y_m$ preserves the bound away from $N$.
+
+\emph{Outside $\mathcal P\cup\{N\}$.} Here $p\ne d$ and $\gamma_p=0$. The standard datum at each stage has gauge multiplier bounded by a power of $|\overline\pi_M|_p/|\overline\pi_M d|_p=1$. Take $S_\iota=M_\iota$, $j=0$.
+
+\emph{Small nonsplit, nonexceptional.} Put $r=\lceil\log_p m\rceil$ and let $o$ be the order of the class of $-p$ at the base cyclotomic modulus. Exceptionality requires inertness, $p\not\equiv\pm1\pmod m$, and odd $o\le r$. Without erasure, summing \eqref{A:collision} gives valuation at least $\gamma_p-h_p-m C_p(\varnothing)$. Always $C_p(\varnothing)\le 2fa/p$ by the geometric series. For $p\equiv\pm1\pmod m$ this already gives $mC_p(\varnothing)\le h_p$. At the ramified prime there is no collision. At any other inert, nonexceptional prime outside those classes, a collision requires an odd multiple of $o$. If one occurs its exponent is at least $r+1$. The geometric tail is at most $2fa/p^{r+1}$ and $p^r\ge m$. Thus $m C_p(\varnothing)\le h_p$ in every case here. Again the entire module works. Also, for every small nonsplit $p$, multiplication by $p^{j_p}$ with $j_p=\lceil 2mfa/p\rceil$ pays the crude collision cost on all of $M_\iota$.
+
+\emph{Exceptional.} With $\iota$ fixed choose a full mark $\Lambda$ above $p$. Its primes are induced by long places, it is disjoint from its conjugate, and every long place induces a prime in $\Lambda$ or its conjugate. Let $E_\Lambda$ consist of the archimedean places inducing primes of $\Lambda$. Along a colliding odd Frobenius step the two induced primes are conjugates. Hence $C_p(E_\Lambda)=0$. Write
+\[
+ A_w=a\#\{\tau\in\Phi_a:\tau\text{ induces }w\},\qquad
+ Y=\prod_{w\in\Lambda}p^{A_w}T_{r,w},\qquad
+ S_\iota=Y^mM_\iota+p^{j_p}M_\iota .
+\]
+Here $T_{r,w}$ is the rank-$r$ local Hecke operator from the transfer identity. In each stage move one copy of the product from the input to the data. The local transfer expands into integral combinations of neighbouring data after a denominator of exponent $t_p=rf(n_m+r)$ per marked prime. The diagonal neighbour contributes at most $r$ negative valuation units per low column at a marked place. The factors $p^{A_w}$ pay for the long columns there. The log gauge in base $p$ of this stage increases by at most
+\[
+ |\Lambda|t_p+r\sum_{\tau\in E_\Lambda}c_\tau-D_{p,i}(E_\Lambda).
+\]
+In this case $v_p=1$. For a marked place $\tau$ the local weight is $a/x_1$ up to the prescribed integer rounding. If $p\le m$, the low-column bound and the admissible scales give $r c_\tau\le a/(mp)+\mathbf1_{\Phi_a}(\tau)a/x_1$. If $p\ge m$, then $r=1$, exceptionality forces $o=1$, and all places inducing a marked prime lie on its long-place orbit. The same bound follows. Summing and absorbing $|\Lambda|rf(n_m+r)$ in the remaining $L^2$ allowance shows that the first two terms together are at most $h_p/m+|\Phi_a\cap E_\Lambda|a/x_1$ by the low-column transfer estimate. Inserting \eqref{A:collision} bounds the increase by $(2h_p-\gamma_p)/m$. After $m$ stages this proves the valuation claim on the first summand of $S_\iota$. The crude collision estimate proves it on the second. The ultrametric inequality proves it on their sum.
+
+For the transfer denominator, let $q_w=z^2$ be the residual cardinality, $t_0$ the rank increment minus one, and $T_{e,i}$ the spherical operator at rank $n_e$ with $i$ uniformizers on the diagonal. The local input for one lift $F_e$ is the polynomial identity
+\[
+ H_{e+1}(Z)F_e=R(Z)F_e H_e(z^{t_0+1}Z),\quad
+ H_e(Z)=\sum_{i=0}^{n_e}(-1)^iq_w^{\binom i2}T_{e,i}Z^i ,
+\]
+with $R(0)=1$, $R$ integral and independent of the translated vacuum on the support. This is an identity on the spherical source at $w$. Invert $R$ in the integral power series ring and read the coefficient of $Z^i$. It expresses $z^{(t_0+1)i}q_w^{\binom i2}F_eT_{e,i}$ as an integral combination of $T_{e+1,i'}F_e$ for $i'\le i$. For $i\le r$, the $p$-valuation of the prefactor is at most $frt_0$ since $z=p^h$ for $2h\le f$ and $h((t_0+1)i+i(i-1))=h(t_0i+i^2)\le2hrt_0$ for $i\le r\le t_0$. At each subsequent stage no larger index occurs, so after $j$ stages $p^{jfrt_0}$ suffices. Increasing the exponent to $rf(n_m+r)$ incurs an integral scalar since $jt_0\le n_m$. This proves the uniform transfer used above from the displayed spherical polynomial identity.
+
+It remains to bound the index of that sum. For one marked prime the long places inducing $w$ or $\bar w$ form a cycle of length $\nu$ alternating between the ends, with Frobenius power $P_0=p^o$, residue cardinality $q=P_0^\nu$, and $A_w=a\nu/2$. Use the edge elementary-divisor estimate with degree $a$, rank $k$, block size $r$, and exceptional proportion $\theta=1/(m^2f)$. Its size conditions are $0<r\le k/2$, $0<\theta\le1$, $q\ge a^4$ and $a\ge(\nu k\log q/\theta)^5P_0^{3r}$, as verified for the exceptional orbit. In edge coordinates one restricts to the edges at each end and pairs the restrictions. The two end determinant losses together cost at most $c_{\rm div}d_X$. The middle pairing admits an approximate inverse up to at most $\theta d_X$ further generators, at cost $2c_{\rm div}d_X$. Adding $p^{j_p}M_\iota$ pays at most $j_p$ on each further generator. Here
+\[
+ c_{\rm div}=\nu a\{P_0^{-2r}+r^2/(kP_0)\},\qquad
+ 3c_{\rm div}\le 12 A_w/(mp).
+\]
+Thus the exponent per dimension of one scaled operator modulo $p^{j_p}$ is at most $12A_w/(mp)+\theta j_p$. These costs add under products. Indeed, modulo $p^{j_p}M_\iota$, clear first into the image of one operator, lift the coefficients, and clear again before applying that operator. Summing $m$ copies and using $\sum_w A_w\le fa$ and $|\Lambda|\le f$ gives
+\[
+ m\sum_{w\in\Lambda}\{12A_w/(mp)+\theta j_p\}
+ \le 14fa/p+1/m\le h_p.
+\]
+This proves the asserted colength. For the displayed estimate on $c_{\rm div}$ use $P_0\ge p$, $P_0^{2r}\ge mp$ and $mr^2\le k$. Both terms in braces are at most $1/(mp)$. To identify the input about the middle pairing more precisely, take $w_0^2=p$, let $c_0'$ be the multinomial exponent for rank $k$, and work to precision $w_0^{5\nu c_0'}$. The edge averaging operator acts in the pairing as $p^{\nu c_0'}$ modulo that precision. The space of possible residue defects has dimension times the number of parahoric cosets at most $(1+\theta)$ times the number of monomials. The origin basis accounts for the first copy of that number. At most a proportion $\theta$ of additional generators remains. Section~\ref{A:edgecalc} gives the low-defect count and the averaging argument. It identifies the lattice-point and local representation estimates still needed for the edge factorization.
+
+\emph{The level prime $N$.} Here $\gamma_N=0$. Write $\delta_0$ for the shifted diagonal source lattice and $U_N$ for the sum of translates called the up operator. Use as $S_\iota$ the source forms whose image under $U_N^{m/2}$ is integral at $\delta_0$. If $d_*$ is the summed degree of the last coordinate over the coefficient basis and classes, symmetry of the coordinates gives $k d_*\le d_X fa$. Changing from the dual shifted lattice to the shifted lattice costs at most $d_*$. Indeed, diagonal rescaling multiplies each monomial by its last-coordinate power of $N$, so the determinant exponent is the sum of those degrees. The up operator sends shifted-integral forms into the dual shifted lattice. Pull back the change-of-lattice bound successively. The initial change and the $m/2$ copies cost at most $(1+m/2)d_*\le mfb d_X$. On ramified inputs, gluing the chain in pairs replaces the original input by $U_N^{m/2}v$ on the shifted lattice and contributes a scalar of gauge at most $N^{mfb}$. Each direct lift increases the shifted gauge by at most $N^{fb}$. Final restriction takes that terminal shifted bound to the ordinary target gauge. The total loss is at most $2mfb$, as required.
+In more detail each pair of direct stages arises from expansion of the glued kernel into primitive last-column data. The diagonal shifts at the shared odd rank occur with opposite exponents and cancel. The remaining sum over primitive vectors gives their integer cardinality. Moving the resulting up operator to the input gives the product of the commutation scalars at the preceding stages. For pair $i$ the scalar is therefore a product of the gluing scalar, a nonnegative integer, and commutation factors from stages $0,\ldots,2i+1$. The pair's gluing scalar has gauge at most $N^{2fb}$ and all commutation factors have gauge at most one. Multiplication over the $m/2$ pairs gives $N^{mfb}$ on the scalar and $U_N^{m/2}$ on the input. The source ramification is required in the primitive-column identity. The one-pair local Weil action and its scalar estimates are the inputs to this iteration.
+
+\end{proof}
+
+\paragraph{Summing the errors.}\label{A:loss}
+Let $K=4faL^2\log x_1$. For ordinary small primes, $\epsilon_p\log p\le K/p$. For $p\equiv\pm1\pmod m$, write $p=mc\pm1$, $1\le c\le x_1$. Then $m/p\le2/c$, giving $\epsilon_p\log p\le K/c$. The level term satisfies $2mfb\log N\le K$ by the upper level bound and $a=xb$. Charge it to $c=1$. For a given $c$, at most four entries $c,mc-1,mc+1,N$ have been charged. Hence for every finite set of primes $F$,
+\begin{equation}
+ \sum_{p\in F} \epsilon_p\log p\le4K(1+\log x_1)\le faL^3=U .\label{A:budget}
+\end{equation}
+The last inequality uses $16\log x_1(1+\log x_1)\le L$ from the admissible scales.
+
+\subsection{One matrix for all allowed twists}\label{A:indexsec}
+Use the quantifiers of \eqref{sz:index}. The local matrices act on the original indexing of the family, and the integral rows must work for every allowed $m$-fold twist of level norm coprime to $p$.
+
+\begin{chatAproposition}[Theorem A(b)]\label{A:index}
+Work under $\mathsf A_{\rm loc}$.
+For any finite translate set $t$, any family of $y_i=P_{g_i}\phi_i$ with $g_i\in t$ and $\phi_i\in\mathcal I$ satisfies $\operatorname{IndexLe}(y,2|t|d_SU)$.
+\end{chatAproposition}
+\begin{proof}
+Fix $p,\iota$. Lemma~\ref{A:clear}, restricted to $M_\iota\cap S$, and \eqref{A:budget} prove existence of a common error witness. Use precisely the witness $e_p$ selected in $c_B$, with its corresponding ramified clearing modules. Apply its clearing property to the preimages belonging to a single translate $g$. Its matrix has determinant valuation at most $d_Xe_p$. Each cleared source row $v$ remains ramified. For every allowed twist choose the seesaw datum for that twist. The chain of $z_v$ has valuation at least $\gamma_p-e_p$, and $|c_B|_p=p^{\lfloor\gamma_p-e_p\rfloor}$. Thus the scaled chain is integral for all the twists. At primes outside $\mathcal P\cup\{N\}$ the same formula holds with zero exponent.
+
+Projection and translation preserve this assertion. Indeed the finite group character formula writes each $|G|e_0(t')$ as a sum of character values times integer dimensions, hence as an algebraic integer. The lifted first-block translates preserve integral values, so summing their integral multiples stays in the lattice. By linearity each cleared row of the $y_i$ for this $g$ is integral under every allowed lift. Partition the indices by one witness $g_i$ each and place the matrices for the nonempty parts on the diagonal. Determinant valuations add. Thus $\delta_p=|t|d_X e_p$ works simultaneously at all $\iota$ above $p$. By the selected witness budget and \eqref{A:dimension}, its total logarithmic cost is at most $2|t|d_SU$. The empty family uses the determinant $1$.
+\end{proof}
+For a family selected from $P_g\mathcal S$, the archimedean estimate applies to the original vectors and the finite-place clearing applies to those same indexed vectors. In particular, if $n$ such vectors are independent, Hadamard bounds the Gram determinant of their untwisted lifts at each conjugate by $\exp(n(H-m\Tot_D+V))$.
+
+\subsection{Residue dimension and averaging at an exceptional prime}\label{A:edgecalc}
+Retain the notation of the exceptional case. The orbit length is constrained by $m\le o\nu$ and $\nu\le f$. Hence $q=p^{o\nu}\ge3^m\ge a^4$ at the exceptional primes ($p\ge13$). For the other large-degree condition, $o\le r$ and the tower scale imply $P_0^{3r}\le x_1^{3r^2}\le\sqrt b$. Use $\log q\le o\nu\log x_1$ in the remaining factor. The admissible bounds on $\nu,k,r,f$ give $(\nu k\,o\nu\log x_1/\theta)^5\sqrt b\le a$. This verifies the direction of both large-degree requirements: the residue field dominates the degree, which in turn dominates the precision needed to control the defects.
+
+Here is the numerical part of the residue dimension estimate. In the cycle of $\nu$ letters take polynomials of degree $a$ in each group of $k$ variables. Denote their monomial count by $D_a=\binom{a+k-1}{k-1}^{\nu}$. Put $t$ equal to the defect threshold for the congruence precision, and $E'=4tP_0^{2r}$. Let $s_r$ be the parahoric index, and $S_{\rm res}$ the residue subspace whose translates by the block Levi group have vanishing coefficients at exponents of defect exceeding $3t$. The lattice-point estimate bounds $\dim S_{\rm res}$ by a Levi flag factor times the volume of the defect cone in a product of degree slabs with upper degrees at most $a+E'$. The fraction of a slab in the cone is
+\[
+ \prod_{j=1}^k \frac{q-1}{q^j-1}.
+\]
+Its reciprocal counts complete flags. A choice of the distinguished $r$-space and flags in its two blocks contributes at most this many flags. Thus after multiplying by $s_r$, the flag factor and the cone fraction cancel. Bounding each enlarged slab by the volume of a simplex slice gives
+\[
+ s_r\dim S_{\rm res}
+ \le \exp\bigl(\nu(k-1)E'/a\bigr)
+       \left(\frac{a^{k-1}}{(k-1)!}\right)^\nu
+ \le (1+\theta)D_a.
+\]
+Indeed, $8\nu ktP_0^{2r}\le\theta a$ gives $2\nu(k-1)E'/a\le\theta\le1$, and $e^z\le1+2z$ for $0\le z\le1/2$. This explains how a proportion $\theta$, rather than a full dimension per edge, reaches the colength bound. The geometric input in this calculation is the enclosure of the admissible lattice points by the enlarged slab together with the stated cone fraction. Its exact statements are in the concordance.
+
+\paragraph{The middle edge pairing.}\label{A:edgeaverage}
+Work over the characteristic-zero valuation ring at the marked prime. Write $w^2=p$, $\nu=2h$, $P_0=p^o$, $c_0=k^2o\nu$ (that is, $k^2\log_p q$), and fix an integer precision $c$, eventually $5\nu c_0$. Along the cyclic letters the polynomial has degree $a$ in each group of $k$ variables. Let $t=3kc$. In the large-degree range the Frobenius substitution in one generic matrix has degree at most $D_*=\nu ak(h+2)P_0^h$, with $D_*+k<q$. At each letter choose an integral functional $I_j$ on the generic matrix polynomial ring with three properties. It is invariant under conjugation by the Levi group of the two blocks. It kills monomials whose row degree across the boundary (degree in the first row of the second block minus degree in the last row of the first) exceeds $2tP_0^h$. For a polynomial of degree at most $D_*$ whose Levi conjugates have all those coefficients in an ideal $J$, it equals $p^{c_0}$ times evaluation at the identity modulo $J$.
+
+Here the scale $p^{c_0}$ comes from diagonal weights $p^{c_0}/\binom{d}{\alpha}$ in homogeneous degree $d\le D_*$. They are integral since there are $k^2$ entries and the base-$p$ carry formula bounds the multinomial valuation by $k^2\log_p q$ for $d<q$. On degree $d$ the functional is the trace on the tensor power $(O^k)^{\otimes d}$ of the weighted coefficient operator minus its trace on the submodule generated under the block Schur algebra by tensors of row degree above the threshold. The trace on the full tensor power is the scaled evaluation at the identity by multinomial counting. For a high-weight monomial the image lies in the high-weight submodule, so the two traces agree. Conjugation invariance follows by change of basis in both traces. The remaining assertion that the restricted trace lies in $J$ under the stated coefficient condition uses finite-field interpolation and spanning of the block Schur algebra under $D_*+k\le q$. We retain this integral trace lemma among the local inputs.
+
+Contract the generic Frobenius substitution at letters in a subset $J_0$ using $I_j$, and at its remaining letters by $p^{c_0}$ times identity evaluation. Call the resulting operator $A_{J_0}$. At $J_0=\varnothing$ it equals $p^{\nu c_0}$ times the identity. When all letters except $j$ have been contracted, the weight estimate on the generic substitution says that for a coefficient surviving modulo $w^c$,
+\[
+ \left|\frac{\text{row weight at }j}{P_0^h}-
+    \text{defect of the output monomial at }j+h\right|\le t.
+\]
+This estimate is the local Frobenius-factor input. Levi invariance at every other letter forces its two root weights to balance, hence only the free copy appears on the left. Output defect $>3t$ forces row weight $>2tP_0^h$. Thus after all letters are contracted, each such coefficient of every Levi translate vanishes modulo $w^c$.
+
+To compare the pairings for $J_0$ and $J_0\cup\{j\}$, first pair the remaining one-matrix polynomial with an all-edges test vector $h'$. If a high-weight monomial survives in a Levi conjugate of the one-matrix coefficient, the same inequality forces defect $>t$. Its pairing with $h'$ is divisible by $w^c$: by transpose adjointness it equals the diagonal pairing weight times that coefficient in the transpose translate of $h'$, and the all-edges depth estimate gives the divisibility. Every high-weight coefficient of the paired polynomial therefore lies in $(w^c)$. The third defining property of $I_j$ shows that insertion of $j$ preserves this pairing modulo $w^c$. Telescoping gives
+\[
+ \langle A_{\rm all}h,h'\rangle\equiv p^{\nu c_0}\langle h,h'\rangle
+ \pmod {w^c}.
+\]
+The two conclusions explain why the same average yields the residue defect bound and the congruence needed to clear the middle edge pairing.

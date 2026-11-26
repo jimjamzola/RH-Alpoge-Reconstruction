@@ -6,15 +6,14 @@ message: >-
   itself (see "references").
 type: software
 title: >-
-  The Alpöge Proof of the Riemann Hypothesis
+  The Alpöge–Claude Argument for the Riemann Hypothesis
 abstract: >-
-  A reconstruction in conventional mathematics of the proof of the Riemann
-  hypothesis that Levent Alpöge announced on November 20, 2026, found in
-  collaboration with Claude and released as a Lean development, which the
-  Lean and Mathlib communities certified on November 21, 2026. The manuscript
-  follows the original argument through the final deduction and records the
-  mathematical comparisons and input proofs still under review.
-version: "2026-11-25"
+  A working reconstruction of the Alpöge–Claude determinant argument from
+  the readable Lean 4 refactor by Luke Sernau, colleagues at Anthropic,
+  and Claude. The manuscript gives a conditional reduction of Dirichlet
+  GRH to a signed determinant bound and identifies the arithmetic
+  hypotheses still needed for the theta lifts.
+version: "2026-11-26"
 authors:
   - family-names: Adriazola
     given-names: Jimmie
@@ -23,7 +22,7 @@ authors:
       School of Mathematical and Statistical Sciences and Simon A. Levin
       Mathematical, Computational and Modeling Sciences Center, Arizona State
       University
-date-released: "2026-11-21"
+date-released: "2026-11-26"
 license: CC-BY-4.0
 repository-code: "https://github.com/jimjamzola/RH-Alpoge-Reconstruction"
 url: "https://github.com/jimjamzola/RH-Alpoge-Reconstruction"

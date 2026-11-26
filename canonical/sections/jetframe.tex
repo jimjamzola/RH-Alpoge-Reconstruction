@@ -1,0 +1,105 @@
+\subsection{Construction of the integral frame with a unit row}
+\label{sec:unitrow-frame}
+
+Let $Q=q_1$, $f=\varphi(Q)$, $\zeta=\zeta_Q$,
+$C(X)=\Phi_Q(X)$, $\Delta=C'(\zeta)$ and
+$\beta=(1+\sqrt{-d})/2$. The integers of $E=K(\zeta)$
+are $\mathcal O_K[\zeta]$ since the two cyclotomic conductors
+$d$ and $Q$ are coprime (equivalently, the discriminants of
+$K$ and $\mathbb Q(\zeta)$ are coprime). The relative different
+is $(\Delta)$ by the derivative formula for a power basis.
+Differentiating $X^Q-1=C(X)D(X)$ at $\zeta$ shows $\Delta\mid Q$.
+Use the fractional ideal $\mathfrak a$ with local factor
+$\Delta^{-1}\mathcal O_{E,v}$ at $v\mid\beta$ and
+$\mathcal O_{E,v}$ elsewhere. This describes the lattice of the vacuum
+in terms of its finite normalization. It is stable under $G=\mathrm{Gal}(E/K)$.
+Here the embeddings in $G$ extend the selected embedding of $K$.
+Every prime divisor of $Q$ divides $\beta\bar\beta=(d+1)/4$:
+for an odd prime this follows from $d\equiv q_0/2-1\pmod{q_0}$,
+and for $2$ from $8\mid d+1$. Since $\beta+\bar\beta=1$,
+the ideals $(\beta),(\bar\beta)$ are coprime.
+In particular $\mathfrak a\bar{\mathfrak a}$ is the inverse different.
+For $v\in\mathfrak a$ the number
+$N_v=\sum_{\tau\in G}|\tau v|^2=\operatorname{Tr}_{E/K}(v\bar v)$
+is therefore integral in $K$. Being real, it is a nonnegative integer.
+
+\paragraph{A second frame length.}
+Call an indexed family $v$ of lattice vectors tight of length $H$ when
+$\sum_i\sigma(v_i)\overline{\tau(v_i)}=H\delta_{\sigma\tau}$.
+The $Q$ powers of $\zeta$ (or of $\zeta^{-1}$) are tight of
+length $Q$ by geometric summation. For any $v\in\mathfrak a$, its
+indexed family $\zeta^j\omega(v)$, $0\le j<Q$, $\omega\in G$,
+is tight of length $QN_v$: the sum in $j$ kills off-diagonal
+entries, and the sum in $\omega$ makes every diagonal entry equal.
+
+Take $u=\lceil\log_2 Q\rceil$ and define $b_i,e_i$ by
+\[
+ C(X)/(X-\zeta)=\sum_{i=0}^{f-1} b_i X^i,\qquad
+ e_i=\bar\beta^u b_i/\Delta .
+\]
+The $b_i$ are integral. At a place away from $\beta$ the quotient
+$\bar\beta^u/\Delta$ is integral: $Q\mid(\beta\bar\beta)^u$
+by prime factorization, $\Delta\mid Q$, and $\beta$ is a local unit.
+At places over $\beta$ the factor $\Delta$ clears the denominator.
+Thus all $e_i$ belong to $\mathfrak a$.
+Lagrange interpolation gives, for every $\sigma,\tau\in G$,
+\[
+ \sum_{i=0}^{f-1}\sigma(e_i)\,\overline{\tau(\zeta^{-i})}
+   =\bar\beta^u\delta_{\sigma\tau}.
+\]
+Indeed this is the polynomial $\sigma(C(X)/(X-\zeta))/\sigma(\Delta)$
+evaluated at $X=\tau(\zeta)$, times $\bar\beta^u$.
+
+Start with the powers $\zeta^{-j}$ and, for each $i$, the entire indexed
+family $\zeta^j\omega(e_i)$. For $0\le i<f$ replace the indexed
+pair $\zeta^{-i}, e_i$ by its sum, using the $j=0$, $\omega=1$
+copy of $e_i$. The change in the Gram matrix consists of the two
+cross terms in the interpolation identity. The new frame has length
+\[
+ H=Q\left(1+\sum_{i<f}N_{e_i}\right)+\beta^u+\bar\beta^u .
+\]
+Modulo any prime ideal above a divisor of $Q$, one of
+$\beta,\bar\beta$ is zero and the other one, so $H\equiv1$ there.
+The expression $H$ is a rational integer, and its Gram matrix is nonnegative.
+Thus $H>0$ and $(H,Q)=1$. The indexed member
+$y_*=\zeta e_{f-1}=\zeta\bar\beta^u/\Delta$ survives the replacement.
+
+\paragraph{Archimedean size and filling the prescribed length.}
+For fixed $q_0,d$, $H$ grows only polynomially in $Q$.
+Indeed $Q=q_0 A$ has the same prime divisors as $q_0$, whence
+$C(X)=\Phi_{q_0}(X^A)$ (compare primitive roots and degrees).
+Its coefficients are bounded in terms of $q_0$, so synthetic division
+at any conjugate of $\zeta$ gives $|\tau(b_i)|\ll_{q_0}Q$.
+Differentiation yields
+$|\tau(\Delta)|=A|\Phi_{q_0}'(\tau(\zeta)^A)|\gg_{q_0}A$.
+Also $|\beta|^u\ll_d Q^{O_d(1)}$, which proves the assertion.
+On the constructed scales $Q$ is polynomial in $x$ and $\log b>x^\eta$.
+Thus $H,Q,f\le b$ eventually. Put $R=\lceil6fb\rceil$.
+The level $M\ge b^{20}$ satisfies $M-R(H+Q)\ge QH$ for large $x$.
+Choose $j$ with $0\le j<Q$ and $jH\equiv M-R(H+Q)\pmod Q$.
+Writing $M-R(H+Q)=jH+iQ$ gives $i\ge0$.
+Use the length-$H$ family with multiplicity $j+R$ and the length-$Q$
+powers with multiplicity $i+R$. This frame has length exactly $M$,
+every multiplicity is at least $6fb$, and it contains both $1$ and $y_*$.
+
+\paragraph{The unit row.}
+Let $s_{\rm per}$ denote the period multiplier in the frame forms
+$L_y(z)=s_{\rm per}\sum_\tau\overline{\tau(y)}z_\tau$. Its local
+normalization is as follows. For the embedding
+$\phi_\tau(y)=\iota(\overline{\tau(y)})$ and its place $v_\tau$,
+$|\iota(s_{\rm per})|=|\phi_\tau(\Delta)|$ if $v_\tau\mid\beta$, and
+$|\iota(s_{\rm per})|=1$ otherwise. These finite absolute values of the
+period multiplier are inputs from the normalization of the vacuum.
+All $v_\tau$ restrict to the same place on $K$. When they lie away
+from $\beta$, take $y=1$; otherwise $\bar\beta$ is a unit there,
+so $|\phi_\tau(y_*)|=|\phi_\tau(\Delta)|^{-1}$ at every $\tau$.
+This gives one row all of whose coefficients are units, for each
+finite prime and embedding. The lattice condition gives integrality
+of the other rows. At an inert prime, $p\nmid Q M$ (the level primes
+split), so all frame vectors and their conjugates are integral there.
+From tightness,
+$\sum_i c_i\tau(v_i)L_{v_i}(z)=M s_{\rm per} z_\tau$; the right-hand
+scalar is a unit. This supplies the integral resolution used in the
+large inert case. Dividing the frame by $\bar\pi_M$ for
+$\pi_M\bar\pi_M=M$ also gives the identity resolution for the
+normalized inert coupling calculation, with unit rescaling.

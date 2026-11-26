@@ -1,0 +1,136 @@
+\subsection{The reciprocal-discriminant sum at the level prime}
+\label{app:pair-count}
+Write $h=\varrho+1$, $H_0=b^{h^3 f}$ and $\tau=b^{kf/4}$.
+We separate a lattice estimate in \S\ref{B:pairs} from the multiplicity
+with which a near term can lie over a lattice. Let $\Lambda$ be any lattice
+in the genus of the standard definite Hermitian lattice of rank $k$ over
+$\mathcal O_E$. At finite places it is self-dual. For a rank-$s$ lattice
+$A$ in its rational span, write $A^\#$ for its Hermitian dual there and
+$d(A)=[A^\#:A]^{1/2}$ when $A$ is integral. These are cardinality
+indices. This is the positive square root of the finite index of the
+Gram determinant, the discriminant convention for the pair count. In
+particular $d(B)=i\,d(A)$ for $B\subset A$ of index $i$.
+
+\begin{lemma}\label{lem:pair-row-count}
+Let $s+j=k$. For each row coset $y$ at the level prime let $t_y$ be its
+integral row on $\Lambda$ modulo the ideal $\mathfrak n$ of norm $N^f$.
+Suppose the $t_y$ are distinct. For each $y$ take all rank-$s$ sublattices
+$B\subset\Lambda$ with $t_y(B)=0$ and $d(B)\le H_0$. At the scales
+of the filling their combined weight satisfies
+\[
+ \sum_y\sum_B d(B)^{-k}
+ \le (N^f)^j H_0^{2\varrho+6}
+ (200fk\delta_E)^{f(k+1)j}\,2^k .
+\]
+Here $\delta_E$ is the root discriminant and $(\varrho+1)2f\le2^{2\varrho}$
+is the field-degree bound for the filling.
+\end{lemma}
+\begin{proof}
+Put $V=EB$, $A=\Lambda\cap V$, $d=d(A)$, and $i=[A:B]$.
+The number of all rows modulo $\mathfrak n$ annihilating $B$ is at most
+$i(N^f)^j$. Indeed, locally at $\mathfrak p^m\Vert\mathfrak n$ extend a
+basis of the saturated summand $A_{\mathfrak p}$ to an ambient basis,
+and diagonalize $B_{\mathfrak p}$ inside it with elementary-divisor
+exponents $a_1,\ldots,a_s$. For $q=\operatorname{N}\mathfrak p$
+there are $q^{mj+\sum_a\min(a_a,m)}$ choices of row. Multiplication over
+the primes gives the assertion, also for a lattice in a moved basis.
+Here the rows for the actual row cosets are the distinguished rows of
+$y^{-1}$ in coordinates on the unimodular lattice. Congruent inverse
+rows put $y^{-1}y'$ in the row stabilizer and give the same coset.
+
+Put $\mu=2\varrho+4$. Since $di\le H_0$ and $i,d\ge1$,
+\[
+ i(di)^{-k}\le H_0^{\mu+2} d^{-(k+1)} i^{-(s+\mu)}.
+\]
+For fixed $V$, the sum of $i^{-(s+\mu)}$ over its finite-index sublattices
+is at most $2^k$. At a finite place the series for sublattices in a
+free module of rank $s$ is $\prod_{a=0}^{s-1}(1-q^{a-z})^{-1}$:
+triangular bases over the valuation ring give one diagonal exponent
+at each pivot and residues above the pivots. The Euler product at
+$z=s+\mu$ is bounded by $\zeta_E(\mu)^s$.
+Indeed $\zeta_E(\mu)\le\zeta(\mu)^{2f}$, and
+$\log\zeta(\mu)\le 2^{-\mu}(1+2/(\mu-1))$ by integral comparison.
+The displayed field-degree bound makes $2f\log\zeta(\mu)<\log 2$.
+
+For clarity, the remaining sum over subspaces satisfies
+\[
+ \sum_{\operatorname{codim} V=j} d(\Lambda\cap V)^{-(k+1)}
+ \le (200fk\delta_E)^{f(k+1)j}.
+\]
+The case $j=0$ follows from self-duality. For $j>0$ let
+$A'=\Lambda\cap V^\perp$. Saturation and self-duality identify
+$A^\#/A$ and $(A')^\#/A'$ in cardinality: restriction of the pairing
+maps $\Lambda$ onto $A^\#$ locally, since $A$ is a direct summand
+locally, and its kernel is $A'$. Thus both quotients have the cardinality
+of $\Lambda/(A+A')$. In the Euclidean norm summing the squared lengths
+over the $f$ complex places, the covolume of $A'$ in its real span is
+$(2^{-f}\sqrt{|D_E|})^j d(A)$. To see the normalization, take a
+pseudo-basis of $A'$. The determinant of its complex Gram matrix at
+each chosen embedding enters the real covolume to the first power.
+The coefficient ideals enter by their absolute norms. Their product
+with the Gram factors is $[(A')^\#:A']^{1/2}$, by taking determinants
+of the Hermitian pairing locally. The remaining factors are the
+Minkowski covolumes of $j$ copies of $\mathcal O_E$.
+
+Let $m=2fj$ and let $\lambda_a$ be the Euclidean successive minima of
+$A'$. Minkowski's second theorem, using the cube of side $2/\sqrt m$
+inside the unit ball, gives $\prod_{a=1}^m\lambda_a\le
+m^{m/2}\operatorname{covol}(A')$. One can choose $E$-independent vectors
+$X_1,\ldots,X_j$ with $\|X_{a+1}\|\le\lambda_{2fa+1}$ for $0\le a<j$:
+the preceding $E$-span has real dimension $2fa$. Therefore
+\[
+ (\prod_a \|X_a\|)^{2f}\le (8fj\delta_E)^{fj}d(A).
+\]
+The chosen tuple determines $V$ by orthogonality. Every nonzero
+$x\in\Lambda$ has $\|x\|\ge1$ since the trace from $E^+$ of its Hermitian
+norm is a positive integer. The points are thus $1$-separated. Put
+$D=2fk$ and $p=2f(k+1)$. Disjoint balls of radius $1/2$ give
+$\#\{0<\|x\|\le R\}\le(1+2R)^D$ for $R\ge1$.
+Integration against $pR^{-p-1}\,dR$ bounds $\sum_{x\ne0}\|x\|^{-p}$
+by $3^D p/(p-D)=3^D(k+1)\le5^p$
+(the last inequality follows from $k+1\le(5/3)^{2k}$).
+Sum the product bound over all tuples and use $j\le k$ and
+$8\cdot5^2=200$. This proves the subspace sum and, on multiplying
+the preceding bounds, the lemma.
+\end{proof}
+
+\paragraph{Class and pair multiplicities.}
+For a free source level the classes have equal quotient measure.
+Suppose its row quotient has size $Y\ge(N^k/b)^f$, and the translated
+class lattice is identified by a rational unitary isometry with the
+kernel of the corresponding row in $\Lambda$ modulo $\mathfrak n$.
+Integrate the uniform row bound of Lemma~\ref{lem:pair-row-count}
+over the compact adelic quotient with probability measure. Right
+translation preserves the measure, so division by $Y$ bounds the
+average over classes. At the fitted scales
+\[
+ b^f H_0^{2\varrho+6}2^k\le\tau,\qquad
+ N^f(200fk\delta_E)^{f(k+1)}\le\tau .
+\]
+For the first comparison use $k\le f$, $b\ge2$ and
+$2+h^3(2\varrho+6)\le k/4$. For the second use $N\le b^{60h}$,
+$(200fk\delta_E)^{1000}\le b$ and $60h+(k+1)/1000\le k/4$.
+Consequently the sum of $d(B)^{-k}$ over classes and their eligible
+lattices is at most $\#\{c\}\tau^{j+1}/N^{kf}$.
+
+Finally suppose each near pair determines a common label and a rank-$(k-j)$
+common lattice of discriminant at most $H_0$ contained in both term lattices, with pair discriminant
+equal to the discriminant of the common lattice. The single-term estimate
+needed is that, at fixed first class, label and such lattice, there are at
+most $b^{2000h^6(j+1)f}$ possible terms, counting the second class as
+part of the term. Thus the number of ordered pairs in a fibre is at most
+the square of this bound. For $j\le h^3$ and $k\ge512000 h^9$ that square
+is at most $\tau$. Summing over labels and multiplying by the preceding
+class sum gives $C_p\tau^{j+2}$, where
+$C_p=\#\{\text{labels}\}\#\{c\}/N^{kf}$.
+This proves the reciprocal-discriminant reduction in \S\ref{B:pairs}
+given the indicated fitting data and single-term multiplicity. The use of this
+bounded-discriminant count for all the near pairs requires the geometric
+bound $d\le H_0$ in addition to $j\le h^3$; the source derives these together
+in the \lineSrc{New/Spanning/RemainingTerms/Sum}{90}{gauge comparison}. The local
+cell-rank and gauge estimates that bound the weights of individual pairs
+are separate inputs. The
+\lineSrc{New/Spanning/RemainingTerms/LatticesOfCorank}{373}{row count},
+\lineSrc{New/Spanning/RemainingTerms/SiegelLemma}{630}{subspace sum} and
+\lineSrc{New/Spanning/RemainingTerms/Count}{187}{pair estimate}
+specify the same normalizations.

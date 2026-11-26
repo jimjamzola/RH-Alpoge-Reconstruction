@@ -1,0 +1,65 @@
+\paragraph{The numerical bound from representation data.}
+Write $f=r_2(E)$ and $G_0$ for the order of the product of finite general
+linear groups in the determinant datum. Suppose $S$ consists of the places
+over $\ell p_0p_1$. At each $w\in S$ away from $\ell$ assume there is an
+inertial $u_w$ with $v(\det(\rho(u_w)-1))\le n v_\ell(G_0)$. The local
+Euler characteristic formula at residue characteristic different from $\ell$,
+together with Tate duality~\cite[Part~I]{milneADT}, gives
+\[
+ \lambda_O Z^1(E_w,W)-\lambda_O W=\lambda_O H^0(E_w,W^*).
+\]
+Indeed $\lambda H^1=\lambda H^0+\lambda H^2$ and
+$\lambda B^1=\lambda W-\lambda H^0$. The group of dual invariants is
+killed by $\rho^*(u_w)-1$. Since inertia fixes the $\ell$-power roots of
+unity here, its kernel has length at most $v_\pi(\det(\rho(u_w)-1))$
+by duality and Smith normal form. This bounds the restricted cocycles
+as well. There are at most $4f$ such places. Assume the same determinant
+bound for each of $g_0,g_0^{-c}$, giving two further terms for the first
+prime.
+
+For the global term suppose there is $g\in G$ acting by a scalar unit
+$\alpha$, with $g^{-c}$ acting by another scalar unit $\alpha'$.
+Each equivariant map $W\to W^{*c}$ takes values killed by
+$\delta=\alpha-\chi_{\rm cyc}(g)\alpha'$.
+Its value at a fixed standard basis vector determines the map, since
+the full matrix algebra is spanned by the action. The $\delta$-torsion
+of $W^*$ has length at most $n v_\pi(\delta)$, hence this also bounds
+the length of the space of such maps. In particular, if for some
+$h\in\{0,1\}$ one has $\chi_{\rm cyc}(g)=p_h^n$ and
+$\alpha'=\chi_{\rm cyc}(g)^{t-1}\alpha$ with $t\ge1$, the normalized
+global term is at most $n v_\ell(p_h^{nt}-1)$. When $nt$ is at most
+the dimension of the general linear block at $p_h$, the integer
+$p_h^{nt}-1$ divides its order: the order contains the factor
+$p_h^{d nt}-1$ for residue degree $d\ge1$. Thus the normalized sum of the
+global, local, and first-prime terms is at most
+$(4f+3)n v_\ell(G_0)$. This argument needs the scalar and inertial
+determinant information on the actual representations; it does not
+construct an attached representation from a Hecke eigensystem.
+
+For the critical ratios take the specified tame generator $g_0$ at the
+chosen $w\nmid\ell$ over a level prime. Suppose its Stickelberger
+character $z=\vartheta(g_0)$ satisfies $z\ne1$ and $z^{q_w-1}=1$,
+and its list of Euler exponents has size at most two. Then
+$(z-1)\mid(q_w-1)$ in the valuation ring: reducing
+$0=1+z+\cdots+z^{q_w-2}$ modulo $z-1$ gives the divisibility.
+In particular $\beta'-v(\boldsymbol{1}(\Theta_\varnothing))
+\le4v_\ell(q_w-1)$. Since the chosen general linear block is over
+the field of size $q_w$, $q_w-1\mid G_0$. Assume the interpolation
+identity at each character $\psi$ used in the argument is
+\[
+ v(\psi(\Theta_J))=v(\boldsymbol{1}(\Theta_\varnothing))
+                        +d\,v(\iota(R_\psi)),\qquad d\in\{1,2\},
+\]
+where $R_\psi$ is the critical ratio with the stated Euler factors removed.
+With the simultaneous specialization error $2^{-\ell}$ this gives
+$d\,v(\iota(R_\psi))\le4v_\ell(G_0)+2^{-\ell}$. A negative valuation
+already satisfies the required upper bound. For $1\le n\le r$ and $f\ge1$,
+both this estimate and the normalized Selmer length estimate give the common
+allowance
+\[
+                     u_\ell=(4f+3)r v_\ell(G_0)+2^{-\ell}
+\]
+for all the indicated powers. In particular the inverse norm of the ratio is
+at most $\ell^{u_\ell}$. The interpolation identity and the prescribed
+inertial and scalar properties are the application-specific inputs in
+this deduction.

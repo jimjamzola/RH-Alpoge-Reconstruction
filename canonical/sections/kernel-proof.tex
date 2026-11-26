@@ -1,0 +1,53 @@
+\subsection*{The weight of the heads in the open-cell sieve}
+Write $n=\varrho+1$, $f=[E:\mathbb Q]/2$, and let $v$ run over one embedding of the CM field $E$ from each conjugate pair, with ordinary complex modulus. Let $\Sigma$ be the finite set of places used for integration; it may contain places beyond those at which vectors are fixed. The constants from the filling used below are
+\[
+ b\ge1000,\quad n\ge 10^5,\quad a_0=|\operatorname{disc}E|^{1/(2f)}\le b,\qquad
+ 1\le g_v\le b^{23},\qquad 1\le N\le b^{60n}.
+\]
+Put $t_{va}=g_v^{2(\varrho-a)}/N$ for $0\le a\le\varrho$ and $P_a=(2/a_0)^f/\prod_v t_{va}^2$. An entry list is a finite set $A\subset E^\times$ integral off $\Sigma$. For a head $p\in A^i$, put $d_j=p_1\cdots p_j$ and $c_{vj}=\prod_{a=0}^{j-1}t_{va}$ for $1\le j\le i$. For an element $d\ne0$ integral at $\Sigma$, set $I_\Sigma(d)=\prod_{w\in \Sigma} q_w^{v_w(d)}$, with the additive valuations normalized by a uniformizer. Set $R=b^{60n^2}$.
+The weight $w_i(p)$ is zero unless all $d_j$ are integral at $\Sigma$ and $|c_{vj}v(d_j)|\le R$ at every $v$. On that support it equals
+\[
+ \prod_{j=1}^i\left(I_\Sigma(d_j)^{1/2}\prod_v\max\{1,|c_{vj}v(d_j)|^{-1}\}\right)^{n^6}.
+\]
+\begin{lemma}
+For $0\le i\le\varrho$ and every entry list,
+\[
+ \left(\sum_{p\in A^i}w_i(p)\right)^2
+ \le b^{400n^9f}\prod_{a<i}P_a .
+\]
+\end{lemma}
+\begin{proof}
+On the support, $d_j\in\mathcal O_E$, and $c_{vj}^{-1}\le N^j\le R$, hence $|v(d_j)|\le R^2$. Since $I_\Sigma(d_j)$ divides $|N_{E/\mathbb Q}d_j|$, the factor before the power $n^6$ is at most
+\[
+ \prod_v\max\{|v(d_j)|,c_{vj}^{-1}\}\le R^{2f}.
+\]
+Thus each weight is at most $b^{120n^8fi}$. The head is recovered by successive quotients of its partial products. Distinct integers in the Minkowski embedding have sup distance at least one, since the norm of their difference is a nonzero integer. Disjoint open balls of radius $1/2$ for that norm show that the number of integers of norm at most $R^2$ in the sup metric is at most $(1+2R^2)^{2f}$. Thus
+\[
+ \sum_p w_i(p)\le (1+2R^2)^{2fi} b^{120n^8fi}\le b^{130n^9f}.
+\]
+Indeed $1+2R^2\le b^{120n^2+1}$ and $2n(120n^2+1)\le10n^9$. Also $t_{va}\le b^{46\varrho}$ yields $\prod_{a<i}P_a\ge b^{-(1+92\varrho)if}\ge b^{-100n^2f}$. Squaring and using $260n^9+100n^2\le400n^9$ proves the claim.
+\end{proof}
+This proves item 3 of the sieve on \S\ref{spread:normalization} for its specified weights and scales.
+
+\subsection*{Summation of the dual-frequency majorant}
+For $y\in E^\times$ integral off $\Sigma$, extend $I_\Sigma(y)=\prod_{w\in \Sigma}q_w^{v_w(y)}$ to rational values, and put $D(y)=N(\{a\in\mathcal O_E:ay\in\mathcal O_E\})$. Then $D(y)=\prod_{w\in \Sigma}q_w^{\max(0,-v_w(y))}$ and $I_\Sigma(y)\le |N_{E/\mathbb Q}y|$. For $d\ge0$ set $h_d(s)=s^d\min(1,s)^6$.
+\begin{lemma}
+Suppose $c_v\in\mathbb C^\times$, $|c_v|^{-1}\le x_v\le B$, $B\ge1$. For every finite set $X$ of nonzero $\Sigma$-integers,
+\[
+ \sum_{y\in X}\frac{I_\Sigma(y)^{d/2}}{D(y)^3}
+       \prod_v h_d(|c_vv(y)|^{-1})
+ \ \le\ \prod_v x_v^d (bB^2)^{3f}.
+\]
+\end{lemma}
+\begin{proof}
+The norm bound cancels the factors $|v(y)|^{-d}$. Since $\min(1,|c_v v(y)|^{-1})\le B/\max(1,|v(y)|)$, it suffices to sum $D(y)^{-3}\prod_v\max(1,|v(y)|)^{-6}$ and bound the result by $b^{3f}$.
+Fix the denominator ideal $\mathfrak d$, of norm $D$, and partition by $2^{m_v}\le\max(1,|v(y)|)<2^{m_v+1}$, $m_v\ge0$. All these points lie in $\mathfrak d^{-1}$. Divide the $v$-coordinate by $L_v=2^{m_v+1}$. Distinct scaled points have sup distance at least $s=(D\prod_v L_v^2)^{-1/(2f)}$, since the norm of a nonzero difference in $\mathfrak d^{-1}$ is at least $1/D$. Packing disjoint balls of radius $s/2$ in the sup ball of radius $1+s/2$ bounds the count by $(1+2/s)^{2f}\le 3^{2f}D\prod_v L_v^2$. Summing the dyadic boxes costs at most $(36\sum_{m\ge0}2^{-4m})^fD$ before the factor $D^{-3}$. Finally $\sum_{\mathfrak d}N\mathfrak d^{-2}=\zeta_E(2)\le\zeta(2)^{2f}<4^f$ by the Euler products. The resulting constant $(36\cdot16/15\cdot4)^f$ is below $b^{3f}$.
+\end{proof}
+For the fitted frequency scales write $d=k-n^7$, let $\Theta$ be the archimedean volume factor in Appendix F.1, and assume $|\lambda_v|^{-1}\le g_v/M$. At step $a$ set $c_v=\lambda_v/t_{va}$, $x_v=g_v^{2\varrho+1}/(MN)$, and $B=b^{23(2\varrho+1)}$. Then $|c_v|^{-1}\le x_v\le B$. With $C_{\rm dec}=\prod_v\Theta x_v^d$ and $(bB^2)^3\le b^{n^9}$ the lemma gives
+\[
+ \sum_{y\in X}\!
+ \left[\prod_v\Theta b^{2000n^9} h_d(|c_vv(y)|^{-1})\right]
+ \frac{I_\Sigma(y)^{d/2}}{D(y)^3} b^{n^9 f}
+ \le C_{\rm dec} b^{2002n^9 f}.
+\]
+The same inequality holds for the whole nonzero dual set by monotone convergence. This supplies the global summation of the pointwise decay majorant, including its numerical exponent. Applying it to the actual transforms still requires the archimedean and finite-place kernel bounds by this majorant, along with the scaled Poisson formula. It also bounds a single off-diagonal frequency meeting these conditions.

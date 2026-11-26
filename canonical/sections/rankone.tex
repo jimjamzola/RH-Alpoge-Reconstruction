@@ -1,0 +1,32 @@
+\subsection{The Galois line for a main critical pair}
+\label{rankone:main}
+Let $(\nu,z)$ be one of the main pairs of \S11, with source $U(1)$, target $U(2z)$ and $\nu$ of weight $-c_v$ at the complex place $v$ of $E$. The constant source system has Galois character $1$, inertia polynomial $X-1$ at every chosen place, and Hodge--Tate weight zero. The character needed after normalization is different. We describe it explicitly. Use the Artin map sending a uniformizer to geometric Frobenius in the unramified quotient, and count the cyclotomic character $\epsilon_\ell$ with Hodge--Tate weight $-1$.
+
+For a full idele $x$ write $|x|_{\mathbb A_E}$ for the product of the normalized absolute values (squared modulus at a complex place). Set
+\[
+ \Theta(x)=\nu(x/\bar x)^{-1}|x|_{\mathbb A_E}^{1-z}.
+\]
+It is trivial on $E^\times$ by the product formula and automorphy of $\nu$. Let $\sigma$ run over the embeddings $E\hookrightarrow\mathbb C$, and let $s_\sigma=+1$ on the chosen CM type and $-1$ on its conjugate. The infinite component is $\prod_\sigma\sigma(x_\infty)^{a_\sigma}$, with
+\[
+ a_\sigma=1-z+s_\sigma c_v,\qquad v=\{\sigma,\bar\sigma\}.
+\]
+Indeed $\nu^{-1}$ evaluates on $x_v/\bar x_v$ with exponent $c_v$, and $|x_v|_v^{1-z}$ contributes $1-z$ to both exponents. The half-rank shift is $(1-(2z-1))/2=1-z$.
+
+Fix $\iota:\overline{\mathbb Q}\hookrightarrow\overline{\mathbb Q}_\ell$, identifying algebraic values in $\mathbb C$ through a fixed archimedean embedding. If $x$ is a finite idele, put
+\[
+ t_\ell(x)=\iota(\Theta_f(x))
+        \prod_{\sigma} (\iota\sigma)(x_{w(\iota\sigma)})^{a_\sigma},
+\]
+where $w(\iota\sigma)$ is the place over $\ell$ induced by $\iota\sigma$, and the latter map on a local component means its continuous extension. The smooth finite part has algebraic values in a fixed number field. To see this, take a modulus killing its unit character, choose finitely many representatives of the ray class group, and raise each representative to the order of its class. Its finite character value then has a power equal to a product of conjugates of a field element. These finitely many algebraic values together with the finite unit image and the normal closure of $E$ suffice. Thus $t_\ell$ takes values in a finite extension of $\mathbb Q_\ell$. It is continuous, and on a diagonal $u\in E^\times$ the two factors cancel because $\Theta_f(u)=\prod_\sigma\sigma(u)^{-a_\sigma}$. Global class field theory gives a character $T_\ell:G_E\to\overline{\mathbb Q}_\ell^\times$ whose pullback is $t_\ell$. In detail the finite idele class quotient by the closure of $E^\times$ is compact (the ideal class group is finite and finite local units form a compact group); over a totally imaginary field it is the global reciprocity quotient. Compactness makes the valuation of $T_\ell$ identically zero, so its coefficient ring of integers supplies a stable rank-one lattice.
+
+At $w\nmid\ell$ the local character under reciprocity is $\iota\Theta_{f,w}$, including its tame unit character. At an unramified place $T_\ell(\operatorname{Frob}^{\rm geom}_w)=\iota\Theta_{f,w}(\varpi_w)$. At $w\mid\ell$ its restriction to local units is the product of the finite character $\iota\Theta_{f,w}$ and $\prod_{\sigma\mid w}(\iota\sigma)^{a_\sigma}$. On a sufficiently small open subgroup the finite factor is trivial. The rank-one local character theorem (Tate--Lubin--Tate) gives the labelled Hodge--Tate weight
+\[
+   -a_\sigma=z-1-s_\sigma c_v .
+\]
+With geometric reciprocity the character whose pullback on units is the identity embedding is the Lubin--Tate character at that embedding; it has weight $-1$ there and zero at the other embeddings. This fixes the sign. The local character is potentially crystalline and is crystalline when its finite factor is unramified. A general reference for the unit criterion and labelled weights is B.~Conrad, \emph{Lifting global representations with local properties}, Appendix B, especially Proposition B.4. Moreover
+\[
+ T_\ell^c T_\ell=\epsilon_\ell^{2(1-z)}.
+\]
+Indeed complex conjugation inverts the $\nu$-factor, and the avatar of the idele norm is $\epsilon_\ell$, as one checks on the dense set of unramified geometric Frobenius elements. A finite order twist $\eta$ on $U(1)$ multiplies $T_\ell$ by the avatar of $x\mapsto\eta(x/\bar x)^{-1}$, so all labelled weights are unchanged.
+
+The line, its normalization and its local invariants are thus available before constructing a representation for the lifted form. To identify it in that representation one still needs the unramified theta-lift Hecke formula and the attachment of a representation to the target system. More precisely, if at almost all places the normalized target trace at geometric Frobenius equals the trace of the twisted line plus the sum of $\epsilon_\ell^{-i}$ for $0\le i<2z-1$, Chebotarev density and continuity extend that equality to $G_E$. Equality of traces in characteristic zero identifies semisimplifications. This derivation has no implication for integral extension classes between the constituents, which enter the congruence estimate in R.

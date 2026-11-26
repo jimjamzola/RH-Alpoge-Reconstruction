@@ -1,0 +1,67 @@
+\subsection{Precision needed for completing the determinant family}\label{sec:precision}
+The cost of completing the determinant family depends on the squared norm
+of each added column. Keeping the bound from \S\ref{c3:auxiliary}
+before its final enlargement gives the following sufficient accuracy for
+the two Hilbert--Schmidt estimates.
+
+\begin{proposition}\label{prop:weakerprecision}
+Fix the permissible parameters and $0<\eta<1/100$. Work at the scales
+of Theorem~\ref{thm:p1-data} for sufficiently large integer $x$.
+Suppose $d_X>0$. Retain the shortness and index conclusions of Theorem A,
+the restriction bound \eqref{B:codim}, and the pairing and chain-height
+estimates used in Theorem C. Assume the auxiliary spanning estimates
+of \S\ref{c3:auxiliary}, including the bound $x^{99}+x^{202}b^2$
+there for the logarithm of the conjugate squared norm after projection.
+Set
+\[
+                      e=\frac{1}{32b x^{202}} .
+\]
+In \eqref{B:near} replace $5b^{-4}$ by $e$, and in
+\eqref{B:moment} replace $9b^{-4}$ by $e$. If both inequalities hold
+for the same normalized map, then $m\Tot_D\le fa(\log b)^5$.
+\end{proposition}
+\begin{proof}
+The projected lower bound with $Z=X$ gives $d_T>0$. If $F$ is a
+subspace of the good target and $\alpha=\dim F/d_T$, the trace
+average in \S\ref{B:one} gives some translate with projected trace
+at most $d_X\sqrt{\alpha(1+e)}\le d_X(1+\alpha+e)/2$.
+Applying the lower estimate to the inverse image of $F$ loses
+at most $ed_X$, so \eqref{B:spread} holds with $\epsilon=e$.
+The greedy argument of \S\ref{B:greedy} stops at codimension at
+most $16e d_T$ and uses a set $t$ with
+\[
+ |t|d_X\le \tfrac52\bigl(1+\log(1/(16e))\bigr)d_T
+          \le5\log(1+2b^2)d_T .
+\]
+Indeed $x^{202}\le b$ eventually because $\log b>x^\eta$.
+Restricting to $S$ costs at most $5b^{-8}\log(1+2b^2)d_T$
+more dimensions by \eqref{B:codim}. This cost is at most
+$d_T/(2b x^{202})$ for large $b$, since $x^{202}\le b$.
+The short-vector basis extraction therefore produces an independent
+family of size $n$ with $n'=d_T-n\le d_T/(b x^{202})$.
+
+Apply the block determinant argument of \S\ref{c3:compare} to this
+family before its last rank estimate. The original columns contribute
+$c+2\Delta$. Each added column costs at most $x^{99}+x^{202}b^2$
+at infinity by \S\ref{c3:auxiliary} and at most $b$ at the finite
+places by \eqref{c3:gammaheight}. Together with \eqref{c3:chainheight}
+the height inequality reads
+\[
+ 0\le c+2\Delta+n'(x^{99}+x^{202}b^2+b)+d_T(b+V-H).
+\]
+The cost of the added columns divided by $d_T$ is at most
+$b+x^{-103}/b+x^{-202}\le V$ eventually, since
+$V=f x b(\log b)^4$. Also $b\le V$, so $d_T(H-3V)\le c+2\Delta$.
+The cardinality bound for $t$ gives the index budget \eqref{sz:budget},
+and $n\ge d_T/2$. Substitution of \eqref{sz:upper} and the sign
+$H\ge0$ prove \eqref{eq:det} by \eqref{sz:signed}.
+\end{proof}
+
+At fixed $\eta$, the bounds $\log b>x^\eta$ and
+$x_1=\lfloor\exp(x^{\eta/6})\rfloor$ give $x^{202}=o(x_1^2)$.
+Thus the accuracy $(32b x_1^2)^{-1}$ also suffices. More generally,
+put $L=\log b$. A normalized error $O(b^{-1}L^{-A})$ in each
+estimate suffices for any $A>202/\eta$, since $x^{202}<L^{202/\eta}$.
+In particular $O(b^{-1-\delta})$ suffices for every fixed $\delta>0$.
+These implications allow constants depending on the fixed parameters
+and exponents, with a common bound over the selected data as $x$ varies.

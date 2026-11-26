@@ -1,0 +1,99 @@
+\section{Comparison on the selected family}\label{sz:comparison}\label{sec:comparison}
+
+\paragraph{The sign of the common height.}
+For $0\le y\le a$, the summand in $S(y,\tau)$ vanishes for $\nu>x_1$,
+since $\kappa\ge a/x_1$. Every other term is bounded above by
+$2y\Lambda(\nu)/\nu$. For every positive integer $h$,
+$h/\nu\le2\lfloor h/\nu\rfloor$ when $\nu\le h$. Consequently
+\[
+ \sum_{\nu\le h}\frac{\Lambda(\nu)}{\nu}
+ \le\frac{2}{h}\sum_{\nu\le h}\Lambda(\nu)\lfloor h/\nu\rfloor
+ =\frac{2}{h}\log(h!)\le 2\log h.
+\]
+The equality counts the prime-power divisors of each integer up to $h$.
+Thus $0\le S(y,\tau)\le4y\log x_1\le yL$.
+Here is a direct lower bound on the archimedean term which suffices for
+the cancellation. From $\mathrm{rd}_E\ge1$,
+$\log\Omega\le\log(2\pi)+|c_K|\le 2+C_P\le L$ by the first scale
+inequality. Since $M\ge b^{20}$, $\log(M/\Omega)\ge19L$.
+For an integer $0\le y\le a$, $j(y)\ge19yL$.
+Apply this with $y=\kappa(\tau)$ and sum \eqref{sz:height}.
+Both $m$ and $k$ are positive by the rank and scale bounds. In particular,
+\begin{equation}\label{sz:nonneg}
+ H\ge0,\qquad U>0,\quad V>0 .
+\end{equation}
+This proof needs no estimate on the sign of $\Tot_D$.
+
+\begin{chatAtheorem}[Signed determinant comparison]\label{sz:conclusion}
+For an admissible $D$ assume the construction hypotheses of
+Theorems A, B and C as specified in
+Sections~\ref{A:section}, \ref{B:frontier} and \ref{c3:frontier}.
+Then the signed excess of this datum satisfies \eqref{eq:det}.
+\end{chatAtheorem}
+\begin{proof}
+Use the set $t$ and the actual ordered family from \eqref{B:witnesses}.
+The vector $y_i=P_{g_i}\phi_i$ has $g_i\in t$ and
+$\phi_i\in\mathcal S\subset\mathcal I$, where $\mathcal S$ is the short
+set of Theorem~\ref{A:main}. Write $h=H-m\Tot_D+V$.
+For a fixed $\sigma$, the matrix in \eqref{sz:covol} is the Gram matrix of
+the columns $G_{\rm cl}^{1/2}v_\sigma(y_i)$ in an ordinary Euclidean
+complex vector space. Gram--Schmidt gives a determinant equal to the
+product of their squared orthogonal residual lengths, hence at most
+$\prod_i N_\sigma(y_i)\le e^{nh}$. A dependent family has determinant
+zero and satisfies the same inequality. This works for every $\sigma$
+even when $h<0$. It proves $\operatorname{CovolumeLe}(y,c)$ with
+\begin{equation}\label{sz:upper}
+ c=n(H-m\Tot_D+V).
+\end{equation}
+For the index, the same $\phi_i$ are integral, with the same witnesses
+$g_i\in t$. The index estimate \eqref{eq:short-index} therefore gives the budget $2|t|d_SU$.
+The bound on $|t|d_S$ in \eqref{B:theorem}, multiplied by $2U>0$, gives
+\begin{equation}\label{sz:budget}
+ 2|t|d_SU\le d_TJ,\qquad J=10U\log(1+2b^2).
+\end{equation}
+Increasing the budget in \eqref{sz:index} preserves the local matrices,
+so $\operatorname{IndexLe}(y,\Delta)$ holds with $\Delta=d_TJ$.
+
+The vectors are independent and $(1-4/b^2)d_T\le n\le d_T$, exactly
+the rank assumptions of Theorem C. Its completed basis retains these
+original first $n$ columns. Substituting \eqref{sz:upper} and
+\eqref{sz:budget} into \eqref{c3:theorem} gives
+\[
+ d_T(H-3V)\le n(H-m\Tot_D+V)+2d_TJ.
+\]
+The coefficient of $H$ after rearrangement is $n-d_T\le0$, giving
+\begin{equation}\label{sz:signed}
+ nm\Tot_D\le(n-d_T)H+(n+3d_T)V+2d_TJ\le d_T(4V+2J).
+\end{equation}
+Admissibility gives $L\ge128$ and $b\ge3$, whence $4/b^2\le1/2$.
+Theorem B gives $d_T>0$, so $0<d_T/2\le n\le d_T\le2n$.
+Since $4V+2J\ge0$, division by $n$ bounds $m\Tot_D$ by $2(4V+2J)$.
+Finally $1+2b^2\le b^3$ for $b\ge3$, so
+$J\le30UL=30V$. It follows that
+\[
+ m\Tot_D\le2(4+60)V=128faL^4\le faL^5 .
+\]
+\end{proof}
+
+\begin{corollary}[From the construction estimates to Dirichlet zeros]\label{cor:construction-grh}
+Suppose that for each permissible pair $(q_0,d)$ and each $0<\eta<1/100$,
+every sufficiently large integer $x$ admits at least one datum from
+the construction of Theorem~\ref{thm:p1-data} at $(q_0,d,\eta,x)$
+for which the hypotheses of Theorems A, B and C hold simultaneously.
+Then every Dirichlet $L$-function is nonzero in $\Re s>1/2$, with the
+principal pole at $1$ excepted, and its zeros in $0<\Re s<1$ lie on
+$\Re s=1/2$. In particular, every nontrivial zero of $\zeta(s)$ has real
+part $1/2$.
+\end{corollary}
+\begin{proof}
+Fix $(q_0,d)$ and $\eta$. At each integer $x$ above the threshold for these
+parameters choose one such datum $D$. Theorem~\ref{sz:conclusion} gives
+\eqref{eq:det} on this very datum, with the signed sum in
+\eqref{eq:total} and the scales of \eqref{eq:p1-data-scale}.
+This verifies Hypothesis~\ref{hyp:scale}. Theorem~\ref{thm:main} gives
+the stated nonvanishing and the assertion about zeros.
+\end{proof}
+
+The pointwise comparison also applies to admissible data outside the
+constructed families whenever their construction hypotheses hold.
+\input{sections/precision}

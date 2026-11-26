@@ -1,0 +1,63 @@
+\subsection{The normalized pairing at the endpoint of the auxiliary path}
+\label{pathmath:dual}
+We give the two assertions about the dual Weyl pairing used to recover an integral form from its period pairings in \S11.5. These assertions include primes dividing the hook number.
+
+Fix a finite ordered collection of column heights $0<s<n$ at each of the infinite places; regard determinant powers separately. Over $\mathbb Z$ take the tensor product $T$ of the exterior powers $\bigwedge^s\mathbb Z^n$, with the tensor wedge basis orthonormal. For a tuple of square matrices $X$, write $e(X)$ for the tensor whose factor for a column of height $s$ is the wedge of the first $s$ columns at that place. The coordinates of $e(X)$ are products of flag minors. Let $P$ be the integral span of these polynomials, and give $W=P^\vee$ its evaluation realization in $T$. More explicitly, the coordinate map $T^\vee\twoheadrightarrow P$ sends a linear functional $a$ to $a(e(X))$. The group $P$ is free of finite rank as a subgroup of the homogeneous polynomials. Hence the dual inclusion $W\hookrightarrow T$ is split over $\mathbb Z$. In particular $W=T\cap W_{\mathbb Q}$. Over $\mathbb C$, the evaluations span $W_{\mathbb C}$, since a polynomial vanishing on all square matrices is zero. Invertible matrices suffice by density. The Weyl metric here is precisely the restriction of the tensor metric; its kernel on real frames is
+\[
+ K(Y,X)=e(Y)^t e(X)=\prod_{\tau,s}\det((Y_\tau^t X_\tau)_{[1,s],[1,s]}),
+\]
+with a factor for each column. This identity follows by Cauchy--Binet.
+
+Replace each height $s$ by $n-s$ to obtain $T',W'$. Apply the oriented complementary-wedge map in each factor, and reorder tensor factors. The resulting signed permutation of the tensor bases preserves their integral lattices and their metrics. It maps $W_{\mathbb Q}$ onto $W'_{\mathbb Q}$: for any invertible $g$ at a place, the image of its first $s$ columns wedged together is $\det(g)$ times the wedge of the last $n-s$ columns of $g^{-t}$, up to the fixed ordering sign. This is Jacobi's complementary-minor identity, obtained by wedging a basis minor with its complementary wedge and evaluating the resulting top form. Reversal of the column order of the frame makes these the first columns of a new frame. The inverse complementary map gives the reverse inclusion. Saturation now gives an integral isometric isomorphism $J:W\to W'$. Its sign is fixed by sending the highest unit frame to the prescribed opposite unit frame. At each place with $c$ columns the determinant multiplier is $\det(g)^c$; for dual highest weights the two determinant exponents sum to $-c$. Thus the determinant powers cancel in the invariant pairing. This construction applies place by place to their tensor product.
+
+Choose an integral polynomial basis $p=(p_i)$ of the complementary shape and the dual basis of $W'$. Let $G$ be the restricted tensor Gram matrix in that dual basis. Thus $K(Y,X)=p(Y)^tG p(X)$ for the complementary shape. Put
+\[
+ H_{ij}=p_i(\partial)p_j(0),\qquad
+ f(X)=K(I,X),\qquad h=f(\partial)f(0).
+\]
+Then $H$ is a symmetric integral matrix. We claim that $HG=hI$. To see this, give the complex polynomial space the Fischer Hermitian form in which monomials $X^\alpha$ are orthogonal with squared norm $\alpha!=\prod_i\alpha_i!$. This form is invariant under unitary row substitutions: multiplication by a linear variable is adjoint to its conjugate differential operator, and unitary substitution preserves those adjunctions and the norm of $1$. In consequence the metric on $P_{\mathbb C}$ with matrix $H$ and the dual of the restricted tensor metric with matrix $G^{-1}$ are both invariant. The span of the frame tensors is irreducible: the tensor of highest wedges has the sum of the factor highest weights, and that weight space is one-dimensional. Complete reducibility and highest-weight theory therefore place the generating highest tensor in a single irreducible summand. Its orbit spans the frame tensors. This argument also applies to the product over places. Schur's lemma gives $H=cG^{-1}$. At the unit frame $v=p(I)$, the tensor $e(I)$ has squared norm $v^tGv=1$. The coefficient vector of $f$ is $Gv$, so
+\[
+ h=(Gv)^t H(Gv)=c.
+\]
+In particular $h$ is a positive integer. For the endpoint pairing take $A=GJ$. The integral matrix $C=J^{-1}H$ satisfies $CA=hI$. For $v\in W_{\mathbb C}$ the functional $u\mapsto u^tAv$ equals the Hermitian pairing with $\overline{Jv}$ in $W'$, which has norm $\|v\|$. This proves both the inverse and the isometry in the specified normalization.
+
+There is also a dimension-free bound for the integer just obtained. For $D$ boxes in the complementary shape, expanding $f$ gives at most $\prod_s s!\le D!$ signed monomials, counted with multiplicity, each of total degree $D$. Each pair contributes at most $D!$ in absolute value to its Fischer product. Consequently $h\le(D!)^3$. When $D\le br^4$, $r\le3x^5$, and $L=\log b\le x^{1/100}$, this gives $\log h\le3br^4\log(br^4)\le x^{22}b$ for all sufficiently large $x$. Hence any period denominator with $\log N\le x^{99}b^2$ satisfies $hN\exp(x^{200}b^2)\le\exp(x^{201}b^2)$.
+
+\subsection{A uniform integer clearing the final path}
+\label{pathmath:denom}
+The following reduction makes the uniformity in the twist explicit. Let $Q$ be the product of its auxiliary places, $q_Q$ the product of their absolute norms, and $t$ a finite idele generating the grid modulus. At the endpoint write $u=\overline{t\alpha}/(t\alpha)$, where $t$, $q_1\alpha$, $\alpha^{-1}$, and $q_Q M^b/t$ are integral finite adeles. These four integrality conditions are the hypotheses on the grid modulus and its fixed fractional generator used below. With $A_0=M^b q_1$ one has
+\[
+ q_QA_0u=(q_Q M^b/t)\,\overline{tq_1\alpha}\,\alpha^{-1}
+ \quad\text{and}\quad q_Q A_0u^{-1}=\overline{q_QA_0u}.
+\]
+Both right sides are integral. Away from $q_Q$, $A_0u$ and $A_0u^{-1}$ are therefore integral at every embedding. In particular, either sign of an integral determinant exponent $l$ costs at most the common denominator $A_0^{m|l|}$ at the block point $\mathrm{diag}(g,u^m)$.
+
+For precision the remaining local input is the following. In the gauges given by the translated Weyl lattices, each one-edge kernel on the last path carries an integral vector into $d_0^{-1}$ times the integral lattice for every prime away from $q_Q$, with
+\[
+ d_0=(M^b)^{2f(2n_m)^2}(M^b d)^{br^4}.
+\]
+Here $d$ is the original quadratic prime. Assume the middle branching matrix is integral and equivariant with one-dimensional exponents $l_\tau$ satisfying $|l_\tau|\le br^4+\lceil20b\rceil$, and the normalized path period expands into a finite sum of these branch pairings with algebraic-integer coefficients. This last condition includes its class-volume normalization. Define
+\[
+ N_0=(M^bq_1)^{mf(br^4+\lceil20b\rceil)}d_0^{2m}.
+\]
+For integral starting values, induction on the $m$ edges in each half makes each endpoint vector integral after multiplication by $d_0^m$ in its translated lattice. The middle pairing of the translated vectors is integral since its matrix is integral. Returning to the original frames costs only the determinant characters of $u^m$; the formula above clears their product. Bilinearity gives the factor $d_0^{2m}$, and summation preserves integrality. Thus this one $N_0$, independent of $Q$, clears all such periods away from $q_Q$.
+
+On the admissible scales $m\le2\sqrt{x}$, $n_m=k+m(5r+1)\le x^6$, $r\le3x^5$, $q_1,f\le x^{12}$, $d\le\log x$ eventually for fixed parameters, and $\log M\le22L$, $L\le x^{1/100}$. Substitution gives $\log(M^bq_1),\log(M^bd)\le 24b x^{1/100}$ for sufficiently large $x$. It follows that $\log d_0\le x^{26}b^2$ and $mf(br^4+\lceil20b\rceil)\log(M^bq_1)\le x^{35}b^2$, hence $\log N_0\le x^{36}b^2$. This suffices for the $x^{99}b^2$ budget. The normalized endpoint Weyl duality above is unconditional in the indicated Weyl model. Applying the denominator formula to the arithmetic path still requires the one-edge integral estimate, the stated branching transformation and the finite integral expansion. It also leaves the construction of the surjection onto principal forms, the period identity through the turns, and the archimedean period bound to be established.
+
+\paragraph{The denominator of one matrix indicator.}
+Here is the local calculation behind $d_0$. Fix a prime $p\nmid q_Q$, write $N=M^b$, and let $a,a'$ be the ranks at the ends of an edge. Set $s=aa'$ and $\mathcal A=(\mathcal O_E/\mathfrak m)^s$, where $Nq_Q\in\mathfrak m$. In the Schr\"odinger realization at the places of $\mathfrak m$, use the integral vacuum as the characteristic function of the integral lattice (with its chosen vacuum scalar). Projection onto one residue matrix $S$ on this lattice has the finite Fourier expansion
+\[
+ {\bf1}_{x=S}=\frac1{|\mathcal A|}\sum_{\xi\in\widehat{\mathcal A}}\xi(-S)\xi(x).
+\]
+Indeed the sum of a nontrivial character over the dual group is zero, and at $x=S$ every term equals one. The order $|\mathcal A|$ divides $(Nq_Q)^{2fs}$ because $\mathcal O_E/(Nq_Q)$ surjects onto $\mathcal O_E/\mathfrak m$ and $[E:\mathbb Q]=2f$. Thus $N^{2fs}/|\mathcal A|$ is $p$-integral, as are the roots of unity in the numerators.
+
+For clarity, the local model needed to interpret this equality is the following. Use the self-dual finite additive pairing for the standard vacuum. In its split Schr\"odinger coordinates a character of the residue variables acts by multiplication on the vacuum, equivalently by a Heisenberg operator in the opposite isotropic direction. In coordinates with generator $t$ for $\mathfrak m$ its parameter is $\overline{t^{-1}z}$ on the conjugate support, for an integral lift $z$ of the residue vector, extended by zero elsewhere. The character identification uses the primitive additive character for this modulus; choosing the opposite sign replaces $z$ by $-z$. Multiplication by $N$ makes every such parameter integral above $p$, since $Nq_Q/t$ is integral and $q_Q$ is a $p$-adic unit. Consequently the edge indicator multiplied by $N^{2fs}$ is a $p$-integral combination of integral-vacuum translates at translation level $N$. This calculation accounts for the vacuum scalar once in the indicator; inserting a second copy alters the normalization.
+
+The geometric arithmetic input can now be stated on individual vacuum translates. For any such translate $v$, denote by $F_v$ its normalized Taylor series at the basic CM period scale, before multiplication of the variables by $Nd$. Require
+\[
+ \partial^\alpha[F_v(Nd\,Z)]_{Z=0}\in\mathcal O_p
+ \qquad (|\alpha|=D')
+\]
+for the degrees $D'$ of the occurring Schur entries, where $\mathcal O_p$ is the valuation ring at the chosen embedding. Require also covariance in the translated Weyl gauges: after changing source and target to integral frames above $p$, their change on standard data preserves the $\mathcal O_p$-span just described. The usual rational change of frame gives this reduction whenever weak approximation on both unitary groups, rational equivariance of the jet kernel, and preservation of this standard-data span by local integral elements hold. These are separate local-model inputs.
+
+In these frames the entry $P(\partial)F_v(cZ)|_{Z=0}$ for an integral homogeneous Schur polynomial $P$ of degree $D'$ costs the denominator $(Nd)^{D'}$ if $c$ is $p$-integral. This follows by multiplying by $(Nd)^{D'}$, using homogeneity, and expanding $P$ in integral monomials in the derivatives. The same assertion holds for integral linear combinations of translates. The sup norm of the output of an integral matrix on a vector is bounded by the sup norm of that vector, by the ultrametric inequality. Together with the Fourier calculation this gives the one-edge denominator $N^{2fs}(Nd)^{D'}$. Since $s\le(2n_m)^2$ and $D'\le br^4$, this divides $d_0$. The result reduces the asserted one-edge bound to scaled CM derivatives of vacuum translates and their local covariance; the elementary Fourier expansion alone does not establish those arithmetic properties.

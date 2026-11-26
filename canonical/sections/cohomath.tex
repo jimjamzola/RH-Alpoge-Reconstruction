@@ -1,0 +1,320 @@
+\subsection{A uniform integer for odd cyclotomic cocycles}
+\label{sec:odd-cocycles-reduction}
+Write $C=q_1d$, $Y=C+t+3$ and $G_F=\operatorname{Gal}(\overline{\mathbb Q}/F)$.
+Let $\chi_\ell$ be the cyclotomic character and $c$ a fixed complex conjugation.
+For a finite extension of $\mathbb Q_\ell$ with integer ring $\mathcal O$ put
+$A_n=\mathcal O/\ell^n\mathcal O$.
+We use the integral valuation $v_{\mathcal O}$ with $v_{\mathcal O}(\pi)=1$.
+The module $Z_e(E,n)$ consists of continuous cocycles for $A_n(-e)$
+which vanish on inertia away from $\ell$. For $e>0$ they satisfy
+$z(cgc^{-1})=-z(g)$ and vanish on the kernel of $\chi_\ell$ in every
+decomposition group above $\ell$. For $e=0$ they vanish on inertia
+above $\ell$ as well and there is no parity requirement. These are
+cocycles before quotienting by coboundaries. We establish the uniform bound in Appendix D using ordinary
+cyclotomic class groups at small primes and the refined Coates--Sinnott
+theorem at large primes.
+
+\paragraph{A common integer from Bernoulli polynomials.}
+For $1\le e<t$ write $r=e+1$, $H=(\mathbb Z/C\mathbb Z)^\times$,
+$D_r=(r+2)!(r+1)$, and put
+\[
+ b(a)=D_r C^r B_r(a/C),\qquad 0\le a<C.
+\]
+Here $B_j(X)$ is the Bernoulli polynomial with $B_1(0)=-1/2$.
+The polynomial $P(X)=(r+2)!C^{r+1} B_{r+1}(X/C)$ has integral
+coefficients. Indeed $(j+1)!B_j(0)$ is integral by induction in the
+Bernoulli recursion $(j+1)B_j(0)=-\sum_{i<j}{j+1\choose i}B_i(0)$ for $j\ge1$.
+Also $P'(a)=b(a)$ and $P(X+C)-P(X)=D_r C X^r$. Telescoping and using
+the integral Taylor expansion modulo $(Cm)^2$ give, for each $m\ge1$,
+\[
+ D_r\sum_{i=0}^{m-1}(a+iC)^r\equiv m b(a)\pmod{m^2}.
+\]
+For $u\equiv1\bmod C$ prime to $m$, multiplication by $u$ permutes residues
+modulo $Cm$ and preserves every character $\psi$ modulo $C$. Replacing
+$ua$ by $ua-Cm\lfloor ua/(Cm)\rfloor$ in this permutation, expanding the
+$r$th power modulo $(Cm)^2$, multiplying by $D_r$ and using the last
+congruence residue class by residue class gives
+\[
+ (u^r-1)\sum_{a\bmod C}\psi(a)b(a)
+ \equiv D_r r C u^{r-1}
+ \sum_{a=0}^{Cm-1}\Big\lfloor\frac{ua}{Cm}\Big\rfloor a^{r-1}\psi(a)
+ \pmod m .
+\]
+The division by $m$ here takes place after a congruence modulo $m^2$
+in the ring of character values.
+
+Define $g(a)=2b(a)+(-1)^e{\bf1}_{a=1}+{\bf1}_{a=-1}$ for $a\in H$
+and $T=(g(v/w))_{w,v\in H}$, using least nonnegative representatives.
+Its eigenvalue on a character $\psi$ is
+$\lambda_\psi=2\sum_{a\in H}\psi(a)b(a)+(-1)^e+\psi(-1)$.
+The identity $\zeta(1-r,x)=-B_r(x)/r$ expresses the sum as
+$-D_r C r L(-e,\psi)$. This value vanishes exactly for
+$\psi(-1)=(-1)^e$. Indeed the functional equation for the primitive
+inducing character reduces nonvanishing in the other parity to the
+Euler product at $1+e>1$, and the extra Euler factors at $-e$ are nonzero.
+Thus $\det T\ne0$. The adjugate identity evaluated at the identity
+entry of the character vector shows $\lambda_\psi\mid\det T$ in the
+ring of character values, including at primes dividing $|H|$.
+
+Set
+\[
+ X_e=|\det T|\prod_{u\in\{C+1,\,2C+1\}}
+              (u^e-1)(u^{e+1}-1).
+\]
+The two choices of $u$ are coprime; hence at each prime $\ell$ there
+is a choice prime to $\ell$ for which both factors jointly divide $X_e$.
+If $\psi(-1)=-(-1)^e$, choose $v$ with $X_e=v\lambda_\psi$.
+For every $u\equiv1\bmod C$ and every $m\ge1$ coprime to $u$, the resulting congruence is
+\[
+ (u^{e+1}-1) X_e\equiv
+ 2w\sum_{a=0}^{Cm-1}\Big\lfloor\frac{ua}{Cm}\Big\rfloor a^e\psi(a)
+ \pmod m,\qquad w=vD_r r C u^e .
+\]
+The multiplier $w$ is independent of $m$.
+
+Here $1\le X_e\le 2^{Y^6}$. In fact the Fourier series of $B_r$ for
+$r\ge2$ gives $|B_r(x)|\le 2r!\zeta(r)/(2\pi)^r\le r!$ on $[0,1]$.
+As $r+2\le Y$ and $C\le Y$, the entries of $T$ have modulus at most
+$4Y^{3Y+1}$. The Leibniz formula bounds its determinant by
+$Y^Y(4Y^{3Y+1})^Y$; the four extra factors contribute at most
+$(2Y+1)^{4r}$. Their product has binary logarithm below $Y^6$
+for $Y\ge 8$, as holds here.
+
+\paragraph{Annihilation by classical Stickelberger reciprocity.}
+For each $\psi:H\to\mathcal O^\times$ write $\alpha=\chi_\ell^e\psi$,
+inflating $\psi$ to $G_{\mathbb Q}$. Let $V_\psi$ be the continuous
+cocycles on $G_{\mathbb Q}$ for $\alpha^{-1}$ with values in $A_n$
+which vanish at $c$ and at those elements of $G_{\mathbb Q(\mu_C)}$
+lying in inertia away from $\ell$ or in a decomposition group at
+$\ell$ with trivial cyclotomic character. Suppose $\alpha(c)=-1$.
+We claim $2X_e^2 V_\psi=0$. We may take $n\ge1$.
+Set $F=C\ell^n$, $K'=\mathbb Q(\mu_F)$, and choose
+$u\in\{1+C,1+2C\}$ coprime to $\ell$.
+If $z\in V_\psi$, the restriction $z|_{G_{K'}}$ is a homomorphism:
+$\alpha$ is trivial on $G_{K'}$ modulo $\ell^n$. It vanishes on
+inertia outside $\ell$. At a place above $\ell$, choose $\tau$ in
+local inertia with $\chi_\ell(\tau)=u$. This is possible because the
+local $\ell$-power cyclotomic extension is totally ramified with full
+group $\mathbb Z_\ell^\times$. Inertia fixes prime-to-$\ell$ roots of
+unity and $u\equiv1\bmod C$, hence $\psi(\tau)=1$.
+If $h$ belongs to the local decomposition subgroup of $G_{K'}$,
+then the commutator $\tau h\tau^{-1}h^{-1}$ has cyclotomic character one
+and fixes $\mu_C$. Its $z$-value is zero by the stated local condition;
+the cocycle rule evaluates that value as $(u^{-e}-1)z(h)$ in $A_n$.
+It follows that $y=(u^e-1)z|_{G_{K'}}$ factors by global reciprocity
+through the ordinary class group $\operatorname{Cl}(K')$.
+No archimedean modulus occurs because $K'$ is totally imaginary.
+
+Put $\theta_F=\sum_{b\in(\mathbb Z/F)^\times}(b/F)\sigma_b^{-1}$,
+where $0<b<F$ and $\sigma_b$ raises roots of unity to the $b$th power.
+The classical Stickelberger theorem annihilates $\operatorname{Cl}(K')$
+by the integral group-ring element
+\[
+ (u-\sigma_u)\theta_F=\sum_{b\in(\mathbb Z/F)^\times}
+                 \lfloor ub/F\rfloor\,\sigma_b^{-1}
+\]
+(L.~C.~Washington, \emph{Introduction to Cyclotomic Fields}, 2nd ed.,
+Thm.~6.10~\cite{washington}). The extension is abelian over $\mathbb Q$ and $(u,F)=1$,
+as required by that theorem. Conjugation by a lift of $\sigma_b^{-1}$
+on $G_{K'}$ multiplies the value under $y$ by $b^e\psi(b)$ in $A_n$;
+this is the cocycle identity and the fact that the conjugated element
+acts trivially. Reciprocity is equivariant for field automorphisms.
+Consequently $U_n y=0$, where $U_n$ denotes the sum of
+$\lfloor ub/F\rfloor b^e\psi(b)$ over the units modulo $F$.
+
+Write $T_i$ for the full floor sum at modulus $C\ell^i$. Terms divisible
+by $\ell$ give $\ell^e\psi(\ell)T_{n-1}$; terms noncoprime to $C$ vanish.
+Thus $U_n=T_n-\ell^e\psi(\ell)T_{n-1}$. Apply the Bernoulli congruence
+at $m=\ell^n$ and $\ell^{n-1}$ with the same $w$. Since $e\ge1$ it gives
+\[
+ 2wU_n\equiv(1-\ell^e\psi(\ell))(u^{e+1}-1)X_e\pmod{\ell^n}.
+\]
+The first factor on the right is a unit. Hence
+$(u^{e+1}-1)X_e(u^e-1)z|_{G_{K'}}=0$. Since
+$(u^{e+1}-1)(u^e-1)\mid X_e$, the cocycle $X_e^2 z$ is zero
+on $G_{K'}$. It therefore descends to the abelian group
+$\operatorname{Gal}(K'/\mathbb Q)$. Comparing its values on $gc$ and
+$cg$, using $z(c)=0$ and $\alpha(c)=-1$, gives $2 X_e^2z=0$.
+
+\paragraph{Integral character descent.}
+Suppose $\mathcal O$ contains the roots of unity of order
+$\exp H$. Choose lifts $\sigma_a\in G_{\mathbb Q}$ for $a\in H$ with
+$\sigma_1=1$, and put $\delta(g)=cgc^{-1}g^{-1}$. All conjugates
+of $\delta(g)$ belong to $G_{\mathbb Q(\mu_C)}\subset G_E$ and have
+trivial cyclotomic character. For $z\in Z_e(E,n)$ set
+\[
+ z_\psi(g)=\sum_{a\in H}\alpha(\sigma_a)\,
+       z(\sigma_a\delta(g)\sigma_a^{-1}).
+\]
+The summand does not depend on the choice of lift: replacing $\sigma_a$
+by $h\sigma_a$ for $h\in G_{\mathbb Q(\mu_C)}$ multiplies the $z$-value
+by $\chi_\ell(h)^{-e}$ and its scalar by $\chi_\ell(h)^e$.
+This uses the cocycle identity for conjugation of an element acting
+trivially on the coefficient module. Now
+$\delta(gg')=\delta(g)\,g\delta(g')g^{-1}$.
+Right multiplication permutes the cosets of the lifts, so
+$z_\psi(gg')=z_\psi(g)+\alpha(g)^{-1}z_\psi(g')$.
+It vanishes at $c$. If $g$ belongs to one of the designated local
+sets in $G_{\mathbb Q(\mu_C)}$, both its conjugates by $\sigma_a$
+and by $\sigma_a c$ lie in the corresponding local sets of $G_E$,
+so their quotient has zero cocycle value. Hence $z_\psi\in V_\psi$.
+
+For $h\in G_E$ orthogonality of the characters gives
+\[
+ \sum_\psi z_\psi(h)=|H|z(\delta(h))
+              =|H|\{z(chc^{-1})-z(h)\}=-2|H|z(h).
+\]
+If all odd components vanish, the left side is invariant under
+$h\mapsto chc^{-1}$ because each even component is zero at $c$ and
+has $\alpha(c)=1$. Consequently $4|H|z=0$.
+Applying this fact to $2X_e^2 z$ proves in particular that $B_e=16|H|X_e^2$
+annihilates $Z_e(E,n)$ for all $\ell$, including $\ell=2$.
+
+\paragraph{A length bound at large primes by global duality.}
+Fix $\ell>Y^2$ and $e>0$, and set $j=e+1$, $\varepsilon=(-1)^j$.
+First take $\mathcal O=\mathbb Z_\ell$. Let $S_0$ consist of the
+$\ell$-adic and archimedean places of $E$.
+Write $M_n=\mathbb Z/\ell^n(-e)$ and $M_n^D=\mathbb Z/\ell^n(j)$
+for its Cartier dual. Passage to cohomology gives an injection
+\[
+ Z_e(E,n)\lhook\joinrel\longrightarrow
+ \ker\left[H^1(G_{E,S_0},M_n)\longrightarrow
+           \bigoplus_{v\mid\ell}H^1(E_v,M_n)\right]^{c=\varepsilon}.
+\]
+Indeed coboundaries are invariant under precomposition by
+$g\mapsto cgc^{-1}$, whereas our cocycles change sign, and $2$
+is invertible. The inertia conditions give descent to $G_{E,S_0}$
+because the coefficient action is unramified away from $\ell$.
+The natural action of $c$ on cohomology includes its action
+$(-1)^e$ on coefficients, yielding the displayed parity. At
+$v\mid\ell$ a cocycle factors through the image of $\chi_\ell$ by
+the local vanishing condition. This image is $\mathbb Z_\ell^\times$
+because $E_v$ is unramified over $\mathbb Q_\ell$ ($\ell>C$).
+On this abelian group, commutation with an element $b$ for which
+$b^{-e}-1$ is a unit makes every cocycle a coboundary: equating
+$z(bg)$ and $z(gb)$ gives $(b^{-e}-1)z(g)=(\chi_\ell(g)^{-e}-1)z(b)$.
+Such $b$ exists since $0<e<\ell-1$. Complex places contribute zero.
+
+Poitou--Tate duality for finite modules pairs this localization
+kernel perfectly with the localization kernel in
+$H^2(G_{E,S_0},M_n^D)$; the pairing respects field automorphisms,
+so the same sign occurs on the dual. In particular
+\[
+ \operatorname{length}_{\mathbb Z_\ell}Z_e(E,n)
+ \le \operatorname{length}_{\mathbb Z_\ell}
+       H^2(G_{E,S_0},\mathbb Z_\ell(j))^{c=\varepsilon}.
+\]
+Here the integral group surjects onto finite-level $H^2$:
+the finite-module groups have $\ell$-cohomological dimension at most
+two in this setting, and the finite cohomology groups in the inverse
+system satisfy the Mittag--Leffler condition. Applying the sign
+idempotent preserves surjectivity.
+
+Let $S$ consist of $\infty$ and the primes of $\mathbb Q$ dividing $C$,
+and write $U=\operatorname{Spec}\mathcal O_{E,S}[1/\ell]$.
+The integral group just used injects into
+$H^2_{\mathrm{\acute et}}(U,\mathbb Z_\ell(j))$. Indeed Galois cohomology
+with ramification allowed at $S_0$ computes the cohomology of
+$\operatorname{Spec}\mathcal O_E[1/\ell]$ for these coefficients.
+By the localization sequence and purity the terms on the left when
+the places $v\mid C$ are removed are $H^0(k_v,\mathbb Z_\ell(j-1))$.
+They vanish because $|k_v|^{j-1}-1\ne0$.
+These uses of finite-module duality and localization are the usual
+Poitou--Tate theorem and the localization sequence for an arithmetic
+curve (see J.\,S.~Milne, \emph{Arithmetic Duality Theorems}, 2nd ed.,
+Parts I and II~\cite{milneADT}).
+
+Apply the refined Coates--Sinnott theorem of C.~Greither and
+C.\,D.~Popescu, \emph{An equivariant main conjecture in Iwasawa
+theory and applications}, J.~Algebraic Geom., Thm.~6.11~\cite{gp}, to
+$E/\mathbb Q,S,\ell,j$. This is an abelian CM extension of the
+totally real field $\mathbb Q$, $j\ge2$, $S$ contains every ramified
+prime, and $\ell$ is odd. The required $\mu$-invariant vanishes by
+the Ferrero--Washington theorem~\cite{fw} since $E(\mu_\ell)$ is abelian over
+$\mathbb Q$. Further, $H^1_{\mathrm{\acute et}}(U,\mathbb Z_\ell(j))$
+has zero $\ell$-torsion by the coefficient exact sequence: already
+$H^0(E,\mathbb Z/\ell(j))=0$ because $0<j<\ell-1$ and local inertia
+maps onto $(\mathbb Z/\ell)^\times$. The theorem therefore identifies
+the zeroth Fitting ideal of the $\varepsilon$-part of $H^2$ with the
+ideal generated on that part by $\Theta_{E/\mathbb Q,S}(1-j)$.
+Indeed its sign idempotent for this base field is
+$(1+(-1)^jc)/2$.
+
+To read its length, extend scalars to the integers $\mathcal R$ of
+an unramified splitting field of $\operatorname{Gal}(E/\mathbb Q)$
+over $\mathbb Q_\ell$. Such a field suffices since the group order
+divides $\varphi(C)<\ell$. Its group ring is a product of copies of
+$\mathcal R$. Base change preserves Fitting ideals, and the normalized
+length of the extended module equals its original $\mathbb Z_\ell$-length.
+Over each discrete valuation ring the valuation of the Fitting
+generator is the length. Thus the required upper bound is the sum of
+the valuations of $L_S(-e,\psi^{-1})$ over the characters of
+$\operatorname{Gal}(E/\mathbb Q)$ of sign $\varepsilon$. Inflating
+them to $H$ gives exactly the $L$-functions at modulus $C$, since
+$S$ removes every prime dividing $C$. For the relevant parity their
+values equal the eigenvalues $\lambda_{\psi^{-1}}$ of $T$ divided by
+$-2D_r C r$, an $\ell$-adic unit. All other eigenvalues of the
+integer matrix $T$ are $\ell$-integral. Consequently
+\[
+ \operatorname{length}_{\mathbb Z_\ell}Z_e(E,n)
+ \le v_\ell(\det T)\le v_\ell(X_e).
+\]
+For general $\mathcal O$ the cocycle equations and local and parity
+conditions hold coordinatewise in a $\mathbb Z_\ell$-basis of
+$\mathcal O$. Hence $Z_e(E,n;\mathcal O)$ is the scalar extension
+of $Z_e(E,n;\mathbb Z_\ell)$, and the length bound becomes
+$v_{\mathcal O}(X_e)$, including for ramified coefficient rings.
+
+\paragraph{Lengths at small primes.}
+For $\ell\le Y^2$ a uniform detecting set comes from class field theory.
+Put $M=C\ell^2$, $K=\mathbb Q(\mu_M)$, $d_K=[K:\mathbb Q]\le M$.
+The maximal exponent-$\ell$ abelian quotient of $G_K$ unramified away
+from $\ell$ has $\mathbb F_\ell$-rank at most
+\[
+ \log_2 h_K+\sum_{v\mid\ell}([K_v:\mathbb Q_\ell]+1)
+ \ \le\ \log_2 h_K+2M .
+\]
+Indeed global reciprocity identifies the quotient by the local inertia
+images with a quotient of the ideal class group, and local reciprocity
+maps the local units onto abelian inertia. Their pro-$\ell$ factors
+have $\mathbb Z_\ell$-rank $[K_v:\mathbb Q_\ell]$ and cyclic torsion,
+also at $\ell=2$. Choose lifts of generators and adjoin representatives
+for $G_E/G_K$, at most $M$ more points.
+For $z$ killed by $\ell$, restriction to $G_K$ is a homomorphism
+since $K$ contains $\mu_\ell$. Thus vanishing at the points forces
+$z=0$. For a general $z$ vanishing there, induct on its exponent,
+first applying induction to $\ell z$ and then the exponent-$\ell$ case.
+This works for ramified coefficient rings because $\ell z=0$ makes
+the twist trivial on every value over $G_K$.
+
+For completeness, Minkowski's bound and $|\operatorname{disc}K|\le M^{d_K}$
+give an integral representative of norm $j\le(2M)^{d_K}$ for each
+ideal class. Every ideal of norm $j$ contains $j\mathcal O_K$ and
+is generated by $j$ and one other element, since the quotient by
+$j\mathcal O_K$ is a product of principal local rings. There are at most
+$j^{d_K}$ choices. It follows that $\log_2 h_K\le
+d_K(d_K+1)\log_2(2M)$. Since $M\le Y^5$, the total number of points
+is at most $Y^{20}$ (use $\log_2(2M)\le M$ for $M\ge2$ and $M\ge4$).
+The class field theory used here is the idelic reciprocity theorem
+and the Hilbert class field theorem; see J.\,S.~Milne,
+\emph{Class Field Theory}, chapters V and VIII~\cite{milneCFT}.
+
+At small primes evaluation thus embeds $Z_e(E,n)$ in at most
+$Y^{20}$ copies of $A_n[B_e]$. Each copy has length at most
+$v_{\mathcal O}(B_e)$. At large primes the preceding stronger
+bound $v_{\mathcal O}(X_e)$ is at most $Y^{20}v_{\mathcal O}(B_e)$.
+For $e=0$ class field theory identifies
+$Z_0(E,n)$ with $\operatorname{Hom}(\operatorname{Cl}(E),A_n)$;
+decomposing the class group into cyclic summands bounds its length by
+$v_{\mathcal O}(h_E)$. Therefore
+\[
+ O_*=h_E\left(\prod_{1\le e<t}16\varphi(C)X_e^2\right)^{Y^{20}}
+ \quad\text{satisfies}\quad
+ \operatorname{length}_{\mathcal O} Z_e(E,n)\le v_{\mathcal O}(O_*)
+\]
+for every coefficient ring with the stated roots and every torsion level. Since each factor is
+at most $2^{4Y^6}$ and there are at most $Y$ factors,
+$O_*\le h_E2^{4Y^{27}}$. Dividing by $v_{\mathcal O}(\ell)$
+gives the normalized valuation convention used in the denominator
+estimate. This calculation makes the integer independent of
+$\ell,\mathcal O,e,n$ and retains the factor $h_E$ only once.

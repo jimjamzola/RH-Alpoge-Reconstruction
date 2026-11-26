@@ -1,0 +1,651 @@
+\section{The excess measured by the determinant}\label{sec:excess}
+Fix a permissible pair $(q_0,d)$ as in Hypothesis~\ref{hyp:scale}. Thus $q_0$ is a positive multiple of $18480$, and $d$ is a prime congruent to $q_0/2-1\pmod {q_0}$. In particular $d\equiv7\pmod 8$ and $(q_0,d)=1$.
+For a modulus $q\ge1$ coprime to $d$, write $\chi_d(n)=(n/d)$ and define
+\begin{align}
+ \lambda_{d,q}(n)&=\mathbf 1_{n\equiv1\bmod q}\Lambda(n)(1-\chi_d(n)),\notag\\
+ R_{d,q}(y)&=\sum_{1\le n\le y}\lambda_{d,q}(n)(1/n-1/y)
+             -\frac{\log y}{\varphi(q)}-c_{d,q},\qquad y\ge1.\label{eq:R}
+\end{align}
+Take $c_{d,q}=G_{d,q}(1)$, where $G_{d,q}$ is the logarithmic derivative average in \eqref{eq:p1G}. This value is real and is the unique choice for which $R_{d,q}(y)\to0$ (Lemma~\ref{lem:pnt}). For $1\le z\le a$, put $v_z(n)=(a/n-a/z)_+$. Then
+\begin{equation}
+ \sum_{n\le a}\lambda_{d,q}(n)v_z(n)
+ =a\left[R_{d,q}(z)+\frac{\log z}{\varphi(q)}+c_{d,q}\right].
+ \label{eq:scaled}
+\end{equation}
+Here $w_+=\max(w,0)$, and sums in $n$ start at $1$.
+
+\subsection{Fixing the centering constant}
+Let $Q\ge1$ and let $d$ be an odd prime coprime to $Q$. Write $L_\eta(s)=L(s,\eta)$, with characters extended by zero on nonunits and the Euler product taken at the indicated level. By classical continuation and nonvanishing for Dirichlet $L$-functions, the only singularity in $\Re s\ge1$ is the pole at $1$ for the principal character, and there are no zeros there. To remove the pole, set
+\[
+ D_\eta(s)=
+ \begin{cases}
+ (s-1)L(s,\eta),&\eta\text{ principal},\\
+ L(s,\eta),&\eta\text{ nonprincipal}.
+ \end{cases}
+\]
+Each $D_\eta$ is entire and $D_\eta(1)\ne0$. Each twist $\eta\chi_d$ is nonprincipal at level $Qd$. By the Chinese remainder theorem it takes the value $-1$ on an integer congruent to $1$ modulo $Q$ and to a quadratic nonresidue modulo $d$.
+
+
+With the weights in \eqref{eq:R}, put
+\begin{equation}\label{eq:p1G}
+ G_{d,Q}(s)=\frac1{\varphi(Q)}\left[
+  \sum_{\eta\bmod Q}\left(\frac{D'_{\eta\chi_d}}{D_{\eta\chi_d}}
+                             -\frac{D'_\eta}{D_\eta}\right)(s)-1\right].
+\end{equation}
+For $\Re s>1$, orthogonality and the absolutely convergent logarithmic derivatives give
+\begin{align}
+ \sum_{n\ge1}\lambda_{d,Q}(n)n^{-s}
+ &=\frac1{\varphi(Q)}\sum_{\eta\bmod Q}
+       \left(\frac{L'_{\eta\chi_d}}{L_{\eta\chi_d}}-
+             \frac{L'_\eta}{L_\eta}\right)(s)\notag\\
+ &=G_{d,Q}(s)+\frac{s}{\varphi(Q)(s-1)}.\label{eq:p1Dir}
+\end{align}
+For the principal character, $D'_1/D_1=L'_1/L_1+1/(s-1)$. The constant $-1$ in \eqref{eq:p1G} supplies the remaining term in $s/(s-1)$. All logarithmic derivatives in \eqref{eq:p1G} are regular at $1$, and \eqref{eq:p1Dir} is real on $(1,\infty)$. Passing to the limit gives $c_{d,Q}=\Re G_{d,Q}(1)=G_{d,Q}(1)$.
+
+
+\subsection{Counting the places}
+In an admissible datum the CM field is $E=\QQ(\sqrt{-d},\zeta_{q_1})$, where $q_0\mid q_1$ and $q_0,q_1$ have the same prime divisors. The infinite places of $E$ are identified with $\Phi=(\mathbb Z/q_1)^\times$ by choosing the representatives extending a fixed embedding of $\QQ(\sqrt{-d})$. Denote by $\Phi_a$ the full fibre of $1\bmod q_0$ and by $\Phi_b$ the prescribed sparse subset in the fibre of $-1\bmod q_0$. Write
+\[
+ A=|\Phi_a|,\quad B=|\Phi_b|,\quad f=|\Phi|=A\varphi(q_0),\quad
+ L=\log b,\quad A\le BL.
+\]
+With $x\le x_1\le a=xb$, the weight $\kappa(\tau)$ equals $b=a/x$ on $\Phi_b$ and $a/x_1$ elsewhere. For an integer $t$ let $u(t)$ be its class if it is a unit modulo $q_1$, and the identity of $\Phi$ otherwise. For $0\le y\le a$ put
+\begin{align}
+ S(y,\tau)&=\sum_{n\le a}\lambda_{d,1}(n)
+       \big(y/n-\kappa(u(-n)\tau)\big)_+,\notag\\
+ S_0&=a\left(\log a-\frac1f\sum_{\tau\in\Phi}\log\kappa(\tau)+c_{d,1}\right),
+ &\Tot_D&=\sum_{\tau\in\Phi_a}\big(S(a,\tau)-S_0\big).\label{eq:total}
+\end{align}
+
+\begin{proposition}[Two-cutoff identity]\label{prop:count}
+For every admissible datum,
+\begin{equation}
+ \Tot_D=a\left\{B\big[R_{d,q_0}(x)-R_{d,q_0}(x_1)\big]+A R_{d,1}(x_1)\right\}.
+ \label{eq:count}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Fix $n$. If $n\equiv1\bmod q_0$, it is a unit modulo $q_1$ and multiplication by $u(-n)$ maps $\Phi_a$ bijectively to the fibre of $-1$. Exactly $B$ images belong to $\Phi_b$. If $n$ is a unit in any other class, the image fibre misses $\Phi_b$. If $n$ is a nonunit, $u(-n)=1$ and $\Phi_a$ is disjoint from $\Phi_b$. Hence the sum over places of $S(a,\tau)$ is
+\[
+ \sum_{n\le a}\left[A\lambda_{d,1}(n)v_{x_1}(n)
+    +B\lambda_{d,q_0}(n)\big(v_x(n)-v_{x_1}(n)\big)\right].
+\]
+Apply \eqref{eq:scaled} at the two cutoffs. The two copies of $c_{d,q_0}$ cancel. The remaining main terms sum to
+\[
+ a\left[A(\log x_1+c_{d,1})
+       +\frac{B}{\varphi(q_0)}\log(x/x_1)\right].
+\]
+This equals $AS_0$ since $\sum_{\tau}\log\kappa(\tau)=f\log(a/x_1)-B\log(x/x_1)$ and $f=A\varphi(q_0)$. Subtracting $AS_0$ gives \eqref{eq:count}.
+\end{proof}
+
+\begin{corollary}[One datum]\label{cor:one}
+For each admissible datum $D$ satisfying the pointwise estimate \eqref{eq:det}, one has
+\begin{equation}
+ R_{d,q_0}(x)\le\frac{\varphi(q_0)L^6}{m}
+               +|R_{d,q_0}(x_1)|+L|R_{d,1}(x_1)|.\label{eq:one}
+\end{equation}
+\end{corollary}
+\begin{proof}
+Solve \eqref{eq:count} for $R_{d,q_0}(x)$ to obtain
+$\Tot_D/(aB)+R_{d,q_0}(x_1)-(A/B)R_{d,1}(x_1)$. Since $aB>0$, \eqref{eq:det} bounds the first term from above by $(A/B)\varphi(q_0)L^5/m$. Use $A/B\le L$ and take absolute values of the two secondary-cutoff errors.
+\end{proof}
+
+The saving $1/m$ at the primary cutoff comes from \eqref{eq:det}. Section~\ref{sec:comparison} derives \eqref{eq:det} under the arithmetic hypotheses by comparing determinants on the same family of lifts.
+
+\section{Admissible data at every large scale}\label{sec:data-supply}
+
+Fix $q_0>0$ divisible by $18480$ and a prime
+$d\equiv q_0/2-1\pmod {q_0}$. Thus $d\equiv7\pmod8$ and
+$(q_0,d)=1$. Put $K=\mathbb Q(\sqrt{-d})$.
+We construct the ranks, place weights, and levels of an admissible datum for each sufficiently large prescribed length $x$.
+
+\begin{theorem}\label{thm:p1-data}
+Fix $0<\eta<1/100$. Every sufficiently large integer $x$ occurs as the
+length of an admissible datum for $(q_0,d)$. With $L=\log b$, one may take
+\begin{equation}\label{eq:p1-data-scale}
+ x_1=\lfloor\exp(x^{\eta/6})\rfloor,\qquad
+ x^\eta<L\le x^\eta+1,\qquad \sqrt{x}\le m<2\sqrt{x}.
+\end{equation}
+The place counts satisfy $f=A\varphi(q_0)$ and $0<A/B\le L$.
+In particular $\log x_1\ge x^{\eta/12}$ eventually. The threshold for $x$
+may depend on $q_0,d,\eta$.
+\end{theorem}
+
+\paragraph{Ranks, moduli and weights.}
+Write $Y=\log x$, $W=x^{\eta/6}$. Choose $m=2^u$ and $r=3^v$ to be the
+least powers at least $\sqrt{x}$ and $x^5$, respectively. Thus
+$r<3x^5$. Set
+\[
+ s=22u,\quad o=2^s=m^{22},\quad
+ \ell_0=3^{\lfloor\log_3s\rfloor+4},\quad
+ A=3\ell_0 o,\quad q_1=q_0 A,\quad q_2=(q_0d)^{s+6}.
+\]
+Here $27s<\ell_0\le81s$ and $s<22+11Y/\log 2\le32Y$ eventually, so $o,q_1,q_2^2$ are
+polynomially bounded in $x$ with $(q_0,d)$ fixed. Take
+$E=K(\zeta_{q_1})$. Its infinite places, represented by embeddings
+extending one fixed embedding of $K$, are indexed by
+$\Phi=(\mathbb Z/q_1)^\times$. Indeed, $K$ has conductor $d$ and the
+cyclotomic conductors $d,q_1$ are coprime. Reduction modulo $q_0$ is
+surjective and all its fibres have size $A$, since $q_0$ and $q_1$
+have the same prime divisors. The places of class $1\bmod q_0$ form
+$\Phi_a$, of size $A$, and $f=|\Phi|=A\varphi(q_0)$.
+See \src{New/Reduction/Data/FieldsAndPlaces}{the tower and its infinite places}.
+
+For $x_1=\lfloor e^W\rfloor$, let $b$ be the least multiple of $q_1x_1$
+strictly greater than $e^{W^6}$, and set $a=xb$. Since
+$\log(q_1x_1)\le W+O_{q_0,d}(\log x)$, the rounding costs at most
+$e^{W^6}$ for large $x$. Consequently
+\[
+ W-1\le\log x_1\le W,\qquad W^6< L\le W^6+1.
+\]
+These bounds give
+$10^6Y\le\log x_1$, $10^6\log x_1\le L$, $(\log x_1)^6\le L$,
+and $100\log L\le Y$. The last inequality uses $100\eta<1$.
+Also $\log L$ eventually exceeds $10^{12}$ times the fixed parameter
+constant in the determinant data.
+Give the places in $\Phi_b$ weight $b$ and the remaining places weight $a/x_1$. Both weights are positive integers, and $a/x_1\le b$ for large $x$.
+
+\paragraph{A large sparse fibre subset.}
+Put $k=r+1-m$, $t=5r$, and $D_*=kt$. The determinant estimate requires a set $\Phi_b$ of at least $A/L$ places in the fibre of $-1\bmod q_0$ with the following property. For all primes $p\le D_*$ and integers
+$0<i<j<\ell_0$, there do not exist three members $\sigma,\tau,\rho$
+with $\tau/\sigma\equiv\pm p^i$ and $\rho/\sigma\equiv\pm p^j$
+modulo the largest divisor of $q_1$ prime to $p$. The signs are independent
+and repetitions among the three places are allowed. Write $B=|\Phi_b|$.
+
+Here $D_*\ll x^{10}$, $o\ge x^{11}$, so $2\ell_0(D_*+1)<o$ eventually.
+Choose an integer $n\ge1$, fixed in $x$ and sufficiently large that
+$o,q_2^2,m\le W^n$ eventually. Since $W$ eventually dominates every
+fixed power of $Y$, we also have
+\[
+ W\le o,\qquad(2\ell_0)^n\le W,\qquad
+ 3\ell_0 n2^n\le W^3 .
+\]
+Let $H$ be the largest power of $2$ satisfying $H^n\le o/W$.
+Then $H\le W$, $o<W(2H)^n$, and $(2\ell_0H)^n\le o$.
+
+Encode the digit vectors in $\{0,\ldots,H-1\}^n$ in base $2\ell_0H$ (cf.~\cite{behrend}).
+At least $H^n/(nH^2)$ of them have the same squared Euclidean norm.
+Let $S\subset[0,o)$ be the corresponding integers. Consider a congruence with positive integer coefficients $c,c'$ of the form
+\[
+ (c+c')e_2\equiv ce_1+c'e_3\pmod o,\qquad
+ e_1,e_2,e_3\in S,\quad c,c'>0,\quad c+c'\le2\ell_0 ,
+\]
+where each digit on either side is at most $(c+c')(H-1)<2\ell_0H$. Thus no carries occur. Both sides are less than $(2\ell_0H)^n\le o$. The congruence is therefore an equality in each digit. The middle vector is a convex combination, with both coefficients positive, of the other two vectors on the same sphere. Strict convexity of the squared norm forces $e_1=e_2=e_3$.
+
+Set $g=1+3\ell_0q_0$ and take $\Phi_b=\{-g^e\bmod q_1:e\in S\}$.
+If $v_2(q_0)=v$, then $v\ge4$ and $g$ has order $2^s$ modulo
+$2^{s+v}$ because successive squaring increases $v_2(g^{2^i}-1)$ from $v$
+to $v+i$. Thus the places are distinct and in the prescribed fibre. Moreover
+\[
+ A=3\ell_0o
+ <\frac{H^n}{nH^2}\,(3\ell_0 n2^n)WH^2
+ \le B W^6\le BL .
+\]
+For odd $p$ the two forbidden ratios, squared to remove their signs
+and raised to powers $j,i$, imply
+$2j e_2\equiv2(j-i)e_1+2i e_3\pmod o$.
+Hence all exponents agree. Since $2^{s+v}$ divides the part of $q_1$ prime to $p$, the first squared ratio would give $p^{2i}\equiv1\bmod 2^{s+1}$.
+The identity
+$v_2(p^{2i}-1)=v_2(p-1)+v_2(p+1)+v_2(i)$ for odd $p$ implies
+$2^s\le (p+1)2i$, contrary to the choice of $o$. For $p=2$, every place
+has the same residue modulo $3\ell_0$, so a forbidden first ratio gives
+$4^i\equiv1\bmod 3\ell_0$. But $4=1+3$ has order $\ell_0$ there,
+whereas $0<i<\ell_0$. This proves sparseness. These arguments specialize
+the digit-sphere and order calculations in
+\src{New/Reduction/Data/Existence}{the construction of sparse places}.
+
+\paragraph{Two principal-level primes.}
+All three level primes must be $1\bmod q_2^2$. We use the following
+consequence of the classical Siegel--Walfisz theorem. For a fixed $C>0$
+and all sufficiently large $W$, if $1\le Q\le W^C$ and
+$W\le V\le W^C$, some prime $p\equiv1\bmod Q$ has
+$V\le\log p\le V+W$. To see this, put $Z=e^{V+W}$. Then $Q\le(\log Z)^C$,
+so the weighted prime count
+$\sum_{p\le Z,\ p\equiv1\,(Q)}\log p$ has main term $Z/\varphi(Q)$
+and error $O_C(Z e^{-c_C\sqrt{\log Z}})$. The error is
+$o(Z/\varphi(Q))$ uniformly. Removing primes below $e^V$ costs
+at most $Ve^V=o(Z/\varphi(Q))$, as $V,Q$ are polynomial in $W$.
+We use the prime-weighted Siegel--Walfisz estimate of Montgomery and Vaughan \cite[Corollary~11.21]{MV}. Corollary~11.19 gives the von Mangoldt form. The readable edition works with
+$Q=(q_0d)^{2(s+6)}$. Real characters at these levels are induced from the fixed modulus $(q_0d)^2$. The zero-free region and Newman's contour
+argument then give \src{Lib/Analytic/Primes}{the restricted prime window}.
+The classical estimate used here allows ineffective thresholds.
+
+Let $h$ be the class number of $K$. For $i=0,\dots,h$ place logarithmic
+windows of width $W$ at $10L+2iW$. They are disjoint and contained in
+$[10L,11L]$ since $(2h+1)W\le L$ eventually. The preceding estimate
+with $Q=q_2^2$ supplies $h+1$ distinct primes, all split in $K$
+because they are $1\bmod d$. Select a prime ideal above each. Two have
+the same ideal class. For their underlying primes $p_0,p_1$, the
+product of the first ideal and the conjugate of the second is principal.
+Its integral generator $\alpha$ has $\alpha\bar\alpha=M=p_0p_1$.
+In particular $b^{20}\le M\le b^{22}$.
+
+\paragraph{The level matched to the weights.}
+Let $\kappa_*=\exp(f^{-1}\sum_{\tau\in\Phi}\log\kappa(\tau))$ and
+$\delta_E$ be the root discriminant. After choosing $M$ put
+\[
+ V_*=m\log\kappa_*+(m-1)\log(M\delta_E/(2\pi))
+                    -\tfrac{15}{2}L .
+\]
+We choose the third level prime using $V_*$, which now incorporates the mean weight of the selected places. Since
+$E\subseteq\mathbb Q(\zeta_{q_1d})$, the root-discriminant tower
+inequality and the cyclotomic discriminant formula give
+$1\le\delta_E\le q_1d\le b$ for all large $x$. Also
+$1\le\kappa_*\le b$. Hence
+$19L\le\log(M\delta_E/(2\pi))\le23L$ eventually, and
+\[
+ mL\le V_*\le24mL
+\]
+since $m\ge2$. The modulus $q_2^2$ and $24mL$ are bounded by fixed
+powers of $W$, and $V_*\ge W$. Apply the prime-window estimate once
+more to choose a prime $N\equiv1\bmod q_2^2$ with
+$V_*\le\log N\le V_*+W\le V_*+\sqrt L$.
+Since $m\to\infty$, eventually $\log N\ge mL>11L$, so $N$ differs from $p_0$ and $p_1$. Finally $N\equiv1\bmod4$ is a sum of two integral squares and
+$\sqrt{-1}\in E$. Thus $N=\beta\bar\beta$ with
+$\beta\in\mathcal O_E$. This gives the required level and norm generators $\alpha$ and $\beta$. The bound $\log x_1\ge W-1\ge\sqrt W=x^{\eta/12}$ for large $W$ completes the proof of Theorem~\ref{thm:p1-data}.
+The readable edition gives the \src{New/Reduction/Data/AdmissibleData}{definition of admissibility and
+bounds on $V_*$} and
+proves \src{New/Reduction/Data/Existence}{eventual existence with prescribed
+integer length}.
+
+\section{A one-sided prime number theorem}\label{sec:from-data}
+Both secondary remainders in \eqref{eq:one} are evaluated at \(x_1\), with
+\(q_0\) and \(d\) fixed as \(x\to\infty\). Since \(\log x_1\ge x^{\eta/12}\)
+eventually, a sufficiently large inverse power of \(\log x_1\) absorbs both errors.
+
+\begin{lemma}[Centering and variation]\label{lem:pnt}
+Fix an odd prime $d$ and a positive integer $q$ coprime to $d$.
+For every integer $K\ge1$ and all sufficiently large $y$,
+\begin{equation}
+ |R_{d,q}(y)|\le (\log y)^{-K}.\label{eq:PNT}
+\end{equation}
+For all $1\le u\le v$ one has
+\begin{equation}
+ |R_{d,q}(v)-R_{d,q}(u)|\le 13(v-u)/u.\label{eq:variation}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write $A_{d,q}(t)=\sum_{n\le t}\lambda_{d,q}(n)$ and $e(t)=A_{d,q}(t)-t/\varphi(q)$.
+Integrating the step function gives
+\begin{equation}
+ R_{d,q}(y)=\int_1^y\frac{e(t)}{t^2}\,dt-c_{d,q}.\label{eq:integralR}
+\end{equation}
+Each \(n\le y\) contributes \(\lambda_{d,q}(n)\int_n^y t^{-2}\,dt\).
+By \(0\le\lambda_{d,q}\le2\Lambda\) and Chebyshev's bound
+\(\sum_{n\le t}\Lambda(n)\le6t\), we have \(|e(t)|\le13t\).
+Integration over \([u,v]\) gives \eqref{eq:variation}.
+
+For \eqref{eq:PNT}, apply the prime number theorem in progressions modulo
+the fixed integer \(qd\)~\cite[Corollary~11.19]{MV}. On the reduced classes congruent to \(1\bmod q\),
+the weights \(1-\chi_d\) sum to \(\varphi(d)\) by the Chinese remainder
+theorem. Among nonunits modulo \(qd\), only powers of \(d\) can contribute,
+with total weight \(O_d(\log(2t))\). Thus for each fixed \(B>1\),
+\[
+ A_{d,q}(t)=\frac{t}{\varphi(q)}+O_{q,d,B}\big(t/(\log t)^B\big)\qquad(t\ge2).
+\]
+Hence \(e(t)t^{-2}\) is integrable at infinity. For real \(s>1\), partial
+summation and \eqref{eq:p1Dir} give
+\[
+ s\int_1^\infty e(t)t^{-s-1}\,dt
+ =\sum_{n\ge1}\lambda_{d,q}(n)n^{-s}-\frac{s}{\varphi(q)(s-1)}
+ =G_{d,q}(s).
+\]
+Letting \(s\downarrow1\) by dominated convergence gives
+\(\int_1^\infty e(t)t^{-2}\,dt=G_{d,q}(1)=c_{d,q}\). Thus \(R_{d,q}(y)\)
+is the negative of the tail integral. With \(B=K+2\) this is
+\(O_{q,d,K}((\log y)^{-K-1})\), giving \eqref{eq:PNT} with coefficient one
+for sufficiently large \(y\).
+\end{proof}
+The formal argument obtains \eqref{eq:PNT} from a quantitative Tauberian
+theorem for the regularized logarithmic derivative. The fixed-modulus
+prime number theorem used here follows from the classical zero-free estimate
+near \(\Re s=1\).
+
+\begin{theorem}[All real cutoffs]\label{thm:all-y}
+Assume Hypothesis~\ref{hyp:scale}. For every $q_0$ divisible by $18480$, $q_0>0$, every prime $d\equiv q_0/2-1\pmod{q_0}$ and every $\varepsilon>0$ there is $Y=Y(q_0,d,\varepsilon)$ such that
+\begin{equation}
+ R_{d,q_0}(y)\le y^{-1/2+\varepsilon}\qquad(y\ge Y).\label{eq:real}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Choose \(0<\eta<1/100\) with \(7\eta\le\varepsilon\) and an integer
+\(K\ge24/\eta\). For every sufficiently large integer \(x\),
+Hypothesis~\ref{hyp:scale} gives a datum of Theorem~\ref{thm:p1-data}
+at \(x\) satisfying \eqref{eq:det}. On this datum \eqref{eq:p1-data-scale}
+gives \(m\ge\sqrt{x}\), \(L\le2x^\eta\), and \(\log x_1\ge x^{\eta/12}\).
+For \(q=q_0,1\), \eqref{eq:PNT} now gives \(|R_{d,q}(x_1)|\le x^{-2}\).
+Substitution in \eqref{eq:one} yields
+\begin{align*}
+ R_{d,q_0}(x)&\le64\varphi(q_0)x^{-1/2+6\eta}
+                 +(1+2x^\eta)x^{-2}\\
+              &\le C x^t,\qquad C=64\varphi(q_0)+3,\quad t=-1/2+6\eta .
+\end{align*}
+The factor \(x^{-1/2}\) comes from \(m^{-1}\). For real \(y\ge2\) put
+\(x=\lfloor y\rfloor\). Since \(x\ge y/2\) and \(-1\le t\le0\), we have
+\(x^t\le2y^t\), and \eqref{eq:variation} bounds the increment by \(26/y\).
+Hence for sufficiently large \(y\),
+\[
+ R_{d,q_0}(y)\le(2C+26)y^t\le y^{t+\eta}\le y^{-1/2+\varepsilon}.
+\]
+\end{proof}
+
+
+\section{The transform and its real residues}\label{sec:p1polar}
+Let \(d\) be an odd prime coprime to \(Q\). We use the entire functions
+\(D_\eta\) and their regularized logarithmic derivative average \(G_{d,Q}\)
+from \eqref{eq:p1G}. Under \(y=e^v\) the Mellin transform of the smoothed
+remainder becomes a Laplace transform.
+\begin{proposition}[Transform and residues]\label{prop:p1polar}
+Put $E(v)=R_{d,Q}(e^v)$ and initially, for $\Re s>2$, set
+\[
+ F(s)=\int_0^\infty E(v)e^{(1-s)v}\,dv.
+\]
+Then
+\begin{equation}\label{eq:p1F}
+ F(s)=\frac{G_{d,Q}(s)/s-c_{d,Q}}{s-1}.
+\end{equation}
+Its meromorphic continuation has at most simple poles in $\Re s>0$ and is regular at $1$. Write
+\[
+ n_Q(z)=\sum_{\eta\bmod Q}\operatorname{ord}_z D_\eta,
+ \qquad n_{Q,d}(z)=\sum_{\eta\bmod Q}\operatorname{ord}_z D_{\eta\chi_d}.
+\]
+With residue zero at regular points, for $\Re z>0$, $z\ne1$ one has
+\begin{equation}\label{eq:p1res}
+ \operatorname{Res}_{s=z}F(s)
+     =\frac{n_Q(z)-n_{Q,d}(z)}{\varphi(Q) z(1-z)} .
+\end{equation}
+\end{proposition}
+\begin{proof}
+For the contribution of $n$ the integral starts at $\log n$. Direct integration gives
+\[
+ \int_{\log n}^\infty (n^{-1}-e^{-v})e^{(1-s)v}\,dv
+       =\frac{n^{-s}}{s(s-1)}.
+\]
+The same integral at \(\Re s\) gives absolute convergence after summing
+against \(\lambda_{d,Q}(n)\ge0\). The transforms of \(v/\varphi(Q)\) and
+\(c_{d,Q}\) are \(1/[\varphi(Q)(s-1)^2]\) and \(c_{d,Q}/(s-1)\),
+respectively. Substitution of \eqref{eq:p1Dir} cancels the double pole and
+gives \eqref{eq:p1F}. Since \(c_{d,Q}=G_{d,Q}(1)\), the singularity at
+\(1\) is removable. Elsewhere in \(\Re z>0\), each logarithmic derivative
+contributes the order of its entire factor. The twisted orders enter
+\(G_{d,Q}\) with positive sign, the untwisted with negative sign.
+Dividing by \(z(z-1)\) gives \eqref{eq:p1res}.
+\end{proof}
+The remainder \(E\) is real and measurable. Since
+\(0\le\lambda_{d,Q}(n)\le2\log n\), comparison with
+\(\sum_{n\le y}2\log(n)/n\) bounds the smoothed sum by \(O(1+v^2)\)
+at \(y=e^v\). Thus \(|E(v)|\ll_{d,Q}e^v\) for \(v\ge0\).
+The corresponding formal constructions are
+\src{Lib/Analytic/EntireLFunction}{the entire \(L\)-functions} and
+\src{New/Reduction/Zeros/PrimeError}{the polar prime remainder}.
+
+\subsection{Landau's argument on the real axis}
+To deduce holomorphy from an upper bound on \(E\), we need the sign of the
+residue at a possible real boundary pole. The following form of Landau's
+singularity theorem makes the sign explicit \cite[Lemma~15.1]{MV}\cite[Chapter~II, Theorem~5b]{widder}.
+
+\begin{lemma}[One-sided Landau criterion]\label{lem:p1landau}
+Let $E$ be real measurable on $[0,\infty)$, with $|E(v)|\le Ce^v$. Suppose its transform $F$ as above continues meromorphically to $\Re s>0$ with at most simple poles there. Fix $\beta>0$. If $E(v)\le e^{(\beta-1)v}$ eventually and
+\[
+ \Re\operatorname{Res}_{s=u}F(s)\ge0
+ \quad\text{for each real }u>\beta,
+\]
+then $F$ is holomorphic for $\Re s>\beta$.
+\end{lemma}
+\begin{proof}
+The eventual upper bound and \(|E(v)|\le Ce^v\) on the initial bounded
+interval give a constant \(K\ge1\) with \(E(v)e^v\le K e^{\beta v}\) for
+every \(v\ge0\). Define the positive measure
+\[
+ d\mu(v)=(K e^{\beta v}-E(v)e^v)\,dv
+ \qquad(v\ge0).
+\]
+Its Laplace transform $P(s)=\int e^{-sv}\,d\mu(v)$ converges for $\Re s>\max(2,\beta)$, where
+\[
+ P(s)=\frac K{s-\beta}-F(s).
+\]
+The right side continues \(P\) meromorphically to \(\Re s>0\).
+Let \(\alpha\) be the abscissa of convergence of the positive integral,
+allowing \(\alpha=-\infty\). Local absolute convergence makes \(P\)
+holomorphic on \(\Re s>\alpha\).
+
+Suppose $\alpha>\beta$. The continuation of $P$ has at most a simple pole at $\alpha$. Its residue has nonpositive real part by hypothesis, whereas
+\[
+ \lim_{u\downarrow\alpha}(u-\alpha)P(u)
+\]
+is a nonnegative real number because $P(u)$ is a positive integral there. The limit equals the residue, so the residue vanishes and the continuation is regular at $\alpha$.
+
+Choose \(r>0\) so that the continuation is holomorphic on the disc of
+radius \(3r\) about \(\alpha\), and set \(u=\alpha+r/2\). Differentiation
+in the half-plane of convergence gives
+\((-1)^kP^{(k)}(u)=\int v^k e^{-uv}\,d\mu(v)\).
+The Taylor series at \(u\) converges at \(u-r<\alpha\). Its terms at this
+point are nonnegative, so monotone convergence gives
+\[
+ \sum_{k\ge0}\frac{r^k}{k!}\int v^k e^{-uv}\,d\mu(v)
+   =\int e^{-(u-r)v}\,d\mu(v).
+\]
+This contradicts the definition of $\alpha$. Hence $\alpha\le\beta$, and uniqueness of meromorphic continuation identifies $F=K/(s-\beta)-P$ throughout $\Re s>\beta$. Both terms are holomorphic there.
+\end{proof}
+The twist in the next section must therefore control residues on the real
+axis as well as the residue at the proposed zero.
+
+\section{A quadratic twist free of zeros in a prescribed box}
+\label{sec:p1-good-twist}
+
+Let $Q$ be a positive multiple of $8$ and $a_0\bmod Q$ a unit class with
+$a_0\equiv7\pmod8$. For each prime $d\equiv a_0\pmod Q$ put
+$\chi_d(n)=(n/d)$. We shall choose $d$ after fixing the height $H$ and
+left edge $\beta$ of the box containing the proposed zero.
+
+\begin{proposition}\label{prop:p1-good-twist}
+For $H\ge0$ and $\beta>1/2$ there is a prime $d\equiv a_0\pmod Q$ such that
+\[
+ L(s,\xi\chi_d)\ne0
+ \qquad (\xi\bmod Q,\ \Re s\ge\beta,\ |\Im s|\le H).
+\]
+\end{proposition}
+
+It suffices to treat $1/2<\beta<1$, since the box with $\beta=3/4$
+contains every box of the same height with $\beta\ge1$. Put
+$\delta=(\beta-1/2)/9$. A zero forces a large theta integral. Its mean
+over quadratic symbols bounds the number of exceptional primes.
+
+\subsection{Detection by a truncated Mellin transform}
+For $j=0,1$ and a sequence $c(n)$ of modulus at most one, put
+\[
+ w_j(y)=y^j e^{-\pi y^2},\qquad
+ \theta_{j,c}(u)=u^{1/2}\sum_{n\ge1}c(n)w_j(nu),\qquad
+ G_j(s)=\tfrac12\pi^{-(s+j)/2}\Gamma((s+j)/2).
+\]
+Thus $G_j$ is the Mellin transform of $w_j$. Let $\chi$ be primitive and
+nonprincipal of conductor $q$ and parity $j$. Suppress $j$ in $\theta$,
+write $\mu$ for the M\"obius function, and for $T\ge\sqrt q$ put
+\[
+ J(\chi,T)=\int_{1/T}^{\infty}
+       (|\theta_\chi(u)|+|\theta_{\mu\chi}(u)|)\frac{du}{u},\qquad
+ M_T(s)=\int_{1/T}^{\infty}\theta_{\mu\chi}(u)u^{s-1/2}\frac{du}{u}.
+\]
+\begin{lemma}\label{lem:p1-twist-detect}
+For $T\ge\sqrt q$ above a threshold depending only on $\delta,H$, a zero $s$ of
+$L(s,\chi)$ in the box of Proposition~\ref{prop:p1-good-twist} implies
+$J(\chi,T)>T^{2\delta}$.
+\end{lemma}
+\begin{proof}
+For $\Re s>1$, termwise integration gives the Mellin transform
+$G_j(s)L(s,\chi)$ of $\theta_\chi$ at $s-1/2$. Poisson summation for
+the primitive character gives
+$|\theta_\chi(u)|=|\theta_{\bar\chi}(1/(qu))|$.
+The weight $w_j$ is real, so $|\theta_{\bar\chi}|=|\theta_\chi|$.
+Gaussian decay at infinity therefore gives rapid decay at zero and
+continues the Mellin integral to every $s$. Splitting at $q^{-1/2}$
+and substituting $u\mapsto1/(qu)$ in the lower integral gives,
+on $\Re s=1/2$,
+\[
+ |G_j(s)L(s,\chi)|\le 2\int_{q^{-1/2}}^\infty|\theta_\chi(u)|\frac{du}{u}
+ \le2J(\chi,T),\qquad |M_T(s)|\le J(\chi,T).
+\]
+On $\Re s=2$, absolute convergence identifies the full Mellin transform
+for $\mu\chi$ with $G_j(s)/L(s,\chi)$. For $0<u\le1$ the Gaussian
+sum gives $|\theta_{\mu\chi}(u)|\ll u^{-1/2}$, so truncation at $1/T$
+costs $O(T^{-1})$ uniformly in $\chi$ and $\Im s$. The Dirichlet
+series bounds $L(2+it,\chi)$ uniformly, and the Mellin integral for
+$w_j$ bounds $G_j$ throughout $1/2\le\Re s\le2$. Thus
+\[
+ F_T(s)=G_j(s)L(s,\chi)M_T(s)-G_j(s)^2
+\]
+is $O(T^{-1})$ on $\Re s=2$. If $J(\chi,T)\le T^{2\delta}$, the
+bounds on $\Re s=1/2$ give $F_T(s)\ll T^{4\delta}$ on that line. For fixed
+$\chi,T$ the Mellin integrals give a bounded holomorphic function on
+the strip, continuous on its boundary. The three-lines theorem~\cite[Lemma~4.6]{brown} now gives,
+for $\beta\le\Re s\le1$,
+\[
+ |F_T(s)|\ll T^{4\delta(1-\omega)-\omega}\le T^{-2\delta},\qquad
+ \omega=\frac{\Re s-1/2}{3/2}\ge6\delta .
+\]
+At a zero of $L(s,\chi)$ we have $|G_j(s)|^2\ll T^{-2\delta}$.
+For $j=0,1$, the gamma factor has a positive lower bound in modulus
+on $1/2\le\Re s\le1$, $|\Im s|\le H$, a contradiction for large $T$.
+The Euler product excludes zeros for $\Re s>1$.
+\end{proof}
+
+\subsection{Mean over quadratic symbols}
+For $n\ge1$ let $n^\circ$ be its odd part and put
+$b_v(n)=\bigl(\frac{-v}{n^\circ}\bigr)$, the Jacobi symbol.
+For either parity, any $|\alpha(n)|\le1$, and $u\ge1/T$,
+\begin{equation}\label{eq:p1-twist-second}
+ \sum_{1\le v\le T^2}|\theta_{j,\alpha b_v}(u)|^2
+ \ll_{\delta} T^2u^{-2\delta}.
+\end{equation}
+Gaussian decay permits termwise expansion at fixed $u$. For a pair
+$n,m$ the character sum is $\sum_{v\le T^2}b_v(nm)$. When $(nm)^\circ$
+is square, its modulus is at most $T^2$. Using $|w_j(y)|\ll_A y^{-A}$
+with $A=1/2+\delta$ bounds the pair's contribution by
+$O_\delta(T^2u^{-2\delta}(nm)^{-1/2-\delta})$. Write
+$n=2^h t k^2$ and $m=2^i t l^2$, with $t$ odd squarefree and $k,l$ odd.
+Summation in $h,i$ gives geometric series. The exponents of $t,k,l$
+are all $-1-2\delta$, so the remaining sums converge.
+
+When $(nm)^\circ$ is nonsquare, $b_v(nm)$ is a fixed sign times a
+nonprincipal character of $v$ modulo $(nm)^\circ$. P\'olya--Vinogradov
+\cite[Theorem~9.18]{MV} gives an interval sum
+$\ll ((nm)^\circ)^{1/2}(1+\log((nm)^\circ))\ll_\delta(nm)^{1/2+\delta/2}$.
+Taking $A=3/2+\delta$ gives
+$O_\delta(u^{-2-2\delta}(nm)^{-1-\delta/2})$ per pair. Summing in
+$n,m$ and using $u^{-2}\le T^2$ proves \eqref{eq:p1-twist-second}.
+
+Write $J_j(c,T)$ for the integral defining $J$ with coefficients $c$
+and parity $j$. Cauchy--Schwarz in $v$ applied to
+\eqref{eq:p1-twist-second} bounds the sum of absolute values by
+$O_\delta(T^2u^{-\delta})$ for both $\alpha$ and $\mu\alpha$.
+Integration gives
+\begin{equation}\label{eq:p1-twist-mean}
+ \sum_{v\le T^2,\ v\ge1} J_j(\alpha b_v,T)
+ \ll_\delta T^2\int_{1/T}^\infty u^{-\delta-1}\,du
+ \ll_\delta T^{2+\delta}.
+\end{equation}
+
+\begin{proof}[Proof of Proposition~\ref{prop:p1-good-twist}]
+Let $\psi$ be the primitive character of conductor $M\mid Q$ inducing
+$\xi\bmod Q$. Every prime $d\equiv a_0\pmod Q$ is coprime to $Q$,
+so $\psi\chi_d$ is primitive of conductor $Md$ and nonprincipal. The
+finite Euler factors relating $L(s,\xi\chi_d)$ to $L(s,\psi\chi_d)$
+are nonzero for $\Re s>0$. Since $d\equiv7\pmod8$, we have
+$\chi_d(2)=1$. Quadratic reciprocity gives $\chi_d(n)=b_d(n)$ for
+all $n\ge1$, including multiples of $d$. The parity $j$ of $\psi\chi_d$
+is opposite to that of $\psi$ for every $d$ in the progression.
+
+Take $X$ sufficiently large and set $T=\sqrt{QX}$. For $d\le X$ the
+conductor $Md$ is at most $T^2$. A zero of $L(s,\xi\chi_d)$ in the box
+therefore gives $J_j(\psi b_d,T)>T^{2\delta}$ by
+Lemma~\ref{lem:p1-twist-detect}. Equation~\eqref{eq:p1-twist-mean}
+bounds the number of such primes by $O_{\delta,H,Q}(T^{2-\delta})$.
+Let $B(X)$ count primes $d\le X$ in the progression for which some
+$\xi\bmod Q$ has a twist with a zero in the box. Summing over the
+$\varphi(Q)$ characters gives
+\[
+ B(X)\ll_{Q,H,\delta} X^{1-\delta/2}.
+\]
+Dyadic summation shows that the reciprocals of the exceptional primes
+have finite sum. By Dirichlet's theorem in its analytic form~\cite[Chapter~4]{MV}, the
+reciprocals of the primes in the reduced class have divergent sum.
+Infinitely many primes in the class satisfy the proposition.
+\end{proof}
+
+The formal argument uses the weight $(\log d)/d$ in the last step.
+The exceptional sum still converges by the same dyadic bound, and the
+sum over the progression diverges. The Gaussian normalization in the
+Poisson transformation, with Gauss sum of absolute value $\sqrt q$,
+is given in \src{Lib/Analytic/DirichletTheta}{Dirichlet theta transforms}.
+The weighted selection argument is in
+\src{Lib/Analytic/QuadraticTwist}{quadratic twist selection}.
+
+\section{Nonvanishing and reflection}\label{sec:descent}
+\subsection{Choosing the twist at the height of the proposed zero}
+\begin{theorem}[Family criterion]\label{thm:p1criterion}
+Let $8\mid Q$, $Q>0$, and let $d_0$ be prime to $Q$ with $d_0\equiv7\bmod 8$. Fix $\beta>1/2$. Suppose that for each prime $d\equiv d_0\bmod Q$ there exists $Y_d$ such that
+\[
+ R_{d,Q}(y)\le y^{\beta-1}\qquad(y\ge Y_d).
+\]
+Then for every character $\psi$ modulo $Q$ and every $\rho\ne1$ with $\Re\rho>\beta$, one has $L(\rho,\psi)\ne0$.
+\end{theorem}
+\begin{proof}
+Fix $\rho$ with $\Re\rho>\beta$, $\rho\ne1$. Apply Proposition~\ref{prop:p1-good-twist} with $H=|\Im\rho|$. It gives a prime $d\equiv d_0\bmod Q$ for which $n_{Q,d}$ vanishes throughout $\Re s\ge\beta$, $|\Im s|\le H$. In particular $(d,Q)=1$ and $d\equiv7\bmod 8$. For this $d$ the assumed bound gives $E(v)=R_{d,Q}(e^v)\le e^{(\beta-1)v}$ whenever $e^v\ge Y_d$.
+
+For real $\beta<u<1$, formula~\eqref{eq:p1res} now gives residue $n_Q(u)/[\varphi(Q)u(1-u)]\ge0$. The transform is regular at $1$. For $u>\max(1,\beta)$ the untwisted factors are also nonzero, so the residue is zero. Lemma~\ref{lem:p1landau} therefore gives holomorphy in $\Re s>\beta$. At $\rho$ the residue vanishes, and $n_{Q,d}(\rho)=0$ by the choice of $H$. Thus \eqref{eq:p1res} gives $n_Q(\rho)=0$. This is a sum of nonnegative orders, so $D_\psi(\rho)\ne0$ for every $\psi\bmod Q$. As $\rho\ne1$, the same holds for $L(\rho,\psi)$.
+\end{proof}
+In the \src{New/Reduction/Zeros/Criterion}{one-sided nonvanishing theorem}, the height $H$ determines the box for both the residue at $\rho$ and the signs on the real axis. The threshold $Y_d$ may depend on the prime chosen for this box.
+
+\subsection{Return to the original modulus}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Fix a character $\chi\bmod q$, $q\ge1$. On $\Re s\ge1$ classical nonvanishing gives the assertion, with the principal pole at $1$ excepted. Take $\rho$ with $1/2<\Re\rho<1$ and choose $1/2<\beta<\Re\rho$. Put
+\[
+ Q=18480q,\qquad d_0=Q/2-1=9240q-1 .
+\]
+Here $8\mid Q$, $d_0\equiv7\bmod 8$, and $(d_0,Q)=1$ since $d_0$ is odd and $Q=2(d_0+1)$. Under Hypothesis~\ref{hyp:scale}, Theorem~\ref{thm:all-y} with $\varepsilon=\beta-1/2$ gives $R_{d,Q}(y)\le y^{\beta-1}$ for all sufficiently large $y$, for each prime $d\equiv d_0\bmod Q$. Apply Theorem~\ref{thm:p1criterion} to the character $\chi_Q$ induced at level $Q$. It gives $L(\rho,\chi_Q)\ne0$. The identity
+\begin{equation}
+ L(s,\chi_Q)=L(s,\chi)\!
+ \prod_{\substack{p\mid Q\\p\nmid q}}(1-\chi(p)p^{-s})\label{eq:level}
+\end{equation}
+holds by the Euler product for $\Re s>1$ and elsewhere by meromorphic continuation. At $s=\rho$ the left side is nonzero, so $L(\rho,\chi)\ne0$.
+
+Let $\psi$ be the primitive character inducing $\chi$. The additional Euler factors in \eqref{eq:level}, applied from the conductor of $\psi$ to $q$, are nonzero for $\Re s>0$ because $|\psi(p)p^{-s}|<1$. A zero of $L(s,\chi)$ in the open critical strip is therefore a zero of $L(s,\psi)$. The gamma factors are finite and nonzero in the strip, and the primitive functional equation~\cite[\S10.1]{MV} gives $L(1-s,\bar\psi)=0$. Half-plane nonvanishing at $s$ and $1-s$ gives $\Re s\le1/2$ and $1-\Re s\le1/2$, respectively.
+
+For $q=1$ this gives the half-plane assertion for $\zeta$. Suppose $\zeta(s)=0$ outside the negative even integers. Then $s\ne1$ and $s\ne0$, since $\zeta(0)=-1/2$. The factor $\pi^{-s/2}\Gamma(s/2)$ is finite and nonzero at $s$, so the completed zeta function vanishes at both $s$ and $1-s$. If $\Re s<1/2$, then $\Re(1-s)>1/2$ and $1-s\ne1$. The gamma factor is finite and nonzero there, so $\zeta(1-s)=0$, contrary to half-plane nonvanishing. The same assertion rules out $\Re s>1/2$.
+\end{proof}
+
+\subsection{The converse on the constructed scales}
+\begin{corollary}[Strength of the determinant criterion]\label{cor:scale-equivalence}
+Hypothesis~\ref{hyp:scale} is equivalent to GRH for Dirichlet \(L\)-functions.
+Under GRH, for fixed permissible \((q_0,d)\) and fixed \(0<\eta<1/100\),
+every admissible datum at the scales of \eqref{eq:p1-data-scale} satisfies
+\(m|\Tot_D|\le fa(\log b)^5\) at every sufficiently large integer \(x\).
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:main} gives the forward implication.
+Assume GRH and take \(Q=1\) or \(Q=q_0\). Write
+\(\psi(t,\xi)=\sum_{n\le t}\Lambda(n)\xi(n)\). Orthogonality gives
+\[
+ A_{d,Q}(t)=\frac1{\varphi(Q)}
+  \sum_{\xi\bmod Q}\bigl(\psi(t,\xi)-\psi(t,\xi\chi_d)\bigr).
+\]
+There is one principal character in the first sum. Every twist in the
+second sum is nonprincipal by the Chinese remainder theorem, including
+when \(Q=1\). The prime number theorem under GRH at the fixed levels
+\(Q,Qd\) gives \(A_{d,Q}(t)-t/\varphi(Q)\ll_{d,Q}\sqrt{t}\log^2(2t)\)
+\cite[Theorem~13.7]{MV}. Imprimitive Euler factors change the corresponding
+primitive sums by \(O_{d,Q}(\log(2t))\).
+By \eqref{eq:integralR} and Lemma~\ref{lem:pnt}, \(R_{d,Q}(y)\) equals
+the negative tail integral of this centered error against \(dt/t^2\).
+Thus \(\lvert R_{d,Q}(y)\rvert\ll_{d,Q} y^{-1/2}\log^2(2y)\).
+
+The fibre of $-1\bmod q_0$ has $A$ members, so its selected subset has $B\le A$. Substitution in \eqref{eq:count}, with $f=A\varphi(q_0)$ and $m<2\sqrt{x}$, gives
+\[
+ \frac{m|\Tot_D|}{fa}\ll_{d,q_0}\log^2(2x)
+       +\sqrt{x/x_1}\log^2(2x_1)=o(L^5).
+\]
+Indeed \(x_1=\lfloor\exp(x^{\eta/6})\rfloor\) makes the second term tend
+to zero, and \(L>x^\eta\). The estimate is uniform over the data at the
+fixed parameters. Theorem~\ref{thm:p1-data} supplies a datum at each
+sufficiently large integer \(x\), proving Hypothesis~\ref{hyp:scale}.
+\end{proof}

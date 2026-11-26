@@ -1,0 +1,294 @@
+\subsection{Auxiliary primes, variation of local conditions, and a polynomial for the length}
+\label{sec:selmer-polynomial-descent}
+Let $O$ be the integer ring of a finite extension of $\mathbb Q_\ell$, with uniformizer
+$\pi$ and residue field $k$. Write $v(\ell)=1$, and use $\lambda_O$ for ordinary
+composition length. The normalized length is $\lambda_O/v_\pi(\ell)$.
+We first explain how the auxiliary primes for several lattices can be chosen by a
+single descent, and then construct the polynomials governing the finite-level lengths.
+Throughout this subsection the finite-level modules consist of cocycles satisfying
+the specified linear relations. Passing to a quotient by coboundaries in the
+middle of the argument would change the lengths.
+
+\begin{lemma}[Varying a local condition]\label{lem:selmer-tilt}
+Let $C$ have finite length over $O$, and let $A,B:C\to(O/\pi^h)^d$ be linear.
+There is a set of at most $d$ elements of $k$ such that for every $a\in O$
+outside those residue classes,
+\[
+ \lambda_O\ker(aA-B)\ \leq \lambda_O\{z\in\ker A:Bz\in A(C)\}.
+\]
+\end{lemma}
+\begin{proof}
+Put $C'=\sum_{u\in O}\ker(uA-B)$. On each summand $Bz=A(uz)$, so
+$B(C')\subseteq A(C')$. Let $L$ be the inverse image of $A(C')$ in $O^d$.
+It is free of rank at most $d$. Write $p:L\twoheadrightarrow A(C')$ for reduction.
+By freeness lift $p$ to $s:L\to C'$ through $A$, then lift $Bs$ through $p$
+to an endomorphism $U$ of $L$. Thus $(aA-B)s=p(a-U)$. Away from the roots
+in $k$ of the characteristic polynomial of $U\bmod\pi$, $a-U$ is invertible.
+Consequently $(aA-B)(C')$ contains $A(C')$. Subtracting the image lengths
+from $\lambda_O C'$ bounds the length of the kernel on $C'$ by
+$\lambda_O(C'\cap\ker A)$. The entire kernel of $aA-B$ belongs to $C'$,
+and $B(C')\subseteq A(C)$. This proves the assertion.
+\end{proof}
+
+Fix a torsion level $\ell^M$, and put $e=v_\pi(\ell^M)$.
+For a finite family of lattices of ranks $n_i$, write $Z_{i,h}(J)$ for the
+cocycles modulo $\pi^h$ unramified outside the designated places and $J\cup\bar J$,
+satisfying the original relations and the following new conditions.
+At each $w\in J$ fix a tame inertia generator $\gamma_w$, a Frobenius
+$\phi_w$ and a slope $s_{i,w}\in O$. Require
+\[
+ z(\gamma_w)=s_{i,w}z(\phi_w),\qquad
+ z(\gamma_w^{-c})=s_{i,w}z(\phi_w^{-c}),\qquad
+ g^{-c}=(cgc^{-1})^{-1}
+\]
+for the chosen complex conjugation $c$. Take the auxiliary primes and conjugates
+off the old ramification, distinct from one another, and prime to $\ell$.
+At a prospective new prime $w$, let $C_{i,h}$ allow ramification at $w,\bar w$
+without imposing either new relation. The maps $A,B$ evaluate a cocycle on the
+two indicated inertia and Frobenius elements, respectively. Here $d=2n_i$.
+
+The equality $\ker A=Z_{i,h}(J)$ on $C_{i,h}$ follows directly. At either new
+place the original lattice is unramified, so the cocycle restricts to a
+homomorphism on inertia. Its image is an $\ell$-group. Wild inertia and the
+prime-to-$\ell$ part of tame inertia map trivially, and the $\ell$-part of
+tame inertia is procyclic. Vanishing on the chosen generator therefore
+removes all new ramification. For a unit $a$, imposing slope $a^{-1}$ gives
+the kernel of $aA-B$.
+
+\begin{proposition}[Simultaneous descent]\label{prop:selmer-tilt-descent}
+Suppose $|k|>2n_i e+1$ for every $i$. Suppose at some stage that an allowable
+new prime for datum $i$ and a level $1\leq h\leq e$ satisfy
+\[
+ B(Z_{i,h}(J))\not\subseteq A(C_{i,h}).
+\]
+Here allowable means that the auxiliary data extend to the new prime with
+arbitrary slope for $i$ and zero slope for every other datum.
+One can add this prime and decrease
+$D(J)=\sum_i\sum_{j=1}^e\lambda_O Z_{i,j}(J)$ by at least one.
+Starting at a singleton of slope zero, this gives a set of size at most
+$1+\sum_{i,j}\lambda_O Z_{i,j}(\varnothing)$ at which
+$B(Z_{i,j}(J))\subseteq A(C_{i,j})$, for every allowable prime, index and level.
+\end{proposition}
+\begin{proof}
+For the chosen $i$ take the union of the exceptional sets of
+Lemma~\ref{lem:selmer-tilt} for all $e$ levels. At most $2n_i e$ residues
+are excluded. Choose a nonzero remaining residue and a unit lift $a$.
+At every level the new length is at most that of the old cocycles with
+$Bz\in A(C_{i,j})$. This is a proper submodule at the indicated level,
+so its length drops there. For other indices choose slope zero, which
+simply removes the new ramification. All lengths are finite. For instance
+each continuous cocycle at finite level, together with the given residual
+representation, gives a homomorphism to a fixed finite affine group,
+unramified off a fixed finite set enlarged by the ramification of the representation.
+The finiteness theorem for number fields of bounded degree unramified
+outside a fixed set gives finitely many possibilities
+(J.~S.~Milne, \emph{Algebraic Number Theory}, Theorem~8.42~\cite{milneANT}).
+Each step spends one unit of a nonnegative integer. At the initial prime
+slope zero gives precisely the original cocycles. The bound follows, and
+is independent of the order $\ell^N$ of the auxiliary characters.
+\end{proof}
+
+\paragraph{A single matrix for all coefficient specializations.}
+Let $G=G_E$. Fix a lattice $O^n$ with continuous action $\rho$, a finite
+ramification set $S$, linear homogeneous relations on cocycle values with
+coefficients in $O$, and locally constant characters
+$h_j:G\to\mathbb Z/\ell^N$ for $j\in J$. With exponents read in
+$[0,\ell^N)$ put
+\[
+ R_X(g)=\rho(g)\prod_{j\in J}(1+X_j)^{h_j(g)}.
+\]
+For an integral point $x$ over any finite coefficient extension $O'$,
+let $Z(x)$ be the locally constant solutions in $(O'/\ell^M)^n$ of
+$z(gh)=z(g)+R_x(g)z(h)$, the given relations and vanishing on inertia
+outside $S$. This definition makes sense for arbitrary $x$.
+At $x_j=\zeta_j-1$ with $\zeta_j^{\ell^N}=1$ the matrices give the
+desired twisted action.
+
+There is a polynomial matrix $A(X)$ with finitely many columns such that
+$Z(x)=\ker(A(x)\bmod\ell^M)$ in the coordinates described below.
+To see that one set of columns suffices, let $G'$ be the intersection of
+the kernels of $\rho\bmod\ell^M$ and all $h_j$. Every solution restricts
+on $G'$ to a homomorphism. Let $H$ be the common kernel of all continuous
+homomorphisms $G'\to\mathbb Z/\ell^M$ unramified outside the places above
+$S$. There are finitely many by the same bounded-degree finiteness theorem
+over the fixed field of $G'$. Replace $H$ by its normal core in $G$.
+Every such $z$ vanishes on $H$: composing its restriction with additive
+characters into $\mathbb Z/\ell^M$ detects each nonzero element of its
+finite abelian target of exponent dividing $\ell^M$. The equation for
+$z(gh)$ now shows $z$ factors as a function on $G/H$. Use $n[G:H]$
+unknowns, one $n$-vector for each coset. Write all the equations in these
+unknowns as rows over $O[X_j:j\in J]$, retaining all original pairs
+$g,h$ when writing the cocycle equation. Conversely any solution of this
+matrix gives a locally constant function satisfying every equation.
+The polynomial ring is Noetherian, so a finite subset of the rows
+generates their row module and suffices over every specialization.
+
+\begin{lemma}[One polynomial sharp at a chosen point]\label{lem:selmer-polynomial}
+For every integral point $x_0$ over a finite coefficient extension there is
+a polynomial $P\in O[X_j:j\in J]$ such that
+\[
+ \frac{\lambda_{O'}Z(x)}{v_{\pi'}(\ell)}\leq v(P(x))
+\]
+over every finite coefficient extension $O'$ with uniformizer $\pi'$,
+with equality at $x_0$.
+\end{lemma}
+\begin{proof}
+If $A$ has $d$ columns, append the $d$ rows of $\ell^M I_d$.
+At each specialization the minimum valuation of its maximal minors is
+the normalized length of $Z(x)$. Indeed, put $A(x)$ in Smith normal
+form over $O'$. Writing $t_j$ for its elementary-divisor valuations in
+uniformizer units, with $t_j=\infty$ for zero positions, the kernel
+modulo $\ell^M$ has length $\sum_{j=1}^d\min(t_j,v_{\pi'}(\ell^M))$.
+The row lattice of the augmented matrix is the row lattice of $A(x)$
+plus $\ell^M O'^d$, so its index has the very same length. Its index
+ideal is generated by the maximal minors. Select a minor attaining the
+minimum at $x_0$. Its valuation bounds the minimum at every other
+point. Division by $v_{\pi'}(\ell)$ gives the assertion.
+\end{proof}
+
+For coefficients $K'/O'$ ($K'=\operatorname{Frac}(O')$) use the same
+cocycle and linear relations. The $\ell^M$-torsion of this solution
+module is exactly the finite-level module at a character point, via
+$u\bmod\ell^M\mapsto u/\ell^M\bmod O'$. If its normalized length is
+strictly below $M$, every solution is already killed by $\ell^M$.
+Indeed the image of a continuous cocycle in its discrete target is finite
+by compactness, so each solution is torsion. An element of order
+greater than $\pi'^{v_{\pi'}(\ell^M)}$ would generate a cyclic
+submodule whose $\ell^M$-torsion alone has normalized length $M$.
+The polynomial therefore bounds the divisible-coefficient length
+whenever $v(P(x))<M$.
+
+\paragraph{Where the arithmetic enters.}
+The descent proves its terminal inclusion without producing the
+inequality $\lambda_O Z_{i,e}(J)\leq G_i+L_i$ from that inclusion.
+Here $G_i$ is the supremum of lengths of equivariant maps from the
+torsion lattice to its conjugate Tate dual and $L_i$ is the sum of
+local excess lengths away from $\ell$. Section~\ref{sec:terminal-selmer} proves the implication using global duality and the reciprocity argument for these local conditions. The construction of the allowable prime characters
+with the required values at one another's Frobenius elements is also
+needed here. Section~\ref{sec:terminal-selmer} constructs the primes and proves the terminal bound under the stated hypotheses on the underlying Selmer data. Lemma~\ref{lem:selmer-polynomial} supplies the
+polynomial once a point of small length has been found. A polynomial
+sharp at the untwisted point need not be small there. The next
+calculation explains how to produce a small point from the tied bound.
+
+\paragraph{Releasing the local conditions along a line.}
+Take $J$ and its distinguished prime $w_0$ as above, write $q=\ell^N$, and
+assume the following local specifications. Every $w\in J$ has norm $1\bmod q$.
+The anticyclotomic $h_j$ have values $h_j(\gamma_w)=\delta_{jw}$ and
+$h_j(\phi_w)=\delta_{jw_0}$ for $w\ne w_0$ (the inertia prescription applies
+also to $w_0$). The old $\rho$ is unramified at the new places.
+For each nonzero slope at $w$, $\rho(\phi_w)$ and
+$\rho(\phi_w^{-c})$ act trivially modulo $\ell^M$.
+Fix one datum of rank $n$, and suppose that after releasing the zero slope
+at $w_0$ the normalized untwisted length, with all the other ties retained,
+is at most $\beta$. This last release costs at most
+\[
+ \sum_{g\in(\phi_{w_0},\phi_{w_0}^{-c})}v(\det(\rho(g)-1)),
+\]
+where a sum over a displayed pair counts both entries. Indeed the untwisted
+tame relation gives $(\rho(g)-1)z(\gamma)=0$ modulo $\ell^M$ when $N\geq M$:
+Frobenius raises tame inertia to the norm and that norm is $1\bmod\ell^M$.
+Evaluation therefore embeds the quotient by the two restored ties into the
+two kernels. Each kernel has normalized length at most its determinant
+valuation by Smith normal form. If the Frobenius matrices agree with
+prescribed comparison matrices modulo $\ell^M$, the same kernel bound
+uses the comparison matrices.
+
+For $0<u\leq1$ rational, $Nu\geq M$, take the line
+$X_{w_0}=Y$ and $X_w=s_wY$ for $w\ne w_0$. Let $v(y)=u$ in a finite
+coefficient extension. For any $\alpha\equiv1\pmod y$, the sum of
+$\alpha^j$ for $0\leq j<\ell^N$ has valuation at least $Nu$.
+Indeed, factor the sum into $N$ geometric sums of length $\ell$.
+Each is congruent to $\ell$ modulo $y$, and $v(\ell)=1\geq u$.
+It follows that all $(1+X_w)^q$ specialize to $1\bmod\ell^M$.
+The point twist is a representation modulo $\ell^M$. Let $z$ be a solution
+for that representation with all auxiliary ties removed. For
+$w\ne w_0$ use the pair $\phi,\gamma$ at $w$ or its conjugate inverse.
+In the affine representation $g\mapsto(t\mapsto R_x(g)t+z(g))$,
+the inertia image has exponent dividing $q$: the linear part is scalar
+$\alpha\equiv1\pmod y$ and the translation of its $q$th power is
+$(1+\alpha+\cdots+\alpha^{q-1})z(g)=0$. It therefore factors through
+the cyclic tame $\ell$-quotient. Frobenius commutes with this inertia
+image since the norm is $1\bmod q$; so does its inverse. Comparing the
+translations gives
+\[
+ ((1+y)\rho(\phi)-1)z(\gamma)=s_w y z(\phi).
+\]
+The hypotheses on the slope give
+$s_w((1+y)\rho(\phi)-1)=s_w y I$ modulo $\ell^M$.
+Thus the discrepancy $z(\gamma)-s_w z(\phi)$ is killed by
+$(1+y)\rho(\phi)-1$. Evaluating all discrepancies embeds the quotient by
+the retained ties into their respective kernels. With
+\[
+ H(Y)=\prod_{w\ne w_0}\,
+       \prod_{g\in(\phi_w,\phi_w^{-c})}\det((1+Y)\rho(g)-1),
+\]
+the normalized cost of removing these ties is at most $v(H(y))$.
+
+Apply Lemma~\ref{lem:selmer-polynomial} to the retained ties at the origin,
+and restrict its polynomial to this line, obtaining $F(Y)$ with
+$v(F(0))\leq\beta$. For any integral polynomial $f=\sum a_jY^j$ define
+$v_u(f)=\min_j(v(a_j)+ju)$. Finitely many nonzero polynomials attain their
+respective $v_u$ at the same point of valuation $u$: write $y=t\xi$ with
+$v(t)=u$, divide each $f(tX)$ by a coefficient of minimal valuation, and
+choose the nonzero residue of $\xi$ outside the roots of the resulting
+nonzero residue polynomials. A finite unramified extension supplies this
+residue. Since $H$ has unit leading coefficient and degree
+$2n(|J|-1)$, at this point
+\[
+ v(F(y))+v(H(y))\leq\beta+2n(|J|-1)u .
+\]
+This bounds the untied normalized length at $x=(y,(s_wy)_{w\ne w_0})$.
+Applying Lemma~\ref{lem:selmer-polynomial} at $x$ to the untied module now
+gives the desired polynomial, with $v(P(x))$ bounded by the same quantity
+and all coordinates of valuation at least $u$.
+
+\paragraph{The group-ring polynomial.}
+For an integral Stickelberger element $\Theta_J=\sum_b c_b[b]$, put
+$P_J(X)=\sum_b c_b\prod_j(1+X_j)^{h_j(b)}$, using the nonnegative
+representatives of the exponents. Here the characters descend to the ray
+class group in which $b$ ranges. Substitution of roots of unity recovers exactly
+the character evaluation. Suppose the one-prime norm relation multiplies this
+evaluation by $(1-\alpha q_w^{-d})(1-\alpha^{-1}q_w^{-d})$ for each
+$d$ in a fixed list of $r$ exponents, with $q_w$ the prime norm and
+$\alpha=\vartheta(\phi_w)\psi(\phi_w)$ for a character of the lower level.
+Assume the coefficients and $\vartheta$ are integral with $\vartheta$ unit
+valued. Put $\beta'=v(\boldsymbol{1}(\Theta_\varnothing))+
+2r v(\vartheta(g_0)-1)<\infty$ with $\vartheta(g_0)\ne1$.
+Choose $M'>\beta'+1$, and require $Nu\geq M'$ and
+$v(\vartheta(\phi_{w_0})-\vartheta(g_0))\geq M'$. At $w_0$ and the trivial
+character the Euler factors are congruent modulo valuation $M'$ to
+$1-\vartheta(g_0)^{\pm1}$ since $q_{w_0}\equiv1\pmod{\ell^N}$.
+If $r>0$ these differences have valuation $<M'$; if $r=0$ there is no factor.
+Hence the one-variable evaluation $F_0(Y)$ of $\Theta_{\{w_0\}}$ using
+$h_{w_0}$ has $v(F_0(0))\leq\beta'$.
+
+Set $Z=1+Y$ and $D=r(|J|-1)$. On the line $X_{w_0}=Y$, $X_w=0$ otherwise,
+denote $P_J$ by $P_*(Y)$. At every $Z$ of order dividing $\ell^N$, successive
+applications of the norm relation give
+\[
+ Z^D P_*(Y)= F_0(Y)
+ \prod_{w\ne w_0}\prod_d
+ (1-A_wq_w^{-d} Z)(Z-A_w^{-1}q_w^{-d}),
+ \qquad A_w=\vartheta(\phi_w).
+\]
+Indeed $h_{w_0}(\phi_w)=1$ at these primes. Subtracting the right side
+from the left yields an integral polynomial divisible by $Z^{\ell^N}-1$,
+by monic division and the $\ell^N$ distinct roots in characteristic zero.
+The product on the right has degree $2D$ and unit leading coefficient.
+At a point $v(y)=u$ generic for this product and $F_0$, its value times
+$F_0(y)$ has valuation at most $\beta'+2Du$. For $2Du<1$ this
+is strictly below $M'$. Meanwhile $v((1+y)^{\ell^N}-1)\geq Nu$ by the
+geometric sum estimate above. The congruence therefore gives
+$v(P_*(y))\leq\beta'+2Du$, since $1+y$ is a unit.
+This supplies the required witness on the same auxiliary set for each system.
+
+Thus, given allowable prime data and the terminal Selmer length estimate,
+one constant $s_0\geq2|J|\max(1,\max_i n_i,\max r)$ controls the number
+of variables and all witness losses. Proposition~\ref{prop:selmer-tilt-descent}
+makes its choice uniform in $N$ when those prime data exist for every $N$.
+One may enlarge $N$ after fixing $u$ to satisfy both torsion thresholds.
+The individual witnesses may differ. The common roots-of-unity specialization
+in the preceding argument applies to the polynomials so obtained.
+The construction of the Galois representations and the identification of the
+actual critical-value ratios with group-ring elements satisfying the displayed
+norm relation remain separate arithmetic obligations.

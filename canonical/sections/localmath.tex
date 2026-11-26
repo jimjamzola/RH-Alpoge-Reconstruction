@@ -1,0 +1,236 @@
+\subsection{Integral recovery of a position from its frame}
+\label{app:local-frame-recovery}
+We prove the stable-product and reconstruction assertions in the second
+input of Appendix~\ref{sz:shells}.  The argument takes place over the
+entire product of chosen finite places.  Let $A=\prod_v A_v$ be their
+product of local fields, $R=\prod_v\mathcal O_v$, and normalize additive
+measure by $\operatorname{vol}(R)=1$.  Write $L$ for the coordinate
+$R$-lattice of the local Hermitian space and $h$ for its form, linear in
+the second argument.  The form is integral and unimodular on $L$.
+Write $E_i=\sum_{a<i} A e_a$ for its isotropic frame flag, with
+$0\le i\le\varrho$, and $Y_i=E_i^\perp/E_i$.  The Bessel unipotent
+group $U$ preserves the flag, fixes $e_i$ modulo $E_i$, and acts
+as the identity on $Y_{\varrho}$.  These are the diagonal blocks
+of the defining upper unitriangular matrices.  Let $K$ be the
+stabilizer of $L$, and $K_M$ its kernel on $L/ML$.  The level $M$
+is integral, fixed by the involution and nonzero in each factor.
+
+For $g,g'=gx$ and $w\in E_i^\perp$, call $w'$ a matching lift if
+\[
+  w'-w\in E_i,\qquad g^{-1}w\in L,\qquad
+  g'^{-1}w'-g^{-1}w\in ML .
+\]
+Define $I_i$ to be the set of values $h(e_i,w)$ for $w$ admitting such
+a lift.  At an active point there exist $u,v\in U$ such that
+\[
+ C=ug\in K,\qquad C'=vg'\in K,\qquad C^{-1}C'\in K_M .
+ \tag{*}
+\]
+Indeed the finite Bessel vector at $y$ has coordinates
+$\chi_M(yc^{-1})$ indexed by $c\in Z/K_M$. A nonzero inner product at
+$g,g'$ gives one coordinate in which both entries are nonzero. Its
+support is $U K_M$, so one can choose $u,v$ with
+$ugc^{-1},vg'c^{-1}\in K_M$; now use $c\in K$ and normality.
+
+\begin{proposition}
+At each active point $I_i=c_iR$ for some $c_i\in R\cap A^\times$,
+and its depth is $[R:I_i]$. If every $I_i$ has index one, then
+$x\in K_M$.
+\end{proposition}
+\begin{proof}
+The pairs $(w,w')$ with $w\in E_i^\perp$ and $w'-w\in E_i$
+form an $A$-subspace. Intersect it with the inverse image of
+$L\oplus L$ under the invertible linear map
+\[
+ (w,w')\longmapsto (g^{-1}w,M^{-1}(g'^{-1}w'-g^{-1}w)).
+\]
+The intersection is a full lattice in this subspace: over each DVR
+one clears denominators of a basis, and a submodule of a finite free
+module is finitely generated. Its image by $(w,w')\mapsto h(e_i,w)$
+is a full fractional ideal in every factor, since $(e_i^*,e_i^*)$
+has image one for the hyperbolic dual $e_i^*$. Thus $I_i=c_iR$
+for a componentwise nonzero generator. Put $f=u^{-1}e_i$ and
+$f'=v^{-1}e_i$. These represent $e_i$ modulo $E_i$, and
+$g^{-1}f=C^{-1}e_i$, $g'^{-1}f'=C'^{-1}e_i$ both belong to $L$.
+For $w\perp E_i$ with $g^{-1}w\in L$,
+$h(e_i,w)=h(g^{-1}f,g^{-1}w)\in R$. This gives $I_i\subset R$.
+Its inverse volume, the depth by definition, is its index.
+
+Suppose now $I_i=R$ for all $i$. We prove by decreasing induction on
+$i$ that every $w\in E_i^\perp$ with $g^{-1}w\in L$ has a matching
+lift. For $i=\varrho$ take $w'=v^{-1}u w$. Its class agrees with $w$
+by the action on $Y_{\varrho}$. Moreover $g'^{-1}w'=C'^{-1}C g^{-1}w$,
+which is congruent to $g^{-1}w$ by $(*)$.
+
+For the induction step choose $z\in E_i^\perp$ and its matching
+lift $z'$ with $h(e_i,z)=1$. Put $\alpha=h(e_i,w)\in R$ and
+$w_0=w-\alpha z$. Then $w_0\perp E_{i+1}$ and $g^{-1}w_0\in L$.
+By induction it has a matching lift $w_0'$ modulo $E_{i+1}$.
+Write $w_0'-w_0=\mu e_i+t$ with $t\in E_i$. Then
+\[
+ \mu=h(z',w_0')-h(z,w_0)\in MR.
+\]
+Indeed $z'-z\in E_i$, $w_0'\perp E_i$, and $h(z,e_i)=1$.
+The two pairings are congruent modulo $M$ on applying $g'^{-1}$ and
+$g^{-1}$ respectively, since both pairs of vectors are integral and
+congruent modulo $ML$. Now $w'=\alpha z'+w_0'-\mu f'$ has the same
+class as $w$ modulo $E_i$, and the subtracted term is zero modulo
+$ML$ after applying $g'^{-1}$. This proves the induction.
+At $i=0$ the only lift of $w$ is $w$ itself. Taking $w$ in the
+columns of $g$ gives $(x^{-1}-1)L\subset ML$. Taking the Hermitian
+adjoint and using unimodularity gives $(x-1)L\subset ML$ as well.
+Thus $x\in K_M$.
+\end{proof}
+
+In particular every active point at $x\notin K_M$ has some $i$ with
+$\operatorname{vol}(I_i)\le 1/2$. More precisely the volume is
+$\prod_v q_v^{-v(c_{i,v})}$, where $q_v$ is the residue cardinality,
+so $1/2$ can be replaced here by $(\min_v q_v)^{-1}$.
+This establishes the second geometric input for the stated finite
+unimodular model. Converting this depth into a high power of the
+volume saving still requires the correlation and integration estimates
+in the remaining inputs.
+
+\paragraph{The zero-floor pairing and its normalization.}
+Let $\eta$ be Haar measure on $U$, let $u_F=\eta(U\cap K_M)$ and
+let $d\dot y$ be quotient measure on $U\backslash G_{\rm loc}$,
+normalized by $d\mu=d\eta\,d\dot y$. Write
+$V_c(y)=\chi_M(yc^{-1})$ for $K_Mc\in K_M\backslash Z$, and
+$H_x(y)=\sum_c\overline{V_c(y)}V_c(yx)$. Then
+\[
+ a_Z(x)=u_F\int_{U\backslash G_{\rm loc}} H_x(y)\,d\dot y .
+\]
+In fact, if $u y\in K_Mc$, the two coordinates at $c$ have the
+common phase $\chi_M(u^{-1})$. Their product after conjugating the
+first equals $\chi_M((uy)x(uy)^{-1})$ by right $K_M$-invariance.
+For fixed $y,c$ the set of such $u$ is empty or one right coset
+of $U\cap K_M$ within $U$. Its measure in the latter case is $u_F$,
+as $U$ is unimodular. If the set is empty then $V_c(y)=0$.
+Partitioning $\{u:uy\in Z\}$ by these cosets and applying the
+quotient integral formula gives the identity. All coordinates are
+bounded with compact support modulo $U$.
+In the frame integration coordinates of the filling let $d\theta_0$
+be the first floor measure and $d\theta_{>0}$ the measure of the
+remaining floors, so $\dot y$ is represented by $y'\sigma$ with
+measure $d\theta_{>0}(y')d\theta_0(\sigma)$ on $U$-invariant
+integrands. At zero floor the two heads coincide, and the definition
+of the majorant therefore reads
+\[
+  P_Z(x)=
+ \left(\int\left|\int H_x(y'\sigma)\,d\theta_{>0}(y')\right|
+                  \,d\theta_0(\sigma)\right)^2 .
+\]
+The triangle inequality now gives $|a_Z(x)|^2\le u_F^2 P_Z(x)$,
+the first input of Appendix~\ref{sz:shells}, with coefficient one
+for these normalized floor measures.
+
+\paragraph{Counting the denominator ideals.}
+Write $n=\varrho+1$ and $H=2^j$ for a dyadic height, $j\ge0$.
+The denominator ideal of a matrix $D$ over $A$ is
+$J=\{c\in R:cD\text{ is integral}\}$. It is generated by an element
+$d\in R\cap A^\times$, componentwise by a uniformizer to the
+largest of zero and the pole orders of the matrix entries.
+Take $D=(x-1)/M$. Every $x$ belongs to the shell of the least dyadic
+$H\ge [R:J]$ and the scale $\bar d d$ makes $(\bar d d)D$ integral.
+The scale is invariant under the involution, and its additive modulus
+is $[R:J]^{-2}$, since the involution preserves the measure of $R$
+and carries ideals to ideals of the same index. Hence this region
+costs at most $2 H^2$ in the gauge $2/|\bar d d|$.
+
+There are at most $2H$ such ideals for the chosen places and all
+sufficiently large cutoffs. In fact there are at most $4f$ local
+factors, since they lie above the two rational primes $p_0,p_1$
+and $[E:\mathbb Q]=2f$; any chosen subproduct obeys the same bound.
+Each $q_v\ge b^{10}$. Therefore
+\[
+ \sum_{0<[R:J]<\infty}[R:J]^{-1}
+   =\prod_v(1-q_v^{-1})^{-1}
+   \le \exp(8f b^{-10})\le 2.
+\]
+The logarithmic bound uses $-\log(1-s)\le2s$ for $0\le s\le 1/2$.
+The last inequality follows from $f\le q_1\le x^{12}$ eventually
+and the scales of Theorem~3.1. Every ideal of index at most $H$
+contributes at least $1/H$. This gives the required covering count,
+indeed with $2H$ in place of $2H^{9n}$.
+
+\paragraph{The finite quotient only needs positions in the integral group.}
+The moment in (10.11) is a sum over $K/K_M$, so restrict the outer
+integral to $x\in K$. In this region a stronger form of flag recovery
+gives the decay needed for summing over $J$. Write
+$J(x)=\{c\in R:c(x-1)/M\text{ is integral}\}$ and
+$N(x)=[R:J(x)]$. Each chosen place is unramified over its level
+prime: the two level primes are prime to the conductor $q_1d$ of a
+cyclotomic field containing $E$. Thus $M=p_0p_1$ has valuation one
+in each local factor. Since $x$ is integral, the local denominator
+ideal is either the whole valuation ring or its maximal ideal. The
+latter occurs precisely when the reduction of $x$ at that component
+differs from the identity.
+
+Decompose $R$ according to the orbits of its factors under the
+involution. For each orbit $o$ contributing to $N(x)$, write $q_o$
+for the residue cardinality of any member. This is independent of the
+member. The orbit contributes at most $q_o^2$ to $N(x)$.
+At every active pair the hypotheses $(*)$ project to each orbit.
+The matching conditions defining $I_i$ are componentwise over these
+orbits, so $I_i$ is the product of the corresponding ideals $I_{i,o}$.
+If $x$ differs from the identity modulo $M$ on $o$, the preceding
+proposition applied there gives an $i$ with
+$[R_o:I_{i,o}]\ge q_o$. Multiplication over contributing orbits gives
+\[
+  \prod_{i<\varrho}[R:I_i]\ge\prod_{o\text{ contributing}}q_o
+       \ge N(x)^{1/2}.
+\]
+Hence, for $\varrho>0$, some index has depth at least
+$N(x)^{1/(2\varrho)}$. For $\varrho=0$, the induction at the top
+quotient already implies $x\in K_M$ wherever the pairing is active.
+
+For precision we isolate the remaining analytic estimate on one shell.
+For $H=2^j$ let $S_H$ be the denominator shell introduced above.
+The normalized one-frame bound used here is that if $F$ is
+nonnegative, is supported in $S_H$, and satisfies $F^2\le t^2 W_Z$
+there, then
+\[
+ \int F\,d\mu\ \le\
+    t\,R_Z\,2^{2\cdot10^6 n^3+1287n} H^{10^5 n^2}.
+ \tag{**}
+\]
+It suffices to impose this statement on functions dominated by $P_Z$
+and supported in the positions of the frame correlation.
+This inequality is an analytic input. So is the third geometric
+input in Appendix~\ref{sz:shells}, giving the weighted pointwise
+gain $P_Z^2\le e^{2s_F} W_Z$ if every active frame has a depth at least
+$e^{-1}$. No estimate for deep vectors at positions outside $K$ is
+required below.
+
+Take $Z=K$ and $F=\mathbf 1_{K\cap S_H}P_K$ for $H\ge2$. On this
+shell $N(x)\ge\sqrt H$: for $H=2$ this follows from integrality of
+$N(x)>1$, and for $H\ge4$ it follows from $N(x)>H/2$.
+The previous product estimate permits $e=H^{-1/(4\varrho)}$.
+Consequently $(**)$, with $t=e^{s_F}$, gives
+\[
+ \int_{K\setminus K_M}P_K\,d\mu\le
+ R_K\,2^{2\cdot10^6n^3+1287n}
+    \sum_{j\ge1}2^{-j(s_F/(4\varrho)-10^5 n^2)} .
+\]
+The geometric series pays for its prefactor. In fact, if the block
+parameter of the large lattice datum is $m_0+1$, the starting
+coordinate rank is $k-2m_0-3$, two blocks each of rank $2m_0+4$
+are removed, and the exponent subtracts a further $3n+m_0+2$.
+Thus $s_F=k-7m_0-3n-13$, with $m_0<9n$. Since
+$k\ge n+2\cdot10^9 n^4$, this gives $s_F\ge10^9 n^4$.
+Write $A_0=s_F/(4\varrho)-10^5 n^2$.
+Using $\varrho<n$ gives
+$A_0\ge 2\cdot10^6n^3+1288n+1$.
+The sum is at most $2^{1-A_0}$, so the displayed integral is at most
+$2^{-n}R_K$. The zero-floor pairing and the exact value on $K_M$
+now give
+\[
+ \int_K |a_K|^2\,d\mu\le
+  \mu(K)\mu(K_M)\bigl(\mu(K)+2^{-n}\bigr).
+\]
+With the normalized volume bound $\mu(K)\ge2^{-n}$ from
+Appendix~\ref{sz:shells}, division by $\mu(K)^2\mu(K_M)$ gives (10.11).
+This proves the finite-quotient reduction from the weighted pointwise
+gain, the one-shell integration bound $(**)$ and the specified
+measure normalizations. Other uses of an integral over the entire
+local group require their own estimates outside $K$.

@@ -1,0 +1,787 @@
+% Includable section; requires amsmath, amssymb. Labels have prefix B:.
+\section{Spreading the source forms and choosing the determinant family}
+\label{B:section}
+
+In the notation of \S\ref{sz:setup}, put \(Q=\rho(e_0)\)
+for the good-type projector, so that \(Y_T=QY\).
+On the full source the maps associated to the residue action are
+\[
+  G=\prod_{i=0}^1\prod_{w\mid p_i\text{ chosen}}\mathrm{GL}_r(\mathbb F_w),
+  \qquad B_g=|G|Q\rho(g)\Pi:X\longrightarrow Y_T.
+\]
+The restriction of \(B_g\) to \(S\), multiplied by the nonzero
+scalar \(c_B c_{\rm ss}^{-1}\) of Theorem~\ref{A:main}, is \(P_g\).
+
+\paragraph{Theorem B (spreading).}
+Under hypotheses F0--F7 of \S\ref{B:frontier},
+\begin{equation}
+\label{B:theorem}
+ d_T>0,\qquad
+ |t|d_S\le5d_T\log(1+2b^2),\qquad
+ \dim\sum_{g\in t}P_g(S)\ge(1-4/b^2)d_T
+\end{equation}
+for one finite set \(t\subseteq G\).
+The arithmetic hypotheses give the two estimates
+\eqref{B:near} and \eqref{B:moment} on the same scaled map.
+
+\subsection{From two Hilbert--Schmidt estimates to a new translate}
+\label{B:one}
+Choose the source coordinates indexed by the pairs consisting of a
+source class and a Bessel coordinate (the coordinate isomorphism
+includes the central translation by the lattice scale).
+In these coordinates \(X\) is a nonzero Euclidean space. Define
+\({\Pi_{\rm sc}}=(\operatorname{vol}(K_{\rm pr})\nu)^{-1/2}\Pi\) in these coordinates,
+where \(K_{\rm pr}\) is the principal level and \(\nu>0\) is the unipotent
+covolume. Both volume and covolume are positive. We use the Hilbert--Schmidt norm
+\(\|C\|_{\rm HS}^2=\operatorname{tr}(C^*C)\).
+The estimates furnished by the arithmetic argument are
+\begin{align}
+ \|Q{\Pi_{\rm sc}}\,\operatorname{pr}_Z\|_{\rm HS}^2
+ &\ge \dim Z-5b^{-4}d_X\quad(Z\subset X), \label{B:near}\\
+ d_T\sum_{g\in G}\|{\Pi_{\rm sc}}^*\rho(g){\Pi_{\rm sc}}\|_{\rm HS}^2
+ &\le |G|(1+9b^{-4})d_X^2. \label{B:moment}
+\end{align}
+Their reduction to more primitive inputs is given below.
+For \(Z=X\), \eqref{B:near} gives \(\|Q{\Pi_{\rm sc}}\|_{\rm HS}^2>0\),
+since \(b\ge1000\) and \(d_X>0\). Hence \(d_T>0\).
+Set \(\epsilon=(8b^2)^{-1}\). The admissible scales imply
+\(5b^{-4},9b^{-4}\le\epsilon\) and \(0<\epsilon<1/16\).
+
+Let \(F\subset Y_T\), \(\alpha=\dim F/d_T\), and
+\(C_g=\rho(g){\Pi_{\rm sc}}{\Pi_{\rm sc}}^*\rho(g)^*\). By cyclicity of trace,
+\[
+ \langle C_g,C_h\rangle_{\rm HS}
+ =\|{\Pi_{\rm sc}}^*\rho(g^{-1}h){\Pi_{\rm sc}}\|_{\rm HS}^2 .
+\]
+Summing over both indices and tracing against \(\operatorname{pr}_F\)
+gives the identities
+\[
+ \left\|\sum_g C_g\right\|_{\rm HS}^2
+ = |G|\sum_g\|\Pi_{\rm sc}^*\rho(g)\Pi_{\rm sc}\|_{\rm HS}^2,
+ \qquad
+ \operatorname{tr}(\operatorname{pr}_F C_g)
+ = \|\operatorname{pr}_F\rho(g)\Pi_{\rm sc}\|_{\rm HS}^2.
+\]
+Cauchy--Schwarz in the space of operators and \eqref{B:moment} give
+\[
+ \left(\frac1{|G|}\sum_g
+     \|\operatorname{pr}_F\rho(g){\Pi_{\rm sc}}\|_{\rm HS}^2\right)^2
+ \le\alpha(1+\epsilon)d_X^2 .
+\]
+Since \(2\sqrt{\alpha(1+\epsilon)}\le\alpha+1+\epsilon\),
+some \(g\) satisfies
+\(\|\operatorname{pr}_F\rho(g){\Pi_{\rm sc}}\|_{\rm HS}^2
+\le(1+\alpha+\epsilon)d_X/2\).
+Put \(Z=(Q\rho(g){\Pi_{\rm sc}})^{-1}F\).
+On \(Z\) the maps \(Q\rho(g){\Pi_{\rm sc}}\) and \(\operatorname{pr}_F\rho(g){\Pi_{\rm sc}}\)
+agree: the component orthogonal to \(Y_T\) is orthogonal to \(F\).
+Moreover \(Q\) commutes with the unitary \(\rho(g)\).
+Thus
+\[
+ \dim Z-\epsilon d_X
+ \le\|Q{\Pi_{\rm sc}}\operatorname{pr}_Z\|_{\rm HS}^2
+ =\|\operatorname{pr}_F\rho(g){\Pi_{\rm sc}}\operatorname{pr}_Z\|_{\rm HS}^2
+ \le(1+\alpha+\epsilon)d_X/2.
+\]
+Coordinate change and multiplication of a map by a nonzero scalar
+preserve the dimension of the preimage of every subspace. In particular
+\(Q\rho(g){\Pi_{\rm sc}}\) and \(B_g\) have preimages of equal dimension.
+We have proved, for every \(F\subset Y_T\), the existence of \(g\) with
+\begin{equation}
+\label{B:spread}
+ \dim B_g^{-1}F\le\left(\frac{1+\alpha}{2}
+                  +\frac32\epsilon\right)d_X .
+\end{equation}
+The argument uses the full unprojected moment
+\({\Pi_{\rm sc}}^*\rho(g){\Pi_{\rm sc}}\) and the projected inferior estimate for \(Q{\Pi_{\rm sc}}\).
+
+\subsection{Greedy selection with a cardinality bound}
+\label{B:greedy}
+If \(c=d_T-\dim F>16\epsilon d_T\), apply \eqref{B:spread}
+to \(F\). The map to \(Y_T/F\) induced by \(B_g\) has kernel
+\(B_g^{-1}F\); therefore
+\[
+ \dim(F+B_g(X))-\dim F
+ \ge (\tfrac12(1-\alpha)-\tfrac32\epsilon)d_X
+ \ge \tfrac25(1-\alpha)d_X.
+\]
+Indeed \(\tfrac12-\tfrac3{32}=\tfrac{13}{32}>\tfrac25\).
+Write \(\lambda=2d_X/(5d_T)>0\). Starting with \(F=0\), the first
+step is possible, and its gain cannot exceed \(d_T\), so \(\lambda\le1\).
+At each step where the codimension exceeds \(16\epsilon d_T\), a
+translate reduces it to at most \((1-\lambda)c\le e^{-\lambda}c\).
+Such a translate cannot have been selected previously (the gain is
+positive). Stop if the threshold is reached, otherwise use at most
+\[
+ j=\left\lceil\lambda^{-1}\log(1/(16\epsilon))\right\rceil
+\]
+steps. After \(j\) steps the missing share is at most
+\(e^{-j\lambda}\le16\epsilon\); stopping earlier also suffices.
+Since \(j\lambda\le1+\log(1/(16\epsilon))\), the set \(t\)
+so obtained satisfies simultaneously
+\begin{align}
+ |t|d_X&\le\tfrac52(1+\log(1/(16\epsilon)))d_T
+ \le5d_T\log(1+2b^2),\label{B:count}\\
+ \dim\sum_{g\in t} B_g(X)&\ge(1-16\epsilon)d_T
+ =(1-2/b^2)d_T.\label{B:full}
+\end{align}
+For the second inequality of \eqref{B:count}, use
+\(1/(16\epsilon)=b^2/2\le1+2b^2\) and
+\(\log(1+2b^2)\ge1\). The argument works for the stated dimension
+ratios; no implicit rounding of the number of translates is used.
+
+\subsection{The loss from restricting to ramified forms}
+\label{B:ramification}
+The scalar translations at the \(f\) places dividing \(\pi\) have
+order dividing \(N-1\). By the free-level dimension count
+in \eqref{A:dimension}, the intersection defining \(S\) has
+\begin{equation}
+\label{B:codim}
+ d_X-d_S\le \frac{f}{N-1}d_X\le b^{-8}d_X,
+\end{equation}
+using \(f\le b\) and \(N-1\ge b^9\).
+
+Choose a vector-space complement \(X=S\oplus C\). For the
+\emph{same} set \(t\), the dimension of
+\(\sum_g B_g(X)\) is at most that of \(\sum_g B_g(S)\) plus
+\(|t|\dim C\). From \eqref{B:count}, \eqref{B:codim},
+\[
+ |t|(d_X-d_S)\le 5 b^{-8}\log(1+2b^2)d_T
+ \le (2/b^2)d_T .
+\]
+The last inequality holds, for example, by
+\(\log(1+2b^2)\le 2b^2\) and \(b^4\ge5\).
+Multiplying the restricted maps by \(c_Bc_{\rm ss}^{-1}\) does not
+change their ranges. Therefore
+\[
+ \sum_{g\in t}P_g(S)=\sum_{g\in t}B_g(S),\qquad
+ \dim\sum_{g\in t}P_g(S)\ge(1-4/b^2)d_T.
+\]
+As \(d_S\le d_X\), \eqref{B:count} also bounds \(|t|d_S\).
+This proves \eqref{B:theorem} from \eqref{B:near}--\eqref{B:moment}.
+
+\subsection{Arithmetic origin of the two moment estimates}
+\label{B:arithmetic}
+We now trace \eqref{B:near} and \eqref{B:moment} further.
+Use the filling data of \(D\), write \(M=p_0p_1\), and let
+\(R\subset G=G_0\times G_1\) be the reduction of the Bessel subgroup.
+Let \(\delta\) be the product of the local Bessel formal degrees and
+\(\mu\) the mass of the genus of the standard definite rank-\(r\)
+lattice. Put
+\[
+ I_0=|R|d_X,\qquad I_*=d_X^2/(\delta\mu),\qquad q_g={\Pi_{\rm sc}}^*\rho(g){\Pi_{\rm sc}}.
+\]
+The class representatives \(h_c\), cutoffs \(\beta_c\) and vector
+Bessel function \(W\) are those in the filling data. Write
+\(\mathcal A(g;c,c')\) for the matrix
+\[
+ \sum_{\gamma:\ h_c^{-1}\gamma h_{c'}\in K,\,
+             \operatorname{red}(h_c^{-1}\gamma h_{c'})=g}
+ \int \beta_c(x)\beta_{c'}(\gamma^{-1}x)
+             W(x)W(\gamma^{-1}x)^*\,dx .
+\]
+Here \(K\) is the lattice stabilizer; the integral is on the
+product of real unitary groups in the filling model. The sum is
+over rational points. In the source orthonormal basis indexed
+by \((c,i)\), the blocks of \(q_g\) are these blocks divided by
+\(\nu\), with entrywise conjugation if the inner product is taken
+linear in its second variable. In particular
+\(\|q_g\|_{\rm HS}^2=\nu^{-2}\sum_{c,c'}\|\mathcal A(g;c,c')\|^2\).
+
+The unfolding giving this identity begins with the Petersson
+product of two Poincar\'e series, unfolds the series belonging to
+\((c,i)\) to its seed, and evaluates the other series at the
+class point \(h_c\) translated by a representative of \(g\).
+The finite support of the seed selects exactly the displayed
+congruence condition, with factor \(\operatorname{vol}(K_{\rm pr})\).
+The real-homeomorphism change of variables produces the product
+of the two cutoffs and Bessel functions. Scaling both series
+by \((\operatorname{vol}(K_{\rm pr})\nu)^{-1/2}\) gives the factor
+\(\nu^{-1}\). F1 is the fitted identification of the period-defined \(\Pi\)
+with this series and the normalized seed and block identities.
+The absolute summability of the amplitude integrals used here
+follows from the majorization in \S\ref{B:cutoff}.
+
+\paragraph{Near the Bessel subgroup.}
+Denote by \(r_\psi(g)\) the operator whose blocks come from the
+same amplitude sum restricted to the Bessel subgroup; it is a
+unitary representation on \(R\), extended by zero off \(R\).
+Here is how the action and the trace enter the proof.
+For \(t\in R\), a rational Bessel term over the column class and
+\(t^{-1}\) specifies a new class and a unitary change of Bessel
+coordinates. In the Bessel-only sum on that column, the block
+at the new class is this unitary matrix (with the conjugation
+fixed by the inner product), and every other block vanishes.
+Indeed one moves the term to the identity block, where integrating
+the two cutoffs and the Bessel function gives \(\nu\) times the
+identity. This identity-block normalization and the change of class
+coordinates are among the fitted identities in F1. Composing two
+term changes multiplies their matrices. The blocks at inverse group
+elements are adjoints by replacing the rational term by its inverse.
+Thus \(r_\psi(1)=1\) and \(r_\psi\) is unitary on \(R\).
+Applying the same change of variables on the right to the
+full sum gives \(q_{gt}=q_g r_\psi(t)\). For \(u\in X\),
+\(d=\rho(t){\Pi_{\rm sc}}u-{\Pi_{\rm sc}}r_\psi(t)u\) now satisfies
+\({\Pi_{\rm sc}}^*\rho(g)^{-1}d=0\) for every \(g\); hence it is orthogonal to
+the span of every \(\rho(g){\Pi_{\rm sc}}X\). It belongs to that very span, so
+\(d=0\). This proves \(\rho(t){\Pi_{\rm sc}}={\Pi_{\rm sc}}r_\psi(t)\).
+Let \(E_g=q_g-r_\psi(g)\); thus \(E_{sg}=r_\psi(s)E_g\) and
+\(E_{gs}=E_gr_\psi(s)\) for \(s\in R\). Write
+\(\Omega_i=R G_i\), where \(G_i\) is embedded as one factor.
+The quantitative estimate needed is
+\begin{equation}
+\label{B:nearBessel}
+ \sum_{g\in\Omega_i}\|E_g\|_{\rm HS}^2\le b^{-12}I_0
+ \qquad(i=0,1).
+\end{equation}
+For \(g\in R\), \(E_g=({\Pi_{\rm sc}}^*{\Pi_{\rm sc}}-1)r_\psi(g)\), so its squared
+Hilbert--Schmidt norm is constant. Restricting \eqref{B:nearBessel}
+to \(R\) and dividing by \(|R|>0\) yields
+\begin{equation}
+\label{B:defect}
+ \|{\Pi_{\rm sc}}^*{\Pi_{\rm sc}}-1\|_{\rm HS}^2\le b^{-12}d_X .
+\end{equation}
+For every subspace \(Z\subset X\),
+\[
+ \|{\Pi_{\rm sc}}\operatorname{pr}_Z\|_{\rm HS}^2
+ =\dim Z+\operatorname{tr}(\operatorname{pr}_Z({\Pi_{\rm sc}}^*{\Pi_{\rm sc}}-1))
+ \ge\dim Z-b^{-6}d_X\ge\dim Z-b^{-4}d_X.
+\]
+Also \(\|q_1\|_{\rm HS}^2\le(1+b^{-6})^2 d_X\le 2d_X\).
+
+To prove \eqref{B:nearBessel}, group the terms by links.
+For a subset of reductions \(\Omega\),
+let \(\mathcal E(\Omega)\) be the sum of squared cut-amplitude norms, taken
+link by link for terms of nonzero frame discriminant. A link
+is the submodule of pairs of classes of \(v,\gamma^{-1}v\) in
+the quotient of the orthogonal complement of the isotropic frame
+span by that span, with \(v\) orthogonal to the frame span and
+its \(\gamma\)-translate. Let \(\operatorname{meetNorm}(g)\)
+be the product of the norms of places where the frame span
+meets its translate nontrivially. The near-pair count gives the following bound. If \(0<z\le\operatorname{meetNorm}(g)\) throughout \(\Omega\),
+\[
+ \mathcal E(\Omega)/\nu^2\le (b^{2f}/z)^k I_*;
+\]
+the error from different link classes/zero discriminant is
+\(b^{-kf}I_0\) in the normalized cut second moment and the
+error of removing the cut is at most \(b^{-40}I_0\) in squared
+norm (F2--F4). On a region avoiding nontrivial root-of-unity
+scalar cosets the off-Bessel terms equal the remaining terms.
+Expanding squares by links, then taking the triangle inequality
+in the space of all blocks, gives
+\begin{equation}
+\label{B:rootbound}
+ \sqrt{\sum_{g\in\Omega}\|E_g\|_{\rm HS}^2}
+ \le\sqrt{\mathcal E(\Omega)/\nu^2}+ b^{-15}\sqrt{I_0},
+\end{equation}
+since \(kf\ge40\), and \(2b^{-20}\le b^{-15}\).
+For \(\Omega_i\) the reductions match a Bessel element at the
+other prime and its conjugate; the scalar-coset avoidance
+follows from the first frame vector, and
+\(z\ge(M/b)^f\) by the comparability of the level primes.
+The filling bounds \(I_*\le(M/b^6)^{kf}I_0\) and \(kf\ge40\)
+give
+\[
+ (b^{2f}/z)^k I_*\le b^{-3kf}I_0\le b^{-30}I_0.
+\]
+Thus the right side of \eqref{B:rootbound} is at most
+\(2b^{-15}\sqrt{I_0}\); squaring and using \(4b^{-30}\le b^{-12}\)
+proves \eqref{B:nearBessel}.
+
+\paragraph{The cost of projecting to good types.}
+At prime \(p_i=q\), each of the \(f\) fields has \(q\) elements.
+The prime-wise good idempotent \(e_i^{\rm pr}\) is the sum over tuples of labels
+of degree \(r\) that are allowed at every place and primitive at
+at least one place. Allowed means monic squarefree with no root
+at zero or at an \(M_0\)-th root of unity in the field, where
+\(M_0=q_2\) is the exclusion modulus of \S\ref{sz:setup}.
+Primitive means irreducible with a root of order \(q^r-1\).
+For each irreducible factor \(p\) of a squarefree label, write
+\(d=\deg p\) and choose a root in \(\mathbb F_{q^d}^\times\).
+The faithful identification of this cyclic group with its dual
+commutes with raising to \(q\), so the degree-\(d\) Frobenius
+orbit of roots gives a degree-\(d\) orbit of characters. The
+Hall function \(\tau_p\) used in the level projector equals the one-box Green
+character of this orbit, in the positive-degree normalization, by
+Lemma~\ref{lem:fitted-primary-character}.
+Green's theorem~\cite[\S8, Theorem~14 and p.~444]{green}
+gives its degree \(\prod_{h=1}^{d-1}(q^h-1)\).
+Distinct irreducible factors give distinct orbits. Since the
+label is squarefree, parabolic induction of these characters is
+the irreducible character indexed by the set of those orbits,
+each with partition \((1)\); distinct labels give distinct characters.
+The label function is precisely this induction product by construction.
+For factor degrees \(d_j\), \(\sum_j d_j=r\), the inducing parabolic
+has index \(\prod_{h=1}^r(q^h-1)/\prod_j\prod_{h=1}^{d_j}(q^h-1)\)
+by the flag count. Multiplying by the inducing degree yields
+\[
+ \chi(1)=\frac{\prod_{h=1}^{r}(q^h-1)}{\prod_j(q^{d_j}-1)},
+ \qquad \frac{\chi(1)^2}{|\mathrm{GL}_r(\mathbb F_q)|}
+ \ge q^{-r}\prod_{h=1}^r(1-q^{-h})\ge w_q,
+ \qquad w_q=(1-r/q)q^{-r}.
+\]
+Thus the positive coefficient at the identity of each character
+idempotent is at least \(w_q\).
+
+There are \(q^r\) monic polynomials of degree \(r\); at most
+\((1+M_0)q^{r-1}\) have forbidden roots. A nonsquarefree
+polynomial is \(p^2h\) with monic \(p,h\) and \(\deg h<r\);
+for each possible degree of \(h\) at most \(q^{r-1}\) such
+products occur. Hence the weighted count of allowed ones is
+at least \(1-\eta\), where \(\eta=(1+M_0+2r)/q\).
+There are \(\varphi(q^r-1)/r\) primitive polynomials: a primitive
+element cannot lie in a proper subfield and has an orbit of
+size \(r\) under Frobenius.
+For an integer \(u\) with \(j\) distinct prime divisors, the
+\(i\)-th smallest prime divisor is at least \(i+1\), giving
+\(\varphi(u)/u\ge\prod_{i=1}^j i/(i+1)=1/(j+1)\);
+also \(2^j\le u\). Consequently
+\(u\le\varphi(u)(1+2\log u)\). With weight \(w_q\) for each monic polynomial, the count of nonprimitive polynomials is at most
+\(\exp[-1/(2r(2r\log q+1))]\).
+Taking the product of weighted counts over all \(f\) fields
+and subtracting the tuples with no primitive polynomial gives
+\[
+ (1-e_i^{\rm pr})(1)\le1-(1-\eta)^f+
+   \exp[-f/(2r(2r\log q+1))]\le f\eta+b^{-9}\le b^{-8}/2.
+\]
+The last two inequalities are the scale checks
+\(0\le\eta\le1\), \(f\ge 2r(2r\log q+1)\,9\log b\) and
+\(f\eta+b^{-9}\le b^{-8}/2\). The tensor product
+\(e_0=e_0^{\rm pr}\otimes e_1^{\rm pr}\) acts as \(Q\).
+This explains why both good-prime conditions are imposed.
+
+For a complementary idempotent \(x=1-e_i^{\rm pr}\), the convolution
+\(f(g)\mapsto\sum_{t\in G_i}x(t)f(gt)\) is an orthogonal projection
+on the space of functions on \(G\) with operator-valued entries:
+it is the group algebra action of a self-adjoint idempotent.
+Apply this to \(E_g\) cut down to \(\Omega_i\). On \(R\)
+its value is \(r_\psi(s)\sum_{t\in G_i}x(t)E_t\).
+Using \eqref{B:nearBessel} and dividing by \(|R|\) gives
+\[
+ \left\|\sum_{t\in G_i}x(t)E_t\right\|_{\rm HS}^2\le b^{-12}d_X .
+\]
+For \(t\in G_i\) the other prime component is the identity.
+A diagonal Bessel term is a rational element of \(U_{\rm Bes}\rtimes U(X_0)\)
+whose conjugate by its class representative is integral and reduces
+to the identity at that other prime. Here \(U_{\rm Bes}\) is the
+unipotent radical of the Bessel subgroup. Its middle \(U(X_0)\)-block
+inherits integrality and the identity reduction. By freeness at that
+prime its rational part is the identity. Thus a diagonal term can
+occur only if \(t\) is in the image of the integral unipotents. In
+that case translating the identity block by a unipotent representative
+multiplies each diagonal entry by its reduced character \(\psi_U(t)\).
+Summing the \(d_X\) entries gives \(\operatorname{tr}r_\psi(t)=d_X\psi_U(t)\),
+with \(\psi_U\) extended by zero elsewhere.
+Centrality replaces \(\psi_U\) by its conjugacy average
+\(\psi_U^\natural\) in the trace sum. The local two-frame mass
+estimate implies
+\begin{equation}\label{B:charmean}
+ \sum_{g\in G}|\psi_U^\natural(g)|^2\le2 .
+\end{equation}
+This is input F5 below. The idempotent's self-adjointness and
+idempotence give \(\sum_t|x(t)|^2=x(1)\). By Cauchy--Schwarz the
+Bessel trace contribution has absolute value at most
+\(d_X\sqrt{(b^{-8}/2)2}=b^{-4}d_X\).
+The trace of the remainder has absolute value at most
+\(\sqrt{d_X}\,b^{-6}\sqrt{d_X}\le b^{-4}d_X\).
+Since \(\rho(x)\) is an orthogonal projection,
+\[
+ \|\rho(x){\Pi_{\rm sc}}\|_{\rm HS}^2
+ =\operatorname{tr}({\Pi_{\rm sc}}^*\rho(x){\Pi_{\rm sc}})\le2b^{-4}d_X.
+\]
+The two good projectors commute. The squared norm missed by
+their product is at most the sum missed by the factors
+(orthogonal decomposition with respect to one factor).
+Hence \(\|(1-Q){\Pi_{\rm sc}}\|_{\rm HS}^2\le4b^{-4}d_X\).
+Subtract this from the inferior estimate following
+\eqref{B:defect}, on any subspace \(Z\), to obtain \eqref{B:near}.
+
+\paragraph{The global second moment.}
+Set \(\beta(g)=\|q_g\|_{\rm HS}^2\). This nonnegative
+function is of positive type: it is the Gram correlation of the
+operators \(C_g\) from \S\ref{B:one}. In particular
+\(\beta(g)\le\beta(1)\le2d_X\).
+
+We give the finite group argument that converts the local
+main term into the global bound. At a chosen place above \(p_0\),
+a frame vector is a nonzero vector in the frame span, or in its
+dual at the conjugate place. For a set \(T\) of such places,
+let \(K_T\subset G\) fix one specified frame vector at each,
+and let \(s_T=\sum_{g\in K_T}\beta(g)\). Define
+\(D_{\rm fix}=b^{6k}\), \(C_T=D_{\rm fix}^{-|T|}I_*\), and \(x=b^{-4}\).
+Call a reduction open if at some chosen place above \(p_0\) all
+the relevant leading minors of the frame pairing matrix are
+nonzero. The open-link estimate (F6) bounds the normalized
+link moment on \(K_T\) intersected with the open reductions by
+\((1+x)C_T\).
+Since \(I_0\le C_T\) by \(b^{11kf}I_0\le I_*\), and
+open reductions avoid scalar cosets, \eqref{B:rootbound} gives
+\[
+ \sum_{g\in K_T,\,g\text{ open}}\beta(g)
+ \le (\sqrt{1+x}+b^{-15})^2 C_T\le(1+4x)C_T.
+\]
+For the fixer at all \(f\) places, the scalar-coset count is
+at most \(M^f|R|\), each term at most \(2d_X\).
+The scale bounds imply \(8M^f I_0\le C_T\):
+use \(M\le b^{23}\), \(8\le b\), \(23f+1\le5kf\).
+Off the scalar cosets, \(z\ge p_0^f\ge b^{10f}\);
+the link bound is at most \(b^{-2kf}C_T\le C_T/8\),
+and \(b^{-30}I_0\le C_T/8\).
+Using \((u+v)^2\le2(u^2+v^2)\) in \eqref{B:rootbound},
+the non-scalar contribution is at most \(C_T/2\), while the
+scalar contribution is at most \(C_T/2\). Thus \(s_T\le C_T\)
+when all places are fixed.
+
+For other fixers a finite-field estimate is needed.
+Let \(\Gamma\) be a finite group, let \(\beta:\Gamma\to\mathbb R_{\ge0}\)
+be of positive type, let \(q\) be the residue field size and let \(\pi\)
+be a representation of \(\Gamma\) in \(\mathrm{GL}_r(\mathbb F_q)\).
+Suppose all stabilizers of nonzero columns of either of the
+two injective frame maps \(A_0,A_1:\mathbb F_q^j\to\mathbb F_q^r\)
+(with the action on the second frame contragredient) have
+\(\beta\)-mass at most \(Y_0\).
+Then
+\begin{equation}
+\label{B:minor}
+ q\sum_{\det(A_1^t\pi(g)A_0)=0}\beta(g)
+ \le 2\sum_{\Gamma}\beta(g)+q^{j+r/2}Y_0 .
+\end{equation}
+To verify this, take vectors \(u_g\) realizing positive type,
+\(\langle u_a,u_b\rangle=\beta(a^{-1}b)\), and the delta and
+Fourier orthonormal bases of \(\ell^2(\mathbb F_q^r)\).
+The squared norm of
+\(\sum_a\delta_{\pi(a)z}\otimes u_a\) is \(|\Gamma|\) times
+the stabilizer mass of \(z\). The same identity in the Fourier
+basis at \(\pi(a)^{-t}v\) holds for the dual stabilizer.
+The cross inner product is
+\(|\Gamma|q^{-r/2}\sum_g\psi(v^t\pi(g)z)\beta(g)\)
+for a nontrivial additive character \(\psi\), with the Fourier
+sign chosen accordingly. Cauchy--Schwarz bounds its real part,
+so the weighted character sum has real part at most
+\(q^{r/2}Y_0\) for \(v=A_1 y,z=A_0 x'\), both nonzero
+parameter vectors. For \(Z_g=A_1^t\pi(g)A_0\), additive
+orthogonality gives
+\(\sum_{y\in\mathbb F_q^j}\mathbb E_{x'\in\mathbb F_q^j}
+  \psi(y^t Z_g x')=|\ker Z_g^t|\), at least \(q\) if
+\(Z_g\) is singular. Since \(\beta(g)\ge0\), multiply this pointwise lower bound by
+\(\beta(g)\) and sum. The
+axes \(y=0\) and \(x'=0\) cost at most twice the total mass;
+the remaining pairs cost at most \(q^{j+r/2}Y_0\).
+This proves \eqref{B:minor}. The weight in the application is a squared
+Hilbert--Schmidt norm, so it satisfies the pointwise sign condition.
+
+The sign condition is necessary in the general statement. Let \(S_3\) act on
+\(\mathbb F_2^4\) by permuting the first three coordinates, and take its sign
+character as \(\beta\). This one-dimensional character is of positive type.
+Every vector and covector stabilizer contains a transposition, because two of
+its first three coordinates agree. All their signed masses vanish. Set
+\(j=2\), choose \(\operatorname{im} A_0=V=\langle e_1,e_2+e_4\rangle\),
+and choose \(A_1\) so that \(\ker A_1^t=(12)V\).
+The minor is singular exactly when \(gV\cap(12)V\ne0\).
+Comparing the three nonzero vectors of each plane gives
+\(g=1,(12),(123),(132)\). Their signs sum to two, whereas the total signed
+mass is zero. With \(Y_0=0\), the claimed inequality without the sign
+condition would read \(4\le0\).
+
+Choose the set of places and their frame vectors maximizing
+\(D_{\rm fix}^{|T|}s_T\); all choices are finite. At a place outside
+\(T\), the mass in the current fixer of every additional
+vector or covector stabilizer is at most \(s_T/D_{\rm fix}\), by
+maximality. If \(T\) is full the preceding all-place bound
+already suffices. Otherwise apply \eqref{B:minor} to each
+leading minor at such a place; the relevant frame maps are
+injective. The scale inequality \(p_0^{j+r/2}\le D_{\rm fix}\) holds for
+the minor sizes \(1\le j\le\varrho+1\), and \(p_0\ge b^{10}\).
+Each singular-minor mass is therefore at most \(3s_T/b^{10}\).
+A non-open reduction has a vanishing relevant minor at this
+place; \(\varrho+1\le b\) implies the mass of all non-open
+reductions is at most \(xs_T\). Combining with the open estimate,
+\[
+ s_T\le(1+4x)C_T+xs_T\quad\Longrightarrow\quad
+ s_T\le(1+9x)C_T
+\]
+because \(0\le x\le1/10\) and
+\((1-x)(1+9x)-(1+4x)=x(4-9x)\ge0\).
+The empty set of places is an admissible competitor, hence
+\begin{equation}
+\label{B:global}
+ \sum_{g\in G}\|q_g\|_{\rm HS}^2
+ \le D_{\rm fix}^{|T|}s_T\le(1+9b^{-4})I_* .
+\end{equation}
+
+\paragraph{The target dimension.}
+By F7 the good forms on \(Y_0\) have the same dimension as those on
+the terminal definite comparison space \(W_m\). The precise input is the
+cuspidal trace comparison for the two inner forms with matching
+Harish--Chandra parameters (F7 below): the rank is at least two,
+the number of infinite places is even, and the required parameter
+gaps hold. Appendix~\ref{sec:trace} proves the reduction to the trace comparison
+and its local inputs for all permitted Hecke operators. Taking the identity
+operator there and summing over the good types gives this dimension
+equality. Thus \(d_T\) is at most the dimension of all
+principal-level forms on the definite \(W_m\).
+The level is free: a rational stabilizer element is integral at every place up to conjugacy and congruent to the identity at the chosen places above \(p_0\). The norm of its trace minus \(r\) is at most \((2r)^{2f}<p_0^f\). Divisibility by all the chosen primes forces trace \(r\), hence the identity by archimedean unitarity. Its index
+in the maximal level is \(|G|\), so the class-mass formula (or
+counting the free fibers of the double coset map with stabilizer
+weights) gives \(|G|\mu\) classes.
+Each contributes the dimension of the weight representation,
+which is \(\delta\) by the Weyl degree formula~\cite[Lecture~24]{fultonharris} and the
+parameter match in the admissible Bessel system:
+for a definite rank-\(r\) representation of highest weight
+\(\lambda\), the local degree is
+\(\prod_{i<j}(\lambda_i-\lambda_j+j-i)/(j-i)\);
+the discrete-series formal degree here has the same parameter
+product at each place. Consequently
+\(d_T\le |G|\delta\mu\).
+Multiplying \eqref{B:global} by this upper bound cancels the
+denominator \(\delta\mu\) in \(I_*\), proving \eqref{B:moment}.
+
+
+\subsection{The cutoff error and the near-pair sums}
+\label{B:cutoff}
+The following calculation reduces the analytic cutoff error and
+absolute convergence to a single geometric separation estimate, with
+the fitted Bessel majorants of F0. Write \(h=\varrho+1\), \(i=r^3f\)
+and \(d_0=2hrf\). For an archimedean tuple \(y\) put
+\(u(y)=\prod_v\max(1,\ell(y_v)/b^{6h})\), with \(\ell(y_v)\) the
+infimum of \(1+\|s y_v\|\) over the Bessel subgroup. Fix the class
+\(c\), reduction \(g\), and point \(y\). Give a term leading to
+class \(c'\) the weight \(\beta_{c'}(z)\), \(z=\gamma^{-1}y\).
+If \(u(z)\le R\), \(R\ge1\), the frames in the support of this
+cutoff lie in a ball of radius \(\rho=b^{37h}R\) in the
+\(d_0\)-dimensional real space of their coordinates. The box property
+and rigidity input F4 state that unequal rational frames have
+coordinate distance at least \((N\rho)^{-1}\) in this ball.
+A fixed frame has total weight at most one: two terms with the same
+frame and reduction differ within a single class by a rational
+unipotent stabilizer element, and its translates of the cutoff sum
+to one. Translating one frame to the origin, and comparing disjoint
+balls of radius \((2N\rho)^{-1}\) with the ball of radius
+\(2\rho+(2N\rho)^{-1}\), gives weighted count
+\[
+ C(R)\le(1+4N\rho^2)^{d_0}
+     \le (b^{6h^2}R^2)^{d_0}.
+\]
+Indeed \(N\le b^{60h}\), \(h\ge23\), and \(134h+1\le6h^2\).
+Since \(4d_0<i\), layer integration gives
+\[
+ \sum_{c',\gamma}\beta_{c'}(z)u(z)^{-i}
+   =i\int_1^\infty C(R)R^{-i-1}\,dR
+   \le 2b^{12h^3rf}.
+\]
+For the local full and cut functions, the fitted majorants give
+\(\|W_v^{\rm side}(x)\|u_v(x)^{3i}\le w_v(x)\le a_v\) and
+\(a_v\int_{U_{\rm Bes}\backslash G_\infty(v)}w_v\le
+ b^{400r^2}\dim V_v\). Each \(w_v\) is unipotent invariant.
+On the locus where the two kernels differ,
+\(u(y)u(z)\ge b\): some local cutoff acts at length
+\(>b^{6h+2}/2\). For either kernel use \(2i\) of its spare powers at
+each argument and \(i\) more at \(z\). The triangle inequality bounds
+the difference by
+\[
+ 2 b^{-2i}\prod_v w_v(y_v)a_v\ u(z)^{-i}.
+\]
+Multiply by \(\beta_c(y)\beta_{c'}(z)\), sum, and integrate. The
+sum over \(c',\gamma\) costs at most \(2b^{12h^3rf}\), and integrating
+\(\beta_c\prod_v w_v\) unfolds the unipotent variable with factor
+\(\nu\). The row sum of norms of the differences is at most
+\[
+ 4\nu b^{-2r^3 f+12h^3rf+400r^2 f}\prod_v\dim V_v
+   \le \tfrac12\nu b^{-k^3f}.
+\]
+Indeed \(\prod_v\dim V_v\le b^{2kf}\), \(8\le b\), and
+\[
+ 12h^3rf+1+400r^2f+2kf+k^3f\le 2r^3f.
+\]
+For the latter use \(12h^3+500\le k<r\): the terms other than
+\(k^3f\) are at most \(402r^2f\le r^3f\). Without restricting to
+the changed locus, the same majorant without the factor
+\(2b^{-2i}\) bounds the full kernel and the cut kernel, proving
+absolute summability of the integrals. Finally, row squared norms
+are bounded by squared row sums, the number of classes is at most
+\(I_0\), and \(|G|b^{40}\le4b^{2k^3f}\). The last estimate follows
+from \(|G|\le M^{r^2 f}\), \(M\le b^{23}\) and
+\(23r^2f+40\le2k^3f\). Summing rows and dividing by \(\nu^2\) gives
+the error \(b^{-40}I_0\) used in \eqref{B:rootbound}.
+
+\paragraph{Pairs with equal and unequal links.}\label{B:pairs}
+A block squared is bounded by the corresponding sum over ordered
+pairs of terms. For a pair in the same nonzero-discriminant link,
+its first representative determines both the reduction and the
+link, so summing all link squares incurs no extra multiplicity.
+For the remaining terms expand the square after partition into the
+nonzero-discriminant link blocks and one zero-discriminant block.
+Keep the squares of the former and bound the remaining products by
+the products of the term sizes, including the entire square of the
+zero-discriminant block. The factor from two amplitude majorants
+is \(\nu^2\) in either case.
+
+For the arithmetic count let \(d\) be the pair discriminant,
+\(j=k-\dim_E(\mathrm{common\ link})\), \(\tau=b^{kf/4}\), and
+\(C_p>0\) the pair-count scale of the filling. The geometric
+inputs bound the product of term sizes by
+\[
+ \frac{B}{\tau^{j+2}C_p d^k}
+ \quad\text{if}\quad
+ (d\eta)^2\le G_\gamma G_{\gamma'},\quad
+ D'\ge\max(H_\gamma,H_{\gamma'}),\quad
+ \tau^{j+6}D'/\eta^k\le B .
+\]
+Here \(G_\gamma\) is the level gauge and \(H_\gamma\) the cell-rank
+moment, both for the indicated near representative. The
+reciprocal-discriminant count is
+\(\sum_{\text{pairs of corank }j}d^{-k}\le\tau^{j+2}C_p\).
+There are at most \(h^3+1\le\tau\) coranks, so summation gives
+\(\tau B\). For equal links one has \(j\le1,\ \eta=z,\ D'=I_*\):
+the result is \(\tau^8 I_*/z^k=(b^{2f}/z)^k I_*\).
+For the other pairs the required bound on the budget is
+\(B=I_0/\tau^{10}\), giving \(\tau B\le b^{-kf}I_0\).
+Section~\ref{app:pair-count} proves the weighted lattice count and reduces the
+pair count to the one-term multiplicity over a prescribed lattice.
+The gauge and cell-rank bounds on individual term sizes are also required.
+
+\paragraph{The coefficient in the open-cell estimate.}
+\label{B:openenergy}
+For a fixed vector choice at the places in \(T\), take a finite
+collection of nonzero open link blocks. The source's open-cell
+parametrization assigns to each block a last entry \(t'\), a
+representative \(\sigma\) in its floor group (the subgroup used in
+the unipotent double-coset parametrization), and integral positions
+with the prescribed fixer. It requires
+\(|t'|_v^2>N^2\) at every infinite place. With the first
+\(\varrho\) entries ranging over the finite entry set, the block
+equals the sum of cut amplitudes of the double cosets represented
+by \(w(p,t')\sigma\), with \(w(p,t')\) the Weyl representative
+for this entry list. The class pair, reduction, and \(\sigma\)
+determine the block, since \(\sigma\) determines the link. Thus one
+may sum squares without a labeling multiplicity.
+
+Write \(S_{\rm bl}\) for the sum of the block norm squares and
+\(R_{k-1}>0\) for the filling's normalizing constant at predecessor
+rank. The Siegel estimate after grouping the blocks by \(t'\) is
+\[
+ R_{k-1}^2 S_{\rm bl}\le(1+b^{-6})C_{\rm S} Z.
+\]
+Here \(C_{\rm S}\) is the scaled Siegel constant and \(Z\) sums,
+over distinct last entries and pairs of heads, the real part of the
+product of archimedean band-limit kernels times the local
+last-entry density divided by the intermediate group's mass ratio.
+The Gram identity at fixed \(t'\) supplies the kernel in this estimate.
+For the intermediate group implementing the vector fixers, the
+required sieve bound is
+\[
+ Z\le\left(\prod_{j=0}^{\varrho}C_{{\rm Pois},j}\right)
+ \left[
+  \left(\prod_{v}\frac{1+b^{-10}}{\deg_v}\right)
+  \frac{1+b^{-6}}{b^{6k|T|}}+
+  b^{2403(\varrho+1)^9 f}C_{\rm dec}
+ \right],
+\]
+where \(C_{{\rm Pois},j}\) are the stage Poisson constants,
+\(\deg_v\) are the local Bessel degrees, and \(C_{\rm dec}\) is
+the filling decay constant. In particular the sieve contributes one
+factor \(1+b^{-6}\) for the entire fixer set \(T\), including \(T=\varnothing\).
+Under the measure and level identifications of \S\ref{spread:normalization}, the scalar calculation there bounds the displayed right side times
+\((1+b^{-6})C_{\rm S}\) by
+\(R_{k-1}^2(1+b^{-4})b^{-6k|T|}I_*\nu^2\).
+Divide by \(R_{k-1}^2\) and take the supremum over finite collections
+of nonnegative summands to get F6. Section~\ref{moment:open} gives the rational parametrization.
+The fitted Gram/Siegel estimate, remaining local transform estimates and
+identification of the measures are needed in \S\ref{moment:full}--\ref{moment:sieve}. The
+\srcline{New/Spanning/MainTerm/EnergyEstimate}{631}{formal open-cell bound}
+has leading coefficient \(1+b^{-4}\) when \(T=\varnothing\).
+For \(T\ne\varnothing\) it has the additional factor \(b^{-6k|T|}\).
+The leading coefficient matters for the dimension conclusion. For example,
+let the trivial group act on an isometric inclusion of a \(d\)-dimensional
+space into one of dimension \(2d\). Every translate has the same image.
+The ratio of the second moment of the image projection to its
+squared first moment, with trace normalized by \(2d\), equals
+\((1/2)/(1/2)^2=2\). A moment estimate with this constant is compatible
+with the translates filling only half the target.
+
+\subsection{Arithmetic hypotheses for spreading}
+\label{B:frontier}
+For clarity, the following are hypotheses of the present
+reconstruction until their own proofs are supplied. All filling
+statements are for the particular admissible filling associated
+to \(D\), with its prescribed local measures, ranks, levels and
+Bessel data; they are not claims for arbitrary choices of cutoffs.
+Appendix~\ref{sz:register} records which clauses are derived on the constructed scales.
+\begin{enumerate}
+\item[F0.] The construction of the admissible filling, including
+the fitted Bessel systems, their finite-dimensional source
+coordinates (nonempty index sets), formal degrees and scale
+inequalities used above. In particular the unitary source rank is \(k\),
+and the ratios involving \(I_0,I_*\) are part of the filling
+admissibility, not consequences of linear algebra.
+\item[F1.] The period-to-series identification at the fitted levels,
+the normalized identity Bessel block, and the block change of
+variables for a rational Bessel term with its unitary coordinate
+matrix. These yield the equivariance and the trace calculation in
+\S\ref{B:arithmetic}. Absolute convergence of the block integrals
+follows from F0 and F4 by \S\ref{B:cutoff}.
+\item[F2.] For any \(\Omega\) and positive integer \(z\) with
+\(z\le\operatorname{meetNorm}(g)\) throughout \(\Omega\),
+\(\mathcal E(\Omega)\le \nu^2(b^{2f}/z)^k I_*\).
+This is a source-specific near-pair lattice estimate, not a
+general second-moment bound.
+\item[F3.] Expansion by links: if \(\mathcal E(\Omega)\le C\nu^2\),
+the normalized cut moment of the remaining terms is
+at most \(C+b^{-kf}I_0\). The missing proof is the cross-link
+near-pair size sum, including zero-discriminant terms, and the
+term classification on sets avoiding scalar cosets.
+\item[F4.] For \(u(z)\le R\) the cutoff support lies in the
+frame box of radius \(\rho=b^{37h}R\); two distinct rational frames
+on that support are separated by \((N\rho)^{-1}\), and terms of a
+fixed frame and reduction occur in a single unipotent orbit with
+cutoff weights summing to at most one, as specified in
+\S\ref{B:cutoff}. Section~\ref{moment:rigidity} gives the
+integral coordinates, separation and orbit argument in the fitted model.
+On the constructed scales that section also constructs the reduced cutoff and proves its partition identity for the levels and scales specified there. Thus F4 follows in the fitted model.
+\item[F5.] The conjugacy-average bound \eqref{B:charmean} for the
+specific reduced unipotent character. The local mass proposition
+with congruence subgroup \(K(M)\) is
+\[\int_K\left|\int_K\chi_M(yzy^{-1})\,dy\right|^2dz
+\le2\operatorname{vol}(K)^2\operatorname{vol}(K(M)).\]
+The function is constant on reduction cosets; integration
+over these disjoint cosets followed by cancellation of their
+positive volume proves \eqref{B:charmean}. Appendix~\ref{sz:shells} derives this integral bound from explicit
+deep-vector frame and shell bounds. The primitive local frame
+estimates stated there remain inputs.
+\item[F6.] For open reductions in any fixer \(K_T\),
+\(\mathcal E(K_T\cap\mathrm{open})\le
+ (1+b^{-4})b^{-6k|T|}I_*\nu^2\).
+Section~\ref{B:openenergy} reduces this sharp main-term estimate to the displayed Siegel and sieve inputs. The factor
+\(1+b^{-4}\) cannot be replaced by an unspecified constant,
+since the subsequent dimension argument depends on near-optimal
+second moment.
+\item[F7.] Use the two-inner-form trace input in \S\ref{sec:trace}
+at the identity operator, the equality of the fitted Bessel
+formal degree and the compact Weyl degree. These enter the bound on \(d_T\).
+Lemma~\ref{lem:fitted-primary-character} supplies the finite character
+normalization in the bad-type weight of \S\ref{B:arithmetic}.
+\end{enumerate}
+
+
+\subsection{Selection of one indexed family}
+\label{B:selection}
+By Theorem~\ref{A:main}, \(\mathcal S\subset\mathcal I\) spans \(S\).
+Fix the translate set \(t\) obtained above. Linearity gives
+\[
+ F_t=\sum_{g\in t}P_g(S)
+ =\operatorname{span}_{\mathbb C}\bigcup_{g\in t}P_g(\mathcal S).
+\]
+Successively choose an element of this union outside the span of the
+elements already chosen until their span equals \(F_t\). Its finite
+dimension ensures that the procedure ends. Retain a preimage and a
+translate for each of the resulting basis vectors:
+\begin{equation}
+\label{B:witnesses}
+ y_i=P_{g_i}\phi_i,\quad g_i\in t,\quad \phi_i\in\mathcal S,\quad
+ 1\le i\le n,\qquad (1-4/b^2)d_T\le n=\dim F_t\le d_T .
+\end{equation}
+Since \(1-4/b^2\ge 1/2\) and \(d_T>0\), this gives \(n>0\) and
+\(d_T\le2n\). Each chosen preimage belongs to the integral lattice
+and satisfies the shortness bound for every translate and conjugation.
+Consequently the same witnesses meet both clauses of
+Theorem~\ref{A:main} for the family \(y\).

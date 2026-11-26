@@ -1,0 +1,272 @@
+\section{Comparing the good spaces on different real forms}
+\label{sec:trace}
+
+Let $V_s,V_{s'}$ be two of the rank-$r$ hermitian spaces $Y_0,W_j$
+with the prescribed finite frames. These frames identify their groups of
+finite adelic points and their principal level $K$. They have a common
+doubled Harish--Chandra parameter $l$ and possibly different real
+signatures $s,s'$. Write $M_s$ for the space of forms of type $l$ at
+level $K$, $e_0$ for the good projector and $M_s^g=e_0M_s$. The Hecke
+algebra $\mathcal H$ used here consists of the spherical operators away
+from the chosen places, acting simultaneously on the different spaces.
+For its elements the desired equality is
+\begin{equation}\label{tr:good}
+  \operatorname{tr}(T\mid M_s^g)=\operatorname{tr}(T\mid M_{s'}^g)
+  \qquad(T\in\mathcal H).
+\end{equation}
+We derive this under the geometric inputs specified below. The spreading
+argument needs $T=1$ at $j=m$. The chain determinant also needs a common
+Hecke operator at each $j$.
+
+\subsection{Getting a cuspidal component from a label}\label{tr:label}
+At the chosen split places the principal level is the kernel of reduction
+onto the product of the finite groups $G_w=\mathrm{GL}_r(k_w)$.
+The good idempotent is $e_0=\sum_c e_c$, where $c$ ranges over the good
+tuples and $e_c$ is the tensor product of their character idempotents.
+Each good tuple has a primitive degree-$r$ label at some $w$ above
+the first level prime. Its root in $\mathbb F_{q^r}$,
+$q=|k_w|$, generates $\mathbb F_{q^r}^{\times}$. Under the chosen
+identification with its character group this gives a character of order
+$q^r-1$. Its Frobenius orbit has length $r$, since $0<q^h-1<q^r-1$
+for $0<h<r$. The irreducible factor of the label therefore indexes
+Green's cuspidal character $\chi$ of $G_w$, corresponding to the degree-$r$
+orbit and the one-box partition~\cite[\S8, Theorem~14]{green}.
+
+One can also read off the invariant multiplicity from the polynomial
+definition of the label. In the Hall algebra let $*$ be parabolic
+induction, $\mathbf{u}$ the constant function, $\mu$ its $*$-inverse,
+and $\beta$ the sum of the chosen multiplicative character over
+the eigenvalues with multiplicity. Green's function for the irreducible
+label is the rank-$r$ part of $C=(\beta\mu)*\mathbf{u}$ up to sign,
+with $\beta\mu$ the pointwise product. Block averaging $\delta$ is
+compatible with $*$ by the finite Mackey formula (partition a stable
+subspace by its intersection with the first block and its image in the
+quotient). Since $\delta\mathbf{u}=\mathbf{u}\otimes\mathbf{u}$,
+one has $\delta\mu=\mu\otimes\mu$. The eigenvalue sum is constant on
+a block extension and equals the sum on its diagonal blocks. Consequently
+\[
+ \delta(\beta\mu)=(\beta\mu)\otimes\mu+\mu\otimes(\beta\mu),
+ \qquad \delta C=C\otimes 1+1\otimes C,
+\]
+where $1$ is supported in rank zero. Taking two identity diagonal
+blocks of positive ranks gives zero average on their radical. This
+average of the character is the dimension of the invariant subspace.
+
+Here is the vanishing that the trace comparison requires. Let $N$ be
+the unipotent radical of a proper coordinate maximal parabolic, and
+let $\pi$ afford $\chi$. The averaging operator
+$|N|^{-1}\sum_{u\in N}\pi(u)$ projects onto $\pi^N=0$ by cuspidality.
+Multiplication on the left and right and taking the trace gives
+$\sum_{u\in N}\chi(aub)=0$ for every $a,b\in G_w$. The coefficients of
+the central idempotent are $\chi(1)\overline{\chi(g)}/|G_w|$.
+Their sums over these translates also vanish. The map
+$Z\mapsto 1+pZ(1-p)$, with $p$ the projection onto the chosen
+coordinate subspace, covers $N$ with constant fibre size, so summing
+over all matrices $Z$ gives the same vanishing. In $e_c$ the remaining
+finite factors are constant during this summation.
+
+Lift the tuple idempotent by a section of reduction and convolve with
+$\mathbf 1_K$. On the standard maximal compact this function is the
+coefficient function of $e_c$ evaluated at the reduction: precisely the
+chosen lift of that reduction contributes. Outside the compact it
+vanishes. Right multiplication by the local integral lifts of $N$ stays
+in the same compact coset. Thus all the local radical sums that define
+cuspidality at $w$ vanish. Convolution on the left by the group-algebra
+representative of $T$ preserves these sums. This proves the local
+hypothesis for the finite test function of $T e_c$.
+
+\subsection{Comparing traces with two local conditions}\label{tr:geometry}
+For clarity, the geometric branch of the argument uses the following
+inputs for the kernels and Haar normalizations of these spaces.
+They are hypotheses of the present reconstruction.
+\begin{itemize}
+\item[(i)] At a common compact open level $K'$ for either signature,
+the kernel for $l$ has cusp decay of order $10r^5$, and the convergent
+pretrace expansion for a level-preserving test is
+$\operatorname{vol}(K')\operatorname{tr}=\sum_R I_s(R)$.
+Here $I_s(R)$ is the contribution of the characteristic polynomial
+$R\in E[X]$ of rational elements. The expansions unfold to class
+orbital integrals for irreducible $R$, with absolutely integrable cyclic
+triple-kernel integrals also after weighting by a one-step logarithmic
+norm increment.
+\item[(ii)] For coprime nonconstant local factors, a conjugacy-invariant
+distribution supported on the characteristic-polynomial fibre of their
+product kills a test function with vanishing radical sums at the split
+place. This is the local parabolic descent step.
+\item[(iii)] For irreducible $R$ with all roots on the unit circle at
+every infinite place, each elliptic class integral factors into a finite
+factor and the product of real orbital integrals. Changing the signs
+attached to the eigenlines, with total sign product fixed at $1$, gives
+a bijection of the corresponding frame classes preserving the finite factor.
+For regular $z=(z_i)$ on the compact torus, the real kernels obey
+\[
+ (-1)^{n_+n_-}\sum_{\sigma\in S_r} O_s(z\circ\sigma)
+ =|S_{n_+}\times S_{n_-}|\,\overline{\chi_{l,\mathrm{cpt}}(z)}.
+\]
+Here $n_+,n_-$ count the two signs, $O_s$ uses the
+formal-degree-normalized discrete-series kernel of $l$, and the right side
+uses the lowest $K$-type on the compact form at that place.
+\end{itemize}
+Section~\ref{tr:parabolic-descent} proves (ii) for the split test just constructed. The remaining assumptions concern the indicated kernels on the adelic quotient,
+including the finite centralizer measure in (iii).
+
+Suppose the finite test is cuspidal at $w$ and its support at an auxiliary
+place consists of integral matrices having zero as a simple root of the
+reduced characteristic polynomial. The latter condition excludes a proper
+power $R=Q^h$, $h>1$: a monic $Q$ with $Q^h$ integral has integral
+coefficients by integral closedness, and its reduction would give zero
+with multiplicity divisible by $h$. Each remaining reducible $R$ in the
+support has two coprime nonconstant factors over $E$ obtained by
+partitioning its primary factors. They stay coprime over the completion.
+The functional on the test defined by $I_s(R)$ is conjugation invariant
+by change of variables and supported on this fibre. Hence (ii) kills it.
+
+For irreducible $R$, fix a root $z$ with $|z|\ne1$ at one infinite
+place, if there is one. Diagonalize a rational representative $\gamma$
+there, take its left eigenrow $v$ for $z$, and put
+$h(x)=\log\|vx\|$. Then $h(\gamma x)=h(x)+\ell$ with
+$\ell=\log|z|$. The centralizer scales this eigenrow, so differences
+of $h$ descend under its action. Write $p$ for the convolution
+idempotent kernel at infinity. In the unfolded triple integral for the
+orbital integral of $p*p*p$ the three successive increments of $h$ from
+$x$ to $\gamma x$ sum to $\ell$. Their integrals agree by cyclic
+rotation. The integral of the sum of the first two equals that of the
+first alone by collapsing the first two kernels using $p*p=p$.
+The second integral is therefore zero. Assumption (i) justifies these
+integrations and shows that $\ell I_s(R)=0$ after summing the classes.
+
+In the elliptic case, sum (iii) over all orders of the roots at each
+infinite place. For fixed signature the eigenline signs of a given
+class occur $|S_{n_+}\times S_{n_-}|$ times at each place.
+These multiplicities cancel the same factors in the real orbital formula.
+The field has an even number $f$ of infinite places, so the total sign
+$(-1)^{fn_+n_-}$ is $1$. Every rearrangement of the signature at all
+places has total sign product $1$ for the same reason. Matching with
+the all-positive signature in (iii) leaves one common finite sum
+$C(R)$, and
+\[
+ I_s(R)=C(R)\prod_{v\mid\infty}\overline{\chi_{l_v,\mathrm{cpt}}(z_v)}
+       =I_{s'}(R).
+\]
+Summing over $R$ and cancelling the positive common volume proves the
+two-place trace comparison.
+
+The hypotheses on the data here are quantitative. The field contains
+$\mu_{5040}$ because $5040\mid18480\cdot3\mid q_1$ in its cyclotomic
+construction. The tower exponent is positive, which gives the parity of
+$f$. The admissible ranks give $r\ge2$. At every infinite place the
+entries $l_i$ are distinct and congruent to $r-1\pmod2$. For indices of
+opposite sign one has
+$|l_i-l_j|\ge2(500r^3+10r^5)$ for both signatures. This follows from
+the gap in the admissible rows: at $Y_0$ use the initial grid gap; at
+$W_j$ the two groups of undoubled parameters lie on opposite sides of
+the cut $-\mathrm{liftWeight}_j$ with the prescribed half-gap on each
+side. The order $10r^5$ used in (i) is at least $13r^3$. The finite
+frames, principal level, and parameter are the same in both applications.
+
+\subsection{Removing the auxiliary local condition}\label{tr:line}
+Fix a group-algebra representative $a$ of $T e_c$. Choose a split
+place $v$ away from $w,\bar w$, the finite support of the level, and
+all nonintegral components of the finitely many elements occurring in
+$a$. There are infinitely many split places. At $v$ cut $K$ to the
+inverse image of the stabilizer $J$ of the first coordinate line in
+$\mathrm{GL}_r(\mathbb F_q)$. Write $E_0$ for averaging over the full
+local compact and $A$ for the action of the part of $a$ away from $v$
+on this finer level. On the range of $E_0$, $A$ is precisely the old
+action of $a$ because the removed components are integral.
+Let $P,Q$ denote the unnormalized double-coset operators for
+$\operatorname{diag}(\varpi,1,\ldots,1)$ and its inverse at level $J$.
+They commute with $A$, and $Q=P^*$ since the inverse double cosets
+have the same degree $q^{r-1}$.
+
+Here is the local count. The right cosets for $P$ are indexed by
+linear forms $\xi$ with $\xi(e_1)=1$, and those for $Q$ by columns
+whose first coordinate is $1$. Representatives are the inverse lift of
+the identity with first row replaced by $\xi$, times the diagonal matrix,
+and the inverse diagonal matrix times a lift of the identity with first
+column replaced by the column, respectively. Multiplying cancels the two
+diagonal matrices. For fixed $\xi$ the resulting column $z$ ranges
+once over $\xi(z)=1$, since the first row of the row matrix is $\xi$.
+The resulting translate of a $J$-fixed vector $u$ depends only on the
+line of $z$; write it $u_z$. For $z=e_1$ the count is $q^{r-1}$,
+for other multiples of $e_1$ it is zero, and for $z$ off the first
+line it is $q^{r-2}$ by two independent affine equations. Since
+$\sum_{z\ne0}u_z=(q^r-1)E_0u$, we obtain
+\begin{equation}\label{tr:parahoric}
+ PP^*u=q^{r-2}\{u+(q^r-1)E_0u\}.
+\end{equation}
+The positive powers of $P$ are supported on matrices reducing to block
+form $\left(\begin{smallmatrix}0&*\\0&B\end{smallmatrix}\right)$ with
+$B$ invertible. Products and right multiplication by $J$ preserve that
+shape, so zero is a simple root. Removing the place $v$ from $a$ and
+cutting there preserve the radical sums at $w$: locally at $v$ all
+translates in $a$ are integral and at $w$ the last factor has the
+vanishing proved above. Equivalently the removed test is constant along
+the $v$ component before cutting, and the cut imposes the independent
+$J$ indicator there. Left convolution preserves the vanishing for every
+positive power. The two-place result therefore equates
+$\operatorname{tr}(A^hP^j)$ on the two fine-level spaces for all $h,j\ge1$.
+
+To recover $\operatorname{tr}(AE_0)$, fix $j$ and decompose into generalized
+eigenspaces of $A$. On the $\alpha$-space the trace of $A^hP^j$ equals
+$\alpha^h\operatorname{tr} P^j$, since $P$ commutes with the nilpotent
+part. For the union of nonzero eigenvalues of the two actions, the
+matrix $(\alpha^h)_{1\le h\le N}$ is invertible by Vandermonde, with
+$N$ the number of such eigenvalues. Thus the positive power sums of $P$
+agree on each nonzero $\alpha$-space. Equation~\eqref{tr:parahoric}
+makes $P$ invertible there. Positive power sums determine its multiset
+of nonzero eigenvalues with multiplicities, by the same Vandermonde
+argument. On this space $B_\alpha$ take determinants in
+\eqref{tr:parahoric} to get
+\[
+  |\det(P\mid B_\alpha)|^2
+  =(q^{r-2})^{\dim B_\alpha}(q^r)^{\operatorname{rank}(E_0\mid B_\alpha)} .
+\]
+Both $P$ and $P^*$ preserve $B_\alpha$, so the restriction still has
+the stated adjoint. The common dimension and determinant fix the rank.
+Summing $\alpha\operatorname{rank}(E_0\mid B_\alpha)$ gives the desired
+old-level trace; $\alpha=0$ contributes zero. This removes the
+second-place hypothesis for $T e_c$. Finally
+$\operatorname{tr}(T\mid M_s^g)=\operatorname{tr}(Te_0\mid M_s)$
+because $T$ preserves the range of the idempotent. Summation over $c$
+gives \eqref{tr:good}.
+
+\subsection{The two uses of the comparison}\label{tr:uses}
+Taking $T=1$ gives $\dim M_s^g=\dim M_{s'}^g=d_T$ when one of the
+spaces is $Y_0$. Applying \eqref{tr:good} to every power of $T$
+and using Newton's identities gives equal characteristic polynomials
+and equal determinants on the good spaces. For an individual Hecke
+character, take the finite union of the joint eigencharacters on the
+two principal spaces. For each other character choose a Hecke element
+separating it from the selected one and rescale the difference with
+its value at the other character to give values zero and one.
+Multiplying the separating factors gives a common projector onto the
+chosen eigenspace, using the simultaneous eigenspace decomposition
+for the commuting normal spherical operators. Its trace is the good
+multiplicity. Only the identity and the determinant comparison are
+required in the applications just described.
+
+For the latter, one must still identify the operators on the two
+spaces with the action of a \emph{single} Hecke element. Fix $j$ and
+the tame character. In the convergent expression for the matrix
+coefficients of the Rallis operator on principal forms each coset term
+is a common scalar (the finite vacuum coefficient with its residue
+cardinality normalization) times $\langle z,\pi(\gamma)y\rangle$,
+with $\gamma$ supported off the chosen level places. Let $K^0$ be the
+standard compact in the off-level group. Average $k\gamma$ over
+$k\in K^0/(K^0\cap\gamma K^0\gamma^{-1})$. Compact openness gives a
+finite quotient of cosets. This normalized spherical operator has the
+same matrix coefficient as $\gamma$ on both spaces: $z$ and $y$ are
+fixed there and the compact action is unitary. Thus each pair of
+terms lies in the joint evaluation image of $\mathcal H$ in the two
+endomorphism spaces, expressed in matrix-coefficient coordinates. That
+image is a complex linear subspace of a finite-dimensional space, hence
+closed. Taking sums preserves membership. The common residue cardinality
+multiplying the normalized series restores the two Rallis operators.
+Their determinants on the good spaces therefore coincide by
+\eqref{tr:good}. This step uses the Rallis series with its specified
+normalization and convergence. The analytic identity relating that
+operator to the adjoint times the lift is a separate hypothesis in the
+chain argument.
+
+\input{sections/descent}

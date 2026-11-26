@@ -1,0 +1,91 @@
+\subsection{The primary Hall factor in the level projector}
+
+Let $k=\mathbb F_q$. In this subsection $P$ denotes a monic irreducible
+polynomial over $k$, with $P(0)\ne0$, of degree $d\ge1$.
+Fix an injective character $T:\overline{k}^{\times}\to\mathbb C^{\times}$
+and a root $\alpha$ of $P$ in $k_d=\mathbb F_{q^d}$. Write
+$T(\alpha)=\exp(2\pi i a/(q^d-1))$ and put $\eta=T^a$.
+On $k_d^\times$ the result depends only on $a\bmod (q^d-1)$.
+The assignment $\alpha\mapsto\eta|_{k_d^\times}$ is an isomorphism
+from a cyclic group to its dual and commutes with the $q$-power map.
+Thus $\eta|_{k_d^\times}$ is regular, meaning that its Frobenius orbit
+has size $d$.
+
+Here is the Hall formula defining the primary factor. For
+$g\in\operatorname{GL}_d(k)$, let $V=k^d$ be the $k[X]$-module with
+$X$ acting as $g$. Write $\mu(0,W)$ for the M\"obius function of its
+submodule lattice. If $\beta_\eta(h)$ sums $\eta$ on the eigenvalues
+of $h$, with algebraic multiplicities, then
+\[
+ \tau_P(g)=(-1)^d\sum_{W\subseteq V\,\text{a submodule}}
+       \beta_\eta(g|_W)\mu(0,W).
+\]
+Indeed the Hall product with the constant function one sums over invariant
+subspaces, and its Hall inverse evaluated on a module gives
+the M\"obius function by the defining recursion. These are the
+\lineSrc{Lib/LocalGL/Green/HallAlgebra}{549}{eigenvalue sum and Hall product}
+and the \lineSrc{Lib/LocalGL/Green/TauFunctions}{133}{rank and sign convention}
+used in the projector.
+
+\begin{lemma}\label{lem:fitted-primary-character}
+The function $\tau_P$ on $\operatorname{GL}_d(k)$ is the cuspidal
+character attached to the orbit of $\eta|_{k_d^\times}$. Its value
+at the identity is $\prod_{j=1}^{d-1}(q^j-1)$.
+\end{lemma}
+\begin{proof}
+Only semisimple $W$ contribute. Indeed, for a nonsemisimple module $W$
+its socle, the sum of all its simple submodules, is nonzero and proper.
+Induction on length gives vanishing for each proper nonsemisimple
+submodule. The sum of the M\"obius values on the other proper submodules
+equals the sum over the entire submodule lattice of the socle, hence is
+zero. The M\"obius recursion gives $\mu(0,W)=0$.
+
+For each distinct monic irreducible factor $H$ of the characteristic
+polynomial, let $s_H=\deg H$, $Q_H=q^{s_H}$, and $m_H$ be the multiplicity
+of $k[X]/(H)$ in the socle of $V$. Each nonzero semisimple submodule is
+specified by subspaces of $\mathbb F_{Q_H}^{m_H}$. Write $n_H$ for their
+dimensions and $B_H=\sum_{H(z)=0}\eta(z)$, summing over distinct roots.
+Then $\beta_\eta(g|_W)=\sum_H n_H B_H$. For a vector space of
+dimension $n$ over $\mathbb F_Q$, its M\"obius value is
+$(-1)^n Q^{\binom n2}$. This follows from the M\"obius recursion and
+the finite $q$-binomial identity
+\[
+ \sum_{n=0}^{m}{m\brack n}_Q(-1)^n Q^{\binom n2}u^n
+       =\prod_{j=0}^{m-1}(1-Q^j u),
+\]
+where the Gaussian coefficient counts the $n$-dimensional subspaces.
+M\"obius values multiply on products of lattices. It follows that the
+unsigned Hall sum before multiplication by $(-1)^d$ is
+\[
+ \left.
+ \left(\sum_H B_H u_H\frac{\partial}{\partial u_H}\right)
+ \prod_H\prod_{j=0}^{m_H-1}(1-Q_H^j u_H)
+ \right|_{u_H=1\ \mathrm{for\ all}\ H}.
+\]
+With two or more distinct factors every term vanishes. With one factor $H$
+the value of $\tau_P(g)$ is
+\[
+       (-1)^{d-1}
+       \left(\sum_{H(z)=0}\eta(z)\right)
+              \prod_{j=1}^{m_H-1}(1-q^{s_H j}).
+\]
+In this case $s_H\mid d$, so the roots occurring in the sum lie in $k_d$.
+Moreover $m_H=\dim_{k_d}\ker(g-z)$ after extending scalars, as is seen
+on each cyclic primary summand. These values on all conjugacy classes agree
+with Green's cuspidal character formula for the regular character
+$\eta|_{k_d^\times}$, in the form stated by D.~Prasad,
+\emph{The space of degenerate Whittaker models for general linear groups
+over a finite field}, Int. Math. Res. Not. (2000), no.~11,
+\href{https://repository.ias.ac.in/36158/1/36158.pdf}{Theorem 2, pp.~581--582}~\cite{prasad}.
+At $g=1$ take $H=X-1$, $m_H=d$ and $B_H=1$. The two factors of
+$(-1)^{d-1}$ cancel.
+\end{proof}
+
+For a squarefree label the fitted character is, by definition, the Hall
+product of these primary factors, hence their parabolic induction.
+Distinct irreducible polynomials give distinct cuspidal labels (their
+degrees differ or their Frobenius orbits differ). Thus the squarefree-label
+argument and flag count of \S10.4 apply directly to the fitted character
+with the positive sign. This discharges the finite primary-character
+identification within F7. The comparison of inner forms and the matching
+of archimedean formal degrees in F7 concern different objects.

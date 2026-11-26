@@ -1,0 +1,63 @@
+\subsection{Eliminating a split characteristic-polynomial fibre}
+\label{tr:parabolic-descent}
+Here is a local proof of assertion (ii) of \S\ref{tr:geometry}.
+Let $F$ be the local field at the chosen split place, $K=\mathrm{GL}_r(\mathcal O_F)$,
+and let $R=R_1R_2$ have coprime monic factors of positive degrees $a,b$
+and nonzero constant terms. Write $G=\mathrm{GL}_r(F)$, $M=\mathrm{GL}_a(F)\times
+\mathrm{GL}_b(F)$ and $U$ for the upper block radical, identified with
+the additive space of $a$ by $b$ matrices. Suppose the compactly supported
+locally constant test $f_0$ has
+\[
+ \int_U f_0(k m u k^{-1})\,du=0\qquad (k\in K,\ m\in M).
+\]
+For the inflated character idempotent this follows from the radical sums
+of \S\ref{tr:label}. Indeed $mu\in K$ forces both diagonal blocks to be
+integral and invertible, and then $u\in U(\mathcal O_F)$.
+Reduction integrates each residue class with the same measure.
+The same conclusion holds for any fixed left and right translates of the
+test if the finite radical sums vanish for arbitrary left and right
+multipliers: by $G=K M U= M U K$ the outside factors reduce to compact
+multipliers and an affine change of the variable in $U$.
+
+\begin{lemma}
+Every conjugation-invariant distribution on $G$ supported on the fibre of
+$R$ annihilates $f_0$.
+\end{lemma}
+\begin{proof}
+On this closed fibre, the ordered complementary subspaces
+$\ker R_1(g),\ker R_2(g)$ have dimensions $a,b$. The projectors onto them
+are fixed polynomials in $g$ by B\'ezout's identity. The map to complementary
+pairs is therefore continuous and equivariant; the space of pairs is
+$G/M$. Over the coordinate pair the fibre is the space $X$ of diagonal
+blocks $(A,B)$ with their indicated characteristic polynomials. A test
+vanishing on the closed fibre is annihilated by the distribution, since
+its compact open support misses that fibre. Tests on the fibre extend
+locally constantly with compact support, by a finite compact open cover.
+Thus Frobenius descent for locally compact totally disconnected spaces
+applies to the distribution on this fibre: $G$ and $M$ are both
+unimodular. See Aizenbud, Gourevitch, Rallis and Schiffmann,
+\emph{Multiplicity one theorems}, Theorem 2.2~\cite{agrs}.
+
+Concretely the descended distribution on $X$ acts on the test
+\[
+ (A,B)\longmapsto \int_K\int_U
+ f_0(k u\operatorname{diag}(A,B)u^{-1}k^{-1})\,du\,dk .
+\]
+This is the quotient integral in descent: in the Iwasawa coordinates
+$g=kum$ one disintegrates Haar measure as $dk\,du\,dm$, up to a fixed
+positive scalar, and absorbs $m$ by invariance of the distribution
+on $X$. The displayed integral is compactly supported on $X$.
+Indeed the compact support bounds the diagonal and off-diagonal blocks
+after conjugation by $K$; the inverse of the map $Z\mapsto ZB-AZ$ is
+uniformly bounded there. Its determinant, up to sign, is the nonzero
+constant $\operatorname{Res}(R_1,R_2)$, as seen by triangularizing
+$A,B$ separately over a splitting field. The same bounds make the
+integral locally constant and justify testing the distribution under
+the integral.
+
+For fixed diagonal blocks, the upper-right entry of the conjugate by
+$u(Z)$ is $ZB-AZ$. Changing variables from $Z$ to $A^{-1}(ZB-AZ)$
+expresses the inner integral as a constant times the radical integral
+in the hypothesis, hence it vanishes. This argument also covers
+nonsemisimple diagonal blocks.
+\end{proof}

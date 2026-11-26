@@ -1,0 +1,239 @@
+\section{Frobenius couplings, the cost of changing directions, and sharp jets}\label{sec:jets}
+
+Fix a prime $p$ and a field embedding $j:\mathbb C\hookrightarrow\mathbb C_p$ for the jet calculation. Here $\mathbb C_p$ is the completion of $\overline{\mathbb Q}_p$, $v(p)=1$, and $\mathcal O$ denotes its valuation ring. To apply the calculation to the index or height at $(p,\iota)$, use
+\[
+ j:\mathbb C\xrightarrow{\ \iota\ }\overline{\mathbb Q}_p
+       \lhook\joinrel\longrightarrow\mathbb C_p.
+\]
+The last arrow is isometric. Thus $|j(x)|=|\iota(x)|$ for every complex coefficient $x$, and the lattice coefficient ring is $j^{-1}(\mathcal O)\subset\mathbb C$. The second test form in the height comparison uses $j\circ\mathrm{conj}$ with the same twist. For the nonsplit calculation put
+\[
+ (\pi,q,i_0)=
+ \begin{cases}
+ (p,p^2,p+1)&p\text{ inert in } K,\\
+ (\sqrt{-d},p,2)&p=d,
+ \end{cases}
+ \qquad \rho=\frac{v(\pi)}{q-1},\quad
+ \gamma=\frac1{p-1}-\rho .
+\]
+These two local constants differ from the total prime gain in Theorem A.
+Write $\tau_e=u(-p^e)\tau$ and let $I^\circ$ consist of the odd exponents at inert primes and all nonnegative exponents at $p=d$.
+
+\subsection{From the CM curve to a matrix of variables}\label{jets:cm}
+Let $\theta(0)=1$ be the translated CM theta function and $g=-\log\theta$.
+We use the following CM inputs for the normalization of this curve. In the local
+series ring, $T=z+\cdots$ is a generator whose degrees are $1\bmod(q-1)$.
+The endomorphism $T(\pi z)$ is an integral series in $T$ with linear term
+$\pi T$, a unit coefficient $b_1$ at $T^q$, and remaining degrees
+$1\bmod(q-1)$. Moreover,
+\[
+ qg(z)-g(\pi z)\in\pi\mathcal O[[T]],\qquad
+ \exp\!\big(\zeta^{-(p+1)}g(\zeta z)-g(z)\big)\in\mathcal O[[T]]
+ \quad(\zeta^{q-1}=1).
+\]
+These inputs concern the integral model and the theta function at its chosen
+two-torsion point. The source concordance gives their statements.
+
+Choose $\varpi^{q-1}=-\pi/b_1$ and set $Y(z)=T(\varpi z)/\varpi$.
+In the endomorphism series the term of degree $1+j(q-1)$, divided by
+$\pi\varpi$ after rescaling, has a factor $\varpi^{j(q-1)}/\pi$.
+For $j\ge2$ this belongs to $\pi\mathcal O$. Hence
+\[
+ \pi^{-1}Y(\pi z)=Y-Y^q+\pi E(Y),\qquad E\in z^2\mathcal O[[z]] .
+\]
+For $n\ge2$ the coefficient of degree $n$ determines $[z^n]Y$ from lower coefficients by division by $1-\pi^{n-1}$, a unit. Induction proves integrality. Reducing the identity gives $Y-Y^q=z$, hence
+$Y\equiv\sum_{j\ge0}z^{q^j}\pmod{\pi}$ by iteration in increasing degree.
+
+Let $g^\flat$ select the degrees $p+1\bmod(q-1)$ of $g$, and put
+$s_0=\varpi^{p+1}/p$, $\Xi=-g^\flat(\varpi z)/s_0$.
+Averaging over $\zeta^{q-1}=1$ expresses
+$\exp(g^\flat-g)^{q-1}$ as the product of the integral exponentials above.
+Since $q-1$ is a unit and the constant term is one, successive coefficient comparison gives $\exp(g^\flat-g)\in\mathcal O[[T]]$.
+Rescaling in $z$ replaces $T$ by $\varpi Y$, so
+$\theta(\varpi z)=W\exp(s_0\Xi)$ with $W$ integral.
+
+Project the logarithmic identity to degrees $i_0\bmod(q-1)$.
+The projection of the term in $\mathcal O[[T]]$ is $aT^{i_0}+T^{i_0+q-1}H(T)$ with $a,H$ integral. After scaling and division by $-qs_0$, the term of order $i_0$ is multiplied by the unit $-\pi\varpi^{i_0}/(qs_0)$ and the tail has the extra factor $\varpi^{q-1}$. Thus for some $\lambda\in\mathcal O$,
+\[
+ (1-\pi^n/q)[z^n]\Xi-\lambda[z^n]Y^{i_0}\in\pi\mathcal O
+ \quad(n\ge0).
+\]
+Below $i_0$ the exponent is zero. For $n>2$, $\pi^n/q\in\pi\mathcal O$.
+At $p=d,n=2$, the multiplier is $2$ because $\pi^2=-p$.
+Consequently $\Xi$ is integral and its residue is
+$\lambda Y^{p+1}$ in the inert case and $\lambda(Y^2-z^2/2)$ in the ramified case.
+Here $p$ is odd. In the inert case $Y^{p+1}$ is the product of
+$\sum_{j\ {\rm even}}z^{p^j}$ and $\sum_{j\ {\rm odd}}z^{p^j}$ modulo $\pi$.
+An even and an odd index have difference $e$ odd and smaller index $j$.
+Their monomial is $(z^{p^e}z)^{p^j}$. In the ramified case order the two indices in $Y^2$.
+Off-diagonal terms have coefficient $2\lambda$ and diagonal terms have coefficient $\lambda$, except in degree two where the coefficient is $\lambda/2$.
+This gives the advertised exponents $I^\circ$, including $e=0$ at $p=d$.
+
+For sharpness one also uses that $\lambda$ is a unit in the inert case. Here is its local test.
+Put $x=\wp(z+t)-\wp(t)=z^2+\cdots$ with the normalization of the chosen model,
+$p=2m_0+1$ and $h_n=[z^{p-1}]x^n$. The chosen Weierstrass equation gives
+$(x')^2=4x^3+a_1^2x^2+4x$ and $x''=6x^2+a_1^2x+2$.
+The coefficient of $z^{p-1}$ in $(x^n x')'$ is $p[z^p](x^n x')$.
+The latter coefficient before multiplication by $p$ is integral by the integral CM series bound in degrees $<q$. Expanding the derivative gives
+\[
+ (4n+6)h_{n+2}+(n+1)a_1^2h_{n+1}+(4n+2)h_n\equiv0
+ \pmod{\mathfrak m_{\mathcal O}}.
+\]
+Now $h_0=0$, $h_{m_0}=1$, and $4n+6$ is a unit for $0\le n\le m_0-2$.
+Thus $h_1$ is a unit. The identity $g''=g''(0)+x$ gives
+$[z^{p+1}]\Xi=-h_1/(p+1)$, so $\lambda$ has unit residue.
+
+For the level-one moved datum the remaining input is a finite resolution
+$z=\sum_j m_j(u_j^\dagger z)u_j$ in the chosen embeddings, integral above $p$,
+and the factorization of the Taylor series as
+$H\prod_j\theta(u_j^\dagger z)^{m_j}$. Here $H$ is integral in the translated curve parameters evaluated on these forms.
+The construction in the source first expands the integral vacuum in finitely many Heisenberg translates of one vector. Each rational translated vector has a denominator prime to $p$ and admits the factorization with any multiple of that denominator and the frame denominator. Taking the product of the finitely many denominators gives a common resolution. In its new vectors the denominator is divided out and its square enters the multiplicities, preserving the resolution identity. The theta expansion and the integral quotient for each translated factor enter as hypotheses.
+
+Write $L_j=u_j^\dagger z$. Frobenius on the coefficients gives
+$\overline{\tau(u)}^{p^e}\equiv\tau_e(u)\pmod\pi$ for $u$ integral above $p$.
+Indeed the cyclotomic generator transforms by the exponent $-p^e$ after conjugation. On the quadratic generator the inert Frobenius and conjugation cancel for $e$ odd, and the ramified generator reduces to zero. This check extends over the integers locally since $p$ is prime to the cyclotomic conductor and to $2$. With coordinate index $a$ the resolution identity therefore gives
+\[
+ \sum_j m_j L_j^{p^e} L_j
+ \equiv\sum_{\tau,a}z_{\tau a}^{p^e}z_{\tau_e a}
+ =:\Gamma_e\pmod{\pi}.
+\]
+Frobenius powers are additive in $\mathcal O/\pi$. Summing the curve exponents with multiplicity gives, modulo $\pi$, an integral combination $\sum_{e,j}\lambda_{ej}\Gamma_e^{p^j}$. Only finitely many terms occur in each degree. The change in the exponent after multiplication by $s_0$ has coefficients of valuation at least $v(s_0\pi)=1/(p-1)$ and zero constant term. Its exponential is integral by the factorial formula. Absorb it and the rescaled $H$ into the integral factor. This proves the multivariate normal form in Section~\ref{A:jets}. Any further integral scalar rescaling changes each coefficient by its homogeneous power. The period factor is a $p$-unit since $p$ does not divide the conductor.
+
+\subsection{The determinant cost for a charged filling}\label{jets:count}
+Let $N$ be the number of target rows and $B$ the number of boxes in columns of height $h<N$. Fix the marked places and the nonnegative integral charges $w_{\tau h r}$ for output row $r$. For each $\tau$ let $t_\tau$ count the unmarked height-one columns, $c_\tau$ the remaining columns of heights $2,\ldots,N-1$, and $b_\tau$ their boxes.
+Fix an exponent $e\in I^\circ$, write $Q=p^e$, $\tau'=\tau_e$, and set
+\[
+ K_e(\tau)=\min(t_\tau/Q,t_{\tau'}+c_{\tau'})
+     +c_\tau/Q+\min(b_\tau/Q,b_{\tau'}).
+\]
+We construct matrices on the $h$ given directions at $(\tau,h)$ which make the pairing $\sum_a \beta_a^Q\beta'_a$ divisible by $\pi$. A pair of heights $(h,h')$ is exempt precisely if $h=1$ and either $\tau$ is marked or both $h'=1$ and $\tau'$ is marked. For every exempt pair and each $r$ the hypothesis is $w_{\tau 1 r}>0$ or $w_{\tau' h'r}>0$. Charges at heights absent from the diagram can be set to one.
+
+A coordinate condition on the powered side costs $v(\pi)/Q$, since it can be imposed modulo a $Q$-th root of $\pi$. A coordinate condition on the other side costs $v(\pi)$. Pairing against a fixed first direction on the powered side gives an ordinary linear condition on the other side. For a variable powered side and fixed direction $y'_0$, impose the linear condition
+$\sum_a\beta_a(y'_{0,a})^{1/Q}\equiv0\pmod{\pi^{1/Q}}$.
+All the roots may be chosen in $\mathcal O$. Raising to the $Q$th power gives the desired pairing congruence modulo $\pi$.
+
+For $h\ne1$ impose on the powered side a pairing condition against the first direction of the other side. This covers $h'=1$ and contributes $c_\tau/Q$.
+For $h=1$, choose the cheaper of imposing the single coordinate condition at each unmarked source column and imposing a pairing with the first source direction at each nonexempt partner column. This covers all required pairs with $h=1$ and costs the first minimum. Finally for $h,h'\ne1$ impose all row-coordinate conditions on the cheaper side. These conditions account for the second minimum.
+
+All these conditions can be imposed simultaneously even if a place is its own partner. Each is a linear condition on the row coefficients of a change matrix against an \emph{original} direction or a fixed coordinate. For a single form, select a row whose value has least valuation, subtract integral multiples of it from the other rows to annul their values, then multiply the selected row by the prescribed modulus. The resulting determinant costs at most the valuation of that modulus. A zero form needs no change. Repeat on the current rows for every condition. Integral combinations preserve each earlier divisibility condition. On a height-one side the new direction is just a multiple of the original one, which verifies the imposed first-direction pairings. Multilinearity counts each change determinant once per column of the relevant height. Restrict to $e\le\lfloor\log_p\max(B,1)\rfloor$ since the order of $\Gamma_e$ is at least $p^e+1$. We have proved
+\[
+ \sum_{\tau,h<N}\kappa(\tau,h)v(\det g_{\tau h})
+ \le v(\pi)\sum_{e\ \mathrm{retained}}\sum_\tau K_e(\tau).
+\]
+
+Introduce variables $s_{\tau h k r}$ for $k<h$ and $r$ an output row.
+In the normal form substitute $z_{\tau r a}=\sum_{h,k}p^{w_{\tau h r}}
+\beta_{\tau h k a}s_{\tau h k r}$. Every relevant coupling is divisible by $\pi$.
+For a nonexempt pair this follows from the row congruences and Frobenius additivity modulo $\pi$. For an exempt pair the charges contribute a factor $p$. Thus $F(\varpi z(s))$ is integral through degree $B$, by $v(s_0\pi)=1/(p-1)$. The product of column determinants in the $s$-variables defines a homogeneous differential operator $Q_B(\partial)$ of degree $B$ with integral coefficients. On a monomial of degree multi-index $\alpha$ its value at zero uses $\prod_i\alpha_i!$. There are at most $fN^3$ variables, so Legendre's formula gives
+\[
+ v\big(Q_B(\partial)F(\varpi z(s))|_{s=0}\big)
+ \ge \frac{B}{p-1}-fN^3(1+\log_p\max(B,1)).
+\]
+The chain rule and alternation in the $h$ directions yield the factor $\varpi^B$, one determinant for each column, and $p^{w(i')}$, where $w(i')$ is the sum of charges on the filling $i'$. After division the original minor derivative $D_{i',y}F$ therefore satisfies
+\[
+ v(D_{i',y}F)+w(i')\ge
+ \gamma B-v(\pi)\sum_{e\ \mathrm{retained},\tau}K_e(\tau)
+       -fN^3(1+\log_p\max(B,1)).
+\]
+Each cost is nonnegative so one can include all $e\in I^\circ$ on the right. If $B^\circ=\sum_\tau(t_\tau+b_\tau)$ counts the unerased boxes, then
+$\gamma=v(\pi)\sum_{e\in I^\circ,e>0}p^{-e}$ by the geometric series.
+Termwise $u-\min(u,v)=(u-v)_+$ gives the exact identity
+\begin{align*}
+ \gamma B-v(\pi)\sum_{e\in I^\circ,\tau}K_e(\tau)
+ &=\gamma(B-B^\circ)-\mathbf1_{p=d}\tfrac12\sum_\tau K_0(\tau)\\
+ &\quad+v(\pi)\sum_{\substack{e\in I^\circ\\e>0}}\sum_\tau
+ \left[(t_\tau/p^e-t_{\tau_e}-c_{\tau_e})_+
+ +(b_\tau/p^e-b_{\tau_e})_+-c_\tau/p^e\right].
+\end{align*}
+The separate ramified subtraction records the unpowered pairing at $e=0$.
+This is the charged-minor bound used in the comparison with the prime sum.
+
+For the Schur entry fix an output filling $i'$ and let $a_i$ be the jets of the entries in that row. Evaluating the product of column minors on $zy$ gives
+$D_{i',y}F=\sum_i a_i b_i(y)$ by the action in the standard bitableau basis. Here each $b_i$ is a basis minor product times a common determinant power. The standard basis theorem~\cite[Proposition~4.1 and Theorem~4.11]{brunsvetter} gives independence of these polynomials over the residue field, and multiplication by the common nonzero determinant polynomial preserves it. If some $a_i\ne0$, divide by a coefficient of maximal norm and reduce. The resulting polynomial is nonzero over the infinite residue field, so some integral $y$ gives $|D_{i',y}F|=\max_i|a_i|$. This proves the same estimate for every entry of this row. The all-zero case is immediate.
+
+\subsection{A witness for the sharpness bound}\label{jets:sharp}
+The preceding estimate fixes the filling and works for every derivative. The sharpness step of Theorem C constructs a coefficient whose valuation is bounded \emph{above}. The inert calculation uses the unit coefficients $\lambda_{e0}$ of the curve normal form before any nonunit rescaling. The additional inputs concern the twelve-copy least-valuation estimate and its realization by integral theta functions. For clarity, let $\ell_\tau$ lie between the weight and the weight plus $x^{42}$, and put
+\[
+ h=\lceil6b/k\rceil,\qquad B_\tau=\prod_{i=1}^h ((\ell_\tau-h)_++i),
+ \quad S_p=\mathrm{localPrimeSumTotal}(p).
+\]
+For a tight frame of length $M$, with multiplicities at least $6fb$ and a frame form having unit coefficients at the given prime, the required estimate is the existence of twelve coefficient multi-indices of sum $\ell$ and twelve series $H\Theta$ such that their coefficient product has valuation
+\[
+ r_p\ \text{or less},\qquad
+ r_p=S_p+2\sum_\tau v(B_\tau)-\sum_\tau v(\ell_\tau!).
+\]
+Here $\Theta$ is the product on the frame and $H$ belongs to the ring generated by its translated curve parameters.
+\paragraph{Why an inert coupling yields a small valuation.}
+Let $p>2$ be inert and take selected starts $\tau\in\Phi_0$ with odd exponents $e_\tau$.
+Require the following uniqueness property. Among pairs $(\sigma,a)$ with
+$\sigma\in\Phi_0$, $a$ odd, $a\le e_\tau$ and $\sigma_a=\tau_{e_\tau}$, the only pair is $(\tau,e_\tau)$. Take $j_\tau$ copies of this pairing,
+put $J_0=\sum j_\tau$, and write $\nu',\nu''$ for the degrees of its powered and unpowered variables. Thus $|\nu''|=J_0$ and $|\nu'|=\sum p^{e_\tau}j_\tau$.
+Use the normal form $F(z)=\Theta(\varpi z)=W\exp(s_0\Omega)$ of the unmodified frame theta product. Here $W(0)=1$ and $v(s_0)=1/(p-1)-1<0$.
+
+There are six integral scalars $\delta_c$ with $\delta_0=1$ and
+$\sum\delta_c^2=0$. Indeed any sequence of positive integers tending to $-1$ in $\mathbb Z_p$ can be represented by four integer squares. Compactness in $\mathbb Z_p^4$ yields four squares representing $-1$ in the limit. Append $1$ and $0$. We use the CM product identity that $\prod_c\theta(\delta_c z)$ belongs to the integral curve series ring under this square-sum condition. Its constant term is one. Substitution of the frame forms, multiplication with multiplicities and rescaling show that $U(z)=\prod_c F(\delta_c z)$ has integral coefficients and constant term one. Introduce independent variable blocks $z',z''$ and form
+\[
+ G=F(z'+z'')\prod_{c\ne0}F(\delta_c z').
+\]
+Only the first factor depends on $z''$. When differentiating $g_0G$ in an end variable $z''_{\tau_{e_\tau}}$, with $g_0$ integral, divide the result by $s_0G$. The new integral factor reduces to $g_0\,\partial_{\tau_{e_\tau}}\Omega(z'+z'')$ in the residue field: the derivative of $g_0$ and the logarithmic derivative of $W$ both carry $s_0^{-1}$ of positive valuation. Iterating $J_0$ times and then putting $z''=0$ gives $s_0^{J_0}gU$, where modulo the maximal ideal $g$ is the product of these first derivatives with the prescribed multiplicities.
+
+Set the variables outside $\Phi_0$ to zero. In residue characteristic $p$, differentiating $\Gamma_a^{p^j}$ kills the terms with $j>0$ and differentiating the powered side of $\Gamma_a$ gives zero for $a$ odd. The derivative at an end has unique monomial of lowest total degree
+$\lambda_{e_\tau,0}z_\tau^{p^{e_\tau}}$ by the uniqueness assumption.
+These coefficients are units by the inert calculation above. Thus the coefficient of $z'^{\nu'}$ in $gU$ is a unit. Terms discarded by restricting to $\Phi_0$ cannot contribute to this multi-index. It follows that
+\[
+ v\big([z'^{\nu'}z''^{\nu''}]G\big)
+ =J_0 v(s_0)-v(\nu''!),\qquad
+ v(\nu''!)=\sum_\tau v(\nu''_\tau!).
+\]
+Reversing the initial $\varpi$-scaling subtracts $\rho|\nu'+\nu''|$ from the valuation. The substitutions were integral, so the ultrametric inequality provides a coefficient of the original six-copy product with at most that valuation. In particular the valuation is at most $-J_0$ since
+$|\nu'+\nu''|\ge(p+1)J_0$ and $\rho(p+1)=1/(p-1)$.
+It is also at most
+$\gamma|\nu'+\nu''|-J_0-v(\nu'!)-v(\nu''!)$ by
+$v(\nu'!)\le |\nu'|/(p-1)$.
+For the prescribed degree vector \(\ell\), the
+\srcline{New/Derivatives/Sharpness/Cases}{672}{twelve-copy estimate}
+uses a tight frame with a member having a unit coefficient at every place.
+At a split prime the local prime sum vanishes. The first six copies may be
+taken in degree zero and the unit coefficient estimate on the other six
+supplies the factorial bound. At a nonsplit prime \(p>k\) the partner map
+is a permutation. The proof uses exponent one and caps the multiplicity
+at each source by both its available degree after the frame loss, divided
+by \(p\) and rounded down, and the degree at its partner. The
+\srcline{New/Derivatives/Sharpness/Cases}{346}{factorial estimate}
+accounts for the residual term.
+
+At a nonsplit prime \(p\le k\), use a near exponent on each eligible
+place and let \(\nu',\nu''\) be the degrees at the starts and ends.
+The remaining six copies supply \(\mu=\ell-\nu'-\nu''\).
+The factorial correction from these three vectors is
+\[
+ \sum_\tau v_p\!\left(\frac{\ell_\tau!}{\nu'_\tau!\nu''_\tau!\mu_\tau!}\right)
+ =\sum_\tau
+ \frac{s_p(\nu'_\tau)+s_p(\nu''_\tau)+s_p(\mu_\tau)-s_p(\ell_\tau)}{p-1},
+\]
+where \(s_p\) is the base-\(p\) digit sum. This follows from Legendre's
+formula even when one place occurs at both ends of pairs. The
+\srcline{New/Derivatives/Sharpness/Cases}{377}{carry bound} and
+\srcline{New/Derivatives/Sharpness/Cases}{403}{numerical comparison}
+pay for this loss together with the cost of the residual degrees.
+At the ramified prime \(p=d\) the near-pair set is empty. The first six
+copies then have degree zero. Sections~\ref{sec:unitrow-frame}--\ref{sec:other-witnesses} give the coefficient estimate on the constructed scales, under their indicated local curve and period normalizations.
+
+\paragraph{From the twelve coefficients to one indicator.}
+Expanding $H$ and taking a term of maximal norm reduces to monomials in those parameters, of individual degree at most $|\ell|$ since the parameters have zero constant term. In disjoint variable blocks the product coefficient is exactly the product of the selected coefficients. The inequality $3|\ell|\le6fb$ ensures that each local factor $y^a\theta^c=(y\theta^3)^a\theta^{c-3a}$ has nonnegative exponents. Realization of these monomial sections gives an adelic vector with integral finite values and the signed periods of the modulus $(\pi_M)$.
+
+Fix once and for all a nonzero value $c_0$ of the twelve-dimensional integral vacuum. In the finite Fourier expansion of the vector, inversion over the residue classes of $(\pi_M)$ contributes the factor $M^{12f}$. Multiplying the evaluated Fourier identity by the corresponding vacuum value gives integral coefficients of norm at most one, since the characters have prime-adic norm one. Applying the ultrametric inequality and taking a maximizing class $y_0$ gives a coefficient of the vacuum-scaled indicator series with valuation at most $r_p+v(M^{12f}c_0)$. Consequently the single nonzero scalar
+\[
+ t=M^{12f}c_0\prod_\tau B_\tau^2
+\]
+works at every prime and identification. Multiplication of the coefficient by $\prod_\tau\ell_\tau!/t$ leaves valuation at most $S_p$. The chosen multi-index and residue class may depend on the prime, identification and modulus. The conjugate bound on $c_0$, together with $B_\tau\le(2b+h)^h$, gives
+\[
+ \log|\sigma t|\le12f\log M+2fh\log(2b+h)
+             +12\,\mathrm{constantBound}\,q_1^2\le fmb/k
+\]
+under the source's admissible bounds.
+
+The following subsections construct the frame and the twelve coefficients on the scales of Theorem~\ref{thm:p1-data}. The theta realization and the integral Fourier expansion remain necessary for the application to adelic forms. The normal form alone supplies none of the twelve coefficient choices. In particular the charged-filling count cannot be used to discharge the sharpness assumption of Theorem C.
+
+\input{sections/jetframe}
+
+\input{sections/jetmath}

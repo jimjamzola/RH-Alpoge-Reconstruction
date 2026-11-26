@@ -1,0 +1,119 @@
+\subsection{A variable error bound for the good projector}
+
+Let $G=G_0\times G_1$ be the residue group at the two level primes. Regard
+each factor as a subgroup of $G$. Write $X$ for the complex Hilbert space
+with orthonormal basis indexed by the fitted classes and Bessel coordinates,
+$d_X=\dim X>0$, and $Y$ for the principal-level target with its Petersson
+metric. Write $C$ for the isomorphism from source forms to these coordinates.
+If $J$ is the principal level, $\nu>0$ the fitted unipotent covolume and
+$\Pi$ the Poincar\'e map, fix the single operator
+\[
+       P=(\operatorname{vol}(J)\nu)^{-1/2}\Pi C^{-1},\qquad
+       q_g=P^*\rho(g)P ,
+\]
+where $\rho$ is the unitary residue-group action on $Y$. Both moment
+inequalities use this $P$. The unfolding needed here identifies each block
+of $q_g$ with the conjugate of its full amplitude sum divided by $\nu$.
+At the level of scalars this follows from the fitted Petersson identity
+with factor $\operatorname{vol}(J)$ for the unscaled map, since the inner
+product uses two copies of the scaling factor. The period-to-series identity
+and the Petersson identity for the actual fitted functions are hypotheses
+of this identification. The source gives the
+\lineSrc{New/Spanning/SecondMoment/SpanningTheorem}{153}{coordinate map and scaling} and
+the \lineSrc{New/Spanning/SecondMoment/SpanningTheorem}{168}{unfolded block identity}.
+
+Let $R\subseteq G$ be the reduced Bessel subgroup and $r$ its unitary
+representation on $X$, extended by zero off $R$. Assume the fitted
+equivariance $\rho(s)P=Pr(s)$ for $s\in R$. Set $E_g=q_g-r(g)$.
+For $s\in R$ we then have
+$E_{sg}=r(s)E_g$ and $E_{gs}=E_g r(s)$. Define nonnegative errors by
+\[
+ h_R^2=\frac{1}{|R|d_X}\sum_{s\in R}\|E_s\|_{\mathrm{HS}}^2,\qquad
+ h_i^2=\frac{1}{|R|d_X}\sum_{g\in R G_i}\|E_g\|_{\mathrm{HS}}^2
+ \quad (i=0,1).
+\]
+For $t\in G_i$, assume the diagonal Bessel trace identity
+$\operatorname{tr}r(t)=d_X\psi_i(t)$, with $\psi_i$ the reduced
+unipotent character extended by zero outside its support. Write
+\[
+  \overline\psi_i^{\,\mathrm{cl}}(t)
+     = |G_i|^{-1}\sum_{v\in G_i}\psi_i(vtv^{-1}),\qquad
+  K_i=\sum_{t\in G_i}|\overline\psi_i^{\,\mathrm{cl}}(t)|^2 .
+\]
+The character average is normalized; the sum defining $K_i$ is unnormalized.
+Conjugating $t$ by $G$ gives the same average because the other factor
+commutes with $t$. Hence the full-group bound (10.11) implies $K_i\le2$.
+
+Write $e_i$ for the self-adjoint good central idempotent in $\mathbb C[G_i]$ and
+$x_i=1-e_i=\sum_{t\in G_i}x_i(t)t$. Put $a_i=x_i(1)$ and
+$Q=\rho(e_0)\rho(e_1)$. The coefficients of $e_0\otimes e_1$ at
+$(g_0,g_1)$ are the products of the two sums over allowed label tuples
+having a primitive member at their respective primes. Expansion sums over
+precisely the good label families appearing in the actual target projector.
+This proves equality of the two projectors, coefficient by coefficient, for
+the same label idempotents. See the
+\lineSrc{New/Spanning/SecondMoment/SpanningTheorem}{197}{tensor identity}.
+
+\begin{proposition}\label{prop:variable-projector-loss}
+With the identities and conventions above, every subspace $Z\subseteq X$
+satisfies
+\[
+ \|QP\operatorname{pr}_Z\|_{\mathrm{HS}}^2
+ \ \ge\ \dim Z-d_X\left(h_R+
+     \sum_{i=0}^1\bigl(h_i+\sqrt{a_i K_i}\bigr)\right).
+\]
+\end{proposition}
+\begin{proof}
+For $s\in R$, $E_s=(P^*P-1)r(s)$, so
+$\|P^*P-1\|_{\mathrm{HS}}=h_R\sqrt{d_X}$. Pairing with
+$\operatorname{pr}_Z$ in the Hilbert--Schmidt inner product gives
+$\|P\operatorname{pr}_Z\|_{\mathrm{HS}}^2\ge\dim Z-h_R d_X$.
+
+Fix $i$ and put $x=x_i$. On $\ell^2(G;\operatorname{End}(X))$, with
+counting measure and Hilbert--Schmidt fibres, set
+$(T_x F)(g)=\sum_{t\in G_i}x(t)F(gt)$. The right translations are unitary
+and form a representation, so $T_x$ is an orthogonal projection.
+Apply it to $F(g)=\mathbf1_{R G_i}(g)E_g$. For each $s\in R$,
+$(T_xF)(s)=r(s)\sum_t x(t)E_t$. Consequently
+\[
+  |R|\Big\|\sum_t x(t)E_t\Big\|_{\mathrm{HS}}^2
+     \le \|T_x F\|_2^2\le\|F\|_2^2=|R|d_Xh_i^2 .
+\]
+The absolute trace of $\sum_t x(t)E_t$ is
+therefore at most $d_X h_i$. For the Bessel part, centrality of $x$ permits
+averaging $\psi_i$ over conjugacy classes. The identity coefficient of
+$x^*x=x$ gives $\sum_t|x(t)|^2=a_i$. Thus
+\[
+  \left|\sum_t x(t)\operatorname{tr}r(t)\right|
+        \le d_X\sqrt{a_i K_i}.
+\]
+Adding the two contributions bounds
+$\|\rho(x_i)P\|_{\mathrm{HS}}^2
+ =\operatorname{tr}(P^*\rho(x_i)P)$ by $d_X(h_i+\sqrt{a_iK_i})$.
+Since the two projections commute, $1-Q\le\rho(x_0)+\rho(x_1)$ as
+positive operators. Restricting the source to $Z$ can only decrease the
+squared Hilbert--Schmidt norm of the discarded part. Subtracting the two
+losses from the first bound proves the assertion.
+\end{proof}
+
+For example, the arithmetic bounds $h_i\le b^{-6}$, $a_i\le b^{-8}/2$
+and $K_i\le2$ imply (10.2), since $h_R\le h_i$ and
+$3b^{-6}+2b^{-4}\le5b^{-4}$ for $b\ge1$.
+On the constructed scales, if the former bounds for $h_i,a_i$ hold, it
+suffices instead that $K_i=O(b^{6-\delta})$ for a fixed $\delta>0$,
+with uniform implied constants at the fixed parameters. Indeed the total
+loss is $O(b^{-6}+b^{-1-\delta/2})=o((32b x^{202})^{-1})$ because
+$\log x=o(\log b)$. This relaxes the character input specifically for
+the projected inequality. The full moment still has its own hypotheses.
+
+For comparison, the fitted source invokes the
+\lineSrc{New/Spanning/Unfolding/Moments}{446}{off-Bessel square sum},
+the \lineSrc{New/Spanning/Unfolding/Moments}{751}{diagonal trace}, the
+\lineSrc{New/Spanning/Unfolding/Moments}{991}{character mass} and the
+\lineSrc{New/Spanning/SecondMoment/SpanningTheorem}{221}{bad idempotent mass}.
+They give the
+\lineSrc{New/Spanning/SecondMoment/SpanningTheorem}{257}{projected estimate}
+for $QP$. The
+\lineSrc{New/Spanning/SecondMoment/SpanningTheorem}{270}{full estimate}
+uses the same $q_g$ and relabels the product group by its chosen places,
+a bijection preserving the unnormalized sum.

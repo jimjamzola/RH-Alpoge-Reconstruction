@@ -1,0 +1,191 @@
+\subsection{Rational parametrization of the open blocks}\label{moment:open}
+
+Write the Hermitian space as $X\oplus H\oplus X^*$ in a Witt basis,
+where $X$ has ordered basis $e_1,\ldots,e_u$, $X^*$ has its dual
+isotropic basis, and $H=X_0\perp Ez$ with $X_0$ standard positive
+definite and $h(z,z)=-N$. Use the convention that $h$ is linear in the
+second argument. Let $U$ be the unipotent radical of the stabilizer of
+the complete flag in $X$. For $g$ write $D_j$ for the leading minor
+of order $j$ of the matrix of pairings of $(e_1,\ldots,e_u,z)$
+with its $g$-image, and $D_0=1$.
+
+\paragraph{Rational normal form.}
+If $D_j\ne0$ for $1\le j\le u$, there is a unique expression
+$g=v w_p\sigma v'^{-1}$ with $v,v'\in U(E)$, $p_i\in E^\times$,
+and $\sigma$ fixing the hyperbolic pairs and acting on $H$ by an
+isometry. Here $w_p e_i=p_i e_i^*$, $w_p e_i^*=\bar p_i^{-1}e_i$,
+and $w_p$ is the identity on $H$. Indeed, in the first hyperbolic
+pair put $p=h(e_1,g e_1)$. The isotropic column $g e_1/p$ has the
+form $e_1^*+y+c e_1$ in its orthogonal splitting, where
+$c+\bar c=-h(y,y)$. There is a unipotent isometry $v_1$ fixing
+$e_1$, sending $e_1^*$ to this column and sending a middle vector
+$h_0$ to $h_0-h(y,h_0)e_1$. Hence $(v_1 w_1(p))^{-1}g$ fixes $e_1$.
+Any isometry fixing $e_1$ factors as the extension of its induced
+isometry on $e_1^\perp/E e_1$ times a unipotent of this same form:
+after removing the induced isometry, the image of $e_1^*$ determines
+$y,c$, and preservation of the pairings determines the other columns.
+Iterate on the quotient. Left and right flag unipotents preserve each
+leading minor (they act on the first $j$ frame vectors by
+unitriangular operations, also when the last vector is $z$). Thus the
+successive pivots are $p_i=D_i/D_{i-1}$ and the recursion can run to
+completion. For uniqueness, two expressions have the same pivots.
+The middle isometry is also determined: the relation on $X^\perp/X$
+consisting of the pairs of classes of $a,g^{-1}a$ with
+$a\in X^\perp\cap g X^\perp$ is invariant under the two unipotents,
+and for $w_p\sigma$ it is the graph of $\sigma|_H$, with the second
+coordinate as input. Finally $w_p\sigma$ conjugates $U$ to the
+opposite flag unipotent; their intersection is trivial, by block
+triangularity in opposite orders. This determines both unipotents.
+
+\paragraph{The last entry and the blocks.}
+For $t=h(z,\sigma z)$ write $\sigma z=\omega-(t/N)z$ with
+$\omega\in X_0$. Preservation of its length gives
+\[
+        t\bar t-N^2=N h(\omega,\omega).
+\]
+The frame determinant and penultimate minor of $w_p\sigma$ are
+$t\prod p_i$ and $\prod p_i$. Thus the nonzero-discriminant
+condition forces $\omega\ne0$, and $|t|_v^2>N^2$ at every
+archimedean place (ordinary complex absolute value). It also gives
+$t=D_{u+1}/D_u$.
+
+For a contributing cut term, both archimedean arguments have Bessel
+length at most $b^{6n+2}$, with $n=u+1$. Move each independently to
+its reduced box by the class congruence unipotents of
+\S\ref{moment:rigidity}. Each frame column now has norm at most
+$b^{37n}$. The pairings of the two frames, converted back by their
+scales, have modulus at most $Nb^{74n}\le b^{134n}$ since
+$N\le b^{60n}$; the corresponding rational pairings are algebraic
+integers by the class-basis calculation. Their leading minors are
+unchanged by the two upper unitriangular frame operations. Expansion
+of a $j$-by-$j$ determinant for $j\le n\le b$ bounds its squared
+modulus at every embedding by $n^{2n}b^{268n^2}\le b^{270n^2}$.
+Only finitely many algebraic integers satisfy this bound. Put $A$
+equal to the set of ratios of the nonzero members of this finite set. Then all
+$p_i$ and $t$ lie in $A$. For fixed classes $c,c'$, reduction $s$ and
+link $\Lambda$, every contributing term has the same $\sigma$ by
+the graph description. Assuming absolute summability of the cut amplitudes, summing first over $U(E)\times U(E)$ and then
+over the finitely many heads $p\in A^u$ gives exactly the cut block:
+enforce the original class and reduction restrictions on each term.
+The rational normal form proves injectivity of this parametrization
+and absolute summability justifies the regrouping. Across blocks,
+$(c,c',s,\sigma)$ determines $\Lambda$ and hence the block.
+Consequently summing the squares of these block sums incurs no
+multiplicity. It suffices to bound every finite collection and then
+take the supremum.
+
+For an integral representative in the moved frames the same elimination
+works outside a finite conjugation-stable set containing the support
+of the pivots, their inverses, the level, and the frame denominators:
+each step divides only by its pivot or its conjugate and uses the
+integral Hermitian pairing. Class changes on $X_0$ fix the hyperbolic
+pairs and $z$, so the middle factor after elimination is the
+class-translated middle isometry. This explains the integrality
+condition on the floor-group factors in the finite-place sum. Absolute convergence and the bounds on the resulting orbital integrals enter separately.
+
+The rational elimination and link identification above correspond to
+\lineSrc{Lib/DiscreteSeries/Bruhat/BigCell}{289}{rational elimination},
+\lineSrc{Lib/DiscreteSeries/Bruhat/BigCell}{374}{uniqueness}, and
+\lineSrc{New/Spanning/Unfolding/Link}{309}{the graph of the middle isometry}.
+The block reindexing occurs in
+\lineSrc{New/Spanning/MainTerm/GlobalToLocal}{383}{the sum over heads}.
+
+\subsection{From open-cell energy to the full moment}\label{moment:full}
+
+The following transfer makes the dependence on the leading open-cell
+error explicit. It also identifies a sufficient replacement for F6
+while keeping the other errors of the manuscript. Let
+$P=(\operatorname{vol}(J)\nu)^{-1/2}P_{\mathrm{raw}}$ in the
+orthonormal fitted source coordinates, where $J$ is the principal
+level and $\nu$ the unipotent covolume. For the unitary residue-group
+action $\rho$ set
+\[
+ \beta(s)=\|P^*\rho(s)P\|_{\mathrm{HS}}^2,\qquad
+ I_*=d_X^2/(\deg_{\mathrm{Bess}}\,m_r).
+\]
+Here $m_r$ is the definite genus mass. The period-to-series
+identification for this $P$ says that its translated Gram blocks are
+the full amplitude sums divided by $\nu$, up to the chosen convention
+for complex conjugation. In particular all the sums below refer to this
+single $P$. For a set $T$ of chosen places above the first level prime
+and one nonzero frame vector at each place in $T$, let $K_T$ be their
+simultaneous fixer and put $A_T=b^{-6k|T|}I_*$. Write
+$M_T=\sum_{s\in K_T}\beta(s)$. The vector choices are included when
+maximizing over $T$. Positivity of type follows from
+\[
+  \beta(s^{-1}t)=\langle \rho(s)PP^*\rho(s)^*,\rho(t)PP^*\rho(t)^*
+                    \rangle_{\mathrm{HS}},
+\]
+by cyclicity of the trace.
+
+Retain the cutoff and unequal-link error, the identity-moment bound,
+the full-fixer bound and the nonopen estimate used in the original
+moment argument. More precisely, at every fixer suppose the
+square root of the full open mass is at most the square root of the
+nonzero-discriminant link energy divided by $\nu$, plus
+$b^{-15}\sqrt{I_0}$, where $I_0=|R|d_X\le A_T$ is the identity-moment scale. At the fixer with all places selected suppose $M_T\le A_T$.
+At a maximizer of $b^{6k|T|}M_T$ with a place still free, assume the
+nonopen mass is at most $b^{-4}M_T$. The manuscript proves the nonopen estimate by its finite-field minor
+inequality, since maximality makes the mass of each additional vector
+stabilizer at most $b^{-6k}M_T$. Its all-place bound uses the separate
+scalar-coset and near-pair estimates. Suppose the open link energy is bounded, at every
+fixer, by $(1+\delta)\nu^2 A_T$ for some $\delta\ge0$. Then
+\[
+    \sum_s\beta(s)\le
+    \frac{(\sqrt{1+\delta}+b^{-15})^2}{1-b^{-4}} I_*.
+\]
+Indeed, if the maximizing fixer contains all places, comparison
+with the empty fixer proves the claim directly. Otherwise the open
+mass is at most $(\sqrt{1+\delta}+b^{-15})^2 A_T$ by the square-root
+estimate, and $M_T$ is bounded by this plus $b^{-4}M_T$.
+Divide by $1-b^{-4}$ and compare with the empty fixer.
+
+At the constructed scales $e=(32 b x^{202})^{-1}$ satisfies
+$b^{-4}=o(e)$, since $\log x=o(\log b)$. Thus
+$\delta\le e/2$ suffices eventually: subtracting 1 from the displayed
+factor gives $(\delta+2b^{-15}\sqrt{1+\delta}+b^{-30}+b^{-4})/
+(1-b^{-4})$. In particular a uniform open-link error
+$O(b^{-1-\epsilon})$ for any fixed $\epsilon>0$ suffices, provided
+the other inputs just specified hold. Finally
+$d_T\le |G|\deg_{\mathrm{Bess}} m_r$ converts this into
+the second of the two normalized inequalities of Proposition~\ref{prop:weakerprecision}.
+This propagates the relaxed target one level upstream and preserves
+the required $b^{-6k|T|}$ saving at every fixer. It does not estimate
+the open energy or the projected moment.
+
+For the stronger coefficients of the pinned source, the chain is
+\lineSrc{New/Spanning/Unfolding/FillingAdmissible}{743}{admissibility of the actual filling},
+\lineSrc{New/Spanning/SecondMoment/SpanningTheorem}{168}{the fitted Gram blocks},
+\lineSrc{New/Spanning/MainTerm/EnergyEstimate}{631}{open link energy},
+\lineSrc{New/Spanning/Unfolding/SquareExpansion}{559}{the cutoff and cross-link error},
+\lineSrc{New/Spanning/Unfolding/MomentBounds}{264}{open mass},
+\lineSrc{New/Spanning/Unfolding/MomentBounds}{441}{maximizing fixer},
+and \lineSrc{New/Spanning/SecondMoment/SpanningTheorem}{288}{target-dimension comparison}.
+The source obtains $1+b^{-4}$ for link energy, $1+4b^{-4}$ for open
+mass, and $1+9b^{-4}$ for full mass. The threshold for the projected
+estimate must still be verified separately on $P$.
+
+\paragraph{The outstanding estimate on the actual filling.}
+For each finite collection of distinct blocks as above in one fixer,
+write $B_j$ for its sum of cut double-coset amplitudes over heads.
+The unresolved analytic assertion at this point is
+\[
+   \sum_j\|B_j\|^2
+       \le (1+e/2)b^{-6k|T|} I_*\nu^2.
+\]
+Its quantifiers include every allowed choice of fixed vectors. The
+source's stronger argument groups by $t$; the Gram matrix of the
+scaled archimedean orbital vectors and the finite last-entry density
+then give a bound for $R_{k-1}^2\sum_j\|B_j\|^2$. The next inequality
+bounds the real part of the sum over last entries and pairs of heads,
+with that density divided by the intermediate group's mass ratio.
+Compare \lineSrc{New/Spanning/MainTerm/EnergyEstimate}{422}{archimedean Gram identification},
+\lineSrc{New/Spanning/MainTerm/SiegelTopBound}{846}{the fixed-tail Siegel estimate},
+\lineSrc{New/Spanning/MainTerm/FiniteSieveSystem}{280}{intermediate group},
+\lineSrc{New/Spanning/MainTerm/GlobalSieve}{1145}{global sieve}, and
+\lineSrc{New/Spanning/MainTerm/EnergyEstimate}{561}{assembly of the fixed-fixer estimate}.
+The manuscript's Appendix F.1 computes the numerical comparison
+conditional on the fitted measures and inequalities. The rational
+normal form and the error transfer above supply two intermediate
+arguments; an independent derivation of the fitted orbital and sieve
+bounds is still required.

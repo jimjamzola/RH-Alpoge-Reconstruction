@@ -1,0 +1,242 @@
+\subsection{The Taylor witness at the ramified prime}
+\label{sec:ramified-witness}
+
+Write $p=d$, $v(p)=1$, $\mathcal O=\mathcal O_{\mathbb C_p}$,
+$\pi=\sqrt{-d}$ and $\rho=\gamma=1/(2(p-1))$.
+We use the following local curve data. The translated coordinate $y(z)=z+O(z^2)$
+has integral formal addition law, i.e.$y(z+w)\in\mathcal O[[y(z),y(w)]]$. There is an element
+$T\in\mathcal O[[y]]$ satisfying the normalized endomorphism identity
+of Appendix~A.1. Finally for $\delta_i\in\mathbb Z_p$ with
+$\sum_i\delta_i^2=0$ we use the CM theta identity
+$\prod_i\theta(\delta_i z)\in\mathcal O[[y]]$, with $\theta(0)=1$.
+These are statements about one curve and its normalization.
+We give the deduction of a witness at every required multidegree.
+
+\paragraph{Derivatives in one variable.}
+Let $m_n$ be the smallest valuation of $g^{(n)}(0)$ as
+$g$ ranges over $\mathcal O[[y]]$, with $v(0)=+\infty$.
+Only $1,y,\ldots,y^n$ contribute to an $n$th derivative, so the minimum
+is attained by one of these powers and is finite since $y^n=z^n+O(z^{n+1})$.
+In particular $m_0=0$. For $g\in\mathcal O[[y]]$, the addition law expands
+$g(z+w)$ in the products $y(z)^i y(w)^j$ with integral coefficients.
+Taking the mixed derivative of orders $a,b$ gives
+$m_{a+b}\ge m_a+m_b$.
+Put $N=p^j$. The rescaled parameter
+$Y(z)=T(\varpi z)/\varpi$, $v(\varpi)=\rho$, satisfies
+$Y\equiv\sum_{j\ge0} z^{p^j}\pmod{\pi}$ by the endomorphism recursion in
+Appendix~A.1. Hence $v([z^N]T)=-(N-1)\rho$.
+Legendre's formula gives $v(N!)=(N-1)/(p-1)$ and therefore
+$m_N\le (N-1)\gamma$. Fixing $n>0$, write $N=an+r$ with $0\le r<n$.
+Superadditivity gives
+\[
+ a m_n+\min_{0\le i<n}m_i\le (N-1)\gamma.
+\]
+Letting $j$ tend to infinity gives $m_n\le n\gamma$ for every $n$.
+This argument yields a monomial $g=y^i$, $i\le n$, realizing the bound.
+
+\paragraph{Recovering a multidegree.}
+Let $L_j(z)$ be the frame's local linear forms, with
+$L_*(z)=\sum_\tau u_\tau z_\tau$ one member such that $v(u_\tau)=0$
+for all $\tau$. Write $\Theta=\prod_j\theta(L_j)^{c_j}$, and
+$\mathcal A$ for the image of the integral formal power series ring
+under substitution of the $y(L_j)$. Choose six $p$-adic integers
+$\delta_0=1,\ldots,\delta_5$ with $\sum\delta_i^2=0$ as in Appendix~A.3.
+Then $U(z)=\prod_{i=0}^5\Theta(\delta_i z)$ belongs to $\mathcal A$ and
+has constant term one. Taking the formal inverse in the generator
+variables gives $U^{-1}\in\mathcal A$.
+For a multidegree $\ell$, set $n=|\ell|$ and choose $g$ as above.
+The coefficient of $z^\ell$ in $g(L_*)$ is
+\[
+ g^{(n)}(0)\prod_\tau u_\tau^{\ell_\tau}/\prod_\tau\ell_\tau!.
+\]
+Its valuation is at most $\gamma n-\sum_\tau v(\ell_\tau!)$.
+Take $H_0=g(L_*)U^{-1}$ and $H_i=1$ for $1\le i\le5$. Then
+$\prod_i(H_i\Theta)(\delta_i z)=g(L_*(z))$.
+Its indicated coefficient is a finite sum over
+$\alpha_0+\cdots+\alpha_5=\ell$. The factors
+$\delta_i^{|\alpha_i|}$ have nonnegative valuation when nonzero.
+Consequently at least one product of coefficients of the six unscaled
+series has valuation at most $\gamma n-\sum_\tau v(\ell_\tau!)$.
+Six further copies contribute their constant terms one.
+
+\paragraph{Comparison with the ramified prime sum.}
+Fix the permissible pair and the scale exponent of Theorem~3.1; all estimates
+below hold for all sufficiently large integer $x$ at those fixed parameters.
+Write $w=a/x_1$, $h=\lceil 6b/k\rceil$ and
+$B_\tau=\prod_{i=1}^h((\ell_\tau-h)_++i)$.
+The square of $d\equiv q_0/2-1\pmod{q_0}$ is one modulo $q_0$,
+and neither $1$ nor $q_0/2-1$ equals $-1$ modulo $q_0$.
+Thus no $e\ge1$ has $-p^e\equiv1\pmod{q_0}$.
+In particular $\tau$ and $-p^e\tau$ cannot both have weight $b$,
+since all such places lie over $-1$. The formula for $S_p$ gives exactly
+\[
+ \gamma\sum_\tau\kappa_\tau-S_p
+ =\tfrac12\sum_\tau\sum_{e\ge1}
+       \min(\kappa_\tau p^{-e},\kappa_{-p^e\tau}).
+\]
+Every summand of the inner sum is at most $w$ and at most $bp^{-e}$.
+Set $N=1+\lceil\log_p k\rceil$. Splitting the inner sum at $N$ bounds it
+by $Nw+2b/(kp)$. The scale relations give
+$Nw=o(b/(kp))$ since $N k p x/x_1\to0$. Also
+$x^{42}=o(b/(kp))$ since $k=O(x^5)$ and $\log b>x^\eta$
+for a fixed $\eta>0$.
+For $\kappa_\tau\le\ell_\tau\le\kappa_\tau+x^{42}$ it follows that
+\[
+ \gamma |\ell|-S_p\le f\left(\gamma x^{42}+Nw/2+b/(kp)\right)
+ \le f\big\lfloor h/p\big\rfloor
+ \le\sum_\tau v(B_\tau).
+\]
+Indeed $h/p\ge6b/(kp)\to\infty$ and every interval of $h$
+consecutive integers contains at least $\lfloor h/p\rfloor$ multiples of $p$.
+The twelve coefficients just obtained therefore have valuation sum at most
+\[
+ S_p+\sum_\tau v(B_\tau)-\sum_\tau v(\ell_\tau!).
+\]
+This gives the required ramified witness with one copy of the loss budget
+instead of two. The assumptions used are the stated local CM identities
+and the existence of the frame with a unit row. Realizing these coefficient
+products by integral adelic test forms is a separate step.
+
+\subsection{The split and inert Taylor witnesses}
+\label{sec:other-witnesses}
+
+For these two cases set $\pi=p$ and let $q=p$ at a split prime and
+$q=p^2$ at an inert prime. Take $\rho=1/(q-1)$ and
+$\gamma=1/(p-1)-\rho$. Use the same one-curve identities as above,
+with the following meaning for the endomorphism identity:
+$T\in\mathcal O[[y]]$, $T=z+O(z^2)$, and
+\[
+ T(pz)=pT(z)+b_1T(z)^q+
+           \sum_{i\ge2}b_iT(z)^{1+i(q-1)},\qquad
+ b_i\in\mathcal O,\quad v(b_1)=0.
+\]
+For split $p$, this is the height-one CM parameter input, including at
+$p=2$. The unscaled ring $\mathcal O[[y]]$ consists of integral
+series in the local curve coordinate; its elements need not have integral
+coefficients when expanded in the additive variable $z$.
+
+\paragraph{Six copies in every residual degree.}
+Choose $\varpi^{q-1}=-p/b_1$. The same coefficient induction as in
+Appendix~A.1 makes $Y=T(\varpi z)/\varpi$ integral and gives
+$Y-Y^q\equiv z\pmod p$. Indeed after division by $p\varpi$ the higher
+terms of the endomorphism acquire factors
+$\varpi^{i(q-1)}/p\in p\mathcal O$, and the recursion at degree $m>1$
+divides by the unit $1-p^{m-1}$. Reduction yields
+$[z^{q^j}]Y\equiv1\pmod p$.
+At $N=q^j$, Legendre's formula again gives $v(N!)=(N-1)/(p-1)$.
+It follows exactly as above that each multidegree $\nu$ has a six-copy
+witness of valuation at most
+\begin{equation}\label{eq:jet-six-general}
+ \gamma|\nu|-V(\nu),\qquad V(\nu)=\sum_\tau v(\nu_\tau!).
+\end{equation}
+Here one uses the integral addition law, the six-theta product identity
+and a form with all coefficients units. At a split prime $\gamma=0$
+and $S_p=0$. Taking six more constant terms proves the entire split case.
+
+\paragraph{Small inert primes.}
+Assume $p$ inert and $p\le k$, with the integral normalized frame
+and the unit leading coefficients in the inert coupling computation of
+Appendix~A.3. In the permissible family $2$ splits since $d\equiv7\pmod8$.
+Moreover $p$ is prime to $q_1$: the odd prime divisors of $q_0$
+satisfy $d\equiv-1$ modulo each such divisor, so quadratic reciprocity
+gives $(p/d)=1$ for them, and $q_1$ has the same prime divisors as $q_0$.
+Set $P(\tau)=-p\tau$ on the group of places. For odd $e$ the partner is
+$P^e(\tau)$. Call $(\tau,e)$ a short pair if $e$ is positive and odd,
+$2e<\ell_0$, and both $\tau$ and $P^e\tau$ belong to $\Phi_b$.
+Distinct short pairs have disjoint endpoints, where an endpoint may
+mean either end. Two different exponents at one start would give three
+members of $\Phi_b$ at the forbidden powers $0,e,e'$. Two pairs ending
+at the same point with $e<e'$ would give, from the start of the longer
+pair, three at powers $0,e'-e,e'$. When the exponents are equal the
+starts coincide since $P$ is a permutation. If an end were a start,
+there would be three members at powers $0,e,e+e'$, with
+$e+e'<\ell_0$. The same reasoning excludes a loop (take $e'=e$).
+Each use of sparseness is valid since $P^i=(-1)^i p^i$ and signs
+are allowed independently.
+
+For each start take $j_\tau=\lfloor\ell_\tau/p^e\rfloor$ copies of its
+pair; put $j_\tau=0$ elsewhere. Let $\nu'$ record the $p^ej_\tau$
+degrees at each start, $\nu''$ the $j_\tau$ at its end. Their sum is
+at most $\ell$: the start bound follows by rounding, while
+$j_\tau\le 2b/p\le b\le\ell_{P^e\tau}$. Disjointness prevents
+double charging. The uniqueness condition of the inert coupling
+calculation holds: an odd competing exponent $a\le e$ with the
+same endpoint and a selected start would itself be a short pair.
+Thus six copies give a witness of valuation at most
+$\gamma(|\nu'|+|\nu''|)-\sum j_\tau-V(\nu')-V(\nu'')$.
+For the remaining six use \eqref{eq:jet-six-general} at
+$\mu=\ell-\nu'-\nu''$. Multiplication in disjoint variable blocks
+adds the valuations. The factorial correction at each place is at
+most $3(1+\log_2(2b))$: in Legendre's digit-sum formula for the
+multinomial coefficient each of its three positive digit-sum terms
+divided by $p-1$ is at most the number of digits of $\ell_\tau\le2b$.
+
+To pay for this correction put $w=a/x_1$,
+$n_0=\lceil\ell_0/2\rceil$. At an inert prime
+$\sum_{e\ge1,\ e\ {\rm odd}}p^{-e}=p/(p^2-1)=\gamma$, so
+\[
+ \gamma\sum_\tau\kappa_\tau-S_p
+ =\sum_\tau\sum_{e\ {\rm odd},\,e>0}
+                 \min(\kappa_\tau p^{-e},\kappa_{P^e\tau}).
+\]
+For $e<n_0$ all terms at a given place are at most $w$, except
+possibly its unique short pair, whose contribution is at most
+$j_\tau+1$. The remaining geometric tail is at most
+$2b p^{-n_0}\le2b/(kp)$. For the last inequality use
+$\ell_0>27s$, $2^s=m^{22}\ge x^{11}$, and $k\le 4x^5$,
+so $p^{n_0-1}\ge k$ eventually. The total excess per place after
+subtracting $j_\tau$, including the factorial correction, is at most
+\[
+ \gamma x^{42}+3(1+\log_2(2b))+1+n_0 w+2b/(kp).
+\]
+The first four terms together are $o(b/(kp))$, uniformly for
+$p\le k$: use $k^2=O(x^{10})$, $n_0=O(\log x)$, the
+exponential growth of $x_1$ in $x^{\eta/6}$ and of $b$ in $x^\eta$.
+The display is at most $\lfloor h/p\rfloor\le v(B_\tau)$ for all
+sufficiently large $x$. This proves the twelve-copy bound
+$S_p+\sum v(B_\tau)-V(\ell)$ uniformly in the small inert primes.
+
+\paragraph{Large inert primes.}
+Now $p>k$. We use the integral resolution of the frame at this prime:
+each variable, up to a unit $s$, is an integral linear combination
+$sz_\tau=\sum_i a_{\tau i}L_i(z)$. For a normalized tight frame
+$u_i$ with integral entries and $L_i=s u_i^\dagger z$ this follows
+by taking $a_{\tau i}=c_i u_{i,\tau}$ in the chosen embedding.
+The series $G_\tau=\sum_i a_{\tau i}y(L_i)$ starts with $sz_\tau$.
+Thus $(\prod_\tau G_\tau^{\mu_\tau})\Theta$ has coefficient $s^{|\mu|}$
+at multidegree $\mu$. This supplies any residual degree with valuation
+zero, using one copy and five constant terms.
+
+Use the exponent-one coupling at every place. Uniqueness in the
+coupling calculation follows from bijectivity of $P$. Choose
+\[
+ i_\tau=\left\lfloor (\ell_\tau-h)_+/p\right\rfloor,\qquad
+ j_\tau=\min(i_\tau,\ell_{P\tau}).
+\]
+As $\ell_\tau\le2b$ and $p>k$, $i_\tau\le h$.
+The degree used at a place $t$ is
+$p j_t+j_{P^{-1}t}\le(\ell_t-h)_++\min(h,\ell_t)=\ell_t$.
+Appendix~A.3 gives valuation at most $-\sum j_\tau$ for the first
+six copies. The unit-coefficient construction in the preceding
+paragraph fills the remainder. For $r=(\ell_\tau-h)_+$,
+$\ell_\tau!\mid r! B_\tau$, and
+$v(r!)=i_\tau+v(i_\tau!)$. Also $i_\tau!\mid h!\mid B_\tau$,
+the latter by the integrality of $\binom{r+h}{h}$.
+Therefore $v(\ell_\tau!)-i_\tau\le 2v(B_\tau)$.
+Since $h\ge x^{42}$ eventually, $r\le\kappa_\tau$, and hence
+\[
+ i_\tau-j_\tau\le(\kappa_\tau/p-\kappa_{P\tau})_+ .
+\]
+Summing this last bound costs at most the $e=1$ part of $S_p$.
+This proves the bound $S_p+2\sum v(B_\tau)-V(\ell)$, uniformly for
+all $p>k$ inert.
+
+\paragraph{Inputs to the local deduction.}
+Taken together, these computations give the prescribed-degree
+coefficient witnesses for every prime on the scales of Theorem~3.1.
+The one-curve formal parameter and theta integrality identities must
+hold in the specified normalization, and the required frames must exist
+with integral coefficients, a unit row and, at inert primes, the
+integral resolution and normalized coupling calculation.
+Passage to integral sections and the four-block test-form pairing
+still require their arithmetic realizations.
