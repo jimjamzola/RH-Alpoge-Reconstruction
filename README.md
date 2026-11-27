@@ -84,7 +84,7 @@ The expository projects above are works in progress. Readers should consult each
 - I thank Timothy Wesley Stone for raising the rationality question for the period maps and pointing me to the relevant Lean declarations. [Issue 1](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/1)
 - I thank **erythrofr** for proposing a sharper bound for the integrated deficit. [Issue 2](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/2)
 - I thank **a-ratz** for identifying the original commit to cite, questioning my attribution of V17, and pointing out discrepancies between the declaration names I cited and those in the later community repository. [Issue 3](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/3)
-- I thank [erythrofr](https://github.com/erythrofr) for providing a counterexample to the claimed character-evaluation bijection and suggesting the multiplicity repair in [issue #5](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/5).
+- I thank **erythrofr** for providing a counterexample to the claimed character-evaluation bijection and suggesting the multiplicity repair. [Issue 5](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/5)
 - I thank **D3m0sthene5** for identifying the overlap between identity and nongeneric terms in the earlier manuscript’s pair-bound argument and suggesting the missing identity-degeneracy condition. [Issue 8](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/8)
 
 <details>
