@@ -49,7 +49,35 @@ Corrections and comments from specialists are very welcome. For the current work
 
 ## Additional Resources
 
-Below are additional resources related to this effort:
+### Videos and accessible introductions
+
+- [Álvaro Lozano-Robledo’s RH resource page](https://mathandcobb.org/rh-claims/) — Collected updates, videos, written expositions, and background on RH and its generalizations.
+
+- [Álvaro Lozano-Robledo interviews Robin Zhang](https://www.youtube.com/watch?v=tS8Ro66Zu1I) — A discussion of the Alpöge–Claude argument and its mathematical ideas.
+
+- [Robin Zhang’s preliminary overview](https://www.youtube.com/watch?v=bDtAO5fRuGE) — A presentation on the proposed proof, hosted on Lozano-Robledo’s channel.
+
+- [What is the Riemann Hypothesis?](https://www.youtube.com/watch?v=tCF3XoQFE48) — Lozano-Robledo’s introduction to the statement and motivation.
+
+### Other expositions and proof maps
+
+- [Robin Zhang’s preliminary note](https://www.ihes.fr/~rzhang/files/GRH%20note.pdf) — An overview of the argument, emphasizing its mathematical sources and historical context.
+
+- [Michael Rubinstein’s reconstruction and verification resources](https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/) — A working exposition specialized to the Riemann zeta function, with explicit remaining hypotheses, alongside independent Lean verification records.
+
+- [Bartosz Naskręcki’s guide and proof atlas](https://nasqret.github.io/riemann-rev/) — Expository notes, an interactive map of the argument, links to Lean declarations, and a record of verification checks.
+
+### Formal verification and background
+
+- Andrew Sutherland’s verification records for the [original archive](https://math.mit.edu/~drew/grh/) and the [shorter refactor](https://math.mit.edu/~drew/shortgrh/) — Machine-checking results, logs, and reproduction details.
+
+- [Reading guide to the Lean refactor](https://github.com/lsernau/grh-lean/blob/72fead102f663d5c7a407964a13dc0cf9d977207/grh/GUIDE.md) — The main objects, intermediate results, and organization of the readable Lean development.
+
+- [“…and the proof is checked in Lean”](https://xenaproject.wordpress.com/2026/11/12/and-the-proof-is-checked-in-lean/) — An explanation of statement fidelity, compilation, axiom checks, and kernel verification.
+
+- [Enrico Bombieri’s description of the Riemann Hypothesis](https://www.claymath.org/wp-content/uploads/2022/05/riemann.pdf) — The Clay Mathematics Institute’s official problem description and mathematical background.
+
+The expository projects above are works in progress. Readers should consult each author's statement of scope and verification status.
 
 ## Acknowledgments
 
