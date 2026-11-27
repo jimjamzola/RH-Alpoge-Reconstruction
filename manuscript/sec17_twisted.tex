@@ -257,20 +257,125 @@ Fix distinct admissible $p,p'$ and a finite set $L$ of primes in generic positio
 because $\sum_lv_l(n)\log l\le\log|n|$ for a nonzero integer $n$. Insert the bounds for $\log|NN_p|$ and $\log|NN_{p'}|$.
 \end{proof}
 
-\begin{proposition}[(PropGK) from (Count) and (OneChar)]\label{w4:prop:onechar2prop}
-Let $K$ be an imaginary quadratic field, $p\ge7$ a prime with $p\nmid N\,d_K$, $w\mid p$ a place of $K$ and $\sigma$ a geometric Frobenius element at $w$. Let $\mathcal O$ be a finite set of roots of unity $z$ stable under $\operatorname{Aut}(\mathbb C)$, and put $t(z)=Nw^{-e}z+1+Nw^{e}z^{-1}$, the trace of $\sigma$ on the Eisenstein triple $\Psi\oplus1\oplus\Psi^{-1}$ suitably normalized. Assume the following two statements.
+\begin{proposition}[(PropGK) from (Count) and (OneChar)]
+\label{w4:prop:onechar2prop}
+Let $N,e\ge1$ be integers and let
+$H\subset(\Z/N)^\times$ be a subgroup whose orbit
+$\mathcal X$ of complex Dirichlet characters with kernel $H$
+is nonempty.
+Let $K$ be an imaginary quadratic field, $p\ge7$ a prime
+with $p\nmid N\,d_K$, $w\mid p$ a place of $K$, and
+$\sigma$ a geometric Frobenius element at $w$.
+Put $q=Nw$ and
+\[
+m=[(\Z/N)^\times:H],\qquad
+d=\operatorname{ord}(\overline q),\qquad
+r=\frac{\varphi(m)}{\varphi(d)},
+\]
+where $\overline q$ is the class of $q$ in $(\Z/N)^\times/H$.
+Define
+\[
+z_\psi=\psi(q)^{-1},\qquad
+\mathcal O=\{z_\psi:\psi\in\mathcal X\},\qquad
+t(z)=q^{-e}z+1+q^ez^{-1},\qquad
+t_\psi=t(z_\psi).
+\]
+The set $\mathcal O$ is stable under
+$\operatorname{Aut}(\mathbb C)$.
+Assume the following two statements.
 \begin{enumerate}[leftmargin=*,label=(\alph*)]
-\item \emph{(Count.)} There is $NN\in\Z\setminus\{0\}$ with $\log|NN|\le c\,|\mathcal O|\,(N(e+1))^A\log p$, such that for every prime $l\ne2,p$, every $\iota\colon\overline{\Q}_l\cong\mathbb C$ and every choice of finite sets $X_z$ of pairwise non-isomorphic admissible $\rho\colon G_K\to GL_3(\overline{\Q}_l)$ (level $N$, weight $e$), one has $\operatorname{tr}\rho(\sigma)\ne t(z)$ for $\rho\in X_z$ and $\lvert NN\rvert_l\le\prod_z\prod_{\rho\in X_z}\lvert\operatorname{tr}\rho(\sigma)-t(z)\rvert_l$.
-\item \emph{(OneChar.)} For each character $\psi$ in generic position, if no admissible $\rho$ has $\operatorname{tr}\rho(\sigma)=t$, then $\Sha_l(\Q,e;\psi)$ is finite and there is a finite set $X_\psi$ of pairwise non-isomorphic admissible $\rho$ with $\len\Sha_l(\Q,e;\psi)/e(O)\le2\sum_{\rho\in X_\psi}v_l(\operatorname{tr}\rho(\sigma)-t_\psi)$.
+\item \emph{(Count.)}
+There is $NN\in\Z\setminus\{0\}$ with
+\[
+\log|NN|\le c\,|\mathcal O|\,(N(e+1))^A\log p,
+\]
+such that for every prime $l\ne2,p$, every
+$\iota\colon\overline{\Q}_l\cong\mathbb C$, and every
+choice of finite sets $X_z$ of pairwise non-isomorphic
+admissible $\rho\colon G_K\to GL_3(\overline{\Q}_l)$
+(level $N$, weight $e$), one has
+$\operatorname{tr}\rho(\sigma)\ne t(z)$ for $\rho\in X_z$
+and
+\[
+|NN|_l\le
+\prod_{z\in\mathcal O}\prod_{\rho\in X_z}
+|\operatorname{tr}\rho(\sigma)-t(z)|_l.
+\]
+\item \emph{(OneChar.)}
+For each character $\psi$ in generic position, if no
+admissible $\rho$ has
+$\operatorname{tr}\rho(\sigma)=t_\psi$, then
+$\Sha_l(\Q,e;\psi)$ is finite and there is a finite set
+$X_\psi$ of pairwise non-isomorphic admissible $\rho$ with
+\[
+\frac{\len\Sha_l(\Q,e;\psi)}{e(O)}
+\le
+2\sum_{\rho\in X_\psi}
+v_l(\operatorname{tr}\rho(\sigma)-t_\psi).
+\]
 \end{enumerate}
-Then the conclusion of (PropGK) holds at $p$ with $NN_p=NN$.
+Then the conclusion of (PropGK) for this orbit holds at $p$
+with $NN_p=NN^r$, with the same constants $c,A$.
 \end{proposition}
 
 \begin{proof}
-The orbit of characters $\psi$ with kernel $H$ is in bijection with an $\operatorname{Aut}(\mathbb C)$-stable set $\mathcal O$ of roots of unity, $z_\psi=\psi(Nw)^{-1}$ under $\iota$, and $t_\psi=t(z_\psi)$; the number of elements is $\varphi(\mathrm{index}\,H)$. By~(a) no admissible $\rho$ has trace $t_\psi$, so~(b) applies to each $\psi$. Summing~(b) over $\psi$ and applying~(a) to the sets $X_\psi$,
+A character with kernel $H$ identifies $(\Z/N)^\times/H$
+with a finite subgroup of $\mathbb C^\times$.
+This quotient is therefore cyclic of order $m$, and
+$|\mathcal X|=\varphi(m)$.
+
+Evaluation at $\overline q$ sends the faithful characters
+of this cyclic quotient onto the primitive $d$-th roots
+of unity. The reduction homomorphism
 \[
-\sum_\psi\frac{\len\Sha_l(\Q,e;\psi)}{e(O)}\le2\sum_\psi\sum_{\rho\in X_\psi}v_l\bigl(\operatorname{tr}\rho(\sigma)-t_\psi\bigr)\le2v_l(NN).\qedhere
+(\Z/m)^\times\longrightarrow(\Z/d)^\times
 \]
+is surjective: by the Chinese remainder theorem, a unit
+modulo $d$ can be lifted to an integer that is also
+$1$ modulo every prime dividing $m$ but not $d$.
+Its fibers have equal size $r$.
+Consequently $|\mathcal O|=\varphi(d)$, each evaluation
+value occurs exactly $r$ times, and
+$r|\mathcal O|=\varphi(m)$.
+
+Fix a prime $l$ and a coefficient ring occurring in
+(PropGK), and use $\iota$ to identify its character orbit
+with $\mathcal X$. Generic position is unchanged by
+raising a character to a power coprime to its order,
+so it holds throughout this orbit.
+By (a), no admissible $\rho$ has trace $t_\psi$,
+and (b) therefore applies to every $\psi$.
+
+For each $z\in\mathcal O$, enumerate the characters
+with evaluation value $z$ as
+$\psi_{z,1},\ldots,\psi_{z,r}$.
+For each fixed $j$, apply (a) to
+$X_z=X_{\psi_{z,j}}$.
+The same integer $NN$ works for every $j$, because it
+is independent of the choice of the families $X_z$.
+Taking valuations gives
+\[
+\sum_{z\in\mathcal O}
+\sum_{\rho\in X_{\psi_{z,j}}}
+v_l(\operatorname{tr}\rho(\sigma)-t(z))
+\le v_l(NN).
+\]
+Summing over $j$ counts every character exactly once.
+Together with (b), this yields finiteness and
+\[
+\sum_{\psi\in\mathcal X}
+\frac{\len\Sha_l(\Q,e;\psi)}{e(O)}
+\le 2r\,v_l(NN)
+=2v_l(NN_p).
+\]
+Finally,
+\[
+\log|NN_p|
+=r\log|NN|
+\le c\,r|\mathcal O|\,(N(e+1))^A\log p
+=c\,\varphi(m)\,(N(e+1))^A\log p.
+\]
+This proves the required bounds.
 \end{proof}
 
 The content of (Count) is classical in type. The admissible $\rho$ correspond to Frobenius eigenvalues at $w$ of algebraic automorphic forms on a definite unitary group in three variables of level $N$ and weight of height $e$, whose number is polynomial in $N(e+1)$. The number $NN$ is the product of the scaled differences, rational by Galois stability, and nonzero because purity gives $|\operatorname{tr}\rho(\sigma)|\le3$ while $|t(z)|\ge p^{e}-2>3$. \notgiven{Statement (Count) is not proved here.}
