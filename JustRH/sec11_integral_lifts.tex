@@ -1,0 +1,306 @@
+\section{The integral lattices of the theta lifts}\label{sec:integral-lifts}
+
+Keep $T,u_0,u,p$ as in \S\ref{sec:chain-divisibility}, with $p$ unramified
+in $E$. We check the two local assertions used in
+Theorem~\ref{thm:chain-divisibility}. Fix a lift $j$ and an orbit $v$.
+Write $n=N_{j-1}$, $d=N_j$ and $w=w_j(\tau_s)$ at position $s$.
+
+\subsection{The edge and the two polynomial transfers}
+
+For a dominant weight $\beta$ of length $d$, put
+$\bar\beta=\beta-\beta_d(1,\ldots,1)$. In the standard frame take the
+$\mathcal O$-span of the products $\prod_a\Delta_{S_a}(Y)$, where
+$\Delta_S(Y)=\det Y_{S,[|S|]}$ and $|S_a|$ are the column heights
+of $\bar\beta$. Include the determinant twist of
+\citep[Definition~11.3]{adriazola-grh}. Changes of integral basis preserve
+the span by Cauchy--Binet in both directions. In an adapted basis an
+edge of type $i$ has matrix $\operatorname{diag}(pI_i,I_{d-i})$.
+Expressing such a product from the smaller lattice in the larger frame
+gives the factor
+\begin{equation}\label{eq:true-edge-factor}
+                 p^{-i\beta_d-\sum_a|S_a\cap[i]|}.
+\end{equation}
+The twist contributes $p^{-i\beta_d}$ and a row in $[i]$
+contributes $p^{-1}$ at each occurrence. Since
+$\sum_a\min(|S_a|,i)=\sum_{\ell\le i}(\beta_\ell-\beta_d)$,
+the sum of the first $i$ entries of $\beta$ clears the denominator.
+At level zero this gives $y_v I_0\subseteq I_0$ with the exponent $A_v$.
+
+Write $\lambda=\lambda^{(j-1)}_{\tau_s}$ and let
+$h_1,\ldots,h_c$ be the column heights of the partition
+$\mu=(\lambda_1+w,\ldots,\lambda_n+w,0,\ldots,0)$ of length $d$.
+Thus $c=\lambda_1+w$ and $|\mu|=\sum_a h_a$. Let $D$ be an
+$n\times d$ matrix of differential symbols and $Y$ a $d\times d$
+target frame. Complements of index sets use the dimension of the
+corresponding row or column space.
+
+\begin{proposition}\label{prop:true-polynomials}
+On a generator of the source lattice, each term of the even transfer
+has the form
+\[
+          \prod_a\det D_{R_a,I_a}\ \prod_a\Delta_{I_a}(Y),
+               \qquad |R_a|=|I_a|=h_a .
+\]
+Each term of the odd adjugate transfer has the form
+\[
+       \pm\prod_a\det D_{R_a^c,I_a}\ \prod_a\Delta_{I_a^c}(Y),
+               \qquad |R_a|=n-h_a,\quad |I_a|=h_a .
+\]
+With the normalization $p^{n^{(j)}_{v,i}}$, the edge exponents
+are those of \S\ref{sec:chain-divisibility} at both parities.
+\end{proposition}
+
+\begin{proof}
+At an even position the transfer substitutes the first $n$ columns of
+$DY$ into a source generator $G$, and multiplies by the determinant
+of that block to the power $\lambda_n+w\ge0$. These extra columns
+have height $n$. Apply Cauchy--Binet to each column of $\mu$.
+The target bottom weight is $-w$, and the even normalization is
+$\sum_{\ell\le i}\lambda_\ell=-iw+\sum_a\min(h_a,i)$.
+Formula~\eqref{eq:true-edge-factor} leaves
+$\sum_a(\min(h_a,i)-|I_a\cap[i]|)$.
+
+At an odd position the source and target use the dual weights.
+Their column heights are respectively $n-h_a$ and $d-h_a$ in reverse
+order, allowing empty columns. Write $J_h$ for the last $h$ indices
+in the ambient row set. The adjugate substitution is \citep{alpoge-local-symbol}
+\[
+ U=(\operatorname{adj}Y)_{J_n,:}D^{\mathsf T},\qquad
+ (\det Y)^{c-|\mu|}(\det U)^{c-nc+|\mu|}G(\operatorname{adj}U).
+\]
+For $|R|=n-h$, Jacobi's identity at the two matrices gives
+\[
+ \Delta_R(\operatorname{adj}U)
+ =\pm(\det U)^{n-h-1}\det U_{J_h,R^c},\qquad
+ \det(\operatorname{adj}Y)_{J_h,I}
+ =\pm(\det Y)^{h-1}\Delta_{I^c}(Y).
+\]
+Between these identities, Cauchy--Binet expands $\det U_{J_h,R^c}$
+in the minors $\det D_{R^c,I}$.
+The exponents sum to $nc-|\mu|-c$ for $\det U$ and $|\mu|-c$
+for $\det Y$. Both cancel. The resulting polynomial identity over
+$\mathbb Z$ includes the empty minors.
+Now $\beta_d=-\lambda_1$ and the odd normalization is $iw$. By
+\eqref{eq:true-edge-factor} the remaining exponent is
+\[
+ iw+i\lambda_1-\sum_a|I_a^c\cap[i]|=\sum_a|I_a\cap[i]| .\qedhere
+\]
+\end{proof}
+
+\subsection{What the shared frame detects}
+
+For a normalized source partition $\nu$ of either parity put
+$H_\nu(X)=\prod_{h}\Delta_{[h]}(X)$, taking the heights of its
+columns with multiplicity. Let $C_\nu$ be the span of the
+coefficients in $Z$ of $H_\nu(ZX)$ for one matrix $Z$ of indeterminates.
+
+\begin{lemma}\label{lem:true-common-frame}
+At either parity the corrected shared-frame bounds give the transfer
+bound on $C_\nu$.
+\end{lemma}
+
+\begin{proof}
+At an even position apply the transfer to $H_\nu(ZX)$ and put $k_0=\lambda_n+w$.
+After multiplying by $(\det Z)^{k_0}$, the coefficient attached in the
+Cauchy--Binet expansion to a column choice $(I_a)_a$ is the pairing with
+\[
+             \prod_a\det (ZD)_{[h_a],I_a}.
+\]
+The $k_0$ additional full-height minors each supply one $\det Z$.
+
+At an odd position $Z\operatorname{adj}U=(\det Z)\operatorname{adj}(UZ^{-1})$.
+For a column of height $n-h$, Jacobi's identity therefore gives
+\[
+ \Delta_{[n-h]}(Z\operatorname{adj}U)
+    =(\det Z)(\det U)^{n-h-1}\det (UZ^{-1})_{J_h,J_h}.
+\]
+Let $J$ reverse the $n$ rows. Expand as in Proposition~\ref{prop:true-polynomials},
+now with $Z^{-\mathsf T}D$ in place of $D$. Multiplying the transfer
+by $(\det Z)^{|\mu|-c}$ gives, up to signs, the shared-frame pairings
+with $Z$ replaced by $J(\operatorname{adj}Z)^{\mathsf T}$.
+This substitution is integral. At either parity the edge correction depends
+only on $(I_a)_a$. A power of $\det Z$ preserves the minimum coefficient
+valuation by Gauss's lemma. Taking coefficients in $Z$ proves the claim.
+\end{proof}
+
+The full lattice can be larger. For a single row of length $p$ and
+two source indices, take $f(D)=D_{11}^{p-1}D_{21}$. With every column
+index equal to $1$ the shared-frame jet is
+\[
+ (z_1\partial_{11}+z_2\partial_{21})^p f(0)
+     =p!\,z_1^{p-1}z_2,\qquad
+ \partial_{11}^{p-1}\partial_{21} f(0)=(p-1)! .
+\]
+Every choice involving another column vanishes. Thus divisibility of
+all shared-frame coefficients by $p$ does not imply divisibility of
+each individual row pairing in Proposition~\ref{prop:true-polynomials}.
+
+The determinant factors can also be computed on the symbols. Put
+$Y'=(g')^{\mathsf T}Y$ and $(gG)(X)=G(g^{\mathsf T}X)$. At an even
+position take $D'=g^{\mathsf T}D(g')^{-\mathsf T}$. Then
+$D'Y'=g^{\mathsf T}DY$ and the extra determinant gives
+$(\det g)^{\lambda_n+w}$ times the transfer of $gG$.
+At an odd position take $D'=g^{-1}Dg'$. The matrix $U$ in the proof
+of Proposition~\ref{prop:true-polynomials} changes to
+$(\det g')U g^{-\mathsf T}$. Since $\deg G=nc-|\mu|$, substitution
+gives $(\det g'/\det g)^c$ times the transfer of $gG$.
+Including the source and target twists gives, respectively,
+\[
+ (\det g)^{-\lambda_n}(\det g)^{\lambda_n+w}(\det g')^{-w}
+      =(\det g/\det g')^w,\qquad
+ (\det g/\det g')^{\lambda_1-c}=(\det g/\det g')^{-w}.
+\]
+The series uses the inverse transpose of the substitution on symbols,
+by the chain rule for $P(\partial)f(0)$.
+
+\begin{hypothesis}[\openinput]\label{hyp:true-jet-model}
+On one local coefficient model for the prescribed lifts at $T,u_0$,
+the polynomial transfers above give the jets in $A_j$ with these
+changes of frame, the length factor of \citep[Definition~11.9]{adriazola-grh},
+and integral factors at the remaining positions.
+For each prescribed kernel, the corrected bounds on the shared-frame
+coefficients in Hypothesis~\ref{hyp:chain-lattice-transfer} extend to
+the transfer on the full source lattice in the adapted frames.
+\end{hypothesis}
+
+One sufficient check for the last assertion is
+\[
+ v_p\!\left(\left\langle\prod_{v,s,a}\det D_{v,s;R_a,I_a},f\right\rangle\right)
+                     +\sum_v E_v\ge b
+\]
+for the row choices in Proposition~\ref{prop:true-polynomials}, using
+the complementary source rows at odd positions. Here $f$ is the
+prescribed kernel and $b$ is the shared-frame bound.
+
+\subsection{The split Hecke relation}
+
+Write $\ell(L)=-v_p(\det g)$ at $w\mid v$ and $q=q_v$.
+The length exponent is the same at every lift,
+\[
+ \gamma_v=\sum_{s\ {\rm even}}w_j(\tau_s)-\sum_{s\ {\rm odd}}w_j(\tau_s)
+          =\sum_{s\ {\rm even}}b_1(\tau_s)-\sum_{s\ {\rm odd}}b_1(\tau_s).
+\]
+Indeed \eqref{eq:chain-nodes} adds the same constant at the
+$\nu_v$ positions of each parity.
+Remove $p^{\gamma_v(\ell(L)-\ell(L'))}$ from the local step map as in
+\citep[Definition~11.9]{adriazola-grh}, and write $s_j(L,L')$ for
+the remaining frame scalar multiplying the character-normalized theta series.
+
+\begin{hypothesis}[\openinput]\label{hyp:true-frame-scalar}
+For the word $u$, the level data away from $v$ stay fixed under the
+edges, with the unramified lattice indicator at $v$. In the coefficient
+model of the lift, the adjusted frame scalar satisfies, for all moves at $v$,
+\[
+ \frac{s_j(L,L')}{s_j(L_0,L'_0)}
+       =a^{\ell(L)-\ell(L_0)}(a')^{\ell(L')-\ell(L'_0)}
+       \qquad(a,a'\in\mathcal O^\times).
+\]
+The units depend on $v,j,u$ and are common to the class sum.
+\end{hypothesis}
+
+The determinant-idele model of \citep[Definition~11.23 and
+Proposition~11.27]{adriazola-grh} gives this ratio explicitly.
+Let $\varpi_v$ have components $(p,p^{-1})$ at $w,\bar w$ and one
+elsewhere. Its step character $\psi_j$, unramified at $v$ and of
+type $w_j(\tau)+c_j$ on norm-one elements, satisfies
+$v_p(\psi_j(\varpi_v))=\gamma_v$ in the fixed coefficient embedding.
+Indeed if the ideal $(\varpi_v)^h=(\beta)$, then
+$(\varpi_v)^{2h}=(\beta/\bar\beta)$. The quotient idele is a unit
+everywhere, and its character value has valuation zero. Evaluating the
+type on $\beta/\bar\beta$ gives $2h\gamma_v$.
+With $\kappa=\chi((\varpi_v))$ the unit from the determinant character
+and $t_\ell=\ell(t_r+1)/2$, the model gives
+\[
+ a=p^{-\gamma_v}\psi_j(\varpi_v)\kappa^{t_{j-1}},\qquad
+ a'=p^{\gamma_v}\psi_j(\varpi_v)^{-1}\kappa^{-t_j}.
+\]
+Changing the two determinant ideles by $\varpi_v^{-\Delta\ell}$
+and $\varpi_v^{-\Delta\ell'}$ up to local units gives the stated ratio.
+Hypothesis~\ref{hyp:true-frame-scalar} requires it for the frames
+used in \eqref{eq:chain-class-sum}.
+
+\begin{proposition}\label{prop:true-hecke}
+Under Hypothesis~\ref{hyp:true-frame-scalar}, the lift satisfies
+\eqref{eq:chain-one-hecke} with
+$\epsilon_{vj}=(aa')^{-1}$ and $\eta_{vj}=p^{\gamma_v}a$.
+\end{proposition}
+
+\begin{proof}
+Put $g=d-n=t_r+1$ and $Q=q^2$. For the split theta kernel the normalized
+series $\operatorname{vol}(\operatorname{Hom}(L,L'))^{1/2}
+\chi_F^{-1}\theta_{L,L'}$ depends linearly on the indicator
+$\mathbf1_{\{xL\subseteq L'\}}$ when the other data are fixed
+\citep[Proposition~11.20]{adriazola-grh}. The volume is
+$q^{2(n\ell'-d\ell)}$ by change of basis. Thus the local step map is
+a fixed linear function of this indicator multiplied by
+\[
+      p^{\gamma_v(\ell-\ell')}a^\ell(a')^{\ell'}q^{d\ell-n\ell'},
+      \qquad \ell=\ell(L),\quad \ell'=\ell(L').
+\]
+Shrinking the target by $i$ multiplies this scalar by
+$p^{\gamma_vi}(a')^{-i}q^{ni}$. Enlarging the source by $k$ multiplies
+it by $p^{\gamma_vk}a^kq^{dk}$.
+
+If $xL\subseteq L'$, write $s$ for the rank of its reduction modulo
+$p$. The target sublattices of type $i$ containing $xL$ are counted by
+$\genfrac{[}{]}{0pt}{}{d-s}{i}_Q$, where the brackets count subspaces
+over $\mathbb F_Q$. The source overlattices of type $k$ mapped into $L'$
+are counted by $\genfrac{[}{]}{0pt}{}{n-s}{k}_Q$. Both counts vanish
+if $xL\not\subseteq L'$. Splitting the subspace count by intersection
+dimension gives
+\[
+ \genfrac{[}{]}{0pt}{}{d-s}{i}_Q=\sum_{l=0}^{\min(g,i)}
+ Q^{(i-l)(g-l)}\genfrac{[}{]}{0pt}{}{g}{l}_Q
+ \genfrac{[}{]}{0pt}{}{n-s}{i-l}_Q .
+\]
+In the class sum one may sum the source edges from either end. Each
+edge orbit has weight the inverse order of its stabilizer.
+Insert the two scalar ratios with $k=i-l$ and multiply by
+$q^{-i(d-i)}$. Relative to the normalized source operator of degree
+$i-l$, the coefficient is
+\[
+ (aa')^{-i}(p^{\gamma_v}a)^l
+ q^{-l(g-l)}\genfrac{[}{]}{0pt}{}{g}{l}_{q^2}.
+\]
+By the Gaussian binomial theorem, the product following
+$(p^{\gamma_v}a)^l$ is the elementary symmetric polynomial of degree
+$l$ in $q^{g-1},q^{g-3},\ldots,q^{1-g}$. Summing in $i$ gives
+\eqref{eq:chain-one-hecke} modulo $X^{r+1}$.
+\end{proof}
+
+\subsection{The prescribed lattices}
+
+\begin{corollary}\label{cor:true-integral-chain}
+Assume Hypotheses~\ref{hyp:inert-kernel-integrality},
+\ref{hyp:true-jet-model} and~\ref{hyp:true-frame-scalar}. For the same
+$T,u_0$ and each word $u$, $\mathcal K_m D_B\subseteq p^{G_B}I_m$.
+\end{corollary}
+
+\begin{proof}
+In the frames of Hypothesis~\ref{hyp:true-jet-model} the determinant
+ratios have total valuation $\sum_v\gamma_v(\ell(L''_v)-\ell(L_v))$.
+This cancels the length factor of the step map. Proposition~\ref{prop:true-polynomials}
+and the full-lattice assertion of Hypothesis~\ref{hyp:true-jet-model}
+give \eqref{eq:chain-entry-inclusion}. Hypothesis~\ref{hyp:inert-kernel-integrality}
+supplies its jet bounds by Corollary~\ref{cor:inert-chain-jets}.
+Proposition~\ref{prop:true-hecke} supplies Hypothesis~\ref{hyp:chain-hecke}.
+Apply Theorem~\ref{thm:chain-divisibility}.
+\end{proof}
+
+For the source comparison in Hypothesis~\ref{hyp:chain-endpoints},
+consider a contributing $p\ne T_u$ and $M\subseteq I_0$. If
+$S'_v\ge S_v$ for $v\in B$, the corresponding source module satisfies
+\[
+ P(M)=\sum_{C\subseteq B}y_C^m
+        \bigl(p^{\sum_{v\in B\setminus C}S'_v}M\bigr)\subseteq D_B .
+\]
+The construction of \citep[Theorem~12.18 and Definition~12.20]{adriazola-grh}
+takes an intersection $\Lambda\subseteq P(M)$ and then sets
+$N_{u,\mathfrak p}=\pi^{-\lfloor e s_u(\mathfrak p)\rfloor}\Lambda$.
+For this realization the source inclusion holds with
+$a=\max(0,\lfloor e s_u(\mathfrak p)\rfloor/e)$.
+The target inclusion is equivalent to
+$v_p(P_u(F)(r_0))\ge-b$ on generators $F$ of $I_m$ and $r_0$ of
+$R_{\mathfrak p}$. Identifying this source and controlling the two
+losses for the prescribed period map remain the endpoint input
+of Hypothesis~\ref{hyp:chain-endpoints}.

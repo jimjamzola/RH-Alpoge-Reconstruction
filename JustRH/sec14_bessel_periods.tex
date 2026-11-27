@@ -1,0 +1,217 @@
+\section{Bessel periods at the chosen shift}\label{sec:bessel-periods}
+
+Keep $T,u_0$ and all the words of \S\ref{sec:period-slopes}. At one
+complex embedding $v$ put $X_u=(N_u)_v$ and $Y=R_v$, so $C_v=Y^\vee$.
+We compare the periods of the theta chain with Bessel periods and
+estimate how much the Gram bounds change on restricting the columns
+to $X_u$.
+
+\subsection{Unfolding the period}
+
+Write $F_0=E^+$ and let $\mathbb A$ denote its adeles. Let $G$ be the
+unitary group on the Bessel side of the theta correspondence over $F_0$.
+Put $[J]=J(F_0)\backslash J(\mathbb A)$ for an algebraic group $J$.
+For one word let $S=N\rtimes H_0$ be its Bessel
+subgroup. Here $N$ is unipotent, $H_0$ is a definite unitary group
+and $\psi$ is an $H_0(\mathbb A)$-invariant unitary character of
+$N(\mathbb A)$ trivial on $N(F_0)$. Use compatible Haar and quotient
+measures, with $ds=dn\,dh$. The quotients $[N]$ and $[H_0]$ are compact
+\citep[Lemma~14.4]{adriazola-grh}.
+
+Fix a compact open level $K_f$ with unitary character $\chi$ and a
+finite adelic representative $t_u$. A column $T'$ assigns to a vector
+$\xi$ in its archimedean coefficient space a function $T'(\xi)$ on
+$[H_0]$, linearly, with $|T'(\xi)(h)|\le C_{T'}\|\xi\|$.
+Take a left $S(F_0)$-invariant seed $\Phi_{u,T'}$, right
+$(K_f,\chi)$-equivariant, supported at finite places on
+$S(\mathbb A_f)t_uK_f$, with
+\[
+ \Phi_{u,T'}\bigl(nh(g_\infty,t_u)\bigr)
+      =\psi(n)\,T'(W_u(g_\infty))(h),\qquad
+ \int_{S_\infty\backslash G_\infty}\|W_u(g_\infty)\|\,d\nu<\infty .
+\]
+The seed and the norm in the integral are taken with the equivariance
+of \citep[\S14.2.1]{adriazola-grh}. Put
+\[
+ \mathcal P_uT'(g)=\sum_{\gamma\in S(F_0)\backslash G(F_0)}
+                         \Phi_{u,T'}(\gamma g),\qquad
+ c_u=\operatorname{vol}\bigl(S(\mathbb A_f)\backslash
+                                      S(\mathbb A_f)t_uK_f\bigr).
+\]
+The image of $t_uK_f$ in the quotient is compact and open, so
+$0<c_u<\infty$.
+
+\begin{lemma}\label{lem:bessel-unfold}
+The series converges absolutely almost everywhere and lies in $L^1([G])$.
+For a bounded row $\theta$ on $[G]$ of right type $(K_f,\chi)$,
+\begin{equation}\label{eq:bessel-unfold}
+ \int_{[G]}\overline{\theta}\,\mathcal P_u T'
+ =c_u\int_{S_\infty\backslash G_\infty}\int_{[H_0]}\int_{[N]}
+     \overline{\theta(nh(g_\infty,t_u))}
+     \,\psi(n)\,T'(W_u(g_\infty))(h)\,dn\,dh\,d\nu .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Unfold the sum of absolute values over a fundamental domain for
+$G(F_0)$. Its integral equals $\int_{S(F_0)\backslash G(\mathbb A)}
+|\Phi_{u,T'}|$. Integrate first over $[S]$, then over
+$S(\mathbb A)\backslash G(\mathbb A)$. The finite orbit contributes
+$c_u$, and the integral is at most
+$c_u\operatorname{vol}[N]\operatorname{vol}[H_0]C_{T'}\int\|W_u\|\,d\nu$.
+Multiplication by a bounded row preserves integrability. The two right
+characters in $\overline{\theta}\Phi_{u,T'}$ cancel, so unfolding this
+product gives \eqref{eq:bessel-unfold}.
+\end{proof}
+
+\subsection{From the theta periods to the rows}
+
+Let $\mathcal H$ be the finite-dimensional space cut out by the
+projector for the chosen discrete-series coefficient at infinity and
+the finite-level idempotent. Put $D'=\dim\mathcal H$. Its Petersson inner product is
+conjugate linear in the first variable. Write $\mathcal C_u$ for the
+full column space of dimension $n_u$, and $d_u=\dim X_u$ for the
+number of columns retained at $T_u$.
+
+\begin{hypothesis}[\openinput]\label{hyp:bessel-transfer}
+At the chosen embedding the words have seeds as above, with
+$\mathcal P_u(\mathcal C_u)\subseteq\mathcal H$. There is one
+conjugate-linear embedding $j:Y\to\mathcal H$ with bounded
+rows, and for each word a linear identification $i_u:X_u\to
+\mathcal C_u$ onto its prescribed type at $T_u$. These identifications
+include the translations and normalizations of the theta chain.
+For each $u$, every linear relation among the values
+$(B_{u,v}\phi)(y)$ transfers by the theta seesaw identity to the same
+relation among the inner Bessel periods in \eqref{eq:bessel-unfold},
+with $T'=i_u\phi$ and $\theta=j(y)$, for almost every $g_\infty$.
+\end{hypothesis}
+
+Choose coordinates $I_u:\mathbb C^{d_u}\to X_u$ for which $i_uI_u$
+is an isometry in the column norm. Define
+\[
+ A_u=c_u^{-1/2}\mathcal P_u i_u I_u,\qquad
+ (\rho z)(y)=\langle j(y),z\rangle_{\mathcal H}.
+\]
+The map $\rho:\mathcal H\to Y^\vee$ is linear and onto since $j$ is
+conjugate linear and injective. Use orthonormal coordinates on $\mathcal H$.
+
+\begin{proposition}\label{prop:bessel-rows}
+Under Hypothesis~\ref{hyp:bessel-transfer} there are scalars $\kappa_u$
+such that $\rho A_u=\kappa_u B_{u,v}I_u$. Under
+Hypothesis~\ref{hyp:period-maps}, for every real $a$ this gives
+\begin{equation}\label{eq:bessel-filtered-rows}
+ \rho A_u I_u^{-1}\bigl(((N_u)_{\ge a+h_u})_v\bigr)
+       \subseteq (C_{\ge a})_v .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+On $X_u\otimes Y$ the two linear functionals are
+$L(\phi\otimes y)=(B_{u,v}\phi)(y)$ and
+$M(\phi\otimes y)=c_u^{-1/2}\langle j(y),\mathcal P_u i_u\phi\rangle$.
+Lemma~\ref{lem:bessel-unfold} integrates the transferred relations,
+so $\ker L\subseteq\ker M$. Thus $M=\kappa_u L$, also when $L=0$.
+Apply Lemma~\ref{lem:period-filtration} and multiply by $\kappa_u$.
+\end{proof}
+
+For a nonzero $B_u$, one nonzero row pairing gives $\kappa_u\ne0$
+and hence \eqref{eq:period-rows} with $J_u=\kappa_u I_u$.
+The proof of Theorem~\ref{thm:period-mean} uses only
+\eqref{eq:bessel-filtered-rows}, which also holds for $\kappa_u=0$.
+
+\subsection{The restricted Gram matrices}
+
+Put $K_{uw}=(c_uc_w)^{-1/2}\mathcal P_u^*\mathcal P_w$,
+$\Delta_S=\sum_u n_u$ and $\vartheta=\Delta/\Delta_S$.
+Let $D^*>0$ be the product of the archimedean formal degree, the
+volume of $[G]$ and the value at the identity of the level idempotent.
+Put $\lambda=D^*/\Delta_S$. The full column estimates used below are
+\begin{align}
+ \sum_u\|K_{uu}-I_{n_u}\|_{\rm HS}^2
+    &\le\tau^2\Delta_S,\label{eq:bessel-diag}\\
+ \sum_{u\ne w}\|K_{uw}\|_{\rm HS}^2
+    &\le (1+\alpha)\Delta_S^2/D^*,\qquad
+       D'\le(1+\beta)D^* .\label{eq:bessel-mixed}
+\end{align}
+The mixed sum counts ordered pairs. Take $\tau,\alpha,\beta\ge0$.
+
+\begin{lemma}\label{lem:bessel-compression}
+Assume \eqref{eq:bessel-diag}--\eqref{eq:bessel-mixed} and set
+$e=\tau^2/\vartheta\le1/4$. Then \eqref{eq:period-gram} holds with
+\begin{equation}\label{eq:bessel-eta}
+ 1+\eta=\frac{1+\beta}{(1-\sqrt e)^2}
+ \left(\frac{1+\alpha}{\vartheta^2}
+                  +\frac{\lambda(1+\sqrt e)^2}{\vartheta}\right).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Writing $V_u=i_uI_u$ gives $A_u^*A_w=V_u^*K_{uw}V_w$.
+Compression by isometries contracts the Hilbert--Schmidt norm and
+$V_u^*I_{n_u}V_u=I_{d_u}$. This proves the first bound of
+\eqref{eq:period-gram}. For $Q=\sum_u A_uA_u^*$, Cauchy--Schwarz gives
+$|\operatorname{tr}Q-\Delta|\le\sqrt e\,\Delta$.
+The triangle inequality on block diagonal matrices gives
+\[
+ \sum_u\|A_u^*A_u\|_{\rm HS}^2\le(1+\sqrt e)^2\Delta.
+\]
+Add the compressed mixed sum to bound $\operatorname{tr}(Q^2)$.
+Multiplying by $D'/(\operatorname{tr}Q)^2$ gives \eqref{eq:bessel-eta}.
+\end{proof}
+
+Suppose the diagonal kernel unfolds as $K_{uu}=I_{n_u}+L_u+Z_u$,
+where $Z_u$ is the degenerate contribution, and that for
+$\Gamma_0>0$, $\xi\ge0$ and $C_0\ge1$ one has
+\[
+ \|L_u\|_{\rm HS}^2\le\Gamma_0 n_u^2/D^*,\qquad
+ \|Z_u\|_{\rm HS}^2\le\xi n_u,\qquad
+ n_u\Gamma_0^2\le C_0 D^* .
+\]
+Then \eqref{eq:bessel-diag} holds with
+$\tau=\sqrt{C_0/\Gamma_0}+\sqrt\xi$ by the triangle inequality.
+For $u\ne w$, the pair bound
+$\|K_{uw}\|_{\rm HS}^2\le(1+\alpha)n_un_w/D^*$ gives the mixed sum
+in \eqref{eq:bessel-mixed} by summation. On the theta family these
+estimates require control of the main, loop, nongeneric and degenerate
+orbital terms in the Gram expansion
+\citep[Proposition~14.65 and Hypotheses~14.71--14.76]{adriazola-grh}.
+
+\begin{hypothesis}[\openinput]\label{hyp:bessel-estimates}
+On the chosen windows the Bessel kernels of
+Hypothesis~\ref{hyp:bessel-transfer} satisfy
+\eqref{eq:bessel-diag}--\eqref{eq:bessel-mixed}. For a fixed $C_H>0$
+put $\sigma=x^{-C_H}$. Their row and column multiplicities and the
+cutoff $H$ of \S\ref{sec:period-slopes} satisfy
+\[
+ D\ge D'/2,\qquad H\le b/\sigma,\qquad \lambda\le\sigma,\qquad
+ \tau+\alpha+\beta+1-\vartheta=o(\sigma)
+\]
+as $x$ increases, uniformly over the required mesh points.
+\end{hypothesis}
+
+Two counts suffice for the column conditions. If
+$n_u\ge D^*/(C_0\Gamma_0^2)$ for every word and
+$|W|\ge C_0\Gamma_0^2/\sigma$, summation gives $\lambda\le\sigma$.
+If $T_u\ge b$ and $d_u\ge(1-2f/T_u)n_u$, then
+$1-\vartheta\le2f/b=o(\sigma)$ since $f=2n$ grows polynomially in $x$
+\citep[Lemmas~13.12 and~13.19]{adriazola-grh}.
+
+\begin{corollary}\label{cor:bessel-mean}
+Under Hypotheses~\ref{hyp:period-maps}, \ref{hyp:bessel-transfer}
+and~\ref{hyp:bessel-estimates}, the period maps at the chosen shift
+satisfy \eqref{eq:acct-mean} with $e_3\le 8U+12b$ for all sufficiently
+large mesh points.
+\end{corollary}
+
+\begin{proof}
+We have $\sqrt e=o(\sigma)$ and $\vartheta=1-o(\sigma)$. Expanding
+\eqref{eq:bessel-eta} gives $\eta\le\lambda+o(\sigma)$ uniformly.
+Hence $(\eta+4\sqrt e)H\le6b$ for large $x$. Use
+\eqref{eq:bessel-filtered-rows} on the subspaces in the proof of
+Theorem~\ref{thm:period-mean}. Since $1-\delta=D/D'\ge1/2$,
+\eqref{eq:period-error} gives the assertion.
+\end{proof}
+
+The source spread $U$ still enters through \eqref{eq:period-spread}.
+Its bound and the heights in Hypothesis~\ref{hyp:period-maps} must
+use the metrics of these same words.

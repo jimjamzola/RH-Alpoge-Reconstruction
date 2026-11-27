@@ -1,0 +1,261 @@
+\section{The heights of the period maps}\label{sec:heights}
+
+Fix the weights, nodes and shift of \S\ref{sec:theta-chain}. The same
+$h_u$ must bound the height of $B_u$ in \S\ref{sec:period-slopes} and
+satisfy \eqref{eq:acct-height}. We compute the contribution of the CM
+period to this bound, then treat the auxiliary prime and the base
+lattice in \eqref{eq:acct-prime} and \eqref{eq:acct-base}.
+
+\subsection{The CM period and the signatures}
+
+Put $L=x^\varepsilon$, $a=xb$, and let $D_E$ denote the root
+discriminant of $E$. For the differential of
+\S\ref{sec:inert-kernel}, the doubled slope of each CM coordinate line is
+\[
+ \ell=\log\Omega=\gamma+\log(\pi/v)-\lambda_1,\qquad v=D_E/2.
+\]
+This includes the finite contribution $-\log(D_E/\sqrt d)$.
+On the windows of Proposition~\ref{prop:field-window}, $\ell<0$ for
+large $x$ and $|\ell|=o(L)$. Indeed $\sqrt d\le D_E\le4nqd$ by the
+discriminant formula in the towers through $K$ and through
+$\mathbb Q(\zeta_{4nqd})$. In the proof of that proposition
+$|\lambda_1|\ll J\log U$, while $\log d\gg U^{\varepsilon/5}\log^2 U$
+and $\log(4nqd)=o(L)$ on $[U,U^J]$ for fixed $J$.
+
+At lift $j$ the prescribed signature is
+$(p_j,q_j)=(k+j-1,m-j)$
+\citep[\S15.14]{adriazola-grh}. Write $w_{j\rho}=w_j(\rho)$. Then
+\begin{equation}\label{eq:height-signature}
+ \sum_{j,\rho}(p_j-q_j-k)w_{j\rho}
+      =\frac{f h_0m(m^2-1)}6=:\mathcal S .
+\end{equation}
+Indeed $p_j-q_j-k=2j-m-1$ has sum zero over $1\le j\le m$.
+In \eqref{eq:chain-nodes} the term $b_1(\rho)$ drops out, and
+$\sum_j(2j-m-1)(j-\tfrac12)=m(m^2-1)/6$. In particular
+$\mathcal S\ell\le0$ on these windows.
+
+\subsection{The height and the target slope}
+
+Write $\mathbb E_\sigma$ for the average over all embeddings of the
+coefficient field $F$. All operator norms below use the frames of the
+factorization $B_u=P_uK_{m,u}\cdots K_{1,u}$. On $R_\sigma$ take a
+reference form and an orthogonal decomposition into base types $z$.
+In the true form let the squared norm on type $z$ be the reference
+squared norm times $\kappa_\sigma\prod_j\lambda_{jz\sigma}$, with
+positive factors and the same orthogonal decomposition. Put
+\[
+ c=\mathbb E_\sigma\log\kappa_\sigma,\qquad
+ b_{\rm fr}=\mathbb E_\sigma\min_z\sum_j\log\lambda_{jz\sigma},
+\]
+where the minimum uses nonzero types. Submultiplicativity and the
+inverse factors on $R_\sigma^\vee$ give, for $B_u\ne0$,
+\begin{equation}\label{eq:height-product}
+ \operatorname{ht}(B_u)\le
+ \mathbb E_\sigma\log\|P_{u,\sigma}\|_{\rm ref}^2+
+ \sum_j\mathbb E_\sigma\log\|K_{j,u,\sigma}\|^2-b_{\rm fr}-c .
+\end{equation}
+Indeed the true squared dual norm of a functional is the sum of its
+reference squared norms on the types divided by the respective factors.
+
+Let $\phi(y)=y\log y-y$ for $y>0$ and $\phi(0)=0$.
+For a word $u$, let $\nu_{j\rho i}$ be the nonnegative row degrees
+of the kernel polynomial and $b_{j\rho}$ the logarithmic hook factors
+of its frame. Write $a_\rho^\circ=a_t$ at a top $(0,0,t)$ and zero
+elsewhere. Suppressing $u$ in the subscripts, put
+\begin{align*}
+ n_{j\rho}&=\sum_i\nu_{j\rho i},&
+ \Delta_u^n&=\sum_{j,\rho}(n_{j\rho}-a_\rho^\circ-k w_{j\rho}),\\
+ \Delta_u^\phi&=\sum_{j,\rho}
+       \left(\sum_i\phi(\nu_{j\rho i})-b_{j\rho}
+                                      -\phi(a_\rho^\circ)\right).
+\end{align*}
+
+\begin{hypothesis}[\openinput]\label{hyp:height-norms}
+For the prescribed kernels and the pairing on the lattices of
+\S\ref{sec:inert-gain}, the frames above realize the following
+bounds with nonnegative allowances whenever $B_u\ne0$.
+\begin{align*}
+ \mathbb E_\sigma\log\|K_{j,u,\sigma}\|^2
+ &\le \sum_\rho\left(\sum_i\phi(\nu_{j\rho i})-n_{j\rho}\ell\right)
+           +e_{K,j,u},\\
+ \mathbb E_\sigma\log\|P_{u,\sigma}\|_{\rm ref}^2
+ &\le -A\log T_u+e_{P,u},\qquad
+ b_{\rm fr}\ge\sum_{j,\rho}b_{j\rho}-e_{{\rm fr},u}.
+\end{align*}
+For the common target $C=R^\vee$ in the same metric one has
+\[
+ \mu(C)-c-\mathcal L\le
+       \ell\sum_{j,\rho}(p_j-q_j)w_{j\rho}+e_R,
+\]
+with the finite correction $\mathcal L$ of \S\ref{sec:inert-gain}.
+The row degrees, hook factors and allowances are specified for all
+words, with
+\[
+ e_R+e_{P,u}+e_{{\rm fr},u}+\sum_j e_{K,j,u}
+                +\Delta_u^\phi+|\ell|\,(\Delta_u^n-\mathcal S)_+
+       \ll_\varepsilon L\mathcal B
+\]
+uniformly on the windows.
+\end{hypothesis}
+
+The kernel comparison uses the normalized theta derivatives in the CM
+coordinate lines. The target comparison requires the signed covolume
+bound for the base types and their passage to $R$. The upper bound for
+$\mu_{\max}(R)$ used in the cutoff of \S\ref{sec:period-slopes} controls
+a different slope \citep[Hypotheses~15.10--15.12, 15.16, 15.18
+and Theorem~15.70]{adriazola-grh}.
+
+\begin{theorem}\label{thm:height-account}
+Under Hypothesis~\ref{hyp:height-norms} there are $h_u$ with
+$h_u+A\log T_u$ independent of $u$ and $\operatorname{ht}(B_u)\le h_u$
+whenever $B_u\ne0$. They satisfy \eqref{eq:acct-height} with
+$e_4\ll_\varepsilon L\mathcal B$.
+\end{theorem}
+
+\begin{proof}
+Put $E_u^{\infty}=e_{P,u}+e_{{\rm fr},u}+\sum_j e_{K,j,u}$ and
+\[
+ t_u=-A\log T_u-c+E_u^{\infty}+
+      \sum_{j,\rho}\left(\sum_i\phi(\nu_{j\rho i})-b_{j\rho}
+                                                   -n_{j\rho}\ell\right).
+\]
+By \eqref{eq:height-product}, $\operatorname{ht}(B_u)\le t_u$ for
+each nonzero $B_u$. Add the bound for $\mu(C)-c-\mathcal L$.
+The top terms give $m\sum_t(\phi(a_t)-a_t\ell)=H_\Omega$, and
+\eqref{eq:height-signature} gives exactly
+\[
+ \mu(C)+t_u-\mathcal L+A\log T_u-H_\Omega
+ \le e_R+E_u^\infty+\Delta_u^\phi+(\mathcal S-\Delta_u^n)\ell .
+\]
+As $\ell<0$, the last term is at most $|\ell|(\Delta_u^n-\mathcal S)_+$.
+Take $h_*=\max_u(t_u+A\log T_u)$ and $h_u=h_*-A\log T_u$.
+These dominate the $t_u$ and give the same maximum on the left.
+The positive part of that maximum is an admissible $e_4$.
+\end{proof}
+
+With this choice the spread required in \eqref{eq:period-error} is
+\[
+ U=\max_u\bigl(\mu_{\max}(N_u)+A\log T_u\bigr)
+                      -\langle\mu(N_u)+A\log T_u\rangle.
+\]
+The common $h_*$ cancels. The integral inclusions and the frame
+estimates of \S\S\ref{sec:period-slopes}--\ref{sec:bessel-periods}
+are still required on these lattices.
+
+\subsection{The auxiliary prime}
+
+Use the full column dimension $n_u$ and the formal degree budget $D^*$
+of \S\ref{sec:bessel-periods}. Put $r=k+m-1$, $g=\log(g_0g_1)$ for
+the two auxiliary level primes, and
+\[
+ d_u^*=\operatorname{mass}(k)I_\Pi
+       \prod_{\rho\in\Phi}\dim(\lambda^{\rm col}_{u,\rho}),\qquad
+ X_u=(D^*/d_u^*)^{1/(fk)} .
+\]
+Here $\operatorname{mass}(k)$ is the mass of the unimodular hermitian
+genus, $I_\Pi$ is the column level index and $\dim$ is Weyl's formula
+on the shifted highest weight.
+
+\begin{hypothesis}[\openinput]\label{hyp:height-dimensions}
+The row and column parameters of the chosen words satisfy the spacing,
+interlacing and size conditions (P1)--(P4), the mass formula and the
+target dimension comparison of
+\citep[Proposition~15.25]{adriazola-grh} with the nodes
+\eqref{eq:chain-nodes} and this $D^*$. For their prescribed primes
+$T_u$ the full columns satisfy
+\[
+ \frac{D^*}{C_0\Gamma_0^2}\le n_u\le d_u^*(T_u^k-1)^f,\qquad
+ \log\Gamma_0\le fk,\qquad \log T_u\ll_\varepsilon mL ,
+\]
+with $C_0\ge1$ fixed and $\Gamma_0=\Gamma_0(x)\ge1$ as in the column count of
+\S\ref{sec:bessel-periods}.
+\end{hypothesis}
+
+\begin{proposition}\label{prop:height-prime}
+Under Hypothesis~\ref{hyp:height-dimensions}, \eqref{eq:acct-prime}
+holds with $e_6\ll_\varepsilon L(1+m^2/k)$.
+\end{proposition}
+
+\begin{proof}
+The cited Weyl and mass comparison gives
+\[
+ \log X_u\ge\sum_j\log(\bar w_j v/\pi)+mg
+                              -O_\varepsilon\bigl(L(1+m^2/k)\bigr).
+\]
+In that comparison the factors $\prod_{s=k}^{r-1}s!$ in the consecutive
+masses cancel the denominators in the ratio of Weyl dimensions.
+The size conditions $m\le x$, $k\le x^{O(1)}$ and
+$\pi\le v\le e^L$ hold here by \eqref{eq:arithmetic-ranks} and the
+discriminant bounds above. Since $n_u\le d_u^*T_u^{fk}$, its lower
+bound gives
+\[
+ \log T_u\ge\log X_u-\frac{\log C_0+2\log\Gamma_0}{fk}.
+\]
+The last loss is at most $2+(\log C_0)/(fk)$.
+\end{proof}
+
+\subsection{The base lattice}
+
+Write $\lambda_\rho=(\lambda_{\rho1},\ldots,\lambda_{\rho k})$ for
+the dominant level-zero weight of a word and
+$\nu_\rho=\lambda_\rho-\lambda_{\rho k}(1,\ldots,1)$.
+For a weight $\lambda$, write $|\lambda|=\sum_i\lambda_i$, including
+its signs.
+
+\begin{hypothesis}[\openinput]\label{hyp:height-base}
+The actual $M_u$ of \S\ref{sec:inert-gain} is the orthogonal sum over
+lattice classes $c'$ of $\bigotimes_{\rho\in\Phi}
+\mathbb S_{\lambda_\rho}Q_{c',\rho}$ with the integral Weyl lattices
+and the Fock norms normalized at the highest weight vector. The
+$Q_{c',\rho}$ are metrized base changes of rank-$k$ hermitian
+$\mathcal O_E$-lattices $L_{c'}\subseteq L_{c'}^\#$ whose hermitian
+duals satisfy $[L_{c'}^\#:L_{c'}]=T_u^{2f}$. The $\lambda_\rho$
+have the signed weight bounds of \S\ref{sec:theta-chain}.
+\end{hypothesis}
+
+\begin{proposition}\label{prop:height-base}
+Under Hypotheses~\ref{hyp:height-dimensions} and~\ref{hyp:height-base},
+\eqref{eq:acct-base} holds with
+$e_7\ll_\varepsilon N_T aL(1+m/k)$.
+\end{proposition}
+
+\begin{proof}
+Duality negates the slope. The index contributes
+$2\log(T_u^{2f})/([E:\mathbb Q]k)$ to the slope difference, hence
+$\mu(Q_{c',\rho})=-\log T_u/k$. The determinant character of
+$\mathbb S_\lambda$ in rank $k$ is
+$\det^{|\lambda|\dim(\mathbb S_\lambda)/k}$, as one sees on scalar
+matrices. Taking determinants, then tensor products and the
+orthogonal sum of equal-slope terms, gives
+\[
+ \mu(M_u)=-\frac{\log T_u}{k}\sum_\rho|\lambda_\rho|
+                       +\sum_\rho\mu_{\rm std}(\nu_\rho).
+\]
+Here $\mu_{\rm std}(\nu)$ is the slope of the Weyl module of weight
+$\nu$ on the standard rank-$k$ lattice with its normalized Fock norm.
+Its lower bound is
+\[
+ \mu_{\rm std}(\nu)\ge
+       -|\nu|\log k-\tfrac12k(k-1)\log(\nu_1+k)
+\]
+by the hook determinant and the integral Gram bound
+\citep[Lemma~15.29 and Proposition~15.30]{adriazola-grh}.
+
+At a top, the first entry is $a_t$ and the last is $-b_t$. All other
+entries there and all entries elsewhere are $O(b')$, since the common
+bound in \S\ref{sec:theta-chain} is at most the first node at any top,
+which is $O(b')$. Thus both $\sum_\rho(|\lambda_\rho|)_+$ and
+$\sum_\rho|\nu_\rho|$ are $O(N_Ta+fkb')=O(N_Ta)$, since
+$b'=a/Z$ and $Z$ dominates every fixed power of $x$. Likewise
+$fk^2\log(a+k)\ll N_TaL$. Insert these estimates and
+$\log T_u\ll_\varepsilon mL$ in the determinant formula.
+\end{proof}
+
+Since $A\le2N_Ta$ and $\mathcal B\ge N_Ta(1+m^2/k)$, the three
+estimates give
+\[
+ e_4+A e_6+e_7\ll_\varepsilon x^\varepsilon\mathcal B
+\]
+under Hypotheses~\ref{hyp:height-norms}, \ref{hyp:height-dimensions}
+and~\ref{hyp:height-base}. The finite correction $E_u$ in
+\eqref{eq:acct-local} remains to be estimated for the same words.

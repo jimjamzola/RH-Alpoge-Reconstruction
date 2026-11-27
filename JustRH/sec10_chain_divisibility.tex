@@ -1,0 +1,230 @@
+\section{Divisibility along the chain}\label{sec:chain-divisibility}
+
+Fix the mesh point, $T$ and $u_0$ of \S\ref{sec:theta-chain}, an
+auxiliary word $u$, and an inert prime $p$ as in \S\ref{sec:inert-divisibility}.
+Write $K_j=K_{j,u}$ and $\mathcal K_j=K_j\cdots K_1$, with
+$\mathcal K_0=1$. The bounds of Corollary~\ref{cor:inert-chain-jets}
+add across lifts once the output lattice of each lift is the input
+lattice of the next.
+
+\subsection{From the kernel to integral forms}
+
+Let $\mathcal V$ be the places $v\mid p$ of $E^+$ split in $E$.
+Write $g_{A,vj},g_{B,vj}$ for \eqref{eq:inert-base-gain} and
+\eqref{eq:inert-parity-gain} at lift $j$, and
+$\alpha_v=\sum_{s\ {\rm even}}\alpha_s$ at $v$. This last sum is
+independent of $j$ by \eqref{eq:chain-weights}. Use a discretely
+valued coefficient field in $\mathbb C_p$ with valuation ring
+$\mathcal O$ and uniformizer $\pi$, where $v_p(\pi)=1/e$.
+For a lattice $H$ put $p^bH=\pi^{\lceil eb\rceil}H$. Then
+$p^a(p^bH)\subseteq p^{a+b}H$.
+
+At level $j$ write $H_j(L)$ for the coefficient lattice in the frame
+of $L$, and $I_j$ for the forms with $F(L)\in H_j(L)$ at every $L$.
+The model uses products of minors of the highest weight at even
+positions and of its dual at odd positions, with the determinant
+twists of \citep[Definition~11.3]{adriazola-grh}. Fix $1\le r\le k/2$.
+At $v$ a Hecke edge of type $i\le r$ replaces $L_w$ by $\Lambda$ with
+$pL_w\subseteq\Lambda\subseteq L_w$ and
+$\dim_{\kappa(w)}L_w/\Lambda=i$, and takes the dual lattice at $\bar w$.
+Let $T^{\rm raw,(j)}_{v,i}$ sum over these edges. Type zero is the identity.
+Suppress $v$ in $\lambda_s=\lambda^{(0)}_{\tau_s}$ and $w_j(s)=w_j(\tau_s)$.
+For $j\ge1$ put
+\[
+ n^{(j)}_{v,i}=\sum_{s\ {\rm even}}\sum_{a=1}^{i}\lambda_s(a)
+                   +i\sum_{s\ {\rm odd}}w_j(s),\qquad
+ T^{(j)}_{v,i}=p^{n^{(j)}_{v,i}}T^{\rm raw,(j)}_{v,i}.
+\]
+
+For a choice of types $\mathbf i=(i_v)_v$, let $L''$ be reached from
+$L'$ by these edges. In the frames of $L,L''$, assign to each minor
+of height $h$ and column set $I$ in \S\ref{sec:inert-divisibility} the exponent
+\[
+ \begin{cases}
+ \min(h,i_v)-|I\cap[i_v]|,&s\ \text{even},\\
+ |I\cap[i_v]|,&s\ \text{odd}.
+ \end{cases}
+\]
+Here $[0]=\varnothing$. Write $E_v$ for the sum of these exponents at $v$.
+
+\begin{hypothesis}[\openinput]\label{hyp:chain-lattice-transfer}
+The lifts at $T,u_0$ have a common coefficient model with equivariant
+lattices $H_j(L)$. For every $j,u,L,L',L''$ as above, use the prescribed
+kernel of Hypothesis~\ref{hyp:inert-kernel-integrality} in the adapted
+frames. If every frame coefficient $c$ of every product of jets in
+Corollary~\ref{cor:inert-chain-jets} satisfies $v_p(c)+\sum_v E_v\ge b$,
+then the map of \eqref{eq:chain-class-sum} satisfies
+\begin{equation}\label{eq:chain-entry-inclusion}
+ p^{\sum_v n^{(j)}_{v,i_v}} A_j(L'',L)H_{j-1}(L)
+          \subseteq p^b H_j(L').
+\end{equation}
+\end{hypothesis}
+
+At even positions Cauchy--Binet gives the transfer from bounds for
+the individual row minors. Their relation to the frame coefficients
+is examined in \S\ref{sec:integral-lifts}. At odd positions the transfer
+uses the complementary minors in the dual
+representation and the determinant factor
+$(\det g/\det g')^{-w_j(s)}$ for the two changes of frame
+\citep[Theorem~11.35, Lemma~11.37 and Hypothesis~11.38]{adriazola-grh}.
+
+Set $d_j=\max_{[L]}v_p(|\operatorname{Stab}_{U_{j-1}}(L)|)$ over the
+source classes in \eqref{eq:chain-class-sum}, and put
+\[
+ b_{vj}(0)=\max\{g_{A,vj},g_{B,vj}-\alpha_v\},\qquad
+ b_{vj}(i)=g_{B,vj}\quad(1\le i\le r).
+\]
+\begin{lemma}\label{lem:chain-one-step}
+Assume Hypotheses~\ref{hyp:inert-kernel-integrality}
+and~\ref{hyp:chain-lattice-transfer}. For each choice of types,
+\[
+ \Big(\prod_v T^{(j)}_{v,i_v}\Big)K_j I_{j-1}
+       \subseteq p^{\sum_v b_{vj}(i_v)-d_j} I_j .
+\]
+In particular $\mathcal K_m I_0\subseteq
+p^{\sum_{j,v}b_{vj}(0)-\sum_j d_j}I_m$.
+\end{lemma}
+
+\begin{proof}
+For $i_v>0$ take $J=[i_v]$. An even height-one top contributes one
+to $E_v$ exactly when its index lies outside $J$. The other even
+contributions are nonnegative, and all odd contributions are
+$|I\cap J|$. Hence $E_v\ge N_J$. For $i_v=0$ we have $E_v=0$ and
+$N_\varnothing=\alpha_v$. Corollary~\ref{cor:inert-chain-jets} now
+gives $v_p(c)+\sum_v E_v\ge\sum_v b_{vj}(i_v)$ for this same product
+of jets. Apply \eqref{eq:chain-entry-inclusion} to each term of the
+edge sums and \eqref{eq:chain-class-sum}. Each term has one stabilizer
+denominator. Taking every type zero and iterating gives the last inclusion.
+\end{proof}
+
+\subsection{Transport of a Hecke operator}
+
+At level zero put
+\[
+ A_v=\sum_{s\ {\rm even}}\sum_{a=1}^r\lambda_s(a)
+        -\sum_{s\ {\rm odd}}\sum_{a=1}^r\lambda_s(k+1-a),
+ \qquad y_v=p^{A_v}T^{\rm raw,(0)}_{v,r}.
+\]
+The $y_v$ commute since their edges are at distinct places. In the
+stated lattice model $y_v I_0\subseteq I_0$ by the edge inclusion
+of \citep[Lemmas~11.4 and~11.8]{adriazola-grh}.
+Write $q_v=p^{\nu_v}$, so $\#\kappa(w)=q_v^2$, and set
+\[
+ D_{vj}(X)=\sum_{i=0}^r q_v^{-i(N_j-i)}T^{\rm raw,(j)}_{v,i}X^i .
+\]
+
+\begin{hypothesis}[\openinput]\label{hyp:chain-hecke}
+For the same word and frames, at every lift and orbit there are
+$\epsilon_{vj}\in\mathcal O^\times$ and $\eta_{vj}$ with
+$v_p(\eta_{vj})=\sum_{s\ {\rm even}}w_j(s)-\sum_{s\ {\rm odd}}w_j(s)$
+such that, modulo $X^{r+1}$,
+\begin{equation}\label{eq:chain-one-hecke}
+ D_{vj}(X)K_j =
+ \prod_{a=0}^{t_r}(1+\epsilon_{vj}\eta_{vj}q_v^{t_r-2a}X)
+ \,K_jD_{v,j-1}(\epsilon_{vj}X).
+\end{equation}
+\end{hypothesis}
+
+The split-lattice count gives \eqref{eq:chain-one-hecke} once the
+frame and determinant factors of $A_j$ vary with the two lattices by
+the prescribed length factors \citep[Proposition~10.13 and
+Hypothesis~11.22]{adriazola-grh}. Hypothesis~\ref{hyp:inert-kernel-integrality}
+controls the series for each pair separately.
+
+\begin{lemma}\label{lem:chain-hecke-price}
+Assume Hypothesis~\ref{hyp:chain-hecke}. There is an operator
+$Z_{vj}=\sum_{i=0}^r c_i T^{(j)}_{v,i}$ with $c_i\in\mathcal O$ and
+$v_p(c_0)\ge\alpha_v$, such that
+\[
+ Z_{vj}\mathcal K_j=\rho_{vj}\mathcal K_j y_v,\qquad
+ v_p(\rho_{vj})=\delta_{vj}
+      :=n^{(j)}_{v,r}-A_v+\nu_v r(N_j-N_0).
+\]
+\end{lemma}
+
+\begin{proof}
+Fix $v$ and suppress it. Write $P_j(X)$ for the scalar product in
+\eqref{eq:chain-one-hecke}, set $Q_0=1$,
+$Q_j(X)=P_j(X)Q_{j-1}(\epsilon_jX)$, and put $U_j=\prod_{\ell=1}^j\epsilon_\ell$.
+Iteration gives
+$D_j(X)\mathcal K_j=Q_j(X)\mathcal K_jD_0(U_jX)$ modulo $X^{r+1}$.
+Since $Q_j(0)=1$, multiply by $Q_j^{-1}$ and take the coefficient of $X^r$.
+After multiplication by $p^{n^{(j)}_r}q^{r(N_j-r)}$ the coefficients are
+\[
+ c_i=([X^{r-i}]Q_j^{-1})\,p^{n^{(j)}_r-n^{(j)}_i}
+              q^{r(N_j-r)-i(N_j-i)},\qquad
+ \rho_j=U_j^r p^{n^{(j)}_r-A}q^{r(N_j-N_0)} .
+\]
+The coefficient estimate of \citep[Theorem~11.33]{adriazola-grh}
+gives $v_p(c_i)\ge0$ and $v_p(c_0)\ge\alpha_v$. Its hypotheses are
+$2r\le k$, the weight bounds and increasing nodes of \S\ref{sec:theta-chain},
+and the displayed valuation of $\eta_{vj}$ in Hypothesis~\ref{hyp:chain-hecke}.
+The formula for $\delta_{vj}$ follows since $U_j$ is a unit.
+\end{proof}
+
+\subsection{The composite}
+
+Let $B\subseteq\mathcal V$ and $y_C=\prod_{v\in C}y_v$, with
+$y_\varnothing=1$. Put
+\[
+ h_{vj}=(g_{B,vj}-\delta_{vj}-g_{A,vj})_+,\qquad
+ S_v=\sum_{j=1}^m h_{vj},\qquad
+ D_B=\sum_{C\subseteq B} y_C^m
+       \bigl(p^{\sum_{v\in B\setminus C}S_v} I_0\bigr).
+\]
+Thus an orbit in $C$ supplies a Hecke factor for each lift. An orbit
+in $B\setminus C$ supplies the corresponding divisibility at the source.
+
+\begin{theorem}\label{thm:chain-divisibility}
+Assume Hypotheses~\ref{hyp:inert-kernel-integrality},
+\ref{hyp:chain-lattice-transfer} and~\ref{hyp:chain-hecke}. At the
+chosen $T,u_0$,
+\[
+ \mathcal K_m D_B\subseteq p^{G_B} I_m,\qquad
+ G_B=\sum_{j=1}^m\left(\sum_{v\in\mathcal V}g_{A,vj}-d_j\right)
+          +\sum_{v\in B}S_v .
+\]
+\end{theorem}
+
+\begin{proof}
+For $V\subseteq\mathcal V$, expand $\prod_{v\in V} Z_{vj}$.
+At $v\in V$ a positive edge gives $g_{B,vj}$ by Lemma~\ref{lem:chain-one-step}.
+The identity edge gives at least $g_{B,vj}-\alpha_v$, and its coefficient
+supplies $\alpha_v$ by Lemma~\ref{lem:chain-hecke-price}. Thus
+\[
+ \Big(\prod_{v\in V}Z_{vj}\Big)K_j I_{j-1}
+ \subseteq p^{\sum_{v\in V}g_{B,vj}+\sum_{v\notin V}g_{A,vj}-d_j}I_j .
+\]
+Fix $C\subseteq B$. Set $V_j=\{v\in C:h_{vj}>0\}$ and
+$a_j=\sum_v g_{A,vj}-d_j+\sum_{v\in C}h_{vj}$.
+We prove $\mathcal K_j y_C^j I_0\subseteq p^{\sum_{\ell\le j}a_\ell}I_j$
+by induction from $j=0$. For $F\in I_0$ put
+$W=y_C^{j-1}y_{C\setminus V_j}F$. The last factor preserves $I_0$.
+Commuting $y_{V_j}$ through the composite gives
+\[
+ \mathcal K_j y_C^j F
+   =\Big(\prod_{v\in V_j}\rho_{vj}^{-1}\Big)
+     \Big(\prod_{v\in V_j}Z_{vj}\Big)K_j\mathcal K_{j-1}W .
+\]
+The induction hypothesis applies to $\mathcal K_{j-1}W$. The last
+lift adds $\sum_{v\in V_j}(g_{B,vj}-\delta_{vj})
++\sum_{v\notin V_j}g_{A,vj}-d_j=a_j$. This proves the induction.
+For the summand indexed by $C$ in $D_B$, the initial scalar adds
+$\sum_{v\in B\setminus C}S_v$, giving $G_B$ in every summand.
+\end{proof}
+
+For the period map of \S\ref{sec:theta-chain}, fix a coefficient place
+$\mathfrak p\mid p$ and local loss allowances $a,b\ge0$.
+
+\begin{hypothesis}[\openinput]\label{hyp:chain-endpoints}
+At the chosen shift the source lattice and final pairing satisfy
+\[
+ N_{u,\mathfrak p}\subseteq p^{-a}D_B,\qquad
+ P_u(I_m)\subseteq p^{-b}R^\vee_{\mathfrak p}.
+\]
+\end{hypothesis}
+
+Under Hypothesis~\ref{hyp:chain-endpoints}, Theorem~\ref{thm:chain-divisibility}
+gives $B_u(N_{u,\mathfrak p})\subseteq p^{G_B-a-b}R^\vee_{\mathfrak p}$
+by $B_u=P_u\mathcal K_m|_{N_u}$. Thus the local bound for the period
+map depends on the two lattice losses at this same $u_0$.

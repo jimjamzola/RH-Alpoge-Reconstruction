@@ -1,0 +1,181 @@
+\section{The slopes of the period maps}\label{sec:period-slopes}
+
+Fix the weight set $T$, its weights and the shift $u_0$ at a mesh point of
+Hypothesis~\ref{hyp:one-shift-arithmetic}. Let $N_u$ be the source
+of \eqref{eq:loss-source} and $C=R^\vee$ the common target. Put
+\[
+ d_u=\operatorname{rk}N_u,\qquad \Delta=\sum_{u\in W}d_u,\qquad
+ D=\operatorname{rk}C,\qquad s=\langle\mu(N_u)-h_u\rangle .
+\]
+Inequality~\eqref{eq:acct-mean} asks how far $\mu(C)$ can fall below $s$.
+At each slope threshold we count the target directions missed by the
+period maps, then integrate the count.
+
+\subsection{The integral maps}
+
+Use the doubled slopes of \S\ref{sec:accounting}. For a hermitian
+lattice $L$ over the coefficient field $F$, write $\lambda_i(L)$ for
+its Harder--Narasimhan slopes, repeated by rank. Their mean is
+$\mu(L)$. The saturated sublattice $L_{\ge a}$ has rank
+$\#\{i:\lambda_i(L)\ge a\}$. Its nonzero quotients by saturated
+sublattices have slope at least $a$, and every nonzero sublattice of
+$L/L_{\ge a}$ has slope strictly below $a$
+\citep[\S5]{gaudron-pentes}. Give sublattices and quotients the
+induced and quotient norms, respectively. For a nonzero rational map
+$B$ put
+\[
+ \operatorname{ht}(B)=[F:\mathbb Q]^{-1}
+   \sum_{\sigma:F\hookrightarrow\mathbb C}\log\|B_\sigma\|_{\rm op}^{\,2}.
+\]
+
+\begin{hypothesis}[\openinput]\label{hyp:period-maps}
+For every word $u$ the composite $B_u=P_uK_{m,u}\cdots K_{1,u}$ of
+\S\ref{sec:theta-chain} is defined over $F$. It satisfies
+$B_u(N_u)\subseteq C$ and $\operatorname{ht}(B_u)\le h_u$ when
+$B_u\ne0$, with the metrics and $h_u$ of \eqref{eq:acct-height}.
+\end{hypothesis}
+
+By \eqref{eq:loss-source} the integral inclusion is equivalent to
+\[
+ B_u(\Lambda_{uw})\subseteq
+       \pi_w^{\lfloor e_wz_{uw}\rfloor}C_w
+       \qquad\text{at every finite place }w.
+\]
+At the inert primes this tests the final pairing of
+Hypothesis~\ref{hyp:chain-endpoints} on the rescaled source.
+
+\begin{lemma}\label{lem:period-filtration}
+Under Hypothesis~\ref{hyp:period-maps},
+$B_u((N_u)_{\ge a+h_u})\subseteq C_{\ge a}$ for every real $a$.
+\end{lemma}
+
+\begin{proof}
+Project the indicated source to $C/C_{\ge a}$ by $B_u$. If its image
+$I$ is nonzero, the quotient $L$ of the source by the kernel has
+$\mu(L)\ge a+h_u$. The map $L\to I$ has operator norm at most
+$\|B_{u,\sigma}\|_{\rm op}$ at each embedding. Taking determinants gives
+$\mu(I)\ge\mu(L)-\operatorname{ht}(B_u)\ge a$, contradicting the
+slope bound for sublattices of $C/C_{\ge a}$.
+\end{proof}
+
+\subsection{The rank estimate}
+
+At one complex embedding $v$ of $F$, let
+$A_u:\mathbb C^{d_u}\to\mathbb C^{D'}$ be matrices in the standard
+hermitian norms, with $D'\ge D\ge1$. To represent the period maps they
+must satisfy
+\begin{equation}\label{eq:period-rows}
+ \rho A_u=B_{u,v}J_u \qquad (u\in W)
+\end{equation}
+for one surjection $\rho:\mathbb C^{D'}\to C_v$ and isomorphisms
+$J_u:\mathbb C^{d_u}\to (N_u)_v$. Here $L_v=L\otimes_{\mathcal O_F,v}
+\mathbb C$. Put $\delta=1-D/D'$ and $Q=\sum_u A_uA_u^*$.
+For $0\le e\le1/4$ and $\eta\ge0$ consider the bounds
+\begin{equation}\label{eq:period-gram}
+ \sum_u\|A_u^*A_u-I_{d_u}\|_{\rm HS}^2\le e\Delta,\qquad
+ \operatorname{tr}(Q^2)\le(1+\eta)\frac{(\operatorname{tr}Q)^2}{D'} .
+\end{equation}
+The square of the Hilbert--Schmidt norm is $\|A\|_{\rm HS}^2
+=\operatorname{tr}(A^*A)$.
+
+\begin{lemma}\label{lem:period-rank}
+Assume \eqref{eq:period-gram}. For subspaces
+$V_u\subseteq\mathbb C^{d_u}$ put $p=\Delta^{-1}\sum_u\operatorname{codim}V_u$.
+Then
+\[
+ \frac1{D'}\operatorname{codim}\sum_u A_uV_u
+       \le \eta+4\sqrt e+4p .
+\]
+\end{lemma}
+
+\begin{proof}
+Let $P$ project orthogonally onto $(\sum_u A_uV_u)^\perp$ and put
+$y=\operatorname{tr}P/D'$, $t=\operatorname{tr}Q$. By Cauchy--Schwarz,
+$|t-\Delta|\le\Delta\sqrt e$, so $t\ge\Delta/2$. Since $PA_u$ kills
+$V_u$, the same trace estimate on the orthogonal complements gives
+\[
+ \operatorname{tr}(PQ)=\sum_u\|PA_u\|_{\rm HS}^2
+ \le \sum_u\|A_u|_{V_u^\perp}\|_{\rm HS}^2
+ \le \Delta(p+\sqrt{pe}).
+\]
+On the other hand $\|Q-tI/D'\|_{\rm HS}^2\le\eta t^2/D'$ by
+\eqref{eq:period-gram}. Hence $\operatorname{tr}(PQ)/t\ge
+y-\sqrt{\eta y}$. Combining the bounds and using
+$2\sqrt{\eta y}\le y+\eta$ and $p\le1$ gives the claim.
+\end{proof}
+
+\subsection{The mean slope}
+
+Set $U=\max_u(\mu_{\max}(N_u)-h_u)-s\ge0$ and take
+$H\ge(s+\mu_{\max}(R))_+$. By duality $\mu_{\min}(C)=-\mu_{\max}(R)$.
+
+\begin{theorem}\label{thm:period-mean}
+Under Hypothesis~\ref{hyp:period-maps} and
+\eqref{eq:period-rows}--\eqref{eq:period-gram}, inequality
+\eqref{eq:acct-mean} holds with
+\begin{equation}\label{eq:period-error}
+ e_3=\frac{(\eta+4\sqrt e)H+4\min\{U,H\}}{1-\delta}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Write $a_{ui}=\lambda_i(N_u)-h_u$ and
+$p(t)=\Delta^{-1}\#\{(u,i):a_{ui}<s-t\}$. Apply
+Lemma~\ref{lem:period-rank} to the inverse images under $J_u$ of
+$((N_u)_{\ge s-t+h_u})_v$. By Lemma~\ref{lem:period-filtration}
+and \eqref{eq:period-rows}, $\rho$ sends their combined image into
+$(C_{\ge s-t})_v$. A surjection can only decrease codimension, so
+\[
+ \frac{\#\{i:\lambda_i(C)<s-t\}}D
+     \le\frac{\eta+4\sqrt e+4p(t)}{1-\delta}.
+\]
+The mean of the $a_{ui}$ is $s$. Thus
+\[
+ \int_0^H p(t)\,dt
+ \le\frac1\Delta\sum_{u,i}(s-a_{ui})_+
+ =\frac1\Delta\sum_{u,i}(a_{ui}-s)_+\le U .
+\]
+The integral is also at most $H$. Every target slope is at least $s-H$.
+Integrating the target count therefore bounds
+$D^{-1}\sum_i(s-\lambda_i(C))_+$ by \eqref{eq:period-error}.
+Since $s-\mu(C)$ is at most this mean, the result follows.
+\end{proof}
+
+The rescaling in \S\ref{sec:inert-gain} also bounds $U$. At $w\mid p$
+we have $\Lambda_{uw}\subseteq p^{\tau_p}M_{u,w}$, with
+$\tau_p=0$ off $\mathcal P$. Hence $N_u\subseteq\mathfrak b_u M_u$ for
+the fractional ideal $\mathfrak b_u$ with orders
+$e_w\tau_p-\lfloor e_wz_{uw}\rfloor$. Twisting each sublattice by
+$\mathfrak b_u$ adds $-2\sum_w\ell_w\operatorname{ord}_w(\mathfrak b_u)$
+to its slope. With the rounding term $R_u$ of Theorem~\ref{thm:loss-source},
+\[
+ \mu_{\max}(N_u)\le\mu_{\max}(M_u)+\Gamma+\mathcal L-E_u-R_u .
+\]
+Subtract the average of \eqref{eq:loss-second-error} after deducting
+$h_u$ from each source slope. The common $\Gamma+\mathcal L$ cancels,
+giving, under the hypotheses of Theorem~\ref{thm:loss-source},
+\begin{equation}\label{eq:period-spread}
+ U\le \max_u\bigl(\mu_{\max}(M_u)-E_u-h_u-R_u\bigr)
+        -\langle\mu^M-E-h\rangle+\langle e_{2,u}\rangle .
+\end{equation}
+
+\begin{hypothesis}[\openinput]\label{hyp:period-frame}
+At each required mesh point the normalized Bessel period columns of the
+same words, restricted to the prescribed type at $T_u$, realize
+\eqref{eq:period-rows} at one embedding. Their Gram matrices satisfy
+\eqref{eq:period-gram}. The bounds for $e,\eta,\delta,H$ and the source
+spread in \eqref{eq:period-spread} put \eqref{eq:period-error} within
+the $e_3$ allowance of \S\ref{sec:arithmetic-bound}, uniformly on the
+chosen windows.
+\end{hypothesis}
+
+For the Bessel periods of \citep[\S13]{adriazola-grh}, the second
+bound in \eqref{eq:period-gram} uses all pairs, since
+\[
+ \operatorname{tr}(Q^2)=\sum_{u,u'\in W}\|A_u^*A_{u'}\|_{\rm HS}^2,
+ \qquad \operatorname{tr}Q=\sum_{u\in W}\|A_u\|_{\rm HS}^2 .
+\]
+Under Hypotheses~\ref{hyp:period-maps} and~\ref{hyp:period-frame},
+Theorem~\ref{thm:period-mean} gives \eqref{eq:acct-mean} at the chosen
+shift. In particular, $D\ge D'/2$ and $(\eta+4\sqrt e)H\le6b$ give
+$e_3\le8U+12b$.

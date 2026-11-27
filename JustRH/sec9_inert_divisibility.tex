@@ -1,0 +1,257 @@
+\section{Divisibility at an inert prime}\label{sec:inert-divisibility}
+
+Fix $p$ as in \S\ref{sec:inert-kernel}. Write $v_p(p)=1$,
+$v_p(0)=+\infty$ and $\mathcal O=\mathcal O_{\mathbb C_p}$.
+Choose $\varpi^{p^2-1}=p$ and put
+\[
+ \rho_p=\frac1{p^2-1},\qquad
+ \gamma_p=\frac p{p^2-1}=\sum_{\substack{d\ge1\\d\ {\rm odd}}}p^{-d}.
+\]
+A derivative of order $D$ costs $\rho_pD$ on removing the scale
+$\varpi$. The factorials in the derivative supply $D/(p-1)$ up to a
+digit error. We compute how much of the difference survives at a top.
+
+\subsection{The differential operators}
+
+On one Frobenius orbit write $s\in\mathbb Z/2\nu\mathbb Z$ for its
+positions. Let $X_s=(X_{s,a,b})$ be an $r_0\times r_1$ matrix and
+$Y_s$ an $r_0\times r_0$ matrix of frame variables. For a sequence
+$I$ of $h$ distinct column indices put
+\[
+ M_{s,I}=\det (Y_sX_s)_{[h],I},\qquad [h]=\{1,\ldots,h\}.
+\]
+Let $P$ be a product of such minors, one for each column of the weight
+diagram at $s$, with $h$ its height. Fix a set $\mathcal T$ of tops.
+Let $\alpha_s$ count the height-one columns at $s\in\mathcal T$, and
+put $\alpha_s=0$ elsewhere. After removing these columns let $C_s$
+be the number of remaining columns and $B_s$ their total height.
+Thus $D=\deg_X P=\sum_s(\alpha_s+B_s)$. Write
+$d_p(0)=0$ and $d_p(n)=1+\lfloor\log_p n\rfloor$ for $n\ge1$. Put
+\[
+ \Delta=\sum_s\{r_1d_p(\alpha_s)+r_0r_1d_p(B_s)\}
+             +\sum_{s\in\mathcal T}d_p(\alpha_s)^2 .
+\]
+
+For $s\in\mathcal T$ let $E_s\subset\{1,3,\ldots,2\nu-1\}$ consist
+of the least positive displacements from $s$ to tops of opposite parity.
+Set $(z)_+=\max(z,0)$ and define
+\begin{align}
+ g_A&=\sum_{s\in\mathcal T}
+       \sum_{\substack{d\ge1\ {\rm odd}\\d\notin E_s}}
+       (\alpha_s p^{-d}-C_{s+d})_+-\Delta ,
+       \label{eq:inert-base-gain}\\
+ g_B&=\gamma_p\sum_{s\in\mathcal T_{\rm ev}}\alpha_s
+       +\sum_{s\in\mathcal T_{\rm odd}}\ \sum_{d\ge1\ {\rm odd}}
+       (\alpha_s p^{-d}-C_{s+d})_+-\Delta .
+       \label{eq:inert-parity-gain}
+\end{align}
+The position $s+d$ is cyclic. The exclusion $d\in E_s$ uses the
+integer $d$ itself.
+
+For $J\subset[r_1]$ let $N_J$ count the removed columns with index
+outside $J$ at even tops or inside $J$ at odd tops. Add to this
+the sum of $|I\cap J|$ over the remaining minors at odd positions.
+In particular $N_\varnothing=\sum_{s\in\mathcal T_{\rm ev}}\alpha_s$.
+
+For coefficients $\upsilon_s\in\mathcal O$ put
+\[
+ S_{s,a,b}=\sum_{l\ge0}(-1)^l X_{s-2l,a,b}^{p^{2l}},\qquad
+ h_\upsilon=\sum_{s,a,b}\upsilon_s S_{s,a,b}^{\,p}S_{s+1,a,b}.
+\]
+Write $\Theta_1\in\mathcal C(h)$ if
+$\Theta_1=\sum_{i\ge0}p^{-i}h^i U_i$ with $U_i\in\mathcal O[[X]]$.
+Here $h(0)=0$, so each degree uses finitely many $i$. We use the
+orbit estimate of \citep[Theorem~9.6]{adriazola-grh} in the following form.
+
+\begin{theorem}\label{thm:inert-valuation}
+Suppose $\Theta(\varpi X)\in\mathcal C(h_\upsilon)$. Every coefficient
+$c$ in the frame variables of $\langle P,\Theta\rangle
+:=(P(\partial_X)\Theta)(0)$ satisfies
+\begin{equation}\label{eq:inert-valuation}
+       v_p(c)\ge g_A,\qquad v_p(c)+N_J\ge g_B
+       \quad(J\subset[r_1]).
+\end{equation}
+\end{theorem}
+
+Taking $J=\varnothing$ gives $v_p(c)\ge g_B-\sum_{s\ {\rm even}}\alpha_s$.
+For a term carrying a factor $p^e$ with $e\ge N_J$, the second bound
+gives $v_p(p^e c)\ge g_B$.
+
+\begin{proof}
+Keep $Y$ indeterminate and take all bounds coefficientwise in $Y$.
+Write $\xi_{s,a}=(Y_s)_{1a}$ and
+let $e_{s,b}$ count the removed columns at $s$ with index $b$.
+Their factors in $P$ are $\sum_a\xi_{s,a}X_{s,a,b}$. Let $Q$ be the
+product of the remaining minors. Set $t_{s,b}=0$ off the tops.
+The chain rule gives
+\[
+ \varpi^D\langle P,\Theta\rangle
+ =e!\,Q(\partial_X)[t^e]\,\Theta\bigl(\varpi(X+\xi t)\bigr)
+       \big|_{X=0},
+ \qquad (\xi t)_{s,a,b}=\xi_{s,a}t_{s,b}.
+\]
+For a multi-index $n$ we use $n!=\prod_i n_i!$.
+
+\emph{Expansion modulo $p$.}
+Modulo $p$, the terms of $X$-degree less than $p$ in
+$h_\upsilon(X+\xi t)$ are integral linear combinations of
+\begin{align*}
+ &t_{s,b}^{p^d}\,t_{s+d-2k,b}^{p^{2k}},
+                &&d\ge1\ {\rm odd},\quad k\ge0,\\
+ &t_{s,b}^{p^d}\,L_{s,d,b}(X),\qquad
+ L_{s,d,b}(X)=\sum_a\xi_{s,a}^{p^d}X_{s+d,a,b},
+                &&d\ge1\ {\rm odd}.
+\end{align*}
+Indeed Frobenius distributes over sums modulo $p$. A first factor
+$S^p$ contributing an $X$ has degree at least $p$. A second factor
+$S$ contributing an $X$ has degree one only in its initial term, and
+then the sum over $a$ is $L_{s,d,b}$.
+Write $h'$ for the sum of these terms and an integral series $Z$ of
+$X$-degree at least $p$, choosing lifts with zero constant term.
+Then $h_\upsilon(X+\xi t)=h'+pV$ with $V$ integral and $V(0)=0$.
+Expanding $(h'/p+V)^i$ absorbs $V$ into the integral factors.
+We may truncate throughout at total degree $D$.
+
+\emph{Factorials.}
+In a term of $(h'/p)^i$ take $A$ pure $t$ factors, $B$ linear factors
+and $z$ factors from $Z$, so $i=A+B+z$. Let $k_{s,d,b}$ be the
+multiplicities of the linear factors and $b_{s,d}=\sum_b k_{s,d,b}$.
+Move the linear factors onto $Q$ by differentiation. If
+$\mathbf l_{s,d,b}$ is the coefficient vector of $L_{s,d,b}$, this
+replaces $Q$ by
+\[
+ \Big(\prod_{s,d,b}k_{s,d,b}!\Big)
+ [\tau^k]\,Q\Big(X+\sum_{s,d,b}\tau_{s,d,b}\mathbf l_{s,d,b}\Big).
+\]
+This follows from $\langle Q,LG\rangle=\langle D_{\mathbf l}Q,G\rangle$.
+The multinomial coefficient times the displayed factorials is divisible
+by $B!$, by first choosing the $B$ linear factors and then ordering
+their types. For a surviving monomial $X^n$ of the translated
+coefficient, $|n|=\sum_s B_s-B$, its degree at $s$ is at most $B_s$,
+and $pz\le |n|$. Thus its contribution to the scaled pairing has
+valuation at least
+\[
+ v_p(e!)+v_p(B!)+v_p(n!)-A-B-z .
+\]
+Legendre's formula gives $v_p(m!)\ge m/(p-1)-d_p(m)$.
+At $s$ the entries of $e$ sum to $\alpha_s$, and $n$ has at most
+$r_0r_1$ entries there. Also $\prod_{s,d} b_{s,d}!$ divides $B!$.
+The available $t$-degree gives $p^d b_{s,d}\le\alpha_s$, so at each
+top at most $d_p(\alpha_s)$ of these factorials are nontrivial and
+each loses at most $d_p(\alpha_s)$. The three factorials therefore
+give at least $D/(p-1)-\Delta$. Since $z\le\sum_s B_s/p$ and
+$1/(p-1)-\rho_p=\gamma_p\ge1/p$, removing $\varpi^D$ leaves
+\begin{equation}\label{eq:inert-term-bound}
+              \gamma_p\sum_s\alpha_s-A-B-\Delta
+\end{equation}
+as a lower bound for each term.
+
+\emph{Counting the factors.}
+Assign each pure $t$ factor to the top carrying its larger exponent.
+The exponents are $p^d$ and $p^{2k}$ with opposite parities of $d,2k$.
+From the assigned top $s$ the other top lies a positive odd distance
+$|d-2k|$ forward, modulo $2\nu$. Its least positive residue $j$
+lies in $E_s$ and the exponent at $s$ is at least $p^j$.
+Write $a_{s,j}$ for the resulting counts. For every positive odd $j$,
+\[
+   a_{s,j}+b_{s,j}\le \alpha_s p^{-j},\qquad
+   a_{s,j}=0\ (j\notin E_s),\qquad b_{s,j}\le C_{s+j}.
+\]
+The first bound counts $t$-degree. For the last, hold $(s,j)$ fixed in
+the translation of $Q$. At $s+j$ each changed column is a multiple of
+the same vector $Y_{s+j}(\xi_{s,a}^{p^j})_a$. Multilinearity gives
+degree at most one per minor in these translation variables, even with
+the other translations present. Summing the three bounds, using
+$\sum a_{s,j}=A$, $\sum b_{s,j}=B$ and $\sum_{j\ge1\ {\rm odd}}p^{-j}
+=\gamma_p$, gives the first inequality in \eqref{eq:inert-valuation}
+from \eqref{eq:inert-term-bound}.
+
+For the second inequality retain the bounds
+$b_{s,j}\le\min(\alpha_s p^{-j},C_{s+j})$ at odd tops. It remains to
+pay for $A+\sum_{s\ {\rm even},j}b_{s,j}$. A pure factor uses one
+index $b$ at both parities. It uses at least one counted $t$ at the
+even top if $b\notin J$, and at the odd top if $b\in J$.
+A linear factor at an even top with $b\notin J$ also uses a counted
+$t$. Their total is bounded by the corresponding entries of $e$.
+Each remaining linear factor, from an even top with $b\in J$, acts on
+a column indexed by $b$ at an odd position. A minor there absorbs at
+most $|I\cap J|$ such factors by multilinearity in those columns.
+Hence $A+\sum_{s\ {\rm even},j}b_{s,j}\le N_J$.
+Substitution in \eqref{eq:inert-term-bound} gives the second bound.
+\end{proof}
+
+\subsection{Application to the chosen shift}
+
+Fix a lift $1\le j\le m$ and an auxiliary word $u$ at the shift $u_0$
+of \S\ref{sec:theta-chain}. Take $r_0=N_{j-1}$ and $r_1=N_j$.
+For a place $v$ of the maximal real subfield above $p$ split in $E$,
+choose a place $w$ above $v$ and an embedding $E_w\hookrightarrow
+W_p[1/p]$ inducing the fixed embedding on $K$. Write
+$[E_w:K_p]=\nu$. The $2\nu$ positions index the embeddings
+$\tau_s\in\Phi$ given by $\sigma^s$ on $w$ for even $s$ and by
+$\sigma^s$ after conjugation for odd $s$.
+Take $\mathcal T=\{s:\tau_s=(0,0,t),\ t\in T\}$.
+At $s$ use the partition
+\[
+   \mu_s(i)=\lambda^{(j)}_{\tau_s}(i)+w_j(\tau_s).
+\]
+Its last $t_r+1$ entries vanish by \eqref{eq:chain-weights}, so
+every column has height at most $r_0$. At a top,
+$\alpha_s=\mu_s(1)-\mu_s(2)=a_t-\lambda^{(0)}_{\tau_s}(2)$
+and $C_s=\mu_s(2)$. Elsewhere $C_s=\mu_s(1)$.
+These are the shapes of the differential operators at both parities
+\citep[Lemma~11.36]{adriazola-grh}.
+
+The extension $E_w/K_p$ is unramified, so its integral trace pairing
+is perfect. Choose dual bases $(\omega_l),(\omega_l^*)$ of
+$\mathcal O_{E_w}$ over $\mathcal O_{K_p}$. In the hyperbolic frame
+of \S\ref{sec:inert-kernel} put,
+for each $a,b$,
+\[
+ L_p(x_{l,a,b})=\sum_{s\ {\rm even}}\sigma^s(\omega_l^*)X_{s,a,b},
+ \qquad
+ L_p(y_{l,a,b})=\sum_{s\ {\rm odd}}\sigma^s(\omega_l)X_{s,a,b}.
+\]
+These are the additive matrix coordinates in the two frames
+\citep[Lemma~11.43]{adriazola-grh}.
+Write $\vartheta_v=\exp(-\sum_{l,a,b}\beta(x_{l,a,b},y_{l,a,b}))$.
+For every integral series $U_v$ in these formal parameters,
+\begin{equation}\label{eq:inert-class}
+         (\vartheta_v U_v)(\varpi X)\in\mathcal C(h_\upsilon)
+\end{equation}
+for some integral $\upsilon$. This is the height-two series calculation
+of \citep[Proposition~9.5]{adriazola-grh}. Its hypotheses are precisely
+the additivity and Frobenius relation of \S\ref{sec:inert-kernel}
+and trace duality above. Indeed $[b]_F X=bX$ and $\sigma b=b^p$
+for $b^{p^2-1}=1$. The series $\varpi^{-1}L_p(\varpi X)$ has integral
+coefficients and linear coefficient one. Its compositional inverse is
+integral, so the rescaled formal parameters preserve integrality of $U_v$.
+
+\begin{corollary}\label{cor:inert-chain-jets}
+Assume Hypothesis~\ref{hyp:inert-kernel-integrality}.
+For each split $v$ choose a minor product $P_v$ as above and a set
+$J_v\subset[r_1]$. In the additive coordinates, every frame coefficient
+$c$ of $\langle\prod_v P_v,\Theta_{j,u,p}\rangle$ satisfies
+\[
+ v_p(c)\ge\sum_v\max\{g_{A,v},\,g_{B,v}-N_{J_v}\}.
+\]
+\end{corollary}
+
+\begin{proof}
+For the prescribed kernel in its prescribed frame, Hypothesis~\ref{hyp:inert-kernel-integrality}
+gives the inclusion
+\[
+ U:=\Big(\prod_v\vartheta_v^{-1}\Big)\Theta_{j,u,p}
+      \in\mathcal O[[\,x_{v,l,a,b},y_{v,l,a,b}\,]].
+\]
+The pairing uses only terms of $U$ of total degree at most
+$\sum_v\deg P_v$, since the formal parameters have zero constant term.
+Each such monomial is an integral coefficient times $\prod_v U_v$
+with $U_v$ a monomial in the parameters of $v$. Its pairing factors as
+$\prod_v\langle P_v,\vartheta_v U_v\rangle$. By
+\eqref{eq:inert-class} and Theorem~\ref{thm:inert-valuation} the
+valuations add across orbits. The ultrametric inequality gives the
+same lower bound for the sum over monomials. With only Proposition~\ref{prop:inert-kernel},
+the lower bound acquires the additional term $v_p(c_0)$ from its
+undetermined scalar $c_0$.
+\end{proof}

@@ -1,0 +1,173 @@
+\section{The chain of theta lifts}\label{sec:theta-chain}
+
+Fix a large mesh point $x$ in Hypothesis~\ref{hyp:one-shift-arithmetic}.
+Take the field $E$ of Proposition~\ref{prop:field-window}, sets $T_2,T$
+as in Lemma~\ref{lem:weight-count}, and one shift $u_0\in H$.
+Each of the $m$ lifts uses the top places $(0,0,t)$,
+$t\in T$, and the thick places $(0,1,s)$, $s\in T_2+u_0$.
+
+\subsection{The nodes and the highest weights}
+
+Choose even $k,m$ and odd $t_r>0$ as in
+\citep[Proposition~5.15]{adriazola-grh}, so that $k,m$ satisfy
+\eqref{eq:arithmetic-ranks}. Put $b'=xb/Z$, with $b,Z$ as in
+\S\ref{sec:weights}, and set $h_0=2\lceil x^{402}\rceil$.
+
+\begin{remark}[Open spacing compatibility]\label{rem:spacing-compatibility}
+The standard record in the released source uses
+$T_O=\lceil x^{377}\rceil$ and requires
+\[
+                         4T_O^2+2t_r\le h_0.
+\]
+The present choice cannot satisfy this requirement: for $x\ge2$ the
+left side is at least $4x^{754}$, whereas
+$h_0\le2(x^{402}+1)<4x^{754}$. Thus the chain below is not presently
+identified with that standard source record. Larger polynomial node
+gaps remain compatible with the asymptotic ranges used in
+\S\ref{sec:weights}, but this manuscript has not verified one common
+choice together with the corresponding lifts, period maps and height
+estimates. We therefore flag the incompatibility rather than claim a
+fix.
+\end{remark}
+
+For each $t\in T$ choose integers $a_t,b_t$ in the intervals
+\[
+  xb\le a_t\le xb+\frac{xb}{kx^{13}},\qquad
+  b'\le b_t\le(1+x^{-2})b'.
+\]
+Both intervals have length greater than one for large $x$.
+For the initial parameters in \citep[Proposition~18.7]{adriazola-grh}
+start with
+\[
+ b_1(\rho)=
+ \begin{cases}
+ b_t+\lfloor b'/x\rfloor, & \rho=(0,0,t),\ t\in T,\\
+ \lceil b\rceil,           & \rho=(0,1,s),\ s\in T_2+u_0,\\
+ \lceil b'/(xn)\rceil,    & \text{otherwise}.
+ \end{cases}
+\]
+If $\sum_\rho b_1(\rho)$ is odd, increase $b_1$ by one at a single
+thick place. Set
+\begin{equation}\label{eq:chain-nodes}
+    w_j(\rho)=b_1(\rho)+(j-\tfrac12)h_0,\qquad 1\le j\le m .
+\end{equation}
+
+\begin{lemma}\label{lem:chain-nodes}
+The weights $a_t$ and nodes $w_j$ satisfy \eqref{eq:weight-ranges}.
+For every root of unity $\xi\in E$ and every $j$,
+$\prod_{\rho\in\Phi}\rho(\xi)^{w_j(\rho)}=1$.
+\end{lemma}
+
+\begin{proof}
+We have $0\le a_t/b-x\le 1/(kx^{12})$. Both $b$ and $b'$ grow faster
+than every fixed power of $x$, while $mh_0$ grows at most polynomially.
+At a thick place $b\le w_j\le b+2+mh_0\le b(1+x^{-2})$. At every
+other place, including the top places,
+$w_j\le(1+x^{-1}+x^{-2})b'+1+mh_0\le2b'$.
+
+Here the only roots of unity in $E$ are $\pm1$. Indeed, an odd prime
+$\ell$ dividing the order of a root of unity would ramify in $E$,
+so $\ell=q$ or $d$. Both primes exceed $3$ at large scales. Each has
+inertia of order two, whereas $\mathbb Q(\zeta_\ell)$ has ramification
+index $\ell-1$ at $\ell$. Also, $\mathbb Q(i)$ is unramified at both
+$q$ and $d$. If $i$ belonged to $E$, the two inertia groups would fix
+it. Their common fixed field is the totally real field $K_e$ of
+\S\ref{sec:auxiliary-field}. Finally $|\Phi|=2n$ is even, so
+\eqref{eq:chain-nodes} gives an even sum $\sum_\rho w_j(\rho)$ for
+every $j$.
+\end{proof}
+
+The definite group at level $j$ has rank $N_j=k+j(t_r+1)$ for
+$0\le j\le m$. At each $\rho\in\Phi$ take a dominant integral weight
+$\lambda^{(0)}_\rho$ of length $k$. At $(0,0,t)$ its first and last
+entries are $a_t$ and $-b_t$. Bound the other entries there, and all
+entries away from the top places, in absolute value by some
+$C_0\le\min_\rho w_1(\rho)$. The $j$th lift uses the weight
+\begin{equation}\label{eq:chain-weights}
+  \lambda^{(j)}_\rho=
+  \bigl(\lambda^{(j-1)}_\rho,
+       \underbrace{-w_j(\rho),\ldots,-w_j(\rho)}_{t_r+1}\bigr)
+       \qquad(1\le j\le m).
+\end{equation}
+At a top place $w_1(0,0,t)\ge b_t$, and \eqref{eq:chain-nodes}
+increases with $j$. Thus each weight in \eqref{eq:chain-weights} is
+dominant. These are the definite ranks and weights of
+\citep[\S11.1.2]{adriazola-grh}. For $g=(1,i,h)$, the node in
+\eqref{eq:weight-excess} is $w_j(p_tg)=w_j(0,i+1,h+t)$.
+
+\subsection{The lift and the period map}
+
+Give $E^{N_j}$ its standard positive definite hermitian form and write
+$U_j=\{\gamma\in\mathrm{GL}_{N_j}(E):\gamma^*\gamma=1\}$.
+For fixed finite level, let $\mathcal L_j$ denote the self-dual
+$\mathcal O_E$-lattices with level structure, and write $(V_j,\pi_j)$
+for the coefficient representation of weight
+$(\lambda^{(j)}_\rho)_{\rho\in\Phi}$. A form of level $j$ is a
+function $F\colon\mathcal L_j\to V_j$ with
+$F(\gamma L)=\pi_j(\gamma)F(L)$ for $\gamma\in U_j$.
+Write $\mathcal A_j$ for the space of these forms.
+
+For $L\in\mathcal L_{j-1}$ and $L'\in\mathcal L_j$, the complex
+variables of the theta kernel lie in
+$\prod_{\rho\in\Phi}M_{N_j\times N_{j-1}}(\mathbb C)$.
+Write $K=\mathbb Q(\sqrt{-d})$. Choose a period lattice
+$\delta\mathfrak c$ of a CM elliptic curve, with $\mathfrak c$ an
+ideal of $\mathcal O_K$. Factor the relative different as
+$\mathfrak d_{E/K}=\mathfrak b\bar{\mathfrak b}$ using
+\citep[Lemma~7.1]{adriazola-grh}. The period lattice for the two
+hermitian lattices is
+\[
+ \left\{\delta\bigl(\rho(z)\bigr)_{\rho\in\Phi}:
+ z\in\mathfrak c\mathfrak b^{-1}
+           \operatorname{Hom}_{\mathcal O_E}(L,L')\right\}.
+\]
+The level data specify a finite linear combination of Heisenberg
+translates of the theta function. In the polynomial model, substitute
+$X=YD$ in the input polynomial times $\prod_\rho\det(X_\rho)^{n_\rho}$,
+replace each monomial in $D$ by the corresponding normalized derivative of the
+kernel at zero, and project to $V_j$. With the frame factors of
+\citep[Eq.~(7.4)]{adriazola-grh}, denote the resulting map by
+$A_j(L',L)\colon V_{j-1}\to V_j$.
+
+\begin{proposition}\label{prop:chain-lift}
+Take compatible level data and a Hecke character of infinity type
+$(e_\rho)$ trivial on $E^\times$. Suppose the source and target
+determinant twists are $\det^{-d_\rho}$ and $\det^{-d'_\rho}$, where
+$d_\rho=n_\rho+N_j/2-e_\rho$ and $d'_\rho=N_{j-1}/2-e_\rho$ at
+each $\rho\in\Phi$. The class sum
+\begin{equation}\label{eq:chain-class-sum}
+ (K_jF)(L')=
+ \sum_{[L]\in U_{j-1}\backslash\mathcal L_{j-1}}
+ \frac{A_j(L',L)F(L)}{|\operatorname{Stab}_{U_{j-1}}(L)|}
+\end{equation}
+defines a linear map $K_j\colon\mathcal A_{j-1}\to\mathcal A_j$.
+\end{proposition}
+
+\begin{proof}
+The definite group at fixed finite level has finitely many lattice
+classes and finite stabilizers. Both ranks are even. The two
+determinant identities give the covariance formula
+\citep[Proposition~7.9(iii)]{adriazola-grh}
+\[
+ A_j(\gamma'L',\gamma L)
+    =\pi_j(\gamma')\,A_j(L',L)\,\pi_{j-1}(\gamma)^{-1}.
+\]
+Replacing $L$ by $\gamma L$ cancels the last factor against the action
+on $F(L)$ and conjugates the stabilizer. Replacing $L'$ by $\gamma'L'$
+multiplies the sum by $\pi_j(\gamma')$.
+\end{proof}
+
+For the arithmetic application the form spaces and lifts must admit
+models over a number field. For each auxiliary word $u$, write
+$K_{j,u}$ for the lift with its level data and $P_u$ for the final
+pairing with the base forms. On the source lattice $N_u$ the required
+factorization is \citep[Eq.~(15.5)]{adriazola-grh}
+\[
+    B_u=\left.(P_u\circ K_{m,u}\circ\cdots\circ K_{1,u})\right|_{N_u},
+    \qquad B_u\colon N_u\to R^\vee .
+\]
+The open arithmetic step is to realize these nonzero maps on the
+integral lattices of \S\ref{sec:accounting} and prove its seven
+inequalities with the total error of \S\ref{sec:arithmetic-bound}.
+Every word must use the chosen $T,u_0$ and the nodes
+\eqref{eq:chain-nodes}.

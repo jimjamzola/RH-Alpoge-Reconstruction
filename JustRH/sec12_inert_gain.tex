@@ -1,0 +1,282 @@
+\section{The inert-prime gain and the source lattice}\label{sec:inert-gain}
+
+Fix a mesh point $x$, the sets $T,T_2$, the shift $u_0$ and the weights
+of \S\ref{sec:theta-chain}. The first two inequalities of
+Proposition~\ref{prop:accounting} use the same $\Gamma$. We compare
+the prime sum with the divisibility on $D_B$, then compute the index
+paid for using $D_B$ at the source.
+
+\subsection{Primes of small order}
+
+For an unramified prime $p$ inert in $K$, write
+$\sigma_p=(1,i_p,h_p)$. Its contribution to $S$ is $2F_p\log p$, where
+\[
+ F_p=\sum_{j,t}\sum_{\substack{l\ge1\\l\ {\rm odd}}}
+ \bigl(a_t p^{-l}-w_j(0,1+i_p,t+lh_p)\bigr)_+ .
+\]
+By \eqref{eq:field-frobenius} and \S\ref{sec:weights}, $2$ and $q$
+contribute zero. At $d$ exactly half the Frobenius coset lies outside
+$\Phi$. Thus, writing $R_d$ for its contribution and $A=\sum_ta_t$,
+\begin{equation}\label{eq:loss-prime-sum}
+ S=R_d+2\sum_p F_p\log p,\qquad
+ 0\le R_d\le mA\,\frac{\log d}{d-1}.
+\end{equation}
+In this prime sum $p$ runs over the unramified inert primes. For the $d$
+of Proposition~\ref{prop:field-window}, $x\log d/(d-1)$ tends to zero
+faster than any fixed negative power of $x$, uniformly on a fixed power window.
+Put $Y=2xnZ$ with $Z=\exp(x^{\varepsilon/3})$ as in \S\ref{sec:weights}.
+By \eqref{eq:chain-nodes}, $\min w_j\ge b/(nZ)$ and $\max a_t\le2xb$.
+Hence $F_p=0$ for $p>Y$.
+
+\begin{proposition}\label{prop:loss-short}
+Uniformly in the chosen shift and weights,
+\[
+ 2\sum_{\operatorname{ord}_H(h_p)\le x^{1+7\varepsilon}}
+       F_p\log p\ll_\varepsilon mN_T b\,x^{-\varepsilon/3}.
+\]
+\end{proposition}
+
+\begin{proof}
+Write $n=2^e$, $s=\lfloor\log_2(x^{1+7\varepsilon})\rfloor$ and
+$M=2^{e+2-s}$. For large $x$, $s<e$ and $M\ge4x^{1+\varepsilon}$.
+The image of $[5]$ modulo $M$, up to sign, has order $2^{e-s}$
+by $v_2(5^{2^r}-1)=r+2$. Hence $\operatorname{ord}_H(h_p)\le2^s$
+precisely when $p\equiv\pm1\bmod M$. Summing over all integers
+$kM\pm1$ between $2$ and $Y$ gives
+\[
+ \sum_{\substack{p\le Y\\p\equiv\pm1\bmod M}}\frac{\log p}{p}
+ \ll\frac{\log^2(2Y)}{M}\ll_\varepsilon x^{-1-\varepsilon/3}.
+\]
+Now $F_p\le mA\,p/(p^2-1)$ and $A\le2N_Txb$.
+\end{proof}
+
+\subsection{The gain at a remaining prime}
+
+Suppose $\operatorname{ord}_H(h_p)>x^{1+7\varepsilon}$.
+Every $v\mid p$ of $E^+$ splits in $E$. Indeed complex conjugation
+$c=(1,1,0)$ could be a power of $\sigma_p$ only at an odd exponent $l$
+with $lh_p=0$. At a top $\tau_s=(0,0,t)$ and odd $l$, the orbit
+convention of \S\ref{sec:inert-divisibility} gives
+$\tau_{s+l}=\tau_s+l\sigma_p+c=(0,1+i_p,t+lh_p)$.
+For a fixed $v,j$ write $a_s=a_t$ at that top and put
+\[
+ f_{sl}=(a_sp^{-l}-w_j(\tau_{s+l}))_+,\qquad
+ F_{vj}=\sum_{s\in\mathcal T_v}\sum_{l\ {\rm odd}}f_{sl}.
+\]
+All sums over $l$ use positive integers. Then $F_p=\sum_{v,j}F_{vj}$.
+The excluded displacements $E_s$ of \S\ref{sec:inert-divisibility}
+and the even tops give the two quantities
+\[
+ X_{vj}=\sum_{s\in\mathcal T_v}\sum_{l\in E_s} f_{sl},\qquad
+ K_{vj}=\sum_{s\in\mathcal T_{v,{\rm ev}}}\sum_{l\ {\rm odd}}
+                    \min(a_sp^{-l},w_j(\tau_{s+l})).
+\]
+Let $L_p$ count the odd $l$ with $p^l\le Y$, and put
+$H_{vj}=\Delta_{vj}+C_0|\mathcal T_v|(\gamma_p+L_p)$, with $C_0$
+from \S\ref{sec:theta-chain} and $\gamma_p=p/(p^2-1)$.
+
+\begin{lemma}\label{lem:loss-orbit}
+For the two exponents of \S\ref{sec:inert-divisibility},
+\[
+ F_{vj}\le g_{A,vj}+H_{vj}+X_{vj},\qquad
+ F_{vj}\le g_{B,vj}+H_{vj}-K_{vj}.
+\]
+\end{lemma}
+
+\begin{proof}
+The column counts give $a_s-\alpha_s\le C_0$ and
+$C_{s+l}-w_j(\tau_{s+l})\le C_0$. For $f_{sl}>0$,
+\[
+ f_{sl}\le(\alpha_s p^{-l}-C_{s+l})_++C_0(p^{-l}+1).
+\]
+There are at most $L_p$ such $l$ per top, and $\sum_{l\ {\rm odd}}p^{-l}
+=\gamma_p$. Omitting $E_s$ and restoring $X_{vj}$ gives the first
+bound by \eqref{eq:inert-base-gain}. For the second, use this comparison
+at the odd tops. At each even top sum the identity
+$f_{sl}=a_sp^{-l}-\min(a_sp^{-l},w_j(\tau_{s+l}))$.
+Equation~\eqref{eq:inert-parity-gain} gives the result.
+\end{proof}
+
+If $i_p=0$, every odd displacement from a top lands at $(0,1,h)$,
+so $X_{vj}=0$. For $p\ge Z$ it also vanishes, since an excluded
+displacement lands at a top, whose node in \eqref{eq:chain-nodes}
+exceeds $\max_t a_t/Z$.
+
+Let $\mathcal P$ be the finite set of inert primes at which
+the family uses a chain gain. At $p\in\mathcal P$ choose the orbit
+set $B$ of \S\ref{sec:chain-divisibility} for each word $u$ and
+coefficient place $w\mid p$. Write $G_{uw}$ for its exponent $G_B$ and
+$g_p=\min_{u,w\mid p}G_{uw}$. Let $\tau_p\ge0$ be the common integer
+depth used in the source lattice below. Set $g_p=\tau_p=0$ off
+$\mathcal P$ and define
+\begin{equation}\label{eq:loss-net-gain}
+             \Gamma=2\sum_p(g_p-\tau_p)\log p .
+\end{equation}
+At a retained prime of large order as above put
+\[
+ U_{uw}=\sum_j d_j+\sum_{v,j}H_{vj}
+       +\sum_{j,v\notin B}X_{vj}
+       +\sum_{j,v\in B}\min\{X_{vj},\,\delta_{vj}-K_{vj}\}.
+\]
+Here $d_j$ and $\delta_{vj}$ belong to this word and place.
+Lemma~\ref{lem:loss-orbit} gives $F_p-G_{uw}\le U_{uw}$. Indeed
+each $v\in B$ contributes $\max(g_{A,vj},g_{B,vj}-\delta_{vj})$ to
+$G_{uw}$, and each stabilizer costs $d_j$ once per lift.
+
+Put $U_p=\max_{u,w\mid p}U_{uw}$ at these primes and
+$U_p=F_p-g_p$ at all others. Then \eqref{eq:loss-prime-sum} gives
+\begin{equation}\label{eq:loss-first-error}
+ S\le\Gamma+e_1,\qquad e_1=R_d+2\sum_p(\tau_p+U_p)_+\log p .
+\end{equation}
+For the small orders Proposition~\ref{prop:loss-short} bounds the
+$F_p$ part. Any charge $(\tau_p-g_p)_+$ there still belongs to the
+chosen lattices.
+
+\subsection{The index of the Hecke images}
+
+Fix $p\in\mathcal P$, $u$ and $w\mid p$. Let $\mathcal O_w$ be the
+coefficient valuation ring, $\pi_w$ a uniformizer and $e_w$ its
+ramification index. Write $M=M_{u,w}\subseteq I_0$ for the base
+lattice and suppose the $y_v$ preserve $M$. For $v\in B$ take
+integers $s_v\ge S_v$ with the thresholds $S_v$ of
+\S\ref{sec:chain-divisibility}. Set $s_*=\max_{v\in B}s_v$, zero
+for $B=\varnothing$, and put
+\[
+ P=\sum_{C\subseteq B} y_C^m
+         \bigl(p^{\sum_{v\in B\setminus C}s_v}M\bigr).
+\]
+Then $P\subseteq M\cap D_B$ and $p^{\sum_v s_v}M\subseteq P$.
+Let $V^{\rm ram}$ be the subspace of the prescribed type at $T_u$.
+Put $L=M\cap V^{\rm ram}$ and $\Lambda=P\cap p^{\tau_p}L$.
+Write $d_M=\operatorname{rk}M$, $d_u=\operatorname{rk}L$.
+
+\begin{hypothesis}[\openinput]\label{hyp:loss-hecke-layers}
+For the prescribed $M,y_v$ and the shares $0\le\kappa_v\le1$ used
+in the loss estimate, there are sets $C_k$ for $0\le k<|B|$ with
+\[
+ p^{\tau_p+ks_*}M\subseteq P+\operatorname{span}_{\mathcal O_w} C_k,
+ \qquad |C_k|\le d_M m^{k+1} e_{k+1}((\kappa_v)_{v\in B}),\qquad C_k\subset M .
+\]
+Here $e_i$ is the elementary symmetric polynomial. The powers $s_v$
+and the shares use this same choice of weights, Hecke operators and shift.
+\end{hypothesis}
+
+This is the consequence of local Hecke nondegeneracy used in
+\citep[Proposition~12.16 and Theorem~12.18]{adriazola-grh}.
+If the inclusions hold on a larger Hecke-stable lattice $M^0$ with
+the same $s_v$ and $p^cM^0\subseteq M\subseteq M^0$ for an integer
+$c\ge0$, multiplication by $p^c$ gives them on $M$ with the depth
+increased by $c$.
+
+\begin{proposition}\label{prop:loss-length}
+Under Hypothesis~\ref{hyp:loss-hecke-layers},
+\[
+ \frac{\operatorname{length}_{\mathcal O_w}(L/\Lambda)}{e_w}
+ \le d_u\tau_p+d_M J_{uw},\qquad
+ J_{uw}=s_*\left(\prod_{v\in B}(1+m\kappa_v)-1\right).
+\]
+If $\sigma=m\sum_v\kappa_v\le1/2$, then $J_{uw}\le2s_*\sigma$.
+\end{proposition}
+
+\begin{proof}
+Filter $M/P$ by $Q_k=(P+p^{\tau_p+ks_*}M)/P$ for $0\le k\le |B|$.
+Since $|B|s_*\ge\sum_v s_v$, the last term vanishes. The quotient
+$Q_k/Q_{k+1}$ is killed by $p^{s_*}$. By Hypothesis~\ref{hyp:loss-hecke-layers},
+$Q_k$ is a submodule of a module generated by $|C_k|$ elements.
+Over a discrete valuation ring it has at most that many generators.
+Thus $\operatorname{length}Q_0\le e_ws_*\sum_k|C_k|
+\le e_wd_M J_{uw}$, by expanding the product.
+
+Now $p^{\tau_p}L/\Lambda$ injects into $Q_0$, while
+$L/p^{\tau_p}L$ has length exactly $e_w d_u\tau_p$.
+Adding the lengths proves the bound, including $B=\varnothing$.
+The last assertion follows from
+$\prod_v(1+m\kappa_v)\le\exp(\sigma)\le1+2\sigma$.
+\end{proof}
+
+\subsection{Rescaling the source}
+
+Let $F$ be the common coefficient field. At a finite place $w$ put
+$\ell_w=\log N\mathfrak p_w/[F:\mathbb Q]$. Use $g_p=\tau_p=0$
+also at rational primes outside the inert sum. In the notation of
+\S\ref{sec:accounting} write the finite local corrections as
+\[
+ \mathcal L=2\sum_w\ell_we_w f(w),\qquad
+ E_u=2\sum_w\ell_we_w f_u(w),\qquad
+ z_{uw}=g_p+f(w)-f_u(w)\quad(w\mid p).
+\]
+The functions have finite support. Let $L_u=M_u^{\rm ram}$ be saturated
+in $M_u$ with the induced metrics and positive rank $d_u$.
+At $w\mid p\in\mathcal P$ take $\Lambda_{uw}$ as above. At $w\mid T_u$ take
+the prescribed sublattice of $L_{u,w}$, and elsewhere take $L_{u,w}$.
+The auxiliary prime is separate from $\mathcal P$.
+Gluing these local lattices and rescaling gives the candidate source
+of \citep[Definition~12.20]{adriazola-grh},
+\begin{equation}\label{eq:loss-source}
+       N_{u,w}=\pi_w^{-\lfloor e_w z_{uw}\rfloor}\Lambda_{uw}.
+\end{equation}
+Use the same archimedean metrics throughout.
+
+\begin{theorem}\label{thm:loss-source}
+Suppose the source is \eqref{eq:loss-source} and
+Hypothesis~\ref{hyp:loss-hecke-layers} holds above $\mathcal P$.
+Put $r_u=\operatorname{rk}(M_u)/d_u$, $\delta_u=(\mu^M_u-\mu(L_u))_+$,
+and define
+\[
+ T^{\rm loss}_u=\frac2{d_u}\sum_{w\mid T_u}\ell_w
+       \operatorname{length}(L_{u,w}/\Lambda_{uw}),\qquad
+ R_u=2\sum_w\ell_w\{e_w z_{uw}\},
+\]
+where $\{y\}=y-\lfloor y\rfloor$. Then
+\begin{align}
+ \mu^M_u+\Gamma+\mathcal L-E_u&\le\mu(N_u)+e_{2,u},
+       \label{eq:loss-second-error}\\
+ e_{2,u}&=\delta_u+2r_u\sum_{p\in\mathcal P}\sum_{w\mid p}
+        \ell_we_w J_{uw}+T^{\rm loss}_u+R_u .\notag
+\end{align}
+\end{theorem}
+
+\begin{proof}
+Write $k_{uw}=\operatorname{length}(L_{u,w}/\Lambda_{uw})$.
+Taking determinants in \eqref{eq:loss-source} gives the exact identity
+\[
+ \mu(N_u)-\mu(L_u)=
+     2\sum_w\ell_w\left(\lfloor e_w z_{uw}\rfloor-\frac{k_{uw}}{d_u}\right).
+\]
+Indeed a length-one quotient costs $\log N\mathfrak p_w$ in the
+logarithmic index. The scalar $\pi_w^{-1}$ adds $d_u$ units of length
+to the determinant. The metrics cancel \citep[Lemma~12.19]{adriazola-grh}.
+Above $\mathcal P$, Proposition~\ref{prop:loss-length} gives
+$k_{uw}/d_u\le e_w(\tau_p+r_uJ_{uw})$.
+Since $\sum_{w\mid p}\ell_w e_w=\log p$,
+\[
+ 2\sum_{p}\sum_{w\mid p}\ell_we_w(z_{uw}-\tau_p)
+       =\Gamma+\mathcal L-E_u ,
+\]
+where this sum includes all rational primes. Subtraction of the
+rounding and auxiliary-prime losses gives \eqref{eq:loss-second-error}.
+\end{proof}
+
+\begin{hypothesis}[\openinput]\label{hyp:loss-realization}
+At each required mesh point the prescribed maps of \S\ref{sec:theta-chain}
+realize the local lattices, exponents and corrections above
+and the source \eqref{eq:loss-source}, for every word at the chosen
+$T,u_0$. Their Hecke shares, prime losses, auxiliary indices and
+ramified slopes give, uniformly on the windows,
+\[
+ e_1+\max_u e_{2,u}
+ \le x^{5\varepsilon}\mathcal B-(e_3+e_4+e_5+A e_6+e_7),
+\]
+with the two errors from \eqref{eq:loss-first-error} and
+\eqref{eq:loss-second-error} and the remaining allowances of
+\S\ref{sec:arithmetic-bound} for that family.
+\end{hypothesis}
+
+Corollary~\ref{cor:true-integral-chain} gives the exponent $g_p$ on
+each $P$ under its stated hypotheses. For the lattices of
+Hypothesis~\ref{hyp:loss-realization}, \eqref{eq:loss-first-error} and
+Theorem~\ref{thm:loss-source} give \eqref{eq:acct-gain} and
+\eqref{eq:acct-source} with $e_2=\max_u e_{2,u}$ under
+Hypothesis~\ref{hyp:loss-hecke-layers}. The final pairing on the
+rescaled lattices requires the target comparison of
+Hypothesis~\ref{hyp:chain-endpoints}.

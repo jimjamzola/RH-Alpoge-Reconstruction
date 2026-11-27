@@ -1,0 +1,87 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1.1in,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage{xcolor}
+\definecolor{openinputblue}{HTML}{174A72}
+\newcommand{\openinput}{\textcolor{openinputblue}{\normalfont\bfseries Open input}}
+\usepackage{enumitem}
+\usepackage{booktabs,longtable,array}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks,pdfencoding=auto]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small J. Adriazola}
+\fancyhead[R]{\small On the Riemann Hypothesis}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{theoremA}{Theorem A}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{2}
+\makeatletter
+\renewcommand*\l@subsection{\@dottedtocline{2}{1.5em}{2.9em}}
+\makeatother
+\allowdisplaybreaks[2]
+
+\hypersetup{pdftitle={On the Riemann Hypothesis},pdfauthor={Jimmie Adriazola}}
+\title{\bfseries On the Riemann Hypothesis}
+\author{Jimmie Adriazola$^{1,2}$\thanks{\texttt{jimmie.adriazola@asu.edu}}\\[6pt]
+\small $^1$School of Mathematical and Statistical Sciences, Arizona State University,\\[-2pt]
+\small Tempe, AZ 85287, USA\\[3pt]
+\small $^2$Simon A. Levin Mathematical, Computational and Modeling Sciences Center,\\[-2pt]
+\small Arizona State University, Tempe, AZ 85287, USA}
+\date{\small Working manuscript --- November 27, 2026}
+
+\begin{document}
+\maketitle
+\input{abstract}
+\clearpage
+\tableofcontents
+\clearpage
+
+\input{sec1_intro}
+
+\clearpage
+\part{Reduction to an arithmetic theorem}
+\input{sec2_criterion}
+\input{sec3_accounting}
+\input{sec4_auxiliary_field}
+\input{sec5_weights}
+\input{sec6_arithmetic_bound}
+
+\clearpage
+\part{The arithmetic of the theta lifts}
+\input{sec7_theta_chain}
+\input{sec8_inert_kernel}
+\input{sec9_inert_divisibility}
+\input{sec10_chain_divisibility}
+\input{sec11_integral_lifts}
+\input{sec12_inert_gain}
+\input{sec13_period_slopes}
+\input{sec14_bessel_periods}
+\input{sec15_heights}
+\input{sec16_finite_correction}
+\input{sec17_twisted_defect}
+\input{sec18_assembly}
+
+\input{acknowledgments}
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

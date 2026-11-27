@@ -1,0 +1,183 @@
+\section{The theta kernel at an inert prime}\label{sec:inert-kernel}
+
+Fix the weight set $T$, the shift $u_0$ and the chain of
+\S\ref{sec:theta-chain}. At a prime $p$ inert in $K=\mathbb Q(\sqrt{-d})$,
+we express the kernel of each lift in the formal parameters of one CM
+elliptic curve. The same differential is used at every step.
+
+\subsection{The CM differential}
+
+Take the ideal $\mathfrak c$ of \S\ref{sec:theta-chain} prime to $2d$ and
+supported above split primes of $K$ (the unit ideal is allowed).
+For a complex lattice $\Lambda$ write
+$\Delta(\Lambda)=g_2(\Lambda)^3-27g_3(\Lambda)^2$.
+Choose $\delta$ once with $\delta^{12}=\Delta(\mathfrak c)$ and put
+$\Lambda=\delta\mathfrak c$. Homogeneity gives
+\[
+  \Delta(\Lambda)=1,\qquad
+  A(\Lambda)=\tfrac12\sqrt d\,|\delta|^2 N\mathfrak c ,
+\]
+where $A$ denotes area. On the curve
+$Y^2=4X^3-g_2(\Lambda)X-g_3(\Lambda)$ the differential $dX/Y$ pulls
+back to $dz$ under $z\mapsto(\wp_\Lambda(z),\wp'_\Lambda(z))$.
+
+\begin{lemma}\label{lem:inert-model}
+At each inert $p$ occurring on the window there is a smooth model
+over $W_p=W(\overline{\mathbb F}_p)$ whose invariant differential
+pulls back to $dz/\eta_p$, with $|\eta_p|_p=1$.
+Its formal group has height two.
+\end{lemma}
+
+\begin{proof}
+Section~\ref{sec:auxiliary-field} gives $p\ge5$ on every sufficiently
+large window and $p\nmid 2qd$. Fix an embedding
+$\overline{\mathbb Q}\hookrightarrow\mathbb C_p$.
+Write $g_i=g_i(\Lambda)$. Since $j(\Lambda)$ is an algebraic integer,
+$g_2^3=j(\Lambda)/1728$ and $27g_3^2=g_2^3-1$ are integral at $p$.
+For descent to $W_p$, the good CM model
+\citep[Proposition~8.4]{adriazola-grh} has coefficients
+$G_2=\eta_p^4g_2$, $G_3=\eta_p^6g_3$ in $W_p$ and unit discriminant.
+Thus
+\[
+  \eta_p^{12}=G_2^3-27G_3^2\in W_p^\times,\qquad
+  \frac{d(\eta_p^2 X)}{\eta_p^3Y}=\eta_p^{-1}\,dz .
+\]
+The CM action extends to this model. On its special fibre write
+$[p](t)=a t^{p^h}+\cdots$, $a\ne0$, with $h\in\{1,2\}$.
+Commuting $[p]$ with the CM endomorphisms gives $b^{p^h}=b$
+for every tangent scalar $b\in\mathcal O_K/p=\mathbb F_{p^2}$.
+Hence $h=2$.
+\end{proof}
+
+The period in Proposition~\ref{prop:accounting} uses this same $\Lambda$.
+Let $D_E=|\operatorname{disc}(E)|^{1/[E:\mathbb Q]}=2v$ and take a
+number field $M$ containing $E,g_2,g_3$. For $s\colon M\hookrightarrow
+\mathbb C$ let $\Lambda^s$ have invariants $s(g_2),s(g_3)$. The coordinate
+line at $\rho\in\Phi$ is $\rho(\bar{\mathfrak b})\mathcal O_M$, with
+squared norm $\pi|s(a)|^2/A(\Lambda^s)$ on a section $a$ at $s$
+\citep[Lemma~15.4 and Definition~15.5]{adriazola-grh}.
+Since $|\operatorname{disc}(E)|=d^{[E:K]}
+N_{E/\mathbb Q}(\mathfrak b\bar{\mathfrak b})$, its finite contribution
+is $-2\log N_{E/\mathbb Q}(\mathfrak b)/[E:\mathbb Q]
+=-\log(D_E/\sqrt d)$. The CM area formula
+\citep[Propositions~15.3 and~15.6]{adriazola-grh} gives
+\begin{align*}
+ \log\Omega
+ &=\frac1{[M:\mathbb Q]}\sum_s\log\frac{A(\Lambda^s)}{\pi}
+       -\log\frac{D_E}{\sqrt d}\\
+ &=\gamma+\log\frac{2\pi}{\sqrt d}-\lambda_1
+       -\log\frac{D_E}{\sqrt d}
+  =\gamma+\log\frac{\pi}{v}-\lambda_1 .
+\end{align*}
+
+\subsection{The kernel in formal coordinates}
+
+On the model of Lemma~\ref{lem:inert-model} use the parameter $t=-2X'/Y'$,
+where $(X',Y')=(\eta_p^2X,\eta_p^3Y)$. Its formal logarithm $\ell$ has
+$\ell'(0)=1$ and $z=\eta_p\ell(t)$. Put
+\[
+  L_p(X)=\sum_{r\ge0}\frac{X^{p^{2r}}}{p^r},\qquad
+  F(X,Y)=L_p^{-1}\bigl(L_p(X)+L_p(Y)\bigr).
+\]
+Here $K_p=\mathbb Q_{p^2}$ is unramified quadratic over $\mathbb Q_p$.
+The completed CM action makes the formal group of the curve an
+$\mathcal O_{K_p}$-module of relative height one, as is $F$.
+Over $W_p$ they are isomorphic
+\citep[Propositions~1.7 and~4.2]{drinfeld-elliptic-modules}.
+Choose such an isomorphism $\kappa$ to $F$. Write $e_p=\kappa'(0)$ and
+$a_p=\eta_p/e_p$. Then
+\begin{equation}\label{eq:inert-coordinate}
+   L_p(\kappa(t))=e_p\ell(t),\qquad z=a_p L_p(\kappa(t)),\qquad
+   |a_p|_p=1 .
+\end{equation}
+
+Let $\theta(z)=\sigma_\Lambda(z)\exp(-s_2z^2/2)$ be the reduced
+theta function, where the Weierstrass quasi-period at
+$\omega\in\Lambda$ is $s_2\omega+\pi\bar\omega/A(\Lambda)$.
+Thus $\theta'(0)=1$. Define
+\[
+ H(\kappa(t))=-\log\frac{\theta(\eta_p\ell(t))}{\eta_p t},
+ \qquad \beta(X,Y)=H(F(X,Y))-H(X)-H(Y).
+\]
+These series have coefficients in $W_p[1/p]$
+\citep[\S\S8.2, 8.5]{adriazola-grh}. Write $B\equiv_\theta B'$ if
+$\exp(B-B')$ is an integral series with constant term one.
+The pairing $\beta$ vanishes on either axis and satisfies
+\begin{align*}
+ \beta(F(X,X'),Y)&\equiv_\theta\beta(X,Y)+\beta(X',Y),\\
+ \beta([b]_F X,Y)&\equiv_\theta\beta(X,[\sigma b]_F Y)
+        \qquad(b\in\mathcal O_{K_p}^\times),
+\end{align*}
+by \citep[Theorem~8.12]{adriazola-grh}. Here $\sigma$ is arithmetic
+Frobenius, which induces conjugation on $K_p$, and
+$[b]_F X=L_p^{-1}(bL_p(X))$. Symmetry gives additivity in $Y$.
+
+For $L\in\mathcal L_{j-1}$ and $L'\in\mathcal L_j$ put
+\[
+  M_j=\mathfrak b^{-1}\operatorname{Hom}_{\mathcal O_E}(L,L'),\qquad
+  h(B,C)=\operatorname{Tr}_{E/K}\operatorname{tr}(BC^*).
+\]
+The period lattice in \S\ref{sec:theta-chain} is $M_j\otimes_{\mathcal O_K}
+\Lambda$ in its CM coordinates, with complex hermitian form $h/A(\Lambda)$.
+At $p$ the relative different is a unit.
+Self-duality of $L,L'$ and perfection of the unramified trace pairing
+therefore give a unimodular $\mathcal O_{K_p}$-lattice. At each place
+of the maximal real subfield above $p$ that splits in $E$, the two
+Hom summands are isotropic and
+in perfect duality. Take a basis in one and its dual in the other,
+obtaining pairs $f_i,f'_i$ with $h(f_i,f'_k)=\delta_{ik}$.
+The orthogonal complement admits an orthonormal basis
+\citep[Lemma~11.43]{adriazola-grh}. Set its variables to zero.
+
+\begin{proposition}\label{prop:inert-kernel}
+Let $G$ be a theta function for the preceding hermitian form, with
+algebraic Taylor coefficients in a $K$-basis and period lattice
+commensurable with $M_j\otimes\Lambda$ through indices prime to $p$.
+Assume its semicharacter takes values in $\{\pm1\}$. In the paired
+variables put
+\[
+ \Theta_{G,p}(x,y)=
+ G\!\left(a_p\sum_i\bigl(f_i L_p(x_i)+f'_i L_p(y_i)\bigr)\right).
+\]
+There exist $c\in\mathbb C_p^\times$ and
+$U\in\mathcal O_{\mathbb C_p}[[x,y]]$ such that
+\begin{equation}\label{eq:inert-kernel}
+ \Theta_{G,p}(x,y)=c\,\exp\!\left(-\sum_i\beta(x_i,y_i)\right)U(x,y).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+In an orthonormal basis, multiplication by $\exp(\sum_i H(X_i))$
+gives bounded coefficients \citep[Theorem~8.19]{adriazola-grh}.
+In a hyperbolic basis the diagonal terms vanish by isotropy and the
+mixed terms have coefficients $h(f_i,f'_k)=\delta_{ik}$.
+Thus $\sum_i H(X_i)\equiv_\theta\sum_i\beta(x_i,y_i)$ after
+the integral change of formal coordinates
+\citep[Proposition~8.16 and Theorem~8.21]{adriazola-grh}.
+Clearing the common bound gives \eqref{eq:inert-kernel}.
+\end{proof}
+
+At level prime to $p$, the translates in \S\ref{sec:theta-chain}
+have prime-to-$p$ order modulo the period lattice. On a common
+sublattice of prime-to-$p$ index their semicharacters agree, so the
+proposition applies to their sum once its Taylor coefficients are
+algebraic. In the additive coordinates $Z=L_p(x)$ of
+\eqref{eq:inert-coordinate}, a derivative of total order $r$ acquires
+the factor $a_p^r$, a unit for every $r$.
+
+\begin{hypothesis}[\openinput]\label{hyp:inert-kernel-integrality}
+For the fixed $T,u_0$, let $\Theta_{j,u,p}$ be the kernel of the
+$j$th lift for the auxiliary word $u$, with its prescribed level data,
+frame and determinant factors, and local length factor
+\citep[Definition~11.9]{adriazola-grh}. For every contributing inert
+$p$, every $j,u$ and every lattice pair in the class sum, its expansion
+in the coordinates \eqref{eq:inert-coordinate} satisfies
+\[
+   \exp\!\left(\sum_i\beta(x_i,y_i)\right)\Theta_{j,u,p}(x,y)
+       \in\mathcal O_{\mathbb C_p}[[x,y]] .
+\]
+\end{hypothesis}
+
+This is the open normalization in \citep[Hypothesis~11.42]{adriazola-grh}.
+It requires that one can take $c=1$ in \eqref{eq:inert-kernel} for the
+prescribed lifts.

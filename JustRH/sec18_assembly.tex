@@ -1,0 +1,159 @@
+\section{The arithmetic bound at one shift}\label{sec:assembly}
+
+Fix a mesh point $x$, the sets $T_2,T$, the shift $u_0$ and the
+nodes of \S\ref{sec:theta-chain}. Average over a nonempty set of words
+$W$ with weights $d_u=\operatorname{rk}N_u>0$. Put $y=x^\varepsilon$.
+The source-index loss of \eqref{eq:loss-second-error} enters the
+excess through its mean. Write
+\[
+ \bar e_2=\langle e_{2,u}\rangle,\qquad
+ V_M=\max_{u\in W}\bigl(\mu_{\max}(M_u)+A\log T_u\bigr)
+              -\langle\mu^M_u+A\log T_u\rangle .
+\]
+
+\subsection{The loss at a mesh point}
+
+\begin{lemma}\label{lem:assembly-spread}
+Suppose the source lattices satisfy the hypotheses of
+Theorem~\ref{thm:loss-source}. Take $h_u=h_*-A\log T_u$ and
+$|E_u-mAg|\le e_5$ for every word. The source spread $U$ of
+\S\ref{sec:period-slopes} satisfies
+\[
+                     U\le V_M+\bar e_2+2e_5 .
+\]
+\end{lemma}
+
+\begin{proof}
+Put $\xi_u=E_u-mAg$. In \eqref{eq:period-spread} the constants
+$h_*$ and $mAg$ cancel. Since $R_u\ge0$,
+\[
+ U\le V_M+\bar e_2+\langle\xi_u\rangle-\min_u\xi_u
+      \le V_M+\bar e_2+2e_5 .\qedhere
+\]
+\end{proof}
+
+\begin{proposition}\label{prop:assembly-excess}
+Suppose the following hold at $T,u_0$ for all words.
+\begin{enumerate}[label=\textup{(\roman*)},nosep]
+\item The lifts satisfy the hypotheses of
+Corollary~\ref{cor:true-integral-chain} and the endpoint inclusions
+of Hypothesis~\ref{hyp:chain-endpoints}. Their inert exponents give
+$\Gamma,e_1$ of \eqref{eq:loss-net-gain} and \eqref{eq:loss-first-error}.
+Their source lattices satisfy the hypotheses of Theorem~\ref{thm:loss-source}.
+\item The period maps and their metrics satisfy the hypotheses of
+Theorem~\ref{thm:height-account} and Corollary~\ref{cor:bessel-mean},
+with $h_u=h_*-A\log T_u$ from the height theorem.
+\item The auxiliary primes and base lattices satisfy the hypotheses
+of Propositions~\ref{prop:height-prime} and~\ref{prop:height-base}.
+The finite exponents of these kernels satisfy the hypotheses of
+Theorem~\ref{thm:finite-correction}.
+\end{enumerate}
+With uniform constants in these estimates,
+\begin{equation}\label{eq:assembly-excess}
+ D_{u_0}\le e_1+9\bar e_2+8V_M+O_\varepsilon(y\mathcal B).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Average \eqref{eq:loss-second-error} and use $\mu^M_u\ge-e_7$.
+Corollary~\ref{cor:bessel-mean} gives
+$\langle\mu^N-h\rangle\le\mu^C+e_3$ with $e_3\le8U+12b$. Hence
+\[
+ \Gamma\le \mu^C+\langle h+E\rangle-\mathcal L+\bar e_2+e_3+e_7 .
+\]
+Use \eqref{eq:acct-height} for each word. In
+$E_u-A\log T_u$ the terms $mAg$ from \eqref{eq:acct-local}
+and \eqref{eq:acct-prime} cancel. The identity for $\mathcal M$ in
+Proposition~\ref{prop:accounting} and \eqref{eq:loss-first-error} give
+\[
+ D_{u_0}\le e_1+\bar e_2+e_3+e_4+e_5+Ae_6+e_7 .
+\]
+By Lemma~\ref{lem:assembly-spread},
+$e_3\le8V_M+8\bar e_2+16e_5+12b$.
+Sections~\ref{sec:heights} and~\ref{sec:finite-correction} give
+$e_4+Ae_6+e_7\ll_\varepsilon y\mathcal B$ and
+$e_5\ll_\varepsilon\mathcal B$. Since $b\le\mathcal B$, this proves
+\eqref{eq:assembly-excess}.
+\end{proof}
+
+To estimate $V_M$ on the base lattices, write
+\[
+ V_M\le \max_u\mu_{\max}(M_u)-\langle\mu^M_u\rangle
+                 +A\log\frac{\max_u T_u}{\min_u T_u}.
+\]
+By Proposition~\ref{prop:height-base}, $-\langle\mu^M_u\rangle\le e_7$.
+Since $A\le2N_Ta$ and $\log k\ll_\varepsilon y$, it suffices for
+$V_M\ll_\varepsilon y\mathcal B$ to verify the bounds of
+\citep[Definition~18.9, (K7)--(K8)]{adriazola-grh} on these words,
+\[
+ \max_u\mu_{\max}(M_u)\ll_\varepsilon N_Ta y,\qquad
+ \log\frac{\max_u T_u}{\min_u T_u}\ll_\varepsilon\log k .
+\]
+
+\subsection{Selection on the windows}
+
+Suppose the base frame at $u_0$ has rank $D_0\ge\max_j d_j^0$,
+$D_0>0$. If its local index comparison holds, Theorem~\ref{thm:twisted-defect}
+with Hypothesis~\ref{hyp:twisted-residual} bounds the twisted term
+$D_0^{-1}\sum_j H_j$ in Hypothesis~\ref{hyp:height-norms} by
+$O_\varepsilon(y\mathcal B)$. The Bessel cutoff still requires a
+bound on $s+\mu_{\max}(R)$ in this metric.
+
+\begin{hypothesis}[\openinput]\label{hyp:assembly-windows}
+For arbitrarily small $0<\varepsilon<1/52$ there exist
+$J\ge3/2$, $K>0$ and $0<\delta_\varepsilon<1$ with the following
+property for arbitrarily large $Y$. There are primes $q,d$ of Proposition~\ref{prop:field-window}
+on one window $[U_0,U_0^J]\supseteq[Y,Y^{3/2}]$ and a mesh
+\[
+ Y=x_0<\cdots<x_\nu=Y^{3/2},\qquad
+          x_{i+1}-x_i\le Kx_i^{3/4}.
+\]
+At each $x_i$ there are ranks satisfying \eqref{eq:arithmetic-ranks},
+a set $T_2\subset H$ with $|T_2|\ge n x_i^{-\varepsilon}$,
+a set $T$ as in Lemma~\ref{lem:weight-count}, and a shift $u_0$.
+For these choices there are weights, nodes and lifts as in
+\S\ref{sec:theta-chain} for which
+Proposition~\ref{prop:assembly-excess} applies and
+\begin{equation}\label{eq:assembly-budget}
+ e_1+9\bar e_2+8V_M
+       \le (1-\delta_\varepsilon)x_i^{5\varepsilon}\mathcal B .
+\end{equation}
+All constants are uniform over the points and windows for this
+$\varepsilon$. Every word and every lift at $x_i$ uses this $T,u_0$.
+\end{hypothesis}
+
+Any uniform estimate $e_1+\bar e_2+V_M\ll_\varepsilon
+x^{4\varepsilon}\mathcal B$ suffices for \eqref{eq:assembly-budget}
+at large $x$. Lemma~\ref{lem:weight-count} gives the translate counts at all shifts.
+If the lattices come from a family indexed by shifts, one selects
+the index $u_0$ after constructing that family
+\citep[\S18.7]{adriazola-grh}. The simultaneous lattice, period
+and height estimates on such meshes are open.
+
+\begin{theorem}\label{thm:assembly-rh}
+Hypothesis~\ref{hyp:assembly-windows} implies
+Hypothesis~\ref{hyp:one-shift-arithmetic} and the Riemann hypothesis.
+\end{theorem}
+
+\begin{proof}
+Fix $\varepsilon$ from Hypothesis~\ref{hyp:assembly-windows}. Let
+$C_\varepsilon$ bound the error in \eqref{eq:assembly-excess} in
+units of $x^\varepsilon\mathcal B$. Choose $Y$ large enough that
+$C_\varepsilon Y^{-4\varepsilon}\le\delta_\varepsilon$.
+At every mesh point, \eqref{eq:assembly-excess}
+and \eqref{eq:assembly-budget} give $D_{u_0}\le x^{5\varepsilon}\mathcal B$.
+Lemma~\ref{lem:chain-nodes} gives \eqref{eq:weight-ranges}, completing
+Hypothesis~\ref{hyp:one-shift-arithmetic}.
+
+With $Q=N_Tmb\delta_2/2$, Proposition~\ref{prop:one-shift} and
+the estimate $\mathcal B/Q\ll x^{1/2+3\varepsilon}$ of
+\S\ref{sec:arithmetic-bound} give $G(x)\ll_\varepsilon
+x^{1/2+8\varepsilon}$ on the mesh by \eqref{eq:field-window-bound}
+and \eqref{eq:field-projection}. The interpolation in
+Theorem~\ref{thm:arithmetic-rh} extends this bound to $[Y,Y^{3/2}]$.
+If $\operatorname{Re}\rho>1/2$ for a nontrivial zero of $\zeta$,
+choose $\varepsilon$ with $8\varepsilon<\operatorname{Re}\rho-1/2$.
+Theorem~\ref{thm:window-criterion} contradicts the bound on arbitrarily
+large windows. The functional equation gives $\operatorname{Re}\rho=1/2$
+for every nontrivial zero.
+\end{proof}

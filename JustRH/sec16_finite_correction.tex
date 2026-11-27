@@ -1,0 +1,202 @@
+\section{The finite correction}\label{sec:finite-correction}
+
+Keep the weight set $T$, shift $u_0$ and words of \S\ref{sec:theta-chain}.
+The level primes $g_0,g_1$ of \S\ref{sec:heights} contribute
+$A\log(g_0g_1)$ per lift, up to a degree error. We compute the sum
+over places with the normalization of \eqref{eq:loss-source}. Put
+\[
+ g=\log(g_0g_1),\qquad L=x^\varepsilon,\qquad B_0=fmbL,\qquad Y_0=xnZ .
+\]
+Here $Y_0$ is the cutoff for the finite exponents. The prime sum in
+\S\ref{sec:inert-gain} uses $2Y_0$.
+
+\subsection{The sum over places}
+
+Take the coefficient field $F$ containing $E$. In $K=\mathbb Q(\sqrt{-d})$
+write $g_i=\pi_i\bar\pi_i$ and $T_u=\theta_u\bar\theta_u$ for distinct
+principal split primes $g_0,g_1,T_u$. The generators are integral.
+For $\alpha\in\mathcal O_K$ write $\mathbf1_{w\mid\alpha}$ for the
+indicator that $w$ divides $(\alpha)$. Take the common stabilizer
+denominator $D_\Gamma=M(2fN_m)$ of
+\citep[Definition~11.12 and Theorem~11.13]{adriazola-grh}.
+Write $n_{uj}=\sum_{\rho,i}
+\nu_{j\rho i}$ for the row degree of the word $u$ in
+\S\ref{sec:heights}, $\Delta_j$ for the Fock degree at lift $j$, and
+$\kappa_j\ge0$ for its level allowance.
+
+Let $P$ consist of the unramified primes $p\le Y_0$ inert in $K$.
+With $\sigma_p=(1,i_p,h_p)$ as in \S\ref{sec:inert-gain}, put
+$P_C=\{p\in P:i_p=1,\ h_p=0\}$ and $P_I=P\setminus P_C$.
+Write $\alpha_{jp}$ for their exponents, specified below,
+$\epsilon_u^T\ge0$ for the auxiliary-prime exponent and $\epsilon_j^d$ for the
+ramified exponent. The local formula of
+\citep[Definition~16.5]{adriazola-grh} in this CM type is
+\begin{equation}\label{eq:finite-table}
+ c_{uj}(w)=
+ \begin{cases}
+   \epsilon_u^T\mathbf1_{w\mid\theta_u},&p=T_u,\\
+   v_p(D_\Gamma)-\Delta_j/2+\kappa_j+
+                  n_{uj}\mathbf1_{w\mid\bar\pi_i},&p=g_i,\\
+   v_p(D_\Gamma)+\epsilon_j^d,&p=d,\\
+   v_p(D_\Gamma)+\alpha_{jp},&p\in P,\\
+   v_p(D_\Gamma),&\text{otherwise},
+ \end{cases}\qquad w\mid p .
+\end{equation}
+Each $\rho\in\Phi$ fixes $K$, so
+$v_w(\rho(\bar\pi_i))/e_w=\mathbf1_{w\mid\bar\pi_i}$ at $g_i$.
+
+For a word $u$ and place $\rho$, let $W_u(\rho)$ be the maximum of
+$|\lambda^{(i)}_{\rho,h}-\lfloor i(t_r+1)/2\rfloor|$ over levels
+$0\le i\le m$ and entries $h$, omitting the first entry at each top.
+The auxiliary prime has exponent \citep[definition of \texttt{EatT}]{alpoge-finite-exponents}
+\begin{equation}\label{eq:finite-aux}
+ \epsilon_u^T=2\sum_\rho W_u(\rho)+fN_m+
+                  N_T(t_r+1)(m+1)/4 .
+\end{equation}
+
+\begin{hypothesis}[\openinput]\label{hyp:finite-realization}
+The normalized kernels use the level primes $g_i\le 2(kb)^8$ of
+\citep[condition (D5)]{adriazola-grh}. For these kernels the finite correction
+in \eqref{eq:loss-source} is $f_u(w)=\sum_{j=1}^m c_{uj}(w)$ at every
+place. Formula~\eqref{eq:finite-table} uses the row and Fock degrees
+of these kernels, their common stabilizer denominator and the exponents
+of \eqref{eq:finite-aux}, \eqref{eq:finite-inert-c} and \eqref{eq:finite-inert-i}.
+These identifications hold for every word at the same shift.
+\end{hypothesis}
+
+\begin{lemma}\label{lem:finite-place-sum}
+Put $D_\Gamma^{(u)}=D_\Gamma/T_u^{v_{T_u}(D_\Gamma)}$ and
+$E_{uj}=2\sum_w\ell_we_wc_{uj}(w)$. Then
+\begin{align}
+ E_{uj}-Ag
+   &=(n_{uj}-\Delta_j-A+2\kappa_j)g+\epsilon_u^T\log T_u \notag\\
+   &\quad+2\log D_\Gamma^{(u)}+2\epsilon_j^d\log d
+                           +2\sum_{p\in P}\alpha_{jp}\log p .
+ \label{eq:finite-place-sum}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+For every $p$, $\sum_{w\mid p}\ell_we_w=\log p$. Above either
+prime of $K$ over a split $p$ the sum is $\frac12\log p$, since
+the local degrees there sum to $[F:K]$. Thus the degree term at
+$g_i$ gives $n_{uj}\log g_i$ and the selected half at $T_u$ gives
+$\epsilon_u^T\log T_u$. The stabilizer term occurs once at every rational
+prime other than $T_u$. Summing the remaining rows gives the identity.
+\end{proof}
+
+\subsection{The inert exponents}
+
+For $p\in P_C$ the local exponent of
+\citep[definition of \texttt{EatC}]{alpoge-finite-exponents} is
+\begin{equation}\label{eq:finite-inert-c}
+ \alpha_{jp}=3fN_m^2\log_p a+
+                  \frac{\sum_{\rho\in\Phi}w_j(\rho)}{p^2-1},
+ \qquad \log_p y=\frac{\log y}{\log p}.
+\end{equation}
+For $p\in P_I$ the permutation $\rho\mapsto\rho+\sigma_p+c$ of $\Phi$
+has orbit length $r_p\le f$, where $c$ is complex conjugation. Let
+$I=\{(0,0,h):h\in H\}$ when $i_p=1$ and $I=\varnothing$ otherwise.
+Put $J=\Phi\setminus I$, and let $J_T$ be the top places in $J$.
+
+For an orbit starting at $\rho\in I$, write its successive places as
+$\rho_s$, $s\in\mathbb Z/r_p\mathbb Z$, and put
+$d_s=(k-1)w_j(\rho_s)$. Its loss is
+\[
+ V_\rho=\gamma_p\sum_s d_s-\max\sum_{s,l} y_{sl},
+ \qquad \gamma_p=\frac p{p^2-1}.
+\]
+Here $l$ runs through the positive odd integers below $r_p$,
+$y_{sl}\ge0$, and $\sum_l(p^ly_{sl}+y_{s-l,l})\le d_s$ for each $s$.
+Write $\eta,S_c\ge0$ for the size and weight allowances in the local
+formula. With $y_+=\max(y,0)$, the orbit formula
+\citep[definitions of \texttt{EatI} and \texttt{EatX}]{alpoge-finite-exponents} reads
+\begin{align}
+ \alpha_{jp}
+ &=\left(\frac1{r_p}\sum_{\rho\in I}V_\rho\right)_+
+     +\gamma_p|J_T|(b+\eta+1+3S_c)
+     +\frac{12}{p}\sum_{\rho\in J}w_j(\rho)+D_{jp},\label{eq:finite-inert-i}\\
+ D_{jp}
+ &= |J|N_{j-1}N_j\bigl(1+\log_p(4r_pN_ma)\bigr)
+      +5|J|N_m^2\log_p(2a)+4|J_T|\bigl(\log_p(2a)\bigr)^2 .\notag
+\end{align}
+The exceptional term in the orbit formula requires $h_p\ne0$ of odd
+order. Proposition~\ref{prop:aux-field} rules it out.
+
+\begin{lemma}\label{lem:finite-inert}
+Suppose $\eta+S_c\ll_\varepsilon b$.
+For the nodes \eqref{eq:chain-nodes}, uniformly in $j$ and the shift,
+\[
+ 2\sum_{p\in P_C}|\alpha_{jp}|\log p\ll_\varepsilon fb,\qquad
+ 2\sum_{p\in P_I}|\alpha_{jp}|\log p\ll_\varepsilon fb\,x^{\varepsilon/3}.
+\]
+\end{lemma}
+
+\begin{proof}
+The rank choice of \S\ref{sec:theta-chain} gives $N_m\le x^{402}$
+for large $x$ \citep[Lemma~16.10]{adriazola-grh}.
+We have $\log Y_0=x^{\varepsilon/3}+O(\log x)$, whereas $\log b=L$.
+Thus $x^D Y_0\log(2Y_0)=o(b)$ for every fixed $D$.
+In \eqref{eq:finite-inert-c} the first terms cost
+$O(fN_m^2Y_0\log a)=o(fb)$. The second cost $O(fb)$ since
+$w_j\le2b$ and $\sum_{p}\log p/(p^2-1)<\infty$.
+
+When $I$ is nonempty its orbits stay in $I$. All their nodes are
+at most $2b'$ by Lemma~\ref{lem:chain-nodes}. Since $b'=xb/Z$ and
+$k$ is polynomial in $x$, one has $d_s\ll b$. The zero array is
+feasible, so $V_\rho\le\gamma_p r_p\max_s d_s$. As
+$\gamma_p\le2/p$ and $|I|,|J|\le f$, the first three terms in
+\eqref{eq:finite-inert-i} are $O_\varepsilon(fb/p)$. For $p\ge2$
+the displayed digit terms satisfy $0\le D_{jp}\le fx^{D}$ for a
+fixed $D$, since $r_p\le f$, $N_j\le N_m$ and $\log a\ll L$.
+Their weighted sum is $o(fb)$. Finally Mertens' estimate in
+\S\ref{subsec:smoothed-prime-sum} gives
+$\sum_{p\le Y_0}(\log p)/p\ll\log(2Y_0)\ll_\varepsilon x^{\varepsilon/3}$.
+\end{proof}
+
+\subsection{The bound at one shift}
+
+\begin{hypothesis}[\openinput]\label{hyp:finite-sizes}
+For the data in Hypothesis~\ref{hyp:finite-realization}, one has
+$\eta+S_c\ll_\varepsilon b$ and, uniformly in the words, lifts and
+mesh points on the chosen windows,
+\[
+ |n_{uj}-\Delta_j-A|+|\epsilon_j^d|\ll_\varepsilon fb,\qquad
+ \kappa_j\ll_\varepsilon fmb .
+\]
+The constants depend only on $\varepsilon$.
+\end{hypothesis}
+
+\begin{theorem}\label{thm:finite-correction}
+Under Hypotheses~\ref{hyp:height-dimensions},
+\ref{hyp:finite-realization} and~\ref{hyp:finite-sizes}, there is
+a common $e_5\ll_\varepsilon\mathcal B$ such that
+\[
+                 |E_u-mAg|\le e_5\qquad\text{for every word }u .
+\]
+\end{theorem}
+
+\begin{proof}
+Since $k$ grows polynomially and $g_i\le2(kb)^8$, one has $g\ll L$.
+The level error in \eqref{eq:finite-place-sum} is $O_\varepsilon(B_0)$.
+At $T_u$, every retained entry in \eqref{eq:chain-weights} is $O(b)$.
+The shifts in $W_u(\rho)$ are at most $N_m$, which is polynomial in $x$.
+Thus \eqref{eq:finite-aux} gives $\epsilon_u^T\ll fb$.
+Now $\log T_u\ll_\varepsilon mL$ by Hypothesis~\ref{hyp:height-dimensions}.
+At $d$ use $\log d\le L$ from Proposition~\ref{prop:field-window}.
+Put $s=2fN_m$. The exponent of $p$ in $M(s)$ is
+$\sum_{h\ge0}\lfloor s/(p^h(p-1))\rfloor\le sp/(p-1)^2\le2s$
+and vanishes for $p>s+1$. Hence
+$\log D_\Gamma^{(u)}\le\log M(s)\ll s^2\log(2s)=o(b)$.
+Lemma~\ref{lem:finite-inert} bounds the remaining sum by
+$O_\varepsilon(fb x^{\varepsilon/3})$. Thus
+$|E_{uj}-Ag|\le C_\varepsilon B_0$. Hypothesis~\ref{hyp:finite-realization}
+gives $E_u=\sum_jE_{uj}$. Take $e_5=C_\varepsilon mB_0$ and use
+$mB_0\le\mathcal B$ from \S\ref{sec:arithmetic-bound}.
+\end{proof}
+
+Theorem~\ref{thm:finite-correction} gives \eqref{eq:acct-local} with the same $g$ as
+Proposition~\ref{prop:height-prime}. The term $mAg$ cancels in
+Proposition~\ref{prop:accounting}. In \eqref{eq:period-spread} one
+also has $\max_u|E_u-\langle E\rangle|\le2e_5$. The period comparison
+still requires a bound for the twisted congruence defect at this shift.

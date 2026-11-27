@@ -1,0 +1,123 @@
+\section{The accounting inequality}\label{sec:accounting}
+
+Consider first a single weight $a$ and a constant node $w$, with
+$a\ge w>0$. Let $\chi$ be the quadratic character of an imaginary
+quadratic field. Put $\lambda_1=L'(1,\chi)/L(1,\chi)$ and
+\[
+  G_\chi(y)=\sum_{n\le y}\Lambda(n)\chi(n)(y/n-1)+\lambda_1 y
+  \qquad(y\ge1).
+\]
+Write $r_+=\max\{r,0\}$. At $y=a/w$, the definition of $G$ in
+\eqref{eq:prime-sum} gives
+\begin{align*}
+  \sum_{n\ge1}\Lambda(n)(1-\chi(n))(a/n-w)_+
+    &=a\bigl(\log(a/w)-1-\gamma+\lambda_1\bigr)\\
+    &\quad+w\bigl(G(a/w)-G_\chi(a/w)\bigr).
+\end{align*}
+At an inert prime $p$, the factor $1-\chi(p^i)$ equals two for odd $i$
+and zero for even $i$. It vanishes at split primes and equals one at
+ramified primes.
+
+Let $T$ and $\Phi$ be nonempty finite sets, put $f=|\Phi|$, and let
+$m\ge1$ be an integer. For each $t\in T$ fix a weight $a_t>0$.
+For each $1\le j\le m$ fix nodes $w_{j\rho}>0$ indexed by $\rho\in\Phi$.
+Write
+\[
+  A=\sum_{t\in T}a_t,\qquad
+  \log\bar w_j=\frac1f\sum_{\rho\in\Phi}\log w_{j\rho}.
+\]
+For $\lambda_1\in\mathbb R$ put
+\begin{equation}\label{eq:account-main}
+  \mathcal M=\sum_{j=1}^m\sum_{t\in T}
+    a_t\bigl(\log(a_t/\bar w_j)-1-\gamma+\lambda_1\bigr).
+\end{equation}
+Here $\gamma$ is Euler's constant as in \eqref{eq:prime-sum}.
+
+\begin{proposition}\label{prop:accounting}
+Let $W$ be a nonempty finite set. Give each $u\in W$ a weight $d_u>0$
+and write $\langle X\rangle=\sum_u d_u X_u/\sum_u d_u$.
+Fix $v>0$ and $g\in\mathbb R$, and put
+\[
+  \log\Omega=\gamma+\log(\pi/v)-\lambda_1,\qquad
+  H_\Omega=m\sum_{t\in T}a_t\bigl(\log(a_t/\Omega)-1\bigr).
+\]
+Let $S,\Gamma,\mathcal L,\mu^C$ be real. For each $u\in W$ let $T_u>0$
+and let $\mu^M_u,\mu^N_u,h_u,E_u$ be real. Suppose that
+$e_1,\ldots,e_7\ge0$ satisfy the following inequalities, with each
+indexed inequality holding for every $u\in W$.
+\begin{align}
+  S &\le \Gamma+e_1, \label{eq:acct-gain}\\
+  \mu^M_u+\Gamma+\mathcal L-E_u &\le \mu^N_u+e_2,
+    \label{eq:acct-source}\\
+  \langle\mu^N-h\rangle &\le \mu^C+e_3, \label{eq:acct-mean}\\
+  \mu^C+h_u-\mathcal L &\le H_\Omega-A\log T_u+e_4,
+    \label{eq:acct-height}\\
+  E_u &\le mAg+e_5, \label{eq:acct-local}\\
+  \log T_u &\ge \sum_{j=1}^m\log(\bar w_j v/\pi)+mg-e_6,
+    \label{eq:acct-prime}\\
+  \mu^M_u &\ge -e_7. \label{eq:acct-base}
+\end{align}
+Then the excess $D=S-\mathcal M$ satisfies
+\begin{equation}\label{eq:account-excess}
+  D\le e_1+e_2+e_3+e_4+e_5+Ae_6+e_7.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Average \eqref{eq:acct-source} and use \eqref{eq:acct-base}. Splitting
+$\mu^N_u=(\mu^N_u-h_u)+h_u$ gives
+\begin{align*}
+  \Gamma
+  &\le \langle\mu^N-h\rangle+\langle h+E\rangle-\mathcal L+e_2+e_7\\
+  &\le \mu^C+\langle h\rangle-\mathcal L+\langle E\rangle+e_2+e_3+e_7
+\end{align*}
+by \eqref{eq:acct-mean}. The first three terms on the last line form
+the mean of the left side of \eqref{eq:acct-height}. Hence
+\[
+  \Gamma\le H_\Omega+\big\langle E_u-A\log T_u\big\rangle_u
+    +e_2+e_3+e_4+e_7.
+\]
+Since $A>0$, subtracting $A$ times the lower bound
+\eqref{eq:acct-prime} from the upper bound \eqref{eq:acct-local} cancels
+$mAg$ for each $u$ and gives
+\[
+  E_u-A\log T_u
+  \le -A\sum_{j=1}^m\log(\bar w_j v/\pi)+e_5+Ae_6.
+\]
+The definition of $\Omega$ gives $-\log\Omega-\log(v/\pi)=-\gamma+\lambda_1$,
+so that
+\[
+  H_\Omega-A\sum_{j=1}^m\log(\bar w_j v/\pi)=\mathcal M.
+\]
+Inequality~\eqref{eq:acct-gain} now gives \eqref{eq:account-excess}.
+\end{proof}
+
+In the arithmetic application, $j$ indexes the lifts and $t$ the top
+weights. Fix a shift $u_0$ of the nodes. Each auxiliary word $u\in W$
+indexes a prime $T_u$ and a period map $B_u\colon N_u\to R^\vee$. Take
+\[
+  d_u=\operatorname{rk}N_u,\qquad
+  \mu^N_u=\mu(N_u),\qquad
+  \mu^M_u=\mu(M_u),\qquad
+  \mu^C=\mu(R^\vee).
+\]
+Here $M_u$ is the base lattice. In the convention of
+\citep[\S15.1]{adriazola-grh} the slope is twice the normalized
+Arakelov degree divided by rank. The height bound $h_u$ for $B_u$ occurs in
+both \eqref{eq:acct-mean} and \eqref{eq:acct-height}.
+The number $\Gamma$ sums the net divisibility gains at inert primes.
+
+Take $\chi=\chi_{-d}$ for the auxiliary quadratic field of discriminant
+$-d$, and use its $\lambda_1$ in \eqref{eq:account-main}.
+If $S_{jt}$ denotes the contribution of the pair $(j,t)$ to the
+finite-place sum for $u_0$, then $S=\sum_{j,t}S_{jt}$, and the quantity
+to which \eqref{eq:account-excess} applies is
+\[
+  D_{u_0}=\sum_{j,t}\left[
+    S_{jt}-a_t\bigl(\log(a_t/\bar w_j)-1-\gamma+\lambda_1\bigr)
+  \right].
+\]
+The nodes in $S_{jt}$ and in $\bar w_j$ must come from the same shift
+and the same chain. To use \eqref{eq:account-excess} on a window, the
+arithmetic construction must realize the seven inequalities together
+and bound their total error uniformly throughout the window.

@@ -1,0 +1,101 @@
+\section{The arithmetic bound and the Riemann hypothesis}\label{sec:arithmetic-bound}
+
+It suffices to bound the excess at points spaced $O(x^{3/4})$ apart.
+The convexity of $G(y)+y\log y$ controls the error between them.
+
+At a point $x$ put $a=xb$ and keep $Q=N_Tmb\delta_2/2$ from
+\S\ref{sec:weights}. Let $m$ be the number of lifts and $k$ the
+positive index of the first hermitian space. The rank choices in
+\citep[Proposition~5.15]{adriazola-grh} satisfy
+\begin{equation}\label{eq:arithmetic-ranks}
+  x^{1/2-\varepsilon}\le m\le x^{1/2+\varepsilon/2},
+  \qquad xm\le k\le n^2x^{1/2-\varepsilon}.
+\end{equation}
+Write
+\[
+  \mathcal B=N_Ta\left(1+\frac{m^2}{k}\right)
+       +m\left(2nmbx^\varepsilon+\frac{N_2kb x^{2\varepsilon}}{n^2}\right).
+\]
+
+\begin{hypothesis}[\openinput]\label{hyp:one-shift-arithmetic}
+For arbitrarily small $0<\varepsilon<1/52$ there are constants
+$J\ge3/2$ and $K>0$ with the following property for arbitrarily
+large $Y$. There are primes $q,d$ as in
+Proposition~\ref{prop:field-window} on a window $[U,U^J]$ containing
+$[Y,Y^{3/2}]$, and there is a finite mesh
+\[
+  Y=x_0<\cdots<x_\nu=Y^{3/2},\qquad
+  x_{i+1}-x_i\le Kx_i^{3/4}\quad(0\le i<\nu).
+\]
+At each mesh point $x$ there are ranks satisfying
+\eqref{eq:arithmetic-ranks}, a set $T_2$ with $N_2\ge nx^{-\varepsilon}$,
+and a weight set $T$ satisfying the size and translate bounds of
+Lemma~\ref{lem:weight-count}. For this $T$ there are a shift $u_0\in H$,
+weights $(a_t)_{t\in T}$ and nodes satisfying \eqref{eq:weight-ranges}
+such that
+\begin{equation}\label{eq:arithmetic-bound}
+  D_{u_0}\le x^{5\varepsilon}\mathcal B .
+\end{equation}
+\end{hypothesis}
+
+The primes stay fixed on a window. The sets, ranks, and shift may
+depend on the mesh point. To prove \eqref{eq:arithmetic-bound} by
+Proposition~\ref{prop:accounting}, it suffices to realize
+\eqref{eq:acct-gain}--\eqref{eq:acct-base} on one chain with these
+weights and nodes and to bound its total error by
+\[
+  e_1+e_2+e_3+e_4+e_5+A e_6+e_7\le x^{5\varepsilon}\mathcal B,
+  \qquad A=\sum_{t\in T}a_t .
+\]
+
+\begin{theorem}\label{thm:arithmetic-rh}
+Hypothesis~\ref{hyp:one-shift-arithmetic} implies the Riemann hypothesis.
+\end{theorem}
+
+\begin{proof}
+Fix an $\varepsilon$ from the hypothesis and write
+$\theta=1/2+8\varepsilon<1$. At a mesh point, division by $Q$ gives
+\[
+  \frac{\mathcal B}{Q}
+   =\frac{2x}{\delta_2}\left(\frac1m+\frac m k\right)
+     +\frac{4nm x^\varepsilon}{N_T\delta_2}
+     +\frac{2k x^{2\varepsilon}}{nN_T}.
+\]
+Since $\delta_2\ge x^{-\varepsilon}$ and $n/N_T\le2x^{\varepsilon/8}$,
+\eqref{eq:arithmetic-ranks} bounds the right side by
+\[
+  2x^{1/2+2\varepsilon}+2x^\varepsilon
+  +8x^{1/2+21\varepsilon/8}+4x^{1/2+9\varepsilon/8}
+  \ll x^{1/2+3\varepsilon}.
+\]
+By \eqref{eq:one-shift}, \eqref{eq:field-projection} and
+\eqref{eq:field-window-bound}, the chosen shift therefore gives
+\[
+  G(x)\le\frac{D_{u_0}}{Q}+3x^{1/2+\varepsilon}+o(1)
+       \ll_{\varepsilon} x^\theta .
+\]
+Here \eqref{eq:arithmetic-bound} bounds the first term, and
+Proposition~\ref{prop:one-shift} bounds the error uniformly on the mesh.
+
+Take consecutive mesh points $u<v$ and let $L$ denote affine
+interpolation at $u,v$. Put $f(y)=y\log y$. By \eqref{eq:prime-sum},
+\[
+  G(y)+f(y)=(1+\gamma)y+\sum_{r\ge1}\Lambda(r)(y/r-1)_+
+\]
+is convex. Thus $G(y)\le LG(y)+Lf(y)-f(y)$ on $[u,v]$.
+The mesh estimate and concavity of $y^\theta$ give
+$LG(y)\le C_\varepsilon y^\theta$. Since $f''(y)=1/y\le1/u$,
+the function $f(y)-y^2/(2u)$ is concave, whence
+\[
+  Lf(y)-f(y)\le\frac{(y-u)(v-y)}{2u}
+        \le\frac{(v-u)^2}{8u}\le\frac{K^2}{8}\sqrt y .
+\]
+Consequently $G(y)\le(C_\varepsilon+K^2/8)y^\theta$ throughout
+$[Y,Y^{3/2}]$, with one constant for all the chosen windows.
+
+Theorem~\ref{thm:window-criterion} now excludes zeros of $\zeta$ in
+$\operatorname{Re}s>1/2+8\varepsilon$. The hypothesis admits
+arbitrarily small $\varepsilon$, so every nontrivial zero $\rho$
+satisfies $\operatorname{Re}\rho\le1/2$. The functional equation gives
+the same inequality for $1-\rho$, hence $\operatorname{Re}\rho=1/2$.
+\end{proof}

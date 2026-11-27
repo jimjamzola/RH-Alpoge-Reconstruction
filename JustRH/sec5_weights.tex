@@ -1,0 +1,156 @@
+\section{Choosing the weights for one shift}\label{sec:weights}
+
+At a fixed shift, a weight sends $(1,0,h)$ to a thick place when its
+index belongs to a prescribed translate. We choose the indices so that
+every translate contains nearly the same number.
+
+\subsection{Counts on translates}
+
+Fix $0<\varepsilon<1/52$ and use the field at $x$ from
+Proposition~\ref{prop:field-window}. Fix the set $T_2\subset H$ of
+thick indices before choosing the weight indices $T\subset H$.
+Only the size bound $N_2=|T_2|\ge n x^{-\varepsilon}$ enters the count.
+The construction in \citep[Proposition~5.17]{adriazola-grh} gives
+such a set. Write
+\[
+  \delta_2=N_2/n,\qquad p=x^{-\varepsilon/8},\qquad
+  N_T=|T|,\qquad C_s=|T\cap(T_2+s)|.
+\]
+
+\begin{lemma}\label{lem:weight-count}
+For sufficiently large $x$ there is a set $T$ with
+$pn/2\le N_T\le 2pn$ and
+\begin{equation}\label{eq:weight-count}
+   \max_{s\in H}\left|\frac{C_s}{N_T\delta_2}-1\right|\le4\kappa,
+   \qquad \kappa=\left(\frac{12\log n}{pN_2}\right)^{1/2}.
+\end{equation}
+Given prime and orbit data as in \citep[Proposition~5.20]{adriazola-grh},
+one choice of $T$ satisfies both \eqref{eq:weight-count} and the
+weighted bound on exceptional Frobenius orbits in that proposition.
+\end{lemma}
+
+\begin{proof}
+Include each $t\in H$ independently with probability $p$. For fixed
+$s$, the count $C_s$ has binomial law with mean $\mu=pN_2$.
+Since $\mu\ge x^{2+55\varepsilon/8}$, we have $\kappa\le1/2$ for
+large $x$. The Chernoff bound gives
+\[
+  \Pr\!\left(\max_{s\in H}|C_s-\mu|>\kappa\mu\right)
+  \le 2n\exp(-\kappa^2\mu/3)=2n^{-3}.
+\]
+Each $t\in T$ occurs in $N_2$ translates, so
+$n^{-1}\sum_s C_s=N_T\delta_2$. On the complementary event both
+$C_s$ and $N_T\delta_2$ lie in $[(1-\kappa)\mu,(1+\kappa)\mu]$.
+This gives the size bound and \eqref{eq:weight-count}. For the trivial
+target character the proof of the cited proposition uses the same
+Bernoulli law. Its size and orbit bounds hold together with probability
+at least $2/3-2/7>2n^{-3}$ for large $x$.
+\end{proof}
+
+\subsection{The excess at one shift}
+
+Put $b=\exp(x^\varepsilon)$, $Z=\exp(x^{\varepsilon/3})$ and
+$\omega=\exp(-x^{\varepsilon/8})$. For $u_0\in H$ call the places
+$(0,1,s)$ with $s\in T_2+u_0$ thick and all other places in $\Phi$
+thin. Let $m\ge1$ and write $w_j(\rho)>0$ for the nodes at this shift,
+$1\le j\le m$. Assume
+\begin{equation}\label{eq:weight-ranges}
+  |a_t/b-x|\le x^{-1},\qquad
+  \begin{cases}
+    b\le w_j(\rho)\le b(1+x^{-2}) & \text{at thick places},\\
+    w_j(\rho)\le 2xb/Z & \text{at thin places}.
+  \end{cases}
+\end{equation}
+These inequalities follow from the numerical ranges in
+\citep[Theorem~A(i) and Proposition~5.16]{adriazola-grh}.
+
+\begin{proposition}\label{prop:one-shift}
+Take $T$ as in Lemma~\ref{lem:weight-count} and put
+$Q=N_Tmb\delta_2/2$. For any shift $u_0$ and weights and nodes
+satisfying \eqref{eq:weight-ranges}, the excess of
+\S\ref{sec:accounting} satisfies
+\begin{equation}\label{eq:one-shift}
+  \frac{D_{u_0}}{Q}=4\sum_{h\in H}F_x(1,0,h)+o(1).
+\end{equation}
+For fixed $\varepsilon$ and window exponent $J$, the error tends to
+zero uniformly in these choices as $x\to\infty$.
+\end{proposition}
+
+\begin{proof}
+Write $K_y(g)=F_y(g)/y$ and let $\mu_r(g)$ be the probability
+in \eqref{eq:field-frobenius} for the prime power $r$. From the
+definition of $F_y$,
+\[
+  K_y(g)=c_g-\frac{\log y}{4n}
+     +\sum_{r\ \mathrm{prime\ power}}\Lambda(r)\mu_r(g)
+          \left(\frac1r-\frac1y\right)_+ ,
+\]
+where $c_g$ collects the terms independent of $y$. Conjugate
+characters pair in $F_y$, so $K_y$ is real. Put
+$\|K_y\|_1=\sum_{g\in\mathcal G}|K_y(g)|$. Between consecutive
+integers, $\sum_g\mu_r(g)=1$ and Chebyshev's bound give
+\[
+  \|K'_y\|_1\le\frac1y+\frac1{y^2}\sum_{r\le y}\Lambda(r)
+    \ll \frac1y.
+\]
+Each summand is continuous at $y=r$. Integrating from $x$ to $Z$
+and applying \eqref{eq:field-large-arguments} at $Z$ gives
+\begin{equation}\label{eq:weight-variation}
+  \|K_x\|_1\ll 4n\omega+\log(Z/x)\ll 1+\log Z.
+\end{equation}
+
+For $g\notin\Phi$ put $y_{jtg}=a_t/w_j(p_tg)$. The finite-place sum
+in \S\ref{sec:accounting} gives the identity
+\begin{equation}\label{eq:weight-excess}
+  D_{u_0}=2\sum_{j,t}a_t\sum_{g\notin\Phi}K_{y_{jtg}}(g).
+\end{equation}
+For each $j,t$ the prime-power terms sum to the finite-place
+contribution \citep[Proposition~3.3]{adriazola-grh}
+\[
+   S_{jt}=2\sum_{g\notin\Phi}\ \sum_{r\ \mathrm{prime\ power}}
+        \Lambda(r)\mu_r(g)\bigl(a_t/r-w_j(p_tg)\bigr)_+ .
+\]
+The map $p_t$ sends the complement of $\Phi$ bijectively onto $\Phi$,
+so the logarithms contribute $-a_t\log(a_t/\bar w_j)$ for each $j,t$.
+Summing the characters over that complement gives $f$ for the trivial
+character, $-f$ for $\chi_{-d}$ and zero for the others.
+Thus $2\sum_{g\notin\Phi}c_g=1+\gamma-\lambda_1$, as in
+\eqref{eq:account-main}.
+
+At a thin place $y_{jtg}\ge Z/3$ and hence
+$|K_{y_{jtg}}(g)|\le\omega$ by \eqref{eq:field-large-arguments}.
+At a thick place $y_{jtg}$ lies in $I=[x-2/x,x+2/x]$ by
+\eqref{eq:weight-ranges}. For fixed $j,t$ the derivative estimate gives
+\[
+ \sum_{p_tg\ \mathrm{thick}}
+   |K_{y_{jtg}}(g)-K_x(g)|
+ \le \int_I\|K'_v\|_1\,dv\ll x^{-2}.
+\]
+Discard the thin terms in \eqref{eq:weight-excess} and replace
+$a_t K_{y_{jtg}}(g)$ at the thick places by $bxK_x(g)=bF_x(g)$.
+After division by $Q$, the total error is
+\[
+  \ll \delta_2^{-1}\bigl(fx\omega+x^{-1}
+                      +x^{-1}\|K_x\|_1\bigr)=o(1)
+\]
+by \eqref{eq:weight-variation} and $\delta_2\ge x^{-\varepsilon}$.
+
+Now $p_t(1,i,h)=(0,i+1,h+t)$ is thick just when $i=0$ and
+$t\in T_2+u_0-h$. The thick terms therefore give
+\[
+  \frac{D_{u_0}}{Q}
+    =4\sum_{h\in H}\frac{C_{u_0-h}}{N_T\delta_2}F_x(1,0,h)+o(1).
+\]
+Replacing each ratio by $1$ costs at most $16\kappa x\|K_x\|_1$.
+Since $pN_2\ge x^{2+55\varepsilon/8}$ and $\log Z=x^{\varepsilon/3}$,
+\eqref{eq:weight-variation} gives $\kappa x\|K_x\|_1=o(1)$.
+\end{proof}
+
+Equations \eqref{eq:field-projection}, \eqref{eq:field-window-bound}
+and \eqref{eq:one-shift} give
+\[
+  G(x)\le \frac{D_{u_0}}{Q}+3x^{1/2+\varepsilon}+o(1).
+\]
+To bound $D_{u_0}$ by Proposition~\ref{prop:accounting}, the arithmetic
+construction must realize its seven inequalities for this $T$ and one
+shift $u_0$ with the weights and nodes in \eqref{eq:weight-ranges}.

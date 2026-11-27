@@ -1,0 +1,180 @@
+\section{The auxiliary field}\label{sec:auxiliary-field}
+
+The top weights have indices in a cyclic group $H$. Summing over $H$ in
+the prime sum isolates $G$ up to three quadratic terms. The quadratic
+fields stay fixed on a power window. The order of $H$ depends on the
+point $x$ in that window.
+
+\subsection{The field and its primes}
+
+Let $q,d$ be distinct primes with
+\[
+  q\equiv3\pmod 8,\qquad d\equiv7\pmod{16},\qquad d\equiv-1\pmod q.
+\]
+For $\ell=q,d$ write $\chi_{-\ell}$ for the primitive quadratic
+character of $\mathbb Q(\sqrt{-\ell})$. Its value at $a$ is the
+Legendre symbol $(a/\ell)$. For $e\ge1$ put $n=2^e$, $M=4n$ and
+$\zeta_M=\exp(2\pi i/M)$. Set
+\[
+  K_e=\mathbb Q(\zeta_M+\zeta_M^{-1}),\qquad
+  E=K_e(\sqrt{-d},\sqrt{-q}),\qquad
+  H=(\mathbb Z/M\mathbb Z)^\times/\{\pm1\}.
+\]
+
+\begin{proposition}\label{prop:aux-field}
+The group $H$ is cyclic of order $n$. The field $E$ is a CM field with
+maximal real subfield $K_e(\sqrt{dq})$ and Galois group
+\[
+  \mathcal G=(\mathbb Z/2\mathbb Z)^2\times H.
+\]
+In coordinates $(i,j,h)$ the actions on $\sqrt{-d}$ and $\sqrt{-q}$
+have signs $(-1)^i$ and $(-1)^j$, respectively. Complex conjugation
+is $c=(1,1,0)$.
+\end{proposition}
+
+\begin{proof}
+The units congruent to $1$ modulo $4$ represent $H$ bijectively.
+There are $n$ such units, and $5$ generates them, since
+$v_2(5^{2^r}-1)=r+2$ for $r\ge0$, by successive squaring.
+In $\mathbb Q(\zeta_{Mqd})$ the Chinese remainder theorem gives
+independent actions at $M,d,q$. On the first factor the kernel of
+restriction to $K_e$ is $\{\pm1\}$. On each odd factor the kernel
+of the Legendre symbol is the subgroup of squares. This gives
+$\mathcal G$ and the two stated signs. Conjugation fixes $K_e$ and
+negates both square roots. Its fixed field $K_e(\sqrt{dq})$ is totally
+real and has index two in $E$.
+\end{proof}
+
+Fix an embedding of $E$ in $\mathbb C$ and identify its embeddings with
+$\mathcal G$. Exactly one of $g,c+g$ fixes $\sqrt{-d}$. The embeddings
+that fix it therefore form a CM type
+\[
+  \Phi=\{(0,j,h)\},\qquad f=|\Phi|=2n.
+\]
+We write the group law additively. For $t\in H$, the translation
+\[
+  p_t(1,j,h)=(0,j+1,h+t)
+\]
+matches the complementary type with $\Phi$. In
+Proposition~\ref{prop:accounting} the nodes run over this $\Phi$,
+$v=\tfrac12|\operatorname{disc}(E)|^{1/(4n)}$, and
+$\lambda_1=L'(1,\chi_{-d})/L(1,\chi_{-d})$.
+
+For each character $\psi$ of $\mathcal G$ let $\chi_\psi$ denote the
+primitive Dirichlet character that induces $\psi$ on
+$(\mathbb Z/Mqd\mathbb Z)^\times$. Let $I_p$ be the inertia subgroup
+at $p$ and let $\sigma_p$ lift arithmetic Frobenius in
+$\mathcal G/I_p$. For $k\ge1$ character orthogonality gives
+\begin{equation}\label{eq:field-frobenius}
+  \frac{1}{4n}\sum_{\psi\in\widehat{\mathcal G}}
+       \overline{\psi(g)}\,\chi_\psi(p^k)
+  =\frac{\mathbf 1_{\{g\in k\sigma_p+I_p\}}}{|I_p|}.
+\end{equation}
+Indeed, averaging $\psi$ on $k\sigma_p+I_p$ gives $\psi(k\sigma_p)$
+if $\psi$ is trivial on inertia and zero otherwise. These values are
+exactly $\chi_\psi(p^k)$, including zero when $p$ divides its conductor.
+Fourier inversion gives \eqref{eq:field-frobenius}.
+
+For $p\nmid Mqd$ the Frobenius is $(i,j,[p])$, where
+$(-1)^i=\chi_{-d}(p)$ and $(-1)^j=\chi_{-q}(p)$.
+Thus $k\sigma_p$ lies outside $\Phi$ precisely when $p$ is inert in
+$\mathbb Q(\sqrt{-d})$ and $k$ is odd. Both $2$ and $q$ split in that
+quadratic field, since $-d\equiv1$ modulo $8$ and modulo $q$.
+Their Frobenius cosets lie in $\Phi$ for every power. At $d$, only
+$\mathbb Q(\sqrt{-d})$ ramifies among the three defining factors of
+$E$, so $I_d=\{0,(1,0,0)\}$. Each coset $k\sigma_d+I_d$ has one
+element outside $\Phi$, of mass $1/2$ in \eqref{eq:field-frobenius}.
+
+\subsection{The four characters}
+
+For each nonprincipal primitive character $\eta$ put
+\[
+  G_\eta(y)=\sum_{r\le y}\Lambda(r)\eta(r)(y/r-1)
+               +y\,\frac{L'(1,\eta)}{L(1,\eta)},\qquad y\ge1.
+\]
+Set $G_1=G$ and take the inverse Fourier transform
+\[
+  F_y(g)=\frac{1}{4n}\sum_{\psi\in\widehat{\mathcal G}}
+                   \overline{\psi(g)}\,G_{\chi_\psi}(y).
+\]
+For the fibre $(1,0,H)$ this gives
+\begin{equation}\label{eq:field-projection}
+  4\sum_{h\in H} F_y(1,0,h)
+   =G(y)+G_{\chi_{-q}}(y)-G_{\chi_{-d}}(y)
+      -G_{\chi_{-q}\chi_{-d}}(y).
+\end{equation}
+Indeed, the sum over $h$ vanishes unless $\psi$ is trivial on $H$.
+The four remaining characters are $\chi_{-d}^a\chi_{-q}^b$ with
+$a,b\in\{0,1\}$, where exponent zero omits the factor. Their values at
+$(1,0,0)$ are $(-1)^a$. The sum over $H$ contributes $n$ in each case.
+
+\subsection{Choice on a power window}
+
+\begin{proposition}\label{prop:field-window}
+Fix $0<\varepsilon<1/52$ and $J>1$. For every sufficiently large
+$U$, one can choose $q,d$ as above so that
+\begin{equation}\label{eq:field-window-bound}
+  |G_\eta(y)|\le y^{1/2+\varepsilon}\quad(U\le y\le U^J),\qquad
+  \eta\in\{\chi_{-q},\chi_{-d},\chi_{-q}\chi_{-d}\}.
+\end{equation}
+For each $x\in[U,U^J]$ let $n$ be the least power of two at least
+$x^{2+8\varepsilon}$, and form $E$ with these same primes. Then
+\begin{equation}\label{eq:field-large-arguments}
+  \max_{\psi\in\widehat{\mathcal G}}\frac{|G_{\chi_\psi}(y)|}{y}
+    \le \exp(-x^{\varepsilon/8})
+    \qquad\bigl(y\ge\tfrac13\exp(x^{\varepsilon/3})\bigr).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Put $z=U^{\varepsilon/5}$ and $z'=z\log^2 U$. Apply the two
+prime-selection theorems \citep[Theorems~5.10 and~5.12]{adriazola-grh}
+with $N_0=8$, $K=J$ and $\tau=\varepsilon$. The first selects $q$,
+and the second selects $d$ for that $q$, with
+\[
+  z/2<\log q\le z,\qquad z'/2<\log d\le z',\qquad
+  d\equiv-1\pmod p\quad\text{for every odd prime }p\le z.
+\]
+Thus all primes $p\le z$ split in $\mathbb Q(\sqrt{-d})$.
+Taking the trivial character modulo one as the initial twist gives
+\eqref{eq:field-window-bound} and $|\lambda_1|\ll J\log U$. The same
+theorems exclude real zeros in $(1-1/400,1)$ for each of the three
+characters twisted by a real primitive character of conductor dividing
+$8$.
+
+Every real character of $H$ factors through reduction modulo $8$,
+since $[5]$ generates $H$ and its image modulo $8$ has order two.
+Thus the zero exclusion applies to every real $\chi_\psi$ whose
+conductor is divisible by $q$ or $d$. The other real nonprincipal
+characters have conductor dividing $8$. Their nonvanishing at $1$
+gives a fixed $c_*>0$ such that all the real nonprincipal characters
+under consideration have no real zero in $(1-c_*,1)$.
+
+Write $t=\log y$ and $L=\log(Mqd)$. Each conductor divides $Mqd$.
+The large-argument estimate \citep[Proposition~5.3 and the following
+paragraph]{adriazola-grh}, including its principal-character case,
+now gives, with an absolute $c>0$,
+\[
+  \frac{|G_{\chi_\psi}(y)|}{y}
+  \ll L^5\exp\!\bigl(-c\min\{t/L,\sqrt t\}\bigr)
+  \qquad(y\ge2).
+\]
+Since $U\le x$ and $n<2x^{2+8\varepsilon}$, we have
+$L\ll x^{\varepsilon/5}\log^2 x$. In the range of
+\eqref{eq:field-large-arguments}, $t\ge\tfrac12 x^{\varepsilon/3}$ for
+large $U$. Consequently
+\[
+  t/L\gg x^{2\varepsilon/15}/\log^2 x,\qquad
+  \sqrt t\gg x^{\varepsilon/6}.
+\]
+Both exponents $2/15$ and $1/6$ exceed $1/8$, so the exponential
+dominates $L^5$ and gives \eqref{eq:field-large-arguments}.
+\end{proof}
+
+At the scale $x$, \eqref{eq:field-projection} and
+\eqref{eq:field-window-bound} give
+\[
+  \left|4\sum_{h\in H}F_x(1,0,h)-G(x)\right|
+     \le 3x^{1/2+\varepsilon}.
+\]
+The weights must recover this sum over $h$ from the excess of one shift.

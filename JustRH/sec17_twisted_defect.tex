@@ -1,0 +1,510 @@
+\section{The twisted congruence defect}\label{sec:twisted-defect}
+
+Fix a mesh point $x$, the weight set $T$ and the shift $u_0$ of
+\S\ref{sec:theta-chain}. At a twisted place the projection of an
+integral form onto the lifted eigenspaces can have a denominator.
+The period comparison needs the length of this projection lattice
+modulo its integral part. Put
+\[
+ y=x^\varepsilon,\qquad N_c=\frac{N_2kby^2}{n^2},\qquad
+ B_0=fmby,\qquad m(B_0+N_c)\le\mathcal B .
+\]
+All words and all $m$ lifts below belong to this shift. Write
+$d_E=[E:\mathbb Q]$ and $\Delta_E=|\operatorname{disc}E|$.
+
+\subsection{Projection and trimming}
+
+Let $w$ be a place of the coefficient field $F$ of residue
+characteristic $l$. Use $\ell_w=\log N\mathfrak p_w/[F:\mathbb Q]$
+and $e_w=v_w(l)$ as in \S\ref{sec:inert-gain}. At a twisted place,
+localize the integral Hecke lattice of lift $j$ at a maximal ideal of
+its Hecke algebra. Write $M$ for this lattice over a complete splitting
+discrete valuation ring $O$, $K$ for its fraction field, $v$ for its
+integer valuation, and $e_O=v(l)$. In the split semisimple space
+$KM=\bigoplus_{a\in X}V_a$, let $G\subseteq X$ consist of the
+eigensystems that occur in the lift. For any subset $S$ write
+$V_S=\bigoplus_{a\in S}V_a$ and let $\pi_S$ be its spectral projection.
+Define
+\[
+ Q(M,G)=\frac{\pi_G M}{M\cap V_G},\qquad
+ \eta(M,G)=\frac{\operatorname{length}_O Q(M,G)}{e_O}.
+\]
+Both lattices span $V_G$. Flat extension to a larger splitting ring
+multiplies the length and $e_O$ by its relative ramification index.
+At $w$ sum $\eta(M,G)$ over the local components to obtain $\eta_j(w)$.
+Use zero at untwisted places. On the finite twisted support put
+\begin{equation}\label{eq:twisted-sum}
+ H_j=\sum_w\ell_we_w\eta_j(w),\qquad
+ H_{j,l}=\sum_{w\mid l}\ell_we_w\eta_j(w).
+\end{equation}
+These are the normalizations of \citep[Definition~17.1]{adriazola-grh}.
+
+\begin{lemma}\label{lem:twisted-trim}
+For any $S\subseteq X$, projection induces a surjection
+$Q(M,G)\to Q(\pi_S M,G\cap S)$. If $G\subseteq S$ and an integral
+endomorphism acts as $a$ on $V_G$ and as zero on $V_{X\setminus S}$,
+where $a$ is a positive integer, then
+\[
+ 0\le\eta(M,G)-\eta(\pi_S M,G)\le v_l(a)\dim_K V_G .
+\]
+\end{lemma}
+
+\begin{proof}
+The map $\pi_{G\cap S}$ sends $\pi_G M$ onto
+$\pi_{G\cap S}\pi_S M$ and sends $M\cap V_G$ into $\pi_S M\cap V_{G\cap S}$.
+If $G\subseteq S$, the two numerator lattices agree. For
+$z\in\pi_S M\cap V_G$ choose $z+b\in M$ with $b\in V_{X\setminus S}$.
+The endomorphism sends $z+b$ to $az\in M\cap V_G$. The difference
+of the lengths is the length of $(\pi_S M\cap V_G)/(M\cap V_G)$,
+at most $v(a)\dim_K V_G$. Divide by $e_O$.
+\end{proof}
+
+Write $d_j^0=\dim\operatorname{im}\theta_j^*$ for the dimension of
+the lifted space of standard type, where $\theta_j$ is the standard
+theta map to the level-$j$ row space. We use the following trim on
+the actual lattices \citep[Propositions~17.32--17.35]{adriazola-grh}
+\citep{kimi-defect,kimi-generator}.
+
+\begin{hypothesis}[\openinput]\label{hyp:twisted-lattices}
+The integral lattices for the period maps have the components, good
+eigenspaces and support in \eqref{eq:twisted-sum}. For every $j,w$,
+the sum of $\dim V_G$ over its components is at most $d_j^0$.
+There are trims retaining $G$ and endomorphisms as in
+Lemma~\ref{lem:twisted-trim}, with a common positive integer $a_0$
+at the mesh point and $\log a_0\ll_\varepsilon x^{C_\varepsilon}$.
+All size constants in this section are uniform on the chosen windows.
+\end{hypothesis}
+
+Denote the trimmed sums by $H_j^{\rm cut},H_{j,l}^{\rm cut}$, with
+the places and weights of \eqref{eq:twisted-sum}. Since
+$\sum_{w\mid l}\ell_we_w=\log l$ over all places above $l$,
+Hypothesis~\ref{hyp:twisted-lattices} and the lemma give
+\begin{equation}\label{eq:twisted-trim}
+  H_j^{\rm cut}\le H_j\le H_j^{\rm cut}+d_j^0\log a_0,\qquad
+  H_{j,l}^{\rm cut}\le H_{j,l}.
+\end{equation}
+The prime divisors of $a_0$ together cost $\log a_0$ once per unit of rank.
+
+\subsection{The two generator primes}
+
+For $e\ge1$ let $\operatorname{Sha}_l(E,e)$ consist of the classes in
+$H^1(E,\mathbb Q_l/\mathbb Z_l(-e))$ which vanish on inertia at all
+finite places and on the decomposition group at every place above $l$.
+Put $t=t_r$. For $l=g_0,g_1$ define, when the lengths are finite,
+\[
+ V_l=\log l\sum_{e=1}^{t-1}
+                 \operatorname{length}_{\mathbb Z_l}\operatorname{Sha}_l(E,e).
+\]
+The field and the two primes belong to the mesh point. Neither $V_l$
+depends on the lift $j$.
+
+\begin{hypothesis}[\openinput]\label{hyp:twisted-generators}
+The distinct generator primes satisfy $\log(g_0g_1)\ll y$, as in
+\S\ref{sec:finite-correction}. At $l=g_0,g_1$ the groups above are finite.
+The original lattices satisfy
+the generator-prime comparison of \citep[Hypothesis~17.36]{adriazola-grh}
+in the summed form of \citep[\S3]{kimi-generator},
+\[
+ H_{j,l}\le d_j^0\left[
+  \bigl(Cx^C\eta_{\rm sz}+2/l^2+v_l(h_E)\bigr)\log l+V_l\right].
+\]
+Here $h_E$ is the class number, $C$ is fixed, and the size parameter
+satisfies $\log(2+\eta_{\rm sz})\ll_\varepsilon \log x+x^{\varepsilon/4}$.
+\end{hypothesis}
+
+\begin{proposition}\label{prop:twisted-generators}
+Under Hypothesis~\ref{hyp:twisted-generators}, the trimmed generator
+contribution is at most
+\[
+ H_{j,g_0}^{\rm cut}+H_{j,g_1}^{\rm cut}
+       \le d_j^0\bigl(V_{g_0}+V_{g_1}+O_\varepsilon(b)\bigr).
+\]
+\end{proposition}
+
+\begin{proof}
+Apply the surjection of Lemma~\ref{lem:twisted-trim} at each original
+place. Since $\log(g_0g_1)\ll y$, their polynomial and size terms total
+$o(b)$ since $b=\exp(y)$. The two terms $2\log l/l^2$ are bounded.
+The primes are distinct, so their class-number terms sum to at most
+$\log h_E$.
+Minkowski's bound represents each ideal class by an integral ideal
+of norm at most $X=(4/\pi)^{d_E/2}\sqrt{\Delta_E}$. Counting such ideals
+gives $h_E\le X^2\zeta_E(2)\le X^2\zeta(2)^{d_E}$.
+The degree and $\log\Delta_E$ grow polynomially in $x$ by
+\S\ref{sec:heights}, so $\log h_E=o(b)$.
+\end{proof}
+
+\subsection{The other coefficient primes}
+
+Fix $l\notin\{g_0,g_1\}$ and a trimmed component. Write $r=k+m-1$,
+$n_V=r+t$ and $\epsilon_l$ for the cyclotomic character. A string of
+length $s$ in a Galois representation is a sum of the twists
+$\sigma\epsilon_l^{-a}$, $0\le a<s$, of one irreducible seed $\sigma$.
+The good character string has terms $C_h=\chi\epsilon_l^{-h}$,
+$0\le h<t$, for the designated character $\chi$ of the component.
+
+\begin{hypothesis}[\openinput]\label{hyp:twisted-attachments}
+For the retained eigensystems the semisimple Hecke--Galois
+representations have the string, local inertia and split-prime Hecke
+comparisons below \citep{nongenerator-note}.
+\begin{enumerate}[label=\textup{(\roman*)},nosep]
+\item Group traces and the coefficients of the inertia polynomials
+at the level primes belong to the integral Hecke algebra. The
+representations are tame there, crystalline with common labelled
+weights above $l$, and unramified outside the prescribed exceptional
+places and $l$. At the exceptional inertia groups away from $l,g_0,g_1$
+the eigencharacters are $1$ ($r$ times) and $\chi$ ($t$ times).
+\item Good labels contain the designated string. A retained label
+with a global $\chi$-line is good. At a place above $g_0$ the residual
+complement of a good string avoids the value of $\chi$ on a tame
+generator. In each component meeting the good set the common residual
+semisimplification is $\bar\rho\oplus\bigoplus_{h=0}^{t-1}\bar C_h$,
+with $\bar\rho$ absolutely irreducible of rank $r>1$.
+\item At admissible split places of norm $q$ the integral Hecke
+polynomial is the Frobenius polynomial in a common normalization.
+After removing the common twist, $C_0$ has modulus $q^{(t-1)/2}$.
+The roots of a length-$u$ string are $\alpha q^{(u-1)/2-a}$,
+$0\le a<u$, with $q^{-1/2}<|\alpha|<q^{1/2}$ and $|\alpha|=1$
+for rank-one seeds. For every finite Galois extension of $\mathbb Q$
+containing $E$, one may take all places of $E$ over some rational
+prime splitting completely in that extension as test places.
+\end{enumerate}
+\end{hypothesis}
+
+Assume Hypotheses~\ref{hyp:twisted-lattices}
+and~\ref{hyp:twisted-attachments} and the size bound
+$\log(g_0g_1)\ll y$ of Hypothesis~\ref{hyp:twisted-generators}.
+A summand is potentially abelian if it splits into characters over a
+finite extension. Write $m(c)$ for the multiplicity of a residual
+character $c$ in the sum of the other summands. A projection costs
+at most $a$ if the defect sum in \eqref{eq:twisted-sum} before projection
+is at most the sum after projection plus $a$.
+
+\begin{proposition}\label{prop:twisted-strings}
+At cost $O_\varepsilon(d_j^0b)$ one may separate the tame inertia
+classes and delete all bad full-length strings. On each surviving
+bad label of longest length $s<t$,
+\[
+ I_s=\{0\le h<t:|t-1-2h|\ge s\},\qquad
+ m(c)\ge\#\{h\in I_s:\bar C_h=c\}\quad\text{for every }c .
+\]
+If $s>t/2$, then $t-s$ is even. A surviving label has at most one
+rank-one string, of odd length and with centered residual characters.
+At $s=t-2$ the long string consists of $C_1,\ldots,C_{t-2}$ in
+characteristic zero, and the two outer residual characters occur in
+one irreducible summand of rank $2$ or $r+2$.
+\end{proposition}
+
+\theoremstyle{plain}
+\newtheorem{twistedtest}{Lemma}[theorem]
+\renewcommand{\thetwistedtest}{\thetheorem\alph{twistedtest}}
+
+For a number field $L$ of degree $d$ and absolute discriminant
+$\Delta$, put
+\[
+ J(L,n)=(n!)^d\Delta^n
+ \left(\prod_{\substack{p\ {\rm prime}\\p\le n+d\ {\rm or}\ p\mid\Delta}}p\right)^n .
+\]
+This integer clears the denominators of coefficient extraction from unit
+values of polynomials of total degree $\le n$ in embedding coordinates
+\citep[section on integral coefficient extraction]{nongenerator-note}.
+Indeed, for $l>n+d$, $l\nmid\Delta$, a polynomial vanishing on residue
+units times the norm polynomial vanishes on the entire residue grid.
+Its degree is $<l$, so evaluation has a unit maximal minor. At all other
+primes interpolate on $1+l\sum_i j_i\beta_i$, $0\le j_i\le n$, in
+an integral basis. Interpolation costs $(n!)^d$ and the inverse
+coordinate change costs at most $l^n\Delta^n$.
+
+\begin{twistedtest}[Inertia and exact characters]\label{lem:twisted-exact}
+Put $q_v=Nv$, $N_v=\prod_{a=1}^{n_V}(q_v^a-1)$, and
+\[
+ a_I=\prod_{v\mid g_0g_1}N_v^{n_V},\qquad
+ B'=h_EJ(E,2d_E n_V).
+\]
+At cost $d_j^0\log\bigl(a_I\,t!(B')^t\bigr)$ one may split the
+inertia classes and require every line of a rank-one string of length
+$u>r$ to equal some $C_h$.
+\end{twistedtest}
+
+\begin{proof}
+Frobenius permutes the tame roots by $z\mapsto z^{q_v}$, so they lie
+in $\mu_{N_v}$. For $\xi,z\in\mu_{N_v}$,
+\[
+ \sum_{i=0}^{N_v-1}(z/\xi)^i=N_v\,\mathbf1_{z=\xi}.
+\]
+Multiply over the roots, sum over distinct orderings of each prescribed
+multiset, and multiply over $v$. The resulting symmetric polynomials
+in the inertia roots give $a_I\pi_H$ integrally for every class $H$
+after adjoining the roots of unity. The length normalization descends.
+For $M'=\bigoplus_H\pi_HM$ one has $a_I M'\subset M\subset M'$.
+The indices on the good projection and on the good intersection
+each have length at most $v(a_I)\dim V_G$. Their difference gives the
+change in defect.
+
+In a class meeting $G$, let $\tau$ be the chosen tame generator over
+$g_0$. The factor $(X-\chi(\tau))^t$ is coprime over $O$ to its
+complement, giving a rank-$t$ projector $P$. Each line $\nu$ in a
+rank-one string of length $u>r$ lies in its image. At every exceptional
+inertia group the common value on these $u$ lines must equal $\chi$,
+since at most $r$ roots differ. Thus $\lambda=\nu/C_h$ is unramified
+away from $l$. The intervals of $u$ and $t$ labelled weights overlap
+in a multiset of size $n_V$, so its exponents satisfy $|k_\tau|\le n_V$.
+
+On local units $\lambda(v)=\prod_\tau\tau(v)^{k_\tau}$
+\citep[Proposition~B.4]{conrad-local-characters}. In
+$\mathrm N(v)^{n_V}\lambda(v)$ extract the monomial
+$\prod_\tau\tau(v)^{n_V}$ with denominator $J(E,2d_E n_V)$.
+Only everywhere unramified ratios remain. Summing their values over
+$\operatorname{Cl}(E)$ keeps the trivial ratio. Twisting each unit
+and class representative by $C_h^{-1}$ thus gives $D_h\in O[G_E]$
+with
+\[
+ D_h|_\nu=B'\,\mathbf1_{\nu=C_h}
+ \qquad(\nu\text{ a good line or a line as above}).
+\]
+On a good label $P(\sum_h D_h)P$ equals $B'P$. A line unmatched
+by all $C_h$ lowers its rank below $t$. By Newton's identities,
+$t!$ times its $t$-th elementary symmetric function is an integral
+Hecke operator. Its good value is $t!(B')^t$. Apply
+Lemma~\ref{lem:twisted-trim}.
+\end{proof}
+
+\begin{twistedtest}[Position of a character]\label{lem:twisted-position}
+Put $B=J(\mathbb Q,4d_Et)$. There are $Z_h\in O[G_E]$ with
+$Z_h|_{C_a}=B\,\mathbf1_{a=h}$. On a potentially abelian irreducible
+summand of a short label, each $Z_h$ acts as $0$ or $B$.
+At most one position gives $B$, and none in $I_s$ does.
+\end{twistedtest}
+
+\begin{proof}
+Choose a common Galois splitting field $L/\mathbb Q$, unramified over
+$E$ above $l$. Indeed, if $U$ splits into lines over $L'/E$ Galois,
+the finite conjugation action on $\operatorname{End}_{G_{L'}}U$ is
+crystalline above $l$ and hence unramified there. Its kernel acts by
+scalars on each isotypic space. Take the compositum of the resulting
+fields and their conjugates.
+
+For a constituent line $\nu$ over $L$, set $\lambda=\nu/C_h|_{G_L}$.
+The unit theorem makes the sum of conjugate labelled exponents of
+$\lambda$ a constant $W$. At a completely split test prime $p$,
+reciprocity gives
+\[
+ p^{-[L:\mathbb Q]W/2}
+    =\prod_{v\mid p}|\lambda(\operatorname{Frob}_v)|,\qquad |W|<2t .
+\]
+Indeed all normalized short roots have modulus in
+$(p^{-s/2},p^{s/2})$, and $C_h$ has modulus $p^{(t-1-2h)/2}$.
+For $h\in I_s$ every ratio is on the same side of $1$, hence $W\ne0$.
+
+In the fixed field of complex conjugation the unit character is the
+norm to the power $W$. At a place above $l$ of ramification index
+$e\le d_E$, choose a unit of norm $z\in\mathbb Z_l^\times$ in its
+maximal unramified subfield. Its full norm is $z^e$. Lift the
+corresponding Artin element to $g_z\in G_L$ and put $A=2d_Et$.
+Coefficient extraction from the group-algebra samples
+$z^AC_h(g_z)^{-1}[g_z]$ acts on $\nu$ by
+\[
+ B[z^A]z^{A+eW}=B\,\mathbf1_{W=0}.
+\]
+This gives $Z_h$. Conjugate lines of an irreducible summand have the
+same $W$. The good weights are spaced by two, so at most one $h$
+matches. On $C_a$ this occurs precisely at $h=a$.
+\end{proof}
+
+\begin{twistedtest}[Residual multiplicities]\label{lem:twisted-multiplicities}
+Put $I_c=\{h:\bar C_h=c\}$ and $D=t!B^t$. At cost
+$d_j^0\log D^{2t}$ every one-dimensional residual factor of a
+potentially abelian summand occupies a distinct matching position
+of its own type. This includes $l=2$.
+\end{twistedtest}
+
+\begin{proof}
+Lift the idempotent for $c$ in the semisimple residual group-algebra
+image. Hensel factorization of the product of the characteristic
+polynomials of the lift gives an integral projector $P_c$ onto the
+$1$-primary part on every label. Its rank on each summand equals
+the multiplicity of $c$ there. For $\varnothing\ne I\subset I_c$ put
+\[
+ k=|I|,\qquad U_I=P_c\Big(\sum_{h\in I}Z_h\Big)P_c,\qquad
+ T_I=k!\operatorname{tr}\bigl(\textstyle\bigwedge^k U_I\bigr).
+\]
+Newton's identities give $T_I$ in the integral Hecke algebra. Its
+good value is $k!B^k$. It vanishes whenever $\operatorname{rank}U_I<k$.
+
+Take $I=I_c$. An unmatched copy of $c$ gives rank $<|I_c|$.
+Next omit $a\in I_c$. If two copies match $a$, the rank is at most
+$|I_c|-2$ (for $|I_c|=1$ there is only one copy to begin with).
+There are at most $2t$ tests, and every $k!B^k$ divides $D$.
+Multiply the rescaled tests and pad with constant factors to good
+value $D^{2t}$, then apply Lemma~\ref{lem:twisted-trim}.
+For the endpoint bound alone the sets $I_c\cap I_s$ give at most
+$t^2$ tests and good value $D^{t^2}$.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:twisted-strings}]
+The three lemmas cost $O_\varepsilon(d_j^0b)$ since
+$\log a_I\ll n_V^3d_E\log(g_0g_1)$ and the logarithms of $B',B,t!$
+grow polynomially in $x$. No potentially abelian factor occupies a
+position in $I_s$, which gives the bound for $m(c)$ with multiplicity.
+
+A string of length $s\ge2$ repeats each residual seed constituent
+$s$ times up to twist. Only one constituent has rank $>1$. Thus
+$s\dim\sigma\le t$, and $s>t/2$ forces rank one. For a length-$t$
+string Lemma~\ref{lem:twisted-exact} gives $t$ distinct good lines.
+One is $\chi$, so the label is good. For a short length $s>t/2$,
+\[
+ s+|I_s|=s+2\lceil(t-s)/2\rceil\le t .
+\]
+Hence $t-s$ is even. In particular $s=t-1$ is excluded.
+
+In a rank-one string of any length $u$, line $a$ has modulus
+$p^{(u-1)/2-a}$, so its position is $h=(t-u)/2+a$.
+As $t$ is odd, $u$ is odd and the middle position is occupied.
+Lemma~\ref{lem:twisted-multiplicities} allows it only once.
+
+At $s=t-2>r$ the exact lines are therefore $C_1,\ldots,C_{t-2}$.
+The two outer factors lie in non-potentially-abelian summands.
+If they lay in separate summands each would need the unique
+$\bar\rho$ to have rank greater than one. Their common summand has
+rank $2$ or $r+2$. Here $t\ge r+5$ and $t>4$ by \S\ref{sec:theta-chain}.
+\end{proof}
+
+A short label whose distinguished $t$-dimensional inertia space is
+a global sum of character lines has $m(c)=0$ for every $c$.
+The endpoint bound deletes it even if $\bar C_0=\bar C_{t-1}$.
+
+\begin{corollary}\label{cor:twisted-ray}
+In the length-$(t-2)$ case of Proposition~\ref{prop:twisted-strings},
+suppose $l>2$ is unramified in $E$ and $\bar C_0\ne\bar C_{t-1}$.
+At every place over $l$ suppose a common crystalline twist puts the
+good and bad weights in one Fontaine--Laffaille interval of width
+at most $l-2$. Let $S$ be a finite set of primes of $E$, disjoint
+from those above $l$, containing every other allowed ramified prime.
+Put $E_1=E(\mu_l)$, $\Gamma_1=\operatorname{Gal}(E_1/E)$, and let
+$\mathfrak m$ be the product of the primes of $E_1$ above $S$.
+If the summand carrying the endpoints has rank two, then, for the
+splitting residue field $\mathbb F$,
+\[
+ \operatorname{Hom}_{\mathbb F_l[\Gamma_1]}\!\left(
+ \frac{\operatorname{Cl}_{\mathfrak m}(E_1)}
+ {l\operatorname{Cl}_{\mathfrak m}(E_1)+\langle[v]:v\mid l\rangle},
+ \mathbb F(\bar\epsilon_l^{\,1-t})\right)\ne0 .
+\]
+\end{corollary}
+
+\begin{proof}
+The rank-two lattice lemma gives a stable lattice whose reduction
+is a nonsplit extension of $\bar C_0$ by $\bar C_{t-1}$
+\citep[Theorem~1]{bellaiche-ribet}. Its coefficient character is
+$\bar C_{t-1}/\bar C_0=\bar\epsilon_l^{\,1-t}$.
+In the covariant Fontaine--Laffaille convention
+$\epsilon_l$ has weight $-1$. After the common twist, the filtration
+jumps of the subline and quotient at $\tau$ are $h_\tau+t-1$ and
+$h_\tau$. The exact, fully faithful torsion functor identifies
+these lines with the reductions of the good characters
+\citep[Fact~4.10 and Remark~4.11]{booher-fl}. In the torsion module
+$\varphi^{h_\tau}$ kills the higher subline. Its image on any lift of
+the lower line maps isomorphically to the quotient at the next
+embedding. These image lines form a filtered Frobenius-stable
+complement, so the extension splits at every place over $l$.
+
+Since $|\Gamma_1|$ is prime to $l$, restriction to $E_1$ preserves
+the nonzero class. There it is an additive character, trivial at
+the places over $l$. At each prime over $S$ it kills the principal
+units, whose residue characteristic differs from $l$. Artin
+reciprocity gives the indicated homomorphism. Vanishing of this
+space would exclude the rank-two summand at that component.
+\end{proof}
+
+\subsection{The remaining integral matrices}
+
+After the deletions, let $M'$ be the projected lattice of a mixed
+component and write $KM'=V_G\oplus V_B$ for its good and surviving
+bad spaces. Choose an admissible split unramified test place $v_0$.
+Evaluate the integral Hecke polynomial there at
+$\chi(\operatorname{Frob}_{v_0})$ in the matching normalization,
+and denote the endomorphism of $M'$ by $P$. Each good label has this
+root. Every surviving bad label has longest string of length $s<t$,
+and the modulus of every normalized root is strictly smaller than
+the modulus $q^{(t-1)/2}$ of the good endpoint. Thus
+$\ker_K P=V_G$ and $\operatorname{im}_K P=V_B$.
+
+\begin{lemma}\label{lem:twisted-smith}
+Let $d_B=\dim_K V_B$ and $I_{d_B}(P)$ be the ideal of $d_B$-rowed
+minors of $P$ on $M'$. Then
+\begin{equation}\label{eq:twisted-smith}
+ e_O\eta(M',G)=v(\det(P|_{V_B}))-v(I_{d_B}(P)).
+\end{equation}
+For $d_B=0$ take the determinant and the ideal generator to be $1$.
+\end{lemma}
+
+\begin{proof}
+Write $L_B=M'\cap V_B$. Projection on either space identifies the
+defect module with $M'/((M'\cap V_G)+L_B)$. On the bad space it
+therefore equals $\pi_B M'/L_B\simeq PM'/P L_B$. In
+$P L_B\subseteq PM'\subseteq L_B$ the outer index has length
+$v(\det(P|_{V_B}))$. The saturation of $PM'$ in $M'$ is $L_B$, so
+Smith normal form gives $\operatorname{length}_O(L_B/PM')=v(I_{d_B}(P))$.
+Subtracting proves \eqref{eq:twisted-smith}.
+\end{proof}
+
+For each lift let $R_j^{\rm tw}$ be the sum of the right side of
+\eqref{eq:twisted-smith} over the surviving mixed components at
+$l\ne g_0,g_1$, with weight $\ell_we_w/e_O$ for each. Pure
+components have zero defect. At each component one split test place
+suffices. The difference of valuations computes the length for any
+such choice. In particular $R_j^{\rm tw}$ includes the surviving
+components at $2$. The ray class test requires its additional local
+hypotheses, and its vanishing on the selected family is unknown.
+
+\begin{hypothesis}[\openinput]\label{hyp:twisted-residual}
+On the chosen mesh points there are constants independent of the
+window, point, shift and lift, after fixing $\varepsilon$, such that
+\[
+ V_{g_0}+V_{g_1}\ll_\varepsilon y(B_0+N_c),\qquad
+ R_j^{\rm tw}\ll_\varepsilon d_j^0\, y(B_0+N_c)\quad(1\le j\le m).
+\]
+\end{hypothesis}
+
+\begin{theorem}\label{thm:twisted-defect}
+Under Hypotheses~\ref{hyp:twisted-lattices},
+\ref{hyp:twisted-generators} and~\ref{hyp:twisted-attachments}, at
+the chosen shift one has
+\[
+ H_j\le R_j^{\rm tw}
+          +d_j^0\bigl(V_{g_0}+V_{g_1}+O_\varepsilon(b)\bigr)
+                       \qquad(1\le j\le m).
+\]
+Under Hypothesis~\ref{hyp:twisted-residual} it follows that
+$H_j\ll_\varepsilon d_j^0\,y(B_0+N_c)$ uniformly on the windows.
+\end{theorem}
+
+\begin{proof}
+Start with \eqref{eq:twisted-trim}. Proposition~\ref{prop:twisted-generators}
+bounds the two generator terms on the original support.
+Proposition~\ref{prop:twisted-strings} bounds the cost of passing to
+the other projected lattices, and Lemma~\ref{lem:twisted-smith}
+computes their remaining lengths. The term $\log a_0$ and every
+logarithmic deletion cost are $O_\varepsilon(b)$ since $b=\exp(x^\varepsilon)$.
+Finally $b\le y(B_0+N_c)$.
+\end{proof}
+
+For the target of \S\ref{sec:heights} let $D_0>0$ be the number of
+base rows. If its frame has rank $D_0$ and the level-$j$ row spaces
+have dimension $D_0$, then $d_j^0\le D_0$ by the adjoint image
+definition. The base determinant comparison divides the local index
+sum by $D_0$ \citep[Proposition~15.53]{adriazola-grh}. Suppose the
+twisted indices of this frame are bounded by a uniform multiple of
+these defects. Under the four hypotheses of this section their
+contribution is then bounded using
+\[
+ D_0^{-1}\sum_{j=1}^m H_j
+    \ll_\varepsilon m y(B_0+N_c)\le y\mathcal B .
+\]
+This is the twisted part of the target-slope allowance in
+Hypothesis~\ref{hyp:height-norms}. The period comparison of
+Hypothesis~\ref{hyp:period-frame} uses these same lattices and the
+rank-weighted heights of the words. Both frame identifications still
+require proof on the selected family. The finite correction $E_u$
+of \S\ref{sec:finite-correction} already has its own place sum
+\eqref{eq:finite-place-sum}.

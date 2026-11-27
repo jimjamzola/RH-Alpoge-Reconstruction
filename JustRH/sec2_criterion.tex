@@ -1,0 +1,557 @@
+\section{An analytic criterion for the Riemann hypothesis}\label{sec:criterion}
+
+This section reduces the Riemann hypothesis to an upper bound for a smoothed prime sum on arbitrarily large power windows. The bound is one-sided, and the windows may be separated by arbitrarily large gaps. A zero to the right of the proposed exponent gives a pole of the Mellin transform. That pole forces positive Taylor coefficients at bounded gaps, whereas the window bound makes every coefficient in a long interval too small.
+
+\subsection{The smoothed prime sum}\label{subsec:smoothed-prime-sum}
+
+Let $\Lambda$ denote the von Mangoldt function and let $\gamma$ be Euler's constant. For $x\geq 1$, put
+\begin{equation}\label{eq:prime-sum}
+G(x)
+=
+\sum_{n\leq x}\Lambda(n)\left(\frac{x}{n}-1\right)
+-x\log x+(1+\gamma)x.
+\end{equation}
+The last two terms remove the singularity at $s=1$ from the Mellin transform. The poles that remain in the right half-plane will detect the zeros of $\zeta$.
+
+We first record the growth and regularity of $G$. Mertens' elementary estimate~\cite[Theorem~0.20]{vaughan-mertens} gives
+\[
+\sum_{n\leq x}\frac{\Lambda(n)}{n}
+=
+\log x+O(1)
+\qquad(x\geq 2).
+\]
+The implied constant is absolute.
+
+The function $G$ is continuous: the summand of index $n$ vanishes when $x=n$. Away from the integers,
+\[
+G'(x)
+=
+\sum_{n\leq x}\frac{\Lambda(n)}{n}-\log x+\gamma,
+\]
+so $G'$ is bounded by an absolute constant. Partitioning a finite interval at its integer points and applying the mean value theorem on each piece gives an absolute constant $K$ such that
+\[
+|G(x)-G(y)|\leq K|x-y|
+\qquad(x,y\geq 1).
+\]
+Since $G(1)=1+\gamma$, there is also an absolute constant $B>0$ with
+\begin{equation}\label{eq:linear-growth}
+|G(x)|\leq Bx
+\qquad(x\geq 1).
+\end{equation}
+
+For $\operatorname{Re}s>1$, the Euler product gives the absolutely convergent identity~\cite[Eq.~(27.4.12)]{dlmf-number-theory}
+\[
+-\frac{\zeta'(s)}{\zeta(s)}
+=
+\sum_{n\geq 1}\frac{\Lambda(n)}{n^s}.
+\]
+For every integer $n\geq 1$,
+\[
+\int_n^\infty
+\left(\frac{x}{n}-1\right)x^{-s-1}\,dx
+=
+\frac{n^{-s}}{s(s-1)}.
+\]
+The interchange of summation and integration is justified absolutely. Indeed, if $\sigma=\operatorname{Re}s>1$, the sum of the corresponding absolute integrals is bounded by
+\[
+\frac{1}{\sigma(\sigma-1)}
+\sum_{n\geq 1}\frac{\Lambda(n)}{n^\sigma}<\infty.
+\]
+Also,
+\[
+\int_1^\infty x\log x\,x^{-s-1}\,dx
+=
+\frac{1}{(s-1)^2},
+\qquad
+\int_1^\infty x\,x^{-s-1}\,dx
+=
+\frac{1}{s-1}.
+\]
+Consequently
+\begin{equation}\label{eq:mellin-transform}
+\begin{aligned}
+F(s)
+&:=\int_1^\infty G(x)x^{-s-1}\,dx\\
+&=
+-\frac{\zeta'(s)}{\zeta(s)}\frac{1}{s(s-1)}
+-\frac{1}{(s-1)^2}
++\frac{1+\gamma}{s-1}
+\qquad(\operatorname{Re}s>1).
+\end{aligned}
+\end{equation}
+
+The meromorphic continuation and Laurent expansion of $\zeta$~\cite[Eq.~(25.2.4)]{dlmf-zeta} give
+\[
+-\frac{\zeta'(s)}{\zeta(s)}
+=
+\frac{1}{s-1}-\gamma+O(s-1).
+\]
+Since
+\[
+\frac{1}{s(s-1)}
+=
+\frac{1}{s-1}-1+O(s-1),
+\]
+the first term on the right of \eqref{eq:mellin-transform} has principal part
+\[
+\frac{1}{(s-1)^2}-\frac{1+\gamma}{s-1}.
+\]
+The two correction terms cancel this principal part. Thus $F$ extends meromorphically to $\mathbb C$ and is holomorphic at $s=1$.
+
+Let $\rho$ be a zero of $\zeta$ with $\operatorname{Re}\rho>0$, of multiplicity $m_\rho$. Writing
+\[
+\zeta(s)=(s-\rho)^{m_\rho}h(s),
+\qquad h(\rho)\ne 0,
+\]
+shows that $F$ has a simple pole at $\rho$, with residue
+\begin{equation}\label{eq:pole-residue}
+R_\rho
+:=
+\operatorname*{Res}_{s=\rho}F(s)
+=
+-\frac{m_\rho}{\rho(\rho-1)}.
+\end{equation}
+In particular, the residue is nonzero even when the zero is multiple. These are all the poles of $F$ in $\operatorname{Re}s>0$.
+
+There are no positive real poles. For real $0<t<1$, the alternating representation of $\zeta$~\cite[Eq.~(25.2.3)]{dlmf-zeta} gives
+\[
+(1-2^{1-t})\zeta(t)
+=
+\sum_{j\geq 1}
+\left((2j-1)^{-t}-(2j)^{-t}\right)>0.
+\]
+Since $1-2^{1-t}<0$, it follows that $\zeta(t)<0$. The point $s=1$ is removable for $F$, and $F$ is holomorphic in $\operatorname{Re}s>1$ by its integral representation. Finally, because $G$ is real,
+\[
+F(\overline{s})=\overline{F(s)}.
+\]
+Its poles therefore occur in conjugate pairs, with conjugate residues.
+
+\subsection{Three lemmas}\label{subsec:lemmas}
+
+The first lemma bounds the portions of an exponential integral outside a prescribed interval. Put
+\[
+I(t)=t-1-\log t
+\qquad(t>0).
+\]
+Then $I(t)\geq 0$, with equality only at $t=1$. Moreover,
+\[
+I'(t)=1-\frac1t,
+\]
+so $I$ decreases on $(0,1)$ and increases on $(1,\infty)$.
+
+\begin{lemma}\label{thm:exponential-tails}
+Let $n\geq 1$ be an integer, let $a,U>0$, and put $z=aU/n$. If $z\leq 1$, then
+\[
+\int_0^U e^{-au}\frac{u^{n-1}}{(n-1)!}\,du
+\leq
+a^{-n}e^{-nI(z)}.
+\]
+If $z\geq 1$, then
+\[
+\int_U^\infty e^{-au}\frac{u^{n-1}}{(n-1)!}\,du
+\leq
+a^{-n}e^{-nI(z)}.
+\]
+\end{lemma}
+
+\begin{proof}
+Put $b=n/U$. When $z\leq 1$, we have $b\geq a$, and for $0\leq u\leq U$,
+\[
+e^{-au}
+=
+e^{-bu}e^{(b-a)u}
+\leq
+e^{(b-a)U}e^{-bu}.
+\]
+Hence
+\[
+\int_0^U e^{-au}\frac{u^{n-1}}{(n-1)!}\,du
+\leq
+e^{(b-a)U}
+\int_0^\infty e^{-bu}\frac{u^{n-1}}{(n-1)!}\,du
+=
+e^{(b-a)U}b^{-n}.
+\]
+Since $aU=nz$ and $b=a/z$, the last expression equals
+\[
+a^{-n}\exp\!\bigl(n(1-z+\log z)\bigr)
+=
+a^{-n}e^{-nI(z)}.
+\]
+
+When $z\geq 1$, we have $b\leq a$, and the same comparison holds for $u\geq U$:
+\[
+e^{-au}
+=
+e^{-bu}e^{(b-a)u}
+\leq
+e^{(b-a)U}e^{-bu}.
+\]
+Integration over $[U,\infty)$ gives the second inequality.
+\end{proof}
+
+The next lemma ensures that the contribution of a conjugate pair of poles is positive at bounded gaps.
+
+\begin{lemma}\label{thm:cosine-blocks}
+Let $0<\varphi<\pi/2$, and let $\alpha\in\mathbb R$. Every block of
+\[
+N_\varphi=\left\lceil\frac{2\pi}{\varphi}\right\rceil
+\]
+consecutive integers contains an integer $j$ such that
+\[
+\cos(\alpha+j\varphi)\geq \frac12.
+\]
+\end{lemma}
+
+\begin{proof}
+The intervals on which the cosine is less than $1/2$ have length $4\pi/3$. They are separated by intervals of length $2\pi/3$ on which the cosine is at least $1/2$. Since the successive angles advance by
+\[
+\varphi<\frac{\pi}{2}<\frac{2\pi}{3},
+\]
+they cannot pass from one of the former intervals to the next without entering a latter interval.
+
+If all $N_\varphi$ angles had cosine less than $1/2$, they would therefore lie in one interval of length $4\pi/3$. But their span is
+\[
+(N_\varphi-1)\varphi
+\geq 2\pi-\varphi
+>
+\frac{4\pi}{3}.
+\]
+This is impossible.
+\end{proof}
+
+The last lemma selects a conjugate pair that determines the leading Taylor coefficients. It uses one specified pole to the right of the desired boundary; it does not require a pole of maximal real part.
+
+\begin{lemma}\label{thm:nearest-poles}
+Let
+\[
+P\subset\{s\in\mathbb C:\operatorname{Re}s\leq 1\}
+\]
+be a closed discrete set stable under complex conjugation, and suppose that $P$ contains no positive real point. Let $0\leq\theta<1$, and suppose that
+\[
+\rho_0=\beta_0+i\gamma_0\in P,
+\qquad \beta_0>\theta.
+\]
+Put
+\[
+\theta'=\frac{\theta+\beta_0}{2}.
+\]
+For arbitrarily large real $\sigma>1$, the points of $P$ nearest to $\sigma$ form one conjugate pair $\rho,\overline{\rho}$, with $\operatorname{Im}\rho>0$. Their common distance $r$ satisfies
+\[
+\sigma-1<r<\sigma-\theta'.
+\]
+In particular, $r/(\sigma-1)$ tends to $1$ as $\sigma$ tends to infinity through these choices.
+\end{lemma}
+
+\begin{proof}
+For all sufficiently large real $\sigma$,
+\[
+\begin{aligned}
+(\sigma-\theta')^2-|\sigma-\rho_0|^2
+&=
+2\sigma(\beta_0-\theta')
++\theta'^2-|\rho_0|^2\\
+&>0.
+\end{aligned}
+\]
+The distance from $\sigma$ to $P$ is attained, because a bounded closed disc contains only finitely many points of $P$. Thus
+\[
+r\leq|\sigma-\rho_0|<\sigma-\theta'.
+\]
+Every nearest point $p$ consequently has $\operatorname{Re}p>\theta'$: otherwise
+\[
+|\sigma-p|
+\geq \sigma-\operatorname{Re}p
+\geq \sigma-\theta'.
+\]
+Such a point is nonreal, since $\theta'>0$.
+
+For distinct $p,q\in P$, equality of their distances from a real $\sigma$ is equivalent to
+\[
+2\sigma(\operatorname{Re}q-\operatorname{Re}p)
+=
+|q|^2-|p|^2.
+\]
+If their real parts differ, this equation holds for at most one value of $\sigma$. If their real parts agree, equality of their absolute values forces $q=\overline p$. Since $P$ is countable, we may exclude a countable set of real centers and arrange that the nearest points form one conjugate pair.
+
+Every point of $P$ has real part at most $1$, and $1\notin P$. Hence its distance from $\sigma>1$ is strictly greater than $\sigma-1$. We have proved
+\[
+1<
+\frac{r}{\sigma-1}
+<
+\frac{\sigma-\theta'}{\sigma-1},
+\]
+whose right side tends to $1$.
+\end{proof}
+
+\subsection{The window criterion}\label{subsec:window-criterion}
+
+\begin{theorem}\label{thm:window-criterion}
+Let $0\leq\theta<1$. Suppose that there are constants $\lambda>1$ and $C>0$ such that, for arbitrarily large $Y$,
+\begin{equation}\label{eq:window-bound}
+G(x)\leq Cx^\theta
+\qquad(Y\leq x\leq Y^\lambda).
+\end{equation}
+Then $\zeta$ has no zeros in the half-plane $\operatorname{Re}s>\theta$.
+\end{theorem}
+
+Here $C$ and $\lambda$ are fixed before the windows are chosen. The hypothesis means that for every $Y_0>1$, there is a $Y\geq Y_0$ for which \eqref{eq:window-bound} holds throughout the indicated interval.
+
+The proof compares two expressions for the Taylor coefficients of $F$ at a fixed real point $\sigma>1$. The nearest conjugate pair of poles makes some of these coefficients positive and large. To bound the same coefficients from above, we split their integral representations at $\log Y$ and $\lambda\log Y$. After applying \eqref{eq:linear-growth}, the outer integrals have kernel
+\[
+e^{-(\sigma-1)u}\frac{u^{n-1}}{(n-1)!}.
+\]
+Lemma~\ref{thm:exponential-tails} makes both outer integrals exponentially small when $n/(\sigma-1)$ lies strictly inside the logarithmic window. The upper bound for $G$ controls the middle integral.
+
+\begin{proof}
+Suppose that $\zeta$ has a zero $\rho_0$ with
+\[
+\beta_0:=\operatorname{Re}\rho_0>\theta.
+\]
+By \eqref{eq:pole-residue}, this is a pole of $F$. Let $P$ be the set of all poles of $F$, and put
+\[
+\theta'=\frac{\theta+\beta_0}{2}.
+\]
+
+\emph{The base point.} Choose real numbers
+\[
+1<c_1<c_2<\lambda,
+\]
+and put
+\[
+d=
+\min\left\{
+I(1/c_1),\,
+I(\lambda/c_2)
+\right\}>0.
+\]
+The positivity follows from $1/c_1<1<\lambda/c_2$.
+
+The pole set $P$ satisfies the hypotheses of Lemma~\ref{thm:nearest-poles}. We may therefore choose a real $\sigma>1$, with nearest poles $\rho,\overline{\rho}$, such that, on writing
+\[
+a=\sigma-1,
+\qquad
+r=|\sigma-\rho|,
+\]
+we have
+\[
+a<r<\sigma-\theta',
+\qquad
+\log\frac ra<\frac d2.
+\]
+Fix this choice, and put
+\[
+q=\frac{r}{\sigma-\theta}.
+\]
+Then $0<q<1$. All these quantities remain fixed as $Y$ varies.
+
+\emph{The coefficients from the poles.} For an integer $n\geq 1$, define
+\begin{equation}\label{eq:coefficient-integral}
+T_{n-1}
+=
+\frac{(-1)^{n-1}}{(n-1)!}F^{(n-1)}(\sigma)
+=
+\int_0^\infty
+G(e^u)e^{-\sigma u}
+\frac{u^{n-1}}{(n-1)!}\,du.
+\end{equation}
+Differentiation under the integral is justified by \eqref{eq:linear-growth}.
+
+Let $R_\rho\ne 0$ be the residue of $F$ at $\rho$. Subtracting the two principal parts gives
+\[
+Q(s)
+=
+F(s)
+-\frac{R_\rho}{s-\rho}
+-\frac{\overline{R_\rho}}{s-\overline{\rho}}.
+\]
+Because $\rho,\overline{\rho}$ are the only nearest poles and $P$ is discrete, there is a radius $R_*>r$ such that $Q$ is holomorphic on a neighborhood of the closed disc
+\[
+|s-\sigma|\leq R_*.
+\]
+Cauchy's estimate gives
+\[
+\frac{|Q^{(n-1)}(\sigma)|}{(n-1)!}
+\leq M R_*^{1-n},
+\qquad
+M=\max_{|s-\sigma|=R_*}|Q(s)|.
+\]
+
+Write
+\[
+\sigma-\rho=re^{-i\varphi},
+\qquad
+R_\rho=|R_\rho|e^{i\alpha},
+\]
+where $0<\varphi<\pi/2$. Differentiating the principal parts in \eqref{eq:coefficient-integral}, we obtain
+\begin{equation}\label{eq:coefficient-poles}
+T_{n-1}
+=
+2|R_\rho|r^{-n}\cos(\alpha+n\varphi)+E_n,
+\qquad
+|E_n|\leq M R_*^{1-n}.
+\end{equation}
+Since $r<R_*$,
+\[
+r^n|E_n|
+\leq
+M R_*\left(\frac{r}{R_*}\right)^n,
+\qquad
+\lim_{n\to\infty}r^n|E_n|=0.
+\]
+
+Call an integer $n$ good if
+\[
+\cos(\alpha+n\varphi)\geq \frac12.
+\]
+Lemma~\ref{thm:cosine-blocks} gives a fixed integer $N_\varphi$ such that every block of $N_\varphi$ consecutive integers contains a good integer. It follows from \eqref{eq:coefficient-poles} that there is an $n_0$ such that every good $n\geq n_0$ satisfies
+\begin{equation}\label{eq:coefficient-lower-bound}
+T_{n-1}
+\geq
+\frac{|R_\rho|}{2}\,r^{-n}.
+\end{equation}
+
+\emph{The coefficients from a window.} Let $Y>1$ be one of the values in the hypothesis, and put $L=\log Y$. Consider integers $n$ in the interval
+\begin{equation}\label{eq:index-window}
+c_1aL\leq n\leq c_2aL.
+\end{equation}
+For these integers,
+\[
+\frac{aL}{n}\leq\frac1{c_1}<1,
+\qquad
+\frac{a\lambda L}{n}\geq\frac{\lambda}{c_2}>1.
+\]
+The monotonicity of $I$ gives
+\[
+I(aL/n)\geq I(1/c_1)\geq d,
+\qquad
+I(a\lambda L/n)\geq I(\lambda/c_2)\geq d.
+\]
+Applying Lemma~\ref{thm:exponential-tails} at the two ends of the window,
+\begin{equation}\label{eq:tail-estimate}
+\begin{aligned}
+&\int_0^L e^{-au}\frac{u^{n-1}}{(n-1)!}\,du
++
+\int_{\lambda L}^\infty
+e^{-au}\frac{u^{n-1}}{(n-1)!}\,du\\
+&\hspace{4em}\leq
+2a^{-n}e^{-dn}
+=
+2r^{-n}\exp\!\left(n\log\frac ra-dn\right)
+\leq
+2r^{-n}e^{-dn/2}.
+\end{aligned}
+\end{equation}
+On these outer intervals, \eqref{eq:linear-growth} gives
+\[
+|G(e^u)|e^{-\sigma u}\leq Be^{-au}.
+\]
+
+On the middle interval, \eqref{eq:window-bound} gives
+\[
+G(e^u)e^{-\sigma u}
+\leq
+Ce^{-(\sigma-\theta)u}.
+\]
+Since $C>0$,
+\[
+\begin{aligned}
+\int_L^{\lambda L}
+G(e^u)e^{-\sigma u}
+\frac{u^{n-1}}{(n-1)!}\,du
+&\leq
+C\int_0^\infty
+e^{-(\sigma-\theta)u}
+\frac{u^{n-1}}{(n-1)!}\,du\\
+&=
+C(\sigma-\theta)^{-n}
+=
+Cq^n r^{-n}.
+\end{aligned}
+\]
+Together with \eqref{eq:tail-estimate}, this proves the upper bound
+\begin{equation}\label{eq:coefficient-upper-bound}
+T_{n-1}
+\leq
+r^{-n}\left(2Be^{-dn/2}+Cq^n\right)
+\qquad(c_1aL\leq n\leq c_2aL).
+\end{equation}
+
+\emph{The contradiction.} The length of the interval in \eqref{eq:index-window} satisfies
+\[
+(c_2-c_1)a\log Y \xrightarrow{Y\to\infty} \infty.
+\]
+For every sufficiently large admissible $Y$, it therefore contains $N_\varphi$ consecutive integers, all at least $n_0$. Choose a good integer $n$ among them. Comparing \eqref{eq:coefficient-lower-bound} and \eqref{eq:coefficient-upper-bound} gives
+\[
+\frac{|R_\rho|}{2}
+\leq
+2Be^{-dn/2}+Cq^n.
+\]
+The bound $n\geq c_1a\log Y$ makes $n$ arbitrarily large. Since $d>0$ and $0<q<1$, the right side tends to zero as $n\to\infty$, contradicting $R_\rho\ne 0$.
+\end{proof}
+
+In contrapositive form, Theorem~\ref{thm:window-criterion} says that a zero with real part greater than $\theta$ forces the following behavior: for every fixed $\lambda>1$ and $C>0$, every sufficiently large window $[Y,Y^\lambda]$ contains a point $x$ with
+\[
+G(x)>Cx^\theta.
+\]
+This is the obstruction that the arithmetic estimate must exclude.
+
+\subsection{The estimate sufficient for the Riemann hypothesis}\label{subsec:rh-estimate}
+
+The arithmetic argument will allow a small loss in the exponent. The relevant requirement is that the coefficient of that loss remain fixed as the exponent approaches $1/2$.
+
+\begin{corollary}\label{thm:rh-criterion}
+Let $c>0$ be fixed. Suppose that, for every sufficiently small $\varepsilon>0$, there are constants
+\[
+\lambda_\varepsilon>1,
+\qquad
+C_\varepsilon>0
+\]
+such that, for arbitrarily large $Y$,
+\begin{equation}\label{eq:rh-window-bound}
+G(x)
+\leq
+C_\varepsilon x^{1/2+c\varepsilon}
+\qquad
+(Y\leq x\leq Y^{\lambda_\varepsilon}).
+\end{equation}
+Then the Riemann hypothesis holds.
+\end{corollary}
+
+\begin{proof}
+Suppose that $\zeta$ has a zero $\rho$ with
+\[
+\operatorname{Re}\rho>\frac12.
+\]
+Choose $\varepsilon>0$ small enough that the hypothesis applies and
+\[
+\frac12+c\varepsilon
+<
+\min\{\operatorname{Re}\rho,1\}.
+\]
+Theorem~\ref{thm:window-criterion}, with
+\[
+\theta=\frac12+c\varepsilon,
+\qquad
+\lambda=\lambda_\varepsilon,
+\qquad
+C=C_\varepsilon,
+\]
+excludes this zero. Thus $\zeta$ has no zeros with real part greater than $1/2$.
+
+The functional equation~\cite[Eqs.~(25.4.3)--(25.4.4)]{dlmf-zeta}
+\[
+\xi(s)=\xi(1-s),
+\qquad
+\xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),
+\]
+reflects every nontrivial zero to a nontrivial zero on the other side of the line $\operatorname{Re}s=1/2$. Hence no nontrivial zero has real part less than $1/2$, and all nontrivial zeros lie on that line.
+\end{proof}
+
+For each fixed $\varepsilon$, the constants in \eqref{eq:rh-window-bound} must work throughout an unbounded family of windows. The constants, the starting threshold, and the windows themselves may depend on $\varepsilon$. The coefficient $c$ is fixed before $\varepsilon$ is chosen.
+
+It therefore suffices to construct, for every sufficiently small $\varepsilon>0$, arbitrarily large windows $[Y,Y^{3/2}]$ on which
+\[
+G(x)\ll_\varepsilon x^{1/2+c\varepsilon}
+\]
+with one fixed $c$. The remaining sections of Part I reduce this estimate to a bound for the excess attached to an arithmetic chain.

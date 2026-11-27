@@ -2,6 +2,14 @@
 
 The purpose of this repository is to provide a human-readable reconstruction of the proof of the Riemann hypothesis in Alpöge and Claude's Lean archive. Given how quickly this has all developed and how I am not a number theorist, I cannot guarantee that everything in this repository is correct. All priority of the results belongs to Levent and Claude. I have learned a lot during this process and continue to do so.
 
+## Conditional classical-RH working manuscript
+
+**Working manuscript — November 27, 2026.** The [`JustRH/`](JustRH/) directory contains a dated, 59-page specialization titled *On the Riemann Hypothesis*. It is an incomplete, conditional human-readable reconstruction of the classical Riemann-hypothesis specialization of the Alpöge–Claude formal argument. It is **not** presented as an unconditional proof, and the manuscript has not been independently verified as a mathematical manuscript. Research is ongoing.
+
+[Read the manuscript](JustRH/main.pdf) · [LaTeX source](JustRH/main.tex) · [Research status and dependencies](JustRH/RESEARCH_STATUS.md)
+
+This dated specialization does not replace the broader working manuscript in `canonical/`. Its Section 7 now records a known node-spacing incompatibility with the source's standard record, and its status note distinguishes the direct source-to-window-estimate route from the arithmetic arguments that still require a conventional reconstruction.
+
 ## Current status
 
 **[Read the current working manuscript](canonical/main.pdf)** · *The Alpöge–Claude Argument for the Riemann Hypothesis* · Jimmie Adriazola · 117 pages · 26 November 2026. [LaTeX source](canonical/main.tex) · [Bibliography](canonical/references.bib)

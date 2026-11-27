@@ -1,0 +1,75 @@
+\section{Introduction}\label{sec:intro}
+
+The Riemann hypothesis asserts that every zero $\rho$ of $\zeta$ in
+$0<\operatorname{Re}s<1$ satisfies $\operatorname{Re}\rho=1/2$.
+We specialize the theta-lift argument of Levent Alp\"oge and Claude
+to $\zeta$, following the earlier reconstruction
+\citep{alpoge-archive,adriazola-grh}.
+
+The released formal source also contains a shorter route to the same
+analytic target. Accepting its arithmetic and geometric input theorems,
+its window comparison specializes at the trivial character to a bound
+for the function $G$ below on arbitrarily large windows
+$[Y,Y^{3/2}]$, before the source draws a conclusion about zeros. This
+observation has been checked at the level of the source statements; it
+has not been reconstructed here as an independent conventional proof.
+In particular, the uniform Selmer-window bound and the geometric
+covolume input on that branch remain reconstruction problems.
+
+Let $\Lambda$ be the von Mangoldt function and $\gamma$ Euler's constant.
+For $x\ge1$ put
+\[
+ G(x)=\sum_{n\le x}\Lambda(n)\left(\frac{x}{n}-1\right)
+                  -x\log x+(1+\gamma)x .
+\]
+The correction terms cancel the pole at $1$ in the Mellin transform.
+A nontrivial zero $\rho$ of multiplicity $m_\rho$ contributes a simple
+pole with residue $-m_\rho/(\rho(\rho-1))$. Fix $0\le\theta<1$.
+If $\operatorname{Re}\rho>\theta$, Theorem~\ref{thm:window-criterion}
+shows that for every $C>0$ and all sufficiently large $Y$ there is
+an $x\in[Y,Y^{3/2}]$ with $G(x)>Cx^\theta$.
+
+To bound $G$ from above, choose two auxiliary primes $q,d$ for the
+whole window. At a mesh point $x$, let $D_{u_0}$ be the excess of the
+weighted prime sum over its main term at a shift $u_0$ in the cyclic
+group $H$ of \S\ref{sec:auxiliary-field}. The weight set of
+\S\ref{sec:weights} meets each translate of the thick indices in nearly
+the same number of points. With the normalization $Q$ of
+Proposition~\ref{prop:one-shift}, character orthogonality gives
+\[
+ \frac{D_{u_0}}{Q}
+   =G(x)+G_{\chi_{-q}}(x)-G_{\chi_{-d}}(x)
+             -G_{\chi_{-q}\chi_{-d}}(x)+o(1).
+\]
+Each of the three quadratic sums has absolute value at most
+$x^{1/2+\varepsilon}$ on the window. The comparison holds for every
+shift, so one may choose $u_0$ to suit the arithmetic at $x$.
+
+Hypothesis~\ref{hyp:one-shift-arithmetic} asks for
+$D_{u_0}\le x^{5\varepsilon}\mathcal B$ at each mesh point, with
+$\mathcal B$ as in \S\ref{sec:arithmetic-bound}. Since
+$\mathcal B/Q\ll x^{1/2+3\varepsilon}$, the hypothesis would give
+$G(x)\le C_\varepsilon x^{1/2+8\varepsilon}$. For mesh spacing
+$O(x^{3/4})$, convexity of $G(x)+x\log x$ extends the upper bound
+between mesh points at a cost $O(\sqrt x)$. Theorem~\ref{thm:arithmetic-rh}
+then gives the Riemann hypothesis when the arithmetic bound holds on
+arbitrarily large windows for arbitrarily small $\varepsilon>0$.
+
+At an inert prime $p$, let $g_p$ be the divisibility exponent common
+to the chain and $\tau_p$ the depth required in the source lattice.
+The net gain is $2\sum_p(g_p-\tau_p)\log p$ in the slope normalization
+of \S\ref{sec:inert-gain}. Part~II compares this sum with the heights
+of the period maps. All the lifts at $x$ must use the chosen weights
+and shift. The integral Hecke lattices must realize the local
+exponents, and their twisted congruence defects must satisfy a
+uniform bound. Hypothesis~\ref{hyp:one-shift-arithmetic} is open.
+
+\paragraph{Status of this version.}
+Part~I proves a conditional reduction to the one-shift arithmetic
+bound. Part~II organizes the arithmetic comparison but retains the
+hypotheses explicitly marked \openinput. Current priorities include the
+uniform Selmer-window bound, the rank-three automorphy step used in one
+proposed Selmer argument, and the uniform covolume estimate on deep
+covers. Section~\ref{sec:theta-chain} also records a numerical
+incompatibility between its present node spacing and the standard
+source record. None of these items is claimed to be resolved here.
