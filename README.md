@@ -47,6 +47,10 @@ I began at the Lean declaration `riemannHypothesis` and worked backwards through
 
 Corrections and comments from specialists are very welcome. For the current working manuscript, please identify the section, the first inference in question, and any relevant result in the literature or declaration in the readable refactor. I would especially appreciate checks of the hypotheses and normalizations in Appendix E. The [review materials](review/README.md) collect the November 25 manuscript-to-Lean correspondences and unresolved questions. Please use the [issue tracker](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/new) to report corrections or raise questions.
 
+## Additional Resources
+
+Below are additional resources related to this effort:
+
 ## Acknowledgments
 
 - I thank Timothy Wesley Stone for raising the rationality question for the period maps and pointing me to the relevant Lean declarations. [Issue 1](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/1)
