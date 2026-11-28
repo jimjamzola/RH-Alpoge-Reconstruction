@@ -70,6 +70,7 @@ These are independent. A shared dependency is listed once, at the package that h
 - **Representative earliest blocker.** The Berger level layer, `LevC.secCrit_all` (Theorem B side) and `expCrit_D'` with `frobenius_power_congruence_local` (Theorem C side).
 - **Reconstruction status.** The relay of Theorem B (its $\gamma$-equation, truncation, saturation, transport and uniqueness), the eight interior lemmas of Theorem C with their supplier, and the constants ($40\,\mathrm{Sg}$, $\sigma\le3\,\mathrm{Sg}$ for $l\ge11$, $32$ at $l=11$) are reconstructed. Several proof bodies in the shared layer are unread. Size medium and large in lines, mechanism known, risk low to moderate.
 - **Why it matters.** Theorems B and C bound the exponents in `LinkN`, one of the two bounds of R4, on alternating arcs.
+- **Source-name clarification (issue #3).** In the Theorem B case layer, the audit's `liftDelta` reference corresponds to `Formalism.MainNotions.N.FrobeniusPowerSeries.ArcLengthTwoLifting.liftΔ`, spelled with a Greek capital delta. See the [pinned theorem](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Formalism/SharpRestriction/LevelLetterCocycles/RepresentationCongruences/PhiSqPi0PowEqPi0LambdaSq.lean#L26) and its [call in the case proof](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Formalism/SharpRestriction/LevelLetterCocycles/RepresentationCongruences/ArcLengthOneOrTwoCaseB.lean#L145). Its proof uses a normalized finite-group average.
 
 ### PC-4. Finite-place seesaw harmonic-analysis package
 
@@ -87,10 +88,11 @@ These are independent. A shared dependency is listed once, at the package that h
 
 ### PC-6. Global record-construction package
 
-- **Mathematical role.** The slope bound for the target lattice $R$ through denominators of zeta values and toric periods, the cores that build the stages of the record, the entries of `Open0` and `ON`, and small leaves of the nonvacuity route.
+- **Mathematical role.** The slope bound for the target lattice $R$ through denominators of zeta values and toric periods, the cores that build the stages of the record, the entries of `GlobalTheory.Fc.S0.OpenParameterStatements` (see source-name note below) and `ON`, and small leaves of the nonvacuity route.
 - **Representative earliest blocker.** The sixteen leaves of `FUN` under `fun0Fit_of_leaves`.
 - **Reconstruction status.** The host size lemmas, the assembly of the host and the nonvacuity route are reconstructed. The bespoke part is the slope bound `FUN`. The rest is assembly over named statements whose wiring is known. Size medium, mechanism known at statement level, risk moderate. One compatibility check is open, that the family constants can be chosen with $C_l\ge1.6\cdot10^{15}(C_g+4)$ and $\log\mathrm{rd}_E\le L/C_l$ together with the other record conditions.
 - **Why it matters.** It gives the existence of the records, whose fields are the lattices, heights and local terms of R1 and R2, and `FUN` feeds `L3` and `LinkDIV`.
+- **Source-name clarification (issue #3).** At the original source pin, `GlobalTheory.T.open0_of_unitary_group_hypotheses` concludes `GlobalTheory.Fc.S0.OpenParameterStatements`: see the [producer](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/OpenOrbitOfUnramifiedExponents.lean#L75) and [structure definition](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/GeometricWeakTies.lean#L39). The archive also contains a separate structure, [`GlobalTheory.Fc.S0.Open0`](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Development/AbelianVarietyTheory/Definitions/GlobalTwisting/GeometricWeakTiesOfStrong.lean#L40). This clarification identifies the source references without asserting equivalence between the two structures.
 
 ### PC-7. FR-10 remainder (markings and integrality producers)
 
@@ -106,7 +108,7 @@ None of these involves a new mechanism.
 - **SL-1.** Flag and test leaves of `DeepStR` (first `testRest_bound`), and small children of the sandwich construction.
 - **SL-2.** Rank-four standard leaves and elementary interiors of the automorphy argument.
 - **SL-3.** Frame lemmas of the model algebra on the `LinkS` side (first `core2`) and fields of `StepImportsQ`.
-- **SL-4.** Producers and children in FR-18, FR-19 and FR-01/02 (patching, growth bounds and related leaves).
+- **SL-4.** Producers and children in FR-18, FR-19 and FR-01/02 (patching, growth bounds and related leaves). The patching reference `detFin` denotes [`UpperTheory.V.Pa.Det.detFin`](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Development/AutomorphicArithmetic/AutomorphicVarieties/PatchingModules/DeterminantPadicFree/DetFin.lean#L127). Under `PhiCond` and `Detects k S`, this theorem produces a finite subset of `S` satisfying the same detection condition.
 - **SL-5.** Bookkeeping, including the choice between two declarations of `UniqGap`, a budget inequality with margin, and the trace of the existence route to the final theorem.
 
 ## 4. Open compatibility checks

@@ -4,6 +4,8 @@
 
 This is the argument of the archive in mathematical order, from the analytic criterion to the conclusion. It is a map of mathematics, not a history of the audit and not a list of Lean declarations. Lean names appear in `code` where they help a reader find the corresponding statement in the manuscript or the archive. Section references (§) are to [`RH_Route_Notes.pdf`](../archive/route-notes/RH_Route_Notes.pdf).
 
+**Naming clarification (issue #3).** `corA` is the manuscript's LaTeX label for the window-criterion corollary in [`sec2_criterion.tex`](../manuscript/sec2_criterion.tex), where it appears as `\label{corA}`. References to Corollary `corA` below use that manuscript label.
+
 Status marks used below.
 
 - **[proved here]** a complete proof is given in the manuscript from the stated classical inputs.

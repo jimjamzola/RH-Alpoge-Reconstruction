@@ -21,6 +21,14 @@ This file identifies the formal object that the manuscript describes, and the ve
 
 The [companion instructions](../review/REPLAY.md) describe the checks run on the reconstruction and the checks that require a full archive build.
 
+### Citation policy after the community cleanup
+
+For the original-archive reconstruction in `manuscript/` and the historical reconstruction/audit documentation, an unqualified Lean declaration name refers to the archive at `40e56bab026552e089d7afcfeff08d2defb9c005`, unless a different revision is explicitly stated. The immutable original-archive links in the [source-name review](../review/issue3-source-name-review.md) are the citation targets for all 85 reported spellings (86 candidate rows).
+
+The later community revision `a18a350c3e5aad997766cff2670b292313e46574` is a separately pinned cleanup comparison. Its 44 located proof-target names do not retarget the original citations. The 42 candidate rows without an established later destination retain their original-archive references; no modern replacement or cross-revision equivalence is asserted for them. A later destination must be checked before a citation is changed to that revision. This policy does not change the separate source pin of a readable-refactor edition.
+
+The named V17 zero-free-region route is recorded as off-route; this is not a claim that every analytic statement appearing there is unused in every other formulation. The six additional spellings raised in issue #3 are distinguished as report labels, a manuscript label, audit shorthand, or qualified Lean declarations in the same review.
+
 ### Build configuration of the archive
 
 | Item | Value |

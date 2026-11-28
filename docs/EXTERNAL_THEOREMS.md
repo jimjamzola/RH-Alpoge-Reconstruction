@@ -141,7 +141,7 @@ Some inputs enter the archive through `instance : Fact _` declarations (54 in th
 |---|---|---|---|---|
 | Siegel–Weil, `SiegelWeilStd`, `EisBL` | see V5 | Theta tower | Constant matched | `partially compared` |
 | Rallis's constant-term formula; Kudla–Rallis | Rallis (1984); Kudla–Rallis | See V13 | No | `not compared` |
-| Rallis inner product formula; doubling method | Rallis | `AForm`, `BForm`, `LamLow` (FR-14); `nonZeroBottom_of_doubling_integral` | No | `not compared` |
+| Rallis inner product formula; doubling method | Rallis | `GlobalTheory.LiftRows.AForm`, `GlobalTheory.LiftRows.BForm`; FR-14 lower-bound interface `GlobalTheory.BigTop.LambdaLowerBound₂` (see source-name note below); `nonZeroBottom_of_doubling_integral` | No | `not compared` |
 | Yamana | not named | The boundary does not name Yamana. Whether the doubling-form check V6 needs his results has not been determined | not recorded | not on the boundary |
 | $(\mathrm{GL}_a,\mathrm{GL}_b)$ Howe duality on $\mathbb C[M_{b\times a}]$; multiplicity-one branching $U(n+1)\downarrow U(n)$; irreducibility of Weyl modules; Bernstein–Zelevinsky geometric lemma; Kudla's filtration of the Jacquet module | as named | `KerX`, `PerX`, `finRam`, `finSplit` | not recorded | `proved in archive` |
 | Howe duality (Howe, Waldspurger, Mínguez, Gan–Takeda); unramified Howe duality at inert places | as named | `howeInert` | No | `not compared` |
@@ -154,6 +154,11 @@ Some inputs enter the archive through `instance : Fact _` declarations (54 in th
 | `SiegelMassRatioCM`, `RayField`, `PrincipalIdealSt`, `CMCurveGoodOutsidePrimeSt`; the thirteen hypotheses of `miStar2_of_allTrue_alt_alt` | as stated | Record nonemptiness, `window_lower`, `MIstar2` | No | `not compared` |
 | Tate's thesis; Hecke $L$ nonvanishing at 1 | Tate | Functional equations | Local statements are closed terms | `classical` |
 
+**FR-14 source-name clarification (issue #3).** At the original source pin, `GlobalTheory.BigTop.lamLow_of_hypotheses_alt_alt` concludes `GlobalTheory.BigTop.LambdaLowerBound₂`: see the [producer](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/LamLowOfPublished.lean#L17) and the [recorded RH paths](../review/evidence/passage-RH-paths.tsv).
+
+The two `LamLow` candidates in the [original-name audit](../review/evidence/issue3-85.tsv) are distinct declarations. Both names are absent from their retained source files at the later revision `a18a350c3e5aad997766cff2670b292313e46574`, while the qualified producer and `LambdaLowerBound₂` remain. This identifies source references; it does not establish equivalence with either older interface or a match to the hypotheses and normalizations of a published Rallis formula. The comparison remains `not compared`.
+
+
 ## 4. Not inputs
 
 These are comparisons or internal theorems. They should not be cited as places where the route stops.
@@ -163,7 +168,9 @@ These are comparisons or internal theorems. They should not be cited as places w
 - The Capelli identity and the RTT presentation as models for the radial and model-algebra identities.
 - The Siegel–Walfisz range. None of `ShortNorm`, (C7), `SmallOne` uses it.
 - Raynaud's classification, until V20 is settled.
-- `KillerLev`, `KillerKap` (internal theorems of PC-3) and `CVEq` (a definition).
+- For PC-3's level-annihilator bound, the precise statement is `Formalism.MainNotions.UnusedSlot80.KillerLevelsTheorem`, proved by [`Formalism.MainNotions.UnusedSlot80.annihilator_levels_unramified_statement`](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Formalism/SharpRestriction/LevelLetterCocycles/AnnihilatorLevelsUnramifiedStatement.lean#L576).
+- `Formalism.MainNotions.ArcLiftingSetup.KillerKap` is a defined predicate. Its internal proof with constant 8 is [`Formalism.MainNotions.ArcLiftingSetup.killerKap_holds`](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Formalism/SharpRestriction/LevelLetterCocycles/DivisibilityInvariantMulLinear.lean#L185).
+- `CVEq` (a definition).
 
 ## 5. Separate campaigns
 
