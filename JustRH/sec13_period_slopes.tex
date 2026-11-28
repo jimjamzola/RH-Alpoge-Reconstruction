@@ -141,6 +141,66 @@ $D^{-1}\sum_i(s-\lambda_i(C))_+$ by \eqref{eq:period-error}.
 Since $s-\mu(C)$ is at most this mean, the result follows.
 \end{proof}
 
+\begin{proposition}[Word-dependent denominator costs]
+\label{prop:period-denominator-average}
+Assume the hypotheses of Theorem~\ref{thm:period-mean}, except for
+the integral inclusions in Hypothesis~\ref{hyp:period-maps}.
+Suppose positive integers $D_u$ satisfy $D_uB_u(N_u)\subseteq C$.
+Keep $s,U,H$ computed with the original height allowances, and put
+\[
+ c_u=2\log D_u,\qquad
+ \bar c=\frac{1}{\Delta}\sum_u d_uc_u,\qquad
+ c_{\min}=\min_u c_u.
+\]
+Then
+\begin{equation}\label{eq:period-denominator-average}
+ s\le\mu(C)+\bar c+
+ \frac{(\eta+4\sqrt e)H+
+       4\min\{U+\bar c-c_{\min},H\}}{1-\delta}.
+\end{equation}
+In particular, if $\delta\le1/2$ and
+$(\eta+4\sqrt e)H\le6b$, then
+\[
+ s\le\mu(C)+8U+12b+9\bar c-8c_{\min}
+       \le\mu(C)+8U+12b+9\bar c.
+\]
+For a common denominator $D_u=D_x$, the first bound recovers the
+original mean-slope error plus $2\log D_x$.
+\end{proposition}
+
+\begin{proof}
+Use auxiliary maps $\widetilde B_u=D_uB_u$ and height allowances
+$\widetilde h_u=h_u+c_u$. At every embedding multiplication by
+$D_u$ increases the squared logarithmic operator norm by $c_u$,
+so these are valid height bounds; zero maps remain zero. The new
+mean is $\widetilde s=s-\bar c$. Its spread satisfies
+\[
+ \widetilde U
+ =\max_u\bigl(\mu_{\max}(N_u)-h_u-c_u\bigr)-s+\bar c
+ \le U+\bar c-c_{\min}.
+\]
+Since $\bar c\ge0$, the old target cutoff $H$ still works.
+Set $\widetilde J_u=D_u^{-1}J_u$. These remain isomorphisms and
+$\rho A_u=\widetilde B_{u,v}\widetilde J_u$, so the matrices and
+their Gram bounds are unchanged. The proof of
+Theorem~\ref{thm:period-mean} uses only the integral inclusions,
+the height bounds, the row identity and the Gram estimates, so it
+applies to these auxiliary data. Translate back by adding $\bar c$.
+This proves \eqref{eq:period-denominator-average}.
+For the displayed consequence use
+$(1-\delta)^{-1}\le2$ and $\bar c-c_{\min}\ge0$.
+If the $c_u$ are all equal, $\widetilde U=U$ and the only added
+term is that common value. No invariance of the deficit proportions
+is asserted when the denominators vary with $u$.
+\end{proof}
+
+The same argument applies to the scalar-row formulation of
+Corollary~\ref{cor:bessel-mean}. Keep $I_u$ and replace
+$\kappa_u$ by $\kappa_u/D_u$ in
+$\rho A_u=\kappa_u B_{u,v}I_u$. The filtration inclusion and
+the unchanged Gram bounds give the same estimate, also when
+$\kappa_u=0$.
+
 The rescaling in \S\ref{sec:inert-gain} also bounds $U$. At $w\mid p$
 we have $\Lambda_{uw}\subseteq p^{\tau_p}M_{u,w}$, with
 $\tau_p=0$ off $\mathcal P$. Hence $N_u\subseteq\mathfrak b_u M_u$ for
