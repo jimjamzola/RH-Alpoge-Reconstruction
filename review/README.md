@@ -20,3 +20,7 @@ The mathematical review concerns the prose and its correspondence with the pinne
 - [Manuscript references](manuscript-references.tsv) lists the 1,144 explicit references and citations appearing in those statements and their immediately following proofs. These are author-written references. Some dependencies are implicit or occur in intervening prose.
 - [Explicit omissions](explicit-omissions.tsv) collects the 29 passages marked as such by the author. Other conditional inputs appear in hypothesis environments and in §18.7.
 - [Lean checks and reproduction](REPLAY.md) distinguishes the ten locally checked lemmas from the archive-dependent files. [K1 inputs](evidence/K1-inputs.tsv) and [the original terminal paths](evidence/RH-paths.tsv) preserve the prior proof audit. [Passage dependency paths](evidence/passage-RH-paths.tsv) records the sequence of formal references from RH to every live declaration in the new ledger. [Preserved alternatives](optimization_preservation/README.md) gives the provenance of the shortcuts.
+
+## Issue #1: period conventions
+
+The [period-normalization comparison](issue1-period-normalization.md) answers the three reported questions: the good-subspace restriction, the defining family tie, and the inverse conventions for the two scalar multipliers. It also distinguishes the rational row map from the complex orthogonal section. These source-level answers do not certify the separate comparison of independently constructed geometric period models or their finite-place normalizations.

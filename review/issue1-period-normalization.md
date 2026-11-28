@@ -8,6 +8,14 @@ The suggested literal identification of the pairing multiplier with `c(t)/c(mu0)
 
 This resolves the normalization-convention question and explains why the guessed off-base identity is unnecessary for the base-tuple rationality deduction. It does **not** establish the separate geometric dictionary between independently constructed period models.
 
+## Answers to the three questions
+
+1. **Domain of identity (3):** yes, the section identity holds on the good subspace. Its extension to the degree-zero space is equivalent, under the defining tie, to vanishing on the kernel of the row map. `DataBu.lean` states both facts separately.
+2. **Where the defining identity comes from:** the selected-family caller explicitly supplies `(Fm.ties x i).bu_def`. This discharges that premise of `buRational_of`; it does not discharge the theorem's separate row, period and realization premises.
+3. **Which scalar is compatible:** after matching the period models, embedding and coordinates, a coefficient `rho = c(t)/c(mu0)` in `rho*P = B` corresponds to the inverse pairing coefficient in `P = zeta_pair*B` whenever the pairing is nonzero. The H-rat proof uses only the base tuple, where the source pairing factor is 1. An off-base scalar is not determined by these identities on a zero pairing fiber.
+
+These are answers to the three source-comparison questions in issue #1. They do not claim that an independently constructed geometric period model has been identified with the source model. The local unit comparison for such a model remains a separate requirement.
+
 ## 1. The good-subspace restriction and the family tie
 
 [Rows.Data.sec_iota](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Formalism/LocalRingCardinality/DataBu.lean#L22) assumes membership in `Qsp`. Combining that identity with `Rows.BuDefQ` gives the period identity on the good subspace. The larger degree-zero statement is different: [D7.periodIdentity_iff_period_kills](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Formalism/LocalRingCardinality/DataBu.lean#L49) identifies it with `Rows.PerKillsU`, under `BuDefQ`.
@@ -98,3 +106,7 @@ What remains for a complete geometric comparison is to identify the independentl
 - Checked the scalar conversion and anchored normalization by exact symbolic algebra, including the nonzero denominators. A rational scalar example distinguishes a ratio from its inverse.
 - Checked that the short lemma's proof remains unchanged, the new label is unique, and no existing labels, environments or manuscript hypotheses were removed.
 - Did not compile the original archive, the mirror archive, a standalone Lean check, or the revised manuscript PDF.
+
+### Follow-up clarification
+
+The selected-record paragraph now distinguishes its surjective rational row map from the later complex orthogonal projection. The descent needs a rational ambient preimage; it does not need a rational orthogonal section. The manuscript states the good-part restriction and the role of the defining family tie together. No hypothesis or arithmetic normalization is removed.
