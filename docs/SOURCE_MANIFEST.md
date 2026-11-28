@@ -73,6 +73,23 @@ A search of all 175,187 files finds no declaration that introduces the names `Ri
 
 The formal check of the archive is the one made by the Lean and Mathlib communities ([joint statement](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/)). Section 4 records the commands for a reader who wants to reproduce a build.
 
+### Additional external verification report
+
+In [issue #10](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/10), Manuel Menéndez-González (Fundación de Neurociencias / CoResearcher) shared the v1.4 verification dossier for the original archive. The following records are pinned to dossier commit [`0143de8`](https://github.com/Fundacion-de-Neurociencias/riemann-hypothesis-audit-dossier/tree/0143de873669d518f9193b01119052cdd0379cad). The archive SHA-256 in its certificate agrees with Section 1 above.
+
+| Check | Result reported by the dossier | Published record |
+|---|---|---|
+| Compilation with `lake build Main` | Exit code 0; 175,187 project modules, using Lean v4.33.1 and Mathlib `0df444a3` | [Kernel certificate](https://github.com/Fundacion-de-Neurociencias/riemann-hypothesis-audit-dossier/blob/0143de873669d518f9193b01119052cdd0379cad/certificates/alpoge_rh_kernel_certificate.json) |
+| Axiom trace for the five root exports | Only `propext`, `Classical.choice`, and `Quot.sound` | [Axiom log](https://github.com/Fundacion-de-Neurociencias/riemann-hypothesis-audit-dossier/blob/0143de873669d518f9193b01119052cdd0379cad/certificates/alpoge_rh_axioms.log) |
+| `lake env leanchecker --fresh Main` | The published log records start and finish times and exit code 0 | [Fresh replay log](https://github.com/Fundacion-de-Neurociencias/riemann-hypothesis-audit-dossier/blob/0143de873669d518f9193b01119052cdd0379cad/certificates/alpoge_rh_leanchecker_fresh.log) |
+| `lean4lean` module replay | 175,187 modules and 1,927,488 declarations; no failed modules | [Replay summary](https://github.com/Fundacion-de-Neurociencias/riemann-hypothesis-audit-dossier/blob/0143de873669d518f9193b01119052cdd0379cad/certificates/lean4lean_summary.json) |
+
+For this documentation update, five retrieved files (the kernel certificate, axiom log, fresh replay log, replay summary, and cross-audit JSON) were hashed and matched against the pinned [`SHA256SUMS.txt`](https://github.com/Fundacion-de-Neurociencias/riemann-hypothesis-audit-dossier/blob/0143de873669d518f9193b01119052cdd0379cad/SHA256SUMS.txt). The certificate's hashes for `src/Main.lean` and `src/Statements.lean` also match those files at the original source pin `40e56bab026552e089d7afcfeff08d2defb9c005`. These are artifact-integrity and source-identity checks; no compilation or kernel replay was rerun for this update. The internal execution statuses in the table above remain unchanged.
+
+The dossier states that its `lean4lean` module replay trusts precompiled Mathlib and imported `.olean` boundaries, and distinguishes it from the reported `--fresh` replay. Those reported executions are not independently reproduced by checking their published hashes.
+
+The [reconstruction cross-audit](https://github.com/Fundacion-de-Neurociencias/riemann-hypothesis-audit-dossier/blob/0143de873669d518f9193b01119052cdd0379cad/certificates/phase2_prose_reconstruction_cross_audit.json) concerns snapshot `b50dae1`. Its coverage figures describe that snapshot and its stated counting method; they are not measurements of the current manuscript's mathematical correctness. Recording this report does not verify the prose reconstruction or establish equivalence with the later readable refactor, and no original-to-refactor statement comparison or refactor replay was performed for this update.
+
 ## 3. Versions of the documents in this repository
 
 | Document | Version | SHA-256 |
