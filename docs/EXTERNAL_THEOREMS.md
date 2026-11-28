@@ -168,7 +168,9 @@ These are comparisons or internal theorems. They should not be cited as places w
 - The Capelli identity and the RTT presentation as models for the radial and model-algebra identities.
 - The Siegel–Walfisz range. None of `ShortNorm`, (C7), `SmallOne` uses it.
 - Raynaud's classification, until V20 is settled.
-- `KillerLev`, `KillerKap` (internal theorems of PC-3) and `CVEq` (a definition).
+- For PC-3's level-annihilator bound, the precise statement is `Formalism.MainNotions.UnusedSlot80.KillerLevelsTheorem`, proved by [`Formalism.MainNotions.UnusedSlot80.annihilator_levels_unramified_statement`](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Formalism/SharpRestriction/LevelLetterCocycles/AnnihilatorLevelsUnramifiedStatement.lean#L576).
+- `Formalism.MainNotions.ArcLiftingSetup.KillerKap` is a defined predicate. Its internal proof with constant 8 is [`Formalism.MainNotions.ArcLiftingSetup.killerKap_holds`](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Formalism/SharpRestriction/LevelLetterCocycles/DivisibilityInvariantMulLinear.lean#L185).
+- `CVEq` (a definition).
 
 ## 5. Separate campaigns
 
