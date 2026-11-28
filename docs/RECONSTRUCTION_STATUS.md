@@ -107,7 +107,7 @@ None of these involves a new mechanism.
 - **SL-1.** Flag and test leaves of `DeepStR` (first `testRest_bound`), and small children of the sandwich construction.
 - **SL-2.** Rank-four standard leaves and elementary interiors of the automorphy argument.
 - **SL-3.** Frame lemmas of the model algebra on the `LinkS` side (first `core2`) and fields of `StepImportsQ`.
-- **SL-4.** Producers and children in FR-18, FR-19 and FR-01/02 (patching, growth bounds and related leaves).
+- **SL-4.** Producers and children in FR-18, FR-19 and FR-01/02 (patching, growth bounds and related leaves). The patching reference `detFin` denotes [`UpperTheory.V.Pa.Det.detFin`](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Development/AutomorphicArithmetic/AutomorphicVarieties/PatchingModules/DeterminantPadicFree/DetFin.lean#L127). Under `PhiCond` and `Detects k S`, this theorem produces a finite subset of `S` satisfying the same detection condition.
 - **SL-5.** Bookkeeping, including the choice between two declarations of `UniqGap`, a budget inequality with margin, and the trace of the existence route to the final theorem.
 
 ## 4. Open compatibility checks
