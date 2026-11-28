@@ -14,6 +14,16 @@ The input [original-name ledger](evidence/issue3-85.tsv) contains **85 distinct 
 
 Every original source location was inspected. These declarations remain citable at the original pin even when their names or files disappeared during cleanup. An explicitly named proof target was also located in the later source for **44 rows**. That establishes source references, not equivalence of all hypotheses, definitions, normalizations, or mathematical applications across revisions.
 
+## Disposition of the three reported reference problems
+
+| Request in issue #3 | Source-level answer |
+|---|---|
+| Identify the source revision | The original archive is pinned in [SOURCE_MANIFEST.md](../docs/SOURCE_MANIFEST.md) to `40e56bab026552e089d7afcfeff08d2defb9c005`, with the existing archive-integrity record preserved. |
+| Correct the V17 route claim | The named zero-free-region host route is marked off-route. This does not establish the absence of every related analytic input from every live route. |
+| Make disappeared or ambiguous names citable | Every reported original spelling has its original source anchor below; the two `LamLow` candidates are distinguished. The six additional spellings have a separate classification. Original citations are retained under the manifest's explicit citation policy. |
+
+These three reference problems have source-level answers. Migration to the later cleanup is a distinct comparison: 44 proof targets are located and 42 later destinations remain unestablished. Keeping original-archive citations does not require inventing a replacement for those 42 rows. No complete cross-revision statement-equivalence claim is made.
+
 ## Results
 
 | Status | Rows | Meaning |
@@ -145,13 +155,13 @@ These were outside the 85-name disappearance list and need different treatment.
 
 Related PC-3 clarification: `Formalism.MainNotions.ArcLiftingSetup.KillerKap` is a predicate; [killerKap_holds](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Formalism/SharpRestriction/LevelLetterCocycles/DivisibilityInvariantMulLinear.lean#L185) proves it with constant 8.
 
-## Remaining work
+## Optional later-revision migration
 
 The complete original inventory is now anchored. The later migration is not complete: **42 candidate rows** have no later target established here (14 with a named original proof target, 28 without a successor established in this pass). The inventory above records those rows explicitly. The two rows for the same host theorem and the two `LamLow` candidates are retained rather than silently deduplicated.
 
 Before retargeting a manuscript citation to the later revision, compare the relevant statements and their uses, including ambient parameters and definitions. Finding a surviving qualified name alone does not discharge that comparison. The original pinned citations can be retained while that work proceeds.
 
-Keep issue #3 open for maintainer review and the remaining migration decisions. This report does not change theorem statements, manuscript proofs, historical audit reports, original ledger rows, or external-theorem comparison statuses.
+The citation policy resolves the original-reference question while preserving the unestablished later destinations explicitly. Retargeting any of those citations remains conditional on checking its actual successor. This report does not change theorem statements, manuscript proofs, historical audit reports, original ledger rows, or external-theorem comparison statuses.
 
 ## Validation and limits
 
