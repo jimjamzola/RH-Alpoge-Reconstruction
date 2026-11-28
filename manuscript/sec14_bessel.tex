@@ -377,6 +377,15 @@ Assume that $B_u(\varphi)(y)=\mathrm{Pt}_{\mu_0}(\varphi,q_y)$ for $\varphi\in V
 For $\varphi\in V_u$ and $y\in Y$, $(B_{u,v}(\varphi\otimes1))(y\otimes1)=\mathrm{perCol}_{\mu_0}(\varphi\otimes1,q_y\otimes1)=\sigma_v(\mathrm{Pt}_{\mu_0}(\varphi,q_y))=\sigma_v(B_u(\varphi)(y))$, which lies in $\sigma_v(K)$.
 \end{proof}
 
+The section identity used in Lemma~\ref{w2:see:rat} is restricted
+to the good part. Extending it to the whole degree-zero space requires
+the period to vanish on the kernel of the row map. For the selected
+family, the defining identity for $B_u$ is supplied by the family tie;
+the row and definite-period comparisons remain hypotheses of that
+family argument. The following descent makes these distinctions
+explicit without assuming that the orthogonal section of a rational
+row is rational.
+
 \paragraph{Rationality on the selected record.}\label{rat:selected}
 We give the descent producing this identity in the original argument.
 Fix one selected record, its coefficient field $K$, its embedding
@@ -393,9 +402,11 @@ For these data the assertion is
 
 Choose the rational column coordinates of $\varphi$. On the row side
 let $e_R:K^d\longrightarrow R_K$ be the coordinate isomorphism and let
-$p:K^n\to K^d$ be the composite of the good-part projection and the
-row-coordinate map. It is onto by surjectivity of the first projection
-and bijectivity on the good part. Let $A(F)$ be the corresponding
+$p:K^n\to K^d$ be the surjective rational row-coordinate map
+supplied by the row comparison. In the source this map is the
+composition of the surjective rational projection with the bijective
+row-coordinate map. It does not assert rationality of the complex
+orthogonal section used below. Let $A(F)$ be the corresponding
 complex level row. Its values span the degree-zero space $V^0$,
 since the level operator has precisely this image and fixes its image.
 Put $\beta(y')=B^K_u(\varphi,e_Ry')$. The row comparison on this
