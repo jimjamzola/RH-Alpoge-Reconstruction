@@ -370,7 +370,7 @@ Take $X_u$ to consist of the pairs $(\varphi,F)\in V_{u,v}\times Y_v$ and the pa
 \end{remark}
 
 \begin{lemma}[rationality]\label{w2:see:rat}
-Assume that $B_u(\varphi)(y)=\mathrm{Pt}_{\mu_0}(\varphi,q_y)$ for $\varphi\in V_u$ and $y\in Y$, where $\mathrm{Pt}_{\mu_0}$ is the $K$-bilinear period of the chain on the definite side at the base tuple and $q_y$ is the $K$-rational vector of the good part with $\iota_0(q_y)=y$. Assume also $\mathrm{perCol}_{\mu_0}(\varphi\otimes1,q\otimes1)=\sigma_v(\mathrm{Pt}_{\mu_0}(\varphi,q))$ and $(B_{u,v}\varphi)(\iota_0q)=\mathrm{perCol}_{\mu_0}(\varphi,q)$. Then Hypothesis~\ref{w2:H-rat} holds.
+Assume that $B_u(\varphi)(y)=\mathrm{Pt}_{\mu_0}(\varphi,q_y)$ for $\varphi\in V_u$ and $y\in Y$, where $\mathrm{Pt}_{\mu_0}$ is the $K$-bilinear period of the chain on the definite side at the base tuple and $q_y$ is the $K$-rational vector of the good part with $\iota_0(q_y)=y$. Assume also $\mathrm{perCol}_{\mu_0}(\varphi\otimes1,q\otimes1)=\sigma_v(\mathrm{Pt}_{\mu_0}(\varphi,q))$ and $(B_{u,v}\varphi)(\iota_0q)=\mathrm{perCol}_{\mu_0}(\varphi,q)$. In these two identities, $q$ ranges over the good part, rational or complex as appropriate. Then Hypothesis~\ref{w2:H-rat} holds.
 \end{lemma}
 
 \begin{proof}
@@ -409,9 +409,13 @@ with the complex column gives $\sigma(\mathrm{Pt}_{\mu_0})$ on the left.
 The definite period factors as $\zeta(u,\mu_0)$ times the pairing on the
 projected row, and $\zeta(u,\mu_0)=1$. Transport by the rational column
 and row isomorphisms gives $\beta(pF)$. At other tuples the source
-specifies $\zeta(u,t)\ne0$ and valuation zero at the designated places.
-Identifying this scalar with $c(t)/c(\mu_0)$ requires a separate
-comparison of period normalizations.
+specifies a nonzero factor $\zeta(u,t)$ multiplying the rational pairing,
+with valuation zero at the designated places. The coefficient
+multiplying the definite period uses the inverse convention.
+A comparison with $c(t)/c(\mu_0)$ must respect this convention and
+identify the same period models, embeddings and coordinate maps;
+see Remark~\ref{w2:rat:normalization}.
+No such off-base comparison enters this base-tuple descent.
 
 Extend $\beta e_R^{-1}$ to the complex linear functional $\Lambda$
 by prescribing its $\sigma$-embedded values on the chosen row basis.
@@ -449,6 +453,45 @@ equivalently equality on every pair $(b_i,c_l)$. The height comparison
 in Section~\ref{r4:sec:R4} still uses the metrics at all infinite places.
 
 
+
+\begin{remark}[normalization conventions]\label{w2:rat:normalization}
+Fix the word $u$ and put $\rho(t)=c(t)/c(\mu_0)$, so that
+$\rho(\mu_0)=1$. The normalized seesaw coefficient multiplies
+the definite period. The source's pairing convention instead has
+$\mathrm{Pt}_t=\zeta(u,t)B^K_u$ after the row projection and
+coordinate transport. To compare these conventions, suppose the
+models, embeddings and coordinates have been matched, and write
+$P_t$ and $b_t$ for the resulting complex period value and
+pairing value. If
+\[
+ \rho(t)P_t=b_t,\qquad P_t=\sigma(\zeta(u,t))b_t,
+\]
+then
+\[
+ \bigl(\rho(t)\sigma(\zeta(u,t))-1\bigr)b_t=0.
+\]
+Thus, whenever $b_t\ne0$, the compatible pairing factor is
+$\sigma(\zeta(u,t))=\rho(t)^{-1}$.
+At a tuple where the pairing is identically zero, these identities
+alone do not determine its scalar factor.
+
+The rationality argument above uses only $t=\mu_0$ and the source's
+normalization $\zeta(u,\mu_0)=1$; it needs no identity between the
+off-base factors. In the passage to Hypothesis~\ref{w2:H-see}, all
+tuple terms can likewise be taken at $\mu_0$, so multiplication by
+the common nonzero number $c(\mu_0)$ preserves the relevant linear
+relations. The Bessel identity allows a nonzero complex
+proportionality constant $a_u$.
+
+For the finite-place estimates, nonvanishing alone is insufficient:
+the algebraic multiplier for the actual periods must have valuation
+zero at the places used. This condition is unchanged by inversion,
+since $v_w(a^{-1})=-v_w(a)$. In particular, for algebraic period and
+pairing values $P$ and $b$, the identity $b=aP$ with $a$ a local unit
+preserves valuation lower bounds. This fixes the scalar convention without proving
+the remaining comparison between independently defined period
+models; that comparison is the equality on basis pairs specified above.
+\end{remark}
 
 \subsubsection{The double-step seesaw identity}\label{w3s:sec}
 
