@@ -153,7 +153,15 @@ Let $z_1,\dots,z_m$ be real numbers with $m\ge1$, and let $s$ and $H\ge0$ be rea
 If $s-z_k\ge0$ then $s-z_k\le H$ and $s-z_k=\int_0^H\mathbf 1[z_k<s-\tau]\,d\tau$. If $s-z_k<0$ the integral is nonnegative. Summing $s-z_k\le\int_0^H\mathbf 1[z_k<s-\tau]\,d\tau$ over $k$ and bounding the number of $k$ with $z_k<s-\tau$ by $m\min(1,w(\tau))$ proves the lemma.
 \end{proof}
 
-For $u>0$ and $H\ge0$ put $\Lambda(u,H)=u\log(1+H/u)$, and put $\Lambda(0,H)=0$. Then $\Lambda(u,H)=\int_0^Hu/(u+\tau)\,d\tau$. The function $\Lambda$ is nondecreasing in each variable, because $\partial_u\Lambda=\log(1+H/u)-H/(u+H)\ge0$.
+For $u,H\ge0$ put
+\[
+\Lambda(u,H)=
+\begin{cases}
+\dfrac{uH}{u+H},&u+H>0,\\
+0,&u=H=0.
+\end{cases}
+\]
+Then $0\le\Lambda(u,H)\le\min\{u,H\}$.
 
 \begin{theorem}[frame theorem]\label{r3:frame}
 Let $K$ be a totally complex number field, let $I$ be a nonempty finite set, and for $i\in I$ let $\bar N_i$ be a hermitian lattice over $\OK$ of rank $d_i$ in a $K$-vector space $V_i$ with a basis. Let $\bar C$ be a hermitian lattice over $\OK$ of rank $D$ in a $K$-vector space $W$ with a basis, and put $\Delta=\sum_id_i$, with $\Delta>0$. Let $B_i\colon V_i\to W$ be $K$-linear maps with $B_i(N_i)\subset C$, and let $h_i$ be real numbers with $\hgt(B_i)\le h_i$ whenever $B_i\ne0$, where $\hgt$ is computed with the norms of $\bar N_i$ and $\bar C$. Fix $v\in\Sigma_K$, invertible complex matrices $Y_i$ of size $d_i$ and $Y'$ of size $D$, an integer $D_1\ge0$, and complex $(D+D_1)\times d_i$ matrices $A_i$ whose first $D$ rows form $Y'^{-1}[B_i]_vY_i$. Let $\gamma_i>0$ and $Q=\sum_i\gamma_iA_iA_i^*$. Let $s$, $u$, $H$, $e$, $\eta$, $\delta$ be real numbers with $u\ge0$, $H\ge0$, $0\le e\le\frac14$, $\eta\ge0$ and $0\le\delta<1$ such that
@@ -174,9 +182,28 @@ Then
 \begin{proof}
 \emph{The target is nonzero.} If $D=0$ then $D_1=0$ by (iv), every $A_i$ is zero, and (v) reads $\Delta\le e\Delta$, which contradicts $\Delta>0$ and $e\le\frac14$. So $D\ge1$.
 
-\emph{The pieces of the sources.} For $\tau\ge0$ and $i\in I$ let $N_i^\tau=(N_i)_{\ge s-\tau+h_i}$ be the Harder--Narasimhan step of Proposition~\ref{r3:HN}. Let $x_{i1},\dots,x_{id_i}$ be the slopes of $N_i$ and $y_{ij}=x_{ij}-h_i$. By (HN2) and (i), $\sum_{i,j}y_{ij}=\sum_id_i(\mu(N_i)-h_i)\ge \Delta s$. By (HN3) and (ii), $y_{ij}\le s+u$. Lemma~\ref{r3:markov} applied to the $\Delta$ numbers $y_{ij}$ bounds the number of pairs with $y_{ij}<s-\tau$ by $\varepsilon(\tau)\Delta$, where $\varepsilon(\tau)=u/(u+\tau)$ when $u>0$ and $\varepsilon(\tau)=0$ when $u=0$. By (HN1) the number of $j$ with $x_{ij}<s-\tau+h_i$ is $d_i-\rk N_i^\tau$. So
+\emph{The pieces of the sources.}
+For $\tau\ge0$ and $i\in I$ let
+$N_i^\tau=(N_i)_{\ge s-\tau+h_i}$ be the
+Harder--Narasimhan step of Proposition~\ref{r3:HN}.
+Let $x_{i1},\dots,x_{id_i}$ be the slopes of $N_i$
+and put $y_{ij}=x_{ij}-h_i$.
+By (HN2) and (i),
+$\sum_{i,j}y_{ij}=\sum_id_i(\mu(N_i)-h_i)\ge\Delta s$.
+By (HN3) and (ii), $y_{ij}\le s+u$.
+Define the actual deficit proportion by
 \[
-\sum_i\big(d_i-\rk N_i^\tau\big)\le\varepsilon(\tau)\,\Delta .
+\varepsilon(\tau)=\frac1\Delta
+\#\{(i,j):i\in I,\ 1\le j\le d_i,\ y_{ij}<s-\tau\}.
+\]
+Then $0\le\varepsilon(\tau)\le1$, and
+$\varepsilon$ is a finite step function.
+By (HN1), the number of $j$ with
+$x_{ij}<s-\tau+h_i$ is $d_i-\rk N_i^\tau$.
+Consequently,
+\[
+\sum_i\big(d_i-\rk N_i^\tau\big)
+=\varepsilon(\tau)\,\Delta.
 \]
 
 \emph{The images lie in one step of the target.} Put $C_\tau=C_{\ge s-\tau}$. Fix $i$ with $B_i(N_i^\tau)\ne0$. Then $N_i^\tau\ne0$, so (HN5) gives $\mu_{\min}(N_i^\tau)\ge s-\tau+h_i$, and $B_i\ne0$, so $\hgt(B_i)\le h_i$. Proposition~\ref{r3:SI} gives
@@ -190,14 +217,51 @@ Since $B_i(N_i^\tau)\subset C$, (HN4) gives $B_i(N_i^\tau)\subset C_\tau$. Hence
 D-\rk C_\tau\le D-\rk M_\tau\le w(\tau)\,D,\qquad w(\tau)=\frac{\eta+4\varepsilon(\tau)+4\sqrt e}{1-\delta}.
 \]
 
-\emph{Integration.} Let $z_1,\dots,z_D$ be the slopes of $C$. By (HN1) the number of $k$ with $z_k<s-\tau$ is $D-\rk C_\tau\le w(\tau)D$. By (HN3) and (iii), $z_k\ge\mu_{\min}(C)\ge s-H$. By (HN2), $\mu(C)$ is the mean of the $z_k$. Lemma~\ref{r3:cake} gives
+\emph{Integration.}
+Let $z_1,\dots,z_D$ be the slopes of $C$.
+By (HN1), the number of $k$ with $z_k<s-\tau$ is
+$D-\rk C_\tau\le w(\tau)D$.
+By (HN3) and (iii),
+$z_k\ge\mu_{\min}(C)\ge s-H$.
+By (HN2), $\mu(C)$ is the mean of the $z_k$.
+Lemma~\ref{r3:cake}, using $\min(1,w(\tau))\le w(\tau)$,
+therefore gives
+$\mu(C)\ge s-\int_0^H w(\tau)\,d\tau$.
+
+Write $a_+=\max\{a,0\}$.
+For $u,H>0$ and $y\le s+u$, one has
 \[
-\mu(C)\ge s-\int_0^Hw(\tau)\,d\tau=s-\frac{4\Lambda(u,H)+(\eta+4\sqrt e)H}{1-\delta}.\qedhere
+\min\{H,(s-y)_+\}
+\le\frac{H}{u+H}(s+u-y).
+\]
+Indeed, this follows by considering separately
+$s-y\le0$, $0\le s-y\le H$, and $s-y\ge H$.
+Integrating the finite sum defining $\varepsilon$ gives
+\[
+\begin{aligned}
+\int_0^H\varepsilon(\tau)\,d\tau
+&=\frac1\Delta\sum_{i,j}\min\{H,(s-y_{ij})_+\}\\
+&\le\frac{H}{u+H}
+\left(s+u-\frac1\Delta\sum_{i,j}y_{ij}\right)\\
+&\le\frac{uH}{u+H}
+=\Lambda(u,H).
+\end{aligned}
+\]
+If $H=0$, the integral is zero.
+If $u=0$, the mean bound and $y_{ij}\le s$ force
+every $y_{ij}=s$, so $\varepsilon(\tau)=0$ for
+$\tau\ge0$.
+Thus the same integral bound holds for all $u,H\ge0$.
+Consequently,
+\[
+\mu(C)\ge s-\int_0^H w(\tau)\,d\tau
+\ge s-\frac{4\Lambda(u,H)+(\eta+4\sqrt e)H}{1-\delta}.
+\qedhere
 \]
 \end{proof}
 
 \begin{remark}\label{r3:rem:frame}
-The proof bounds the corank of every step $C_{\ge s-\tau}$ with $0\le\tau\le H$, so it controls the lower half of the Harder--Narasimhan polygon of $C$, and the mean slope is one consequence. The hermitian structure at $v$ in which conditions (v) and (vi) are stated is arbitrary, because $Y_i$ and $Y'$ are arbitrary invertible matrices. The norms of the lattices at all places of $\Sigma_K$ enter through the slopes and the heights in Proposition~\ref{r3:SI}, and the place $v$ enters through the dimension count of Lemma~\ref{r3:place}. For a single map, $I=\{i\}$, the theorem is weaker than Proposition~\ref{r3:SI}, and the gain lies in the passage from $\mu_{\max}(C)$ to $\mu(C)$ for a redundant family. The term $\Lambda(u,H)$ is the integral of the share $u/(u+\tau)$ of Lemma~\ref{r3:markov} over the levels $s-\tau$ at which $C$ can have slopes.
+The proof bounds the corank of every step $C_{\ge s-\tau}$ with $0\le\tau\le H$, so it controls the lower half of the Harder--Narasimhan polygon of $C$, and the mean slope is one consequence. The hermitian structure at $v$ in which conditions (v) and (vi) are stated is arbitrary, because $Y_i$ and $Y'$ are arbitrary invertible matrices. The norms of the lattices at all places of $\Sigma_K$ enter through the slopes and the heights in Proposition~\ref{r3:SI}, and the place $v$ enters through the dimension count of Lemma~\ref{r3:place}. For a single map, $I=\{i\}$, the theorem is weaker than Proposition~\ref{r3:SI}, and the gain lies in the passage from $\mu_{\max}(C)$ to $\mu(C)$ for a redundant family. The term $\Lambda(u,H)$ bounds the integral of the actual deficit proportion $\varepsilon(\tau)$ of the source slopes over $0\le\tau\le H$.
 \end{remark}
 
 \subsection{Gram families and the frame conditions}\label{r3:sec:gram}
@@ -366,7 +430,22 @@ We apply Theorem~\ref{r3:frame} with $I=W$, the lattices $N_u$, the target $C=R^
 \end{proof}
 
 \begin{remark}\label{r3:rem:log}
-Condition (K3) of Section~\ref{sec:proofA} uses the weaker conclusion $s-\log\lvert W\rvert-e_3\le\mu(R^\vee)$, obtained from Theorem~\ref{r3:A3} by subtracting $\log\lvert W\rvert\ge0$. The term $\log\lvert W\rvert$ is slack and plays no role in the argument. Either form serves as \eqref{A3}, with $e_3$ of \eqref{r3:e3} or with $e_3+\log\lvert W\rvert$.
+Theorem~\ref{r3:A3} also gives
+\[
+s-\log\lvert W\rvert-e_3\le\mu(R^\vee)
+\]
+by subtracting $\log\lvert W\rvert\ge0$.
+Condition (K3) of Section~\ref{sec:proofA} uses
+a further weakening, since
+\[
+\Lambda(u,H)\le u\log(1+H/u)
+\qquad(u>0,\ H\ge0).
+\]
+This follows from
+$\log(1+t)\ge t/(1+t)$ for $t\ge0$.
+At $u=0$, both expressions are interpreted as zero.
+Thus the logarithmic accounting bounds in
+Section~\ref{sec:proofA} remain valid.
 \end{remark}
 
 The size of $e_3$ is controlled by the spread $u_F$, which the next lemma bounds by the two-sided form of hypothesis \eqref{A2} and the spreads of the base slopes, the local terms and the heights.
@@ -391,15 +470,38 @@ Fix $u$, multiply by $d_{u'}$, sum over $u'$ and divide by $\sum_{u'}d_{u'}$. Th
 \end{proof}
 
 \begin{corollary}[size of $e_3$]\label{r3:size}
-Let $x\ge1$, $C_H\ge0$, $b>0$, $u_F\ge0$, $U\ge\max(u_F,b)$, $0\le\delta\le\frac12$, $\delta'\ge0$ and $e_0\ge0$ be real numbers with $(3\sqrt{\delta'}+4\sqrt{2e_0})\,x^{C_H}\le1$, and put $\sigma=x^{-C_H}$, $H=x^{C_H}b$ and
+Let $x\ge1$, $C_H\ge0$, $b>0$, $u_F\ge0$,
+$U\ge\max(u_F,b)$, $0\le\delta\le\frac12$,
+$\delta'\ge0$ and $e_0\ge0$ be real numbers with
 \[
-e_3=\frac{4\Lambda(u_F,H)+\big(5\sigma+3\sqrt{\delta'}+4\sqrt{2e_0}\big)H}{1-\delta}.
+(3\sqrt{\delta'}+4\sqrt{2e_0})\,x^{C_H}\le1.
 \]
-Then $e_3\le8\,U\log\big(1+x^{C_H}\big)+12\,b$.
+Put $\sigma=x^{-C_H}$, $H=x^{C_H}b$ and
+\[
+e_3=
+\frac{4\Lambda(u_F,H)
++\big(5\sigma+3\sqrt{\delta'}+4\sqrt{2e_0}\big)H}
+{1-\delta}.
+\]
+Then $e_3\le8\,U+12\,b$.
 \end{corollary}
 
 \begin{proof}
-We have $(5\sigma+3\sqrt{\delta'}+4\sqrt{2e_0})H=5b+(3\sqrt{\delta'}+4\sqrt{2e_0})x^{C_H}b\le6b$. Since $\Lambda$ is nondecreasing in its first variable and $U\ge b$, $\Lambda(u_F,H)\le U\log(1+H/U)\le U\log(1+x^{C_H})$. The factor $(1-\delta)^{-1}$ is at most $2$.
+We have
+\[
+\begin{aligned}
+\big(5\sigma+3\sqrt{\delta'}+4\sqrt{2e_0}\big)H
+&=5b+\big(3\sqrt{\delta'}+4\sqrt{2e_0}\big)x^{C_H}b\\
+&\le6b.
+\end{aligned}
+\]
+Also $0\le\Lambda(u_F,H)\le u_F\le U$ and
+$(1-\delta)^{-1}\le2$.
+Consequently,
+\[
+e_3\le2(4U+6b)=8U+12b.
+\qedhere
+\]
 \end{proof}
 
 \begin{lemma}[the size conditions of Theorem~\ref{r3:A3}]\label{r3:sizecond}
