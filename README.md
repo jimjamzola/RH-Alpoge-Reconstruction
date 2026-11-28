@@ -86,6 +86,7 @@ The expository projects above are works in progress. Readers should consult each
 - I thank **a-ratz** for identifying the original commit to cite, questioning my attribution of V17, and pointing out discrepancies between the declaration names I cited and those in the later community repository. [Issue 3](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/3)
 - I thank **erythrofr** for providing a counterexample to the claimed character-evaluation bijection and suggesting the multiplicity repair. [Issue 5](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/5)
 - I thank **D3m0sthene5** for identifying the overlap between identity and nongeneric terms in the earlier manuscript’s pair-bound argument and suggesting the missing identity-degeneracy condition. [Issue 8](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/8)
+- I thank **Manuel Menéndez-González** (Fundación de Neurociencias / CoResearcher) for sharing external verification artifacts for the original Lean archive and a cross-audit of the reconstruction. [Issue 10](https://github.com/jimjamzola/RH-Alpoge-Reconstruction/issues/10)
 
 <details>
 <summary>Building the manuscripts</summary>
